@@ -4,7 +4,7 @@ layout: page
 
 # About Me
 
-<img src="" class="floatpic" width="360" height="480">
+<img src="https://lzjmaths.github.io/images/Bio_photo.jpg" class="floatpic" width="360" height="480">
 
 Here is **Lin Zejin (林则缙)**.
 
