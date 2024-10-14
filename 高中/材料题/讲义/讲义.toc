@@ -1,3 +1,0 @@
-\contentsline {chapter}{引言}{ii}{chapter*.2}%
-\contentsline {chapter}{竞赛题}{v}{chapter*.6}%
-\contentsline {section}{\numberline {1.1}数列}{v}{section.1.1}%
