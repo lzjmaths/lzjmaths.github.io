@@ -1,30 +1,17 @@
-title: Hanlin Cai
-# tagline: Here is personal website of Hanlin Cai. Powered by Jekyll, based on the Minimal Mistakes theme.
+title: Lin Zejin
+# tagline: Here is personal website of Lin Zejin. Powered by Jekyll, based on the Minimal Mistakes theme.
 # description: Two roads diverged in woods, I took the one less traveled by.
 #Comment out url when working locally to resolve base urls correctly
-url: https://caihanlin.com
+url: https://lzjmaths.github.io
 
 # Owner/author information
 owner:
-  name: Hanlin Cai
+  name: Lin Zejin
   avatar: hanlin.jpg
   # bio: Two roads diverged in woods, I took the one less traveled by.
-  email: hanlin.cai@ieee.org
-  cv: https://caihanlin.com/file/CV-HanlinCAI.pdf
+  email: linzj23@mails.tsinghua.edu.cn
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: lancecai2002
-  github: GuangLun2000
-  linkedin: hanlincai
-  scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
-  bilibili: 594030035
-  researchgate: https://www.researchgate.net/profile/Hanlin-Cai
-  zhihu: https://www.zhihu.com/people/chlire
-  # facebook: caihanlin2002
-  # instagram: lancecai2002
-  # lastfm:
-  # tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  # google_plus:
+  github: lzjmaths
 
 # Analytics and webmaster tools stuff goes here
 # https://search.google.com/search-console/ownership
@@ -38,16 +25,8 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 links:
   - title: About Me
     url: /
-  - title: Publications
-    url: /publications/
-  - title: Awards
-    url: /awards/
   - title: Hobbies
     url: /hobbies/
-  - title: Blogs
-    url: /blogs/
-  - title: Teams
-    url: /teams/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: China/Beijing
@@ -79,9 +58,9 @@ kramdown:
 
 # disqus settings:
 disqus:
-  shortname: lancecai
+  shortname: lin
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
 
-# Latest update in 2023/12/10 by Hanlin Cai.
+# Latest update in 2024/10/14 by Lin Zejin.
