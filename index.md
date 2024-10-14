@@ -25,6 +25,10 @@ This is my latex template to complete these notes, offered by Bin Gui([binguimat
 
 ## Notes in High School
 I write or just Organize notes into electronic format when I was free. Those notes are not particularly formal and may have lots of comments by myself.
+- **[大学科普材料](高中/材料题/CaiLiaoTi.pdf)**
+- **[数列通项方法](高中/数列.pdf)**
+- **[极值点偏移](高中/导数/极值点偏移/JiZhiDianPianYi.pdf)**
+- **[解析几何性质](高中/解析几何/geometry/geometry.pdf)**
 
 ## News and Updates
 
