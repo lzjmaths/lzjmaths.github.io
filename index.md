@@ -20,4 +20,4 @@ Differential Geometry is an undergraduate course taught by [Lin Jianfeng](linjia
 
 ## News and Updates
 
-- **Oct14 2024:** I create the blog with the help of [Hanlin Cai](https://caihanlin.com/).
+- **Oct14 2024:** I create my personal website with the help of [Hanlin Cai](https://caihanlin.com/).
