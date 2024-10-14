@@ -1,0 +1,23 @@
+\section{Theorems of Fubini and Tonelli for Radon measures}
+\subsection{Products of Radon measure}
+\begin{lemma}
+     $ X  $ be LCH,  $ \Lambda:C_c(X)\rightarrow\mathbb{C} $ positive linear functional. For each precompact open  $ U\subset X  $,  $ \Lambda|_{C_c(U)}:C_c(U)\rightarrow \mathbb{C} $ is bounded.  
+\end{lemma}
+\begin{theorem}
+     $ X_1,\cdots,X_N  $ with positive linear function  $ \Lambda_i:C_c(X_i)\rightarrow \mathbb{C} $. Then there exists a unique positive linear function  $ \Lambda:C_c(X_1\times\cdots\times X_N)\rightarrow \mathbb{C} $ such that   $ \forall f_i\in C_c(X_i) $, $ \Lambda(f_1\cdots f_N)=\Lambda_1(f_1)\cdots\Lambda_N(f_N)  $ \\where  $ f_1\cdots f_N:X_1\times\cdots\times X_N\rightarrow \mathbb{C}, (x_1,\cdots x_N)\mapsto f_1(x_1)\cdots f_N(x_N) $ 
+\end{theorem}
+\begin{definition}
+    The completion of the Radon measure associated to  $ \Lambda_1\otimes\cdots\otimes\Lambda_N  $ is denoted by  $ \mu_1\times\cdots\times\mu_N $($ \mu_i $ is the completion of the Radon measure for  $ \Lambda_n $)  called \textbf{Radon Product}\index{Randon Product}
+\end{definition}
+\subsection{Theorems of Fubini and Tonelli}
+\begin{theorem}[Tonelli's theorem]\index{Tonelli's theorem}
+     $ f\in LSC_+(X\times Y) $. Then  $ \int_Y f\mathrm{d}v:X\rightarrow[0,+\infty] $  
+\end{theorem}
+\begin{theorem}[Tonelli's theorem]\index{Tonelli's theorem}
+     Assume  $ \mu,\nu  $ are  $ \sigma $-finite. Let  $ f\in \mathcal{L}(X\times Y)  $ i.e.  $ f  $ is  $ (\mu\times \nu) $-measurable
+     \begin{enumerate}[$ (a) $]
+         \item  $ f(x,\cdot):Y\rightarrow [0,+\infty] $ is  $ \nu-measurable $ for  $ x\in X $ a.e.
+         \item  $ x\mapsto \int_{Y}f(x,\cdot)\mathrm{d}v  $ is measurable.
+         \item  $ \int_{X\times Y} f\mathrm{d}(\mu\times \nu)=\int_X\int_Yf\mathrm{d}\nu\mathrm{d}\mu$ 
+     \end{enumerate} 
+\end{theorem}

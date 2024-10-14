@@ -1,0 +1,23 @@
+\begin{remark}
+    Columns of  $ C=A\cdot B  $ is combination of columns of  $ A  $.
+    Rows of  $ C=C\cdot  B  $ is combination of rows of  $ B  $.
+\end{remark}
+\begin{definition}[Elementary row operations]
+    \begin{enumerate}[Type 1:]
+        \item Interchange  $ r_i  $ with  $ r_j $, $ i\not=j $ 
+        \item  For a unit  $ u\in \mathbb{R} $, replace  $ r_i  $ with  $ u\cdot r_i  $.
+        \item Replace  $ r_i  $ with  $ r_i+cr_j  $, $ i\not=j,c\in \mathbb{R } $ 
+    \end{enumerate}
+\end{definition}
+There are three elementary matrices not mentioned and they are invertible.
+We write it as  $ E_{i,j},E_{i,u},E_{i,j,c} $ and 
+\[E_{i,j}^{-1}=E_{i,j},\,E_{i,u}^{-1}=E_{i,u^{-1}},\,E_{i,j,c}^{-1}=E_{i,j,-c}\] 
+\begin{remark}
+    Elementary row operations on  $ A $ is multiply on the left elementary matrices.
+\end{remark}
+\begin{definition}[Transpose]
+     $ A=(a_{i,j}) $ of  $ m\times n  $ define the \textbf{transpose} of  $ A  $:
+      $ A^T=(a_{j,i}) $ 
+\end{definition}
+\subsection{Gauss elimination}
+Given an equation  $ A\vec{x}=\vec{b} $, call  $ (A|\vec{b}) $ the \textbf{augment matrix}

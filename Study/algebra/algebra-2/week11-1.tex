@@ -1,0 +1,26 @@
+\subsection{presentation}
+Given  $ f:R^n\rightarrow R^m  $  $ R $-linear map.\\
+ $ M:=R^m/\img f $ is  $ R-module $.\\
+ In this case,  $ f  $ is called a \textbf{presentaion} of  $ M $
+ and if  $ M  $ admits such a presentation, we say  $ M  $ is of finite presentation.\\
+ Usually, by change of basis, we get better presentation(for  $ R  $ Euclidean domain) through elementary row/column operation.
+ \paragraph{Note.}Now, we may assume  $ R  $ is a PID.    
+ \begin{theorem}
+    If  $ V  $ is a free  $ R $-module of rank  $ n  $, and  $ W\subset V  $ is a submodule, then  $ \exists m \leq n $,  $ \exists v_1,\cdots,v_n $  $ R $-basis of  $ V  $,  $ \exists b_1|b_2\cdots|b_m\in R \,\not=0$ s.t.  $ W  $ is free of rank  $ m  $ with basis  $ b_1v_1,\cdots,b_mv_m $.\\
+    Moreover,  $ \{(b_1)\supset\cdots\supset(b_m )\} $ is unique.        
+ \end{theorem}
+ \begin{theorem}
+    If  $ V  $ is finite generated over a  PID  $ R  $, then  $ V\cong R/(b_1)\oplus\cdots\oplus R/(b_l)\oplus R^k  $ for  $ b_1|\cdots|b_l $. 
+ \end{theorem}
+ In particular, for  $ R=\mathbb{Z} $,  $ R $-module is exactly abelian group. Every finitely generated abelian group is isom to  $ \oplus\mathbb{Z}_{n_i}\oplus \mathbb{Z}^k $   
+ \subsection{Rational canonical form and Jordan canonical form}
+ \begin{theorem}
+    For  $ T=A\in GL_n(K) $,  $ \exists P\in GL_n(K) $ s.t.
+    \[P^{-1}AP=\begin{pmatrix}
+        C_1 & 0 & \cdots & 0\\
+        0 & C_2 & \cdots & 0\\
+        \vdots & \vdots & \ddots & \vdots\\
+        0 & 0 & \cdots & C_n
+    \end{pmatrix}\] 
+    where  $ C_i $ is comparion matrix of  $ f_i(x) $ 
+ \end{theorem}

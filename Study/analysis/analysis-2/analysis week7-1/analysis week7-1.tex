@@ -1,0 +1,70 @@
+\begin{proposition}\label{condition of A times B measurable}
+    Assume  $ \mu,\nu  $ are  $ \sigma  $-finte. Then for measurable  $ A\subset X, B\subset Y $,  $ A\times B      $  is  $ (\mu\times\nu) $-measurable, and  $ (\mu\times v)(A\times B)=\mu(A)\nu(B) $.  
+\end{proposition}
+\begin{example}
+     $ \mu  $ is completion of Radon on  $ X  $,  $ (Y,2^Y,\nu ) $ counting measure.\\
+     Then if  $ E\subset X\times Y  $ is open  $ \Rightarrow  $  $ \chi_E $ is lower semicontinuous. \\
+      Tonelli's theorem  $ \Rightarrow (\mu\times\nu)(E)=\sum\limits_{y\in y}\nu(E_y) $\\
+      Assume  $ \mu  $ is   $ \sigma  $-finite,  $ f:X\times Y\rightarrow [0,+\infty ] $ is Borel. Apply Prop \ref{condition of A times B measurable}, we have 
+      \[\sum\limits_{y\in Y}\int_X f_y\mathrm{d}\mu=\int_X\sum\limits_{y\in Y}f_y\mathrm{d}\mu\tag{a}\]
+      (a) is true if  $ f  $ is LCH or if  $ Y  $ is countable.\\
+      Let  $ I=fin(2^Y) $,  $ \forall \alpha\in I $,  $ g_\alpha=\sum\limits_{y\in \alpha}f_\alpha $. We have
+      \[\lim\limits_{\alpha}\int_{X}g_\alpha\mathrm{d}\mu =\int_X\lim\limits_\alpha g_\alpha \mathrm{d}\mu\]  
+      if  $ f  $ is LSC or  $ Y =\mathbb{Z} $. 
+\end{example}
+\section{The marriage of Hilbert spaces and integral theory}
+\subsection{The definition of  $ L^p $  spaces}
+\begin{definition}
+     $ f\in \mathcal{L} (X,\mathbb{C}),||f||_{L^p}=||f||_p=(\int_X|f|^p\mathrm{d}\mu)^{\frac{1}{p}} $ \index{ $\vert\vert f\vert\vert_{L^p},\vert\vert f\vert\vert_p$}
+\end{definition}
+\begin{theorem}
+    Assume  $ f,g\in\mathcal{L}(X,\mathbb{C}) $ or  $ f,g\in \mathcal{L}_+(X) $. We have \textbf{Minkowski's inequality}   \[ ||f+g||_p \leq||f||_p+||g||_p \]\index{Minkowski's inequality}  
+    And if $ \frac{1 }{p }+\frac{1}{q} $,  $ 1<p,q<+\infty $. We have \textbf{H{\"o}lder's inequality}
+    \[|\int_X fg\mathrm{d}\mu| \leq||f||_p||g||_q\]
+    \[||f+g||_p \leq||\,|f|+|g|\,||_p\]\index{H{\"o}lder's inequality}
+\end{theorem}
+\begin{definition}
+    Let  $ \mathcal{L}^p(X,\mu)=\{f\in \mathcal{L}(X,\mathbb{C}):||f||_p<+\infty\} $. Then  $ ||\cdot||_p  $ is a semi-norm on  $ \mathcal{L}^p(X,\mu) $  \index{$ \mathcal{L}^p(X,\mu) $}\\
+     $ L^p(X,\mu)=\mathcal{L}^p(X,\mu)/_{\{f\in \mathcal{L}^p(X,\mu):||f||_p=0\}} $ \index{$ L^p(X,\mu) $} is a NVS with norm  $ ||\cdot||_p $.
+     \[||f||_p=0\Leftrightarrow \int |f|^p=0\Leftrightarrow f=0 \text{ a.e.}\] 
+      $ L^p(X,\mu ) $ is the space of all  $ f\in \mathcal{L}(X,\mathbb{C}) $ satisfying  $ ||f||_p<+\infty $, but  $ f,g  $ are the same iff  $ f=g  $ a.e.  
+\end{definition}
+\begin{definition}
+     $ f\in \mathcal{L}(X,\mathbb{C}) $. Define\index{$ \vert\vert f\vert\vert_{L^\infty},\vert\vert f\vert\vert_\infty $ in  $ \mathcal{L}(X,\mathbb{C}) $}
+     \[||f||_{L^{\infty}}=||f||_\infty=\inf \{a\in \overline{\mathbb{R}}_{ \geq 0}:\mu\{|f|>a\}=0\}\]
+     where  $ \{|f|>a\} =\{x\in X:||f(x)||>a\}$  
+\end{definition}
+\begin{proposition}
+    Let  $ f,g\in \mathcal{L}(X,\mathbb{C}) $
+    \begin{enumerate}[(a)]
+        \item If  $ f=g  $ a.e., then  $ ||f||_\infty=||g||_\infty $ 
+        \item  $ f=0  $ a.e. iff  $ ||f||_{L^\infty}=0 $ 
+    \end{enumerate} 
+\end{proposition}
+\begin{proposition}
+    Let  $ f\in \mathcal{L}(X,\mathbb{C}),\lambda=||f||_{L^\infty} $. Then 
+    \[ \{a\in \overline{\mathbb{R} }\geq 0:\mu\{|f|>a\}=0\}=[\lambda,+\infty]\]
+    In particular,  $ \lambda  $ is the smallest number s.t.  $ \{|f|>\lambda\} $ is null. 
+\end{proposition}
+\begin{corollary}
+    Let  $ A=\{|f| \leq \lambda\} $. Then  $ X\backslash A $ is null, and  $ ||f\chi_A||_{l^\infty}=||f||_{L^\infty} $  
+\end{corollary}
+\begin{proposition}
+    Let  $ (f_n) $ be in  $ \mathcal{L}(X,\mathbb{C}) $. TFAE
+    \begin{enumerate}[(1)]
+        \item  $ \lim\limits_{n \to \infty}||f_n||_{L^\infty}=0 $
+        \item  $ \exists  $ measurable  $ A  $ with  $ \mu(A^c)=0 $ s.t.  $ f_n|_A $ uniformly converge to 0. 
+    \end{enumerate} 
+\end{proposition}
+\begin{proposition}
+    \[||f+g||_{L^\infty} \leq||f||_{L^\infty}+||g||_{L^\infty}\]
+    \[||af||_{L^\infty}=|a|\cdot||f||_{L^\infty}\]
+\end{proposition}
+\begin{definition}
+    \[\mathcal{L}^\infty(X)=\{f\in \mathcal{L}(X,\mathbb{C}):||f||_{l^\infty}<+\infty\}\]\index{$\mathcal{L}^\infty(X) $}
+    And   
+    \begin{align}
+        L^\infty(X,\mu)&=\mathcal{L}^\infty(X)/_{\{f\in \mathcal{L}^\infty(X):||f||_{L^\infty}=0\}}\notag\\
+        &=\mathcal{L}^\infty(X)/_{\{f\in \mathcal{L}^\infty(X):f=0\text{ a.e.}\}}\notag
+    \end{align}\index{$ L^\infty(X) $}
+\end{definition}

@@ -1,0 +1,78 @@
+\section{Harmonic function}
+\begin{definition}[Cauchy-Riemann equation]
+    \[\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\qquad\frac{\partial u }{\partial y}=-\frac{\partial v}{\partial x}\]
+\end{definition}
+\begin{definition}[Harmonic function]
+    A function  $ u  $ is \name{harmonic} if it satisfied \name{Laplace equation}  $ \triangle u=0 $. 
+    
+    If two harmonic function  $ u  $ and  $ v  $ satisfies Cauchy-Riemann equations, then we say that  $ v  $ is \name{conjugate harmonic function of  $ u  $ } $ \Rightarrow  $  $ u  $ is conjugate harmonic of  $ -v  $.
+\end{definition}
+\subsection{Polynomial rational function}
+The polynomial  $ P(z)=\sum\limits_{j=0}^na_jz^j $ is analytic in  $ \mathbb{C} $.
+
+We will prove the fundamental theorem of algebra
+\begin{theorem}[Fundamental Theorem of Algebra]
+    Every polynomial with degree  $ n>0 $ has at least one point. 
+\end{theorem} 
+\begin{theorem}[Gauss-Lucus theorem]
+    The smallest convex polygon that contain the zeros of  $ P  $ also contains the zeros of  $ P' $. 
+\end{theorem}
+\begin{proof}
+    Only need to check.
+    
+    We can get this equation.
+    \[\frac{P'(\alpha)}{P(\alpha)}=\sum\limits_{j=1}^n\frac{1 }{\alpha-\alpha_j}=0\Rightarrow \sum\limits_{j=1}^n\frac{\overline{\alpha-\alpha_j}}{|\alpha-\alpha_j|^2}\]
+    Hence  $ \alpha  $ is linearly represented by  $ \alpha_j $.
+\end{proof}
+\begin{proposition}
+    Let  $ P  $ and  $ Q  $ be two polynomial with no common zeros. Then the rational function  $ R(z)=\dfrac{P(z)}{Q(z)} $ is analytic away from the zeros of  $ Q $.\\
+    The zeros of  $ Q  $ are called \name{poles} of  $ R  $, and the \name{order of a pole} is equal to the order of the corresponding zero of  $ Q  $. 
+\end{proposition}
+We often view  $ R  $ as a function from  $ \hat{\mathbb{C}} $ to  $ \hat{\mathbb{C}} $.  $ R_1(z):=R(\frac{1}{z}) $.
+
+If  $ R_1(0)=0  $, the  order of the zero at  $ \infty $ (of  $ R  $) is the order of the zero of  $ R_1(z)  $ at  $ z=0 $.
+
+If  $ R_1(0)=\infty $, the order of the pole at  $ \infty $ (of $ R $) is the order of the pole of  $ R_1(z) $ at  $ z=0 $.
+
+Suppose
+\[R(z)=\frac{a_nz^n+\cdots+a_1z+a_0}{b_mz^m+\cdots+b_1z+b_0},a_n\not=0,b_m\not=0\]
+Then \[R_1(z)=z^{m-n}\frac{a_0z^n+\cdots+a_n }{b_0z^m+\cdots+b_m}\]
+By discussing m and n, we can infer  the situation of  $ R(z)  $ at $ \infty $.\\
+By adding the order of poles and zeros at  $ \infty  $, we can get the following theorem.
+\begin{theorem}
+    The total number of zeros and poles of a rational function are the same.
+\end{theorem}
+\begin{remark}
+    This common nnumber is called the \name{order of the rational function}.
+\end{remark}
+\begin{corollary}
+    Suppose a rational function  $ R  $ has order  $ p  $. Then every equation  $ R(z)=a  $ has exactly  $ p  $ roots.
+\end{corollary}
+\begin{proof}
+     $ \hat{R}(z)=R(z)-a $ has the same poles as  $ R  $.
+\end{proof}
+A rational function of order 1 is a \name{linear fraction}  $ R(z)=\frac{az+b }{cz+d }, ad-bc\not=0  $\\
+Such fraction is often called \name{M{\"o}bius transformation}
+
+Every rational function has a representation by \name{partial fractions}.
+
+\begin{itemize}
+    \item If  $ R  $ has a pole at  $ \infty $. Then we can write
+    \[R(z)=G(z)+H(z)\tag{$ \ast $}\]
+    where  $ G  $ is a polynomial without constant term, and  $ H  $ is finite at  $ \infty  $.
+    
+    The degree of  $ G  $ is the order of the pole of  $ R  $ at  $ \infty  $.  $ G  $ is called the \name{singular part} of  $ R  $ at  $ \infty $.
+    \item Let the distinct finite poles of  $ R  $ be  $ \beta_1,\cdots,\beta_k $. Let  $ R_j(\psi)=R(\beta_j+\frac{1 }{\psi}) $. Then  $ R_j  $ is a rational function with a pole at  $ \infty  $. As in  $ (\ast) $, we can write 
+    \[R_j=G_j+H_j\]
+    with  $ H_j  $ finite at  $ \infty $. Then 
+    \[R(z)=G_j(\frac{1 }{z-\beta_j})+H(\frac{1 }{z-\beta_j})\]
+    with  $ G_j  $ is a polynomial in  $ \frac{1 }{z-\beta_j} $ without constant term called the \name{singular point} of  $ R  $ at  $ \beta_j $.
+    \item Let  $ F(z)=R(z)-G(z)-\sum\limits_{j=1}^kG_j(\frac{1 }{z-\beta_j}) $.\\
+    Then  $ F  $ is a rationnal function which can only have poles among $ \beta_j,\infty $ 
+    
+    Since by our construction,  $  F  $ is finite at every  $ \beta_j,1 \leq j \leq k  $ and  $ \infty $.
+    
+    So  $ F  $ is a constant.
+    
+    In particular,  $ R(z)=G(z)+\sum\limits_{j=1}^kG_j(\frac{1 }{z-\beta_j})+c $.   
+\end{itemize}

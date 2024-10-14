@@ -1,0 +1,96 @@
+\begin{proposition}[Property D]
+     $ R\rightarrow R'\rightarrow R'' $ ring homomoephism,  $ V  $  $ R $-module.\\
+     Then  $ R''\otimes _{R'}(R'\otimes_R V)\cong R''\otimes_R V $ as  $ R'' $-module.   
+\end{proposition}
+\begin{proposition}[Property E]
+     $ K/F $ field extension,  $ V  $  $ F  $-vector space,  $ W,W'\subset V $ subspace.\\
+     Then the inclusion map  $ W\hookrightarrow V $ induces  $ K\otimes_F W\hookrightarrow K\otimes _F V  $ is injective.\\
+     Moreover, if  $ W\not= W'   $ as subspace of  $ V  $,  $ K\otimes_F W\not=K\otimes_F W'$ as subspace of  $ K\otimes_F V$   
+\end{proposition}
+\subsection{separable extension}
+\begin{theorem}
+     $ K/F  $ is finite extension. TFAE:
+     \begin{enumerate}[(a)]
+         \item $ K/F  $ is separable.
+          \item $ K=F(\alpha_1,\cdots,\alpha_n) $ for  $ \alpha_i  $ separable over  $ F  $
+        \item  $ K\otimes _F \overline{F}\cong \overline{F}^{[K:F]} $ as  $ \overline{F} $-algebra.  
+     \end{enumerate}
+\end{theorem}
+\begin{proof}
+     $ (a)\Rightarrow (b) $ is obvious.\\
+      $ (b)\Rightarrow (c) $ we set  $ K_i=F(\alpha_1,\cdots,\alpha_i) $.\\
+      \begin{note}
+         $ f_2(x):=  $ minimal polynomial of  $ \alpha_2\in K_2 $ over  $ K_1 $ $ \Rightarrow  $  $ f_2(x)  $ divides minimal polynomial of  $ \alpha_2  $ over  $ F  $, which has no double root.\\
+         So  $ f_2(x)  $ has no double root, hence  $ K_2=K_1(\alpha_2)=K_1[x]/(f_2(x)) $.\\
+         Therefore  $ K_2\otimes_{K_1}\overline{K_1}=\overline{K_1}^{[K_2:K_1]} $ by \ref{Change for separable polynomial}.    
+      \end{note}
+      Since  $ \overline{F}=\overline{K_1} $, by the note we know (c) is true.\\
+       $ (c)\Rightarrow (a) $ If  $ \alpha  $ is not separable over  $ F  $.\\
+       Let  $ f(x)  $ be the minimal polynomial of  $ \alpha $ over  $ F  $. By (\ref{Change for separable polynomial}) we know 
+       \[F(\alpha)\otimes_F\overline{F}=\frac{F[x]}{(f(x))}\otimes_F \overline{F}=\frac{\overline{F}[x]}{(f(x))}\]
+       Moreover,  $ F(\alpha)\subset K \Rightarrow F(\alpha)\otimes_F\overline{F}\subset K\otimes_F \overline{F}=\overline{F}^{[K:F]} $ which is reduced. Contradiction!  
+       
+\end{proof}
+\begin{theorem}[primitive element theorem]
+    Every separable extension of finite degree $ K/F  $ is simple.
+\end{theorem}
+\begin{proof}
+    By Prop \ref{criterion for simple extension}, it suffices to prove  $ \overline{K} $ has finitely many intermediate extension  $ M_\alpha $, which is true since
+    \[\overline{F}^{[M:F]}=M\otimes_F\overline{F}\subset K\otimes_F\overline{F}=\overline{F}^{[\overline{F}:F]}\]
+\end{proof}
+\begin{remark}
+    It focus on the intermediate field of  $ K  $ and the uniqueness of  $ M\otimes_F\overline{F} $ 
+\end{remark}
+\begin{corollary}
+     $ K/M/F $ finite extension.\\
+      $ K/F $ separable  $ \Leftrightarrow $  $ K/M $,  $ M/F $ separable.   
+\end{corollary}
+\subsection{Splitting field, extension of  $ K  $-homomorphism}
+\begin{definition}
+    The (minimal) \textbf{splitting field}\index{splitting field} of  $ f(x) $ is a field extension  $ K/F  $ \st
+    \begin{enumerate}[(1)]
+         \item $ f(x)  $ splits completely in  $ K  $
+        \item  $ K=F(\alpha_1,\cdots,\alpha_n)  $,  $ \alpha_i$ roots of  $ f(x)  $ in  $ K $  
+    \end{enumerate}
+\end{definition}
+\begin{note}
+    Splitting field exists and has degree less then  $ (\deg f)! $ 
+\end{note}
+We set these notations.\\
+ $ K'/K/F $,  $ L/F $ field extension.\\
+  $ \sigma:K\rightarrow L $ is an  $ F $-homomorphism.\\
+  An  $ F $-homomorphism  $ K'\xrightarrow{\sigma'}L $ is an \textbf{extension}\index{extension} of  $ \sigma  $ if  $ \sigma'|_K=\sigma $.
+  \begin{proposition}[extension lemma]
+    With the set-up as above, suppose  $ K'/K  $ is simple, where  $ K'=K(\beta) $,  $ g(x)\in K[x] $ minimal polynomial of  $ \beta  $ over  $ K  $. Then 
+    \[\{\sigma':K'\rightarrow L:\text{extension of }\sigma \}\xleftrightarrow{bijective}\{\gamma\in L\:\sigma g(\gamma)=0\},\,\sigma'\mapsto \gamma=\sigma'(\beta)\] 
+    i.e. roots of  $ \sigma  g $ is bijective with the extension of  $ \sigma $.\\
+    In particular, numbers of extensions is less then  $ \deg g=[K':K] $. Moreover, if the equality holds, then  $ g  $ separable and  $ K'/K  $ separable.
+  \end{proposition} 
+  \begin{proof}
+    \[
+        \xymatrix{
+            &K[x]\ar[r]^{\tilde{\sigma} }\ar[d]&L\\
+            &K[x]/(g(x))\ar[ru]^{\exists}
+        }    
+    \]
+  \end{proof}   
+  \begin{corollary}
+    If  $ L,M  $ are splitting fields of  $ f(x)\in F[x]  $. Then  $ L\cong M $. i.e. splitting field is unique up to  $ F $-isomorphism.  
+  \end{corollary}
+  \begin{proof}
+    We can construct a homomorphism by mapping the root of  $ f(x)  $ in  $ M  $ to roots in  $ L $ 
+  \end{proof}
+\subsection{Finite field}
+ $ K  $ is a finite field, then  $ |K|=p^n $.
+ \begin{theorem}
+    Let  $ K  $ be a finite field of order  $ q=p^n $
+    \begin{enumerate}[(1)]
+         \item $ K  $ is the splitting field of  $ x^q-x\in \mathbb{F}_p[x] $.\\
+         In particular, any two such  $ K,K'  $ are  $ \mathbb{F}_p $-isomorphic. Hence we can write  $ K=\mathbb{F}_q $
+         \item  $ K^\times  $ is a cyclic group of order  $ q-1 $    
+         \item  $ \mathbb{F}_{p^m} $ is a subfield of  $ \mathbb{F}_{p^n} $  $ \Leftrightarrow $  $ m|n $. In particular, every extension of finite fields is simple and separable. 
+    \end{enumerate} 
+ \end{theorem} 
+ \begin{proof}
+    (1)  $ (f(x),f'(x))=1 $ $ \Rightarrow  $  $ f(x)=x^q-x $ is separable. Since  $ \alpha^q=\alpha $ in  $ K  $,  $ K  $ is splitting field of  $ x^q-x $  
+ \end{proof}

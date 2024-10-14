@@ -1,0 +1,92 @@
+
+\begin{definition}
+     $ X  $ is a metric space. We say  $ X  $ is \textbf{sequentially compact} if every sequence in  $ X  $ has a convergent subsequence.
+\end{definition}
+\begin{lemma}[Extreme Value Theorem]
+    If  $ X  $ is sequentially compact,  $ f: X\rightarrow \mathbb{R }  $ continuous. Then  $ f  $ attains its max and min on  $ X  $. In particular  $ f(x) $ is a bounded subset of  $ \mathbb{R}  $.  
+\end{lemma}
+\begin{example}
+    If  $ X=A_1\cup \cdots A_n  $, each  $ A_i  $ is sequentially compact, then  $ X  $ is sequentially compact.
+\end{example}
+\begin{example}
+    Finite set is sequentially compact.
+\end{example}
+\begin{proposition}
+    If  $ X,Y  $ are sequentially compact, then  $ X\times Y  $ is sequentially compact.
+\end{proposition}
+\begin{proof}
+    Pick  $(x_n,y_n ) $ in  $ X\times Y  $. Since  $ X  $ is sequentially compact,  $  x_n  $ has subsequence,  $ x_{n_k}\rightarrow x\in X   $. Since  $ Y  $ is sequentially compact, $ y_{n_k} $ has subsequence,  $ y_{n_{k_i}} \rightarrow y\in Y$. Then  $ (x_{n_{k_i}},y_{n_{k_i}})\rightarrow(x,y)\in X\times Y $.   
+\end{proof}
+\begin{proposition}
+    If  $ f:X\rightarrow Y  $ continuous,  $ X  $ is sequentially compact, then  $ f(X) $ is sequentially compact.
+\end{proposition}
+\begin{example}
+    If  $ A  $ is sequentially compact subset of  $ \mathbb{R}  $, then  $ \sup A,\inf A \in A $. 
+\end{example}
+\begin{theorem}
+     $ [a,b]\subset \overline{\mathbb{R} } $ is sequentially compact. Then  $ I_1\times \cdots \times I_n  $ is sequentially compact where  $ I_i=[a,b] $. 
+\end{theorem}
+\begin{definition}
+    If  $ (x_n ) $ is a sequence in  $ X  $. We say  $ x\in X  $ is a \textbf{cluster/accumulation point} of  $ (x_n ) $ if  $ x  $ is a limit point of a subsequence of  $ (x_n ) $. 
+\end{definition}
+\begin{definition}
+    Let  $ (x_n ) $ in  $ \overline{\mathbb{R} } $.  $ \alpha_n=\inf(x_n,x_{n+1},\cdots ),\beta_n=\sup(x_n,x_{n+1},\cdots) $. Then we have  $ \alpha_n  \leq x_n \leq\beta_n  $. \textbf{Define} 
+    \[\liminf x_n=\lim_{n  \to \infty} \alpha_n=\sup \alpha_n  \]
+    \[\limsup x_n=\lim_{n  \to \infty} \beta_n =\inf \beta_n \]
+\end{definition}
+\begin{theorem}
+    Let  $ S:=\{\text{cluster point of  $ x_n $ in  $ \overline{\mathbb{R} } $}\}  $,  $ B:=\limsup x_n  $,  $ A:=\liminf x_n  $. Then  $ B=\max S  $,  $ A=\min S  $. In particular,  $ A,B\in S  $, so  $ S\not=\emptyset  $   
+\end{theorem}
+\begin{theorem}
+    Let  $ X  $ be sequentially compact,  $ (x_n ) $ in  $ X  $. The following are equivalent:
+    \begin{enumerate}[(1)]
+        \item  $ x_n $ converges. 
+        \item  $ (x_n) $ has only one cluster point.
+    \end{enumerate}
+\end{theorem}
+\begin{corollary}
+    Let  $ (x_n ) $ in  $ \mathbb{R}^N  $. The following is equivalent:
+    \begin{enumerate}[(1)]
+        \item  $ (x_n)  $ converges.
+        \item  $ (x_n ) $ is bounded and has at most one cluster point.
+    \end{enumerate} 
+\end{corollary}
+\begin{corollary}
+    Let  $ (x_n ) $ in  $\overline{\mathbb{R} } $, then  $ (x_n ) $ converges in  $ \overline{\mathbb{R}  } $ iff  $ \liminf x_n=\limsup x_n $. 
+\end{corollary}
+\begin{corollary}
+    If  $ (x_n ) $ in  $ \mathbb{R}   $. Then  $ (x_n ) $ converges in  $ \mathbb{R}  $ iff  $ (x_n ) $ is bounded and  $ \liminf x_n=\limsup x_n $ 
+\end{corollary}
+\begin{definition}
+    A sequence  $ (x_n ) $ in  $ X  $ is called a \textbf{Cauchy sequence} if 
+    \begin{enumerate}[$ \cdot $]
+        \item  $ \forall \epsilon>0  $,  $ \exists N\in \mathbb{Z}_+  $, s.t.  $ \forall m,n \geq N  $,  $ d(x+m,x_n )<\epsilon  $.
+        \item  $ \forall \epsilon>0 $,  $ \exists N  $, s.t.  $ \forall n \geq N  $,  $ d(x_n,x_N)<\epsilon $.  
+    \end{enumerate}
+\end{definition}
+Cauchy sequence are bounded.
+\begin{proposition}
+    Every convergent sequence in  $ X  $ is Cauchy sequence.
+\end{proposition}
+\begin{definition}
+     $ X  $ is called \textbf{complete} if every Cauchy sequence in  $ X  $ converges.
+\end{definition}
+\begin{theorem}
+    If  $ (x_n ) $ is Cauchy with at least one cluster point. Then  $ (x_n ) $ converges. Therefore, \underline{every sequentially compact space is complete}.
+\end{theorem}
+\begin{corollary}
+     $ \mathbb{R}^N,\mathbb{C}^N\cong \mathbb{R}^N $ are complete under Euclidean metric.
+\end{corollary}
+\begin{definition}
+     $ A\subset X  $. We say  $ A  $ is closed if the following is true:
+     \begin{center}
+        If  $ (x_n)\in A  $ converges to  $ x\in X  $, then  $ x\in A  $ 
+     \end{center}
+\end{definition}
+\begin{proposition}
+     $ A\subset X  $,  $ d_A=d_X|A $. 
+     \begin{center}
+        (1)  $ A  $ is complete; (2) $  A  $ is closed. 
+     \end{center}
+     Then (1) $ \Rightarrow $  (2) and if  $ X  $ is complete then (2) $ \Rightarrow $  (1)
+\end{proposition}

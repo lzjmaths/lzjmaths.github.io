@@ -1,0 +1,66 @@
+In this subsection we will discuss  $ R  $ integral domain.
+\begin{definition}
+    Let  $ f\in R  $ be nonzero and nonunit.\\ Say  $ f  $ is \textbf{irreducible}\index{irreducible element} if  $ f=gh \Rightarrow  $ either $ g $  or  $ h  $ is a unit.\\Say  $ f  $ is a \textbf{prime }\text{prime element} if  $ f|gh \Rightarrow f|g  $ or  $ f|h  $\\
+    Here,  $ a|b  $ means $ \exists c\in R  $ such that  $ ac=b  $  
+\end{definition}
+\begin{proposition}
+     $ f\in R  $ 
+     \begin{enumerate}
+        \item  $ f  $ is irreducible $ \Leftrightarrow (f)  $ is maximal among proper principal ideals.
+        \item  $ f  $ is prime if and only if  $ (f)  $ is a prime ideal.
+     \end{enumerate}
+\end{proposition}
+\begin{proposition}\,
+    \begin{enumerate}
+        \item A prime element is irreducible.
+        \item If  $ R  $ is a PID(i.e. every ideal is principal)\index{principal ideal domain}, then an irreducible element is prime.
+    \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    For  $ \varphi:R\rightarrow R'  $ ring homomorphism.
+    \begin{enumerate}
+        \item  $ J\subset R'  $ ideal  $ \rightarrow \varphi^{-1}J\subset R $ ideal.
+        \item  $ J\subset R'  $ prime ideal  $ \rightarrow \varphi^{-1}J\subset R $ prime ideal.
+        \item Maximal ideal is not preserved between homomorphism.
+    \end{enumerate}
+\end{proposition}
+\begin{example}
+     $ \mathbb{Z }[i]/(3)\backsimeq \mathbb{Z}[x]/(x^2+1,3)\backsimeq \mathbb{F}_3[x]/(x^2+1) $.\\
+     Since  $ x^2+1 $ have no root in  $ \mathbb{F}_3  $,   $ x^2+1  $ is irreducible, hence prime in  $ \mathbb{f}_3[x] $. Therefore  $ \mathbb{Z}[i]/(3)\backsimeq \mathbb{F}_3[x]/(x^2+1) $ is an integral domain. Then  $ 3  $ is prime in  $ \mathbb{Z}[i] $.  
+\end{example}
+\begin{example}
+    $ \mathbb{Z}\sqrt{-5}/(2)\backsimeq \mathbb{Z}[x]/(x^2+5,2)\backsimeq \mathbb{F}_2[x]/(x^2+5) $.\\
+    Since  $ x^2+5 $ is not prime. Therefore   $ 2  $ is not prime in  $ \mathbb{Z}\sqrt{-5}/(2) $.
+\end{example}
+\begin{example}
+    However  $ 2  $ is irreducible.\\
+    Set  $ P=(2,1+\sqrt{-5}) $.
+    \begin{claim}\,
+        \begin{enumerate}
+            \item  $ P  $ is a prime.
+            \item  $ P^2=(2) $ 
+        \end{enumerate}
+    \end{claim} 
+    Let  $ Q=(3,1+\sqrt{-5}) $. Then  $ Q,\overline{Q}  $ are maximal.\\  $ Q\overline{Q}=(3),PQ=(1+\sqrt{-5}),P\overline{Q}=(1-\sqrt{-5})$\\
+     $ \Rightarrow (6)=P^2Q\overline{Q} $ called \textbf{prime ideal factorization}\index{prime ideal factorization}(i.e.  $ \mathbb{Z}[\sqrt{-5}] $ is a Dedekind domain)
+\end{example}
+\begin{example}
+     $ R=\mathbb{C}[x,y] $.\\
+    \begin{fact}
+         $ Spec R:=\{0\}\cup \{(f(x,y)):f\in R\,irreducible\}\cup\{(x-a,y-b),a,b\in \mathbb{C} \} $ 
+    \end{fact}
+\end{example}
+\begin{theorem}[Hilbert Nullstellensate]\index{Hilbert Nullstellensate}
+    Maximal ideals of  $ \mathbb{C}[x,y] $  are  $ (x-a,y-b) $. 
+\end{theorem}
+\subsection{Zorn's lemma}
+\begin{theorem}
+    If  $ I\subset R  $ is a proper ideal,  $ \exists   $ maximal ideal  $ \mathfrak{M} $ s.t.  $ \mathfrak{M}\supset I $.\\
+    In particular, if  $ R\not=0  $, then  $ Spec R\not=0 $  
+\end{theorem}
+\begin{definition}
+    Say a partially ordered set  $ S  $ is inductive, if every totally ordered subset  $ s'\subset S  $ has an upper bound.
+\end{definition}
+\begin{theorem}[Zorn's lemma]\index{Zorn's lemma}
+    Every nonempty inductive partially ordered set has a maximal element.
+\end{theorem}

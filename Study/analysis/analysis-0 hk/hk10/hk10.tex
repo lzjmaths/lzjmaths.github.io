@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Analysis homework}
+\author{lin150117 }
+\date{March 2023}
+\begin{document}
+\paragraph{E1}
+\begin{proof}
+    First, with Abel-Dirichlet test we know that  $ \int_{0}^{\infty} e^{-tx}f(x)\, \mathrm{d}x   $ converges.\\
+    With the Newton-Leibniz formula, we know $ \int_{0 }^{\infty } te^{-tx}\, \mathrm{d}x =e^0-\lim\limits_{x\to\infty}e^{-tx}=1    $ 
+    Then for  $ \epsilon>0 $,  there exists  $ N>0  $ such that  $ \forall x>N  $,  $ |f(x)-1|<\epsilon $.\\
+    Then  
+    \begin{align*}
+        |t\int_{0}^{\infty} e^{-tx}f(x)\, \mathrm{d}x-1|&=|t\int_{0}^{\infty} e^{-tx}f(x)\, \mathrm{d}x-t\int_{0}^{\infty} e^{-tx}\, \mathrm{d}x|\\
+        &=|t\int_{0}^{\infty} e^{-tx}(f(x)-1)\, \mathrm{d}x|\\
+        & \leqslant |t \int_{0 }^{N } e^{-tx}(f(x)-1)\, \mathrm{d}x|+\epsilon|t \int_{N }^{\infty } e^{-tx}\, \mathrm{d}x|    
+    \end{align*}
+    Let  $ t\rightarrow0^+ $, then   $ |t \int_{0 }^{N } e^{-tx}(f(x)-1)\, \mathrm{d}x|\rightarrow0 $.\\
+    i.e.   $ \lim\limits_{t\to0^+}  |t\int_{0}^{\infty} e^{-tx}f(x)\, \mathrm{d}x-1| \leqslant \lim\limits_{t\to0^+}  \epsilon|t \int_{N }^{\infty } e^{-tx}\, \mathrm{d}x| $.\\
+    Let  $ \epsilon\downarrow0 $, then  $ N\rightarrow\infty $, and  $ \epsilon|t \int_{N }^{\infty } e^{-tx}\, \mathrm{d}x|\rightarrow0 $.\\
+     $ \Rightarrow \lim\limits_{t\to0^+}  |t\int_{0}^{\infty} e^{-tx}f(x)\, \mathrm{d}x-1|=0 $.\\
+     i.e. $ \lim\limits_{t\to0^+}t \int_{0 }^{\infty } e^{-tx}f(x)\, \mathrm{d}x=1  $        
+\end{proof}
+\paragraph{E2}
+(a) 
+\[ c_m=\dfrac{1}{2\pi}\int_{-\pi }^{\pi } f(x)e^{-imx}\, \mathrm{d}x =\dfrac{1 }{2\pi }\int_{-\delta}^{\delta} e^{-imx}\, \mathrm{d}x=-\dfrac{1}{2i\pi m}(e^{-im\delta}-e^{im\delta})=\dfrac{\sin{m\delta}}{\pi m} ,\,m\not=0  \] (use Newton-Leibniz formula) \\ $ c_0=\dfrac{\delta}{\pi } $\\ 
+(b) $ 2\sum\limits_{n=1 }^{\infty } \dfrac{\sin(n\delta)}{n}=\sum\limits_{m=1 }^{\infty}2\pi c_m=\int_{-\delta }^{\delta } \sum\limits_{m=1 }^{\infty } e^{-imx}\, \mathrm{d}x=\int_{-\delta }^{\delta } \dfrac{e^{-ix}}{1-e^{-ix}} \, \mathrm{d}x=\dfrac{1 }{i}\left.\ln(1-e^{-ix})\right|_{-\delta}^{\delta}=\pi-\delta     $ \\
+(c)use the Parseval theorem
+ \begin{align*}
+    \sum\limits_{m=-\infty}^{\infty} c_m\overline{c_m}&=\dfrac{1}{2\pi}\int_{-\pi }^{\pi } f(x)\overline{f(x)}\, \mathrm{d}x \\
+    &=\dfrac{\delta  }{\pi } .  
+\end{align*}
+Then  $ \sum\limits_{m=1 }^{\infty } \dfrac{\sin^2(m\delta)}{m^2}=\dfrac{\sum\limits_{m=-\infty }^{\infty }c_m^2-c_0^2 }{2}\pi^2= \dfrac{\delta(\pi-\delta)}{2}$ \\
+(d)First, for  $ \dfrac{1 }{x^2} $ is bounded and  $ \int_{0}^{\infty } sin^2x\, \mathrm{d}x   $ converges, we know  $ \int_{0}^{\infty} (\frac{\sin{x }}{x})^2\, \mathrm{d}x   $ converges by Abel-Dirichlet test.\\
+Notice that for  $ \epsilon>0 $ , choose a partition  $ p=\{0,\epsilon,2\epsilon,\cdots\}  $ of  $ (0,\infty) $ ,
+and  $ \sum\limits_{n=1}^{\infty}\dfrac{\sin^2(n\epsilon)}{(n\epsilon)^2}(n\epsilon-(n-1)\epsilon)=\dfrac{n-\epsilon}{2}  $.
+Let  $ \epsilon\downarrow0 $, then  $ \int_{0 }^{\infty } (\frac{\sin{x}}{x})\, \mathrm{d}x=\frac{\pi }{2}   $.  \\
+(e)Let  $ \delta=\dfrac{\pi}{2} $, then  $ \dfrac{\pi^2}{8} =\sum\limits_{n=1}^{\infty}\dfrac{\sin(\frac{n\pi }{2})}{n^2}=\sum\limits_{n=1}^{\infty} \dfrac{1 }{(2n-1)^2} $.
+\paragraph{E3}
+\begin{proof}
+    Let  $ g(x):=x $, Then its Fourier coefficients
+    \[c_m=\dfrac{1}{2\pi}\int_{-\pi }^{\pi } xe^{imx}\, \mathrm{d}x=\dfrac{1}{2\pi}\left.\dfrac{xe^{imx}}{im}+\dfrac{e^imx }{m^2}\right|_{-\pi}^\pi=\dfrac{e^{im\pi}}{im} \quad m\not=0 \] 
+     $ c_0=0 $\\  
+    Then use Parseval theorem we know that\[\sum\limits_{n=-\infty }^{\infty } |c_n|^2=\dfrac{1}{2\pi}\int_{-\pi}^{\pi} |x|^2\, \mathrm{d}x=\frac{\pi^2}{3}  \]
+    \[\Rightarrow \sum\limits_{n=1}^{\infty} \frac{1}{n^2}=\sum\limits_{n=1}^{\infty} |c_n|^2=\dfrac{1 }{2}\sum\limits_{n=-\infty }^{\infty } |c_n|^2=\frac{\pi}{6}\]
+    And with E2(c) we know:
+    \begin{align*}
+        \frac{\pi^2}{3}+\sum\limits_{n=1}^{\infty} \frac{4}{n^2}\cos(nx)&=\frac{\pi^2}{3}+\sum\limits_{n=1}^{\infty} \frac{4}{n^2}(1-2\sin^2(\frac{n|x|}{2}))\\
+        &=\frac{\pi^2}{3}+\sum\limits_{n=1}^{\infty} \frac{4}{n^2}-\sum\limits_{n=1}^{\infty}\frac{8\sin^2(n\frac{|x| }{2})}{n^2}\\
+        &= \frac{\pi^2}{3}+\frac{2\pi^2}{3}-8\frac{\frac{|x| }{2 }(\pi-\frac{|x| }{2})}{2}\\
+        &=\pi^2-2\pi |x|+x^2\\
+        &=(\pi-|x|^2)
+    \end{align*}
+    Then the Fourier coefficients of  $ f  $ 
+    \begin{equation*}
+        c_m=\left\{
+            \begin{aligned}
+                \frac{2 }{m^2}&\quad m\not=0\\
+                \frac{\pi^2}{3}&\quad m=0
+            \end{aligned}
+        \right.
+    \end{equation*}
+    Use the Parseval theorem we know that:
+    \[\sum\limits_{n=-\infty}^{\infty} |c_n|^2=\int_{-\pi }^{\pi }\frac{1}{2\pi} (\pi-|x|)^4\, \mathrm{d}x=\frac{1 }{5}\pi^4  \]
+    Then\[\sum\limits_{n=1}^{\infty} \dfrac{1}{n^4}=\dfrac{\sum\limits_{n=-\infty}^{\infty} |\frac{1 }{2}c_n|^2-|\frac{1 }{2}c_0|^2}{2}=\dfrac{\pi^4 }{90}\]
+\end{proof}
+(a)\begin{proof}
+    \begin{align*}
+        K_N(x)&=\dfrac{1}{N+1}\sum\limits_{n=0}^{N } D_n(x)\\
+        &=\dfrac{1}{N+1}\frac{\sum\limits_{n=0}^{N }e^{-i(N+\frac{1}{2})x}-e^{i(N+\frac{1 }{2})x}}{\sin{\frac{x }{2 }}}\\
+        &=\dfrac{1}{N+1}\frac{\sum\limits_{n=0 }^{N } (e^{-i(N+\frac{1}{2})x}-e^{i(N+\frac{1 }{2})x})(e^{i\frac{x }{2}}-e^{-i\frac{x }{2}})}{\sin{\frac{x}{2 } }\sin{\frac{x }{2 }}}\\
+        &=\dfrac{1}{N+1}\frac{1-e^{(N+1)x}-e^{-(N+1)x}}{2\sin^2{x}}\\
+        &=\dfrac{1 }{N+1}\frac{1-\cos{(N+1)x}}{1-\cos{x}}
+    \end{align*}
+    As  $ \cos {x}  \leqslant 1 $, Then  $ K_N (x)\geqslant 0 $. And
+    \[\dfrac{1 }{2\pi }\int_{-\pi }^{\pi}K_N(x) \, \mathrm{d}x  =\sum\limits_{n=0 }^{N } \dfrac{1 }{2\pi}\int_{-\pi }^{\pi} D_n(x)\, \mathrm{d}x=1  \]  
+    \[
+        K_n(x) \leqslant \dfrac{1}{N+1}\dfrac{1-(-1)}{1-\cos{\delta}}=\dfrac{1}{N+1}\dfrac{2}{1-\cos{\delta}}\quad\text{ As  $ 0<\delta \leqslant |x| \leqslant \pi $ }
+    \]
+    
+\end{proof}
+(b)\begin{proof}
+    \begin{align*}
+        \sigma_N(x)&=\dfrac{1 }{N+1}\sum\limits_{n=0}^{N } \sigma_n(x)\\
+        &=\dfrac{1 }{N+1}\sum\limits_{n=0}^{N }\dfrac{1 }{2\pi }\int_{-\pi }^{\pi} f(x-t)D_n(t)\, \mathrm{d}t\\
+        &=\dfrac{1 }{2\pi}\int_{-\pi }^{\pi } f(x-t)\dfrac{1 }{N+1}\sum\limits_{n=0}^{N }D_n(t)\, \mathrm{d}t\\
+        &=\dfrac{1 }{2\pi }\int_{-\pi }^{\pi } f(x-t)K_N(t)\, \mathrm{d}t      
+    \end{align*}
+\end{proof}
+(c)\begin{proof}
+    As  $ f  $ is continuous on  $ [-\pi,\pi ] $ with period  $ 2\pi $ , Then  $ f $ is uniformly continuous and bounded. Let  $ M:=\max\limits_{x\in[-\pi,\pi]}f(x) $ \\
+    Then for  $ \epsilon>0  $, there exists  $ \frac{\pi }{2}>\delta>0  $ such that  $ |f(x)-f(y)|<\epsilon $ whenever  $ |x-y|<2\delta $.
+    Then 
+    \begin{align*}
+        2\pi|\sigma_N(x)-f(x)|&=|\int_{-\pi }^{\pi} (f(x-t)-f(x))K_N(t)\, \mathrm{d}t|\\
+         &\leqslant |\int_{-\pi }^{-\delta} (f(x-t)-f(x))K_N(t)\, \mathrm{d}t|+|\int_{\delta}^{\pi } (f(x-t)-f(x))K_N(t)\, \mathrm{d}t|\\&+|\int_{-\delta}^{\delta} (f(x-t)-f(x))K_N(t)\, \mathrm{d}t|\\
+         & \leqslant 2M\times2(\pi-\delta)\dfrac{1}{N+1}\dfrac{2}{1-\cos{\delta}}+\epsilon|\int_{-\delta}^{\delta} K_N(t)\, \mathrm{d}t|  
+    \end{align*}  
+    Then let  $ N  $ large enough, we have:
+    \[2\pi|\sigma_N(x)-f(x)| \leqslant 2\epsilon|\int_{-\delta}^{\delta} K_N(t)\, \mathrm{d}t|<2\epsilon|\int_{-\pi}^{\pi} K_N(t)\, \mathrm{d}t|    \]
+    The final inequality is because  $ K_N(t)>0, \,\forall t\in \mathbb{R} $.\\
+    Then let  $ \epsilon\rightarrow0  $, we have  $ \lim\limits_{n\to\infty} \sigma_n=f  $ uniformly.  
+\end{proof}
+(d)
+\begin{proof}
+    For  $ \epsilon>0 $. 
+ $ f(x+),f(x-) $,exists implies that there exists  $ \delta>0 $ s.t. 
+ \[|f(x+)-f(y)|<\epsilon\quad \forall x<y<x+\delta\]
+ \[|f(x-)-f(y)|<\epsilon\quad \forall x-\delta<y<x\]
+    \begin{align*}
+        |4\pi\sigma_N(x)-2\pi f(x+)-2\pi f(x-)|&=  |2\int_{-\pi}^{\pi} f(x-t)K_N(t)\, \mathrm{d}t-\int_{-\pi}^{\pi} f(x+)K_N(t)\, \mathrm{d}t\\&-\int_{-\pi}^{\pi}f(x-) K_N(t)\, \mathrm{d}t  \\
+        & \leqslant |\int_{-\pi }^{-\delta}(2f(x-t)-f(x+)-f(x-))K_N(t) \, \mathrm{d}t\\&+\int_{\delta}^{\pi} (2f(x-t)-f(x+)-f(x-))K_N(t)\, \mathrm{d}t|\\
+        &+2|\int_{-\delta}^{0}(f(x-t)-f(x+)) K_N(t)\, \mathrm{d}t|\\&+2|\int_{0}^{\delta} (f(x-t)-f(x-))K_N(t)\, \mathrm{d}t|\quad(\text{for } K_N(t)-K_N(-t))\\
+        & \leqslant+16M(\pi-\delta)\dfrac{1}{N+1}\dfrac{2}{1-\cos{\delta}}+4\epsilon|\int_{-\pi}^{\pi} K_N(t)\, \mathrm{d}t|
+    \end{align*}
+    Then\[\lim\limits_{N\to\infty}|4\pi\sigma_N(x)-2\pi f(x+)-2\pi f(x-)| \leqslant 4\epsilon|\int_{-\pi}^{\pi} K_N(t)\, \mathrm{d}t|    \] 
+    Let  $ \epsilon\rightarrow0^+ $, Then  $ \lim\limits_{N\to\infty}\sigma_N(x)=\dfrac{f(x+)+f(x-)}{2}   $
+
+\end{proof}
+(e)\begin{proof}
+    First, if  $ f(x)=e^{imx},\,m\in\mathbb{Z} $, then
+    \[
+        \lim\limits_{N\to\infty}\frac{1}{N }\sum\limits_{n=1 }^{N}e^{im(x+n\alpha)}=e^{im(x+\alpha)}\lim\limits_{N\to\infty}\frac{1}{N }\frac{e^{imN\alpha}-1}{e^{im\alpha}-1}=0,\,m\not=0
+    \]
+    and  $ e^{im(x+n\alpha)}=1 $ for  $ m=0 $.
+    Notice that 
+    \begin{equation*}
+        \frac{1}{2\pi}\int_{-\pi }^{\pi } e^{imx}\, \mathrm{d}x=\left\{
+            \begin{aligned}
+                1,&\quad m=0\\
+                0,&\quad m\in \mathbb{Z },m\not=0
+            \end{aligned}
+        \right.  
+    \end{equation*}  
+    Then equality holds for  $ f(x)=e^{imx},m\in\mathbb{Z} $.\\
+    Then if we define X be the set of all the function  $ f $ satisfying the equality.
+    Easy to know that X is a linear subspace.\\
+    So The Nth partial sum  $ s_N=\sum\limits_{n=-N }^{N } c_ne^{inx}\in X $.
+    Then  $ \sigma_N=\frac{s_0+s_1+\cdots,+s_N }{N+1}\in X $.\\  
+    Then as  $ \sigma_N\rightarrow f $ uniformly.\\
+    Hence 
+    \begin{align*}
+        \dfrac{1}{2\pi}\int_{-\pi}^{\pi } f(t)\, \mathrm{d}t&=\lim\limits_{N\to\infty}\dfrac{1 }{2\pi}\int_{-\pi}^{\pi} \sigma_N\, \mathrm{d}x  \\    
+        &=\lim\limits_{N\to\infty} \lim\limits_{M\to\infty}\frac{1}{M }\sum\limits_{n=1 }^{M}\sigma_N(x+n\alpha)\\
+        &=\lim\limits_{M\to\infty} \frac{1 }{M}\sum\limits_{n=1}^{M} \lim\limits_{N\to\infty} \sigma_N(x+n\alpha)\\
+        &=\lim\limits_{M\to\infty}\frac{1}{M }\sum\limits_{n=1 }^{M}f(x+n\alpha)     
+    \end{align*}
+\end{proof}
+\end{document}

@@ -1,0 +1,85 @@
+Let  $ \gamma $ br a piecewise differential arc in  $ \mathbb{C} $ with the equation  $ z=z(t),a \leq t \leq b $. If  $ f  $ is continuous on  $ \gamma $, then  $ f(z(t)) $ is conitnuous on  $ [a,b] $, and we define
+\begin{equation}
+    \int_\gamma f(z)\mathrm{d}z=\int_a^bf(z(t))z'(t)\mathrm{d}t\label{integration of complex curve}
+\end{equation}  
+The integral defined in \ref{integration of complex curve} is independent of the parametrization of  $ \gamma $. Suppose that anther parrametrization of  $ \gamma $ is  $ \gamma:(\alpha,\beta)\rightarrow \mathbb{C} ,\tau\mapsto z(t(\tau))$, where  $ t:(\alpha,\beta)\rightarrow (a,b),\tau\mapsto t(\tau) $ is piecewise differentiable. Then we have
+\begin{equation}
+    \int_a^b f(z(t))z'(t)\mathrm{d}t=\int_\alpha^\beta f(z(t(\tau)))z'(t(\tau))t'(\tau)\mathrm{d}t=\int_\alpha^\beta f(z(t(\tau)))\frac{\mathrm{d}z(t(\tau))}{\mathrm{d}\tau}\mathrm{d}\tau
+\end{equation}
+\newline
+For an arc  $ \gamma $ with equation  $ z=z(t),a \leq t \leq b $, we define  $ -\gamma $ by  $ z=z(-t),-b \leq t \leq a $.
+
+Then we have 
+\begin{align*}
+    \int_{-\gamma}f(z)\mathrm{d}z&=\int_{-b}^{-a}f(z(-t))\dps\frac{\mathrm{d}z(-t)}{\mathrm{d}t}\mathrm{d}t\\
+    &=-\int_{-a}^{-b}f(z(-t))z'(-t)\mathrm{d}t\\
+    &=-\int_{a}^bf(z(\tau))z'(\tau)\mathrm{d}\tau\\
+    &=-\int_\gamma f(z)\mathrm{d}z
+\end{align*}
+So we have those properties:
+\begin{proposition}
+    \,
+    \begin{enumerate}
+        \item[(a)]  $ \dps\int_{-\gamma}f(z)\mathrm{d}z=-\int_\gamma\mathrm{d}z $
+        \item[(b)] Let  $ f $ and  $ g $ be two continuous functions on the piecewise differentiable arc  $ \gamma $, then 
+        \[\int_\gamma(\lambda_1f+\lambda_2g)\mathrm{d}z=\lambda_1\int_\gamma f\mathrm{d}z+\lambda_2\int_\gamma g\mathrm{d}z,\forall \lambda_1,\lambda_2\in\mathbb{C}\]      
+        \item[(c)] If  $ \gamma $ can be subdivided into two pieces differentiable arcs  $ \gamma_1 $ and  $ \gamma_2 $, and  $ f $ is continuous on  $ \gamma_1 $ , then
+        \[\int_\gamma f\mathrm{d}z=\int_{\gamma_1} f\mathrm{d}z+\int_{\gamma_2} f\mathrm{d}z\]
+        \item[(d)]  $ (c) $ implies that the integral of a closed curve doesn't depend on the starting point on the curve 
+    \end{enumerate}
+\end{proposition}
+\begin{example}
+    Evaluate  $ \dps\int_\gamma\frac{1}{z-a}\mathrm{d}z $ where  $ \gamma $ is the circle centered at  $ a\in\mathbb{C} $ with radius  $ R $. 
+    
+    Let  $ z=z(t)=a+Re^{it} $. Then the integral is  $ 2\pi i $  
+\end{example}
+\subsubsection{The fundamental theorem of Calculus for integrals in  $ \mathbb{C} $}
+The line integral w.r.t.  \subname{$ \bar{z} $}{integral} is defined by 
+\[\int_\gamma f(z)\overline{\mathrm{d}{z}}=\overline{\int_\gamma \overline{f(z)}\mathrm{d}z} \] 
+With this notation, line integrals w.r.t.  $ x=\Real(z) $ and  $ y=\Imag(z) $ can be defined by 
+\[\int_\gamma f(z)\mathrm{d}x=\dps\frac{1}{2}[\int_\gamma f(z)\mathrm{d}z+\int_\gamma f(z)\overline{\mathrm{d}z}]\]
+\[\int_\gamma f(z)\mathrm{d}y=\dps\frac{1}{2 i}[\int_\gamma f(z)\mathrm{d}z-\int_\gamma f(z)\overline{\mathrm{d}z}]\]
+if we write  $ f(z)=\mu+i\nu $, we have 
+\[\int_\gamma f(z)\mathrm{d}z=\int_\gamma f(z)\mathrm{d}x+i\int_\gamma f(z)\mathrm{d}y=\int_\gamma(\mu\mathrm{d}x-\nu\mathrm{d}y)+i\int_\gamma(\nu\mathrm{d}x+\mu\mathrm{d}y)\]   
+\begin{remark}
+    It is followed by the intuition. We can view the integration as the multiplication between  $ f $ and  $ \mathrm{d}z $. 
+\end{remark}
+
+The integral w.r.t. \subname{arc length}{integral} is defined by 
+\[\int_\gamma f(z)|\mathrm{d}z|=\int_a^bf(z(t))|z'(t)|\mathrm{d}t\]
+This integral is again independent of the parametrization. It is easy to check 
+\[\int_{-\gamma}f(z)|\mathrm{d}z|=\int_\gamma f(z)|\mathrm{d}z|\]
+Now we define \name{length} of a curve  $ \gamma $: $ L(\gamma)=\int_\gamma |\mathrm{d}z| $ 
+
+We have the inequality: 
+\[\dps\left|\int_\gamma f\mathrm{d}z\right| \leq \int_\gamma |f| \cdot|\mathrm{d}z| \leq L(\gamma)\cdot \sup\limits_{z \leq \gamma}|f(z)|\]
+The length of an arc  $ \gamma $ ($ z=z(t) $) can also be defined as the least upper bound of all sums 
+\[\dps\sum_{i=1}^n |z(t_i)-z(t_{i-1})|\]
+where  $ a=t_0<t_1<\cdots<t_n=b $ 
+If this least upper bound is finite, we say that the arc is \name{rectifiable}
+
+It is easy to show that piecewise differentiable arcs are rectifiable.
+
+The integral of a continuous function  $ f $ on a rectifiable arc may be defined as 
+\[\dps\int_\gamma f(z)\mathrm{d}z=\lim \sum_{k=1}^nf(z(\psi_k))[z(t_k)-z(t_{k-1})]\] 
+\begin{theorem}
+    Let  $ \gamma\subset \mathbb{C} $ be a region, and  $ P,Q $ two (possibly complex-valued) functions that are continuous on  $ \Omega $,  $ \gamma $ closed curve. The integral  $ \int_\gamma p(x,y)\mathrm{d}x+Q(x,y)\mathrm{d}y $ depends only on the end point of  $ \gamma $ iff there exists a function   $ U(x,y) $ on  $ \Omega $ with  $ \dps\frac{\partial U}{\partial x}=P,\frac{\partial U}{\partial y}=Q $.  
+\end{theorem}
+\begin{proof}
+    "$ \Leftarrow $": If such a  $ U $ exists, then 
+    \[\int_\gamma P\mathrm{d}x+Q\mathrm{d}y=\int_\gamma\frac{\partial U}{\partial x}\mathrm{d}x+\frac{\partial U}{\partial y}\mathrm{d}y=\int_\gamma\frac{\mathrm{d}U}{\mathrm{d}t}\mathrm{d}t=U(\gamma(b))-U(\gamma(a))\] 
+    "$ \Rightarrow $": Fix a point  $ (x_0,y_0)\in \Omega $. We define  $ U(x,y)=\int_\gamma P\mathrm{d}x+Q\mathrm{d}y$ where  $ \gamma $ is any curve between  $ (x_0,y_0) $ and  $ (x,y) $. Easy to check that it is true.     
+\end{proof}
+\begin{theorem}[Fundamental theorem of Calculus for integrals on  $ \mathbb{C} $]
+    Let  $ f $ be continuous on a region  $ \Omega $  containing  $ \gamma $.  $ \int_\gamma f\mathrm{d}z $ depends on the endpoints iff  $ f $ is the derivative of an analytic function  $ F $ in  $ \Omega $.     
+\end{theorem}
+\begin{remark}
+    We will prove  $ \dps\int_\gamma f\mathrm{d}z=F(\omega_2)-F(\omega_1) $ where  $ \gamma $ begins at  $ \onemga_1 $ and ends at  $ \omega_2 $.    
+\end{remark}
+\begin{proof}
+    Transform  the line integration into  the composition of two real integration.
+\end{proof}
+\begin{corollary}
+    If  $ F $ is analytic on  $ \Omega $ with  $ F'=f $, and  $ \gamma $ is a closed curve in  $\Omega $, then  $ \int_\gamma f\mathrm{d}z=0 $. Conversely if  $ f $  is continuous on  $ \Omega $ and  $ \int_\gamma f\mathrm{d}z=0 $ for any closed curve in  $ \Omega $, then  $ f $ is the derivartive of an analytic function  $ F $ in  $\Omega $.          
+\end{corollary}
+

@@ -1,0 +1,117 @@
+\begin{theorem}[Fubini's theorem for infinite series]
+    Given a double sequence  $ \{a_{ij}\}, i,j\in \mathbb{N} $. Suppose that 
+    \begin{equation*}
+        \sum\limits_{j=1}^{\infty}|a_{ij}|=b_i,\forall i\in\mathbb{N } \text{ and } \sum\limits_{i=1}^{\infty} b_i \text{ converges } 
+    \end{equation*}
+    Then \[\sum\limits_{i=1}^{\infty} \sum\limits_{j=1}^{\infty} a_{ij }=\sum\limits_{j=1}^{\infty} \sum\limits_{i=1}^{\infty} a_{ij}\] 
+\end{theorem}
+\begin{proof}
+    Let $ E:=\{x_0,x_1,x_2,\cdots\} $ and suppose  $ \lim\limits_{n\to\infty}x_n=x_0   $. Define
+     \[ f_i(x_0):=\sum\limits_{j=1}^{\infty} a_{ij},\,\forall i\in\mathbb{N }\qquad f_i(x_n):=\sum\limits_{j=1}^{n}a_{ij},\,\forall i,j\in\mathbb{N },\qquad g(x):=\sum\limits_{i=1}^{\infty} f_i(x),\,\forall x\in E  \] 
+     \[\sum\limits_{i=1}^{\infty} \sum\limits_{j=1}^{\infty} a_{ij }<\infty\Rightarrow \text{ $ f_i  $ is continuous at  $ x_0,\,\forall i\in\mathbb{N} $. }\]
+    \[|f_i(x) |\leqslant b_i,\,\forall x\in E \xRightarrow{M-test} \sum\limits_{i=1}^{\infty}f_i(x) \text{ converges uniformly on  $ E $ } \]
+    use 1st theorem in 7.2 we know that  $ g  $ is continuous at  $ x_0 $.
+    \begin{align*}
+        \sum\limits_{i=1}^{\infty} \sum\limits_{j=1}^{\infty} a_{ij }&=\sum\limits_{i=1}^{\infty}f_i(x_0)=g(x_0)\\
+        &=\lim\limits_{n\to\infty}g(x_n)\\
+        &=\lim\limits_{n\to\infty}\sum\limits_{i=1}^{\infty} f_i(x_n)     \\
+        &=\lim\limits_{n\to\infty}\sum\limits_{i=1}^{\infty} \sum\limits_{j=1}^{n } a_{ij}\\
+        &=\lim\limits_{n\to\infty} \sum\limits_{j=1}^{n } \sum\limits_{i=1}^{\infty} a_{ij}   
+    \end{align*} 
+\end{proof}
+\begin{theorem}
+    Suppose  $ f(x)=\sum\limits_{n=0}^{\infty} c_nx^n $ and the series converges in  $ |x|<R $. If  $ a\in(-R,R) $, then  $ f $ can be expanded in a power series about  $ x=a $ which converges in  $ |x-a|<R-|a| $, and  $ f(x)=\sum\limits_{k=0}^{\infty} \dfrac{f^{(k)}(a )}{k!}(x-a)^k,\,|x-a|<R-|a| $     
+\end{theorem}
+\begin{proof}
+    \begin{align*}
+        f(x)&=\sum\limits_{n=0}^{\infty} c_n[(x-a)+a]^n\\
+        &=\sum\limits_{n=0}^{\infty} c_n \sum\limits_{k=0}^{ n }\binom{n}{k} a^{n-k}(x-a)^k\\
+        &=\sum\limits_{k=0}^{\infty} \sum\limits_{n=k }^{\infty} \binom{n }{k }c_n a^{n-k}(x-a)^k\quad\text{ (previous theorem) }\\
+        &=\sum\limits_{k=0}^{\infty} \dfrac{f^{(k)}(a)}{k!}(x-a)^k\quad\text{(Corollary in this section)}
+    \end{align*}
+\end{proof}
+\begin{theorem}
+    Suppose the series  $ \sum a_n x^n  $ and  $ \sum b_nx^n $ converge in  $ (-R,R) $.
+    Let  $ E  $ be the set of all  $ x $ in  $ (-R,R) $ s.t.  $ \sum\limits_{n=0}^{\infty} a_nx^n=\sum\limits_{n=0}^{\infty} b_nx^n $. If  $ E  $ has a limit point in  $ (-R,R) $,  then  $ a_n=b_n $ for  $ \forall n\in N \cup\{0\} $.
+    Hence  $ E=(-R,R) $.     
+\end{theorem}
+\begin{proof}
+    \textbf{Claim}. Let  $ A  $ be a subset  of a metric space  $ X  $ and  $ X  $ is connected. If  $ A  $ is both open and closed, then  $ A=\phi $  or  $ A=X $. ( Cause  $ X=A\cup A^c $ )\\
+    Let  $ f(x):=\sum\limits_{n=0}^{\infty} (a_n-b_n)x^n,\qquad x\in (-R,R) $.\\
+    Then  $ E:=\{x\in(-R,R):f(x)=0\} $ \\
+    1st theorem in \S 8.1 implies f is continuous in  $ (-R,R) $  $ \Rightarrow $  $ E  $ is closed ( relative to  $ (-R,R) $ )\\
+    We prove in Homework 1 that  $ E' $ is closed. We will prove  $ E' $ is open. Then with the claim we know  $ E=E'=(-R,R) $.\\
+    Let  $ x_0\in E'  $, the previous theorem  $ \Rightarrow $
+    \[f(x)=\sum\limits_{n=0}^{\infty} d_n(x-x_0)^n,\quad |x-x_0|<R-|x_0|\]
+    We Claim that  $ d_n=0  $ for  $ \forall n\in \mathbb{N }\cup \{0\} $. Otherwise, let  $ k  $ be smallest nonnegative   integer s.t.  $ d_k\not=0 $. Then  $ f(x)=(x-x_0)^kg(x) $, where  $ g(x)=\sum\limits_{m=0 }^{\infty} d_{m+k}(x-x_0)^m $
+    1st theorem in 8.1 implies   $ g  $ is continuous at  $ x_0  $, and  $ g(x_0)=d_k\not=0 $. \\
+     $ \Rightarrow $  $ \exists \delta>0  $ s.t.  $ g(x)\not=0,\,\forall x\in (x_0-\delta,x_0+\delta) $\\
+      $ \Rightarrow  $ $ f(x)\not=0 $ for  $ \forall x\in (x_0-\delta,x_0+\delta)\backslash\{x_0\} $\\   
+      $ \Rightarrow x_0\not\in E' $, which is not correct.\\
+      That way, we can know  $ f(x)=0 $, whenever  $ |x-x_0|<R-|x_0| $. So there exists a NBHD of  $ x_0 $ is contained by  $ E'  $. Then     $ E' $ is open.      
+    
+\end{proof}
+\begin{remark}
+     The proof use the continuity of power series functions.
+\end{remark}
+\subsection{Fourier Series}
+ A \underline{trigonometric polynomial} is a finite sum of the form 
+ \[f(x)=a_0+\sum\limits_{n=1}^{N}(a_n\cos{nx}+b_n \sin{nx}), \quad\forall x\in\mathbb{R} \]
+ where  $ a_0,a_1,\cdots, a_N,b_1,\cdots,b_N\in \mathbb{C} $. Equivalently,
+\begin{equation}
+    f(x)=\sum\limits_{n=-N }^{N } c_ne^{inx},\quad x\in \mathbb{R }\tag{ $ \ast $ }
+\end{equation}\\
+with  $ a_0=c_0,a_n=c_n+c_{-n},b_n=c_n-c_{-n} $.\\
+It is easy to see 
+\begin{equation*}
+    \frac{1}{2\pi}\int_{-\pi }^{\pi } e^{inx}\, \mathrm{d}x=\left\{
+        \begin{aligned}
+            1,&\quad n=0\\
+            0,&\quad n\in \mathbb{Z }\backslash\{0\}
+        \end{aligned}
+    \right.  
+\end{equation*}
+\begin{equation}
+    \Rightarrow c_m =\frac{1}{2\pi }\int_{-\pi }^{\pi } f(x)e^{-imx}\, \mathrm{d}x, \qquad m=-N,-N+1,\cdots , N\tag{ $ \ast\ast $ }
+\end{equation} 
+\begin{remark}
+     $ f  $ is real  $ \Leftrightarrow  $  $ f(x)=\overline{f(x)}  $ $ \Leftrightarrow $  $ \sum\limits_{n=-N }^{N } c_ne^{inx} =\sum\limits_{n=-N }^{N } \overline{c_n}e^{-inx}$   $ \Leftrightarrow $  $ \sum\limits_{n=-N }^{N } (c_n-\overline{c_{-n}})e^{inx}=0 $  $ \Leftrightarrow $  $ c_n=\overline{c_{-n}} $  for  $ \,\forall \,n=0,1,\cdots ,N  $.  
+\end{remark}
+A \underline{trigonometric series} is  a series of the form 
+\begin{equation}
+    \sum\limits_{n=-\infty}^{\infty}c_ne^{inx} ,\quad x\in \mathbb{R }\tag{ $ \ast\ast\ast $ }
+\end{equation}
+whose Nth partial sum is defined to be  $ (\ast) $.\\
+If  $ f\in \mathscr{R } $ on  $ [-\pi,\pi ] $, the numbers  $ c_m,m\in\mathbb{Z } $ defined by  $ (\ast\ast) $ are called \underline{Fourier coefficients} of  $ f  $, and the series  $ (\ast\ast\ast) $ formed with these coefficients is called the \underline{Fourier series} of  $ f $.\\
+Let  $ \{\phi_n\}_{n\in\mathbb{N }} $ be a sequence of complex functions on  $ [a,b] $ s.t.
+\[\int_{a }^{b } \phi_n(x)\overline{\phi_m(x)}\, \mathrm{d}x=0,\quad\forall n\not=m  \]
+Then  $ \{\phi_n \} $ is said to be an \underline{orthogonal system of functions} on  $ [a,b] $.\\
+If, in addition,  $ \int_{a }^{b } |\phi_n(x)|^2\, \mathrm{d}x=1   $, then it is called \underline{orthonormal}\\
+
+\begin{example}
+     $ \{\frac{1}{\sqrt{2\pi}}e^{inx}\}_{n\in\mathbb{Z}} $ form an orthonormal system on  $ [-\pi,\pi] $.  
+
+\end{example}
+If  $ \{\phi_n\} $ is orthonormal on  $ [a,b] $ and if 
+\[c_n=\int_{a }^{b } f(t)\overline{\phi_n(t)}\, \mathrm{d}t,\quad \forall n\in\mathbb{N }  \]
+ We called  $ c_n  $ the nth Fourier coefficients of  $ f  $  relative to  $ \{\phi_n\} $, we write
+ \[f(x)\backsim \sum\limits_{n=1 }^{\infty} c_n\phi_n(x)\]   
+ and call this series the Fourier series of  $ f  $ relative to  $ \{\phi_n\} $.
+ \begin{theorem}
+    Let  $ \{\phi_n \} $ be orthonormal on  $ [a,b] $. Let  $ S_n(x)=\sum\limits_{m=1}^{n } c_m\phi_m(x) $ be the nth partial sum of the Fourier series of  $ f  $ with  $ f\in\mathscr{R } $ on  $ [a,b] $, and Suppose
+    \[t_n(x)=\sum\limits_{m=1}^{n } d_m \phi_m(x)\]
+    Then  $ \int_{a }^{b } |f-S_n|^2\, \mathrm{d}x  \leqslant \int_{a }^{b } |f-t_n|^2\, \mathrm{d}x    $.\\
+    and equality holds iff  $ d_m=c_m,m\in\mathbb{N},\forall m\in\mathbb{N },m \leqslant N $ 
+ \end{theorem}
+ \begin{remark}
+    The theorem says, among all functions  $ t_n $, $ s_n  $ gives the best possible mean square approximation to  $ f  $.  
+ \end{remark}
+ \begin{proof}
+    \begin{align*}
+        \int_{a }^{b } |f-t_n|^2\, \mathrm{d}x&=\int_{a }^{b } |f|^2\, \mathrm{d}x +\int_{a }^{b } |t_n|^2\, \mathrm{d}x -\int_{a }^{b } f\overline{t_n}\, \mathrm{d}x -\int_{a }^{b } \overline{f }t_n \, \mathrm{d}x \\
+        &=\int_{a }^{b } |f|^2\, \mathrm{d}x+\sum\limits_{m=1 }^{n } \sum\limits_{j=1 }^{n } \int_{a }^{b } d_m\phi_m\overline{d_j\phi_j }\, \mathrm{d}x -\sum\limits_{m=1 }^{n } \overline{d_m }\int_{a }^{b } f\overline{\phi_m }\, \mathrm{d}x -\sum\limits_{m=1 }^{n } d_m \int_{a }^{b } \overline{f }\phi_m\, \mathrm{d}x \\
+        &=\int_{a  }^{b } |f|^2 \, \mathrm{d}x +\sum\limits_{m=1 }^{n } |d_m|^2-\sum\limits_{m=1 }^{n } (\overline{d_m }c_m+d_m\overline{c_m })\\
+        &=\int_{a }^{b } |f|^2\, \mathrm{d}x -\sum\limits_{m=1 }^{n } |c_m|^2+\sum\limits_{m=1 }^{n } |d_m-c_m|^2.\tag{ $ \square  $ } 
+    \end{align*}
+    which is minimized if and only if   $ d_m=c_m, m=1,\cdots,n $.
+ \end{proof}

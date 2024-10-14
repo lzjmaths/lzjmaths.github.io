@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Analysis homework}
+\author{lin150117 }
+\date{March 2023}
+\begin{document}
+In this homework, we define  $ |x-y|:=d(x,y) $, if there is a metrc space with  $ d $.  
+\paragraph{E1}
+\begin{proof}
+    With  $ K  $ is compact, then for  $ n\in\mathbb{N }_+ $,  $ K\subset \bigcup\limits_{x\in K }N_{\frac{1 }{n } }(x)  $ implies that exists a finite set  $ K_n \subset K  $ such that  $ K\subset \bigcup\limits_{x\in K_n }N_{\frac{1}{n}}(x) $.
+    Let  $ X=\bigcup\limits_{n\in\mathbb{N }} $, then each point in  $ K  $ is a limit point of  $ X  $ or a point of  $ X  $  ( cause each point not in  $ X  $  is contained by  $ N_{\frac{1 }{n }}(x) $ for some  $ x\in X  $,  $ \forall n\in \mathbb{N } $  ). i.e.  $ X  $ is dense in  $ K  $.
+
+    For  $ K_n  $ is finite, then  $ X  $ is countable, and dense in  $ K  $.
+\end{proof}
+\paragraph{E2}
+\begin{proof}
+    For  $ \forall \epsilon>0 $, choose  $ \delta>0  $ such that  $ |f_n(x)-f_n(y)|<\frac{1 }{3}\epsilon,\,\forall n\in \mathbb{N },\forall x,y,\in K, |x-y|<\delta  $.
+
+    Cause  $ \{f_n \} $ converges pointwise on  $ K $, i.e.  $ \forall x\in K  $,  $ \{f_n(x)\} $ converges, and then is a Cauchy sequence.
+    So choose $ N_x\in \mathbb{N } $ such that  $ \forall n,m\geqslant N_x  $,  $ |f_n(x)-f_m(x)|<\frac{1}{3}\epsilon $.
+    
+    With  $ K=\bigcup\limits_{x\in K }N_\delta(x) $ and  $ K  $ is compact, then exists finite subset  $ P \subset K $, s.t.
+     $ K=\bigcup\limits_{x\in P}N_\delta(x) $.
+     
+    Let  $ N:=\max\limits_{x\in P }N_x  $,  then  $ \forall n,m\geqslant N, y\in K $, there exists  $ x\in P  $ such that  $ y\in N_\delta(x) $. Now  $ |f_n(y)-f_m(y)| \leqslant |f_n(y)-f_n(x)|+|f_n(x)-f_m(x)|+|f_m(x)-f_m(y)| <3\times\frac{1}{3}\epsilon $   
+
+    With Cauchy criterion,  $ \{f_n \} $ converges uniformly on  $ K $ 
+\end{proof}
+\paragraph{E3}
+\begin{proof}
+     $ S  $ is compact implies that  $ S  $ is closed and bounded. Then there exists $ f\in S and r\in \mathbb{R } $ such that  $ |f-g| \leqslant r ,\forall g\in S  $. Then  $ |g(x)| \leqslant |f(x)|+r,\,\forall g\in S,x\in K $. i.e.  $ S  $ is uniformly bounded.
+     
+     For  $ \epsilon>0 $, choose  $ \delta_f,f\in S  $ such that  $ |f(x)-f(y)|<\epsilon $, whenever  $ d(x,y)<\delta_f $.
+     
+     Then if  $ S  $ is not equicontinuous, there exists  $ \epsilon>0 $ such that exists a series of  $ \{f_n \}\subset S   $,  $ \lim\limits_{n\to\infty} \delta_{f_n}=0  $. 
+     
+     However,  $ S  $ is closed tells us that there exists a subsequence of  $ \{f_n \} $,  $ \{f_{n_k}\} $, such that  $ \{f_{n_k}\} $ converge at a point in  $ S  $. With the metric,  $ \{f_{n_k }\} $ converges uniformly, and hense  $ \{f_{n_k}\} $ is equicontinuous ( by the theorem 7.5.2 ), which contradict with the fact that $ \lim\limits_{n\to\infty} \delta_{f_n}=0 $.   
+     
+\end{proof}
+\paragraph{E4}
+(a)
+\begin{proof}
+    The condition implies that  $ \int_{0 }^{1} f(x)P(x)\, \mathrm{d}x=0, \,\forall P\text{ is a poolynomial}   $ 
+
+    By the theorem 7.6.1, there exists a sequence of polynomials  $ \{P_n \} $, s.t. $ \{P_n\}\rightarrow f$ uniformly on $ [0,1]$. For  $ f  $ is continuous on a compact set, then f is bounded. Let  $ M\in \mathbb{R} $ be  $ \sup\limits_{x\in[0,1]}|f(x)| $.  Thus for  $ \epsilon>0 $, there exists  $ N\in \mathbb{N }  $, s.t.
+    \[\forall n\geqslant N ,\,\forall x\in[0,1], |P_n(x)-f(x)|<\epsilon\]
+    Then 
+    \[\forall n\geqslant N ,\,\forall x\in[0,1], |f(x)P_n(x)-f^2(x)|<|f(x)|\epsilon<M\epsilon\]
+    
+    So  $ \{fP_n\}\rightarrow f^2$ uniformly on $ [0,1]$.
+
+    By the theorem 7.3.1, we have 
+    \[0=\lim\limits_{n\to\infty}\int_{0}^{1 } f(x)P_n(x)\, \mathrm{d}x=\int_{0 }^{1} \lim\limits_{n\to\infty}f(x)P_n(x)\, \mathrm{d}x=\int_{0}^{1} f^2(x)\, \mathrm{d}x  \]
+    Cause  $ \int_{0}^{1} f^2\, \mathrm{d}x \geqslant 0  $, then  $ f\equiv0 $  
+\end{proof}
+(b)
+\begin{proof}
+    For a sequence  $ \{\epsilon_n\}\rightarrow0^+   $, We try to choose  a polynomial sequence $ \{P_n\} $ such that  $ \int_{a }^{b } |f-P_n|^2\, \mathrm{d}x<\epsilon_n+\sqrt{\epsilon_n(b-a)}, \forall n\in \mathbb{N }   $.
+    
+    From E5 on HK7(b), we know there exists a continuous function  $ g_n  $ on  $ [a,b] $ such that  $ \int_{a }^{b } |f-g|^2\, \mathrm{d}x <\epsilon_n^2   $. And By the theorem 7.3.1, we can find  $ P_n  $ such that   $ \max\limits_{x\in[a,b]}|f(x)-P_n(x)|<\sqrt{\epsilon_n} $.
+    Then with E5 on HK7 (a),  \[ \sqrt{\int_{a }^{b } |f-P_n|^2\, \mathrm{d}x} \leqslant \sqrt{\int_{a }^{b } |f-g|^2\, \mathrm{d}x  }+\sqrt{\int_{a }^{b } |g-P_n|^2\, \mathrm{d}x  }<\epsilon_n+\sqrt{\epsilon_n(b-a)} \] 
+    
+    Cause  $ \epsilon_n\rightarrow0  $, then  $ \lim\limits_{n\to\infty}  \int_{a }^{ b } |f-P_n|^2\, \mathrm{d}x=0   $ 
+\end{proof}
+\paragraph{E5}
+(a)\begin{proof}
+    Consider  $ \{f_n \} $ as  a pointwise bounded sequence of complex functions on a countable set  $ E=[a,b]\cap \mathbb{Q} $.
+    Then by the theorem 7.5.1, we know exists a subsequence converges at all rationals  $ r\in\mathbb{Q  } $. 
+\end{proof}
+(b)\begin{proof}
+    With the definition of (a)(b), we know that  $ f(x) $ is increasing. Then  $ f(x)=\sup\limits_{r\in\mathbb{Q },r<x }=\lim\limits_{r\to x^-}f(x)   $, $ x\not\in\mathbb{Q} =f(x-)$  
+
+    Now if  $ x\not\in\mathbb{Q},\,x $ is a discontinuity of  $ f  $. Then  $ f(x)\not=f(x+) $. i.e.  $ f(x+)>f(x) $.
+    Choose a rational $ p_x\in(f(x),f(x+ )) $. We only need to prove each  $ p_x $ is unique. ( Then  $ D_f/\mathbb{Q} $ is at most countable. Hence,  $ D_f $ is at most countable  )
+    
+    If  $ p_x=p_y $,  $ x<y $, $ x,y\in D_f/\mathbb{Q } $, then  $ f(x)<p_x<f(x+)<f(y)<p_y $, which causes contradiction.
+\end{proof}
+(c)\begin{proof}
+    For  $ x\in \mathbb{Q} $,  $ \lim\limits_{k\to\infty}f_{n_k}(x)=f(x)   $.
+    
+    If  $ x\not\in\mathbb{Q},x\not\in D_f $, then $ f(x-)=f(x)=f(x+) $.
+
+    For  $ \epsilon>0 $, choose  $ r_1<x<r_2 $  s.t. $ r_1,r_2\in\mathbb{Q},\,|f(r_1)-f(x)|<\epsilon,|f(r_2)-f(x)|<\epsilon $.
+    And  $ \exists N\in \mathbb{N } $, s.t.  $ \forall k\geqslant N $,  $ |f_{n_k}(r_i)-f(r_i)|<\epsilon ,\,i=1,2$.
+    
+    Then  $ \forall k\geqslant N  $,  
+    \begin{align*}
+        |f_{n_k}(x)-f(x)|& \leqslant|f_{n_k}(x)-f_{n_k}(r_1)|+|f_{n_k}(r_1)- f(r_1)|+|f(r_1)-f(x)|\\
+        & \leqslant (f_{n_k}(r_2)-f_{n_k}(r_1))+|f_{n_k}(r_1)- f(r_1)|+|f(r_1)-f(x)|\\
+        &<(f_{n_k}(r_2)-f_{n_k}(r_1))+2\epsilon\\
+        & \leqslant |f_{n_k}(r_2)-f(r_2)|+|f(r_2)-f(x)|+|f(x)-f(r_1)|+|f(r_1)-f_{n_k}(r_1)|+2\epsilon\\
+        &<6\epsilon
+    \end{align*} 
+
+    Let  $ \epsilon\downarrow0 $, then  $ \lim\limits_{k\to\infty}f_{n_k}(x)=f(x)   $   
+\end{proof}
+(d)\begin{proof}
+    Consider  $ \{f_{n_k}\} $ to be defined on  $ D_f $. Then by the theorem 7.5.1, there exists a subsequence  $ \{f_{m_j}\} $ converges for  $ \forall x\in D_f $. Hence,  $ \{f_{m_j}\} $ converges on  $ \mathbb{R } $.
+    And we redefine   $ f(x):=\lim\limits_{j\to\infty}f_{m_j}(x),\,x\in\mathbb{R }   $.    
+\end{proof}
+\paragraph{E6}
+(a)\begin{proof}
+    Consider the inequality below:
+    \[-x-\frac{1}{2}x^2<\ln (1-x)<-x,\quad\forall x\in[0,1)\]
+    Then  $ S_n-\ln n  $ is decreasing, and 
+    \[S_m-S_n+\ln n-\ln m=\sum\limits_{i=n }^{m}(\frac{1 }{i }+\ln (1-\frac{1 }{i}))>\sum\limits_{i=n}^{m} -\frac{1}{2i^2}>-\frac{1 }{2(n-1)}, \,\forall n,m\geqslant 2,m>n  \]
+    With the Cauchy criterion, we know  $ \lim\limits_{n\to\infty}(S_n-\ln n)$ exists. 
+\end{proof}
+(b)\begin{proof}
+    \begin{align*}
+        S_N &\leqslant \prod \limits_{p:p\,prime,\ \leqslant N }(\sum\limits_{i=0}^{+\infty}\frac{1}{p^i} )\\
+        &=\prod\limits_{p:p\,prime,p \leqslant N }\frac{p}{p-1}\\
+        & \leqslant 2\prod\limits_{p:p\,prime,p \leqslant N }\frac{p+1}{p}\quad\text{for  $ \frac{p}{p-1} \leqslant \frac{q+1}{q} $ when p>q }\\
+    \end{align*}
+    Then for  $ \{S_n\} $ diverges, we know that   $\{ \prod\limits_{p:p\,prime, p\leqslant n }\dfrac{p+1}{p}\}_n\in\mathbb{N} $ diverges. By the E5 on HK4, we know that  $ \sum\limits_{p:p\, prime}\dfrac{1 }{p }  $ diverges. 
+\end{proof}
+\end{document}

@@ -1,0 +1,44 @@
+\begin{example}
+     $ (X,\mu) $ measurable space,  $ f\in L^\infty(X,\mu) $. Define
+     \[M_f:L^2(X,\mu)\rightarrow L^2(X,\mu),g\mapsto fg\]
+     Called \textbf{multiplication operator}\index{multiplication operator}\\
+      $ M_x  $ has no eigenvalue, when  $ X=[0,1] $ 
+\end{example}
+\begin{theorem}
+    Let  $ T\in\mathfrak{L}(\mathcal{H})  $ be self-adjoint,  $ a \leq T \leq B $. There exists  $ (\mu_i)_I $ of Randon measures on  $ [a,b] $  and unitary $ U:\mathcal{H}\rightarrow\bigoplus\limits_{i\in I}L^2([a,b],\mu_i) $ s.t.  $  UTU^{-1}=\bigoplus \limits_{i\in I}M_x $.   
+\end{theorem}
+\begin{definition}
+    A \textbf{unitary representation}\index{unitary representation} of  $ \mathcal{A} $ on  $ \mathcal{H} $ is a linear  $ \pi:\mathcal{A}\rightarrow\mathfrak{L}(\mathcal{H}) $ s.t.  $ \pi(ab)=\pi(a)\pi(b) $,  $ \pi(1)=1_\mathcal{H} $, $ \pi(a^*)=\pi(a)^* $.  $ pi  $ is called a \textbf{unital *-homomorphism}\index{unital *-homomorphism}.\\
+    If  $ \Omega\in \mathcal{H} $ s.t.  $ \pi(\mathcal{A})\Omega= \left\{ \pi(a)\Omega:a\in\mathcal{A}\right\}  $ is dense, we say  $ \pi  $ is a \textbf{cyclic representation}\index{unitary representation!cyclic representation}.  $ \Omega  $ is called a \textbf{cyclic vector}\index{unitary representation!cyclic vector}.\\
+    If  $ \mathcal{K} $ is a closed linear  subspace of  $ \mathcal{H} $. If  $ \mathcal{K} $ is  $ \mathcal{A} $-invariant, i.e.  $ \pi(a)\mathcal{K}\subset \mathcal{K} $ for all  $ a\in \mathcal{A} $, we call  $ \mathcal{K} $ is a \textbf{subrepresentation}\index{unitary representation!subrepresentation}.    
+\end{definition}
+
+
+\begin{fact}
+    If  $ \mathcal{K} $ is subrepresentation, then  $ \mathcal{H}\cong \mathcal{K}\oplus \mathcal{K}^\bot  $.    
+\end{fact}
+\begin{proposition}
+    Let  $ \pi:\mathcal{A}\rightarrow\mathfrak{L}(\mathcal{H}) $ be unitary representation. then  $ \exists \, (\mathcal{H}_i)_{i\in I}  $  of unitary subrepresentation of  $ (\pi,\mathcal{H}) $ s.t.
+    \begin{enumerate}[(a)]
+        \item Every  $ \mathcal{H}_i $ is a cyclic representation.
+        \item  $ \mathcal{H}_i\perp \mathcal{H}_j $ if  $ i\not=j $.
+        \item  $ \mathrm{Span}\{\mathcal{H}_i:i\in I\} $ is dense in  $ \mathcal{H} $.     
+    \end{enumerate} 
+\end{proposition}
+\begin{theorem}
+    Let  $ X  $ be compact Hausdorff.  $ \pi:C(X)\rightarrow\mathfrak{L}(\mathcal{H}) $ cyclic representation with cyclic vector  $ \Omega $. Then  $ \exists $ Randon measure  $ \mu  $ on  $ X  $ and an unitary equivalence  $ U:(\mathcal{H},\pi)\rightarrow (L^2(X,\mu),M) $,  $ U\Omega=1 $ 
+\end{theorem}
+For  $ T\in \mathfrak{L}(\mathcal{H}) $, define 
+\begin{align*}
+    \pi_T:\mathbb{C}[x]&\rightarrow \mathfrak{L}\mathcal{H}\\
+    f&\mapsto f(T)
+\end{align*}
+\begin{theorem}
+    Let  $ T\in \mathfrak{L}(\mathcal{H}) $ be self-adjoint.  $ a \leq T \leq b $. Then  $ \pi_T:\mathbb{C}[x]\rightarrow\mathfrak{L}(\mathcal{H}) $ has operator norm  $ ||\pi_T|| \leq 1 $ if  $ \mathbb{C}[x] $ is equipped with  $ l^\infty[a,b] $.     
+\end{theorem}
+\begin{proposition}
+    Let  $ f\in \mathbb{C}[x] $,  $ T_\alpha  $ is a net in  $ \mathfrak{L}(\mathcal{H}) $. If  $ T_\alpha\rightarrow T  $,  $ \sup||T_\alpha||<+\infty $. Then  $ f(T_\alpha)\rightarrow f(T) $    
+\end{proposition}
+\begin{proposition}
+    If  $ \sup||T_\alpha||<+\infty $,  $ T_\alpha\rightarrow T,\eta_\beta\rightarrow \eta $, then  $ \lim\limits_{\alpha,\beta}T_\alpha\eta_\beta=T\eta $   
+\end{proposition}

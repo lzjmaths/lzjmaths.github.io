@@ -1,0 +1,102 @@
+\subsection{localization}
+ $ R  $ ring ,  $ S\subset R  $ multiplicative set.  $ \Rightarrow $  $ S^{-1}R  $ is a ring.
+ 
+ \[
+  \begin{aligned}
+    Spec\, S^{-1}R&\longrightarrow\{p\in Spec\, R:p\cap S=\emptyset\}\\
+    q&\mapsto \varphi^{-1}q\\
+    S^{-1}p\leftarrow p
+  \end{aligned}
+  \]
+  is a bijection.\\
+Recall that nilpotent radical  $ \sqrt{0}=\{x\in R:\text{nilpotent}\} $.
+ $ R_{red}=R/\sqrt{0}  $ is reduced(i.e. no nonzero nilpotent.) 
+\begin{theorem}
+     $ \sqrt{0}=\bigcap\limits_{p\in Spec\, R}p $ 
+\end{theorem}
+Then we have  $ Spec\, R_{red}\rightarrow Spec\, R  $ is a bijection, moreover a homomorphism.\\
+Let  $ R_f=S^{-1}R,\, S=\{1,f,\cdots\} $.  
+In particular,  $ R_f\not=0  $ and hence  $ R_f\not=\varnothing $. $ \Rightarrow \exists p\in Spec\, R    $  s.t.  $ f\not\in p  $ by correspondence theorem for localization.
+\subsection{Euclidean domains, PIDs, UFDs}
+\[\{\text{Euclidean domains}\}\subsetneq \{\text{PIDs}\}\subsetneq\{\text{UFDs}\}\subsetneq \{\text{integral domains}\}\]
+\begin{definition}
+    R is a \textbf{Euclidean domain}\index{Euclidean domain} if  $ \exists \sigma:R-\{0\} \rightarrow \mathbb{Z} _{ \geq 0} $ s.t.
+    \begin{center}
+         $ \forall a,b\in R  $ with  $ a\not=0 $,  $ \exists q,r\in R  $ s.t.  $ b=qa+r $ and  $ r=0  $  or  $ \sigma(r)<\sigma(a) $
+    \end{center}
+\end{definition}
+\begin{definition}
+     A \textbf{principle ideal domain}\index{principle ideal domain} is an integral domain where every ideal is principle.
+\end{definition}
+\begin{theorem}
+     A Euclidean domain is a \textbf{PID}.
+\end{theorem}
+However, there are PIDs that are not Euclidean domain.\\
+\begin{proposition}
+     \,
+     \begin{enumerate}
+          \item A prime element is irreducible.
+          \item In  $ PID $, irreducible element is prime.
+          \item In  $ \mathbb{Z}[\sqrt{-5}] $, 2 is irreducible but not prime.  
+     \end{enumerate}
+\end{proposition}
+\begin{definition}
+     An integral domain is a  \textbf{unique factorization domain}\index{unique factorization domain} if  
+     \begin{enumerate}
+          \item (existence of factorization) every nonzero non unit is a product fo irreducible elements.
+          \item (uniqueness up to associates) if  $ p_1\cdots p_m=q_1\cdots q_n $ for  $ p_i,q_j $ irreducible. Then  $ m=n  $ and after reindexing, we have 
+          \item  $ \forall i=1,\cdots,m $,  $ p_i  $ and  $ q_i  $ are associates\index{associates} i.e.
+          \begin{center}
+                $ q_i=c\cdot p_i $ where  $ c  $ is a unit, or  $ (p_i)=(q_i) $. \label{UFD uniqueness condition}
+          \end{center}
+     \end{enumerate}  
+\end{definition}
+\begin{proposition}\label{In a UFD, irreducible can imply prime.}
+     In a UFD, irreducible can imply prime.
+\end{proposition}
+\begin{theorem}
+     PID is a UFD.
+\end{theorem}
+\begin{proof}
+     Let  $ R  $ be a PID.\\
+     First prove (2)uniqueness.\\
+     Suppose  $ p_1\cdots p_m=q_1\cdots q_n $,  $ p_i ,q_j  $ irreducible.\\
+     By induction on  $ \max\{m,n\} $, show that it is the same.\\
+     If  $ m=n=1  $, we are done.\\
+     By Prop \ref{In a UFD, irreducible can imply prime.}  $ p_i  $ is prime. Easy to prove it by induction.\\
+     Now we prove (1)existence\\
+     Take any nonzero nonunit  $ a\in R $.\\
+     Assume  $ a  $ doesn't factorize. In particular,   $ a  $ is not irreducible.\\
+     Write  $ a=a_0=a_1\cdot a_1' $,  $ a_1,a_1'  $ are not unit.\\
+     If  $ a_1,a_1' $ factorize into irreducible elements, so does  $ a $.\\
+     WLOG, we assume  $ a_1  $ doesn't factorize.\\
+     Repeat this gives
+     \[(a_0\subsetneq (a_1)\subsetneq (a_2)\subsetneq\cdots\subsetneq R)\]
+     Set  $ I=\bigcup\limits_{n \geq 0}\subsetneq R $. Then  $ I  $ is an ideal  $ \Rightarrow  $  $ I=(b)  $ for some  $ b\in R  $.\\
+       $ \Rightarrow $    $ b\in (a_n)\subsetneq(a_{n+1}) $ for some  $ n $, then  $ b=ca_n=ca_{n+1}a_{n+1}'=cc'b\cdot a_{n+1}' $\\
+        $ \Rightarrow a_{n+1}'  $ is  a unit $ \Rightarrow  $ contradiction.      
+\end{proof}
+\subsection{Gauss' lemma}
+\begin{theorem}
+     If  $ R  $ is a UFD, so is  $ R[x] $.
+\end{theorem}
+\begin{example}
+      $ K[x_1,\cdots,x_n ] $ is a UFD.
+\end{example}
+For  $ a=u\cdot p_1^{e_1}\cdots p_n^{e_n},a'=u'p_1^{e_1'}\cdots p_n^{e_n'} $ where  $ u,u' $ are units,  $ p_i $ are (nonassociate) irreducible,  $ e_i,e_i' \geq 0 $ .\\
+We define the great common divisor of  $ a,a'  $ as  $ gcd(a,a')=\cdot p_1^{min(e_1,e_1')}\cdots p_n^{min(e_n,e_n')}\in R $.\index{Great common divisor $ gcd(a,b) $} 
+\begin{definition}
+     An element  $ f(x)=a_nx^n+\cdots +a_0\in R[x]  $ is called \textbf{primitive}\index{primitive} if  $ gcd(a_0,\cdots,a_n) $ is a unit. 
+\end{definition}
+\begin{proposition}
+     Every element  $ f\in R[x] $ can be expressed as  $ f=c\cdot f_0 $ where  $ c\in R  $,  $ f_0(x)\in R[x] $ is primitive.
+\end{proposition}
+\begin{theorem}[Gauss' lemma]\index{Gauss' lemma}
+     If  $ f_0,g_0\in R[x] $ are primitive, so is  $ f_0g_0 $.  
+\end{theorem}
+\begin{proof}
+     Take any  $ p\in R  $ irreducible. By assumption,  $ \overline{f_0},\overline{g_0}\not=0 $ in  $ R/(p)[x] $\\
+      $ \Rightarrow $  $ \overline{f_0g_0}\not=0 $ since  $ R/(p)[x] $ is integral domain.\\
+      This means  $ f_0g_0 $ is primitive in  $ R[x] $.   
+\end{proof}
+Next step we will classify irreducible element of  $ R[x] $. 

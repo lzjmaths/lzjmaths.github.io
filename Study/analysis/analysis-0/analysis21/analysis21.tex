@@ -1,0 +1,138 @@
+Let  $ d_m=c_m  $ in  $ (\square) $,we get
+\begin{equation}
+    \int_{a }^{b } |S_n|^2\, \mathrm{d}x=\sum\limits_{m=1 }^{n } |c_m|^2= \int_{a}^{b } |f|^2\, \mathrm{d}x -\int_{a }^{b } |f-S_n|^2 \, \mathrm{d}x  \leqslant \int_{a }^{b } |f|^2\, \mathrm{d}x\tag{ $ \square\square $ }     
+\end{equation} 
+Setting  $ n\rightarrow \infty  $ in the last inequality, we obtain
+\begin{theorem}[Bessel's inequality]
+    If  $ \{\phi_n \} $ is orthonormal on  $ [a,b] $ and  $ f\in \mathscr{R } $ on $ [a,b]  $, and if 
+    \[f(x)\sim \sum\limits_{n=1 }^{\infty} c_n\phi_n(x)\]
+    Then \[\sum\limits_{n=1}^{\infty}|c_n|^2  \leqslant \int_{a }^{b } |f(x)|^2\, \mathrm{d}x  \] 
+    In particular,  $ \lim\limits_{n\to\infty } c_n=0  $. 
+\end{theorem}
+For the rest of the section, we only consider the trigonometric system. For  $ f\in\mathscr{R } $ on  $ [-\pi,\pi] $ and has period  $ 2\pi  $. 
+Then the orthonormal system is  $ \{\dfrac{1}{\sqrt{2\pi}}e^{inx}\}_{n\in\mathbb{Z}} $.\\
+  \begin{equation}
+     (\square\square)\Rightarrow \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } |S_n|^2\, \mathrm{d}x=\sum\limits_{m=-n }^{n } |c_n|^2 \leqslant \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } |f|^2\, \mathrm{d}x\tag{$ \triangle $}
+  \end{equation} 
+  We define the \underline{Dirichlet Kernel}
+  \begin{equation}
+    D_N(x):=\sum\limits_{n=-N }^{N } e^{inx }=\frac{e^{-iNx }-e^{i(N+1)x}}{1-e^ix}=\frac{\sin{(N+\frac{1 }{2 })x}}{\sin{\frac{x }{2}}} \notag
+  \end{equation}
+  Then 
+  \begin{align*}
+    S_N(x)&=\sum\limits_{n=-N }^{N } \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } f(t)e^{-int}\, \mathrm{d}t e^{inx} \\
+    &=\dfrac{1 }{2\pi }\int_{-\pi }^{\pi } f(t)D_N(x-t)\, \mathrm{d}t \\
+    &=\dfrac{1 }{2\pi }\int_{-\pi }^{\pi } f(x-t)D_N(t)\, \mathrm{d}t \tag{$ \square\square\square $}   
+  \end{align*}
+  \begin{theorem}
+    If,  for some x,  $ \exists\delta>0  $ and  $ M<\infty  $ s.t.
+    \[|f(x+t)-f(x)| \leqslant M|t|,\,\forall t \in(-\delta,\delta)\]
+    then  $ \lim\limits_{N\to\infty } S_N(x)=f(x)  $. 
+  \end{theorem}
+  \begin{proof}
+    Define 
+    \[g(t):=\left\{
+        \begin{aligned}
+            \frac{f(x-t)-f(t)}{\sin{\frac{t }{2 }}},&\quad0<|t| \leqslant \pi\\
+            0\qquad\qquad\qquad,&\quad t=0
+        \end{aligned}
+    \right.\]
+    By the definition of  $ D_N $,  $ \dfrac{1 }{2\pi}\int_{-\pi }^{\pi } D_N(t)\, \mathrm{d}t=1   $  
+    \begin{align*}
+        (\square\square\square)\Rightarrow 2\pi(S_N(x)-f(x))&=\int_{-\pi }^{\pi } [f(x-t)-f(x)]D_N(t)\, \mathrm{d}t\\
+        &=\int_{-\pi}^{\pi }g(t)\sin[(N+\frac{1 }{2})t]\, \mathrm{d}t\\
+        &=\int_{-\pi }^{\pi  }[g(t)\cos{\frac{t}{2}}]\sin{Nt} \, \mathrm{d}t+\int_{-\pi }^{\pi }[g(t)\sin{\frac{t}{2}}]\cos{Nt} \, \mathrm{d}t        
+    \end{align*}
+    \[|f(x+t)-f(x)| \leqslant M|t|\Rightarrow \limsup\limits_{t\to0}|g(t)| \leqslant \limsup\limits_{t\to0}\frac{M|t|}{|\sin{\frac{t }{2 }}|}=2M\]
+    \[\Rightarrow g(t)\cos(\frac{t }{2})\quad and \quad g(t)\sin(\frac{ t}{2})\in \mathscr{R }\quad
+    on\quad [-\pi, \pi]\]
+    Bessel'inequality \[ \Rightarrow \lim\limits_{N\in\infty} \int_{-\pi }^{\pi } h(t)\sin(Nt)\, \mathrm{d}t=\lim\limits_{N\to\infty } \int_{-\pi}^{\pi } h(t)\cos(N t)\, \mathrm{d}t=0,\,\forall h\in\mathscr{R }\,on\,[-\pi,\pi]       \]
+     $ \Rightarrow \lim\limits_{N\to\infty } S_N(x)=f(x)  $  
+  \end{proof}
+  \begin{corollary}
+    \begin{enumerate}
+        \item[$ (1) $] If $ f(x)=0  $ for  $ \forall x\in(a,b) $, then  $ \lim\limits_{N\to\infty } S_N(x)=0   $ for  $ \forall x\in(a,b) $.
+        \item[$ (2) $] If  $ f(t)=g(t) $ for  $ \forall t $ in some NBHD of x, then  $ S_N(f;x)-S_N(g;x)=S_N(f-g;x)\rightarrow0  $ as  $ N\rightarrow\infty $     
+    \end{enumerate}
+  \end{corollary}
+  \begin{theorem}
+    If  $ f  $ is continuous (with period  $ 2\pi $) and if  $ \epsilon>0 $, then there is a trigonometric polynomial P s.t. $ |P(x)-f(x)|<\epsilon  $ for $ \forall x\in\mathbb{R } $.  
+  \end{theorem}
+  The proof is given by homework.
+  \begin{theorem}[Parseval's theorem]
+    Suppose  $ f  $ and  $ g  $ are Riemann-integrable on  $ [-\pi,\pi] $ with period  $ 2\pi  $, and 
+    \[f(x)\sim \sum\limits_{n=-\infty}^{\infty}c_ne^{inx},\qquad g(x)\sim \sum\limits_{n=-\infty }^{\infty} d_ne^{inx} \]
+    Then 
+    \begin{enumerate}[a)]
+        \item  $ \lim\limits_{N\to\infty} \dfrac{1}{2\pi }\int_{-\pi }^{\pi } |f(x)-S_N(f;x)|\, \mathrm{d}x=0    $,
+        \item  $ \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } f(x)\overline{g(x)}\, \mathrm{d}x=\sum\limits_{n=-\infty}^{\infty} c_n\overline{d_n}   , $ 
+        \item  $ \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } |f(x)|^2\, \mathrm{d}x =\sum\limits_{n=-\infty}^{\infty } |c_n|^2  $ 
+    \end{enumerate}
+\end{theorem}
+    \begin{proof}
+        Fix  $ \epsilon>0 $, EX5 of HW7 $ \Rightarrow\exists  $ a continuous  $ 2\pi $-periodic function  $ h  $ s.t.
+        \[||f-h||_2:=[\int_{-\pi }^{\pi } |f(x)-h(x)|^2\, \mathrm{d}x  ]<\epsilon\] 
+        The previous theorem  $ \Rightarrow \exists  $ trigonometric polynomial  $ P  $ s.t. $ |h(x)-P(x)|<\frac{\epsilon}{\sqrt{2\pi }},\,\forall x\in\mathbb{R } $\\
+         $ \Rightarrow||h-P||_2<\epsilon $\\
+         Suppose  $ P  $ has degree  $ N_0  $, the 1st theorem in this section  $ \Rightarrow ||h-S_N(h)||_2 \leqslant ||h-P||_2<\epsilon,\,\forall N\geqslant N_0 $.\\
+          \begin{align*}
+            (\triangle)&\Rightarrow ||S_N(h)-S_N(f)||_2=||S_N(h-f)||_2 \leqslant ||h-f||_2<\epsilon\\
+             &\Rightarrow ||f-S_N(f)||_2 \leqslant ||f-h||_2+||h-S_N(h)||_2+||S_N(h)-S_N(f)||_2<3\epsilon,\,\forall N\geqslant N_0\\
+             &\Rightarrow \lim\limits_{N\to\infty} \dfrac{1 }{2\pi}\int_{-\pi }^{\pi } |f-S_N(f)|^2\, \mathrm{d}x=0 \tag{ $ \star  $ }   
+          \end{align*} 
+          \[
+            \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } S_N(f)\overline{g }\, \mathrm{d}x=\sum\limits_{n=-N }^{N } c_n\dfrac{1 }{2\pi }\int_{-\pi }^{\pi } e^{inx }\overline{g(x)} \, \mathrm{d}x=\sum\limits_{n=-N }^{N } c_n\overline{d_n}   
+          \]   
+          \begin{align*}
+            \Rightarrow \left|\int_{-\pi }^{\pi } f\overline{g }\, \mathrm{d}x- \int_{-\pi }^{\pi } S_N(f)\overline{g }\, \mathrm{d}x\right| & \leqslant \int_{-\pi }^{\pi } |f-S_N(f)|\cdot|g|\, \mathrm{d}x \\
+            &\overset{C-S}{ \leqslant } [\int_{-\pi }^{\pi } |f-S_N(f)|^2\, \mathrm{d}x \cdot \int_{-\pi }^{\pi } |g|^2\, \mathrm{d}x  ]^{\frac{1 }{2}}\\
+            &\rightarrow0\,\text{ as  $ N\to\infty  $  by ($ \star $)}
+          \end{align*}
+          \[
+            \Rightarrow \dfrac{1 }{2\pi }\int_{-\pi }^{\pi } f(x)\overline{g(x)}\, \mathrm{d}x=\dfrac{1 }{2\pi }\lim\limits_{N\to\infty} \int_{-\pi }^{\pi } S_N(f)\overline{g }\, \mathrm{d}x =\sum\limits_{n=-\infty }^{\infty} c_n\overline{d_n }.\]
+            Setting  $ f=g $, we get  $ \dfrac{1}{2\pi }\int_{-\pi }^{\pi } |f|^2\, \mathrm{d}x=\sum\limits_{n=-\infty }^{\infty} |c_n|^2   $       
+    \end{proof}
+  \subsection{The Gamma Function}
+  \[\Gamma(x):=\int_{0}^{\infty} t^{x-1}e^{-t}\, \mathrm{d}t,\,x\in(0,\infty)  \]
+  Note that the integral converges for  $ x\in(0,\infty) $.
+  \begin{theorem}
+    \begin{enumerate}
+        \item[$ (a) $]  $ \Gamma(x+1)=x\Gamma(x),\,x\in(0,\infty) $
+        \item[$ (b) $]  $ \Gamma(n+1)=n!,\,n\in\mathbb{N } $
+        \item[$ (c) $]  $ \ln\Gamma $ is convex on  $ (0,\infty) $.    
+    \end{enumerate}
+  \end{theorem} 
+  \begin{proof}
+    We only prove (c) \\
+    Let  $ p\in(1,\infty ) $ and  $ \frac{1 }{p }+\frac{1 }{q }=1 $.
+    Then
+    \begin{align*}
+        \Gamma(\frac{x }{p }+\frac{y }{q })&=\int_{0}^{\infty} t^{\frac{x }{p }+\frac{y }{q }-1}e^{-t}\, \mathrm{d}t \\
+        &=\int_{0}^{\infty} (t^{\frac{x }{p }-\frac{1 }{p }}e^{-\frac{t }{p }})(t^{\frac{y }{q }-\frac{1 }{q }}e^{-\frac{t }{q }})\, \mathrm{d}x \\
+         &\leqslant [\Gamma(x)]^{\frac{1 }{p }}[\Gamma(y)]^{\frac{1 }{q }}\,\,\,(\text{Holder's inequality})\\
+         &\Rightarrow  \text{$ \ln\Gamma $ is convex on  $ (0,\infty) $.}
+    \end{align*}
+  \end{proof}
+  \begin{theorem}
+    If  $ f:(0,\infty)\rightarrow(0,\infty) $ satisfies:
+    \begin{enumerate}[(a)]
+        \item  $ f(x+1)=xf(x),\,\forall x\in (0,\infty) $ 
+        \item f(1)=1
+        \item  $ \ln{f} $ is convex on  $ (0,\infty) $  
+    \end{enumerate} 
+    then  $ f(x)=\Gamma(x) $ 
+  \end{theorem}
+  \begin{proof}
+     $ \Gamma  $ satisfies (a), (b) and (c). So it is enough to prove that  $ f(x) $ is unique determined by (a), (b) and (c) for  $ \forall x>0 $.\\
+     Actually, it's enough to prove this for  $ \forall x\in(0,1) $ as we use (a) and (b).
+     Let  $ \varphi(x)=\ln{f(x)},\,x>0 $
+     \begin{align*}
+        \varphi \text{ convex }&\Rightarrow \ln{n }=\frac{\varphi(n+1)-\varphi(n)}{(n+1)-n} \leqslant 
+        \frac{\varphi(n+1+x)-\varphi(n+1)}{(n+1+x)-(n+1)} \leqslant \frac{\varphi(n+2)-\varphi(n+1)}{(n+2)-(n+1)}=\ln{(n+1)}\\
+        &\Rightarrow \varphi(x)=\lim\limits_{n\to\infty } \ln[\frac{n!n^x }{x(x+1)\cdots(x+n)}]\\
+        &\Rightarrow\varphi(x) \text{ is unique determined on  $ (0,1) $ } 
+     \end{align*}   
+  \end{proof}
+  \begin{corollary}
+     $ \Gamma(x)=\lim\limits_{n\to\infty} \ln[\frac{n!n^x }{x(x+1)\cdots(x+n)}],\,x>0 $ 
+  \end{corollary}

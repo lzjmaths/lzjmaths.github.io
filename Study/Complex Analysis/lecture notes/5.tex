@@ -1,0 +1,56 @@
+\begin{theorem}
+    A M{\"o}bius transformation maps circles into circles.
+\end{theorem}
+\subsection{Symmetry}
+Suppose  $ T  $ is a M{\"o}bius transformation which maps  $ \hat{\mathbb{R}}  $ onto a circle  $ C $. \\z
+We say that  $ w=Tz  $ and  $ w^*=T\bar{z} $ are \name{symmetric} w.r.t.  $ C $.
+\begin{remark}
+    This definition is independent of  $ T $. Suppose  $ S  $ is another M{\"o}bius transformation which maps  $ \hat{\mathbb{R}} $ onto  $ C $, then  $ S^{-1}T $ maps  $ \hat{\mathbb{R}} $ to  $ \hat{\mathbb{R}} $, and this  $ S^{-1}w=S^{-1}Tz $ and  $ S^{-1}w^*=S^{-1}T\bar{z} $ are conjugate.       
+\end{remark}  
+The points  $ z  $ and  $ z^* $ are \name{symmetric w.r.t C through  $ z_1,z_2,z_3 $} iff  $ (z^*,z_1,z_2,z_3)=\overline{(z,z_1,z_2,z_3)} $.
+
+This can be another definition. 
+
+Note that only the points on  $ C  $ are symmetric to themselves.
+
+The mapping  $ z\mapsto z^* $ is 1-1 and is called \name{reflection} w.r.t. $ C $.
+
+\subsubsection{geometric meaning of symmetry} 
+Case1:  $ C  $ is a straight line. We may assume  $ z_3=\infty $. 
+
+ $ z,z^* $ are symmetric w.r.t.  $ C $ if and only if 
+ \[\frac{z^*-z_2}{z_1-z_2}=\frac{\bar{z}-\bar{z_2}}{\bar{z_1}-\bar{z_2}}\]
+ Then 
+ \[|z^*-z_2|=|z-z_2|,\quad \forall z_2\in C\text{ and }z_2\not=\infty\]
+ \[\img\frac{z^*-z_2}{z_1-z_2}=\img\frac{\bar{z}-\bar{z_2}}{\bar{z_1}-\bar{z_2}}\]   
+ So  $ C  $ is the bisecting normal of the segment between  $ z  $ and  $ z^
+ * $.\\
+ Case2: $ C  $ is the circle  $ |z-a|=R $.
+ 
+ Then for  $ \forall $ distinct  $ z_1,z_2,z_3\in\mathbb{C} $,  $ \overline{(z,z_1,z_2,z_3)}=\overline{(z-a,z_1-a,z_2-a,z_3-a)}\\=(\bar{z}-\bar{a},\bar{z_1}-\bar{a},\bar{z_2}-\bar{a},\bar{z_3}-\bar{a})=(\bar{z}-\bar{a},\dfrac{R^2}{z_1-a},\dfrac{R^2}{z_2-a},\dfrac{R^2}{z_3-a})=(\dfrac{R^2}{\bar{z}-\bar{a}},z_1-a,z_2-a,z_3-a)\\=(\dfrac{R^2 }{\bar{z}-\bar{a}},z_1,z_2,z_3) $.\\
+ Then the symmetric point of  $ z  $ w.r.t.  $ C  $ is 
+ \[z^*=\dfrac{R^2}{\bar{z}-\bar{a}}+a\]
+ or\[(z^*-a)(\bar{z}-\bar{a})=R^2\]
+  $ \Rightarrow $ 
+  \[\begin{cases}
+    |z^*-a|\cdot|z-a|=R^2\\
+    \dfrac{z^*-a}{z-a}=\dfrac{(z^*-a)(\bar{z}-\bar{a})}{|z-a|^2}>0
+  \end{cases}\]    
+  \begin{theorem}[The Symmetric principle]
+    If a M{\"o}bius transformation maps a circle  $ C_1  $ onto a circle  $ C_2 $, then it transforms any pair of symmetric points w.r.t.  $ C_1 $ into a pair of symmetric points w.r.t.  $ C_2 $.   
+  \end{theorem}
+  \begin{proof}
+    Case1:  $ C_1=\hat{\mathbb{R}} $. Let  $ T  $ be the M{\"o}bius transformation which maps  $ \hat{\mathbb{R}} $ onto   $ C_2 $.  $ \forall z\in \mathbb{C}$, by definition,  $ w=Tz  $ and  $ w^*=T\bar{z} $ are symmetric w.r.t.  $ C_2 $.\\
+    Case2: $ C_1  $ is a general circle. Let  $ T:C_1\rightarrow C_2 $ and  $ S:\mathbb{R}\rightarrow C_2 $ be M{\"o}bius transformation.
+    
+    Suppose  $ w,w^* $ are symmetric w.r.t.  $ C_1 $. Then there exists  $ z $ \st  $ w=Sz,w^*=S\bar{z} $.\\
+    Then we can find  $ Tw=TSz,Tw^*=TS\bar{z} $ are symmetric w.r.t.  $ C_2 $ since  $ TS:\hat{\mathbb{R}}\rightarrow C_2 $      
+  \end{proof}
+  \begin{remark}
+    \begin{enumerate}
+        \item The M{\"o}bius transformation from  $ C_1  $ to  $ C_2 $ satisfies  $ z_1\mapsto w,z_2\mapsto w_2,z_3\mapsto w_3 $  where  $ z_1,z_2,z_3\in C_1 $,  $ w_1,w_2,w_3\in C_2 $ is given by 
+        \[(w,w_1,w_2,w_3)=(z,z_1,z_2,z_3,)\]  
+        \item The M{\"o}bius transformation from  $ C_1 $ to  $ C_2 $ satisfies  $ z_1\mapsto w_1 $,  $ z_2\mapsto w_2 $ where  $ z_1\in C_1,z_2\not\in C_1 $,  $ w_1\in C_2,w_2\not\in C_2 $ is given by 
+        \[(w,w_1,w_2,w_2^*)=(z,z_1,z_2,z_2^*)\]    
+    \end{enumerate}
+  \end{remark}

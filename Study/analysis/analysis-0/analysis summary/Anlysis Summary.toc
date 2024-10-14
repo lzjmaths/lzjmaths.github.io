@@ -1,0 +1,28 @@
+\contentsline {subsection}{\numberline {6.6}Rectifiable Curves}{3}{}%
+\contentsline {section}{\numberline {7}Sequence and series of function}{3}{}%
+\contentsline {subsection}{\numberline {7.1}Uniformly Convergence}{4}{}%
+\contentsline {subsection}{\numberline {7.2}Uniform Convergence and Continuity}{4}{}%
+\contentsline {subsection}{\numberline {7.3}Uniform Convergence and Integration}{5}{}%
+\contentsline {subsection}{\numberline {7.4}Uniform Convergence and Differentiation}{5}{}%
+\contentsline {subsection}{\numberline {7.5}Equicontinuous of Families of Functions}{6}{}%
+\contentsline {subsection}{\numberline {7.6}The Stone-Weiertrass Theorem}{8}{}%
+\contentsline {subsection}{\numberline {7.7}Continuous Nowhere Differentiable Functions}{9}{}%
+\contentsline {section}{\numberline {8}Some Special Functions}{10}{}%
+\contentsline {subsection}{\numberline {8.1}Power Series}{10}{}%
+\contentsline {subsection}{\numberline {8.2}Fourier Series}{14}{}%
+\contentsline {subsection}{\numberline {8.3}The Gamma Function}{19}{}%
+\contentsline {paragraph}{Stirling formula.}{21}{}%
+\contentsline {subsection}{\numberline {8.4}A Probabilistic Proof of the Weierstrass Theorem}{22}{}%
+\contentsline {paragraph}{Ingredients:}{23}{}%
+\contentsline {subparagraph}{Markov's Inequality:}{23}{}%
+\contentsline {subsection}{\numberline {8.5}Stone's Generalization of the Weierstrass Theorem}{24}{}%
+\contentsline {section}{\numberline {9}Functions of Several Variables}{28}{}%
+\contentsline {subsection}{\numberline {9.1}Linear Transformations}{28}{}%
+\contentsline {subsection}{\numberline {9.2}Differentiation}{30}{}%
+\contentsline {subsection}{\numberline {9.3}The Contraction Principle}{34}{}%
+\contentsline {subsection}{\numberline {9.4}The Inverse Function Theorem}{35}{}%
+\contentsline {subsection}{\numberline {9.5}The Implicit Function Theorem}{36}{}%
+\contentsline {subsection}{\numberline {9.6}The Rank Theorem}{39}{}%
+\contentsline {subsection}{\numberline {9.7}Determinants}{40}{}%
+\contentsline {subsection}{\numberline {9.8}Derivatives of Higher Order}{41}{}%
+\contentsline {subsection}{\numberline {9.9}Differentiation of Integrals}{43}{}%

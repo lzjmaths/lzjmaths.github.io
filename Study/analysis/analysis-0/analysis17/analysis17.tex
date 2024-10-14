@@ -1,0 +1,67 @@
+\subsection{Uniformly Convergence}
+\begin{theorem}
+    We define  $ M_n:=\sup\limits_{x\in E }|f_n(x)-f(x)| $. Then  $ f_n\rightarrow f  $ uniformly on  $  E  $  iff  $ M_n\rightarrow
+    0 $ as  $ n\rightarrow \infty  $.
+\end{theorem}
+\begin{theorem}[Cauchy criterion for uniform convergence]
+    The sequence of functions  $ \{f_n\}  $, defined on  $ E  $, converges uniformly on E iff for  $ \forall \epsilon>0,\exists N\in\mathbb{N } $ s.t.
+    \begin{equation*}
+        |f_n(x)-f_m(x)|<\epsilon,\quad \forall x\in E, \forall n,m\geqslant N
+    \end{equation*}
+    
+\end{theorem}
+\begin{theorem}[Weiersress M-test]
+    Suppose  $ \{f_n\} $ is a sequence of functions defined on E, and Suppose 
+    \[|f_n(x)| \leqslant M_n,\,\forall x\in E ,\forall n\in \mathbb{N }\]
+    The  $ \sum f_n  $ converges uniformly on  $ E  $ if  $ \sum M_n  $ converges; 
+    
+\end{theorem}
+\subsection{Uniform Convergence and Continuity}
+\begin{theorem}
+     Suppose  $ f_n\to f  $ uniformly on  $ E  $ in a metric space. Let  $ x $ be a limit point of E and Suppose that  $ \lim\limits_{t\to x}f_n(t)=A_n, \forall n\in \mathbb{N }   $.
+     Then   $ \{A_n \} $ converges, and 
+     \[\lim\limits_{t\to x}f(t)=\lim\limits_{n\to\infty}A_n     \]
+     i.e.
+     \[\lim\limits_{t\to x}\lim\limits_{n\to \infty}f_n(t)=\lim\limits_{n\to \infty } \lim\limits_{t\to x } f_n(t)      \]
+\end{theorem}
+\begin{theorem}
+    If  $ \{f_n \}  $ is a sequence of continuous functions on  $ E  $, and if  $ f_n\to f  $ uniformly on $ E  $, then  $ f  $ is continuous on  $ E $ 
+\end{theorem}
+\begin{example}
+    Let  $ f_n(x)=nx(1-x)^n,\quad x\in [0,1] $,Then we can know the convergence is not uniformly with the previous theorem.
+\end{example}
+\begin{theorem}
+    Suppose  $ K $ is compact, and 
+    \begin{enumerate}[(a)]
+        \item  $ \{f_n \} $ is a sequence of continuous functions on K.
+        \item  $ \{f_n \} $ converges pointwise to a continuous function  $ f  $ on  $ K $.
+        \item  $ f_n(x)\geqslant f_{n+1}(x),\,\forall x\in K,n\in \mathbb{N } $. 
+    \end{enumerate}
+    Then  $ f_n \rightarrow f  $ uniformly on K.
+\end{theorem}
+\begin{example}
+    The compactness is really needed here.
+
+     $ f_n(x)=\frac{1 }{nx+1},x\in (0,1 ) $ , $ f_n(x)\downarrow 0   $. But the convergence is not uniform since  $ f(\frac{1}{n })=\frac{1 }{2} $ 
+\end{example}
+Let  $ X  $ be a metric space, and let  $ \mathscr{C}(X) $ denote the set of all complex-valued, continuous, bounded functions with domain X.
+We associate each  $ f\in \mathscr{C}(X) $ its supremum norm as 
+\[||f||:=\sup\limits_{x\in X}|f(x)|\]
+It is easy to check it's a well-defined norm.
+And we define  $ d(f,g)=||f-g|| $
+\begin{theorem}
+    The metric d makes  $ \mathscr{C}(X ) $ into a complete metric space.
+\end{theorem} 
+
+\subsection{Uniform Convergence and Integration}
+\begin{theorem}
+    Let  $ \alpha $ be increasing on  $ [a,b] $. Suppose  $ f_n\in \mathscr{R}(\alpha)  $ on  $ [a,b ] $ for  $ n\in \mathbb{N } $,
+    and suppose  $ f_n\to f  $ uniformly on  $ [a,b ] $. Then  $ f\in \mathscr{R}(\alpha)      $ on  $ [a,b ] $, and
+    \[\int_{a }^{b } f \, \mathrm{d}\alpha=\int_{a }^{b } \lim\limits_{n\to\infty } f_n  \, \mathrm{d}\alpha=\lim\limits_{n\to\infty} \int_{a }^{b } f_n \, \mathrm{d}\alpha     \] 
+
+\end{theorem}
+\begin{corollary}
+    If  $ f_n\in \mathscr{R}(\alpha)  $ on  $ [a,b]  $ and  $ \sum\limits_{j=1 }^{n } f_j(x ) $ converges uniformly on  $ [a,b] $ to  $ f  $,
+    then 
+    \[\int_{a }^{b } f \, \mathrm{d}\alpha =\sum\limits_{j=1 }^{\infty} \int_{a }^{b } f_j \, \mathrm{d}\alpha \]  
+\end{corollary}

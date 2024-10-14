@@ -1,0 +1,192 @@
+\begin{theindex}
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{Symbols}\par\nopagebreak
+
+ \item \small $ Frac\, R $ \hfill \hyperpage{5}
+ \item \small $ S^{-1}R $ \hfill \hyperpage{5}
+ \item \small $ \mathcal{O}_K$ \hfill \hyperpage{10}
+ \item \small $ \sqrt{0} $ \hfill \hyperpage{2}
+ \item \small $ \varphi_\alpha $ \hfill \hyperpage{10}
+ \item \small $ n^{th } $ root of unity
+    \subitem primitive \hfill \hyperpage{25}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{ }\par\nopagebreak
+
+ \item \small  $ n^{th} $ root of unity \hfill \hyperpage{25}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{A}\par\nopagebreak
+
+ \item \small algebraic integer \hfill \hyperpage{10}
+ \item \small algebraic number \hfill \hyperpage{10}
+ \item \small algebraically closed \hfill \hyperpage{18}
+ \item \small associates \hfill \hyperpage{7}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{C}\par\nopagebreak
+
+ \item \small characterization of finite Galois extension \hfill 
+		\hyperpage{22, 23}
+ \item \small characterization of moemal extensions \hfill 
+		\hyperpage{21}
+ \item \small clclotomic polymomial \hfill \hyperpage{26}
+ \item \small composite field \hfill \hyperpage{26}
+ \item \small Criterion for Gauss prime \hfill \hyperpage{9}
+ \item \small cyclotomic character \hfill \hyperpage{26}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{D}\par\nopagebreak
+
+ \item \small discriminant \hfill \hyperpage{24}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{E}\par\nopagebreak
+
+ \item \small Eisenstein criterion \hfill \hyperpage{9}
+ \item \small Euclidean domain \hfill \hyperpage{7}
+ \item \small exact \hfill \hyperpage{15}
+ \item \small extension \hfill \hyperpage{20}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{F}\par\nopagebreak
+
+ \item \small field extension \hfill \hyperpage{17}
+    \subitem finite \hfill \hyperpage{17}
+    \subitem intermediate \hfill \hyperpage{17}
+    \subitem primitive element \hfill \hyperpage{17}
+    \subitem simple \hfill \hyperpage{17}
+ \item \small fixed field \hfill \hyperpage{23}
+ \item \small fixed field theorem \hfill \hyperpage{23}
+ \item \small fundamental theorem in Galois theory \hfill 
+		\hyperpage{23}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{G}\par\nopagebreak
+
+ \item \small Galois \hfill \hyperpage{22}
+ \item \small Gauss prime \hfill \hyperpage{9}
+ \item \small Gauss' lemma \hfill \hyperpage{8}
+ \item \small Great common divisor $ gcd(a,b) $ \hfill \hyperpage{8}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{H}\par\nopagebreak
+
+ \item \small Hilbert Nullstellensate \hfill \hyperpage{4}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{I}\par\nopagebreak
+
+ \item \small idempotent \hfill \hyperpage{2}
+ \item \small integral \hfill \hyperpage{14}
+ \item \small integral closure \hfill \hyperpage{14}
+ \item \small integral domain \hfill \hyperpage{3}
+ \item \small irreducible element \hfill \hyperpage{3}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{K}\par\nopagebreak
+
+ \item \small Kummer's theorem \hfill \hyperpage{28}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{L}\par\nopagebreak
+
+ \item \small linear independence of  $ F $-homomorphism \hfill 
+		\hyperpage{28}
+ \item \small localization \hfill \hyperpage{5}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{M}\par\nopagebreak
+
+ \item \small maximal ideal \hfill \hyperpage{3}
+ \item \small minimal polynomial for  $ \alpha $ \hfill \hyperpage{10}
+ \item \small multiplicative set \hfill \hyperpage{5}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{N}\par\nopagebreak
+
+ \item \small nilpotent \hfill \hyperpage{2}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{P}\par\nopagebreak
+
+ \item \small prime ideal \hfill \hyperpage{3}
+ \item \small prime ideal factorization \hfill \hyperpage{4}
+ \item \small primitive \hfill \hyperpage{8}
+ \item \small principal ideal domain \hfill \hyperpage{4}
+ \item \small principle ideal domain \hfill \hyperpage{7}
+ \item \small product ring \hfill \hyperpage{3}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{Q}\par\nopagebreak
+
+ \item \small quadratic field \hfill \hyperpage{10}
+ \item \small quotient module \hfill \hyperpage{11}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{R}\par\nopagebreak
+
+ \item \small $ R $-module \hfill \hyperpage{11}
+    \subitem submodule \hfill \hyperpage{11}
+ \item \small reduced ring \hfill \hyperpage{2}
+ \item \small ring of integers of  $ K $ \hfill \hyperpage{11}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{S}\par\nopagebreak
+
+ \item \small separable \hfill \hyperpage{18}
+    \subitem over  $ F $ \hfill \hyperpage{19}
+ \item \small solvable by radicals \hfill \hyperpage{29}
+ \item \small splitting field \hfill \hyperpage{20}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{U}\par\nopagebreak
+
+ \item \small unique factorization domain \hfill \hyperpage{7}
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{Z}\par\nopagebreak
+
+ \item \small zerodivisor \hfill \hyperpage{2}
+ \item \small Zorn's lemma \hfill \hyperpage{5}
+
+\end{theindex}

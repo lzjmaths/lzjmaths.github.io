@@ -1,0 +1,77 @@
+\section{Ring}
+\subsection{More on rings and ideals}
+\begin{theorem}[Correspondence Theorem]
+    Ideals of  $ R  $ containing  $ I  $ have a bijection with ideals with  $ R/I  $ 
+\end{theorem}
+\begin{definition}
+     $ x\in R $, $ x  $ is said to be 
+     \begin{enumerate}
+        \item a \textbf{zerodivisor}\index{zerodivisor} if  $ x\not=0  $ and  $ \exists y\not=0  $ s.t.  $ xy=0 $
+        \item \textbf{nilpotent}\index{nilpotent} if  $ \exists n>0  $ s.t.  $ x^n=0 $
+        \item an \textbf{idempotent}\index{idempotent} if  $ x^2=x $   
+     \end{enumerate} 
+\end{definition}
+\begin{definition}
+     $ \sqrt{0}:=\{x\in R: nilpotent in R\}\subset R $, called nilpotent radical.\index{$ \sqrt{0} $}
+\end{definition}
+\begin{example}
+    For  $ K  $ a field, $ K[x]/(x^2 ) $ has  $ \sqrt{0}=\overline{x}K[x]/(x^2)  $\\
+    Call  $ K[\epsilon]=K[x]/(x^2) $ \textbf{ring of dual number} 
+\end{example}
+\begin{definition}
+    A ring  $ R  $ is called \textbf{reduced}\index{reduced ring} if  $ \sqrt{0}=0 $ 
+\end{definition}
+\begin{proposition}
+    The followings are right.
+    \begin{enumerate}
+        \item  $ \sqrt{0}\subset R  $ is an ideal
+        \item  $ R/\sqrt{0} $ is reduced
+        \item If  $ R'  $ is a reduced ring,then every ring homomorphism  $ \phi:R\rightarrow R'  $,factors through uniquely s.t.  $ \phi=\overline{\phi}\circ \pi $, where  $ \pi:R \rightarrow R/\sqrt{0} $  
+    \end{enumerate}
+\end{proposition}
+\subsection{product ring and idempotent}
+\begin{definition}
+    Let  $ R_1,R_2  $ be rings, \textbf{product ring}\index{product ring}  $ R_1\times R_2  $ is a ring with  $ (x_1,x_2)+/*(y_1,y_2)=(x_1+/*y_1,x_2+/*y_2) $ 
+\end{definition}
+\begin{remark}
+    Note that
+    \begin{enumerate}
+        \item  $ (0,0) $ is  $ 0  $ of  $ R_1\times R_2  $, $ (1,1) $ is  $ 1  $ of  $ R_1\times R_2 $ 
+        \item Set  $ R=R_1\times R_2 $, then
+        \par 
+        the projection map  $ p_1,p_2  $ are ring homomorphism.
+        \par 
+        the inclusion map  $ i_1,i_2  $ are not 
+        \item  $ (1,0),(0,1) $ are idempotents.
+    \end{enumerate} 
+\end{remark}
+From those properties, we can construct an isomorphism for an arbitrary idempotent.
+\begin{proposition}
+     $ e\in R  $ idempotent i.e.  $ e^2=e  $ 
+     \begin{enumerate}
+        \item  $ eR  $ is a ring with  $ e  $ as mult identity and  $ p:R\rightarrow eR,x\mapsto ex  $ is a ring homomorphism
+        \item  $ e'=1-e  $ is also an idempotent and  $ R\rightarrow (eR)\times(e'R):x\mapsto(ex,e'x)$ is an isomorphism of rings.
+     \end{enumerate}
+\end{proposition}
+\subsection{Prime ideals and maximal ideals}
+\begin{observe}
+     $ R  $ ring
+     \begin{enumerate}
+        \item  $ x\in R  $,  $ (x)=R\Leftrightarrow x\in R^\times  $ unit.
+        \item  $ R  $ is a field  $ \Leftrightarrow  $  $ R  $ has exactly two ideals.
+     \end{enumerate}
+\end{observe}
+
+\begin{definition}
+    A ring is called an  \textbf{integral domain}\index{integral domain} if it is not the zero ring and has no nonzero zerodivisor $ \Leftrightarrow $ "$ xy=0\Rightarrow x=0  $ or  $ y=0 $".\\
+\end{definition}
+\begin{definition}
+    An ideal  $ P\subset R  $ is called \textbf{prime}\index{prime ideal} if  $ p\not=0 R  $ and "$ xy\in P $ implies  $ x\in P  $ or  $ y\in P  $".
+    
+    Equivalently, $ R/P  $ is an integral domain.
+\end{definition}
+\begin{definition}
+    An ideal  $ M\subset R  $ is called \textbf{maximal}\index{maximal ideal} if  $ M\not=R  $ and  $ \forall  $ ideal  $ M\subset I\subset R $, $ I=M  $ or  $ I=R  $  
+
+    Equivalently, ideals of  $ R/M $ are only  $ 0  $ and  $ R/M $. $ \Rightarrow  $  $ R/M  $ is a field.
+\end{definition}

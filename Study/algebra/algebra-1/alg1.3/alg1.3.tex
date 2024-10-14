@@ -1,0 +1,35 @@
+\begin{definition}
+    A matrix is called \textbf{reduced row echelon} matrix if 
+    \begin{enumerate}
+        \item If  $ r_i=0 $, then  $ r_j=0 $ for  $ j>i $;
+        \item If  $ r_i\not=0 $, then the left-most nonzero entry is  $ 1  $ (let  $ a_{i,k_i}=1 $ ), called a \textbf{pivot};  
+        \item the pivot of  $ r_i  $ is strictly on the right of the pivot of  $ r_{i-1} $; 
+    \end{enumerate}
+\end{definition}
+\begin{definition}
+    A system of linear equations of form of  $ a_{j,k_i}=0 $ for all  $ j<i $ is called a \textbf{reduced row echelon system};
+    
+    Call  $ x_{k_i},\cdots,x_{k_r} $ \textbf{principal unknowns}, the others \textbf{free unknowns} 
+\end{definition}
+\begin{proposition}
+    \begin{enumerate}
+        \item Any system of linear equations can be reduced to be a r.r.e system, preserving the set of solutions.
+        \item Any matrix can be reduced to a r.r.e matrix by row denoting operations.
+    \end{enumerate}
+\end{proposition}
+\begin{proposition}
+     $ A\in M_n(K ) $, TAFE:
+     \begin{enumerate}
+        \item  $ A  $ is invertible
+        \item  $ A  $ can be reduced to  $ I_n  $ by row elementary operations 
+        \item  $ A  $ is a product of elementary matrices.
+     \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    $ A\in M_n(K ) $, TAFE:
+    \begin{enumerate}
+        \item  $ A  $ is invertible
+        \item  $ Ax=b  $ has a unique solution for any  $ b  $ 
+        \item  $ Ax=b $ has a unique solution. 
+    \end{enumerate}
+\end{proposition}

@@ -1,0 +1,47 @@
+\begin{theorem}
+    $ B(x,y):=\int_{0}^{1} t^{x-1}(1-t)^{y-1 }\, \mathrm{d}t=\dfrac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)},\,\,\forall x,y>0 $ 
+ \end{theorem}
+ \begin{proof}
+    Fix  $ y>0  $,  $ b (1,y)=\int_{0}^{1} (1-t)^{y-1}\, \mathrm{d}t=\frac{1 }{y }  $, and 
+    \[B(\frac{x_1}{p}+\frac{x_2 }{q },y)\overset{Holder}{ \leqslant  }[B(x_1,y)]^{\frac{1}{p }}[B(x_2,y)]^{\frac{1 }{q }},\quad \forall x_1,x_2>0,\frac{1 }{p }+\frac{1 }{q }=1,p>1\]
+    \[\Rightarrow\ln{B(\cdot,y )}\text{ is convex on  $ (0,\infty) $ }\]
+    \[B(x+1,y)=\int_{0}^{1} (\frac{t}{1-t })^x(1-t)^{x+y-1}\, \mathrm{d}t \xlongequal[]{I.B.P} B(x,y),\quad\forall x>0   \]
+    \[\Rightarrow f(x):=\dfrac{\Gamma(x+y)}{\Gamma(y)}B(x,y)\,\text{satisfies (a), (b) and (c) of the previous theorem}\]
+    \[\Rightarrow f(x)=\Gamma(x),\,\forall x>0\]
+ \end{proof}
+ Some applications: 
+ \begin{enumerate}[1)]
+    \item If we set  $ t=\sin^2{\theta} $ in the beta function, we get\[2 \int_{0  }^{\frac{\pi }{2}}\sin^{2x-1}{\theta}\cos^{2x-1}{\theta} \, \mathrm{d}\theta=\dfrac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)},\,\forall x,y>0  \]
+    Let  $ x=y=\frac{1}{2} \Rightarrow \Gamma(\frac{1}{2})=\sqrt{\pi}$ 
+    \item  $ \Gamma(x)=\int_{0 }^{\infty} t^{x-1}e^{-t}\, \mathrm{d}t \xlongequal{t=s^2}2 \int_{0 }^{\infty} s^{2x-1}e^{-s^2}\, \mathrm{d}s,\,x>0     $\\
+    Setting  $ x=\frac{1 }{2 }\Rightarrow \int_{0 }^{\infty} e^{-s^2}\, \mathrm{d}s=\frac{\sqrt{\pi }}{2}   $
+    \item The 2nd theorem in this section  $ \Rightarrow $ \underline{Duplication formula}.\[\Gamma(x)=\dfrac{2^{x-1}}{\sqrt{\pi }}\Gamma(\frac{x }{2 })\Gamma(\frac{x+1 }{2})\]
+    
+ \end{enumerate} 
+ \paragraph{Stirling formula.}$ \lim\limits_{x\to\infty}\dfrac{\Gamma(x+1) }{(\frac{x }{e})^x\sqrt{2\pi x }}=1  $  
+ \begin{proof}
+    \[\Gamma(x+1)=\int_{0 }^{\infty} t^xe^{-t }\, \mathrm{d}t \xlongequal[]{t=x(1+u)}\int_{-1 }^{\infty } e^{-x(1+u )}x\, \mathrm{d}u=x^{x+1}e^{-x}\int_{-1 }^{\infty} [(1+u)e^{-u }]^x\, \mathrm{d}u,\,x>0 \tag{ $ \square $ }  \]
+    We define  $ h(u)  $ s.t. $ h(0)=1, $ and $ (1+u)e^{-u}=e^{-\frac{u^2 }{2 }h(u)},u\in(-1,\infty),u\not=0 $ 
+    \begin{align*}
+        &\Rightarrow h(u)=\frac{2}{u^2 }[u-\ln(1+u)],\,\forall u\in(-1,\infty),u\not=0\\
+        &\Rightarrow h'(u)=2u^{-3}[2\ln(1+u)-u-\frac{u }{1+u }]<0,\,\forall u \in (-1,\infty )\qquad( h'(0)=0 )\\
+        &\Rightarrow \text{ $ h  $ is continuous,  $ h(u) $ decrease strictly from  $ \infty  $ to  $ 0  $ as  $ u  $ increases from  $ -1  $ to  $ \infty  $ }\\
+        (\square)&\Rightarrow\Gamma(x+1)=x^{x+1}e^{-x}\int_{-1 }^{\int } e^{-\frac{u^2x }{2 }h(u) }\, \mathrm{d}u \xlongequal[]{u=s\sqrt{\frac{2 }{x }}}x^xe^{-x}\sqrt{2x }\int_{-\sqrt{\frac{x }{2 }}}^{\infty } \psi_x(s)\, \mathrm{d}s ,\,\forall x>0\tag{ $ \square\square $ } 
+    \end{align*}
+    where  \[ \psi_x(s):=\left\{
+        \begin{aligned}
+            e^{-s^2h(s\sqrt{\frac{2 }{x }})}{},&\quad -\sqrt{\frac{x }{2 }}<s<\infty\\
+            0\qquad\qquad\,,&\quad s \leqslant -\sqrt{\frac{x }{2 }}
+        \end{aligned}
+    \right. \] 
+    It is easy to check:
+    \begin{enumerate}
+        \item[\textcircled{1}]  $ \forall   $ fixed  $ s\in\mathbb{R } $,  $ \lim\limits_{x\to\infty }\psi_x(s)=e^{-s^2}  $.
+        \item[\textcircled{2}]  $ \psi_x(s)\rightarrow e^{-s^2} $ uniformly on  $ [-M,M ] $ as  $ x\to \infty  $ for  $ \forall M\in\mathbb{R } $.
+        \item[\textcircled{3}] If  $ s<0  $, then  $ 0 \leqslant \psi_x(s) \leqslant e^{-s^2},\,\forall x>0 $.
+        \item[\textcircled{4}] If  $ s>0  $, then  $ 0 \leqslant \psi_x(s) \leqslant \psi_1(s),\,\forall x>1 $.
+        \item[\textcircled{5}]  $ \int_{0 }^{\infty } \psi_1(s)\, \mathrm{d}s=\int_{0}^{\infty} e^{-s^2h(s\sqrt{2})}\, \mathrm{d}s=\int_{0}^{\infty } (1+s\sqrt{2 })e^{-\sqrt{2}s}\, \mathrm{d}s<\infty     $     
+    \end{enumerate}
+    EX6 on HW8  $ \Rightarrow \lim\limits_{x\to\infty } \int_{-\infty }^{\infty } \psi_x(s)\, \mathrm{d}s=\int_{-\infty }^{\infty } e^{-s^2 }\, \mathrm{d}s=\sqrt{\pi }    $.
+    \[(\square\square)\Rightarrow \lim\limits_{x\to\infty}\dfrac{\Gamma(x+1) }{(\frac{x }{e})^x\sqrt{2\pi x }}=1  \] 
+\end{proof}

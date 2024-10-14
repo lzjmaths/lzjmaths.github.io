@@ -1,0 +1,65 @@
+\begin{theorem}[Fixed field theorem]\index{fixed field theorem}\label{fixed field theorem}
+    Let  $ H<\Aut(K/F) $ be a finite subgroup. Then  $ K/K^H $ is a finite Galois extension with  $ H\xrightarrow{\cong}\Aut(K/K^H)=\Gal(K/K^H) $.  
+\end{theorem}
+In this proof of the theorem, we need an important lemma which describes polynomial whose root is  $ \alpha\in K^H $ 
+\begin{lemma}
+    Take any  $ \alpha\in K $. Let  $ \alpha=\alpha_1,\cdots,\alpha_m $ be the distinct elements in the orbit of  $ \alpha $ over  $ H $.\\
+    Consider  $ f_\alpha(x)=(x-\alpha_1)\cdots(x-\alpha_m) $. Then  $ f_\alpha(x)\in K^H[x] $     
+\end{lemma}
+This means we can get an irreducible polymomial in  $ K^H[x] $ easily, and it implies that  $ K/K^H  $ is separable too. 
+\begin{theorem}[characterization of finite Galois extension 2]\index{characterization of finite Galois extension}
+     $ K/F  $ finite. TFAE
+     \begin{enumerate}[(1)]
+        \item  $ K/F  $ is Galois
+        \item  $ K/F  $ is the splitting field of a separable polymomial over  $ M  $.
+        \item  $ |\Aut(K/F)|=[K:F] $
+        \item  $K^{\Aut(K/F)}=F $ 
+        \item   $ K\otimes_F K\cong K^{[K:F]} $ 
+     \end{enumerate}
+\end{theorem}
+\begin{proof}
+     $ K\supset K^{\Aut(K/F)}\supset F $. In \cref{fixed field theorem}, we know  $ [K:K^{\Aut(K/F)}]=|\Aut(K/F)| $, so  $ (3)\Leftrightarrow (4) $  
+\end{proof}
+\begin{corollary}
+     $ K=F(\alpha)/F $  is Galois. Then the minimial polymomial over  $ F  $ is  $ \prod\limits_{\sigma\in \Gal(K/F)}(x-\sigma(\alpha))  $. 
+\end{corollary}
+\begin{corollary}
+     $ K/F  $ Galois  $ \Rightarrow  $  $ K/M  $ Galois for  $ M  $ intermediate field.
+\end{corollary}
+\begin{theorem}[fundamental theorem in Galois theory]\index{fundamental theorem in Galois theory}\index{fundamental theorem in Galois theory}
+    Let  $ K/F  $ be a finite Galois extension. Then 
+    \begin{align}
+        \{M \text{ intermediate of }K/F\}&\xleftrightarrow{bij} \{K<\Gal(K/F)\}\\
+        M&\mapsto H:=\Gal(K/M)<\Gal(K/F)\\
+        M=K^H&\leftarrow H   
+    \end{align}
+    Moreover, foe  $ M,M'\leftrightarrow H,H' $.
+    \begin{enumerate}[(1)]
+        \item  $ M\subset M'  $  $ \Leftrightarrow H>H' $
+        \item  $ \forall \sigma\in \Gal(K/F) $,  $ \sigma(M) $ intermediate  $ \leftrightarrow  $  $ \sigma H\sigma^{-1}<\Gal(K/F) $ \ie  $ \sigma H \sigma^{-1}=\Gal(K/\sigma(M)) $ 
+        \item  $ M/F  $ Galois  $ \Leftrightarrow  $  $ H\triangleleft \Gal(K/F) $\\
+        In this case,  $ \Gal(K/F )\rightarrow \Gal(M/F) $ induces 
+        \[\Gal(K/F)/_{\Gal(K/M)}\xrightarrow{\cong}\Gal(M/F)\]  
+    \end{enumerate} 
+\end{theorem}
+\begin{proof}
+    The first part only need to check\\
+    (1) is trivial\\
+    (2) First to prove  $ \sigma H\sigma^{-1}<\Gal(K/\sigma(M)) $ (show they are fixed point). Then check the order of them. \\
+    (3)  $ M/F  $ Galois  $ \Leftrightarrow  $  $ M/F  $ normal  $ \Leftrightarrow  $  $ \forall \sigma\in \Gal(K/F ) $,  $ \sigma(M)=M $  $ \Leftrightarrow $  $ \forall \sigma,  \sigma H\sigma^{-1}=H  $.\\
+    Now consider the restriction  $ \sigma\mapsto \sigma|_M\in \Gal(M/F) $ we get the whole proof. 
+\end{proof}
+\begin{example}
+     $ q=p^m $,  $ \mathbb{F}_{q^n}/\mathbb{F}_q $ is Galois extension(splitting field of  $ x^{q^n}-x $)\\
+     Let  $ F_{rq}:x\mapsto x^q $.\\
+     Then  $ \Gal(\mathbb{F}_{q^n}/\mathbb{F}_q)=<F_{rq}> $ be a cyclic group(check the order).\\
+     Subgroups are  $ H=<F^a_{rq}> $,  $ a|n $ \\
+     Fixed field are  $ \mathbb{F}_{q^n}^H=\mathbb{F}_{q^a} $.\\
+     So  $ \mathbb{F}_{q^n}\supset \mathbb{F}_{q^a} $ $ \Rightarrow  $  $ a|n $.       
+\end{example}
+By this example, if we can describe the Galois group, then it is easy to check whether the intermediate field is Galois by checking if the corresponding subgroup is normal.
+\begin{example}
+    Consider  $ K  $ splitting field of  $ x^4-2 $ over  $ \mathbb{Q} $.\\
+    Then the Galois group  $ G=\{1,\rho,\rho^2,\rho^3,\tau,\rho\tau,\rho^2\tau,\rho^3\tau\}=<\rho,\tau:\rho^4=1 ,\tau^2=1,\tau\rho=\rho^3\tau>=D_8 $.\\
+    where  $ \rho:\sqrt[4]{2}\mapsto \sqrt[4]{2}i $  $ \tau:i\mapsto -i $     
+\end{example}

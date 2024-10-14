@@ -1,0 +1,94 @@
+\subsection{Noetherian moudles}
+\begin{definition}
+    An  $ R  $-module  $ V  $ is called a noetherian  $ R  $-module if the following equivalent conditions holds:
+    \begin{enumerate}
+        \item every  $ R  $-module of  $ V  $ is finitely generated.
+        \item (Ascending chain condition) For any  $ V_0\subset V_1\subset \cdots $ ascending chain of  $ R  $-submodules of  $ V  $, there exists  $ n  $ such that  $ V_n=V_{n+1}=\cdots  $.\
+        \item Every nonempty set of  $ R  $-modules of  $ V  $ contains a maximal element. 
+    \end{enumerate}
+\end{definition}
+\begin{proposition}
+     $ R  $ is PID, then  $ R  $ is a noetherian ring.\\
+     If  $ R  $ is a noetherian ring, then every quotient ring  $ R/I  $ is a noetherian ring.(but not true for subrings)
+\end{proposition}
+\begin{theorem}
+     $ R  $ noetherian ring.
+     \begin{enumerate}
+        \item Every finitely generated  $ R  $-module is a noetherian  $ R  $-module. Therefore, every finitely generated  $ R  $-module is of finite presentation.
+        \item (Hilbert's basis theorem) $ R[x]  $ is also a noetherian ring. 
+     \end{enumerate}
+\end{theorem}
+\subsection{integral elements}
+For  $ \alpha  $ algebraic integer, if  $ \alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_1\alpha+a_0=0 $ for some  $ a_i\in \mathbb{Z} $.\\
+Then  $ 1,\alpha,\cdots,\alpha^{n-1} $ span  $ \mathbb{Z}[\alpha] $ as a  $  \mathbb{Z}  $-module.     
+\begin{lemma}\label{module extending}
+    Let  $ A\rightarrow B $ is a ring homomorphism,  $ V  $ a  $ B $-module. If  $ B  $, as an  $ A  $-module, is finite generated, and  $ V  $ is a finite generated  $ B  $-module, then  $ V  $ is also a finite generated  $ A  $-module. 
+\end{lemma}
+\begin{definition}
+     $ A  $ is a subring of  $ B  $.\\
+     $ b\in B  $ is \textbf{integral over  $ A  $}\index{integral} if  $ \exists n\in \mathbb{Z}_+,a_0,\cdots,a_{n-1}\in A $ s.t.  $ b^n+a_{n-1}b_1+\cdots+a_1b+a_0=0 $.\\
+     Sat  $ B  $ is integral over  $ A  $ if every  $ b\in B  $ is integral over  $ A  $.  
+\end{definition}
+\begin{proposition}
+    For  $ b\in B  $, TFAE
+    \begin{enumerate}[(1)]
+         \item  $ b  $ is integral over  $ A  $
+         \item subring  $ A[b]\subset B $ is a finitely generated  $ A  $-module.
+         \item  $ \exists C\subset B  $ subring s.t.  $ A[b]\subset C $ and  $ C  $ is a finite generated $ A  $-module. 
+    \end{enumerate}
+\end{proposition}
+We need to prove a lemma.
+\begin{lemma}
+     $ X\in M_n(A) $, then  $ \exists \, Y\in M_n (A)$ (which is called cofacter matrix) s.t.
+     \[YX=(\det X)I_n\]
+\end{lemma}
+\begin{lemma}
+    If  $ b_1,\cdots,b_r\in B  $ are integral over  $ A  $, then the subring  $ A[b_1,\cdots,b_r] $ is finitely generated as  $ A $-module.   
+\end{lemma}
+\begin{corollary}\label{integral closed}
+     $ b,b'\in B  $ are integral over  $ A  $, then   $ b\pm b',bb' $ are integral over  $ A $.  
+\end{corollary}
+\begin{hint}
+    Using the lemma \ref{module extending}
+\end{hint}
+
+\begin{corollary}\label{integral extending}
+     $ A\subset B \subset C $. If  $ B  $ is integral over  $ A  $,  $ c\in C  $ is integral over  $ B  $, then  $ c\in C  $ is integral over  $ A $. 
+\end{corollary}
+\begin{definition}
+     $ \{b\in B:\text{integral over }A\} $ is a subring of  $ B  $ by  Cor \ref{integral closed}.  Call this \textbf{integral closure}\index{integral closure} of  $ A  $ in  $ B  $.
+\end{definition}
+\begin{definition}
+    An integral domain  $ A  $ is called \textbf{integrally closed } if integral closure of  $ A  $ in  $ \Frac A  $ is  $ A $ 
+\end{definition}
+\begin{example}
+     $ K=\mathbb{Q}[\sqrt{d}] $.
+     \[
+        \mathcal{O}_k=\{\text{algebraic integers in  $ K  $}\}\\
+    \]
+    is integrally closed by Cor \ref{integral extending} ( $ A=\mathbb{Z}\subset B=\mathcal{O}_k\subset C=K $ )
+\end{example}
+More generally,  $ K  $ is a number field.
+Then  $ \mathcal{O}_k=\{\text{algebraic integers in  $ K  $ }\} $ is the integral closure of  $ \mathbb{Z} $ in  $ K  $ and integrally closed integral domain.  
+\begin{definition}
+     $ A  $ is called a \textbf{Dedekind domain} if  $ A  $ is an integrally closed integral domain \st  $ A  $ is noetherian and every nonzero prime ideal is maximal.
+\end{definition}
+\begin{fact}
+    \begin{enumerate}[(1)]
+        \item  $ \mathcal{O}_K $ above is a Dedekind domain.
+        \item In Dedeking domain, every nonzero ideal= $ p_1^{e_1}\cdots p_r^{e_r} $ where  $ p_i $ maximal ideals.  
+    \end{enumerate}
+\end{fact}
+\subsection{Homological and exact sequence}
+\begin{definition}
+    Let  $ R  $ be a ring ,  $ V,W  $  $ R $-module.
+    \[\Hom_R(V,W)=\{f:V\rightarrow W:f\text{ is $ R $-linear}\}\]
+    which is an  $ R  $-module.
+\end{definition}
+\begin{definition}
+    Consider a chain of  $ R $-linear maps
+    \[\cdots\rightarrow V_{i-1}\xrightarrow{f_{i-1}}V_i\xrightarrow{f_i}V_{i+1}\rightarrow\cdots\]
+    Say this is \textbf{exact}\index{exact} at  $ V_i  $ if  $ \img f_{i-1}=\ker f_i $.\\
+    Exact if exact at every  $ V_i $.  
+\end{definition}
+

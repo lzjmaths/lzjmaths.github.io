@@ -1,0 +1,143 @@
+\begin{proof}
+    WLOG, let $ [a,b]=[0,1] $,  $ f(0)=f(1)=0 $.
+    And  $ f(x)=0,\,{\forall x\in \mathbb{R }\backslash[0,1]} \Rightarrow f$ is uniformly continuous on  $ \mathbb{R } $.
+    \[Q_n(x):=c_n(1-x^2)^n,\,x\in [-1,1]\]
+    where  $ c_n  $ satisfies  $ \int_{-1}^{1} Q_n(x)\, \mathrm{d}x=1,\,\forall n\in\mathbb{N }   $.
+    
+     \[ \int_{-1}^{1} (1-x^2)^n\, \mathrm{d}x=2 \int_{0 }^{1 } (1-x^2)^n \, \mathrm{d}x \geqslant 2 \int_{0 }^{\frac{1 }{\sqrt{n }}}(1-x^2)^n \, \mathrm{d}x\geqslant 2 \int_{0 }^{\frac{1 }{\sqrt{n }}}(1-nx^2) \, \mathrm{d}x =\frac{4 }{3\sqrt{n}}>\frac{1 }{\sqrt{n}} ,n\in\mathbb{N }   \] $ \Rightarrow \,c_n<\sqrt{n},n\in \mathbb{N} $.
+    
+     $ \Rightarrow  $ For  $ \forall \delta\in(0,1) $,  $ Q_n(x) \leqslant \sqrt{n}(1-\delta^2)^n, $ $ \forall x  $ with  $ |x|\in [\delta,1] $.
+     
+      $ \Rightarrow $  $ Q_n(x)\rightarrow 0  $ uniformly in  $ [-1,-\delta]\cup[\delta,1] $ 
+
+      Let  $ P_n(x):=\int_{-1}^{1 } f(x+t)Q_n(t)\, \mathrm{d}t, x\in[0,1]   $
+      
+      Then  $ P_n(x)=\int_{-x }^{1-x } f(x+t)Q_n(t)\, \mathrm{d}t=\int_{0 }^{1}f(t)Q(t-x) \, \mathrm{d}t     $ is a polynomial in $ x $, which is real if  $ f  $ is real.
+      
+       $ \forall \epsilon>0,\,\exists \delta\in(0,1) $ s.t. $ |f(y)-f(x)|<\frac{\epsilon}{2} $ whenever  $ |y-x|<\delta $.
+       
+       Then 
+       \begin{align*}
+        |P_n(x)-f(x)|&=|\int_{-1}^{1} f(x+t)Q_n(t)\, \mathrm{d}t-\int_{-1}^{1} f(x)Q_n(x)\, \mathrm{d}t|\\
+        & \leqslant \int_{-1 }^{1} |f(x+t)-f(x)|Q_n(t)\, \mathrm{d}t\\
+        & \leqslant 2M \int_{-1 }^{-\delta} Q_n(t)\, \mathrm{d}t+\frac{\epsilon}{2}\int_{-\delta}^{\delta} Q_n(t)\, \mathrm{d}t+2M \int_{\delta}^{1} Q_n(t)\, \mathrm{d}t\qquad (M:=sup|f(x)|)\\
+        & \leqslant 4M\sqrt{n }(1-\delta^2 )^n+\frac{\epsilon}{2} \\
+        &<\epsilon\text{ for all large  $ n $         }           
+       \end{align*}
+        $ \Rightarrow  $  $ P_n\rightarrow f  $ uniformly on  $ [0,1] $. 
+\end{proof}
+
+\subsection{Continuous Nowhere Differentiable Functions}
+\begin{theorem}
+    There exists a real continuous function on $ \mathbb{R}  $, which is nowhere differentiable.
+\end{theorem}
+\begin{proof}
+    Let  $ \varphi(x):=|x|,x\in[-1,1] $.
+    
+    Extend  $ \varphi  $ to all  $ x\in\mathbb{R} $ by  $ \varphi(x+2)=\varphi(x), x\in\mathbb{R} $.
+    
+    Then  $ |\varphi(x)-\varphi(y)| \leqslant |x-y| $,  $ \forall x,y\in\mathbb{R}\quad (\ast )$.
+    
+    Define $ f(x):=\sum\limits_{n=0}^{\infty} (\dfrac{3}{4})^n\varphi(4^nx),x\in\mathbb{R} $.
+    
+     $||\phi(x)|| \leqslant 1 $$ \xRightarrow{M-text} $ the last series converges uniformly on $ \mathbb{R } $$ \xRightarrow{Thm 7.2.2} $$ f $ is continuous on $ \mathbb{R} $
+     
+     Fix  $ x\in \mathbb{R } $ , choose
+     \begin{equation*}
+        \delta_m:=\left\{
+        \begin{aligned}
+            \frac{1}{2}4^{-m}, &\quad [4^mx,4^m(x+\frac{1}{2}4^{-m})]\cap \mathbb{Z}=\phi \\
+            -\frac{1}{2}4^{-m},&\quad(4^m(x-\frac{1}{2}4^{-m}),4^mx)\cap \mathbb{Z }=\phi
+        \end{aligned}
+        \right.
+     \end{equation*}
+     Now Define
+     \begin{equation*}
+        \gamma_n:=\dfrac{\phi(4^n(x+\delta_m))-\phi(4^nx)}{\delta_m},\, n\in\mathbb{N}
+     \end{equation*}
+
+     Then  $ \gamma_n=0 $ if  $ n>m  $ (since  $ 4^n\delta_m\in2\mathbb{Z} $), and  $ |\gamma_n| \leqslant 4^n $ if  $ 0 \leqslant n \leqslant m $ by  $ (\ast) $, and  $ |\gamma_m|=4^m $.
+     
+     \begin{align*}
+        \Rightarrow|\frac{f(x+\delta_m)-f(x)}{\delta_m}|&=|\sum\limits_{n=0}^{\infty} (\dfrac{3}{4})^n\gamma_n|\\
+        &=|\sum\limits_{n=0}^{m } (\dfrac{3}{4})^n\gamma_n|\\
+        &\geqslant (\dfrac{3}{4})^m|\gamma_m|-\sum\limits_{n=0}^{m-1 } (\dfrac{3}{4})^n|\gamma_n|\\
+        &\geqslant 3^m-\sum\limits_{n=0}^{m-1} 3^n\\
+        &=\dfrac{3^m+1}{2}\to\infty \quad as \,m\to\infty.
+     \end{align*}
+     Note that  $ \delta_m\to0 $  as  $ m\to0 $,  $ \Rightarrow $ f is not differentiable at  $ x $.  
+\end{proof}
+\section{Some Special Functions}
+\subsection{Power Series}
+Functions which are represented by power series, i.e. $ f(x)=\sum\limits_{n=0}^{\infty} c_n(x-a)^n  $, are called \underline{analytic functions}.
+
+We shall restrict to real values of  $ x $.
+
+WLOG, we shall often take  $ a=0 $.
+\begin{theorem}
+    Suppose the series $ \sum\limits_{n=0 }^{\infty } c_nx^n (\ast\ast) $.
+    converges for  $ |x|<R $, and define  $ f(x):=\sum\limits_{n=0}^{\infty} c_nx^n $, $ |x|<R $.
+    Then  $ (**) $ converges uniformly on  $ [-R+\epsilon,R-\epsilon] $ for  $ \forall \epsilon>0  $.
+     $ f  $ is continuous and differentiable on  $ (-R,R) $ and 
+     \begin{equation}
+        f'(x)=\sum\limits_{n=1}^{\infty} nc_nx^{n-1},\,|x|<R\tag{$ \ast\ast\ast $}
+     \end{equation}  
+\end{theorem} 
+\begin{proof}
+    Fix  $ \epsilon\in(0,R) $, we have  $ |c_nx^n| \leqslant |c_n(R-\epsilon)^n|\quad \forall |x|<R-\epsilon $.
+    By the root test, each power series converges absolutely in the interior of its interval of convergence, i.e.
+     $ |\sum |c_n(R-\epsilon)^n| $ converges.
+     
+     M-test $ \Rightarrow $  $ (**) $  converges uniformly on  $ [-R+\epsilon,R-\epsilon] $.
+     
+      $ \lim\limits_{n\to\infty}\sqrt[n]{n}=1  \Rightarrow \limsup\limits_{n\to\infty}(n|c_n|)^{\frac{1}{n}}=\limsup\limits_{n\to\infty}(|c_n|)^{\frac{1}{n}} \Rightarrow $ the series  $ (**) $  and  $ (***) $  have the same interval of convergence.
+      
+       $ \Rightarrow(\ast\ast\ast) $ converges uniformly on  $ [-R+\epsilon,R-\epsilon] $.
+       
+       theorem 7.4.1 tells us  $ (***) $  holds if  $ |x|<R-\epsilon $,
+
+        $ \Rightarrow(\ast\ast\ast) $ holds for  $ \forall |x|<R $ since  $ \epsilon $ is arbitrary.
+
+        $ f  $ is continuous because it is differentiable.
+\end{proof}
+\begin{corollary}
+    
+Under the hypotheres of the previous theorem,  $ f  $ has derivatives of all orders in  $ (-R,R) $:
+\[f^{(k)}(x)=\sum\limits_{n=k}^{\infty} n(n-1)\cdots(n-k+1)c_nx^{n-k}\]
+In particular,  $ f^{(k)}(0)=k!c_k $. 
+\end{corollary}
+\begin{example}
+    Let  $ f(x)=e^{-\frac{1}{x^2}},x\not=0 $,  $ f(0)=0 $.
+    Then  $ f^{(k)}(0)=0 $ fir  $ \forall k\in\mathbb{N } $.
+    So  $ f  $  cannot be expanded in a power series about  $ x=0 $.    
+\end{example}
+\begin{theorem}[Abel's theorem]
+    Let  $ f(x):=\sum\limits_{n=0}^{\infty} c_nx^n, x\in(-1,1)  $, and suppose  $ \sum c_n  $ converges.
+    Then  $ \lim\limits_{x\to1^-}f(x)=\sum\limits_{n=0 }^{\infty} c_n   $.  
+\end{theorem}
+\begin{proof}
+    Let  $ A_n:=\sum\limits_{k=0 }^{n } c_k,n\in\mathbb{N }$, and  $ A_{-1}=0 $.
+    Then   \[\sum\limits_{n=0 }^{m } c_nx^n =\sum\limits_{n=0 }^{m } (A_n-A_{n-1})x^n=(1-x)\sum\limits_{n=0}^{m  }A_nx^n+A_mx^{m+1}\]  
+    
+    $ \xRightarrow{m\rightarrow \infty} f(x)=(1-x)\sum\limits_{n=0}^{\infty}A_nx^n, \,|x|<1  $.
+     
+     Suppose  $ A:=\lim\limits_{n\to\infty } A_n   $  $ \Rightarrow $ Fix  $ \epsilon>0, \exists N\in\mathbb{N } $, s.t. $ |A_n-A|<\frac{\epsilon}{2},\forall n\geqslant N  $.
+     \begin{align*}
+        \Rightarrow|f(x)-A|&=|(1-x)\sum\limits_{n=0 }^{\infty}A_nx^n-(1-x)\sum\limits_{n=0 }^{\infty}Ax^n|\\
+        &=|(1-x)\sum\limits_{n=0 }^{\infty} (A_n-A)x^n|  \\
+        & \leqslant |1-x|\sum\limits_{n=0}^{N} |A_n-A||x|^n+|1-x|\frac{\epsilon}{2}\sum\limits_{n=N }^{\infty}|x|^n\\
+        & \leqslant |1-x|\sum\limits_{n=0 }^{N } |A_n-A||x|^n+\frac{\epsilon }{2 }\frac{|1-x|}{1-|x|},\, |x|<1\\
+        &<\epsilon \quad\text{ for some  $ \delta>0 $ and  $ \forall x\in (1-\delta,1) $ } 
+     \end{align*} 
+      $ \Rightarrow \lim\limits_{x\to1^-}f(x)=\sum\limits_{n=0 }^{\infty} c_n  $ 
+\end{proof}
+As an application, we prove:
+\begin{theorem}
+    If the series $ \sum a_n ,\sum b_n,\sum c_n $ converge to  $ A,B,C $, and if  $ c_n=a_0b_n+a_1b_{n-1}+\cdots+a_nb_0 $, then  $ C=AB $.   
+\end{theorem}
+\begin{proof}
+    Let  $ f(x):=\sum\limits_{n=0 }^{\infty} a_nx^n $,\quad$g(x):=\sum\limits_{n=0 }^{\infty} b_nx^n  $,\quad$ h(x):=\sum\limits_{n=0 }^{\infty } c_nx^n $, $ x\in[0,1] $.\\
+    These series converge absolutely if  $ x\in[0,1) $  $ \Rightarrow $
+    \[f(x)\cdots g(x)=g(x),\quad x\in[0,1)\]
+    The previous theorem  $ \Rightarrow  $  $ \lim\limits_{x\to 1^-}f(x)=A,\lim\limits_{x\to 1^-}g(x)=B,\lim\limits_{x\to 1^-}h(x)=C       $\\ $ \Rightarrow $  $ AB=C $      
+\end{proof}

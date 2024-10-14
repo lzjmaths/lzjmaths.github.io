@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {25}Positive linear functionals and Radon measures}{1}{section.25}%
+\contentsline {subsection}{\numberline {25.4}Regularity and Lusin's theorem}{1}{subsection.25.4}%
+\contentsline {subsection}{\numberline {25.5}Regularity beyond finite measures}{2}{subsection.25.5}%
+\contentsline {section}{\numberline {26}Theorems of Fubini and Tonelli for Radon measures}{2}{section.26}%
+\contentsline {subsection}{\numberline {26.1}Products of Radon measure}{2}{subsection.26.1}%
+\contentsline {subsection}{\numberline {26.2}Theorems of Fubini and Tonelli}{3}{subsection.26.2}%
+\contentsline {section}{\numberline {27}The marriage of Hilbert spaces and integral theory}{3}{section.27}%
+\contentsline {subsection}{\numberline {27.1}The definition of $ L^p $ spaces}{3}{subsection.27.1}%
+\contentsline {subsection}{\numberline {27.2}Approximation in $ L^p $ spaces}{5}{subsection.27.2}%
+\contentsline {subsection}{\numberline {27.3}The Riesz-Fischer Theorem}{6}{subsection.27.3}%
+\contentsline {subsection}{\numberline {27.4}Introduction to dualities in $ L^p $ spaces}{6}{subsection.27.4}%
+\contentsline {section}{\numberline {28}From the implicit function theorem to differential manifolds}{7}{section.28}%
+\contentsline {subsection}{\numberline {28.1}The inverse function theorem}{7}{subsection.28.1}%
+\contentsline {subsection}{\numberline {28.2}The Implicit Theorem}{7}{subsection.28.2}%
+\contentsline {section}{\numberline {29}Differential calculus on manifold}{10}{section.29}%
+\contentsline {subsection}{\numberline {29.1}Tangent Space and Cotangent Space}{10}{subsection.29.1}%
+\contentsline {section}{\numberline {30}The change of variables formula}{12}{section.30}%

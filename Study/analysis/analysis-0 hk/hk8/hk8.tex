@@ -1,0 +1,212 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Analysis homework}
+\author{lin150117 }
+\date{March 2023}
+\begin{document}
+In this homework, we define  $ |x-y|:=d(x,y) $, if there is a metrc space with  $ d $.  
+\paragraph{E1} Both of them are convergent.
+
+\begin{proof}
+    (a)when  $ x\to \infty $ , $ e^x\to \infty $ .Then
+    \[\int_{0}^{\infty}  \frac{\sin(e^x)}{e^x}  \, \mathrm{d}e^x=\int_{1}^{\infty}  \frac{\sin(e^x) }{e^x}  \, \mathrm{d}x \quad \textbf{converges(ex in the Analysis16)}   \]
+    so 
+    
+        \begin{align*}
+            \int_{1}^{\infty} \sin(e^x)\, \mathrm{d}x &=\int_{1}^{\infty}  \frac{sin(e^x)}{e^x}\,e^x  \, \mathrm{d}x \\
+            &=\int_{0}^{\infty}  \frac{\sin(e^x)}{e^x}  \, \mathrm{d}e^x
+            &converges
+        \end{align*}
+        
+        
+    
+    (b)
+    
+        \begin{align*}
+            \int_{0}^{\infty} \sin(x^2)\, \mathrm{d}x &=\int_{0}^{\infty}  \frac{\sin(x^2)}{2x}  \, 2x\, \mathrm{d}x\\
+            &=\int_{0}^{\infty} \frac{\sin(x^2)}{2x}\, \mathrm{d}x^2\\  
+            &=\int_{0}^{\infty}  \frac{\sin(x)}{2\sqrt{x}} \, \mathrm{d}x
+            &\textbf{converges(use  Abel-Dirichlet test)}     
+        \end{align*}
+    
+\end{proof}
+
+\paragraph{E2}
+\begin{proof}
+    For  $ \phi $ is a continuous 1-1 mapping,then  $ \phi $ is monotonic ,and  $ \phi(c)=a \Rightarrow  \phi $ is increasing.
+    Then for each  partition $ P={a=x_0,x_1,x_2,\cdots,x_n=b} $ of  $ [a,b] $ ,we can find uniquely parition  $ Q={c=y_0,y_1,\cdots,y_n=d} $ s.t.  $ \phi(y_i)=x_i\, \forall\,i=0,1,\cdots,n$ 
+    then \[\Lambda (\gamma_1)=\sup\limits_{p}\sum\limits_{i=1}^{n }   |\gamma_1(x_i)-\gamma_1(x_{i-1}) |=\sup\limits_{Q}\sum\limits_{i=1}^{n } |\gamma_2(y_i)-\gamma(y_{i-1}) |=\Lambda(\gamma_2) \]
+    which implies that  $ \gamma_1 $ is rectifiable iff $ \gamma_2 $ is rectifiable.
+    And the lenth is the same.
+\end{proof}
+
+\paragraph{E3}
+(a)
+\begin{proof}
+    $ \forall \epsilon >0 ,\exists n\in \mathbb{N}\quad s.t.\quad |f_n(x)-f(x)|<\epsilon,\quad \forall x\in E $ Then
+    \[|f(x)-f(y)| \leqslant |f(x)-f_n(x)|+|f_n(x)-f_n(y)|+|f_n(y)-f(y)|<2\epsilon+|f_n(x)-f_n(y)|\]
+     $ f_n $ is continuous implies  $ \lim\limits_{y\to x}|f(x)-f(y)| \leqslant 2\epsilon+\lim\limits_{y\to x}|f_n(x)-f_n(y)|=2\epsilon   $. Let  $ \epsilon \rightarrow 0 $ ,Then  $ \lim\limits_{y\to x} |f(x)-f(y)|=0 $   
+     
+     Which implies  $ f  $ is continuous;
+
+     Then $\forall \delta>0, $ exits  $ N\in \mathbb{N} $ s.t 
+     \[\forall n\geqslant N,\, |f_n(x)-f(x)|<\frac{1}{2}\delta,\quad \forall n\geqslant N ,x\in E\]
+     \[\forall n\geqslant N,\, |f(x_n)-f(x)|<\frac{1}{2}\delta\]
+     Then 
+     \[\forall n\geqslant N,\, |f_n(x_n)-f(x)| \leqslant |f_n(x_n)-f(x_n)|+|f(x_n)-f(x)|<\delta\]
+     i.e.  $ \lim\limits_{n\to \infty} f_n(x_n) =f(x)  $ 
+\end{proof}
+(b)The answer is no. Let we choose E be a set of isolated points. $ E={x_1,x_2,\cdots} $ 
+Then (1) equals to  $ \lim\limits_{n\to \infty} f_n(x) =f(x),\quad \forall x\in E$.
+However we can't know  $ \{f_n\} $ converges uniformly on E from the previous condition.(Let  $ |f_n(x_m)-f(x_m)|<\epsilon \quad iff \quad n\geqslant m\epsilon     $ . then we can't fing a exactly N s.t  $ |f_n(x_m)-f(x_m)|< \epsilon \quad\forall n\geqslant N\quad and \quad m\in\mathbb{N} $)
+
+(c)The answer is yes.
+\paragraph{lemma.} In the condition of (1),for each  $ x\in E $, we can find a neibourhood  $ N_r(x) $ in  $ E  $ such that  $ \{f_n \} $ 
+ uniformly converges in  $ N_r(x) $ .
+ \begin{proof}
+    First, for  $ x\in E   $, choose  $ \{x_n\} $ be the sequence whose terms are all  $ x $, then  $ \lim\limits_{n\to\infty} f_n(x)=f(x)  $.
+    If  $ x  $ is  an isolated point of  $ E  $, then we can find a neibourhood of  $ x $ which contains only  $ x $.  $ \{f_n\} $  certainly converges uniformly in $ N_r(x)=\{x\} $.
+
+    If  $ x $ is a limit point of  $ E  $ , we assume that the lemma is not true for  $ x $.
+
+    i.e. we can't find  $ r>0 $ s.t. $ \{f_n \} $ uniformly converges in  $ N_r(x) $. Then there exists  $ \epsilon $ such that $\forall N\in\mathbb{N },r>0  $ there exists $n,m\geqslant N, $ and  $ y\in N_r(x),\,  |f_n(y)-f_m(y)|< 2\epsilon  $(use Cauchy criterion)
+
+    Then  we try to construct a sequence  $ \{x_n\} $(converges at  $ x $ )and  increasing sequence$ \{N_i\} $  such that   $\forall n\in \mathbb{N}_+,  |f_{N_n}(x_n)-f(x)|\geqslant \epsilon  $.
+    Then we can expand  $ \{x_n \} $  to $ \{y_n \} $ such that 
+    \begin{equation*}
+        y_n=\left\{
+            \begin{aligned}
+                x_i&{}\quad n=N_i,i\in \mathbb{N}\\
+                x_{i-1}&{}\quad N_{i-1}<n<N_{i},i\geqslant 2;
+                x&{}\quad n<N_{1};
+            \end{aligned}
+        \right.
+    \end{equation*} 
+     $ \{y_n\} $  contradicts with (1), so the assumption is impossible;
+
+    First,if  $ \forall n\in\mathbb{N},y\in E $,  $ |f_n(y)-f(x)|<\epsilon $, then  $ |f_n(y)-f_m(y)| \leqslant |f_n(y)-f(x)|+|f(x)-f_m(y)|<2\epsilon,\,\forall n,m,\in\mathbb{N},y\in E $, which imples the lemma is right.
+    so with the assumption we can find  $ N_1\in\mathbb{N },x_1\in E $, such that   $ |f_{N_1}(x_1)-f(x)|\geqslant \epsilon $. Let  $ r:=|x_1-x| $ 
+
+    If   we have constructed  $ x_1,x_2,\cdots,x_n \in E$ and increasing sequence $ \{N_i\} $( $ n\in \mathbb{N}_+ $ ) such that  $ |f_{N_i}(x_i)-f(x)|\geqslant \epsilon,\,\forall 1 \leqslant i \leqslant n  $ and  $ |x_{i}-x| \leqslant \frac{r}{2^{i-1}},\,\forall 1 \leqslant i \leqslant n $.  
+    Then if  $ \forall n\in\mathbb{N},n>N_n,y\in N_{\frac{r}{2^n}}(x) $,  $ |f_n(y)-f(x)|<\epsilon $, then  $ |f_n(y)-f_m(y)| \leqslant |f_n(y)-f(x)|+|f(x)-f_m(y)|<2\epsilon,\,\forall n,m,\in\mathbb{N},n,m>N_n,y\in N_{\frac{r}{2^n}}(x) $, which imples the lemma is right.
+    so with the assumption we can find  $ N_{n+1}\in\mathbb{N },N_{n+1}>N_n,x_{n+1}\in E $,such that  $ |f_{N_{n+1}}(x_{n+1})-f(x)|\geqslant \epsilon $ and  $ |x_{n+1}-x|<\frac{r}{2^n} $ .
+
+    So the construction exits, which cause the contradiction.
+ \end{proof} 
+With the lemma, define  $ \phi(x),x\in E $ be the neibourhood of  $ x $ satisfying the lemma's condition.
+Then  $ E=\mathop{\cup}\limits_{x\in E}\phi(x) $.
+With  $ E  $ is compact we know exists a finite set  $ K\subset E $ s.t.  $ E=\mathop{\cup}\limits_{x\in K}\phi(x) $.
+Then for  $ \{f_n\} $ converges uniformly in each  $ \phi(x),x\in K  $ and  $ K  $ is finite, then  $ \{f_n \}  $ converges uniformly 
+in  $ \mathop{\cup}\limits_{x\in K}\phi(x)=E $.    
+\paragraph{E4}
+\begin{proof}
+    From Cauchy criterion we know (a) implies  $\forall \delta>0\, \exists N\in\mathbb{N} $ s.t.  $ \forall n,m\geqslant N,n<m\quad |\sum\limits_{i=n}^{m} f_i(x)|<\delta $ Then 
+    
+        \begin{align}\
+            |\sum\limits_{i=n }^{m } f_i(x)g_i(x)|&=|\sum\limits_{i=n}^{m-1}(g_i(x)-g_{i+1}(x))\sum\limits_{j=n}^{i}f_j(x)+g_m(x)\sum\limits_{j=n}^{m} f_j(x)|\notag\\
+            & \leqslant  \sum\limits_{i=n}^{m-1}|g_i(x)-g_{i+1}(x)||\sum\limits_{j=n}^{i}f_j(x)|+|g_m(x)||\sum\limits_{j=n}^{m} f_j(x)|\notag\\
+            &< \delta(g_n(x)-g_m(x))\tag{*}
+        \end{align}
+    Then (b) implies  $ \forall \epsilon>0,\,\exists M\in \mathbb{M} $ s.t.  $ g_n(x)< \dfrac{\epsilon}{\delta}\quad \forall x\in E  $ ,with (*) we can know  $ |\sum\limits_{i=n }^{m } f_i(x)g_i(x)| <\epsilon $ for  $ n,m\geqslant \max\{N,M\} $ 
+
+    use Cauchy criterion we know  $ \sum f_ng_n $ converges uniformly on E.
+\end{proof}
+\paragraph[short]{E5}
+(a) we try to prove that the set of all discontinuities of  $ f  $ is  $ \mathbb{Q } $. 
+
+step1.   $ f  $ are discontinuous at All of rational numbers.
+\begin{proof}
+    for  $ x= \frac{q }{p } \in \mathbb{Q }  $, then  $ \forall \epsilon>0 $, choose  $ n\in \mathbb{N } $ s.t.  $ \epsilon>\frac{1 }{n-1} $ 
+    then choose  $ r  $ be the minimun distance(except 0) between  $ x $ and the number that have a form  $  \frac{m}{n!},\, m\in \mathbb{N }    $.
+    then for each  $ y\in (x-r,x) $,   
+    \begin{align*}
+        |f(y)-f(x)|&=|\sum\limits_{m=1}^{\infty}  \frac{(my)-(mx)}{m^2}|\\ 
+        &=|-\sum\limits_{p|m,m <n } \frac{1}{m^2}+\sum\limits_{m=n}^{\infty}\frac{(my)-(mx)}{m^2}|\\
+        &  \geqslant |\sum\limits_{p|m,m <n } \frac{1}{m^2} |-\sum\limits_{m=n}^{\infty}|\frac{(my)-(mx)}{m^2}|\\
+        &\geqslant |\sum\limits_{p|m,m <n } \frac{1}{m^2} |-\sum\limits_{m=n }^{\infty  } \frac{1}{m^2}\\
+        &>|\sum\limits_{p|m,m <n } \frac{1}{m^2} |- \frac{1}{n+1}\\
+        &>|\sum\limits_{p|m,m <n } \frac{1}{m^2} |-\epsilon
+    \end{align*}
+    Let  $ \epsilon \rightarrow 0 $, then  $ |f(y)-f(x)|>|\sum\limits_{p|m,m <n } \frac{1}{m^2} |>\frac{1}{p^2},\,\forall y\in (x-r,x) $.  
+    i.e.  $ f(x-)\neq f(x) $. So f is discontinuous at x.
+         
+\end{proof}
+step2. $ f  $ are continuous at all of irrational numbers.
+\begin{proof}
+    then  $ \forall \epsilon>0 $, choose  $ n\in \mathbb{N } $ s.t.  $ \epsilon>\frac{1 }{n-1} $ 
+    then choose  $ r  $ be the minimun distance between $ x $ and the number that have a form  $  \frac{m}{n!},\, m\in \mathbb{N }    $, .
+    then for each  $ y\in (x-r,x) $,  $ (my)-(mx)=0\, \forall m \leqslant n $. And   
+    \begin{align*}
+        |f(y)-f(x)|&=|\sum\limits_{m=1}^{\infty}  \frac{(my)-(mx)}{m^2}|\\ 
+        &=|\sum\limits_{m=n}^{\infty}\frac{(my)-(mx)}{m^2}|\\
+        & \leqslant \sum\limits_{m=n}^{\infty}|\frac{(my)-(mx)}{m^2}|\\
+        & \leqslant \sum\limits_{m=n }^{\infty  } \frac{1}{m^2}\\
+        & \leqslant \frac{1}{n-1}\\
+        &<\epsilon
+    \end{align*}
+    Then let  $ \epsilon\rightarrow 0 \Rightarrow  f(x-)=f(x)$.
+
+    Similarly, we can prove  $ f(x+)=f(x) $. Then f is continuous at x.
+\end{proof}
+(b)
+\begin{proof}
+    We need to prove that f is Rieman-integrable on  $ [a,b],\,a,b\in \mathbb{R} $. 
+    For  $ \epsilon>0 $, choose  $ N\in\mathbb{N} $ such that  $ \epsilon>2\frac{(Nb)-(Na)}{N!}+\frac{b-a}{N-1} $.
+    Then let  $ x_i=a+ \dfrac{i}{N!},i=1,2,\cdots,M\quad M:=(b-a)N!   $. partition  $ p={x_0,x_1,\cdots,x_M} $.
+
+    So for  $ r_i,t_i\in [x_{i-1},x_i]\, i=1,2,\cdots,M $ 
+    \begin{align*}
+        \sum\limits_{i=1}^{M} \sum\limits_{n=1}^{\infty}  \frac{(nr_i)-(nt_i)}{n^2}\Delta x_i&=\sum\limits_{i=1}^{M} \sum\limits_{n=1}^{\infty}  \frac{(nr_i)-(nt_i)}{n^2} \frac{1}{N!}   \\
+        &\leqslant \sum\limits_{i=1}^{M } (\sum\limits_{n=1}^{N}\frac{(nx_i)-(nx_{i-1})}{n^2} \frac{1}{N!}+\sum\limits_{n=N}^{\infty}\frac{1}{n^2}\frac{1}{N!}    )\\   
+        &<\sum\limits_{n=1}^{N}(\frac{(nb)-(na)}{n^2})\frac{1}{N!}+M\frac{1}{N-1}\frac{1}{N!}\\
+        &<2\frac{(Nb)-(Na)}{N!}+\frac{b-a}{N-1} \\
+        &<\epsilon    
+    \end{align*}   
+    i.e.
+    \[U(p,f)-L(p,f)=\sup\limits_{r_i,t_i\in[x_{i-1},x_i]}\sum\limits_{i=1}^{M} \sum\limits_{n=1}^{\infty}  \frac{(nr_i)-(nt_i)}{n^2}\Delta x_i<\epsilon\]
+    and from it we know f is Rieman-integrable.
+\end{proof}
+\paragraph[short]{E6}
+\begin{proof}
+    For a closed interval $ E=[a,b ] $，  $ f_n\rightarrow f $ uniformly in  $  E $, so for  $ \forall\epsilon>0  $,we can choose  $ N\in\mathbb{N } $ such that
+     $ \forall n\geqslant N  $,  $ |f_n(x)-f(x)|<\dfrac{\epsilon}{b-a}, \forall x\in E $.
+     Then  $ \int_{a}^{b} f_n(x)-f(x)\, \mathrm{d}x <\int_{a }^{b } \dfrac{\epsilon}{b-a}\, \mathrm{d}x=\epsilon       $.
+     i.e. $ \lim\limits_{n\to\infty } \int_{a }^{b } f_n(x)\, \mathrm{d}x =\int_{a }^{b } f(x)\, \mathrm{d}x\quad(*)     $
+     Then 
+     \begin{align*}
+        |\lim\limits_{n\to\infty } \int_{0}^{\infty} f_n(x )\, \mathrm{d}x -\int_{0 }^{\infty } f(x )\, \mathrm{d}x|& \leqslant\lim\limits_{n\to\infty }\bigl[
+        \lim\limits_{a\to 0^+,b\to +\infty} ( | \int_{a}^{b}f_n(x)-f(x) \, \mathrm{d}x|+|\int_{0}^{a } f_n(x)-f(x)\, \mathrm{d}x|\\
+        &+|\int_{b }^{\infty } f_n(x)-f(x)|\, \mathrm{d}x    )  
+        \bigr]  \\
+        &=\lim\limits_{n\to\infty } \bigl[
+            \lim\limits_{a\to 0^+,b\to\infty}(|\int_{0}^{a } f_n(x)-f(x)\, \mathrm{d}x|\\
+        &+|\int_{b }^{\infty } f_n(x)-f(x)|\, \mathrm{d}x )  
+        \bigr] \qquad\textbf{use(*)}\\
+        & \leqslant \lim\limits_{n\to\infty } \bigl[
+            \lim\limits_{a\to 0^+,b\to\infty}(|\int_{0}^{a } 2g(x)\, \mathrm{d}x|+|\int_{b }^{\infty } 2g(x)\, \mathrm{d}x| )  
+        \bigr] \qquad\!\! \textbf{use}(|f_n-f| \leqslant 2g)
+        &=0
+     \end{align*}
+     The last equal sign holds because  $ \int_{0}^{+\infty} g\, \mathrm{d}x<+\infty   $ implies $ \lim\limits_{a\to 0^+}  \int_{0}^{a } g \, \mathrm{d}x =\lim\limits_{b\to\infty}  \int_{b  }^{\infty} g\, \mathrm{d}x=0    $      
+\end{proof}
+\paragraph{E7}
+Each  $ (x_0,y_0)\in [0,1]\times[0,1] $ has the form :
+\[x_0=\sum\limits_{n=1}^{\infty}2^{-n}a_{2n-1},\,y_0=\sum\limits_{n=1}^{\infty}2^{-n}a_{2n}  \]
+with each  $ a_i\in {0,1} $ 
+
+Let  $ t_0=\sum\limits_{i=1}^{\infty} 3^{-1-i}(2a_i) $ Then we only need to prove  $ f(3^nt)=a_n,\, n\in \mathbb{N}_+ $, which imples 
+that  $ x(t_0)=x_0 $ and  $ y(t_0)=y_0 $.
+
+Actually,  $ 3^nt_0=\sum\limits_{i=1}^{n-1}3^{n-i-1}(2a_i)+\sum\limits_{i=n+1}^{\infty}3^{n-i-1}(a_i)+3^{-1}(2a_i)   $   .
+Notice that   $ \sum\limits_{i=1}^{n-1}3^{n-i-1}(2a_i) $  is even, then  $ f(3^nt_0)=f(\sum\limits_{i=n+1}^{\infty}3^{n-i-1}(a_i)+3^{-1}(2a_i)) $.
+However,   $ \sum\limits_{i=n+1}^{\infty}3^{n-i-1}(a_i)\in (0,\frac{1}{3}) $.
+With  the definition of  $ f $ we know that  \[ f(3^nt_0)=\left\{
+    \begin{aligned}
+        1&{}\quad a_n=1\\
+        0&{}\quad a_n=0
+    \end{aligned}
+\right.=a_n \]  
+\end{document}

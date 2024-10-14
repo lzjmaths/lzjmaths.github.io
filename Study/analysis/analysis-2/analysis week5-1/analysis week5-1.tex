@@ -1,0 +1,40 @@
+\section{Positive linear functionals and Radon measures}
+\setcounter{subsection}{3}
+\subsection{Regularity and Lusin's theorem}
+\setcounter{theorem}{28}
+\begin{corollary}
+    \label{equivalence of measure sets in Radon measure}
+    Let  $ E\subset X $ such that  $ E $ is contained in an open set with finite measure. Then the following are equivalent:
+    \begin{enumerate}
+        \item  $ E\in \mathfrak{M}  $ 
+        \item For every $ \epsilon>0  $ there exists a compact set  $ K\subset X  $ and an open set  $ U\subset X  $ such that  $ K\subset E\subset U $ and  $ \mu(U\backslash K)<\epsilon $ 
+        \item[2'] There exist a  $ \sigma $-compact set  $ A\subset X $ and a  $ G_\delta $  set  $ BA\subset X $ such that  $ A\subset E\subset B $ and $ \mu(B \backslash A)<\epsilon $ 
+    \end{enumerate}
+\end{corollary}
+\subsection{Regularity beyond finite measures}
+\setcounter{theorem}{36}
+\begin{theorem}
+     $ \mu  $ is  $ \sigma $-finite. Then  $ \forall E\subset X  $,  $ E\in \mathfrak{M } $  $ \Leftrightarrow  $  $ \forall   \epsilon,   \exists U \supset E  $ open in  $ X  $,  $ F\subset E  $ closed, such that  $ \mu(U \backslash F)<\epsilon $ 
+\end{theorem}
+\begin{theorem}
+    Let  $ X  $ be second countable LCH.  $ \mu:\mathfrak{B}_X \rightarrow [0,+\infty]$ s.t. $ \mu(K)<+\infty,\forall K  $ compact. Then  $ \mu  $ is a Radon measure. 
+\end{theorem}
+\begin{proof}
+    We need to prove a lemma:
+    \begin{lemma}
+    $ \mu  $ is inner regular on open sets.
+    \end{lemma}
+    The first proof is given by RM theorem.\\
+    The second proof use the Cor \ref{equivalence of measure sets in Radon measure}\\
+    The third proof shows that the regular sets are regular.
+\end{proof}
+\begin{theorem}
+    If  $ f\in C([a,b],\mathbb{R }) $. Then  $ f  $ is Stieltjes integrable.  $ I_p:C([a,b],\mathbb{R })\rightarrow \mathbb{R },I_p(f)=f(a)\rho (a)+\int_{a }^{b }f \mathrm{d}\rho $  
+\end{theorem}
+\begin{lemma}
+    Let  $ \rho:[a,b]\rightarrow \mathbb{R }_{ \geq 0 } $ be increasing. Assume that  $ a \leq c<d \leq b  $. Let  $ f\in C([a,b],[0,1]) $ s.t.  $ f|_{[a,c]}=1, f|_{[d,b]}=0  $. Then  $ \rho(c) \leq I_p(f) \leq\rho(d) $ 
+\end{lemma}
+\begin{theorem}[Riesz Representation Theorem]\label{Riesz Representation Theorem}
+    \index{Riesz Representation Theorem}
+    We have a bijection  $ \rho \mapsto I_\rho $ between increasing right continuous  $ \rho:[a,b]\rightarrow \mathbb{R }_{ \geq 0 } $ and positive linear functionals  $ \Lambda:C([a,b],\mathbb{R})\rightarrow \mathbb{R } $  
+\end{theorem}

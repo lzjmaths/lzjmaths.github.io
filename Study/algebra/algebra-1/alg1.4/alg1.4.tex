@@ -1,0 +1,26 @@
+\section{Determinant}
+\begin{definition}
+    A \textbf{permutation} of  $ \{1,\cdots,n \} $ is a bijective map  $ \sigma:\{1,\cdots,n\}\rightarrow \{1,\cdots, n \} $ denote  $ (\sigma(1),\cdots,\sigma(n) ) $.
+    
+    A \textbf{transposition} is a permutation  $ \tau_{i,j },i\not=j  $ such that  $ \tau_{i,j}(i)=j,\tau_{i,j}(j)=i,\tau_{i,j}=k,\forall k\not=i,j  $ 
+\end{definition}
+\textbf{denote}:  $ S_{n }=\{\text{permutation of} \{1,2,\cdots,n\}\} $  is called \textbf{symmetric group}
+\begin{proposition}
+    Every permutation is a product of transposition.
+\end{proposition}
+\begin{definition}
+     $ f(x_{\sigma(1)},\cdots,f(x_{\sigma(n)}))=(-1)^mf(x_1,\cdots,x_n) $ \\
+      $ (-1)^m  $ is called the \textbf{sign} of  $ \sigma  $, denoted by  $ sign(\sigma) $\\
+      If  $ sign(\sigma )=1 $, then  $ sigma  $ is called an even permutation.\\
+      If  $ sign(\sigma )=-1 $, then  $ \sigma  $ is called an odd permutation.   
+\end{definition}
+We can define the determinant with three properties.
+\begin{proposition}
+     $ R  $ commutative, $ A,B\in M_n(R)   $ $ \Rightarrow \det(A\cdot B)=\det (A)\det(B ) $. 
+\end{proposition}
+\begin{proposition}
+     $ \det A=\det A^t $ 
+\end{proposition}
+\begin{proposition}
+     $ \det A =\sum_{(t_1,t_2,\cdots,t_n )}sign(t_1,\cdots,t_n)a_{1,t_1,\cdots,n,t_n} $ 
+\end{proposition}

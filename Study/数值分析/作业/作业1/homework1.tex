@@ -1,0 +1,161 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{mathrsfs}
+\usepackage[UseMSWordMultipleLineSpacing,MSWordLineSpacingMultiple=1.4]{zhlineskip}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{ctex}
+\usepackage{geometry}
+\geometry{top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm}
+\hypersetup{
+    colorlinks=true, % 设置链接颜色
+    linkcolor=blue, % 设置普通链接颜色
+    citecolor=green, % 设置引用链接颜色
+    urlcolor=red % 设置URL颜色
+}
+\title{数学中的问题介绍}
+\author{lin150117}
+\date{}
+\newtheorem{num}{Pb}
+\begin{document}
+\maketitle
+\newpage
+\begin{num}
+    Noticed that 
+    \begin{align*}
+        ||y-As||_2&=||Es||_2\\
+        & \leq ||E||_2|\cdot|s||_2
+    \end{align*}
+    Then  \[||E||_2 \geq \frac{||y-As||_2}{||s||_2} \]
+    Then we try to compute  $ ||E^*||_2 $.\\
+    \begin{align*}
+        ||s^Ts\cdot E^*||_2^2&=||(y-As)s^T||_2^2\\
+        &=\max\limits_{|x|=1}|x^Ts(y-As)^T(y-As)s^Tx|\\
+        &=|y-As|_2^2\cdot \max\limits_{|x|=1}|x^Tss^Tx|\\
+        &=|y-As|_2^2\cdot\max\limits_{|x|=1}|x^Ts|^2\\
+        &=|y-As|_2^2\cdot|s|_2^2
+    \end{align*} 
+    The final equation is inferred from the Cauchy-Schwarz inequality.\\
+    Thus,
+    \[||E^*||_2 = \frac{||y-As||_2}{||s||_2}\]
+    Noticed that 
+    \[E^*\cdot s=\frac{(y-As)s^Ts}{s^Ts}=y-As\]
+    Therefore,  $ E^* $ is a solution of the question.
+\end{num}
+\begin{num}
+    For  $ |x|=1 $,  $ y=A^{-1}x $.\\
+    Then  $ Ay=x $ with norm 1.\\
+     $ \Rightarrow  $  $ |\sum\limits_{j=1}^na_{ij}y_j| \leq 1 $ $ \forall 1 \leq j \leq n $.\\
+     If  $ |y_i|=\max{|y_1|,\cdots,|y_n|} $, then we have 
+     \[1 \geq \sum\limits_{j=1}^n |a_{ij}y_j| \geq |a_{ii}y_i|-\sum\limits_{j\not=i}|y_i|\cdot |a_{ij}|\]        
+      $ \Rightarrow  $ 
+      \[|y|_\infty=|y_i| \leq \frac{1 }{|a_{ii}|-\sum\limits_{j\not=i}|a_{ij}|}\]
+      Therefore 
+      \[|A^{-1}x|=_\infty|y|_\infty \leq \max\limits_{1 \leq i \leq n}\frac{1 }{|a_{ii}|-\sum\limits_{j\not=i}|a_{ij}|}=(\min\limits_{1 \leq i \leq n}|a_{ii}|-\sum\limits_{j\not=i}|a_{ij}|)^{-1}\]
+      So  
+      \[||A^{-1}||_\infty  \leq (\min\limits_{1 \leq i \leq n}|a_{ii}|-\sum\limits_{j\not=i}|a_{ij}|)^{-1}\] 
+\end{num}
+\begin{num}
+     $ ||L||_2^2=|\rho(L^TL)| $.\\
+      $ ||A||_2^2=|\rho(A^TA)|=|\rho(A^2)|=|\rho(A)|^2=|\rho(LL^T)|=||L^T||_2^2 $.\\
+      Noticed that if  $ L^TL\vec{x}=\lambda \vec{x} $, then  $ LL^T(L\vec{x})=\lambda L\vec{x} $. The converse is also true. Hence, 
+      \[\rho(L^TL)=\rho(LL^T)\]
+      Therefore,  $ ||L||_2^2=||L^T||_2^2=||A||_2^2 $.      
+\end{num}
+\begin{num}
+    Since by the definition, for each step  $ k $, the matrix should be like:
+   \[ \begin{pmatrix}
+        &a_{11}&a_{12}&\cdots&a_{1k}&\cdots&a_{1n}\\
+        & &a_{22}&\cdots&a_{2k}&\cdots &a_{2n}\\
+        & &&\ddots&\vdots&\vdots&\vdots\\
+        & & &&a_{kk}&\cdots &a_{kn}\\
+        & & & &\vdots&\ddots&\vdots\\
+        & & & &a_{nk}&\cdots&a_{nn}\\
+    \end{pmatrix} \]
+    where me will make sure that  $ |a_{kk}=\max\limits_{i \geq k}{\{|a_{ik}|,|a_{ki}|\}} $.\\
+    Since the following steps do not change the  $ k^{th} $ row, so the obtained upper triangular matrix  $ U  $  satisfies the condition:
+    \[u_{ii}=\max\limits_{i \geq k}{|u_{ik}|}\]  
+\end{num}
+\begin{num}
+    Let  $ e_i=(0,0,\cdots ,1,\cdots ,0) $ with 1 in the  $ i^{th} $ term.\\
+    Now  $ Ae_i=a_i $ and  $ ||e_i||_p \leq 1 $.\\
+    So  $ ||A||_p  \geq ||a_i||_p $.\\
+    Let  $ x=\frac{Ae_i}{||a_i||_p} $, then  $ ||x||_p=1 $, $ A^{-1}x=\frac{e_i}{||a_i||_p} $.\\
+     $ \Rightarrow  $  $ ||A^{-1}||_p \geq \frac{1 }{||a_i||_p} $.\\
+     So 
+     \[||A||_p\cdot||A^{-1}||_p \geq \frac{||a_i||_p}{||a_j||_p}\]        
+\end{num}
+\begin{num}
+    For  $ n=1 $, let  $ L=I,D=A $, then  $ A=LDL^T $ satisfies the condition.\\
+    If  $ n-1 $ there exists the representation, the for  $ n $, denote
+    \[
+        A=\begin{pmatrix}
+            A'&b\\
+            b^T&c
+        \end{pmatrix}
+    \] 
+    Let $ A'=L'D'L'^T $, where  $ L' $ lower triangular  matrix and  $ D'  $ diagonal matrix.\\
+    Then let  $ y=(L'D')^{-1}b $ 
+    \[A=\begin{pmatrix}
+        L'&\\
+        y^T&1
+    \end{pmatrix}\cdot
+    \begin{pmatrix}
+        D'&0\\
+        0&c-yD'y^T
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        L'^T&y\\
+        &1
+    \end{pmatrix}
+    \]
+    So  $ A $ can be represented by $ LDL^T $. 
+\end{num}
+\begin{num}
+    The above problem actually gives a possible coomputation method.\\
+    Let  $ L_1=I_1 $, $ D_1=[a_{11}] $.\\
+    We obtain  $ L_i,D_i $ by the equation 
+    \[
+        L_i=\begin{pmatrix}
+            L_{i-1}&\\
+            y_i^T&1
+        \end{pmatrix}
+    \]   
+    \begin{equation*}
+        D_i=\begin{pmatrix}
+            D_{i-1}&0\\0&a_{ii}-y_iD_{i-1}y_i^T
+        \end{pmatrix}
+    \end{equation*}
+
+    where  $  b=(a_{1i},a_{2i},\cdots,a_{ni})^T $, $ y=(L_{i-1}D_{i-1})^{-1}b $  
+\end{num}
+\begin{num}
+    代码附件在压缩包中；
+    
+    
+    以下报告顺序按 1、高斯消元法；2、高斯选主元消元法；3、平方根法进行，分别对应
+    $  Gauss.m,Gauss\_choose.m,Cholesky.m $ 
+    
+    
+    通过时间测试 （sys1.m，sys2.m），第一题、第二题三种方法平均用时时间从小到大为1，2，3。原因应该是1循环计算数最少，而2相比于1多了选主元的循环。3则在解出LU分解的基础上又调用了一遍高斯算法，故时间最长。
+
+    
+    在误差测试中，第一题三者没有明显区别，平方根法输出上略大，但三者相对误差量级均在e-16，可忽略不计；
+
+    
+    而第二题三者相对误差均超过400，第三题偏低。从数据表现上看，前两种方法仅四项在1附近，而第三种方法为6项，说明第三种方法精度比前两者更好。
+
+    
+    误差的精度差距是由于计算顺序决定的，第三种方法多乘法和减法，除法较少，因此解决各项接近的Hilbert矩阵更有优势。
+    
+    数据附件data.docx在压缩包中；
+
+    
+\end{num}
+
+\end{document}

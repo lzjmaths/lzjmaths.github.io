@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}Ring}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}More on rings and ideals}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}product ring and idempotent}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Prime ideals and maximal ideals}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Zorn's lemma}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Fraction}{5}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Localization}{5}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}localization}{6}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Euclidean domains, PIDs, UFDs}{7}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Gauss' lemma}{8}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}primes in $ \mathbb {Z}[i]=\mathbb {Z}[x]/(x^2+1) $}{9}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Algebraic numbers/integers}{10}{subsection.1.11}%
+\contentsline {section}{\numberline {2}Modules}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Introduction}{11}{subsection.2.1}%
+\contentsline {section}{\numberline {3}submodule of a free module}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Finite generated modules/PID}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}presentation}{12}{subsection.3.2}%
+\contentsline {paragraph}{Note.}{13}{section*.3}%
+\contentsline {subsection}{\numberline {3.3}Rational canonical form and Jordan canonical form}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Noetherian moudles}{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}integral elements}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Homological and exact sequence}{15}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Tensor product}{15}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Introduction}{15}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Tensor Product}{15}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Complement on Tensor Product}{16}{subsection.3.10}%
+\contentsline {section}{\numberline {4}Field and Galois Theory}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Field extension}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}algebraic extension}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}algebraic extension and simple algebraic extention}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Complete splitting and algebraic closure}{18}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Separable extension}{18}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}separable extension}{19}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Splitting field, extension of $ K $-homomorphism}{20}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Finite field}{21}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Normal extensions}{21}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Galois extensions}{22}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}polynomials and discriminant}{24}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}Cyclotomic fields}{25}{subsection.4.12}%
+\contentsline {subsection}{\numberline {4.13}Composite field}{26}{subsection.4.13}%
+\contentsline {subsection}{\numberline {4.14}traces and norms}{27}{subsection.4.14}%
+\contentsline {subsection}{\numberline {4.15}Advanced theorem in Galois theory}{28}{subsection.4.15}%
+\contentsline {subsection}{\numberline {4.16}Kummer theory}{28}{subsection.4.16}%
+\contentsline {subsection}{\numberline {4.17}Solvability by radicals}{29}{subsection.4.17}%
+\contentsline {subsection}{\numberline {4.18}Algebraic closure}{29}{subsection.4.18}%

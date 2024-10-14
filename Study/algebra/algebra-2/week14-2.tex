@@ -1,0 +1,71 @@
+\subsection{Normal extensions}
+\begin{definition}
+    A field extension  $ K/F $ is normal if  $ \forall f(x)\in F[x] $ irreducible, having a root in  $ K  $ splits completely in  $ K  $. 
+\end{definition}
+\begin{theorem}[characterization of normal extensions]\index{characterization of moemal extensions}
+     $ K/F $ is finite extension. TFAE
+     \begin{enumerate}[(1)]
+        \item  $ K/F  $ is normal
+        \item  $ K  $ is the splitting field of some  $ f(x)\in F[x] $
+        \item  $ \forall L/K $,  $ \forall K\xrightarrow{\sigma}L $  $ F $-homomorphism,  $ \sigma(K)=K $.     
+     \end{enumerate} 
+\end{theorem}
+\begin{proof}
+     $ (2)\Rightarrow (3) $. WLOG,  $ f(x)  $ is monic.\\
+     Write  $ f(x)=(x-\alpha_1)\cdots(x-\alpha_n) $ in  $ K[x] $ and  $ K=F(\alpha_1,\cdots,\alpha_n) $.\\
+     Take any  $ L/K $  and  $ \sigma :K\rightarrow L $. It suffices to show  $ \sigma(\alpha_i)\in K,\forall\, i $.\\
+     Write  $ f(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0, a_i\in F $.\\
+     Then  $ f(\sigma(\alpha_i))=\sigma(\alpha_i^n+\cdots+a_1\alpha_i+a_0)=\sigma(f(\alpha_i))=0 $.\\
+     SO  $ \sigma(\alpha_i) $ is one of  $ \alpha_1,\cdots,\alpha_n\in K $.\\
+      $ (3)\Rightarrow (1) $. Take any  $ f(x)\in F[x] $ monic and irreducible. Assume  $ f(x) $ has a root  $ \alpha\in K $. Set  $ \alpha_1=\alpha,f_1=f $ and write  $ K=F(\alpha_1,\cdots,\alpha_n) $.  $ f_i(x)\in F[x] $ minimial polynomial of  $ \alpha_i $.\\
+      Let  $ L\supset K  $ be the splitting field of  $ f_1\cdots f_n $.\\
+      Take any  $ \alpha'\in L $ s.t.  $ f(\alpha')=0 $. Suffices to prove  $ \alpha'\in K $.\\
+      For this, we will construct  $ \sigma:K\rightarrow L $  $ F $-homomorphism with  $ \sigma(\alpha)= \alpha'  $.\\
+      By extension lemma, there is a  $ F  $-homomorphism  $ \sigma:K_1=F(\alpha_1)\rightarrow L $  s.t.  $ \sigma(\alpha)= \alpha'  $.\\
+      By extension lemma, there is an extension of  $ \sigma $. So we end the proof.\\
+       $ (1)\Rightarrow (2) $           
+\end{proof}
+\begin{corollary}
+     $ K/M/F  $ field extension.\\
+     If  $ K/M  $,  $ M/F $ normal  $ \Rightarrow K/F $ is normal.  $ K/F  $ normal  $ \Rightarrow $  $ K/M $   is normal, but  $ M/F  $ may not be normal. See the example  $ \mathbb{Q}(\sqrt[3]{2},\omega)/\mathbb{Q}(\sqrt[3]{2})/Q $ 
+\end{corollary}
+\subsection{Galois extensions}
+For  $ K/F  $ field extension,  $ \Aut(K/F):=\{\sigma:K\rightarrow K: \text{$ F $-isomorphism}\} $
+\begin{lemma}\label{lemma for Galois extension}
+     $ K/F  $ is finite,  $ |\Aut(K/F)| \leq [K:F] $. If equality holds,  $ K/F  $ is separable.
+\end{lemma}
+\begin{proof}
+    Since we can define a chain of extension  $ \sigma_i:K_i=K_{i-1}(\alpha_i)\rightarrow K $. And by extension lemma 
+    \[\sharp \{\text{extension of }\sigma_i:K_i\rightarrow K to K_{i+1}\rightarrow K\} \leq [K_{i+1}:K_i]\] 
+\end{proof}
+\begin{definition}
+     $ K/F $ is \textbf{Galois}\index{Galois} if it is separable and normal. 
+\end{definition}
+\begin{note}
+    Every algebraic extension  $ K/F  $ in char 0 is separable. In this case Galois=normal.
+\end{note}
+\begin{theorem}[characterization of finite Galois extension]\index{characterization of finite Galois extension}
+    $ K/F $ is finite. 
+   \begin{enumerate}[(1)]
+        \item  $ K/F  $ Galois.
+        \item  $ K/F $ is the splitting field of a separable polynomial in  $ F[x] $.
+        \item  $ |\Aut(K/F)|=[K:F] $   
+   \end{enumerate}
+   in this case  $ \Gal(K/F):=\Aut(K/F) $ 
+\end{theorem}
+\begin{proof}
+     $ (1)\Leftrightarrow (2) $ combine previous results.\\
+      $ (1)\Rightarrow (3) $. Since  $ K/F  $ separable,  $ K=F(\alpha)=\frac{F[x]}{(f(x))} $ by primitive element theorem. \\
+     $ K/F  $ normal  $ \Rightarrow  $  $ f(x)=(x-\alpha_1)\cdots(x-\alpha_n) $ in  $ K[x] $ with  $ \alpha_i $.\\
+     By extension lemma  $ |\Aut(K/F)|=\{\text{roots of  $ f(x) \in K $ }\}=n=[K:F] $.\\
+      $ (3)\Rightarrow (1) $, by the lemma  \ref{lemma for Galois extension}  $ K/F  $ is separable.\\
+      By primitive element theorem,  $ K=F(\alpha)=F[x] /(f(x))$.\\
+      Let  $ \Aut(K/F)=\{\sigma_1,\cdots,\sigma_n\} $. As we know,  $ \alpha=\sigma_1(\alpha),\cdots,\sigma_n(\alpha) $ are roots of  $ f(x)  $ in  $ K  $.\\
+      Since  $ K=F(\alpha) $, so   $ \sigma_i(\alpha) $ are distinct. Hence,   $ f(x)=(x-\sigma_1(\alpha))\cdots(x-\sigma_n(\alpha)) $.\\
+      So  $ K/F  $ is the splitting field of  $ f\in F[x] $   
+\end{proof}
+\begin{definition}
+      $ H <\Aut(K/F)$ subgroup. Define 
+      \[K^H:=\{x\in K:\forall \sigma\in H, \sigma(x)=x\}\]
+      called \textbf{fixed field}\index{fixed field} by  $ H  $ (on intermediate field of  $ K/F $)
+\end{definition}

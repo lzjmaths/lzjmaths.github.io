@@ -1,0 +1,68 @@
+\subsection{Fraction}
+\begin{definition}
+    Let  $ R  $ be an integral domain.
+    \[Frac\,R:=\{(r,s)\in R^2:s\neq 0\}/\sim\]\index{$ Frac\, R $}
+    where  $ (a,s)\sim (b,t)  $ iff  $ at=bs $ \\
+    Define sum and product by
+    \[a/s+b/t=\frac{at+bs }{st },a/s\cdot b/t=ab/st\]
+\end{definition}
+$ R \rightarrow FracR:a\mapsto a/1 $ ring homomorphism.
+\begin{theorem}
+    \,
+    \begin{enumerate}
+        \item  $ Frac\,R $ is a field, and  $ \varphi:R\rightarrow Frac\, R  $ is injective.
+        \item (universality) $ \forall K  $ field and  $ \forall \psi:R\rightarrow K $  injective ring homomorphism,  $ \exists !\, \widehat{\psi}:Frac\,R\rightarrow L   $ s.t.  $ \psi=\widehat{\psi}\circ \varphi $  
+    \end{enumerate}
+\end{theorem}
+\subsection{Localization}
+From now on,  $ R  $ is any commutative ring.
+\begin{definition}
+    A \textbf{multiplicative}\index{multiplicative set} set of  $ R  $ is a subset  $ S\subset R  $ s.t.  $ (1)  1\in S $   $ (2)s,t\in S \Rightarrow st\in S $ .
+\end{definition}
+\begin{definition}
+     $ S^{-1}R:=\{(a,s):a\in R,s\in S\}/\sim $\\
+     where  $ (a,s)\sim(a',s') $ iff  $ \exists t\in S, tas'=ta's $.\\
+     Call  $ S^{-1}R  $ the \textbf{Localization}\index{localization} of  $ R  $ by  $ S $.  \index{$ S^{-1}R $}
+\end{definition}
+\begin{lemma}
+    \,
+    \begin{enumerate}
+        \item  $ \sim  $ is an equivalence relation.
+        \item  $ a/s+b/t=at+bs/st,a/s\cdot b/t=ab/st $ are well defined, and make it into a ring.
+        \item  $ \varphi :R\rightarrow S^{-1}R:a\mapsto a/1 $ is a ring homomorphism with  $ Ker\,\varphi=\{b\in R:\exists s\in S,sb=0\} $ 
+    \end{enumerate}
+\end{lemma}
+\begin{theorem}[universality]
+     $ \forall R' $ and  $ \psi:R\rightarrow R'  $ ring homomorphism s.t.  $ \psi(S)\subset R'^{\times } $. Then  $ \exists ! \,\widehat{\psi}:S^{-1}R\rightarrow R'  $ s.t.  $ \psi=\widehat{\psi}\circ \varphi $.   
+\end{theorem}
+\begin{example}
+    $ R  $ is an integral domain. Then 
+\[Frac\, R=S^{-1}R\]
+where  $ S=R\backslash \{0\} $ 
+\end{example}
+\begin{example}
+     $ R=\mathbb{Z},S=\{2^n:n \geq 0\}\Rightarrow S^{-1}R=\mathbb{Z}[2^{-1}] $\\
+      $ R=\mathbb{Z}/6,S=\{\overline{2}^n:n \geq 0\}\Rightarrow S^{-1}R=\mathbb{F}_3 $\\
+      In general,  $ f\in R \Rightarrow S=\{f^n:n \geq 0\}, S^{-1}R $ is denoted by  $ R_f=R[x]/(fx-1) $   (adjoining  $ f^{-1} $) 
+\end{example}
+\begin{example}
+     $ R=\mathbb{Z},S=\{odd\}\subset \mathbb{Z}\Rightarrow S^{-1}R=\{a/s:a,s\in \mathbb{Z},2\not |s\} $ \\
+     In general, for  $ P\in Spec\, R $ (prime ideal), we have  $ S=R-P  $ is multiplicative. \\
+      $ \Rightarrow S^{-1}R $ is denoted by  $ R_P $, called \textbf{localization} of  $ R  $ at  $ P  $. 
+\end{example}
+Define  $ S^{-1}T=\{a/s\in S^{-1}R:a\in I\}=\varphi(I)\cdot S^{-1}R $
+\begin{proposition}
+    \,
+    \begin{enumerate}
+        \item  $ S^{-1}I=S^{-1}R $ if and only if  $ S\cap I\not=\emptyset $ 
+        \item  $ S^{-1}/S^{-1}I\simeq \overline{S}^{-1}(R/I) $ where  $ \overline{S} $ image of  $ S $ under  $ R\rightarrow R/I $.
+        \item If  $ P\in Spec\, R $ with  $ S\cap P=\emptyset $, then  $ S^{-1}P  $ is prime in  $ S^{-1}R$,  and $ \varphi^{-1}(S^{-1}P)=P $.      
+    \end{enumerate}
+\end{proposition} 
+\begin{theorem}
+     $ Spec\, S^{-1}R\rightarrow Spec R $ induces a bijection
+     \[Spec\, S^{-1}R\rightarrow \{P\in Spec R:P\cap S=\emptyset\}, q\mapsto \varphi^{-1}(q)\] 
+\end{theorem}
+\begin{proof}
+    Only need to prove  $ S^{-1}(\varphi^{-1}(q))=q $. 
+\end{proof}

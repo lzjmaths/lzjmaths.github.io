@@ -1,0 +1,43 @@
+\section{submodule of a free module}
+\begin{theorem}
+     $ R  $ is a PID.
+     \begin{enumerate}
+        \item Every submodule of a free  $ R $-module is free.
+        \item If  $ V  $ is a free  $ R  $-module of finite rank  $ n  $ and if  $ W\subset V  $ submodule. Then  $ W  $ is free of rank  $ m  \leq  n $,  $ \exists\,v_1,v_2,\cdots,v_n\in V $  $ R  $-basis and  $ b_1,\cdots,b_n\in R  $  $ \not=0 $ s.t.
+        \begin{enumerate}
+            \item  $ \omega_i=b_iv_i $ 
+            \item  $ b_1|b_2\cdots|b_m $ 
+        \end{enumerate} 
+        Moreover,  $ \{(b_1)\supset\cdots\supset(b_m)\} $ is unique. 
+     \end{enumerate}
+\end{theorem}
+\begin{observe}
+    \[V/W\cong R/(b_1)\oplus \cdots \oplus R/(b_m)\oplus R^{\oplus n-m}\]
+
+\end{observe}
+\subsection{Finite generated modules/PID}
+\begin{theorem}
+     $ R  $ is a PID.  $ V  $ is a finitely generated  $ R $-module.\\
+     Then 
+     \begin{enumerate}[(a)]
+        \item  $ \exists \,b_1\cdots b_m\in R $,  $ b_1|\cdots|b_m $ s.t.  $ \exists $  $ n $ s.t.
+        \[V\cong R/(b_1)\oplus \cdots \oplus R/(b_m)\oplus R^{\oplus n-m}\]  
+        \item  $ \exists\, p_1,\cdots,p_m\in R $ irreducibles  $ (p_i)\not=(p_j),\,i\not=j $.  $ 1 \leq e_{i,1} \leq e_{i,l_i} $ and  $ \exists\ n \geq 0 $
+        \[V\cong R/(p_1)^{e_{1,1}}\oplus \cdots \oplus R/(p_m)^{e_{m,l_m}}\oplus R^{\oplus n}\] 
+     \end{enumerate}
+\end{theorem}
+\begin{corollary}
+    For  $ A\in M_{m,n}(R) $  $ m\times n $ matrix with entries in  $ R  $ PID.  $ \exists \, Q\in \mathrm{GL}_m(R),P\in \mathrm{GL}_n(R) $ s.t.
+    \begin{equation*}
+        Q^{-1}AP=\begin{pmatrix}
+            b_1&0&\cdots&0&0&\cdots&0\\
+            0&b_2&\cdots&0&0&\cdots&0\\
+            \vdots&\vdots&\ddots&\vdots&\vdots&\ddots&\vdots\\
+            0&0&\cdots&b_l&0&\cdots&0\\
+            0&0&\cdots&0&0&\cdots&0\\
+            \vdots&\vdots&\ddots&\vdots&\vdots&\ddots&\vdots\\
+            0&0&\cdots&0&0&\cdots&0
+        \end{pmatrix}
+    \end{equation*}
+    where  $ b_i\not=0,b_1|b_2|cdots|b_l $ 
+\end{corollary}

@@ -1,0 +1,55 @@
+\subsection{Approximation in  $ L^p $ spaces}
+\begin{theorem}
+    Let  $ X  $ be LCH. Let  $ \mu  $ be (the completion of) a Radon measure on   $ X  $   $ 1 \leq p  < +\infty $ Then  $ C_c(X)  $ is dense in  $ L^p(X,\mu) $  
+\end{theorem}
+\begin{proof}[Hint]
+    First we prove  $ ||f||_{l^\infty}<+\infty $, second we approximate  $ f  $ by  $ f\chi_{E_n} $  
+\end{proof}
+\begin{corollary}
+    Let  $ e_n: x\mapsto e^{inx} $ in  $ C(S^1) $. If  $ 1 \leq p<+\infty $, then  $ e_n  $ spans a dense subspace of  $ L^p(S^1,\frac{m}{2\pi}) $ where  $ m  $ is the Lebesgue measure.  
+\end{corollary}
+\begin{theorem}
+    Let  $ X  $ be second countable LCH.  $ \mu  $ is (the completion of ) a Radon measure on  $ X  $. Let  $ 1 \leq p<+\infty $. Then  $ L^p(X,\mu ) $ is seperable. 
+\end{theorem}
+\begin{proof}[Hint]
+    First for  $ X  $ compact. We have proved that  $ C(X)  $ is  $ l^\infty  $-separable. Easy to check that it is true for  $ L^\infty $.\\
+    For arbitary  $ X  $. Let  $ K_1\subset K_2\subset\cdots K_n\subset\cdots\subset X $,  $ \bigcup\limits_n K_n=X $. And  $ \lim\limits_n f\chi_{K_n}=f $. It suffices to prove that  $ \mu|_{K_n} $ is Radno measure.
+\end{proof}
+\begin{theorem}
+    Let  $ (X,\mu ) $ be measurable,  $ 1 \leq p \leq+\infty $. Then  $ L^p(X,\mu)\cap S(X,\mathbb{C}) $ is dense in  $ L^p(X\mu) $.   
+\end{theorem}
+\begin{proof}[Note]
+    Elements in  $ L^p\cap S $ are exactly: 
+    \begin{equation*}
+        \left\{
+            \begin{aligned}
+                \,{}&S(X,\mathbb{C}), {}&p=+\infty\\
+                \,{}&\sum a_n\chi_{E_n},a_n\in \mathbb{C},\mu(E_n)<\infty,{}&p<+\infty
+            \end{aligned}
+        \right.
+    \end{equation*}
+    And we only need to check that for  $ f \geq 0 $. 
+\end{proof}
+\begin{proposition}
+     $ L^\infty(X,\mu) $ is complete. 
+\end{proposition}
+In inner product space, we prove a similar theorem for completeness
+\begin{theorem}
+    If  $ V  $ is NVS, then  $ V  $ is complete  $ \Leftrightarrow  $ if  $ (v_n) $ in  $ V  $ s.t.  $ \sum ||v_n||<+\infty $, then  $ \sum v_n  $ converges. 
+\end{theorem}
+\subsection{The Riesz-Fischer Theorem}
+\begin{theorem}[Riesz-Fischer Theorem]\index{Riesz-Fischer Theorem}
+    If  $ 1 \leq  p<+\infty $. Then  $ L^p(X,\mu) $ is complete(Banach) space.\\
+    Moreover, if  $ (f_n)  $ in  $ L^p(X,\mu) $,  $ f\in L^p(X,\mu) $ and  $ \lim\limits_n ||f-f_n||_{L^p}=0 $, then  $ (f_n ) $ has a subsequence converging a.e. to f.   
+\end{theorem}
+\begin{corollary}[Riesz-Fischer]
+    We have a unitary  $ L^2([-\pi,\pi],\frac{m}{2\pi})\rightarrow l^2(\mathbb{Z}), f\mapsto \hat{f}  $. 
+\end{corollary}
+\subsection{Introduction to dualities in  $ L^p $ spaces}
+We now assume  $ \frac{1}{p}+\frac{1}{q}=1 $,  $ 1 \leq p,q \leq +\infty $.  $ (X,\mu) $ measurable space.
+\begin{proposition}
+    Assume  $ \mu  $ is  $ \sigma  $-finte if  $ p=+\infty,q=1 $. Then  $ \exists  $ linear isometry  $ \Psi:L^p(X,\mu)\rightarrow L^q(X,\mu)^* $ s.t.  $ \forall F\in L^p,g\in L^q $,  \[\left<\Psi(f),g\right>=\int_X fg \mathrm{d}\mu \]  
+\end{proposition}  
+\begin{proposition}
+     $ \left|\left<\Psi(f),g\right>\right| \leq ||f||_p\cdot||g||_q $  
+\end{proposition}

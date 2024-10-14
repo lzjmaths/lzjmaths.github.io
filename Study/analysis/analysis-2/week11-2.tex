@@ -1,0 +1,68 @@
+\begin{theorem}
+    Let  $ F:M\rightarrow N  $ be  $ C^\infty $. Then  $ \forall p\in M  $, let  $ q=F(p) $. Then  $ \exists  $ unique linear map  $ \mathrm{d}F|_p:T_pM\rightarrow T_q N $,  $ \mathrm{d}F|_p\cdot \gamma'(0)=(F\circ  \gamma)'(p) $   for  $ \gamma:(-\epsilon,\epsilon)\rightarrow M $ smooth,  $ \gamma(0)=p $.\\
+    Moreover, if  $ (U,\varphi^1,\cdots,\varphi^m) $ and  $ (V,\psi^1,\cdots,\psi^n) $ are charts of  $ M,N $ containing  $ p,q $, then 
+    \[\mathrm{d}F|_p\cdot(\frac{\partial}{\partial\varphi^1},\cdots,\frac{\partial}{\partial\varphi^m})
+    _p=(\frac{\partial}{\partial\psi^1},\cdots,\frac{\partial}{\partial\psi^1})_q\cdot \Jac(\psi\cdot\varphi^{-1})|_{\varphi(p)}\]      
+\end{theorem}
+\begin{remark}
+    It's hard to prove the existence of  $ \mathrm{d}F|_p $ but the chain rule.
+\end{remark}
+\begin{proposition}[Chain rule]
+    \[\mathrm{d}(G\circ F)_p=\mathrm{d}G|_{F(p)}\cdot \mathrm{d}F|_p\]
+\end{proposition}
+\begin{definition}
+     $ X :M\rightarrow TM $ is called a \textbf{smooth vector field}\index{smooth vector field} if TFEC true:
+     \begin{enumerate}
+        \item  $ \forall  $ chart  $ (U,\varphi^1,\cdots,\varphi^n) $ if  $ X|_U=\sum\limits_{i=1}^nX^i\frac{\partial }{\partial \varphi^i} $,  $ X^i:U\rightarrow \mathbb{R} $ smooth.
+        \item  $ \exists  $ atlas  $ \mathcal{U} $ \st  $ \forall (U,\varphi)\in \mathcal{U} $,   $ X^i  $ is smooth.  
+     \end{enumerate}
+\end{definition}
+\begin{definition}
+    The \textbf{cotangent space}\index{cotangent space} is 
+    \[T^*M=\bigsqcup\limits_{p\in M}T_p^*M\]
+    where  $ T_p^*M  $ is the (real) dual space of  $ T_pM $.\\
+     $ \omega :M\rightarrow T^*M $ is called a \textbf{1-form}\index{1-form} if  $ \forall p\in M, \omega|_p\in T_p^*M $   
+\end{definition}
+\begin{definition}
+    \textbf{1-form}\index{1-form} $ \omega :M\rightarrow T^*M $ is called smooth if  $ \forall  $ open  $ U\subset M $,  $ \forall  $ smooth  $ X:U\rightarrow TM $,  $  \left< \omega,X \right>:p\in U\mapsto  \left< \omega|_p,X|p \right>   $ is smooth. 
+\end{definition}
+\begin{definition}
+     $ f\in C^\infty(M,\mathbb{R}) $,  $ \forall p\in M $,
+     \[\mathrm{d}f|_p:T_pM\rightarrow T_{f(p)}\mathbb{R}\cong \mathbb{R},\mathrm{d}f|_p\in T_p^*M\]
+      $ \mathrm{d}f :M\rightarrow T^*M $ is 1-form.   
+\end{definition}
+\begin{proposition}
+    Let  $ f\in C^\infty(M,\mathbb{R}) $,  $ \mathrm{d}f $ is smooth 1-form. Moreover, if  $ (U,\varphi^1,\cdots,\varphi^n) $  is chart
+    \[\frac{\partial}{\partial\varphi^j}f|_p=\partial_j(f\circ\varphi^{-1})|_{\varphi(p)},p\in M\]
+    \[\partial_{\varphi^j}f=(\partial_j(f\circ\varphi^{-1}))\circ \varphi\]
+\end{proposition}
+\begin{corollary}
+     $ f\in C^\infty(M,\mathbb{R}) $,  $ (U,\varphi^1,\cdots,\varphi^n) $ chart, then 
+     \[\mathrm{d}f=\sum\limits_{i=1}^n\frac{\partial f}{\partial\varphi^j}\mathrm{d}\varphi^j\]  
+\end{corollary}
+\begin{corollary}
+     $ f,g\in C^{\infty}(M,\mathbb{R}) $, then  $ \mathrm{d}(fg)=\mathrm{d}f\cdot g+\mathrm{d}g\cdot f $  
+\end{corollary}
+\begin{definition}
+    If  $ F:M\rightarrow N  $ smooth,  $ F^*|_p:T^*_{F(p)}N\rightarrow T_p^*M $ is defined by transpose of  $ \mathrm{d}F|_p :T_pM\rightarrow T_{F(p)}N$.\\
+     $ F^*  $ is called \textbf{cotangent map}\index{cotangent map}\\
+     $ F^*\cdot\omega' $ called \textbf{pullback }of  $ \omega' $ by  $ F  $.\\
+     If  $ \omega:N\rightarrow T^*N $ is a 1-form, its \textbf{pullback} is  $ F^*\omega :M\rightarrow T^*M,p\mapsto F^*(\omega|_{F(p)})\in T^*_pM $.  
+\end{definition}
+\begin{proposition}
+    Let  $ \omega:N\rightarrow T^*N $ be smooth 1-form, then  $ F^*\omega $ is smooth. Moreover, if  $ f\in C^\infty(N,\mathbb{R}) $,  $ F^*\mathrm{d}f=\mathrm{d}(f\circ F) $    
+\end{proposition}
+\begin{definition}
+     $ F:M\rightarrow N $ is called a (smooth) \textbf{embedding} if  $ F(M) $ is a  $ C^\infty $-submanifold of  $ N  $, and  $ F  $ restricts to a diffeomorphism on  $ M  $.
+\end{definition}
+\begin{proposition}
+    Let  $ F:M\rightarrow N$  be smooth embedding, then   $ \forall p\in M $,  $ \mathrm{d}F|_p:T_pM\rightarrow T_{F(p)}N $  is injective.   
+\end{proposition}
+\begin{theorem}
+    Let  $ F:M\rightarrow N $ be smooth, let  $ q\in N $.  Assume  $ \forall p\in F^{-1}(q) $,  $ \mathrm{d}F|_p:T_pM\rightarrow T_qN $ is surjective($ F  $ is a submersion at  $ q $) Then  $ F^{-1}(q)  $ is a smooth submanifold of  $ M  $.\\
+    Moreover,  $ T_p(F^{-1}(q)=\ker(\mathrm{d}F|_p) $\\
+    In particular,  $ \dim_p F^{-1}(q)=\dim_pM-\dim_qN $  
+\end{theorem}
+\begin{theorem}
+    Let  $ F:M\rightarrow N  $ be smooth. Let  $ p\in M $,  $ q=F(p) $,  $ \mathrm{d}F|_p:T_pM\rightarrow T_qN $ linear isomorphism. Then  $ \exists U\in Nbh(p) $,  $ V\in Nbh(q) $ \st  $ F  $ restructs to a diffeomorphism  $ F:U\rightarrow V $   
+\end{theorem}

@@ -1,0 +1,77 @@
+\begin{theorem}
+    An analytic function in a region(\ie open and connected) $ \Omega $ whose derivative is 0 must reduce to a constant. The same hold if the real part, the imaginary part, the modulus, or the argument is constant.
+\end{theorem}
+\subsection{Conformal Mappings}
+Suppose  $ f:\Omega\rightarrow \mathbb{C}$ is analytic in  $ \Omega $.  $ r_1=z_1(t),r_2=z_2(t) $, $ \alpha \leq t \leq \beta $.
+
+ $ z_0=z_1(t_0)=z_2(t_0') ,z_1'(t_0)\not=0,z_2'(\hat{t_0})\not=0,\alpha<t_0,\hat{t_0}<\beta$.
+ 
+  $ f'(z_0)\not=0, w_1(t)=f(z_1(t_0)),w_2=f(z_2(\hat(t_0))) $
+  
+   $ \Gamma_1=\{w_1(t)|\alpha \leq t \leq \beta\} $,  $ \Gamma_2=\{w_2(t)|\alpha \leq t \leq \beta\}$        
+   
+Then 
+\begin{align*}
+    w_1'(t)&=f'(z_1(t))z_1'(t)\\
+    w_2'(t)&=f'(z_2(\hat{t}))z_2'(\hat{t})
+\end{align*}
+ $ \Rightarrow  $
+ \begin{align*}
+    w'_1(t_0)\not=0&,w_2'(t_0)\not=0\\
+    \arg w_1'(t_0)&=\arg f'(z_1(t_0))z_1'(t_0)\\
+    \arg w_2'(t_0)&=\arg f'(z_2(\hat{t_0}))z_2'(\hat{t_0})
+ \end{align*} 
+So the "angle"  $ \arg w_1'(t_0)-\arg w_2'(\hat{t_0}=\arg z_1(t_0)-\arg z_2(\hat{t_0}) $ remains the same. \\
+Now we give the definition.
+\begin{definition}
+     $ w=f(z) $ is said to be \name{conformal} in  $ \Omega $ if  $ f  $ is analytic in  $ \Omega  $ and  $ f'(z)\not=0 $ for  $ \forall z\in \Omega$.    
+\end{definition}
+Easy to prove that linear change of scale at  $ z_0 $  is independent of the direction.\\
+\ie  $ |f'(z_0)|=\lim\limits_{z\to z_0}\frac{\delta \sigma}{\delta s} $ 
+\subsection{Length and Area}
+The \name{length} of a differentiable arc  $ \gamma $ with the equation  $ z(t)=x(t)+iy(t) $, $ a \leq t \leq b $
+\[L(\gamma)=\int_{a }^{b }\sqrt{(x'(t))^2+(y'(t))^2}\mathrm{d}t=\int_{a }^{b }|z'(t)|\mathrm{d}t\]   
+For  $ \Gamma=f(\gamma) $ where  $ f  $ conformal mapping.\\
+Then 
+\[L(\Gamma)=\int_{a}^{b}|f'(z(t))|\cdot|z'(t)|\mathrm{d}t\]
+The \name{area} of  $ E\subset \mathbb{R} $ is  $ A(E)=\int \int_{E}\mathrm{d}x\mathrm{d}y $\\
+Then by the differentiable functional transformation, the area $ \hat{E}=f(E) $ is 
+\[A(\hat{E})=\int \int_E|u_xv_y-u_yv_x|\mathrm{d}x\mathrm{d}y\]  
+If  $ f  $ is the conformal mapping of an open set containing  $ E  $, then by Caucht-Riemann equation
+\[A(\hat{E})=\int\int_E|f'(z)|^2\mathrm{d}x\mathrm{d}y\]
+\section{M{\"o}bius Transformation}
+Recall that a \name{M{\"o}bius transformation} is a function of the form
+\[w=s(z)=\frac{az+b}{cz+d},\quad ad-bc\not=0\]
+Then it has an inverse  $ z=S^{-1}(w)=\dfrac{dw-b}{-cw+a} $.\\
+We may define  $ S(\infty)=\lim\limits_{z\to \infty}S(z)=\frac{a }{c} $, $ S(\frac{-d }{c})=\infty $ \\
+With these definition,  $ S:\hat{\mathbb{C}}\rightarrow\hat{\mathbb{C}} $ is a topological mapping. Here one may use the chordal metric to define the topology.\\
+\[S'(z)=\frac{ad-bc}{(cz+d)^2}\]
+Then  $ S  $ is confornal in  $ \hat{\mathbb{C}}-\{-\frac{d }{c},\infty\} $.\\
+ $ w=z+\alpha  $ is called a \name{parallel translation}.
+ 
+ $ w=kz  $ with  $ |k|=1 $ is a \name{rotation}.
+ 
+  $ w=kz $ with  $ k>0  $ is a \name{homothetic transformation}.
+  
+   $ x=\frac{1 }{z }  $ is called an \name{inversion}.
+\begin{proposition}
+    Every M{\"o}bius transformation is a composition of the above four operations.
+\end{proposition}    
+\subsection{Cross ratio}
+For three distinct points  $ z_2,z_3,z_4\in\hat{\mathbb{C}} $,we can find a M{\"o}bius transformation  $ S $ such that  $ S(z_2)=0,S(z_3)=1,S(z_4)=\infty $.
+\begin{lemma}
+    The M{\"o}bius transformation satisfying the above conditions is unique.
+\end{lemma}
+The \name{cross ratio} $ (z_1,z_2,z_3,z_4) $ is the image  $ z_1 $ under the M{\"o}bius transformation which maps  $ z_2  $ to 1, $ z_3  $ to 0 and $ z_4  $ to  $ \infty $.
+\begin{theorem}
+    If  $ z_1,z_2,z_3,z_4\in \hat{\mathbb{C}} $  are distinct, and  $ T  $ is any M{\"o}bius transformation, then $ (Tz_1,Tz_2,Tz_3,Tz_4)=(z_1,z_2,z_3,z_4) $. 
+\end{theorem} 
+\begin{lemma}
+    Let  $ T  $ be a M{\"o}bius transformation,  $ T(\mathbb{R}) $ is either a circle or a straight line.
+\end{lemma}  
+\begin{theorem}
+    The cross ratio  $ (z_1,z_2,z_3,z_4) $ is real iff the four points lie on a circle or a straight line.
+\end{theorem}
+\begin{remark}
+    One may prove the theorem by elementary geometry
+\end{remark}

@@ -1,0 +1,287 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{ctex}
+\title{Analysis Summary}
+\author{lin150117 }
+\date{}
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{example}{example}
+\newtheorem{remark}{Remark}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{exercise}[proposition]{Exercise}
+\newtheorem{corollary}{Corollary}[proposition]
+\begin{document}
+\setlength{\parindent}{0pt}
+\setcounter{section}{4}
+In this section we compute the ordinary cohomology and the compactly supported cohomology of  $ \mathbb{R}^n $.\\
+\subsection{The Poincar\'{e} Lemma for de Rham Cohomology}
+Let  $ \pi:\mathbb{R }^n\times \mathbb{R}\rightarrow\mathbb{R }^n  $ be the projection on the first factor and  $ s:\mathbb{R }^n\rightarrow\mathbb{R }^n\times \mathbb{R},x\mapsto (x,0) $ be the zero section.\\
+Trivially,  $ s^*\circ \pi^*=1 $. We now to prove  $ \pi^*\circ s^* $ is the identity in cohomology $ H^*(\mathbb{R}^n\times \mathbb{R}) $.
+It is enough to find a map  $ K  $ on  $ \Omega^*(\mathbb{R}^n\times \mathbb{R} ) $ such that 
+\[1-\pi^*\circ s^*=\pm (d\circ K\pm  K\circ d)\]
+Easy to find that  $ d K\pm  K d $ maps closed forms to exact forms and therefore induces zero in cohomology.
+Such a K is called a \underline{homotopy operator}.\; if it exists, we say that $ \pi^*\circ s^* $ is \underline{chain homotopic} to the identity.\\
+Note that the homotopy operator  $ K  $ decreases the degree by  $ 1 $.\\
+We will use  $ \mathrm{d}f $ as we define before ( $ \sum\limits_{i=1}^{n}\frac{\partial f}{\partial x_i}\mathrm{d} x_i  $ ) and  $ \int g $ for  $ \int g(x,t) \, \mathrm{d}t   $.\\
+Every form on  $ \mathbb{R}^n\times \mathbb{R}  $ is uniquely a linear combination of the folowing two types of forms:
+\begin{align*}
+    (1)\,&(\pi^*\phi)f(x,t),\\
+    (2)\,&(\pi^*\phi)f(x,t)\mathrm{d}t
+\end{align*}
+where  $ \phi $ is a form on the base  $ \mathbb{R }^n $.\\
+We define  $ K:\Omega^q(\mathbb{R}^n\times \mathbb{R} )\rightarrow\Omega^{q-1}(\mathbb{R}^n\times \mathbb{R} ) $ by
+\begin{align*}
+    (1)\,&(\pi^*\phi)f(x,t)\mapsto0,\\
+    (2)\,&(\pi^*\phi)f(x,t)\mathrm{d} t\mapsto(\pi^*\phi)\int_{0}^{t}f.
+\end{align*}
+Let's check   $ K  $ is indeed a homotopy operator.\\
+
+On the forms of type (1):
+\begin{align*}
+    \omega&=(\pi^*\phi)\cdot f(x,t),\qquad \deg \omega =q\\
+    (1-\pi^*\circ s^*)\omega&=(\pi^*\phi)\cdot f(x,t)-\pi^*\phi\cdot f(x,0),\\
+    (dK-Kd)\omega&=-Kd\omega=-K\left((d\pi^*\phi)f+(-1)^q\pi^*\phi(\mathrm{d }f+\frac{\partial f}{\partial t}\mathrm{d }t)\right)\\
+    &=(-1)^{q-1}\pi^*\phi\int_{0}^{t }\frac{\partial f}{\partial t}=(-1)^{q-1}\pi^*\phi(f(x,t)- f(x,0))
+\end{align*}
+Thus,
+\[(1-\pi^*\circ s^*)\omega=(-1)^{q-1}(dK-Kd)\omega\]
+On forms of type (2),
+\begin{align*}
+    \omega&=(\pi^*\phi)f(x,t)dt,\qquad \deg \omega =q\\
+    \mathrm{d}\omega&=(\pi^*\mathrm{d}\phi)fdt+(-1)^{q-1}(\pi^*\phi)\mathrm{d}f\mathrm{d}t.\\
+    (1-\pi^*s^*)\omega&=\omega\text{ because }s^*(\mathrm{d}t)=0\\
+    K\mathrm{d}\omega&=(\pi^*\mathrm{d }\phi)\int_{0}^{t}f+(-1)^{q-1}(\pi^*\phi)\int_{0}^{t }\mathrm{d}f\\
+    \mathrm{d}K\omega&=(\pi^*\mathrm{d }\phi)\int_{0}^{t}f+(-1)^{q-1}(\pi^*\phi)\left[\mathrm{d}\int_{0}^{t }f+f\mathrm{d}t\right].
+\end{align*}
+Thus
+\[(1-\pi^*\circ s^*)\omega=(-1)^{q-1}(dK-Kd)\omega\]
+In this case,
+\[1-\pi^*\circ s^*=(-1)^{q-1}(\mathrm{d}K-K\mathrm{d})\qquad \text{on}\quad \Omega^q(\mathbb{R}^n\times\mathbb{R})\]
+This proves
+\begin{proposition}\label{prop1}
+    The maps $ H^*(\mathbb{R}^n\times\mathbb{R})\leftrightarrows H^*(\mathbb{R }^n) $ are isomorphisms. 
+\end{proposition}
+\begin{corollary}[Poincar\'{a} Lemma]
+    \[
+        H^*(\mathbb{R}^n)=H^*(point)=\left\{
+            \begin{aligned}
+                \mathbb{R}&\quad \text{in dimension  $ 0 $ }\\
+                0&\quad \text{elsewhere}
+            \end{aligned}
+        \right.
+    \]
+\end{corollary}
+Similarly, we can show that $ H^*(\mathbb{R}^n\times\mathbb{R})\simeq  H^*(\mathbb{R }^n) $ is an isomorphism via  $ \pi^*  $ and  $ s^* $ defined before.
+\begin{corollary}(Homotopy Axiom for de Rham cohomology)
+    Homotopic maps induce the same map in cohomology.
+\end{corollary}
+\begin{proof}
+    Let  $ f=F\circ s_1,g=F\circ s_0 $, where  $ s_0 $ and  $ s_1 :M\rightarrow M\times \mathbb{R}$ are the 0-section and 1-section.\\
+    Then  $ f^*=(F\circ s_1)^*=s_1^*\circ F^*,g^*=(F\circ s_0)^*=s_0^*\circ F^* $.\\
+    Since  $ s_1^* $ and  $ S_0^*  $ both invert  $ \pi^* $ in  $ H^*(\mathbb{R}^n\times\mathbb{R}) $, they are equal. Hence \[ f^*=g^* \]. 
+\end{proof}
+\qquad Two manifolds  $ M  $ and  $ N  $ are said to have the same \underline{homotopy type} in the  $ C^\infty $ sense if there are  $ C^\infty $ maps  $ f:M\rightarrow N  $ and  $ g:N\rightarrow M  $ such that  $ g\circ f  $ and  $ f\circ g  $ are  $ C^\infty $ homotopic to the identity on  $ M  $ and  $ N  $ respectively. A manifold having the homotopy type of a point is said to be \underline{contratible}.\\
+\begin{corollary}
+    Two manifolds with the same homotopy type have the same de Rham cohomology.
+\end{corollary}
+\qquad  If  $ i:A\subset M  $ is the inclusion $ r:M\rightarrow A $ is a map which  restrict to the identity on  $ A $, then r is called a \underline{retraction} of  $ M  $ onto A. Equivalently,  $ r\circ i:A\rightarrow A  $ is the identity. If in addition  $ i\circ r:M\rightarrow M  $ is homotopic to the identity on  $ M  $, then   $ r  $ is said to be a \underline{deformation retraction} of $  M  $ onto  $ A $. In this case  we have:
+\begin{corollary}
+   If  $ A  $ is a deformation retract of $  M $, then   $ A  $ and  $ M $ have the same homotopy type.
+\end{corollary} 
+\subparagraph{Exercise 4.2.}Show that  $ r:\mathbb{R}^2-\{0\}\rightarrow S^1 $ given by  $ r(x)=\frac{x }{||x||} $ is a deformation retraction.
+\subparagraph{Exercise 4.3.}The cohomology of the n-sphere  $ S^n  $. Cover  $ S^n  $ by two open sets  $ U  $ and  $ V  $ where  $ U\cap V  $ is diffeomorphic to  $ S^{n-1}\times \mathbb{R} $. Using the Mayer Vietoris sequence, show that 
+\[
+   H^*(S^n)=\left\{
+        \begin{aligned}
+            &\mathbb{R }\quad \text{in dimensions 0,n}\\
+            &0\,\quad \text{otherwise}
+        \end{aligned}
+   \right. 
+\]
+\paragraph{Exercise 4.3.1}Volume form on a sphere. Let  $ S^n(r)  $ be the spere of radius  $ r  $
+\[x_1^2+x_2^2+\cdots+x_{n+1}^2=r^2\]
+in  $ \mathbb{R}^{n+1} $, and let 
+\[\omega =\frac{1 }{r }\sum\limits_{i=1}^{n+1}(-1)^{i-1}dx_1\cdots \widehat{dx_i}\cdots dx_{n+1}  \]
+\begin{itemize}
+    \item Compute the integral  $ \int_{S^n}\omega $ and conclude that  $ \omega $ is not exact.
+    \item Regarding  $ r  $ as a function on  $ \mathbb{R}^{n+1}-{0} $, show that  $ (dr)\cdot \omega=dx_1\cdots dx_{n+1} $. Thus  $ \omega  $ is the Euclidean volume form on the sphere  $ S^n(r) $.  
+\end{itemize} 
+From  (a) we obtain an explicit formula for the generator of the top cohomology of  $ S^n $. For example, the generator of  $ H^2(S^2) $ is represented by 
+\[\sigma=\frac{1 }{4\pi }(x_1dx_2dx_3-x_2dx_1dx_3+x_3dx_1dx_2)\] 
+
+\subsection{The Poincar\'{e} Lemma for Compactly Supported Cohomology}
+The computation of the compactly supported cohomology  $ H^*(\mathbb{R }^n ) $ is again by induction; we will show that there is an isomorphism\[H^{*+1}_c(\mathbb{R }^n\times\mathbb{R })\simeq H^*_c(\mathbb{R}^n)\]
+But the dimension is shifted by one.\\
+\qquad More generally consider the projection  $ \pi:M\times \mathbb{R }\rightarrow M  $. Pull back of a form necessarily has no compact support, However, there is  a push-forward map  $ \pi_*:\Omega_c^*(M\times\mathbb{R })\rightarrow \Omega_c^*(M) $, called \underline{integration along fiber}, defined as folows.\\
+First note that a compactly supported form on  $ M\times\mathbb{R } $ is a linear conbination of two types of forms:
+\begin{align*}
+    (1)\,&(\pi^*\phi)f(x,t),\\
+    (2)\,&(\pi^*\phi)f(x,t)\mathrm{d}t
+\end{align*} 
+where  $ \phi $ is a form on the base (not necessarily with compact support), and f(x,t) is a function with compact support. We define  $ \pi_* $ by
+\begin{equation}\tag{4.4}
+    \begin{aligned}
+        (1)\,&(\pi^*\phi)f(x,t)\mapsto0,\\
+        (2)\,&(\pi^*\phi)f(x,t)\mathrm{d} t\mapsto\phi\int_{-\infty}^{\infty}f(x,t)\,\mathrm{d}t.
+    \end{aligned}  
+\end{equation}
+\subparagraph{Exercise 4.5} $ d\pi_*=\pi_*d $; in other words,  $ \pi_*  $ is a chain map.\\
+By the exercise  $ \pi_* $  induce a map in cohomopogy  $ \pi_*:H_c^*\rightarrow H_c^{*-1} $.
+To produce a map in the reverse direction, let  $ e=e(t)dt $ be a compactly supported 1-form on  $ \mathbb{R } $ with total integral 1 and define\[e_*:\Omega_c^*(M )\rightarrow \Omega_c^{*+1}(M\times \mathbb{R})\]
+by\[\phi\mapsto(\pi^*\phi)\wedge e\]  
+The map  $ e_* $ clearly commutes with  $ d  $, so it also induces a map in cohomology. And  $ \pi_*\circ e_*=1 $ on  $ \Omega_c^*(\mathbb{R}^n) $ is trivial. Now we shall produce a homotopy operator  $ K  $ between 1 and  $ e_*\circ\pi_* $; then it will follow that   $  e_*\circ\pi_*=1 $ in cohomology.\\
+\qquad To streamline the notation, write  $ \phi $ for  $ \pi^*\phi $ (in right place) and  $ \int f  $ for  $ \int f(x,t)dt $. Then  $ K:\Omega_c^*(M\times \mathbb{R })\rightarrow \Omega_c^{*-1}(M\times \mathbb{R })  $ is defined by
+\begin{align*}
+    (1)&\phi\cdot f\mapsto 0,\\
+    (2)&\phi\cdot f\, dt\mapsto\phi \int_{-\infty}^{t}f-\phi A(t)\int_{-\infty}^{\infty}f\qquad \text{where}\, A(t)=\int_{-\infty}^{t }e
+\end{align*}   
+\setcounter{proposition}{5}
+\begin{proposition}
+     $ 1-e_*\pi_*=(-1)^{q-1}(dK-Kd) $ on  $ \Omega_c^q(M\times \mathbb{R }) $  
+\end{proposition}
+\begin{proof}
+    On forms of type (1), assuming  $ \deg \phi =q $, we have:
+    \begin{align*}
+        (1-e_*\pi_*)\phi f&=\phi f\\
+        (dK-Kd)\phi f&=-K(d\phi f+(-1)^q\phi df+(-1)^q\phi \frac{\partial f }{\partial t }dt)\\
+        &=(-1)^{q-1}\phi f\quad\text{Here} \int_{-\infty}^{\infty}\frac{\partial f }{\partial t }=f(x,+\infty)-f(x,-\infty)=0\\
+    \end{align*}  
+    So  $ 1-e_*\pi_*=(-1)^{q-1}(dK-Kd) $\\
+    \qquad On forms of type(2), now assuming  $ \deg\phi =q-1 $, we have
+    \begin{align*}
+        (1-e_*\pi_*)\phi f\, dt&=\phi f \,dt-\phi(\int_{-\infty}^{\infty}f)e\\
+        (dK)(\phi f\, dt)&=(d\phi)\int_{-\infty}^{t }f+(-1)^{q-1}\phi d(\int_{-\infty}^{t}f)+(-1)^{q-1}\phi f dt\\
+        &-(d\phi)A(t)\int_{-\infty}^{\infty}f-(-1)^{q-1}\phi\left[e\int_{-\infty}^{\infty}f+A(t)(\int_{-\infty}^{\infty}df)\right]\\
+        (Kd)(\phi f\, dt)&=K((d\phi)f \,dt  +(-1)^{q-1}\phi df \,dt)\\
+        &=(d\phi)\int_{-\infty}^{t }f-(d\phi )A(t)\int_{-\infty}^{\infty}f +(-1)^{q-1}\left[\phi (\int_{-\infty}^{t }df)-\phi A(t)(\int_{-\infty}^{\infty}df)\right]
+    \end{align*} 
+    So\[(dK-Kd)\phi \, f\,dt =(-1)^{q-1}[\phi f \,dt -\phi (\int_{-\infty}^{\infty}f )e]\]
+    and the formula again holds.
+\end{proof}
+This conclude the proof of the folowing
+\begin{proposition}
+    The maps 
+    \[H_c^*(M\times \mathbb{R })\rightleftarrows H_c^{*-1}(M)\]
+    are isomorphisms.
+\end{proposition}
+\begin{corollary}[Poincar\'{e} Lemma for Compact Supports]
+    \[
+        H_c^*(\mathbb{R}^n)=\left\{
+            \begin{aligned}
+                &\mathbb{R}\quad\text{in dimension  $ n $ }\\
+                &0\quad\,\,\text{otherwise}
+            \end{aligned}
+        \right.
+    \]
+\end{corollary}
+Here the isomorphism  $ H_c^*(\mathbb{R}^n)\simeq \mathbb{R} $ is given by iterated  $ \pi_* $, i.e. by integration over  $ \mathbb{R}^n $.
+To determine a generator for  $ H^n_c(\mathbb{R}) $, we start with the constant function 1 on a point and iterated with  $ e_* $. So a generator for  $ H_C^*(\mathbb{R}^n) $ is a bump n-form  $ \alpha(x)\,dx_1\cdots dx_n=1 $ with 
+\[\int_{\mathbb{R}^n}\alpha(x)\,dx_1\cdots dx_n=1\]
+The support of  $ \alpha  $ can be made as small as we like.     
+\begin{remark}
+    It shows that the compactly supported cohomology is not invariant under homotopy equivalence, although it is of course invariant under diffeomorphisms.
+\end{remark}
+\begin{exercise}
+    Compute the cohomology groups  $ H^*(M) $ and  $ H^*_c(M) $ of the open M$ \ddot{o} $bius strip M.  
+\end{exercise}
+\subsection{The degree of a Proper Map}
+
+对光滑流形 $X$, 记 $C^\infty (X)$ 为所有光滑函数
+$f \colon X \to \mathbb{R}$ 构成的实数向量空间.
+
+\begin{definition} [切空间]
+    \label{一般定义}
+    设 $X$ 是光滑流形, 设 $x \in X$. 则
+    \begin{itemize}
+        \item
+            $X$ 在 $x$ 处的\textbf{切向量}是指一个线性函数
+            \[
+                v \colon C^\infty (X) \to \mathbb{R},
+            \]
+            满足对任意 $f, g \in C^\infty (X)$, 有 Leibniz 法则
+            \[
+                v (f g) = f (x) \cdot v (g) + g (x) \cdot v (f).
+            \]
+            这里, 我们把 $v (f)$ 理解成函数 $f$
+            在点 $x$ 处沿着向量 $v$ 的方向导数.
+        \item
+            $X$ 在 $x$ 处的\textbf{切空间} $\mathrm{T}_x X$
+            是 $X$ 在 $x$ 处的所有切向量构成的向量空间.
+    \end{itemize}
+\end{definition}
+对 Euclid 空间的切映射
+
+\begin{definition}
+    \label{特殊定义}
+    设 $m, n$ 是自然数, $U \subset \mathbb{R}^m$ 和 $V \subset \mathbb{R}^n$ 是开集, 
+    $f \colon U \to V$ 是连续可微映射.
+    设 $x \in U$.
+    则 $f$ 在 $x$ 处的\textbf{切映射}是指
+    切空间之间的线性映射
+    \[
+        df_x \colon \mathrm{T}_x U \longrightarrow \mathrm{T}_{f (x)} V,
+    \]
+    由 Jacobi 矩阵
+    \[ \begin{pmatrix}
+        \dfrac{\partial f^1}{\partial x^1} (x) & \cdots &
+        \dfrac{\partial f^1}{\partial x^m} (x) \\
+        \vdots & & \vdots \\
+        \dfrac{\partial f^n}{\partial x^1} (x) & \cdots &
+        \dfrac{\partial f^n}{\partial x^m} (x)
+    \end{pmatrix} \]
+    给出. 这里 $f^1, \dotsc, f^n$ 是 $f$ 的各分量,
+    而 $x^1, \dotsc, x^m$ 是 $U$ 上的坐标.
+    我们自然地将 $\mathrm{T}_x U$ 与 $\mathbb{R}^m$ 等同起来,
+    将 $\mathrm{T}_{f (x)} V$ 与 $\mathbb{R}^n$ 等同起来.
+\end{definition}
+
+
+对流形的切映射
+
+\begin{definition}
+    设 $X, Y$ 是光滑流形, $f \colon X \to Y$ 是光滑映射.
+    设 $x \in X$. 则 $f$ 在 $x$ 处的\textbf{切映射}是指切空间之间的线性映射
+    \begin{align*}
+        df_x \colon \mathrm{T}_x X 
+        & \longrightarrow \mathrm{T}_{f (x)} Y, \\
+        v & \longmapsto df_x (v),
+    \end{align*}
+    这里 $df_x (v)$ 定义如下:
+    对任何 $g \in C^\infty (Y)$, 有
+    \[
+        df_x (v) \, (g) =
+        v (g \circ f).
+    \]
+
+    更一般地, 若 $X, Y$ 是 微分流形$C^1$ 流形,
+    而 $f$ 是 连续可微映射$C^1$ 映射,
+    则上述定义仍然有效,
+    只需将 $g \in C^\infty (Y)$ 换成 $g \in C^1 (Y)$.
+\end{definition}
+\begin{theorem}[the Inverse Function theorem]
+    There is a neighborhood around a regular point such that  $ f  $ is local diffeomorphism on it .
+\end{theorem}
+A map is proper if the inverse image of every compact set is compact.\\
+Let  $ f:\mathbb{R}^n\rightarrow \mathbb{R}^n $ be a proper map. Then the pullback  $ f^*:H_c^*(\mathbb{R}^n)\rightarrow H^*_c(\mathbb{R }^n ) $ is defined. It carries a generator of  $ H_c^*(\mathbb{R}^n) $ to some multiple of the generator. Then the multiple is defined to be the degree. If  $ \alpha  $ is  a generator of  $ H_c^*(\mathbb{R }^n ) $,\[\deg f=\int_{\mathbb{R}^n}f^*\alpha\]   
+We now prove it to be an integer.\\
+Recall the  \underline{critical point } of a smooth map  $ f:\mathbb{R}^n\rightarrow \mathbb{R }^n  $ is a point   $ p $ where the differential   $ (f_*)_p:T_p\mathbb{R }^n \rightarrow T_{f(p)}\mathbb{R}^n $ is not surjective, and a \underline{critical value} is the image of a critical point. A point of  $ \mathbb{R }^n  $ which is not a critical value is called a regular value.
+\begin{theorem}[Sard's theorem for  $ \mathbb{R}^n $ ]
+    The set of critical values of a smooth map  $ f:\mathbb{R}^m\rightarrow \mathbb{R}^n  $  has measure zero in  $ \mathbb{R}^n $ for any integers  $ m  $ and  $ n $.
+\end{theorem}
+
+\begin{proposition}
+    Let  $ f:\mathbb{R}^n\rightarrow\mathbb{R }^n $ be a proper map. If  $ f  $ is not surjective, then it has degree  $ 0 $. 
+\end{proposition}
+\begin{proof}
+    Since the image of a proper map is closed (use each infinite subset of the compact set has a limit point), if  $ f  $ misses a point  $ q  $, then it must miss some neighborhood  $ U $ of  $ q $. Choose a bump  $ n $-form   $ \alpha  $ whose supported lies in  $ U  $. Then  $ f^*\alpha\equiv 0  $ so that  $ \deg f=0 $ 
+\end{proof}
+Now we just need to look at surjective proper maps from  $ \mathbb{R }^n  $ to  $ \mathbb{R}^n $. By Sard's theorem, we can pick one regular value  $ q $. By the inverse function theorem, around any point in the pre-image of  $ q  $,  $ f  $ is a local diffeomorphism. It implies the  $ f^{-1}(q) $ is a discrete set of points and hence a finite set. Choose a generator  $ \alpha  $ whose support is localized near q. Then  $ f^*\alpha  $ is a  $ n  $-form whose support is localized near the points of  $ f^{-1}(q) $. As  $ f^*  $ is a local diffeomorphism, then the integral of  $ f^*  $ is   $ \pm \int\alpha=\pm 1 $.
+Thus 
+\[\int_{\mathbb{R }^n}=\sum\limits_{f{-1}(q)}\pm 1  \]
+Moreover, it shows that the number of the points, counted with multiplicity  $ \pm 1 $, in the inverse image of any regular value is the same.
+\end{document}

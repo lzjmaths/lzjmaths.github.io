@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{mathrsfs}
+\usepackage[UseMSWordMultipleLineSpacing,MSWordLineSpacingMultiple=1.4]{zhlineskip}
+\usepackage{lipsum}
+\usepackage{imakeidx}
+\usepackage[linktoc=page]{hyperref}
+\makeindex[columns=2,title=Index, options=-s example_style.ist]
+
+\hypersetup{
+    colorlinks=true, % 设置链接颜色
+    linkcolor=blue, % 设置普通链接颜色
+    citecolor=green, % 设置引用链接颜色
+    urlcolor=red % 设置URL颜色
+}
+\title{Analysis2 Note}
+\author{lin150117 }
+\date{} 
+\theoremstyle{definition} 
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{fact}[theorem]{Fact}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\img}{Im}
+\DeclareMathOperator{\dd}{d\!}
+\DeclareMathOperator{\Jac}{Jac}
+\newcommand{\card}{\texttt{\#}}
+\newcommand{\ie}{\emph{i.e. }}
+\newcommand{\st}{\emph{s.t. }}
+
+\usepackage{geometry}
+\geometry{left=3.18cm, right=3.18cm, top=2.54cm, bottom=2.54cm}
+\begin{document}
+\maketitle
+\tableofcontents
+\setcounter{section}{24}
+\input{/Users/mycomputer/study/analysis/analysis-2/analysis week5-1/analysis week5-1.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/analysis week6-1/week6-1.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/analysis week7-1/analysis week7-1.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/analysis week8-1/week8-1.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/week8-2.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/week9-1.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/week10-1.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/week11-1.tex}∆
+\input{/Users/mycomputer/study/analysis/analysis-2/week11-2.tex}
+\input{/Users/mycomputer/study/analysis/analysis-2/week12-2.tex}
+\printindex
+\end{document}

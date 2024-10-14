@@ -1,0 +1,39 @@
+\section{Introduction}
+\subsection{proposition,logic,simple set theory}
+There are some symbols we should to know:
+\begin{center}
+    $ P\vee Q $ : or \quad |\quad $ P\wedge Q $ : and \quad |\quad $ \lnot P $ : not \quad|
+\end{center}
+$ xRy $ means  $ (x,y)\in R $, for  $ R\subset X\times Y $, which is called a relationship.\\   
+For  $ R\subset X\times Y $, \textbf{define} $ R ^{-1}:=\{(y,x)\in Y\times X:xRy\} $.\\
+For  $ S\subset Y\times Z $, \textbf{define}  $ S\circ  R :=\{(x,y)\in X\times Z:\exists y\in Y,s.t. xRy \land ySz\}$    \\
+
+\begin{definition}[equivalent relationship]
+     $ \sim \subset X\times X  $ is an equivalent relationship if
+    \begin{enumerate}[(1)]
+        \item  $ \forall x\in X,x\sim x $
+        \item  $ \forall x,y\in X, x\sim y\Rightarrow y\sim x $
+        \item  $ x\sim y,y\sim z \Rightarrow x\sim z $   
+    \end{enumerate}
+\end{definition}
+For an equivalent relationship, we can \textbf{define}  $ [x]:=\{y\in X:y\sim x\} $ be the equivalent class of  $ x $. For that there is a map called \textbf{quotient mapping}\\
+\begin{definition}[partially ordered relation]
+    For  $  \leqslant \,\subset X\times X $, if 
+    \begin{enumerate}[(1)]
+        \item  $ x \leqslant x $
+        \item  $ x \leqslant y,y \leqslant z \Rightarrow x \leqslant z$
+        \item  $ x \leqslant y,y \leqslant x\Rightarrow y=x $   
+    \end{enumerate}  
+    we call it \textbf{partial ordered relation}\\
+    If  $ \forall x,y\in X ,\, (x \leqslant y)\lor (y \leqslant x) $, we call it \textbf{total order} or \textbf{linear order}. 
+\end{definition} 
+\begin{definition}
+    $ (X, \leqslant) $ is a \textbf{partially ordered set}   
+    for $ A\subset X $, \textbf{define}
+    \begin{enumerate}
+        \item  $ x<y $ iff  $ x \leqslant y $ and  $ x\not=y $  
+        \item  $ s\in X  $ is an upper bound(lower bound) iff $ \forall a\in A, a \leqslant s (s \leqslant a)$
+        \item  $ m\in A$ is a maximal(minimal) element iff  $ \not\exists a\in A s.t. m<a(a<m) $
+        \item   $ m\in A  $ is the greatest(least) element iff  $ m $ is the upper(lower) bound and  $ m\in A $ 
+    \end{enumerate}
+\end{definition}

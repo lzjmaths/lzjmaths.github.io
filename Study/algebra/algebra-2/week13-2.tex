@@ -1,0 +1,84 @@
+\subsection{algebraic extension and simple algebraic extention}
+\begin{example}
+    If  $ \mathbb{C}/K/\mathbb{Q} $ and  $ [K:Q]=2 $, then  $ K=\mathbb{Q}[\sqrt{d}] $ for some square-free  $ d $   
+\end{example}
+From this example, we can know that if  $ K  $ is an nontrivial intermediate field of  $ \mathbb{Q}[\sqrt{2},\sqrt{3}] $, it should be   $ \mathbb{Q}(\sqrt{d}) $,  $ d=2,3,6 $.\\
+Thus  $ \mathbb{Q}[\sqrt{2}+\sqrt{3}] $ should be  $ \mathbb{Q}[\sqrt{2},\sqrt{3}] $. The way to prove it can be that find its minimal polynomial or check it can't be nontrivial intermediate field.\\
+So  $ \mathbb{Q}[\sqrt{2},\sqrt{3}] $ is a simple extension with  $ \sqrt{2},\sqrt{3} $ a primitive element.
+\begin{proposition}
+     $ K/F  $ is finite extension. Then  $ K/F  $ is a simple extension if and only if there are only finitely many intermediate extensions.\label{criterion for simple extension}
+\end{proposition} 
+\begin{proof}
+    If  $ K/F  $ is simple. Write  $ K=F(\alpha) $. Let  $ f(x)\in F[x]  $ be the minimal polynomial for  $ \alpha $. Take any  $ K/M/F $, then  $ M(\alpha)=K $. Let  $ g(x)\in M[x]  $ be the minimal polynomial for  $ \alpha $ over  $ M  $. Then  $ g|f $ in  $ M[x] $.\\
+    Set  $ F_g:=F(\text{coefficient of } g(x)) $. Then  $ F_g=M $. Each intermediate extension is of the form  $ F_g  $ with  $ g(x)\in K[x] $ s.t.  $ g|f $ in  $ K[x] $.\\
+     $ F_g=M  $ is because degree of minimal polynomial for  $ \alpha  $ over  $ F_g $= $ [k:F_g] $ is less then degree of  $ g  $= $ [K:M] $. Since  $ F_g\subset M $, it should be true.\\
+     Conversely, we may assume  $ F  $ is infinite. Let  $ M_i  $ be the nontrivial intermediate extension of  $ K/F $. Let  $ \alpha\in K-(M_1\cup\cdots\cup M_n) $ ($ \alpha  $ exists by the result of linear algebra)  Then  $ K=F(\alpha) $         
+\end{proof}    
+\begin{remark}
+    We can understand how degree and minimal polynomial plays role in this proof. And we can get a lemma.
+\end{remark}
+\begin{lemma}
+    If  $ K=F(\alpha)/F $,  $ g(x)  $ be the minimal polynomial for  $ \alpha $  over  $ F  $. Then  $ F_g=\{\text{coefficient of } g(x) \}=F $  
+\end{lemma}
+\subsection{Complete splitting and algebraic closure}
+\begin{proposition}
+    \,
+    \begin{enumerate}[(1)]
+        \item If  $ K/F  $ finite,  $ \exists K_0=F\subset K_1\subset\cdots\subset K_m=K $ \st  $ K_{i+1}/K_i $ is simple.  
+        \item  $ \forall f(x)\in F[x] $,  $ \exists \,K/F  $ finite \st  $ f(x)=a(x-\alpha_1)\cdots(x-\alpha_n) $ in  $ K[x] $.  
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \begin{enumerate}[(1)]
+        \item Just repeat choosing adjoining element.
+        \item We may assume  $ f(x)  $ is monic. Take a monic irreducible divisor  $ f_1(x) $  of  $ f(x) $. Let  $ K_1:=F[x]/(f_1(x)) $,  $ \alpha_1\in K_1 $ be the image of  $ \overline{x} $. Then  $ f(\alpha)=0 $,  $ f=(x-\alpha_1)g_1(x) $ for some  $ g_1\in  K_1[x] $. Repeating this process.    
+    \end{enumerate}
+\end{proof}
+\begin{remark}
+    The extension can be abstract. The key is to construct a proper operation. (2) is a more abstract but essential way to understand root.
+\end{remark}
+\begin{definition}
+    \,
+    \begin{enumerate}[(1)]
+        \item A field  $ K  $ is called \textbf{algebraically closed}\index{algebraically closed} if every polynomial in  $ K[x] $ splits completely in  $ K[x] $. Equivalenly, if  $ L/K $ is an algebraic extension, then  $ L=K $.
+        \item An \textbf{algebraic closure} of a field  $ F  $ is an algebraic extension  $ K/F  $ \st every polynomial in  $ F[x] $ splits completely in  $ K  $, denoted by  $ \overline{F} $.  
+    \end{enumerate}
+\end{definition}
+\begin{fact}
+    \,
+    \begin{enumerate}[(1)]
+        \item An algebraic closure of  $ F  $ exists and is unique up to  $ K  $-isomorphic.
+        \item  $ \overline{F} $ is algebraically closed. 
+    \end{enumerate}
+\end{fact}
+\subsection{Separable extension}
+\begin{definition}
+    A polynomial  $ f(x)\in F[x] $ is called \textbf{separable}\index{separable} if  $ f  $ has no double root in  $ \overline{F} $ 
+\end{definition}
+We can check it by defining the derivative of  $ f  $.
+\begin{proposition}
+     $ f  $ is separable if and only if  $ (f(x),f'(x))=F[x] $,\ie coprime.
+\end{proposition}
+\begin{example}
+    \,
+    \begin{enumerate}[(1)]
+        \item If  $ \Char F=0 $, then every irreducible polynomial is separable.
+        \item  $ \Char F =p $, there is a counter example for  $ F=\mathbb{F}_p(t) $  
+    \end{enumerate}
+\end{example}
+Meanwhile, if  $ f(x)=(x-\alpha_1)\cdots(x-\alpha_n) $ in  $ \overline{F}[x] $, then 
+\begin{equation}
+    \frac{F[x]}{(f(x))}\otimes_F \overline{F}\cong \frac{\overline{F}[x]}{(f(x))}\label{Change for separable polynomial}
+\end{equation}
+
+ $ \alpha_i $ distinct then  $ (x-\alpha_i) $ coprime. By Chinese remainder theorem, 
+ \[(\ref{Change for separable polynomial})\cong \frac{\overline{F}[x]}{(x-\alpha_1)}\cdots\frac{\overline{F}[x]}{(x-\alpha_1)}\cong \overline{F}^n\] as  $ \overline{F} $-algebra.
+ If not, then  $ (\ast ) $ is not reduced.\\
+ So  $ f(x)  $ separable if and only if  $ \overline{F}[x]/(f(x)) $ is reduced.
+ \begin{definition}
+     $ K/F $ algebraic extension.
+     \begin{enumerate}[(1)]
+         \item $ \alpha\in K  $ is called \textbf{separable over  $ F  $}\index{separable!over  $ F $} if the minimal polynomial for  $ \alpha  $ over  $ F  $ is separable.
+         \item  $ K/F $ is separable if every element is separable over  $ F $  
+     \end{enumerate}
+ \end{definition}

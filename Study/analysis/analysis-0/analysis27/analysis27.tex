@@ -1,0 +1,122 @@
+\begin{theorem}[The rank theorem]
+    Suppose  $ m,n,r\in \mathbb{N}\cup{0},\, m\geqslant r,n\geqslant r$.  $ F  $ is  $ \mathscr{C}' $-mapping of an open set  $ E\subset \mathbb{R}^n $ into  $ \mathbb{R}^m  $, and  $ F'(\vec{x}) $ has rank  $ r  $ for  $ \forall \vec{x}\in E    $.  Fix  $\vec{a}\in E  $, and let  $ A:=F'(\vec{a}) $. Let  $ Y_1=\mathscr{R }(A) $,  $ P  $ be a projection in  $ \mathbb{R}^m   $ whose range is  $ Y_1 $,  $ Y_2:= \mathscr{N}(P )$. Then  $ \exists $ open sets  $ U  $ and  $ V  $ in  $ \mathbb{R}^n   $, with   $ \vec{a}\in U,\,U\subset E  $, and  $ \exists   $ 1-1 $ \mathscr{C}'  $-mapping  $ H  $ of  $ V  $ onto    $ U  $ (whose inverse is also of class  $ \mathscr{C}' $) s.t.
+    \begin{equation}
+        F(H(\vec{x}))=A\vec{x}+\varphi(A\vec{x}),\,\forall \vec{x}\in V\tag{ $ \star $ }
+    \end{equation}      
+    where  $ \varphi  $ is a  $ \mathscr{C}' $-mapping of the open set  $ A(V)\subset Y_1 $ into  $ Y_2 $.  
+\end{theorem}
+\begin{remark}\end{remark}
+    \begin{enumerate}
+        \item[$ (a) $] If  $ \vec{y}\in F(U)  $ then  $ \vec{y}=F(H(\vec{x})) $ for some  $ \vec{x}\in V $.
+         \begin{align*}
+            (\star)&\Rightarrow P\vec{y}=A\vec{x}\\
+            &\Rightarrow\vec{y}=P\vec{y}+\varphi(P\vec{y}),\forall \vec{y}\in F(U)\\\
+            &\Rightarrow P \text{ restricted to }F(U)\text{ is  1-1 mapping of }F(U)\text{ onto }A(V).\\
+            &\Rightarrow F(U) \text{ is an "r-dimensional surface" with precisely one point "over" each point of }A(V)
+         \end{align*} 
+         \item[$ (b) $] If  $ \Phi(\vec{x})=F(H(\vec{x})) $,  $ (\star)\Rightarrow  $ the level set of  $ \Phi $ are precisely the level set of  $ A $ in V. There are "flat" since they are intersections with  $ V $ of translates of the vector space  $ \mathscr{N}(A) $ 
+    \end{enumerate}
+
+\subsection{Determinants}
+If  $ (j_1,\cdots,j_n) $ is an ordered  $ n $-tuple of integers. Define
+\[s(j_1,\cdots,j_n):=\prod \limits_{p<q}sgn(j_q-j_p)\tag{ $ \ast $ }\] 
+Where 
+\[sgn(x)\left\{
+    \begin{aligned}
+        1,&\,x>0\\
+        0,&\,x=0\\
+        -1,&\.x<0
+    \end{aligned}
+\right.\]
+Let  $ [A] $ be the matrix of a linear operator  $ A  $ on  $ \mathbb{R}^n  $, relative to the standard basis  $ \{\vec{e_1},\cdots,\vec{e_n}\} $, with entries  $ a(i,j) $ in the  $ i $th row and  $ j$th column. The determinant of  $ [A] $ is defined by 
+\begin{equation}
+    det[A]:=\sum s(j_1,\cdots,j_n)a(1,j_1)\cdots a(n,j_n)\tag{ $ \ast\ast $ }
+\end{equation}
+where the sum is over all ordered  $ n $-tuples of integers  $ (j_1,\cdots, j_n ) $ with  $ 1, \leqslant j_r \leqslant n $.\\
+The column vectors  $ \vec{x_j} $ of  $ A  $ are 
+\[ \vec{x_j}=\sum\limits_{i=1}^{n}a(i,j)\vec{e_i},\quad 1 \leqslant j \leqslant n \tag{ $ \ast\ast\ast $ }\]
+\[det(\vec{x_1},\cdots,\vec{x_n})=det[A]\] 
+\begin{theorem}
+    \begin{enumerate}
+        \item[$  (a)$] $ \det(I)=1 $
+        \item[$ (b) $] $ \det $ is a linear function of each column vector  $ \vec{x_j} $ if the others are fixed.
+        \item[$ (c) $] If  $ [A]_1 $ is obtained from  $ [A] $ by interchanging two columns  $ \det[A]_1=-\det[A] $.
+        \item[$ (d) $] If  $ [A] $ has two equal columns, then  $ \det[A]=0 $        
+    \end{enumerate}
+\end{theorem} 
+\begin{theorem}
+    If  $ [A] $  and  $ [B] $ are  $ n\times n  $ matrices, then  $ \det([B][A])=\det[B]\det[A] $ 
+\end{theorem}
+\begin{theorem}
+    A linear operator  $ A  $ on  $ \mathbb{R}^n  $ is invertible iff  $ \det[A]\not=0 $.  
+\end{theorem}
+\begin{remark}
+Suppose  $ \{\vec{e_1},\cdots,\vec{e_n}\} $ and  $ \{\vec{u_1},\cdots,\vec{u_n}\} $ are bases in  $ \mathbb{R}^n  $.  $ \forall A\in L(\mathbb{R}^n) $ determinant of matrices  $ [A] $ and  $ [A]_u $  is the same.   
+\end{remark}
+If  $ f:E\rightarrow \mathbb{R}^n  $ is differentiable at  $ \vec{x}\in E  $, the determinant of the linear operator  $ f'(\vec{x}) $ is called the \underline{Jacobian of  $ f  $ at  $ \vec{x} $}. In symbols  $ J_f(\vec{x})=\det f'(\vec{x}) $.\\
+If  $ (y_1,\cdots,y_n)=f(x_1,\cdots,x_n) $, we also use the notation  $ \dfrac{\partial (y_1,\cdots,y_n )}{\partial (x_1,\cdots,x_n )} $ for  $ J_f(\vec{x}) $.
+\subsection{Derivatives of Higher Order}
+Suppose  $ f:E\rightarrow \mathbb{R} $ has partial derivatives  $ \frac{\partial f}{\partial x_1},\cdots,\frac{\partial f}{\partial x_n} $. If the functions  $ \frac{\partial f}{\partial x_j} $ are also differentiable, then \underline{second-order} partial derivative of  $ f  $ are defined by
+\[\frac{\partial^2 f}{\partial x_i\partial x_j}=\frac{\partial }{\partial x_i}(\frac{\partial f}{\partial x_j}),\quad i,j=1,2,\cdots,n\]
+If all these functions   $  \frac{\partial^2 f}{\partial x_i\partial x_j} $ are continuous in  $ E  $, we say that  $ f  $ is of class  $ \mathscr{C}'' $ in  $ E  $, or that  $ f\in \mathscr{C}''(E) $.\\
+A mapping  $ f:E \rightarrow \mathbb{R}^m  $ is said to be of class  $ \mathscr{C}'' $ if each component of  $ f  $ is of class  $ \mathscr{C}'' $.\\
+WLOG. We state the next two theorems for real functions of two variables.
+\begin{theorem}
+    Suppose   $ E\subset \mathbb{R}^2 $, $ f:E\rightarrow \mathbb{R} $, and  $ \frac{\partial f}{\partial x_i} $ and  $ \frac{\partial^2 f}{\partial x_i\partial x_j} $ exists at each point in  $ E  $. Suppose  $ Q\subset E   $  is a closed rectangle with vertices $ (a,b),(a+h,b),(a,b+k),(a+h,b+k) $ where  $ h\not=0,k\not=0 $, write\[\Delta(f,Q):=f(a+h,b+k)-f(a+h,b)-f(a,b+k)+f(a,b)\] 
+    Then  $ \exists  $ a point  $ (x,y) $ in the interior of  $ Q  $ s.t.  $ \Delta (f,Q )=hk\frac{\partial^2 f}{\partial x_2\partial x_1}(x,y) $  
+\end{theorem}
+\begin{proof}
+    Define  $ u(t):=f(t,b+k)-f(t,b) $. Then 
+    \begin{align*}
+        \Delta(f,Q )&=u(a+h)-u(a)\xlongequal{MVT}hu'(x)\quad \text{where  $ x  $ is between  $ a  $ and  $ a+h $ }\\
+        &=h[\frac{\partial f}{\partial x_1}(x,b+k)-\frac{\partial f}{\partial x_1}(x,b)]\\
+        &\overset{MVT}{=}hk\frac{\partial^2 f}{\partial x_2\partial x_1}(x,y)\quad \text{where  $ y $ is between  $ b  $ and  $ b+k $ }
+    \end{align*}
+\end{proof}
+\begin{theorem}
+    Suppose  $ f:E\rightarrow \mathbb{R} $, $ \frac{\partial^2 f}{\partial x_2\partial x_1} $  $ \frac{\partial f}{\partial x_2} $ and  $ \frac{\partial f}{\partial x_1} $  exist at each point of  $ E  $, and  $  \frac{\partial^2 f}{\partial x_2\partial x_1}  $ is continuous at  $ (a,b)\in E $. Then  $  \frac{\partial^2 f}{\partial x_1\partial x_2}  $ exists at  $ (a,b) $ and 
+    \[ \dfrac{\partial^2 f}{\partial x_1\partial x_2} (a,b)= \dfrac{\partial^2 f}{\partial x_2\partial x_1} \]   
+\end{theorem}
+\begin{corollary}
+    If  $ f\in \mathscr{C}''(E) $, then  $  \frac{\partial^2 f}{\partial x_2\partial x_1} = \frac{\partial^2 f}{\partial x_1\partial x_2}  $ on  $ E  $.   
+\end{corollary}
+\begin{proof}
+    Let  $ A:= \frac{\partial^2 f}{\partial x_2\partial x_1} (a,b) $. For  $ \forall\epsilon>0 $, we may choose  $ |h| $ and  $ |k| $ small s.t.
+    \[\left|A- \dfrac{\partial^2 f}{\partial x_2\partial x_1}(x,y)\right|<\epsilon\quad\forall (x,y)\in Q \]
+    The previous theorem  $ \Rightarrow\left|\dfrac{\Delta(f,Q)}{hk}-A\right|<\epsilon  $ i.e.
+    \[\left|\dfrac{f(a+h,b+k)-f(a+h,b)-f(a,b+k)+f(a,b)}{hk}-A\right|<\epsilon\]
+    Fix  $ h\not=0 $, and let  $ k\rightarrow 0 $, then 
+    \[\left|\dfrac{\dfrac{\partial f}{\partial x_2}(a+h,b)-\dfrac{\partial f}{\partial x_2}(a,b)}{h}-A\right| \leqslant \epsilon\]   
+    Let  $ h\rightarrow0 ,\epsilon\rightarrow0 $,  $ \Rightarrow  $  $ \dfrac{\partial^2 f}{\partial x_1\partial x_2} (a,b)=A $ 
+\end{proof}
+remark. The proof focus on  the range of $ \Delta(f,Q) $.  
+\subsection{Differentiation of Integrals}
+In this section, we study: under what conditions on  $ \varphi $ can one prove that 
+\[\dfrac{d}{dt}\int_{a }^{ b } \varphi(x,t )\, \mathrm{d}x =\int_{a }^{b } \dfrac{\partial \varphi }{\partial t }(x,t)\, \mathrm{d}x   \] 
+\begin{theorem}
+    Suppose 
+    \begin{enumerate}
+        \item[$ (a) $]  $ \varphi(x,t) $ is defined for  $ a \leqslant x \leqslant b,c \leqslant t \leqslant d $;
+        \item[$ (b) $]  $ \alpha $ is increasing on  $ [a,b] $;
+        \item[$ (c) $] $ \varphi(\cdot,t )\in \mathscr{R}(\alpha) $ for  $ \forall t\in [c,d] $.
+        \item[$ (d) $]  $\exists s\in(c,d)$ s.t.  for  $ \forall \epsilon>0,\,\exists \delta>0 $ s.t. $ |\dfrac{\partial \varphi }{\partial t}(x,t)-\dfrac{\partial \varphi }{\partial t}(x,s)|<\epsilon,\forall x\in [a,b],t\in N_\delta(s) $   
+    \end{enumerate}
+    Define  $ f(t):=\int_{a }^{b } \varphi(x,t)\, \mathrm{d}\alpha(x)  $.
+    Then  $ \dfrac{\partial \varphi }{\partial t}(\cdot,s)\in \mathscr{R}(\alpha)  $,  $ f'(s ) $ exists, and 
+    \[f'(s):=\int_{a }^{b } \dfrac{\partial \varphi }{\partial t}(x,s)\, \mathrm{d}\alpha(x)  \] 
+\end{theorem}
+\begin{proof}
+    
+    Define\[\psi (x,t):=\dfrac{\varphi(x,t)-\varphi(x,s)}{t-s},\quad0<|t-s|<\delta\]
+    \begin{align*}
+        MVT&\Rightarrow \psi(x,t)=\dfrac{\partial \varphi }{\partial t }(x,u(x,t)),\quad\text{where  $ u(x,t)  $ is between  $ t  $ and  $ s $ }\\
+        (d)&\Rightarrow|\psi(x,t)-\dfrac{\partial \varphi }{\partial t}(x,s)|<\epsilon\tag{ $ \triangle $ }
+    \end{align*}
+    Note that \[\dfrac{f(t)-f(s)}{t-s}=\int_{a }^{b } \psi(x,t)\, \mathrm{d}\alpha(x) \tag{ $ \triangle\triangle $ } \]
+     $ (\triangle)\Rightarrow  $  $ \psi(\cdot,t)\rightarrow\dfrac{\partial \varphi }{\partial t}(\cdot,s) $ uniformly on  $ [a,b] $ as  $ t\rightarrow s $.
+      $ (\triangle\triangle ) $ and the theorem in  \S{7.3}  $ \Rightarrow  $  $ \dfrac{\partial \varphi }{\partial t}(\cdot,s)\in \mathscr{R}(\alpha) $, $ f'(s ) $ exists, and 
+      \[f'(s):=\int_{a }^{b } \dfrac{\partial \varphi }{\partial t}(x,s)\, \mathrm{d}\alpha(x)  \]     
+\end{proof}
+\begin{remark}
+    One may prove analogues of the previous theorem with  $ (-\infty,\infty) $ in place of  $ [a,b] $. 
+\end{remark}

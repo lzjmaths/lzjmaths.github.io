@@ -1,0 +1,79 @@
+\subsection{Algebraic numbers/integers}
+\begin{definition}
+     $ \alpha\in \mathbb{C} $ is called an \textbf{algebraic number} if  $ \exists f(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_0\in\mathbb{Q}[x] $, s.t.  $ f(\alpha)=0 $.\\\index{algebraic number}
+     Moreover, if we can take  $ f(x)\in\mathbb{Z} [x]$, call  $ \alpha  $ an algebraic integer.   \index{algebraic integer}
+\end{definition}
+\begin{example}
+     $ \pi,e\in\mathbb{C} $ not algebraic numbers.
+\end{example}
+For  $ \alpha\in \mathbb{C} $, consider  $ \varphi_{\alpha}:\mathbb{Q}[x] \rightarrow \mathbb{C}:f(x)\mapsto f(\alpha)$. Then  $ \mathrm{Im} \,\varphi_\alpha=\mathbb{Q}[\alpha]\subset \mathbb{C} $   \index{$ \varphi_\alpha $}\\
+Note that  $ \mathbb{Q}[x] $ is PID $ \Rightarrow $  $\ker \varphi_\alpha =(F(x))$ principal.\\
+i.e. we have two cases:
+\begin{enumerate}[(a)]
+    \item  $ \ker\varphi_\alpha=0 $
+    \item  $ F(x) $ is monic irreducible $ \Leftrightarrow $ $ \alpha  $ is an algebraic number.  
+\end{enumerate} 
+In case (b),\\
+\begin{center}
+     $ \alpha  $ is an algebraic integer  $ \Leftrightarrow  $  $ F(x)\in \mathbb{Z}[x] $.  
+\end{center}
+\begin{definition}
+    Monic generator  $ F(x)  $ of  $ \ker \varphi_\alpha  $ is called the \textbf{minimal polynomial for  $ \alpha $}\index{minimal polynomial for  $ \alpha $}.
+\end{definition}
+For  $ d\in \mathbb{Q} $, consider  $ \mathbb{Q}[\sqrt{d}] $. \\
+We may assume  $ d\in \mathbb{Z} $ and square free.\\
+Then  $ K=\mathbb{Q}[\sqrt{d}] $ is called a \textbf{quadratic field}\index{quadratic field}.\\
+\[\mathcal{O}_K:=\{\text{algebraic integers in  $ K $ }\}\subset K\]\index{$ \mathcal{O}_K$}  
+\begin{proposition}
+    \begin{equation*}
+        \mathcal{O}_K= \left\{ 
+            \begin{aligned}
+                \,&\mathbb{Z}\left[\sqrt{d}\right]\quad &\text{if } &d\equiv 2,3\mod 4 \\
+                \,&\mathbb{Z}\left[\frac{1+\sqrt{d}}{2}\right]\quad &\text{if } &d\equiv1\mod 4
+            \end{aligned}
+        \right.
+    \end{equation*}
+\end{proposition}
+\begin{proof}
+    For  $ \alpha =a+b\sqrt{d} $ ($ a,b\in \mathbb{Q} $), minimal polynomial for  $ \alpha  $ is  $ x^2-2ax+(a^2-b^2d) $.\\
+    Then  $ \alpha\in\mathcal{O}_K $ if and only if  $ 2a,a^2-b^2d\in \mathbb{Z} $.  
+\end{proof}
+Call  $ \mathcal{O}_K $ the ring of integers of  $ K  $.\index{ring of integers of  $ K $} \\
+In general,  $ K\subset \mathbb{C} $,  $ \mathcal{O}_K=\{\text{algebraic integers}\}\subset K $ is a ring.\\
+If we define   $ N:K\rightarrow\mathbb{Q} , a+b\sqrt{d}\mapsto a^2-b^2d$.\\
+One can check  $ \alpha\in \mathcal{O}_K$ $ \Rightarrow  $  $ N(\alpha )\in \mathbb{Z} $. Morover,  $ \alpha  $ is a unit in  $ \mathcal{O}_K $ if and only if  $ N(\alpha)=\pm 1 $. $ d \geq 0 $ then  $ N(\alpha  \geq 0) $.          \\
+For  $ 0 \geq d \geq -5 $,  $ \mathcal{O}_K^\times=\{\pm 1\} $.\\
+\begin{theorem}[unit theorem]
+    For  $ d \geq 0 $,  $ \exists u\in \mathcal{O}_L^\times $,  $ u\not=\pm 1 $, s.t.
+    \[\mathcal{O}_K^\times=\{\pm u^n:n\in\mathbb{Z}\}\]     
+\end{theorem}
+\begin{theorem}
+    For  $ d<0 $,  $ \mathcal{O}_K $ is a PID  $ \Leftrightarrow $  $ d=-1,-2,-3,-7,-11,-19,-43,-67,-163 $ called \textbf{Heegner number}    
+\end{theorem}
+However, we don't know there are infinitely many  $ d>0  $ s.t.  $ \mathcal{O}_K $ is a PID.
+\begin{proposition}
+     $ \mathcal{O}_K $ is a \textbf{Dedekind domain}: an integral domain s.t.  $ \forall  \, I\subset \mathcal{O}_K $ nonzero ideal,  $ \exists P_1,P_2,\cdots,P_r\subset \mathcal{O}_K $maximal ideal.  $ e_1,\cdots,e_r\in\mathbb{Z}_{>0}  $  s.t.
+     \[I=P_1^{e_1}\cdots P_r^{e_r}\] 
+\end{proposition}
+\section{Modules}
+\subsection{Introduction}
+Let  $ R  $ be a ring.(unital and commutative)
+\begin{definition}
+    An  \textbf{$ R $-module}\index{R-module@$ R $-module} (or  left $ R $-module) is an abelian  group  $ (V,+) $ together with 
+    \[R\times V\rightarrow V,\, (a,v)\mapsto av\tag{Scalar multiplication}\]
+    s.t.  $ \forall a,b\in R,v,w\in V $
+    \begin{align*}
+        (1)&\quad 1\cdot v=v\\
+        (2)&\quad (ab)v=a(bv)\\
+        (3)&\quad a(v+w)=av+aw\\
+        (4)&\quad (a+b)v=av+bv
+    \end{align*} 
+    A \textbf{submodule}\index{R-module@$ R $-module!submodule} of  $ V $ is an abelian subgroup  $ W\subset V $ s.t.  $ \forall a\in R,\forall w\in W, a\cdot w\in W $.  
+\end{definition}
+\begin{definition}
+    A \textbf{homomorphism}(or  $ R $-linear map) is a group homomorphism  $ \varphi:V\rightarrow V' $ s.t.  $ \varphi(av)=a\varphi(v) $.  
+\end{definition}
+\begin{definition}[Quotient module]\index{quotient module}
+    For  $ W\subset V $ submodule,
+    \[ \pi:V\rightarrow V/W, v\mapsto [v+W] \] 
+\end{definition}

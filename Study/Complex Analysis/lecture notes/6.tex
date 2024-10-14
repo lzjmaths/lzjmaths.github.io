@@ -1,0 +1,78 @@
+\subsection{Steiner Circles}
+For  $ S(z)=\dps\frac{az+b}{cz+d} $,  $ S'(z)=\frac{ad-bc }{(cz+d)^2} $.
+
+A point  $ z\not\in  $ a circle  $ C $ is said to on the \name{right}(\name{left},\textbf{resp.}) of  $ C $ if  $ \img(z,z_1,z_2,z_3)>0 $($ \img(z,z_1,z_2,z_3)<0 $)
+
+\begin{remark}
+    \,
+    \begin{enumerate}
+        \item This agrees with everyday use since  $ (i,1,0,\infty)=i $ 
+        \item This distinct between left and right is the same for all triples, while the meaning may be reversed.
+        
+        (If  $ C=\hat{\mathbb{R}} $, then  $ (z,z_1,z_2,z_3)=\dps\frac{az+b}{cz+d} $ with  $ a,b,c,d\in\mathbb{R} \Rightarrow \img(z,z_1,z_2,z_3)=\dps\frac{ad-bc}{|cz+d|^2}\img(z)$)
+        \item We can define an absolute positive orientation of all finite circles by requiring that  $ \infty $ should be lie to the right of the oriented circles. 
+    \end{enumerate}
+    Consider a M{\"o}bius transformation of the form 
+    \[w=k\cdot\frac{z-a}{z-b}\]
+    Here,  $ z=a\mapsto w=0,z=b\mapsto w=\infty $.
+    
+    Then circles through  $ a,b $ maps to straight line through  $ 0,\infty $.
+    
+    The concentric circle about the origin, $ |w|=\rho $, correspond to circles with the equation 
+    \[\dps\left|\frac{z-a}{z-b}\right|=\frac{\rho}{|k|}\]
+    These are the circles of \name{Apollonius} with limit points  $ a $ and  $ b $. 
+\end{remark}
+Denote by  $ C_1 $ the circles through  $ a,b $ and  $ C_2 $ the circles of Apollonius with these limit points. The configuration formed by all the circles  $ C_1 $ and  $ C_2 $ is called the \name{Steiner circles}(or \name{circular net})
+\begin{theorem}
+    \,
+    \begin{enumerate}
+        \item[(a)] There is exactly one  $ C_1 $ and one  $ C_2 $ through each point in  $ \hat{\mathbb{C}}\backslash\{a,b\} $
+        \item[(b)] Every  $ C_1 $  meets every  $ C_2 $ under right angle.
+        \item[(c)] Reflection in a  $ C_1 $ transforms every  $ C_2 $ into itself and every  $ C_1 $ into another  $ C_1 $.
+        \item[(d)] The limit points  $ a,b $ are symmetric w.r.t. each  $ C_2 $, but not w.r.t. other circles.     
+    \end{enumerate}
+\end{theorem}   
+\begin{proof}
+    If the limit points are  $ 0,\infty $, those properties are trivial in the  $ w $-plane. The general case follows since all properties are invariant under M{\"o}bius transformations.
+\end{proof}
+\section{Elementary Conformal mapping}
+\begin{example}
+     $ w=z^\alpha $ where  $ \alpha>0 $.
+     
+     Let  $ S(u_1,u_2) $ with  $ 0<\varphi_2-\varphi_1 \leq 2\pi $ be  $ \{z\in \mathbb{C}:z\not=0,\varphi_1<\arg(z)<\varphi_2\} $ where  $ \arg(z) $ can be chosen as any value of it.   
+
+     Then  $ S(\varphi_1,\varphi_2) $ is a region.
+     
+     In this region, a unique value of  $ w=z^\alpha $ is defined by  $ \arg w=\alpha\arg z $.
+     
+     This function is analytic with  $ \dps\frac{\mathrm{d}w}{\mathrm{d}z}=\alpha\dps\frac{w}{z} $.
+     
+     This function is  $ 1-1 $ only if  $ \alpha(\varphi_2-\varphi_1) \leq 2\pi $.  
+\end{example}
+\begin{example}
+     $ w=e^z  $  maps  $ \{z\in \mathbb{C}:\dps-\frac{\pi }{2}<\img(z)<\frac{\pi}{2}\} $ onto  $ \{w\in\mathbb{C}:\Real( w)>0\} $ 
+\end{example}
+\begin{example}
+     $ w=\dps\frac{z-1}{z+1} $ maps  $ \{z\in \mathbb{C}:\Real(z)>0\} $ onto  $ \{ww\in \mathbb{C}:|w|<1\} $   
+\end{example}
+\begin{example}
+    \begin{equation}
+        \mathbb{C}\backslash[-1,1]\xrightarrow{z_1=\frac{z+1}{z-1}}\mathbb{C}\backslash(-\infty,0]\xrightarrow{z_2=\sqrt{z_1}}\{\Real(z_2)>0\}\xrightarrow{w=\frac{z_2-1}{z_2+1}}\{w\in\mathbb{C}:|w|<1\}
+    \end{equation}
+\end{example}
+\subsection{Elementary Riemann surfaces}
+\begin{example}
+     $ w=z^n $,  $ n\in \mathbb{Z}_+ $ and  $ n>1 $.
+     
+     There is a 1-1 correspondence between each angle  $ \dps\frac{(k-1)2\pi}{n}<\arg z<\frac{k\cdot 2\pi}{n},k=1,2,\cdots,n $ and while  $ w $-plane except for the positive real axis.  
+\end{example}
+\begin{example}
+     $ w=e^z $. This function maps each parallel strip $ (k-1)2\pi<\img z<k\cdot 2\pi, k\in \mathbb{Z} $ onto a sheet with a  cut along the positive axis.
+\end{example}
+\section{Complex Integration}
+\subsection{Fundamental Theorems}
+\subsubsection{Line integral and rectifiable arcs}
+Let  $ f(t)=u(t)+iv(t) $ be a complex-valued defined on  $ t\in[a,b]\subset\mathbb{R} $ where $ u,v $ are real-valued functions.
+If  $ f $ is continuous on  $ [a,b] $, we may define the \name{integral}
+\[\int_a^bf(t)\mathrm{d}t:=\int_a^bu(t)\mathrm{d}t+i\int_a^bv(t)\mathrm{d}t\]   
+

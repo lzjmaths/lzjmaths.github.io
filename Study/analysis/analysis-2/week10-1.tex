@@ -1,0 +1,62 @@
+\begin{corollary}
+     $ f=(f^1,\cdots,f^k):\Omega\rightarrow\mathbb{R}^k $, $ \Omega  $ open in  $ \mathbb{R}^d \times \mathbb{R}^k$. If  $ \Jac_y(f) $ invertible at  $ p\in \Omega $. Then  $ \exists\, p\in U\subset \Omega$,  $ V\subset\mathbb{R}^d\times \mathbb{R}^k $ s.t.
+     \[(x^1,\cdots,x^d,f^1,\cdots,f^k)=(x,f):U\cong V\]
+     is a diffeomorphism.   
+\end{corollary}
+\begin{definition}\label{def1}
+    Let  $ M\subset \mathbb{R} $,  $ r \geq 1 $. We say  $ M  $ is an \textbf{(embedding) $ C^r $-submanifold} of  $ \mathbb{R}^n $ \index{(embedding) $ C^r $-submanifold} if for every  $ p\in M $,  $ \exists\,U\in Nbh_{\mathbb{R}^n}(p) $,  $ 0 \leq d \leq n,k=n-d $,  $ \exists\,C^r  $-functions
+    \[( \varphi^1,\cdots,\varphi^d,f^1,\cdots,f^k):U\rightarrow \mathbb{R}^n\]
+    satisfying:
+    \begin{enumerate}[(a)]
+        \item  $ (\varphi,f):U\cong V $ is a  $ C^r $-diffeomorphism.
+        \item    $ (\varphi,f)^{-1}((\mathbb{R}^d\times 0)\cap V)=M\cap U $,(equivalently, $ (\varphi,0) $ is bijective) 
+    \end{enumerate}    
+\end{definition}
+\begin{proposition}
+     $ \varphi(M\cap U) $ is an open subset of  $ \mathbb{R}^d $. Moreover,  $ \forall h\in C^r(U,\mathbb{R}) $,  $ \exists\,!\, g:\varphi(M\cap U)\rightarrow\mathbb{R} $ s.t. 
+     \begin{equation}
+        h|_{M\cap U}=g\circ \varphi|_{M\cap U}\tag{$ \triangle $}
+     \end{equation} 
+     Moreover, any  $ g $ satisfying  $ (\triangle) $  is  $ C^r $ 
+\end{proposition}
+\begin{lemma}
+    Let  $ \Omega\subset \mathbb{R}^n $ open,  $ \psi=(\psi^1,\cdots,\psi^n):\Omega\rightarrow \mathbb{R}^d $ is a $ C^r $ function.  Assume  $ \Omega,\psi $ satisfying a similar property as  $ U,\varphi $ in  Def \ref{def1}. Then  $ (U,\varphi|_{M\cap U}) $ and  $ (\Omega,\psi|_{M\cap \Omega}) $ are  $ C^r $-compatible, i.e.
+    \[\Psi|_{M\cap,U,\Omega}\circ (\varphi|_{M\cap U\cap \Omega})^{-1}:\varphi(M\cap U\cap \Omega)\rightarrow \Psi(M\cap U\cap \Omega)\]   
+    is a  $ C^r $-diffeomoephism of open subsets of  $ \mathbb{R}^d $.  
+\end{lemma}
+
+\begin{definition}
+    Let  $ M  $ be a nonempty Hausdorff. A set  $ \mathcal{U}=\{(U_\alpha,\varphi_\alpha)_{\alpha\in \mathcal{A}}\} $ is called a  \textbf{$ C^r $-atlas}\index{$ C^r $-atlas} of  $ M  $ if 
+    \begin{itemize}
+        \item  $ M=\bigcup\limits_\alpha U_\alpha $,  $ U_\alpha $ is open,
+        \item  $ \varphi_\alpha:U_\alpha\xrightarrow{\cong}\varphi(U_\alpha) $ is  homeomorphism,  $ \varphi(U_\alpha) $ is open in  $ \mathbb{R}^{d_\alpha} $
+        \item  $ \forall \alpha,\beta\in\mathcal{A} $,  $ \varphi_\alpha $ and  $ \varphi_\beta $ are  $ C^r $ compatible, i.e. $ \varphi_\beta\circ\varphi_\alpha^{-1}:\varphi_\alpha(U_\alpha\cap U_\beta)\xrightarrow{\cong}\varphi_\beta(U_\alpha\cap U_\beta) $ is a  $ C^r $-diffemmorphism.       
+    \end{itemize} 
+     $ (M,\mathcal{U}) $ is called a  \textbf{$ C^r $-manifold}\index{$ C^r $-manifold}.\\
+     We assume  $ M  $ is second countable.\\
+     We call  $ C^\infty $-manifold differential manifold or smooth manifold.  
+\end{definition}
+\begin{definition}
+     $ U_\alpha $ is  $ d_\alpha $-dimensional. If  $ p\in U_\alpha $,  $ \dim_p M=d_\alpha $.\\
+     If  $ \dim_p M=d $ independent of  $ p $, we say  $ M  $ is equidimensional.   
+\end{definition}
+
+\begin{proposition}
+     $ \forall d\in \mathbb{N} $,  $ U_d=\{x\in M:\dim_x M=d\} $ is  open and closed in  $ M $.\\
+     In particular, if  $ M  $ is connected, then  $ M  $ is equidimensional.  
+\end{proposition}
+\begin{definition}
+    A \textbf{$ C^r $-chart }\index{ $ C^r $-chart} on  $ (M,\mathcal{U}) $ is  $ (V,\psi) $ s.t.
+    \begin{itemize}
+        \item  $ V  $ is open in  $ M  $,  $ \psi(V ) $ open in  $ \mathbb{R}^d $.
+        \item  $ \psi:V\rightarrow \psi(V) $ homeomorphism.
+        \item  $ (V,\psi) $ is  $ C^r $-compatible with any member of  $ \mathcal{U} $.   
+    \end{itemize} 
+     $ \overline{\mathcal{U}}=\{C^r-\text{chart of }(M,\mathcal{U})\} $ is the maximal  $ C^r  $ atlas contain  $ \mathcal{U} $.\\
+     A maximal  $ C^r $-atlas on  $ M  $ is called a  $ C^r  $-structure.\\  
+\end{definition}
+\begin{definition}
+     $ M,N  $ are  $ C^r  $-manifolds,  $ F:M\rightarrow N $ is a  $ C^r $-map if  $ F  $ is continuous and if for every chart  $ (U,\varphi) $ of  $ M  $ and  $ (V,\psi) $ of  $ N  $, we have 
+     \[\psi\circ F\circ\varphi^{-1}:\varphi(U\cap F^{-1}(V))\rightarrow \psi(V)\] is  $ C^r  $ function.\\
+     If  $ F  $ is bijective,  $ F $ and  $ F^{-1}  $ are  $ C^r $, we sat  $ F  $ is a  $ C^r $-diffeomorphism.
+\end{definition}

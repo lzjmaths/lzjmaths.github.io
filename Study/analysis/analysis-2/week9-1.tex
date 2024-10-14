@@ -1,0 +1,21 @@
+\section{From the implicit function theorem to differential manifolds}
+\subsection{The inverse function theorem}
+\begin{definition}
+    Let  $ U\subset \mathbb{R}^n $ open,  $ V\subset \mathbb{R}^m $ open.  $ f: U\rightarrow V  $ is called a  \textbf{$ C^r $-diffeomorphism} ($ 0 \leq r \leq \infty $), if  $ f  $ is bijective and  $ f,f^{-1}\in C^r $.\index{$ C^r $-diffeomorphism} \\
+    In fact,  $ m=n $ since  $ \Jac(f)\cdot\Jac(f^{-1})=I $ 
+\end{definition}
+\begin{theorem}[Inverse Function Theorem]\index{Inverse Function Theorem}
+    Let  $ \Omega\subset \mathbb{R}^n $ open. Let  $ \varphi:\Omega\rightarrow\mathbb{R}^n $ be  $ C^r $-map,  $ 1 \leq r \leq +\infty $.  Let  $ p\in \Omega $. Assume  $ \mathrm{d}\varphi|_p:\mathbb{R}^n\rightarrow \mathbb{R}^n $ is invertible. Then  $ \exists  $ a neighborhood  $ U\subset  \Omega $  of  $ p $, neighborhood  $ V\subset \mathbb{R}^n $ of  $ q=\varphi(p) $ s.t.  $ \varphi:U\rightarrow V $ is  $ C^r $-diffeomorphism.  
+\end{theorem} 
+\begin{lemma}
+    First prove it is true for  $ \varphi  $ bijective.
+\end{lemma}
+\begin{corollary}
+     $ r \geq 1  $,  $ \Omega\subset \mathbb{R}^n $ open.  $ \varphi:\Omega\rightarrow \mathbb{R}^n $ injective  $ C^r $-map s.t.  $ \Jac(\varphi) $  is invertible everywhere. Then  $ \varphi(\Omega) $ is open in  $ \mathbb{R}^n $,  $ \varphi:\Omega\rightarrow \varphi(\Omega) $ is a  $ C^r $-diffemmorphism.     
+\end{corollary}
+\subsection{The Implicit Theorem}
+\begin{corollary}
+     $ \Omega\subset \mathbb{R}^d\times\mathbb{R}^k $ open,  $ (x,y)=(x^1,\cdots,x^d,y^1,\cdots,y^k) $,  $ f=(f^1,\cdots,f^k):\Omega\rightarrow \mathbb{R}^k $ is  $ C^r $ function, $ r \geq 1 $. Assume  $ \Jac_y(f) $ is invertible at  $ p\in \Omega $. Then  $ \exists\, $ neighborhood  $ U\subset \Omega  $ of $ p $ and open  $ V\subset \mathbb{R}^d\times\mathbb{R}^k $ s.t. we have  $ C^r $-diffemmorphism 
+     \[(x^1,\cdots,x^d,f^1,\cdots,f^k):U\rightarrow V\]    
+\end{corollary}
+

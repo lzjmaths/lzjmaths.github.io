@@ -1,0 +1,50 @@
+\subsection{Metric spaces, convergence of sequences, and continuous functions}
+\subsection{Introduction}
+\subsection{Basic definitions and examples}
+\begin{definition}
+    Let  $ X  $ be a set. A function  $ d :X\times X\rightarrow \mathbb{R }_{ \geq 0} $ is called a \textbf{metric} if for all  $ x,y,z\in X  $ we have 
+    \begin{enumerate}[$ (1) $]
+        \item  $ d(x,y)=d(y,x) $ 
+        \item  $ d(x,y)=0  $ iff  $ x=y  $ 
+        \item (Triangle inequality) $ d(x,z) \leq d(x,y)+d(y,z) $
+    \end{enumerate}
+    The pair  $ (X,d) $, or simply  $ X  $ is called a \textbf{metric space}. If  $ x\in X  $ and  $ r\in(0,+\infty] $, the set 
+    \[B_X(x,r)=\{y\in X :d(x,y)<r \}\]
+    often abbreviated to  $ B(x,r) $, is called the open ball with center  $ x  $ and radius  $ r $. If  $ r\in [0,+\infty ) $, 
+    \[\overline{B}_X(x,r)=\{y\in X :d(x,y) \leq r\}\]
+    also abbreviated to  $ \overline{B }(x,r) $ is called the \textbf{closed ball} with center  $ x  $ and radius    $ r  $.   
+\end{definition} 
+Unless otherwise stated, the metric on  $ \mathbb{R }^n  $ and  $ \mathbb{C }^n  $(and their subsets ) are assumed to be the \textbf{Euclidean metrics}.
+\begin{example}
+    Let  $ X=X_1\times \cdots X_N  $ where each  $ X_i  $ is a metric space with metris  $ d_i $. Write  $ x=(x_1,\cdots,x_N )\in X  $ and  $ y=(y_1\cdots,y_N )\in X $. Then the following are metrics on  $ X  $:
+    \begin{align}
+        d(x,y)&=d_1(x_1,y_1)+\cdots+d_N(x_N,y_N)\\
+        \delta(x,y)&=\max\{d_1(x_1,y_1),\cdots,d_N(x_N,y_N)\}\\
+        \rho (x,y)=\sqrt{d_1(x_1,y_1)^2+\cdots+d_N(x_n,y_N)^2}
+    \end{align}
+    With respect to the metris  $ \delta  $, the open balls of  $ X  $ are "polydisks"
+    \[B_X(x,r)=B_{X_1}(x_1,r)\times\cdots\times B_{X_N}(x_N, r)\] 
+\end{example}
+There is no standard choice of metric on the product of metric spaces.  $ d,\delta,\rho $ are all good, and they are equivalent in the following sense:
+\begin{definition}
+    We say that two metrics  $ d_1,d_2 $ on a set  $ X  $ are \textbf{equivalent} and write  $ d_1\approx d_2 $, if there exist  $ \alpha,\beta>0  $ such that for any  $ x,y\in X  $ we have 
+    \[d_1(x,y) \leq \alpha d_2(x,\qquad d_2(x,y) \leq \beta d_1(x,y)\]
+    This is an equivalence relation. More generally, we may write  $ d_1\lesssim d_2 $ if  $ d_1 \leq\alpha d_2  $ for some  $ \alpha>0  $. Then  $ d_1\approx d_2  $ iff  $ d_1\lesssim d_2 $ and  $ d_2\lesssim d_1 $.   
+\end{definition}
+\begin{example}
+    We have  $ \delta \leq\rho \leq d \leq N\delta $. So  $ \delta\approx\rho\approx\rho \approx d $.  
+\end{example}
+Given finitely many metric spaces  $ X_1,\cdots,x_N $,  the metric on the product space  $ X=X_1\times \cdots\times X_N  $ is chosen to be any one that is equivalent to the ones defined before. In the case that each  $ X_i  $ is a subset of  $ \mathbb{R } $  or  $ \mathbb{C}  $, we choose the metric on  $ X  $ to be the \textbf{Euclidean metric}
+\begin{definition}
+    Let  $ (X,d) $ be a metric space. Then a \textbf{metric subspace} is denotes an object  $ (Y,d|Y) $ where  $ Y\subset X  $ and  $ d|_Y  $ is the restriction of  $ d  $ to  $ Y  $, nemly for all  $ y_1,y_2\in Y  $ we set \[d|_Y(y_1,y_2)=d(y_1,y_2)\]
+\end{definition}
+\subsection{Convergence of sequences}
+\begin{definition}
+    Let  $ (x_n)_{n\in \mathbb{Z}_+} $ be a sequence in a metric space  $ X  $. Let  $ x\in X  $. We say that  $ x  $ is a \textbf{limit }of  $ x_n  $ and write  $ \lim_{n \to \infty} x_n =x $, if: For every real number  $ \epsilon>0  $ there exists  $ N\in \mathbb{Z}_+  $ such that for every  $ n \geq N  $ we hace  $ d(x_n,x)<\epsilon $.   
+\end{definition}
+\begin{proposition}
+    Any sequence  $ (x_n)_{n\in \mathbb{Z}_+}  $ in a metric space  $ X  $ has at most one limit
+\end{proposition}
+\begin{proposition}[Squeeze theorem]
+    Suppose that  $ (x_n ) $ is a sequence in a metric space  $ X  $ ,Let  $ x\in X $. Suppose that there is a sequence  $ (a_n ) $ in  $ \mathbb{R } {\geq 0} $ such that  $ \lim_{n  \to \infty} a_n=0  $ and that  $ d(x_n,x ) \leq a_n  $ for all  $ n  $. Then  $ \lim_{n  \to \infty} x_n=x $  
+\end{proposition}

@@ -1,0 +1,66 @@
+\subsection{Tensor product}
+\subsection{Introduction}
+\begin{proposition}\,\label{exact_tensor}
+    \begin{enumerate}[(1)]
+         \item $ 0\rightarrow W'\rightarrow W\rightarrow W'' $ is exact if and only if \\
+          $ \forall V $  $ R  $-module,  $ 0\rightarrow \Hom(V,W')\rightarrow \Hom(V,W)\rightarrow \Hom(V,W'') $ is exact.
+          \item  $ V'\rightarrow V\rightarrow V''\rightarrow 0$ is exact if and only if \\
+          $ \forall W $  $  R  $-module,  $ 0\rightarrow \Hom(V'',W)\rightarrow\Hom(V,W)\rightarrow\Hom(V',W) $ is exact   
+    \end{enumerate}
+\end{proposition}
+\begin{proposition}\label{coker exact sequence}
+     $ V\xrightarrow{f}W\rightarrow U\rightarrow 0 $ is exact means  $ U=\Coker f:=W/\img f $  
+\end{proposition}
+\subsection{Tensor Product}
+\begin{definition}
+     $ \forall U,V  $  $ R  $-module,  $ \exists  $  $ R $-module  $ X  $ and  $ U\times V\xrightarrow{F}X $  $ R  $-bilinear map \st  $ \forall  $  $ U\times V\xrightarrow{G}W  $  $ R  $-bilinear map, there exists a unique  $ R  $-linear map  $ g:X\rightarrow W $ with  $ g\circ F=G $.\\
+     Moreover,  pair $ (X,F) $  is unique up to unique isomorphism.\\
+     Write  $ (U\otimes_R V,U\times V\rightarrow U\otimes V ) $ 
+\end{definition}
+\begin{remark}
+    The existence of  $ X  $ is proved through quotient space  $ R^{\oplus U\times V}/V $ for some equivalent submodule  $ V $.  
+\end{remark}
+\begin{proposition}[Proper A]
+    \,
+    \begin{enumerate}[(1)]
+        \item  $ R\otimes_R V\cong V $
+        \item  $ V\otimes W\cong W\otimes V $
+        \item  $ (V\oplus U)\otimes W\cong (U\otimes W)\oplus (V\otimes W) $
+        \item  $ (U\otimes V)\otimes W=U\otimes (V\otimes W) $    
+    \end{enumerate}
+\end{proposition}
+\begin{example}
+     $ R^m\otimes R^n=R^{mn} $,  $ R^m\otimes V\cong V^m $  
+\end{example}
+\begin{proposition}[Proper B]
+    \[\Hom(U\otimes V,W)\cong \Hom(U,\Hom(V,W))\]
+\end{proposition}
+\begin{remark}
+    It is up to the commutative diagram in the definition.
+\end{remark}
+\begin{proposition}[Proper C]
+    If  $ W'\rightarrow W\rightarrow W''\rightarrow 0 $ is exact, then  $ V\otimes W'\rightarrow V\otimes W\rightarrow V\otimes W''\rightarrow 0 $ is exact for all $ V  $  $ R  $-module.
+\end{proposition}
+\begin{remark}
+    It is directly from Proper B and Prop \ref{exact_tensor}
+\end{remark}
+\begin{example}
+     $ \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/5\rightarrow 0 $ is exact\\
+     So  $ \mathbb{Z}/4\otimes \mathbb{Z}\rightarrow \mathbb{Z}/4\otimes \mathbb{Z}\rightarrow \mathbb{Z}/4\otimes \mathbb{Z}/5\rightarrow 0 $ is exact.\\
+     By Prop \ref{coker exact sequence},  $ \mathbb{Z}/4\otimes \mathbb{Z}/5=\mathbb{Z}/\mathbb{Z}=0 $ \\
+     Similarly,  $ \mathbb{Z}/4\otimes \mathbb{Z}/6=\mathbb{Z}/2 $ 
+\end{example}
+There is a proposition to describe it.
+\begin{proposition}
+    \begin{align*}
+        R/I\otimes V&\cong V/_{IV}\\
+        R/I\otimes R/J&\cong R/_{(I+J)}
+    \end{align*}
+\end{proposition}
+\begin{proposition}
+    \begin{align*}
+        R/I\otimes_R R'&\cong R'/_{IR'}\\
+        R[x]\otimes_R  R'\cong R'[x]
+    \end{align*}
+\end{proposition}
+Therefore,  $ \mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong \mathbb{R}[x]/(x^2+1)\otimes \mathbb{C}=\mathbb{C}[x]/(x^2+1)\cong \mathbb{C}\times \mathbb{C} $  

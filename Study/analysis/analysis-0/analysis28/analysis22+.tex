@@ -1,0 +1,71 @@
+\subsection{A Probabilistic Proof of the Weierstrass Theorem}
+\begin{theorem}
+    If  $ f :[0,1]\rightarrow\mathbb{R} $ is continuous, there exists a sequence of polynomials $ \{P_n \} $ such that 
+    \[\lim\limits_{n\to\infty } P_n (x)=f(x) \text{ uniformly on }[0,1] \]
+\end{theorem}
+\paragraph{Ingredients:} $ X\overset{d }{=} $ binomial distribution with parameter  $ n\in \mathbb{N } $ and  $ x\in[0,1] $\\
+ $ X=X_1+\cdots+X_n  $ where  $ X_j $'s are independent and  $ \mathbb{P}(X_j=1)=x=1-\mathbb{P}(X_j=0) $\\
+ Then  $ \mathbb{P}(X=j)=\binom{n }{j } x^j(1-x)^{n-j},0 \leqslant j \leqslant n  $.\\
+  $ \Rightarrow  $ mean of  $ X  $:  $ \mathbb{E}X:=\sum\limits_{j=0}^{n}j\mathbb{P}(X=j)=nx  $ \\and variance of  $ X  $:  $ Var(X):=\mathbb{E}(X-\mathbb{E}X)^2=nx(1-x) $.\\
+\subparagraph{Markov's Inequality:}  $ Y  $ is a random with  $ Y\geqslant 0  $, then  $ \mathbb{P}(Y\geqslant a) \leqslant \dfrac{\mathbb{E}Y }{a} $ for  $ a>0 $
+\begin{proof}
+     $ F_Y(y):=\mathbb{P}(Y \leqslant y) $ , then  
+      \[\mathbb{E}Y=\int_{0 }^{\infty} y\, \mathrm{d}F_Y(y)\geqslant \int_{a}^{\infty} \, \mathrm{d}F_Y(y)\geqslant a \int_{a}^{\infty} \, \mathrm{d}F_Y(y)=a\mathbb{P}(Y\geqslant a)\qedhere  \]
+\end{proof}   
+Thus  \[\mathbb{P}(|X-\mathbb{E}X|\geqslant k\sqrt{Var(X)})=\mathbb{P}(|X-\mathbb{E}X|^2\geqslant k^2Var(X)) \leqslant \dfrac{\mathbb{E}|X-\mathbb{E}X|^2}{k^2Var(X)}=\dfrac{1 }{k^2} \]
+This is usually called  $ Chebyshev'inequality $.
+\begin{proof}
+    Let  $ Y_n:=f(\frac{X}{n}),n\in\mathbb{N} $.\\
+    Then  \[\mathbb{E}Y=\mathbb{E}f(\frac{X}{n})=\sum\limits_{j=0 }^{n } f(\frac{j }{n })\mathbb{P}(X=j)=\sum\limits_{j=0 }^{n } f(\frac{j }{n })\binom{n }{j }x^j(1-x)^{n-j }:=B_n(f,x)\]
+     $ B_n $  is called \underline{Bernstein polynomial}.\\
+    We will prove  $ B_n\rightarrow f $ uniformly on  $ [0,1] $ as  $ n\rightarrow \infty $.\\
+    Let  $ M:=\sup\limits_{0 \leqslant x \leqslant 1}|f(x)| $ \\
+     $ f  $ is continuous on  $ [0,1] $  $ \Rightarrow  $  $ \forall \epsilon>0  $,  $ \exists \delta>0  $ s.t.  $ |f(x)-f(y)|<\frac{\epsilon}{2 },\,\forall |x-y|<\delta $.\\
+     We choose  $ K\in \mathbb{N } $ s.t.  $ \frac{2M }{k^2 }<2\epsilon $, and choose  $ N\in\mathbb{N } $ s.t.  $ \frac{K }{2\sqrt{N}}<\delta $.
+     Then 
+     \begin{align*}
+        |B_n(f;x)-f(x)|&=|\sum\limits_{j=0 }^{n } [f(\frac{j }{n })-f(x)]\binom{n }{j }x^j(1-x)^{n-j }|\\
+         &\leqslant \sum\limits_{j=0 }^{n } |f(\frac{j }{n })-f(x)|\binom{n }{j }x^j(1-x)^{n-j }\\
+         &<\sum\limits_{|\frac{j }{n}-x|<\frac{k }{2\sqrt{n}}} |f(\frac{j }{n })-f(x)|\binom{n }{j }x^j(1-x)^{n-j }\\
+         &+\sum\limits_{|\frac{j }{n}-x|\geqslant \frac{k }{2\sqrt{n}}} |f(\frac{j }{n })-f(x)|\binom{n }{j }x^j(1-x)^{n-j }\\
+         &<\frac{\epsilon}{2 }\sum\limits_{j=0 }^{n }\binom{n }{j }x^j(1-x)^{n-j }+2M\cdot\mathbb{P}(|\frac{X}{n}-x|\geqslant \frac{k }{2\sqrt{n}}) 
+     \end{align*}
+     \[\mathbb{P}(|\frac{X}{n}-x|\geqslant \frac{k }{2\sqrt{n}})=\mathbb{P}(|X-nx|\geqslant \frac{k\sqrt{n}}{2}) \leqslant \mathbb{P}(|X-nx|\geqslant k\sqrt{nx(1-x)}) \leqslant \frac{1 }{k^2}\]
+     \[\Rightarrow |B_n(f;x)-f(x)|<\frac{\epsilon}{2 }+2M\cdot\frac{1 }{k^2 }<\epsilon,\quad\forall x\in [0,1],\forall n\geqslant N\]
+     \[\Rightarrow B_n(f;x)\rightrightarrows f(x)\text{ on }[0,1]\text{ as }n\rightarrow\infty\]    
+\end{proof} 
+\subsection{Stone's Generalization of the Weierstrass Theorem}
+\begin{corollary}[of the Weierstrass theorem]
+    For every interval  $ [-a,a] $ there is a sequence of real polynomials  $ P_n  $ s.t. 
+    \[P_n(0)=0\text{ and }\lim\limits_{n\to\infty} P_n(x)=|x|\text{ uniformly on }[-a,a] \] 
+\end{corollary}
+A family  $ \mathscr{A} $ of complex functions defined on a set  $ E  $ is said to be an \underline{algebra} if 
+\begin{enumerate}[(i)]
+    \item  $ f+g\in\mathscr{A} $
+    \item  $ fg\in\mathscr{A} $
+    \item  $ cf\in\mathscr{A} $ for  $ \forall f,g\in \mathscr{A } $     
+\end{enumerate} 
+If (iii) only holds for  $ c\in\mathbb{R } $, the  $ \mathscr{A } $ is an algebra of real functions.\\
+ $ \mathscr{A } $ is said to be \underline{uniformly closed} if:  $ f_n\in\mathscr{A } $ and  $ f_n\rightrightarrows f   $ on  $ E  $  $ \Rightarrow f\in \mathscr{A} $.\\
+  Let  $  \mathscr {B} $ be the set of all functions which are limits of uniformly convergent sequence of members of  $  \mathscr{A} $. i.e.  $  \mathscr{B }= \mathscr{A}\cup  \mathscr{A}'  $ with  $ d(f,g):=||f-g||=\sup\limits_{x\in E}|f(x)-g(x)| $. Then  $  \mathscr{B } $ is called the \underline{uniform closure} of  $  \mathscr{A } $.
+\begin{example}
+    The set of all polynomials is an algebra.\\
+    Weierstrass theorem $ \Leftrightarrow  $ the set of continuous functions on  $ [a,b]= $ the uniform closure of the set of polynomials on  $ [a,b] $. 
+\end{example}  
+\begin{theorem}
+    Let  $  \mathscr{B }  $ be the uniform closure of an algebra  $  \mathscr{A } $ of bounded functions. Then  $  \mathscr{B } $ is a uniformly closed algebra.
+\end{theorem}
+Let  $  \mathscr{A } $ be a family of functions on  $ E  $.  $  \mathscr{A } $ is said to be \underline{separate points} on  $ E  $ if $ \forall x_1\not=x_2\in E  $,  $ \exists f\in \mathscr{A},\,f(x_1)\not=f(x_2)$ \\
+We say that  $  \mathscr{A } $ \underline{vanishes at no point} of  $ \forall x\in E  $,  $ \exists g\in \mathscr{A} $ s.t. $ g(x)\not=0 $.
+\begin{theorem}
+    Suppose  $  \mathscr{A } $ is an algebra of functions on  $ E  $, separate points on  $ E  $, and vanishes at no point of  $ E  $. Suppose  $ x_1\not=x_2\in E  $ and  $ C_1,C_2  $ are constants  ($ C_1,C_2\in \mathbb{R} $ if  $  \mathscr{A } $) is a real algebra. Then  $ \exists f\in  \mathscr{A } $ s.t.
+    \[f(x_1)=C_1,\quad f(x_2)=C_2\] 
+\end{theorem}  
+\begin{proof}
+     $ \exists g,h,k\in  \mathscr{A }$ s.t.
+     \[g(x_1)\not=g(x_2),\,h(x_1)\not=0,\,k(x_2)\not=0\]
+     Let 
+     $ u(x):=g(x)k(x)-g(x_1)k(x),\quad v(x):=g(x)h(x)-g(x_2)h(x),x\in E $ 
+     \[\Rightarrow u\in  \mathscr{A }\text{ and }v\in  \mathscr{A },\, u(x_1)=v(x_2)=0,\quad u(x_2)\not=0,v(x_1)\not=0\]
+     \[\Rightarrow f(x):=\dfrac{C_1v(x)}{v(x_1)}+\dfrac{Cu(x)}{u(x_2)},\,x\in E \text{ satisfies }f(x_1)=C_1,f(x_2)=C_2\qedhere\]
+\end{proof}

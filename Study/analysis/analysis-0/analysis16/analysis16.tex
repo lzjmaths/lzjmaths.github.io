@@ -1,0 +1,76 @@
+
+
+\begin{theorem}
+    Suppose $ f,g:[a,w)\rightarrow  \mathbb{R}, \quad f,g\in \mathscr{R} $ on $ [a,b] $ for
+    $ \forall b \in [a,w). $ Suppose the improper intergral $  \int_{a }^{w} f(x)\, \mathrm{d}x  $ 
+    and $ \int_{a }^{w} g(x)\, \mathrm{d}x   $ are defined. Then
+    \begin{enumerate}[a)]
+        \item if $ f\in \mathscr{R}([a,w])$, the values of $ \int_{a }^{w} f(x)\, \mathrm{d}x   $ are the same as a proper or improper integral
+        \item  $ \forall \lambda_1,\lambda_2\in \mathbb{R} $, $ \lambda_1 f+\lambda_2 g $ is integrable in the improper sense on $ [a,w) $ and\[\int_{a }^{w} \lambda_1 f+\lambda_2 g\, \mathrm{d}x=\lambda_1 \int_{a }^{w} f(x)\, \mathrm{d}x +\lambda_2 \int_{a }^{w} g(x)\, \mathrm{d}x     \] 
+        \item $ \forall c\in [a,w), $ \[\int_{a }^{w} f(x)\, \mathrm{d}x=\int_{a }^{c} f(x)\, \mathrm{d}x+\int_{c }^{w} f(x)\, \mathrm{d}x     \]
+        \item if $ \varphi  :[A,U)\rightarrow[a,w)$ is strictly increasing continuous function with $ \varphi(A)=a  $ and $ \varphi(y)\rightarrow w  $ as $ y\rightarrow U,y\in[A,U) $ ,and $ \varphi'\in \mathcal(R)  $ on $ [A,B] $ for $ \forall B\in [A,U)  $ ,Then
+        $ f(\varphi)\varphi' $ is integrable in the improper sense on $ [A,U)  $ and \[\int_{a }^{w } f(x)\, \mathrm{d}x  =\int_{A }^{U } f(\varphi(y))\varphi'(y)\, \mathrm{d}y  \]
+        \item Newton-Leibniz formula is similiar to improper integral  
+    \end{enumerate} 
+
+\end{theorem}
+
+\begin{theorem}[Abel-Dirichlet test For  the convergence of an integral]
+    Let $ f,g:[A,w)\rightarrow \mathbb{R},f\in \mathscr{R} $ on $ [a,b] $ , $ g\in \mathscr{R} $ on $ [a,b] $, $ \forall b\in [a,w) $.
+    Suppose that g is monotonic,    Then $\int_{a }^{w } fg\, \mathrm{d}x  $ converges if one of the following pairs of conditions holds:
+        \[\begin{cases}
+            1)&  \int_{a }^{w } f(x)\, \mathrm{d}x \quad  \text{converges} \\
+
+            2)& g \quad \text{bounded on } [a,w) 
+        \end{cases}
+        \]
+        or 
+        \[
+            \begin{cases}
+                1')& F(b)=\int_{a }^{b } f(x)\, \mathrm{d}x \quad\text{is bounded on }[a,w)\\
+                2')& \lim\limits_{x\to \infty} g(x)=0
+            \end{cases}
+        \]
+    
+\end{theorem}
+
+\subsection{Rectifiable Curves}
+
+\begin{definition}
+    A continuous mapping $ \gamma: [a,b]\rightarrow \mathbb{R}^k $ is called a \underline{curve} in $ \mathbb{R}^k $. \\
+    If $ \gamma $ is one to one.$ gamma $ is called an \underline{arc}.\\
+    If $ \gamma(a)=\gamma(b),\quad \gamma $ is said to be a \underline{closed curve}
+\end{definition}
+
+For a partition $ P=\{x_0=a,x_1,x_2,\ldots,x_n=b\} $ , we define 
+\[\Lambda (P,\gamma):=\sum\limits_{i=1}^{n } |\gamma(x_i)-\gamma(x_{i-1})|\]
+
+We define the \underline{legth} of $ \gamma $ as 
+\[\Lambda(\gamma):= \sup\limits_P \Lambda(P,\gamma)\]
+
+If $ \Lambda(\gamma)<\infty $, we say that $ \gamma $ is \underline{rectifiable}.
+
+\begin{theorem}
+    If $ \gamma' $ is continuous on $ [a,b] $ ,then $ \gamma $ is rectifiable and 
+    \[\Lambda(\gamma)=\int_{a }^{b } |\gamma'(t)|\, \mathrm{d}t  \]  
+\end{theorem}
+
+\begin{remark}
+    Let $ \phi:[c,d]\rightarrow[a,b]  $ be continuous bijection. Let $ \gamma_2:=\gamma_1(\phi(t)),\quad t\in[c,d]   $.
+    Then $ \gamma_2 $  is rectifiable iff $ \gamma_1 $   is. and $ \gamma_2 $ and  $ \gamma_1  $ have the same lenth.
+    
+\end{remark}
+\section{Sequence and series of function}
+
+We say that a sequence of functions $ \{f_n\}_{n\in \mathbb{N}} $ converges to $ f $ pointwise on E if the sequence of numbers $ {f_n(x)} $ 
+converges for each $ x\in E $   
+
+Then we can define a function f by
+\[f(x):=\lim_{n\to \infty}f_n(x), \quad x\in E\]
+$ f  $ is called the limit function of $ {f_n} $.\\ 
+
+Similiarly, if $ \sum f_n(x) $ converges for each $ x\in E  $, and if we define
+\[f(x)=\sum\limits_{n=1}^{\infty} f_n(x),\quad x\in E\]
+
+the function f is called the sum of the series of $ \sum f_n $ 
+

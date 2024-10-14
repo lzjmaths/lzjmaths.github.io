@@ -1,0 +1,42 @@
+\begin{proposition}
+    Let  $ M  $ be a  $ C^r $-submanifold of  $ N  $, then the inclusion map $ \iota:M\rightarrow N $ is  $ C^r $.  
+\end{proposition}
+\begin{proposition}
+    Let  $ X, N  $ be  $ C^r $-submanifolds.  $ M  $ is  $ C^r $-submanifold of  $ N  $. Let  $ \iota:M\rightarrow N $. Let  $ F:X\rightarrow M $. Then  $ F  $ is  $ C^r $ iff  $ \iota\circ F  $ is  $ C^r $.    
+\end{proposition}
+\begin{example}
+     $ P\subset M,Q\subset N $ submanifold, then  $ P\times Q\subset M\times N  $ submanifold.
+\end{example}
+\begin{theorem}[Implict Function Theorem]\index{Implict Function Theorem}
+    Let  $ (x,y)=(x^1,\cdots,x^d,y^1,\cdots,y^k) $ be standard coordinates on   $ \mathbb{R}^d \times \mathbb{R}^k$.  $ \Omega\subset \mathbb{R}^d \times \mathbb{R}^k $ open. Let  $ M\subset \mathbb{R}^d \times \mathbb{R}^k  $. Assume  $ \exists\, C^r $  $ f=(f^1,\cdots,f^k):\Omega\rightarrow \mathbb{R}^k $ \st 
+    \begin{enumerate}
+        \item  $ M\cap \Omega=Z(f) $.
+        \item  $ \Jac_y f $ is invertible at  $ p\in M $ 
+    \end{enumerate}   
+    Then  $ \exists\,  $ Neighborhood  $ p\in U\subset \Omega $ \st \, $ M\cap U  $ is a  $ C^r  $-submanifold of  $ \mathbb{R}^d \times \mathbb{R}^k $ and  $ (M\cap U,x|_{M\cap U}) $ is a chart on  $ M\cap U $.  
+\end{theorem}
+\section{Differential calculus on manifold}
+Recall that for  $ V  $ is  $ \mathbb{F} $-vector space, with $ e_i,1 \leq i  \leq n $ basis. There is dual basis  $ e^i $ in  $ V^* $ \st\,  for  $ \xi \in V $,  $ \xi=\sum\limits_{i=1}^n  \left< \xi,e^i \right>  e_i $.  
+\subsection{Tangent Space and Cotangent Space}
+\begin{definition}
+    For  $ C^\infty $-map  $ \gamma:(a,b)\rightarrow M $.  $ p\in M $. Define 
+    \[T_p M =\{\text{smooth }\gamma:(-\epsilon,\epsilon)\rightarrow M,\gamma(0)=p\}/_{\sim}=\{\gamma'(t_0):\gamma(t_0)=p,t_0\in\mathbb{R}\}\]   
+    where  $ \gamma_1\sim \gamma_2 $ if and only if  $ \exists $ chart  $ (U,\varphi) $ \st \, $ \Jac(\varphi\circ \gamma_1)|_0= \Jac(\varphi\circ \gamma_2)|_0 $ \\
+     $ \gamma'(t_0) $ is the equivalance class of  $ t\mapsto \gamma(t+t_0) $ in  $ T_{\gamma(t_0)}M $     
+\end{definition}
+\begin{theorem}
+    Let  $ p\in M $, for each chart  $ (U,\varphi^1,\cdots,\varphi^n) $ containing  $ p  $,  $ \exists $ bijection  $ \mathrm{d}\varphi|_p $ defined by  $ \mathrm{d}\varphi|_p:T_pM\rightarrow \mathbb{R}^n $,  $ \mathrm{d}\varphi|_p\cdot \gamma'(0)=\Jac(\varphi\circ \gamma)|_0 $ if  $ \gamma $ is smooth path and  $ \gamma(0)=p $. 
+\end{theorem}
+\begin{remark}
+    In this way, we can define a  $ \mathbb{R} $-vector space structure on  $ TM $. cf. Def \ref{123}  
+\end{remark}
+\begin{definition}\label{123}
+    \textbf{Tangent bundle}\index{Tangent bundle}
+    \[TM=\bigsqcup\limits_{p\in M}T_pM\]
+     $ X:M\rightarrow TM  $ is called a vector field if  $ \forall p\in M, X|_p\in T_pM $ 
+\end{definition}
+\begin{definition}
+    For  $ (U,\varphi) $ is chart on  $ M  $. Define
+    \[\partial_{\varphi^i}=\frac{\partial}{\partial \varphi^i}:U\rightarrow TM\]
+    \[\partial_{\varphi^i}|_p=(\mathrm{d}\varphi|_p)^{-1}e_i\]
+\end{definition}

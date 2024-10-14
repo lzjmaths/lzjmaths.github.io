@@ -1,0 +1,84 @@
+\begin{example}
+    If  $A\in L(\mathbb{R }^n,\mathbb{R}^m )$ and  $ \vec{x}\in\mathbb{R}^n  $, then  $ A'(\vec{x })=A $.  
+\end{example}
+\begin{theorem}[chain rule]
+    Suppose  $ E \subset \mathbb{R }^n  $ open,  $ f:E\rightarrow\mathbb{R }^m  $,  $ f  $ is differentiable at  $ \vec{x_0}\in E  $, g maps an open set containing  $ f (E ) $ into  $ \mathbb{R }^k  $, and  $ g  $ is differentiable at  $ f(\vec{x_0}) $, Then the mapping  $ F:E\rightarrow \mathbb{R}^k, \vec{x }\mapsto g(f(\vec{x })) $ is differentiable at  $ \vec{x_0 } $ and 
+    
+    \begin{equation*}
+         F'(\vec{x_0})=g'(f(\vec{x_0}))f'(\vec{x_0}) 
+    \end{equation*}
+\end{theorem}
+Let  $ \{\vec{e_1,\cdots \,\vec{e_n }}\} $ and  $ \{\vec{u_1},\cdots,\vec{u_m }\} $ be the standard bases of  $ \mathbb{R }^n  $ and  $ \mathbb{R }^m $.\\
+For  $ \forall f:E\rightarrow \mathbb{R}^m $, the components of  $ f  $ are the real functions  $ f_1,\cdots, f_m  $ defined by  $ f_i(\vec{x }):=f(\vec{x })\cdot \vec{u_i} ,\,1 \leqslant i \leqslant m$.\\
+For  $ \vec{x }\in E,\,1 \leqslant i \leqslant m,1 \leqslant j \leqslant n  $, we define 
+\[\frac{\partial f_i }{\partial x_j }(\vec{x }):=\lim\limits_{t\to 0 } \frac{f_i(\vec{x }+t\vec{e_j })-f_i(\vec{x})}{t} \]
+provided the limit exists.  $ \frac{\partial f_i }{\partial x_j }  $ is the derivative of  $ f_i  $ w.r.t  $ x_j  $. Keeping the other variables fixed.  $ \frac{\partial f_i }{\partial x_j }  $ is called a \underline{partial derivative}.
+\begin{theorem}
+    Suppose  $ f:E\rightarrow \mathbb{E }^m  $, and  $ f  $ is differentiable at  $ \vec{x }\in E  $. Then the partial derivatives  $ \frac{\partial f_i }{\partial x_j } $ exist, and 
+    \begin{equation}\tag{$  \star$}
+        f'(\vec{x})(\vec{e_j })=\sum\limits_{i=1 }^{m }\frac{\partial f_i }{\partial x_j }(\vec{x})\vec{u_i} 
+    \end{equation}
+\end{theorem}     
+\begin{proof}
+     $ f  $ is differentiable at  $ \vec{x_0 }\Rightarrow \lim\limits_{h\to \vec{0} } \dfrac{|f(\vec{x}+\vec{h})-f(\vec{x})-f'(\vec{x})\vec{h}| }{|\vec{h}|}=0  $ \\
+     \begin{align*}
+        &\Rightarrow \lim\limits_{t\rightarrow 0 }\dfrac{|f(\vec{x}+t\vec{e_j})-f(\vec{x})-f'(\vec{x})t\vec{e_j}| }{t}=0\\
+        &\Rightarrow \lim\limits_{t\rightarrow 0 }\dfrac{|f_i(\vec{x}+t\vec{e_j})-f_i(\vec{x})-tf'(\vec{x})\vec{e_j}\cdot \vec{u_i }| }{t}=0\\
+        &\Rightarrow \frac{\partial f_i }{\partial x_j }(\vec{x })=\lim\limits_{t\to 0 } \dfrac{f_i(\vec{x }+t\vec{e_j })-f_i(\vec{x})}{t}=f'(x)(\vec{e_j})\cdot \vec{u_i} \\
+     \end{align*}
+\end{proof}
+\begin{remark}
+    \begin{enumerate}
+        \item[$ (a) $] Let  $ [f'(\vec{x})] $ be the matrix which represents  $ f'(\vec{x }) $ w.r.t. our standard bases. Then 
+            \[
+                [f'(\vec{x})]=\begin{pmatrix}
+                    \dfrac{\partial f_1}{\partial x_1} (\vec{x}) & \cdots &
+                    \dfrac{\partial f_1}{\partial x_m} (\vec{x}) \\
+                    \vdots & & \vdots \\
+                    \dfrac{\partial f_n}{\partial x_1} (\vec{x}) & \cdots &
+                    \dfrac{\partial f_n}{\partial x_m} (\vec{x})
+                \end{pmatrix}
+            \]
+        \item[$ (b) $] If  $ \vec{h }=\sum\limits_{j=1 }^{n } h_j \vec{e_j }\in \mathbb{R }^n  $, then  $ (\star )\Rightarrow f'(\vec{x })\vec{h }=[f'(\vec{x})]\begin{pmatrix}
+            h_1\\h_2\\\vdots\\h_n
+        \end{pmatrix}  $  
+    \end{enumerate}
+\end{remark}
+Let  $ \gamma:(a,b)\rightarrow E   $ be differentiable in  $ (a,b) $, and  $ f:E\rightarrow \mathbb{R }   $ be differentiable in  $ E  $. Define  $ g(t)=f(\gamma(t)) $.\\
+ Chain rule  $ \Rightarrow  g'(t)=f'(\gamma(t))\gamma'(t),\,t\in (a,b)$.\\
+  w.r.t. the  standard basis  $ \{\vec{e_i },\cdots,\vec{e_n }\} $ of  $ \mathbb{R}^n  $,  $ [\gamma'(t)]=\begin{pmatrix}
+    \gamma_1'(t)\\\gamma_2'(t)\\\vdots\\\gamma_n'(t)
+\end{pmatrix} $\\
+For  $ \forall \vec{x }\in E  $,  $ [f'(\vec{x})]=\begin{pmatrix}
+    \dfrac{\partial f}{\partial x_1}(\vec{x}),\cdots,\dfrac{\partial f}{\partial x_n}(\vec{x})
+\end{pmatrix} $    
+\begin{equation}\tag{$ \triangle  $}
+    \Rightarrow g'(t)=\sum\limits_{i=1 }^{n } \frac{\partial f}{\partial x_i}(\gamma(t))\gamma_i'(t)
+\end{equation}
+The \underline{gradient} of   $ f  $ at  $ \vec{x }\in E  $ is defined by  $ \triangledown f(\vec{x})=\sum\limits_{i=1}^{n } \frac{\partial f}{\partial x_i}(\vec{x})\vec{e_i} $.\\
+So  $ (\triangle ) $ can be written in the form  \begin{equation}\tag{ $ \triangle \triangle$ }
+    g'(t)=\triangledown f(\gamma(t))\cdot\gamma'(t)
+\end{equation}
+Fix an  $ \vec{x }\in E  $, Let  $ \vec{u } \in \mathbb{R}^n$ be a unit vector, and specialize  $ \gamma  $ s.t.  $ \gamma(t)=\vec{x}+t\vec{u },\,t\in \mathbb{R } $. Then  $ \gamma'(t)=\vec{u } $ for  $ \forall t\in \mathbb{R }  $. $ (\triangle\triangle) \Rightarrow g'(0)=\triangledown f(\vec{x})\vec{u }$.
+\[\Rightarrow \lim\limits_{t\to 0 } \dfrac{f(\vec{x}+t\vec{u})-f(\vec{x})}{t}=\lim\limits_{t\to 0 } \dfrac{g(t)-g(0)}{t}= \triangledown f(\vec{x})\vec{u }\tag{ $ \triangle\triangle\triangle $ } \]    
+The limit  $ \lim\limits_{t\to 0 } \dfrac{f(\vec{x}+t\vec{u})-f(\vec{x})}{t}  $ is called the \underline{directional derivative} of   $ f  $ at  $ \vec{x } $, in the direction of the unit vector  $ \vec{u } $, and may be denoted by  $ \triangledown_{\vec{u}}f(\vec{x}) $ or  $ D_{\vec{u}}f(\vec{x}) $\\
+If  $ \vec{u }=\sum\limits_{i=1}^{n } u_i \vec{e_i } $,  $ \Rightarrow \triangledown_{\vec{u}}f(\vec{x})=\sum\limits_{i=1 }^{n } \dfrac{\partial f }{\partial x_i }(\vec{x})u_i$
+\begin{theorem}
+    Suppose  $ f:E\rightarrow \mathbb{R}^m  $ is differentiable in  $ E  $ where  $ E\subset \mathbb{R}^n  $ is convex  and open, and  $ \exists M\in \mathbb{R } $ s.t.  $ ||f'(x)|| \leqslant M,\,\forall \vec{x}\in E   $.
+    Then \[|f(\vec{b})-f(\vec{a})| \leqslant M|\vec{b}-\vec{a}|,\,\forall \vec{a},\vec{b}\in E  \] 
+\end{theorem} 
+\begin{proof}
+    Define  $ \gamma(t)=(1-t)\vec{a}+t\vec{b} $\\
+     $ E  $ is convex  $ \Rightarrow  $  $ \gamma (t)\in E  $ for  $ \forall t\in[0,1] $.\\
+     Let  $ g(t)=f(\gamma(t)) $.\\
+     Then  $ g'(t)=f'(\gamma(t))\gamma'(t)=f'(\gamma(t))(\vec{b}-\vec{a}) $\\
+      $ \Rightarrow $  $ |g'(t)| \leqslant ||f'(\gamma(t))||\cdot|\vec{b}-\vec{a}| \leqslant M\cdot|\vec{b}-\vec{a}|,\forall t\in[0,1] $.\\
+      The last theorem in \S 5.4 (Weak MVT for vector-valued functions) $ \Rightarrow $ \\$ |g(1)-g(0)| \leqslant M|\vec{b}-\vec{a}| $.      
+\end{proof}  
+\begin{corollary}
+    If, in addition,  $ f'(\vec{x})=0   $ for  $ \forall \vec{x }\in E   $, then  $ f  $ is constant.  
+\end{corollary}     
+A differentiable mapping  $ f:E\rightarrow \mathbb{R }^m  $ is continuously differentiable in  $ E $  if  $ f':E\rightarrow L(\mathbb{R}^n,\mathbb{R}^m) $ is continuous.\\
+If so, we say that $f $ is a  $ \mathscr{C}' $-mapping or that  $ f\in \mathscr{C}'(E) $.
+
+ 

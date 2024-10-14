@@ -1,0 +1,48 @@
+\begin{definition}
+    An open cover of a space  $ X  $ is \name{locally finite} if any point has a neighbourhood that intersects only finite many open sets of this cover.b
+\end{definition}
+\begin{proposition}
+    Given compact  $ K\subset U $ and open neighbourhood  $ U  $ of  $ k  $,  $ \exists  \alpha $ a smooth  $ g:M\rightarrow [0,+\infty )$ \st  $ g|_K\equiv 1 $ and  $ Supp \,g\subset U $.  
+\end{proposition}
+\begin{definition}
+    An \name{exhaust} of a space  $ X  $ is a sequence of open sets  $ \{U_i \} $ \st 
+    \begin{enumerate}
+        \item  $ X=\bigcup\limits_{i=1}^\infty  U_i $ 
+        \item  $ \overline{U_i }  $ is compact and contained in  $ U_i  $
+    \end{enumerate}
+\end{definition}
+\begin{theorem}
+    Any topological manifold has an exhaust.
+\end{theorem}
+Given two open covers  $ \mathcal{ U}, \mathcal{V} $, we say  $ \mathcal{V } $ is a \name{refinement} of  $ \mathcal{U }  $ if  $ \forall U_\alpha\in U  $,  $ \exists V_\beta\in \mathcal{V} $ \st $ V_\beta\subset U_\alpha $.
+
+We say a space  $ X  $ is paracompact if any open cover has a locally finite refinement.
+
+Actually, any metric space is paracompact.(The proof is hard)
+\begin{proposition}
+    Let  $ \mathcal{U}=\{U_\alpha \}  $ be an open cover of a topological manifold  $ M  $. Then there exists countable open covers  $ \mathcal{W}=\{W_i \} $,  $ \mathcal{V}=\{V_i\}    $\st
+    \begin{itemize}
+        \item For any  $ i  $,  $ \overline{V_i } $ is compact and  $ \overline{V_i}\subset W_i $
+        \item  $ \mathcal{W } $ is locally finite.
+        \item  $ \mathcal{W }  $ is a refinement of  $ \mathcal{U} $.  
+    \end{itemize} 
+\end{proposition}
+As a corollary, we have any topological manifold  is paracompact.
+\begin{definition}
+    Given open cover  $ \mathcal{U } $ of a smooth  $ M  $, a partition of unity subordinate\index{partition of unity subordinat(P.O.U)} to  $ \mathcal{U } $ is a collection of smooth functions  $ \{\rho_\alpha:M\rightarrow [0,1] \}_{\alpha\in \mathcal{A}} $ \st
+    \begin{enumerate}
+        \item  $ \forall p\in M  $,  $ \exists  $ only finitely many  $ \alpha\in \mathcal{A} $ \st  $ p\in Supp\,\rho_\alpha $  
+        \item  $ \sum\limits_{\alpha\in \mathcal{A}} \rho_\alpha(p) =1 $ 
+        \item  $ Supp\,\rho_\alpha\subset U_\alpha $ 
+    \end{enumerate} 
+\end{definition}
+\begin{theorem}[Existence of P.O.U]
+    For any open cover  $ \mathcal{U } $ of smooth  $ M  $,  $ \exists  $ a P.O.U subordinate to  $ \mathcal{U} $  
+\end{theorem}
+\begin{theorem}[Whitney approximation theorem]
+    Given any smooth  $ M  $, any closed  $ A  $ and any continuous  $ f:M\rightarrow \mathbb{R } $,  $ \delta:M\rightarrow (0,+\infty ) $. Suppose  $ f  $ is smooth on  $ A  $. Then  $ \exists g:M\rightarrow \mathbb{R} $ smooth \st
+    \begin{itemize}
+        \item  $ g|_A=f|_A $ 
+        \item  $ \forall p\in M $, $ |g(p)-f(p)|<\delta(p) $.  
+    \end{itemize}
+\end{theorem}

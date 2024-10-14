@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{mathrsfs}
+\usepackage[UseMSWordMultipleLineSpacing,MSWordLineSpacingMultiple=1.4]{zhlineskip}
+\usepackage{lipsum}
+\title{Algebra-1 Note}
+\author{lin150117 }
+\date{}
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, % 设置链接颜色
+    linkcolor=blue, % 设置普通链接颜色
+    citecolor=green, % 设置引用链接颜色
+    urlcolor=red % 设置URL颜色
+}
+\begin{document}
+\setlength{\parindent}{0pt}
+\paragraph{Exercise 3.8}
+\begin{proof}
+    Noticed that  $ p|\binom{p}{k}  $ for any  $ 1 \leq k \leq p-1 $. So  $ (x+y)^p=\sum\limits_{k=0}^p\binom{p }{k }x^ky^{p-k}=x^p+y^p $ for any  $ x,y\in R $. Combining with the fact that  $ (xy)^p=x^py^p $ for any  $ x,y\in R $, and  $ 1^p=1 $, we have this map is a ring homomorphism.
+\end{proof}
+\paragraph{Exercise 6.8}
+\,\\
+(a)\begin{proof}
+    By definition of ideal,  $ ij\in I\cap J, \forall i\in I, j\in J $.  $ \Rightarrow i_1j_1+\cdots+i_nj_n\in I\cap J $ since  $ I\cap J  $ is an ideal by Ex3.13. $ \Rightarrow $  $ IJ\subset I\cap J $\\ 
+     $ \forall t\in I\cap J $, since  $ 1\in R=I+J \Rightarrow 1=i+j  $ for some  $ i\in I,j\in J $ $\Rightarrow  t=t\cdot 1=t\cdot(i+j)=ti+tj $ where  $ ti\in I,tj\in J $ $ \Rightarrow  t\in IJ $    
+\end{proof}
+(b)
+\begin{proof}
+    Let  $ a=i_a+j_a,b=i_b+j_b $ where  $ i_a,i_b\in I,j_a,j_b\in J $\\
+    Then  $ j_a+i_b-a=i_b-i_a\in I $,  $ j_a+i_b-b=j_a-j_b\in J $  $ \Rightarrow x=j_a+i_b $ satisfies that  $ x\equiv a  $ modulo  $ I  $ and  $ x\equiv b  $ modulo  $ J  $.     
+\end{proof}
+(c)
+\begin{proof}
+    If  $ IJ=0 $, then  $ I\cap J=0 $.\\
+    Then  $ \forall r\in R $, if  $ r=i+j=i'+j' $,  $ i,i'\in I.j,j'\in J $,  then  $ i-i'=j'-j\in I\cap J \Rightarrow i=i'=j'-j=0 $. So  $ r  $ can be uniquely written as  $ r=i+j,i\in I,j\in J $. $ (\star) $ \\
+    Define  $ \varphi:R\rightarrow (R/I)\times (R/J), r\mapsto (r+I,r+J)$. Easy to check that  $ \varphi $ is a ring homomorphism.(In fact,  $ \varphi(rs)=(rs+I,rs+J)=(r+I,r+J)(s+I,s+J),\varphi(r+s)=(r+s+I,r+s+J)=(r+I,r+J)+(s+I,s+J) $) \\If  $ (r+I,r+J)=(r'+I,r'+J) $, then  $ r-r'\in I,r-r'\in J $ $ \Rightarrow  $ 
+     $ r-r'\in I\cap J $,  $\Rightarrow r-r'=0$. So  $ \varphi  $ is injective.
+     
+     $ \forall m+I\in R/I,n+J\in R/J $, by Chinese Remainder Theorem we have  $ x\in R  $ s.t.  $ x+I=m+I,x+J=n+J $ $ \Rightarrow  $  $ \varphi(x)=(m+I,n+J) $ $ \Rightarrow  $  $ \varphi  $ is surjective. Thus  $ \varphi  $ is isomorphic.            
+\end{proof}
+(d)Idempotents in  $ (R/I)\times(R/J)  $ is  $ (\overline{e_1},\overline{e_2}) $ where  $ \overline{e_1}^2=\overline{e_1} $ in  $ R/I $, $ \overline{e_2}^2=\overline{e_2} $  in  $ R/J $.
+\paragraph{Exercise 7.4}\,\\
+The answer is no. By Prop7.7.7(a), a ring  $ R  $ is a cyclic group under the law of composition  $ + $. So  $ (id+id+id)\cdot(id+id+id+id+id)=15\cdot id=0 $ where  $ id $ is the identity element of  $ R  $ (under multiplication). However  $ (3id),(5id) $ is not zero since  $ R  $ is a cyclic group, hence  $ R  $ is not a domain. i.e. every ring of order  $ 15  $ is not a domain.
+\paragraph{M.3}
+Define  $ M_n=\{a\in R:\textbf{n-th component of a equals 0}\} $. Easy to check that  $ M_n  $ is an ideal. And for  $ a\not\in M_n  $, we have  $ (0,0,\cdots,a_n^{-1},0,\cdots) \cdot a=(0,0,\cdots,1,\cdots) $. Then  $ (a)+M_n $ contains a basis of  $ R  $(under addition), hence  $ (a)+M_n=R $  $ \Rightarrow M  $  is maximal ideal.\\
+If  $ M  $ maximal ideal but not one of  $ M_n $. We prove that  $ a=(a_1,\cdots)\in M $,  $ 0=a_n=a_{n+1}=\cdots $. Otherwise,  $ R/M $ is a field  $ \Rightarrow $  There exsits  $ b $ s.t.  $ ab-(1,1,1,\cdots)\in M $. i.e.  $ (a_1',\cdots,a_{n-1}',-1,-1,\cdots)\in M $. Since  $ M\not =M_n $, and  $ M\not\subset M_n $, there exists  $ B^m\in M $ s.t.  $ m $-th component of  $ B^m $,  $ B^m_m\not=0 $. By Gauss elimation, any element  $ t\in R  $ can be expressed as  $ m+t' $,  $ m'in M $,  $ t'_i=0,\forall 1 \leq i \leq n-1 $. Then  $ t'=(0,0,\cdots,-t'_n,-t'_{n+1},\cdots)\cdot (a_1',\cdots,a_{n-1}',-1,-1,\cdots)\in M $  $ \Rightarrow M=R $  $\Rightarrow  $  contradiction.\\
+Therefore  $ M\supset (a:a_i=1,\forall 1 \leq i \leq n-1;a_i=0,\forall i \geq n;n\in \mathbb{Z}_+) $. Actually,  $ N=(a:a_i=1,\forall 1 \leq i \leq n-1;a_i=0,\forall i \geq n;n\in \mathbb{Z}_+)  $ is a maximal ideal. That's because: for  $ t\not\in M $,  $ t=(t_1,cdots),0\not=t_n=t_{n+1}=\cdots $. Then  $ t\cdot (1,1,\cdots,t_n^{-1},t_{n+1}^{-1},\cdots)-(1,1,1,\cdots)\in N $  $ \Rightarrow  $  $ t  $ is a unit in  $ R/N  $  $ \Rightarrow  $  $ R/N  $ is a field  $ \Rightarrow  $  $ N  $ is a maximal ideal.\\
+Therefore,  $ M  $ is a maximal ideal if and only if  $ M=M_n  $ or  $ M=N=(a:a_i=1,\forall 1 \leq i \leq n-1;a_i=0,\forall i \geq n;n\in \mathbb{Z}_+) $                    
+
+\paragraph{5.}
+(a)Every ideal contains 0 so  $ V(0)=Spec \, R $. $ R  $ is not prime ideal$ \Rightarrow $  $ V(R)=\emptyset $  \\
+(b) $ V(\cup_{\lambda\in \Lambda}E_\lambda)=\{p\in Spec\, R|p\supset \cup_{\lambda\in \Lambda}E_\lambda\}=\{p\in Spec\, R|p\supset E_\lambda\forall \lambda\in \Lambda\}=\cap_{\lambda\in \Lambda}\{p\in Spec\,R|p\supset E_\lambda\}=\cap_{\lambda\in \Lambda}V(E_\lambda) $\\
+(c) $ \forall p\supset IJ $,  $ p\in Spec\, R $, then  $\forall t\in I\cap J $,  $ t^2\in IJ\subset p  $ $\Rightarrow $  $ t\in p  $ since  $ p  $ is prime ideal. So  $ I\cap J\subset p $ $ \Rightarrow p\in V(I\cap J) $ .  $ \forall p\supset I\cap J $,  $ p\in Spec\, R $, then  $ IJ\subset I\cap J\subset p $ $ \Rightarrow p\in V(IJ) $. Therefore  $ V(I\cap J)=V(IJ) $.\\
+ $ \forall p\in  V(IJ)  $, if  $ \exists i\in I,i\not\in p $, then  $ \forall j\in J,ij\in IJ\subset p \Rightarrow j\in p $ since  $ p  $ prime ideal.  $ \Rightarrow J\subset p $ $ \Rightarrow p\in V(J) $. If not, then  $ I\subset P $ $ \Rightarrow p\in V(I) $. Thus,  $ V(IJ)\subset V(I)\cup V(J) $. \\
+  $ \forall p\in V(I) $,  $ p\supset I\supset I\cap J $ $ \Rightarrow p\in V(I\cap J)=V(IJ) $. Similarly for  $ p\in V(J), p\in V(IJ) $.  $ \Rightarrow V(I)\cup V(J)\subset V(IJ) $. \\
+  Therefore  $ V(IJ)=V(I)\cup V(J) $.\\     
+(d)For any decreasing net of nonempty closed subsets  $ (V(E_\lambda))_{\lambda\in \Lambda} $, we have   $ p_\lambda\in V(E_\lambda) $. Then  $ \cup_{\lambda\in \Lambda}E_\lambda\subset\cup_{\lambda\in \Lambda}p_\lambda $. Since  $ \forall xy\in \cup_{\lambda\in \Lambda}p_\lambda $,  $ xy\in p_\lambda $ for some  $ \lambda\in \Lambda $,   $ \Rightarrow x\in \cup_{\lambda\in \Lambda}p_\lambda  $ or  $ \cup_{\lambda\in \Lambda}p_\lambda $. And since  $ 1\not\in p_\lambda $  $ \Rightarrow  $  $ 1\not\in \cup_{\lambda\in \Lambda}p_\lambda $. Thus  $ \cup_{\lambda\in \Lambda}p_\lambda  $ is a prime ideal containing $ \cup_{\lambda\in \Lambda}E_\lambda $. i.e.  $ \cup_{\lambda\in \Lambda}p_\lambda \in V(\cup_{\lambda\in \Lambda}E_\lambda)=\cap_{\lambda\in \Lambda}V(E_\lambda)$  $ \Rightarrow \cap_{\lambda\in \Lambda}V(E_\lambda)\not=\emptyset $.\\
+  By decreasing chain property, we have  $ X=Spec\,R  $ is compact.\\
+  Note: you can check dereasing chain property in \url{https://binguimath.github.io/Files/2023_Analysis.pdf}, page136, Propsition 8.15.      
+\end{document}

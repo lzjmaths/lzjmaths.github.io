@@ -1,0 +1,86 @@
+\section{Functions of Several Variables}
+\subsection{Linear Transformations}
+A nonempty set  $ X \subset \mathbb{R }^n  $ is a \underline{vector space} if  $ c_1\vec{x }+c_2\vec{y }\in X$ for  $ \forall \vec{x },\vec{y }\in X $ and  $ \forall c_1,c_2\in\mathbb{R } $.\\
+Note that if  $ B=\{\vec{x_1},\cdots,\vec{x_r }\} $ is a basis of  $ X  $, then  $ \forall \vec{x }\in X $ ha s a unique representation of the form  $ \vec{x }=\sum\limits_{j=1 }^{r } c_j \vec{x_j } $. The numbers  $ c_1,c_2,\cdots,c_r  $ are called \underline{coordinates} of  $ \vec{x} $ w.r.t.  $ B $.\\
+We called  $ \{\vec{e_1 },\vec{e_2 },\cdots,\vec{e_n }\} $ the \underline{standard basis} of  $ \mathbb{R}^n $, where  $ \vec{e_j}=(0,\cdots,1,\cdots,0) $.
+\begin{theorem}
+    Let  $ r\in\mathbb{N }.  $ If a vector space  $ X  $ is spanned by a set of r vectors, then  $ \dim{X}  \leqslant r $. 
+\end{theorem}  
+\begin{theorem}
+    Suppose  $ X  $ is a vector space, and  $ \dim{X}=n $. Then 
+    \begin{enumerate}[(a)]
+        \item A set  $ E  $ of  $ n  $ vectors in  $ X  $ spans  $ X  $ iff  $ E  $ is independent.
+        \item  $ X  $ has a basis, and every basis consists of  $ n  $ vectors.
+        \item If  $ 1 \leqslant r  \leqslant n  $ and  $ \{\vec{y_1},\vec{y_2 },\cdots,\vec{y_r } \} $ is a independent set in  $ X  $, then  $ X  $ has a basis contained  $ \{\vec{y_1},\cdots,\vec{y_r}\} $.  
+    \end{enumerate} 
+\end{theorem}     
+A mapping  $ A:X\rightarrow Y  $ is said to be a \underline{linear transformations} ( or linear operator ) if 
+ $ A(\lambda_1 \vec{x_1}+\lambda_2\vec{x_2})=\lambda_1A(\vec{x_1})+\lambda_2A(\vec{x_2}),\,\forall \vec{x_1},\vec{x_2}\in X, \forall \lambda_1,\lambda_2\in\mathbb{R } $.\\
+If  $ A  $ is  a linear operator on  $ X  $ satisfying one-to-one and maps  $ X  $ onto  $ X  $, we say that  $ A  $ is invertible.  
+\begin{theorem}
+    A linear operator A on a finite-dimensional vector space   $ X $ is 1-1 iff the range of  $ A  $ is all of  $ X  $.
+\end{theorem}
+Let  $ L(X,Y)  $ be the set of all linear transformations of  the vector space  $ X  $ into the vector space  $ Y  $. We usually write  $ L(X ) $ for  $ L(X,Y ) $.\\
+\qquad If  $ A_1,A_2\in L(X,Y) $, we define 
+\[(c_1A_1+c_2A_2)\vec{x}:=c_1A_1\vec{x}+c_2A_2\vec{x}\]
+If  $ X,Y,Z  $ are vector spaces, and if  $ A \in L(X,Y) $ and  $ B\in L(Y,Z) $, we define their product  $ BA $ by 
+\[(BA)\vec{x}:=B(A\vec{x}),\,\forall \vec{x }\in X  \]
+For  $ \forall A \in L(\mathbb{R}^n,\mathbb{R}^m ) $, we define the norm  $ ||A|| $ of  $ A  $ by 
+\[||A||:=\sup\limits_{\vec{x}:|\vec{x}| \leqslant 1}|A\vec{x}|\]
+\begin{theorem}
+    \begin{enumerate}[$ ( $a$ ) $]
+        \item If  $ A\in L(\mathbb{R}^n,\mathbb{R}^m ) $,then  $ A $ is uniformly continuous and thus  $ ||A||<\infty $.
+        \item If  $ A,B\in L(\mathbb{R}^n,\mathbb{R}^m) $  and  $ c\in \mathbb{R } $, then  $ ||A+B|| \leqslant ||A||+||B||,||cA||=|c|\cdot||A|| $. Hence,  $ L(\mathbb{R}^n,\mathbb{R}^m) $ is a metric space with  $ d(A,B):=||A-B|| $
+        \item If  $ A\in L(\mathbb{R}^n,\mathbb{R}^m) $ and  $ B\in L(\mathbb{R}^m,\mathbb{R}^k) $, then  $ ||BA|| \leqslant ||B||\cdot||A|| $     
+    \end{enumerate}
+\end{theorem}  
+\begin{theorem}
+    Let  $ \Omega  $ be the set of all invertible linear operator on  $ \mathbb{R } $
+    \begin{enumerate}
+        \item[$ (a) $] If  $ A\in\Omega,B\in L(\mathbb{R}^n) $ and  $ ||B-A||\cdot||A^{-1}||<1 $, then  $ B\in\Omega $.
+        \item[$ (b) $] $ \Omega $ is an open subset of  $ L(\mathbb{R }^n ) $, and the mapping  $ \Omega\rightarrow\Omega,A\mapsto A^{-1} $ is continuous
+    \end{enumerate} 
+\end{theorem}
+(a) just use the 3rd theorem.\\
+Suppose  $ \{\vec{x_1},\cdots,\vec{x_n}\} $ is a basis of X, $ \{\vec{y_1},\cdots,\vec{y_m}\} $ is a basis of  $ Y $. Then  $ \forall A\in L(X,Y) $ determines a set of numbers  $ a_{ij} $ s.t.
+\begin{equation}\tag{$ \ast $}
+    A\vec{x_j}=\sum\limits_{i=1}^{m } a_{ij}\vec{y_i},\qquad 1 \leqslant j \leqslant n
+\end{equation}    
+It is convenient to visulize these numbers on an  $ m\times n  $ matrix:
+\[[A]=[a_{ij}]\]
+Then we find that there is a natural 1-1 correspondence between  $ L(X,Y) $ and the set of all  $ m\times n  $ real matrices\\
+and  $ [BA]=[B]\cdot[A] $ \\
+Suppose  $ \{x_i \} $ and  $ \{y_i\} $ are standard basis of  $ \mathbb{R}^n  $ and  $ \mathbb{R }^m $. Then 
+\[|A\vec{x}|^2 \leqslant |\vec{x}|^2 \sum\limits_{i=1}^{m } (\sum\limits_{j=1 }^{n } a_{ij})\] 
+\[\Rightarrow ||A|| \leqslant (\sum\limits_{i=1}^{m } \sum\limits_{j=1 }^{n } a_{ij})^{\frac{1 }{2 }}\]
+So we just proved
+\begin{theorem}
+    If  $ S  $ is a metric space and  $ a_{11 },\cdots,a_{mn} $ are real continuous functions on  $ S  $, and if , for  $ \forall p\in S  $, $ A_p  $ is the linear transformation of  $ \mathbb{R }^n  $ into  $ \mathbb{R }^m  $ whose matrix has entries  $ a_{ij}(p ) $, then mapping  $ S\rightarrow L(\mathbb{R }^n ,\mathbb{R }^m ),p\mapsto A_p $ is continuous  
+\end{theorem}
+\subsection{Differentiation}
+Suppose  $ E  $ is an open set in  $ \mathbb{R }^n  $,  $ f:E \rightarrow \mathbb{R }^m $, and  $ \vec{x }\in E  $. If there is an  $ A\in L(\mathbb{R}^n ,\mathbb{R}^m) $ such that
+\begin{equation}\tag{$ \ast $}
+    \lim\limits_{\vec{h }\to \vec{0}}\frac{|f(\vec{x}+\vec{h})-f(\vec{x})-A\vec{h}|}{|\vec{h}|}=0 
+\end{equation} 
+then we say that  $ f  $ is \underline{differentiable} at  $ \vec{x} $, and we write  $ f'(\vec{x})=A $.\\
+If  $ f  $ is differentiable at each  $ \vec{x}\in E  $, we say  $ f  $ is differentiable in  $ E  $.
+\begin{theorem}
+    In the above  definition, if  $ (\ast) $ holds for  $ A_1 $ and  $ A_2 $, then  $ A_1=A_2 $.
+      
+\end{theorem}      
+\begin{proof}
+    Easy to know:
+    \[\lim\limits_{\vec{h }\rightarrow 0}\frac{|A_1\vec{h}-A_2\vec{h}|}{|\vec{h}|}=0\Rightarrow A_1=A_2  \]        
+\end{proof} 
+\begin{remark}
+    \begin{enumerate}
+        \item[$ (a) $]  $ (\ast) $ can be rewritten in the form  
+        \begin{equation}\tag{$ \ast\ast $}
+             f(\vec{x}+\vec{h})-f(\vec{x})=f'(\vec{x})\vec{h}+r(\vec{h})
+        \end{equation}
+        where the remainder  $ r(\vec{h}) $ satisfies  $ \lim\limits_{\vec{h }\to \vec{0 }}\frac{|r(\vec{h})|}{|\vec{h}|}=0   $ 
+        \item[$ (b) $] The derivative defined by  $ (\ast) $ or $ (\ast\ast) $    is often called the \underline{differential }of  $ f  $ at  $ \vec{x} $, or the \underline{total derivative} of  $ f  $ at  $ \vec{x} $.
+        \item[$ (c) $]  $ (\ast\ast)\Rightarrow\, f$ is continuous at any point where  $ f  $ is differentiable.
+        \item[$ (d) $] If  $ f  $ is differentiable in  $ E  $, then  $ f' $ is a function which maps  $ E  $ into  $ L(\mathbb{R }^n,\mathbb{R }^m) $. 
+    \end{enumerate}
+\end{remark}

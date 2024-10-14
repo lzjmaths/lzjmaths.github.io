@@ -1,0 +1,85 @@
+We consider the fraction  $ K=Frac\, R $.
+\begin{lemma}
+    For  $ f\in K[x] $,  $ \exists c\in K, f_0\in R[x] $ primitive s.t.  $ f=cf_0 $.  
+\end{lemma} 
+\begin{proposition}\label{prop:7-2}
+     $ f(x)=c\cdot f_0(x)=c'f_0'(x) $ where  $ f\in K[x],c,c'\in K $ and  $ f_0,f_0' $ is primitive in  $ R[x] $. Then  $ c $ and  $ c'  $ are differed by an element in  $ R^\times $.      
+\end{proposition}
+\begin{lemma}\label{lemma:7-2}
+    Let  $ f_0,g\in R[x] $ with  $ f_0  $ primitive. 
+    If  $ f_0|g  $ in  $ K[x]  $ ,   then  $ f_0|g  $ in  $ R[x]  $ 
+\end{lemma}
+\begin{proof}
+    If  $ g=hf_0=c\cdot h_0f_0 $. where  $ c\in K,h_0,f_0\in R[x] $ primitive.\\
+    Since  $ g\in R[x] $, $ h_0f_0 $ is primitive by Gauss' lemma, we have   $ c\in R $ by Prop \ref{prop:7-2}.   
+\end{proof}
+\begin{theorem}
+    Irreducible elements of  $ R[x] $ are exactly
+    \begin{enumerate}[(a)]
+        \item  $ \pi\in R $ irreducible.
+        \item  $ f_0(x)\in R[x] $ primitive s.t.  $ f_0  $ irreducible as element in  $ K[x] $.  
+    \end{enumerate}
+    Moreover, irreducible can imply prime in  $ R[x] $. 
+\end{theorem}
+\begin{proof}
+    First we prove that element satisfying (a) or (b) is prime by lemma \ref{lemma:7-2}, hence irreducible in  $ R[x] $ .\\
+    Second we consider  $ f(x)  $ is irreducible.\\
+    If  $ f(x)  $ is a unit  $ \Rightarrow  $  $ f(x)=c\in R $.\\
+    Otherwise,  $ f(x)=c\cdot f_0(x) $. Since  $ f  $ is irreducible,  $ c\in R[x]^\times=R^\times $. This means  $ f  $ is primitve. If  $ f(x)=g(x)\cdot h(x)  $ in  $ K[x] $. Write  $ g(x)=d\cdot g_0(x),h(x)=e\cdot h_0(x) $, $ g_0,h_0  $ primitive in  $ R[x] $,  $ d,e\in K $.  Then  $ f(x)=(d\cdot e)\cdot g_0(x)\cdot h_0(x) $ where  $ g_0(x)h_0(x)  $ is primitive by Gauss' lemma. By Prop \ref{prop:7-2},  $ d\cdot e\in R $. Since  $ f  $ is irreducible in  $ R[x] $,  $ g_0  $ or  $ h_0  $ should be a unit  $ \Rightarrow $    $ f(x)  $ is irreducible in  $ K[x] $. 
+\end{proof}
+Then we can prove the first theorem in this section.
+\begin{theorem}
+    If  $ R  $ UFD, so is  $ R[x] $ UFD.
+\end{theorem}
+\begin{proof}
+    In the proof of PID $ \Rightarrow  $ UFD, uniqueness follows if irreducible element= prime in rings.\\
+    For existence of facctorization, take  $ f(x)\in R[x] $ nonzero, nonunit.\\
+    Since  $ K[x] $ is a PID ($\Rightarrow  $ UFD), write  $ f(x)=cg_1(x)\cdots g_r(x) $. By Prop \ref{prop:7-2} we can prove it. 
+\end{proof}
+We have some method to check  $ f(x)\in \mathbb{Z}[x] $ monic polynomial is irreducible.
+\begin{proposition}
+    If  $\exists p  $ prime s.t.  $ f(x)  $ is irreducible in  $ \mathbb{F}_p[x] $, then  $ f(x)  $ is irreducible in  $ \mathbb{Z}[x]  $  
+\end{proposition}
+
+\begin{proposition}[Eisenstein criterion]\index{Eisenstein criterion}
+    If  $ f(x)=x^n+\cdots+a_0 $ s.t.  $ \exists p  $ prime,  $ p|a_i,\forall 0 \leq i \leq n-1 $,  $ p^2\not|a_0 $, then  $ f(x) $ is irreducible in  $ \mathbb{Z}[x] $.    
+\end{proposition}
+\begin{proof}
+    If  $ f(x)=g(x)h(x) $ in  $ \mathbb{Z}[x] $ $ \Rightarrow  $  $ \overline{g}(x)\overline{h}(x)\overline{x}^n $ in  $ \mathbb{F}_p[x] $. Since  $ \mathbb{F}_p[x] $ UFD, then  $ x|\overline{g}(x),\overline{h}(x) $ $ \Rightarrow a_0=g(0)h(0)\equiv 0\mod p^2 $      
+\end{proof}
+\subsection{primes in $ \mathbb{Z}[i]=\mathbb{Z}[x]/(x^2+1) $}
+We have proved that  $ \mathbb{Z}[i] $ is a Euclidean domain, hence PID,UFD. \\
+Prime in  $ \mathbb{Z}[i] $ is called \textbf{Gauss prime}\index{Gauss prime}. 
+The norm  $ N:\mathbb{Z}[i]\rightarrow \mathbb{Z}_{ \geq 0}, z\mapsto z\cdots\overline{z}=|z|^2 $. \\
+\begin{proposition}
+    \,
+    \begin{enumerate}[(a)]
+        \item  $ z  $ is a unit in  $ \mathbb{Z}[i] $ if and only if  $ N(z)=1 $. 
+        \item   $ N(z)=p\in \mathbb{Z} $ is a prime, then  $ z  $ is a Gauss prime. 
+    \end{enumerate}
+\end{proposition}
+\begin{theorem}\label{criterion for Gauss prime}\index{Criterion for Gauss prime}
+    Gauss prime are exactly
+    \begin{enumerate}[(a)]
+        \item  $ \pm p,\pm i $ for  $ p\in \mathbb{Z} $ prime s.t.  $ p\equiv 3\mod 4 $.
+        \item  $ a+bi\in \mathbb{Z}[i] $ s.t.  $ a^2+b^2=p  $ for  $ p\in \mathbb{Z} $ prime with  $  $  
+    \end{enumerate}
+    Moreover, if  $ p\equiv 1,2\mod 4 $, then  $ \exists a,b\in \mathbb{Z} $ s.t.  $ a^2+b^2=p $.  
+\end{theorem}
+\begin{lemma}
+    If  $ z  $ is a Gauss prime, the  $ N(z)=p  $ or  $ p^2 $ for a prime  $ p  $ in  $ \mathbb{Z} $.  
+\end{lemma}
+\begin{proof}
+    This follows from  $ \mathbb{Z}[i] $ UFD. 
+\end{proof}
+\begin{lemma}\label{existence of primitive root}
+     $ \mathbb{F}_p^\times $ is a cyclic group of order  $ p-1  $.
+\end{lemma}
+\begin{proof}[proof of theorem \ref{Criterion for Gauss prime}]
+    Choose any  $ p\in \mathbb{Z} $ prime. \\
+    Consider  $ \mathbb{Z}[i]/(p)\cong \mathbb{F}_p[x]/(x^2+1) $. It is an integral domain is equivalent to  $ x^2+1  $ has no solution in  $ \mathbb{F}_p $.\\
+     $ x^2+1  $ has a solution in  $ \mathbb{F} $ $ \Leftrightarrow $  $ \exists a\in \mathbb{F}_p^\times  $ s.t.  $ a^2=-1,a^4=1 $, i.e.  $ ord(a)=4 $. By lemma \ref{existence of primitive root} we have  $ 4|p-1 $.\\
+     Hence  $ p\not=2  $ is a Gauss prime  $ \Leftrightarrow $  $ p\not\equiv 1\mod 4 $ i.e.  $ 4|p-3 $.\\
+     Moreover, if  $ p\equiv 1\mod 4 $,  $ p   $ is not a Gauss prime.  $ p=z\cdot w $ where  $ z  $ Gauss prime.\\
+      $ \Rightarrow p^2=N(p)=N(z)\cdot N(w) $  $ \Rightarrow N(z)=p $ so we can write  $ z=a+bi  $ a.t.  $ a^+b^2=p $.             
+\end{proof}

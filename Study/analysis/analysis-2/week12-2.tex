@@ -1,0 +1,33 @@
+\section{The change of variables formula}
+\begin{definition}
+     $ \mu,\nu $ are Borel measures of  $ X  $.  $ \mu \leq \nu $ if one of the following equivalent holds.
+     \begin{enumerate}
+        \item  $ \forall E\in \mathcal{B}_X,\mu(E ) \leq \nu(E) $
+        \item  $ \forall  $ Borel  $ f:X\rightarrow [0,+\infty] $,  $ \int f\mathrm{d}f \leq \int f\mathrm{d}v $.
+        \item  $ \forall  $ open  $ U\subset X $,  $ \mu(U) \leq \nu(U) $
+        \item  $ \forall $ compact  $ K\subset X $,  $ \mu(K)  \leq \nu(K)$
+        \item  $ \forall f\in C_c(X,\mathbb{R}_{ \geq 0}),\int f\mathrm{d}\mu \leq \int f\mathrm{d}v $        
+     \end{enumerate}  
+\end{definition}
+\begin{proposition}
+    Let  $ \mu,\nu $  be Randon measures of LCH  $ X  $,  $ \mathcal{U} $ is an open cover of  $ X $. Then  $ \mu \leq \nu $ iff  $ \forall u\in \mathcal{U} $ we have  $ \mu|_U \leq \nu|_U $    
+\end{proposition}
+\begin{proposition}
+    Let  $ \Omega\subset \mathbb{R}^n $ open,  $ \mu,\nu  $ Radon on  $ \Omega $. TFAE
+    \begin{enumerate}
+        \item  $ \mu \leq \nu $
+        \item  $ \forall  $ cube  $ Q\subset \Omega $,  $ \mu(Q) \leq \nu(Q) $
+        \item  $ \forall  $ open cube  $ Q\subset \Omega $,  $ \mu(Q) \leq \nu(Q) $     
+    \end{enumerate}  
+\end{proposition}
+\begin{theorem}
+     $ \Omega,\triangle\subset \mathbb{R}^n $ open,  $ \Phi:\Omega\xrightarrow[C^1]{\cong}\triangle $. Then \[\Phi^*\mathrm{d}m_{\triangle}=|J(\Phi)|\mathrm{d}m_{\Omega} \]
+     Equivalently,  $ \forall  $ Borel  $ f:\triangle\rightarrow[0,+\infty] $, we have 
+     \[\int_{\triangle}f\mathrm{d}m=\int_{\Omega}(f\circ \Phi)\cdot|J\Phi|\mathrm{d}m\]   
+\end{theorem}
+\begin{definition}
+    A (linear) \textbf{product}  $ \bigodot:V_1\times\cdots\times V_N\rightarrow V_1\odot\cdots\odot V_N $ is a  $ N $-linear map.  
+\end{definition}
+\begin{definition}
+    A tensor product is a surjective linear product s.t.  for all linear product there exists a homomorphism to it.  $ \boxdot $ 
+\end{definition}

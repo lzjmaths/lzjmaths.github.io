@@ -1,0 +1,58 @@
+\begin{theorem}[Stone-Weierstrass Theorem]
+    Let  $ \mathscr{A} $ be an algebra of real continuous functions on a compact set  $ K  $. If  $  \mathscr{A} $ separates points on  $ K  $ and if  $  \mathscr{A } $ vanished at no point of  $ K  $, then the uniform closure  $  \mathscr{B } $ of  $  \mathscr{A } $ consists of all real continuous functions on  $ K $.
+\end{theorem}
+\begin{proof}
+    \textit{Claim 1}. If  $ f\in  \mathscr{B } $, then  $ |f|\in  \mathscr{B } $.\\
+    Let  $ a:=\sup\limits_{x\in K }|f(x)| $\\
+    For  $ \forall \epsilon>0  $, the corollary  of this section  $ \Rightarrow  $  $ \exists c_1,\cdots,c_n\in \mathbb{R } $ s.t.
+    \begin{equation}
+        |\sum\limits_{j=1 }^{n } c_j y^j-|y||<\epsilon,\quad\forall y\in [-a,a]\tag{ $ \ast $ }
+    \end{equation} 
+    The first theorem in this section  $ \Rightarrow  $  $  \mathscr{B } $ is an algebra  $ \Rightarrow  $  $ g:=\sum\limits_{j=1 }^{n } c_jf^j\in  \mathscr{B } $.\\
+     $ (\ast)\Rightarrow $ $ |g(x)-|f(x)||<\epsilon,\quad\forall x\in K  $.\\
+      $  \mathscr{B } $ is uniformly closed  $ \Rightarrow  $  $ |f|\in  \mathscr{B } $\\
+    \textit{Claim 2}.  $ f\in  \mathscr{B },g\in  \mathscr{B } $  $ \Rightarrow  $  $ \max(f,g)\in  \mathscr{B } $ and  $ min(f,g)\in  \mathscr{B } $\\ 
+      This follows from Claim 1 and 
+      \[\left\{
+    \begin{aligned}
+        \max(f,g)&=\frac{f+g}{2}+\frac{|f-g|}{2 }\\
+        \min(f,g)&=\frac{f+g}{2}-\frac{|f-g|}{2 }
+    \end{aligned}
+      \right.\] 
+    \textit{Claim 3}.  $ \forall f:K\rightarrow \mathbb{R }  $ continuous,  $ \forall x\in K  $,  $ \forall \epsilon>0  $,  $ \exists g_x\in  \mathscr{B } $ s.t.
+    \[g_x(x)=f(x),\qquad g_x(t)>f(t)-\epsilon,\,\forall t\in K\]
+     $ \forall y\in K  $, the previous theorem  $ \Rightarrow  $  $ \exists h_y\in  \mathscr{A }\subset  \mathscr{B } $ s.t.  $ h_y(x)=f(x),h_y(y)=f(y) $.、、
+      $ h_y $ continuous  $ \Rightarrow  $  $ J_y:=\{t\in K: h_y(t)>f(t)-\epsilon\} $ is open and containing  $ x  $ and  $ y $ \\
+       $ \Rightarrow K\subset \bigcup\limits_{y\in K\backslash \{x\}}J_y $  $ \xRightarrow{K\,compact} $ $ \exists y_1,\cdots,y_n  $ s.t.  $ K\subset \bigcup\limits_{j=1 }^n J_{y_j}$\\
+       Let  $ g_x:=\max(h_{y_1},\cdots,h_{y_n}) $. Then  $ g_x(t)>f(t)-\epsilon  $,  $ \forall t\in K  $,  $ g_x(x)=f(x) $\\
+       \textit{Claim} 4.  $ \forall f:K\rightarrow \mathbb{R } $ continuous,  $ \forall \epsilon>0 $,  $ \exists  h\in  \mathscr{B } $ s.t.  $ |h(x)-f(x)|<\epsilon $, $ \forall x\in K   $.\\
+       For  $ \forall x\in K  $, let  $ g_x  $ be function constructed in Claim 3.\\
+        $ g_x  $ and  $ f  $ continuous  $ \Rightarrow  $   $ V_x:=\{t\in K :g_x(t)<f(x)+\epsilon \} $ is open and containing  $ x  $.\\
+        $ \Rightarrow K\subset \bigcup\limits_{x\in K }V_x $  $ \xRightarrow{K\,compact} $ $ \exists x_1,\cdots,x_n  $ s.t.  $ K\subset \bigcup\limits_{j=1 }^n V_{x_j}$.\\
+        Let  $ h:=min(g_{x_1},\cdots,g_{x_n }) $. Then  $ h(t)<f(t)+\epsilon,\,\forall t\in K  $.\\
+        Claim 2  $ \Rightarrow  $  $ h\in  \mathscr{B } $ .
+\end{proof}
+\begin{example}
+    Let  $ K:\{z\in \mathbb{C }:|z|=1\} $ be the unit circle, and let  $  \mathscr{A } $ be the algebra of  all functions of the form  $ f(e^{i\theta })=\sum\limits_{n=0 }^{N } c_n e^{in\theta},\,\theta \in [0,2\pi) $\\
+    Then  $  \mathscr{A } $ separates points on  $ K  $ and vanishes at no point of  $ K  $ by considering the function  $ f(e^{i\theta })=e^{i\theta} $. For  $ \forall f\in  \mathscr{A } $, we have 
+    \[\int_{0 }^{2\pi } f(e^{i\theta})e^{i\theta}\, \mathrm{d}\theta=0  \]  
+    Let  $  \mathscr{B } $ be the uniform closure of  $  \mathscr{A } $. Then  $ \exists f_n\in  \mathscr{A },\, f_n\rightrightarrows g $, for  $ g\in  \mathscr{B } $. Thus  $ \int_{0 }^{2\pi } g(e^{i\theta})e^{i\theta}\, \mathrm{d}\theta=0 $ for  $ g\in  \mathscr{B} $.\\
+     $ \Rightarrow  $ the continuous function  $ h(e^{i\theta })=e^{-i\theta} \not\in  \mathscr{B}$.\\     
+\end{example}
+So for complex algebra, we need an extra condition: $  \mathscr{A } $ is \underline{self-adjoint}, if 
+\[\forall f\in  \mathscr{A },\,\overline{f}\in  \mathscr{A}\text{ where }\overline{f}(x)=\overline{f(x)}\]
+\begin{theorem}
+    Suppose  $ \mathscr{A} $ is a self-adjoint algebra of complex continuous functions on a compact set  $ K  $. If  $  \mathscr{A} $ separates points on  $ K  $ and if  $  \mathscr{A } $ vanished at no point of  $ K  $, then the uniform closure  $  \mathscr{B } $ of  $  \mathscr{A } $ consists of all complex continuous functions on  $ K $.
+\end{theorem}
+\begin{proof}
+    Let  $  \mathscr{A }_\mathbb{R}  $ be the set of all real functions on  $ K  $ which belong to  $  \mathscr{A } $.\\
+    \begin{align*}
+        \forall f\in  \mathscr{A }&\Rightarrow f=u+iv \text{ where  $ u  $ and  $ v  $ are real.}\\
+        &\Rightarrow u=\frac{1 }{2 }(f+\overline{f})\in  \mathscr{A }_\mathbb{R} \text{ since  $  \mathscr{A } $ is self-adjoint.}
+    \end{align*}
+    Easy to check that  $  \mathscr{A}_\mathbb{R}  $ separates points on  $ K  $ with Theorem 8.5.2.\\
+     $ \forall x_0\in K  $  $ \Rightarrow $ $ \exists g\in  \mathscr{A } $ s.t.  $ g(x_0)\not=0  $. Let  $ f(x)=\overline{g(x)}g(x),\,x\in K $.  $ \Rightarrow f(x_0)\not=0 $ and  $ f(x)\in  \mathscr{A}_\mathbb{R} $.\\
+      $ \Rightarrow  $   $  \mathscr{A}_\mathbb{R} $   vanishes at no point of  $ K  $ 
+    The Stone-Weierstrass $ \Rightarrow  $  $ \forall  $ continuous  $ f:K\rightarrow \mathbb{R } $ lies in the uniform closure of  $  \mathscr{A}_\mathbb{R} $ $ \Rightarrow f\in  \mathscr{B } $.\\
+    So for  $ \forall  $ continuous  $ g:K\rightarrow \mathbb{C} $,  $ \text{Re}\, g,\text{Im}\, g\in  \mathscr{B} $. $ \Rightarrow g\in  \mathscr{B} $.     
+\end{proof}

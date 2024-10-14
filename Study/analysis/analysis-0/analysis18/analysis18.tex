@@ -1,0 +1,102 @@
+\subsection{Uniform Convergence and Differentiation}
+\begin{theorem}
+    Suppose $ \{f_n\}  $ is a sequence of differentiable functions on $ [a,b]  $, and  $ \{f_n(x)\} $ convergence for some  $ x_0\in[a,b] $.
+    If  $ \{f_n' \} $ convergence uniformly on  $ [a,b]  $ then  $ \{f_n \} $ converges uniformly on $ [a,b ] $, to a function $ f $,
+    and 
+    \begin{equation*}
+        f'(x)=\frac{d}{dx}\lim\limits_{n\to\infty } f_n(x)=\lim\limits_{n\to\infty } \frac{d }{dx }f_n(x)=\lim\limits_{n\to\infty } f_n'(x )
+    \end{equation*}  
+\end{theorem}
+\begin{proof}
+     $ \forall \epsilon>0  $, choose  $ N\in\mathbb{N } $ s.t. 
+     \[
+     \begin{cases}
+        |f_n(x_0)-f_m(x_0)|<\epsilon, \, \forall n,m\geqslant N \\
+        |f_n'(t)-f_m'(t)|<\epsilon,\, \forall n,m\geqslant N
+     \end{cases} 
+     \]
+     MVT implies that  exists $ \xi $ between  $ t  $ and  $ x  $, such that \[ |f_n(x)-f_m(x)-(f_n(t)-f_m(t))|=|f_n'(\xi )-f_m'(\xi )||t-x|<\epsilon|x-t|<\epsilon(b-a) \tag{ $ \ast $ }\]
+     \begin{align*}
+        \Rightarrow f_n(x)-f_m(x)& \leqslant |f_n(x)-f_m(x)-(f_n(x_0)-f_m(x_0 ))|+|f_n(x_0)-f_m(x_0 )|\\
+        &<\epsilon(b-a)+\epsilon,\quad \forall x\in[a,b],\forall n,m,\in N
+     \end{align*} 
+       $ \Rightarrow\{f_n\} $ converges uniformly on  $ [a,b] $.
+       
+       Define  $ f(x):=\lim\limits_{n\to\infty }f_n(x),\,\forall x\in [a,b]  $.
+       
+       For fixed  $ x\in[a,b]  $, define  $ g_n(t):=\frac{f_n(t)-f_n(x)}{t-x},g(t)=\frac{f(t)-f(x) }{t-x },\,\forall t\in[a,b],t\neq x  $ 
+      
+        \begin{align}
+        ( * )&\Rightarrow |g_n(t)-g_m(t)|<\epsilon, \forall t\in [a,b],t\neq x,\forall n,m\geqslant N \\
+        &\Rightarrow\{g_n \} \text{ converges uniformly on }[a,b]- \{x\}
+       \end{align}
+       
+       Note that  $ \lim\limits_{t\to x } g_n(t)=f_n'(x)  $.
+
+       1st theorem in 7.2 implies  \[ f'(x)=\lim\limits_{t\to x}g(t)=\lim\limits_{t\to x}\lim\limits_{n\to\infty }g_n(t)=\lim\limits_{n\to \infty}\lim\limits_{t\to x } g_n(t)=\lim\limits_{n\to\infty } f_n'(x) \]  
+\end{proof}
+\subsection{Equicontinuous of Families of Functions}
+We say that  $ \{f_n \} $ is \underline{pointwise bounded} on $ E  $ if the sequence  $ \{f_n(x ) \}$ is bounded for each  $ x\in E  $.
+
+We say that  $ \{f_n \} $ is \underline{uniformly bounded} on  $ E  $ if there exists  $ M\in \mathbb{R }   $ s.t.
+\[|f_n(x)| \leqslant M,\,\forall x\in E,\forall n\in\mathbb{N } \]
+\begin{example}
+    Let  $ f_n(x)=\frac{x^2}{x^2+(1-nx)^2},x\in[0,1],n\in\mathbb{N } $, then  $ \{f_n \} $ is uniformly bounded on  $ [0,1] $, but no 
+    subsequence of it can converge uniformly on  $ [0,1] $.
+\end{example}
+
+A family  $ \mathscr{F} $ of complex-values functions  $ f  $ defined on  $ E  $ in a metric space  $ X  $ is said to be \underline{equicontinuous} on  $ E  $ if  $ \forall \epsilon>0, \exists \delta>0  $ s.t.
+\[|f(x)-f(y)|<\epsilon,\forall x,y\in E \quad with\quad d(x,y)<\delta,\forall f\in \mathscr{F}\] 
+\begin{remark}
+    Each member of an equicontinuous family is uniformly continuous
+\end{remark}
+\begin{theorem}
+    If  $ \{f_n \} $ is a pointwise bounded sequence of complex functions on a countable set  $ E  $, then  $ \{F_n \} $ has a subsequence
+     $ \{f_{n_k}\} $ such that  $ \{f_{n_k}(x)\} $ converges for  $ \forall x\in E $.   
+\end{theorem}
+\begin{proof}
+    Let  $ E:=\{x_i:i\in\mathbb{N }\}  $. Consider  the array $ \{f_{ij}\} $ such that  $ \lim\limits_{j\to \infty } f_{nj}(x_n)  $ exists for each  $ n\in\mathbb{N} $
+    and  $ \{f_{(i+1)j}\} $  is the subsequence of  $ \{f_{ij}\} $  
+
+    then consider the diagonal of the array  $ f_{11},f_{22},\cdots  $. 
+
+    We have  $ \lim\limits_{j\to\infty } f_{jj}(x_i)  $ exists for each  $ x_i\in E  $ 
+\end{proof}
+\begin{theorem}
+    If  $ K  $ is a compact metric space, and if  $ f_n\in \mathscr{C} (K)  $ for  $ \forall n\in\mathbb{N } $, and  $ \{f_n \} $ converges uniformly on  $ K  $, then  $ \{f_n \} $ is equicontinuous on  $ K  $ 
+
+\end{theorem}
+\begin{theorem}[Arzela-Ascoli Theorem]
+    If  $ K  $ is compact,  $ f_n\in  \mathscr{C}(K)  $ for  $ \forall n\in\mathbb{N } $, and  $ \{f_n \} $ is pointwise bounded and equicontinuous on $ K  $.
+    Then 
+    \begin{enumerate}[(a)]
+        \item  $ \{f_n \} $ is uniformly bounded on  $ K  $
+        \item  $ \{f_n \} $ contains a uniformly convergent subsequence 
+    \end{enumerate} 
+\end{theorem}
+\begin{proof}
+     $ \forall \epsilon>0 $, $ \{f_n\} $ equicontinuous $ \Rightarrow  $  $ \exists\delta>0  $ s.t.
+     \[|f_n(x)-f_n(y)|<\epsilon,\quad\forall x\in K, \forall y\in N_\delta(x),\forall n\in \mathbb{N}\tag{ $ \ast $ }\] 
+     \begin{align*}
+        K\subset \bigcup\limits_{x\in K }N_\delta(x)&\xRightarrow{  K  compact}\exists x_1,\cdots,x_n,\, K\subset \bigcup\limits_{j=1}^m N_\delta(x_j)\\
+        &\Rightarrow \forall t\in K,\, \exists x_j\text{ with } j\in \{1,2,\cdots,m\} \text{ s.t. } t\in N_\delta(x_j),\\&\quad\text{ and thus}\, |f_n(t)-f_n(x_j)|<\epsilon,\,\forall n\in \mathbb{N}.\\
+        &\Rightarrow \sup\limits_{t\in K, n\in \mathbb{N}}|f_n(t)| \leqslant\sup\limits_{1 \leqslant j \leqslant m}\sup\limits_{n\in \mathbb{N}}|f_n(x_j)|+\epsilon<\infty\text{ since  $ \{f_n\} $ is pointwise bounded}\\
+        &\Rightarrow \{f_n\}\text{ is uniformly bounded on  $ K  $ } 
+     \end{align*} 
+    Let  $ E  $ be a countable dense subset of  $ K  $ (see Exercise 25 of Chapter 2)\\
+    The first theorem in this section  $ \Rightarrow  $  $ \{f_n \} $ has a subsequence  $ \{f_{n_k } \} $ s.t.  $ \{f_{n_k}(x)\} $ converges for  $ \forall x\in E $.\\
+     $ E  $ is dense in  $ K  $$ \Rightarrow  $$ K\subset\bigcup\limits_{x\in E }N_\delta(x) $$ \xRightarrow{K compact}  $ $ \exists x_1,\cdots,x_m\in E  $ s.t. $ K\subset \bigcup\limits_{j=1}^m N_\delta(x_j ) $.\\
+     We define  $ g_k:=f_{n_k} $. Then  $ \{g_k(x) \} $ converges for  $ \forall x\in E  $  $ \Rightarrow $  $ \exists N\in \mathbb{N } $ s.t.
+     \[|g_p(x_j)-g_q(x_j)|<\epsilon\quad\forall p\geqslant N,q\geqslant N,j\in\{1,2\cdots,m\}\]
+     For  $ \forall t\in K  $,  $ \exists j_0\in\{1,2,\cdots,m \} $ s.t.  $ t\in N_\delta(x_{j_0}) $  $ \xRightarrow{(\ast)} $ 
+     \[|g_p(t)-g_p(x_{j_0})|<\epsilon\quad \text{for }\forall p\in \mathbb{N}\]
+     \[\Rightarrow |g_p(t)-g_q(t)| \leqslant |g_p(t)-g_p(x_{j_0})|+|g_p(x_{j_0})-g_q(x_{j_0})|+|g_q(x_{j_0})-g_q(t)|<3\epsilon,\,\forall  p\geqslant N,q\geqslant N,\forall t\in K\]
+      $ \Rightarrow $ $ \{g_k\}=\{f_{n_k}\} $ converges uniformly on  $ K  $.   
+
+\end{proof}
+\subsection{The Stone-Weiertrass Theorem}
+
+\begin{theorem}
+    If  $ f  $ is a continuous complex function on  $ [a,b] $, there exists a sequence of polynomials $ \{P_n \} $ such that 
+    \[\lim\limits_{n\to\infty } P_n (x)=f(x) \text{ uniformly on }[a,b] \]
+\end{theorem}

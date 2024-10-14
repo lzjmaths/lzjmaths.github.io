@@ -1,0 +1,101 @@
+\begin{theorem}
+    Suppose  $ f:E\rightarrow\mathbb{R}^m  $ where  $ E\subset \mathbb{R}^n  $ is open. Then  $ f\in  \mathscr{C}'(E) $ iff  $ \frac{\partial f}{\partial x_j} $ exists and are continuous on  $ E  $ for  $ 1 \leqslant i \leqslant m,1 \leqslant j \leqslant n $.  
+\end{theorem}   
+\begin{proof}
+     $' \Rightarrow' $ Recall  $ ||f'(\vec{y })-f'(\vec{x})||=\sup\limits_{|\vec{z}|=1}|[f'(\vec{y })-f'(\vec{x})]\vec{z}| $\\
+     We already proved in the 3rd theorem that  $ \frac{\partial f }{\partial x_j} $ exist.\\
+     Taking    $ \vec{z}=\vec{e_j} $, we get \[||f'(\vec{y})-f'(\vec{x})||\geqslant |[f'(\vec{y})-f'(\vec{x})]\vec{e_j}|=\left\{\sum\limits_{i=1}^{m } [\frac{\partial f_i }{\partial x_j}(\vec{y})-\frac{\partial f_i }{\partial x_j}(\vec{x})]^2\right\}^{\frac{1}{2}}\geqslant |\frac{\partial f_i }{\partial x_j}(\vec{y})-\frac{\partial f_i }{\partial x_j}(\vec{x})|\]
+      $ \Rightarrow $  $ \frac{\partial f_i }{\partial x_j} $ is continuous on  $ E  $ for  $ \forall  i \leqslant m,1 \leqslant j \leqslant n $\\
+       $ '\Leftarrow' $ It is enough to prove: \[ \forall \vec{x}\in E ,\lim\limits_{\vec{h}\to\vec{0}}\dfrac{|f(\vec{x}+\vec{h})-f(\vec{x})-f'(\vec{x})\vec{h}|}{|\vec{h}|} =0  \tag{ $ \ast $ }\]\\
+       Where  
+       \[
+    [f'(\vec{x})]=\begin{pmatrix}
+        \dfrac{\partial f_1}{\partial x_1} (\vec{x}) & \cdots &
+        \dfrac{\partial f_1}{\partial x_m} (\vec{x}) \\
+        \vdots & & \vdots \\
+        \dfrac{\partial f_n}{\partial x_1} (\vec{x}) & \cdots &
+        \dfrac{\partial f_n}{\partial x_m} (\vec{x})
+    \end{pmatrix}
+\]
+    Note that the continuity of  $ f' $ in  $ E  $ follows the last theorem in 9.1.\\
+     $ (\ast ) $ follows if we can prove it for each component.\\
+     We now fix  $ i  $. \\
+      $ \frac{\partial f_i }{\partial x_j} $ are continuous at  $ \vec{x } $  $ \Rightarrow  $  $ \forall \epsilon>0,\exists r>0  $ s.t.  \[\left|\frac{\partial f_i }{\partial x_j}(\vec{y})-\frac{\partial f_i }{\partial x_j}(\vec{x})\right|<\frac{\epsilon}{n},\forall |\vec{y}-\vec{x}|<r,1 \leqslant j \leqslant n \tag{ $ \ast\ast $ }\]
+      Then 
+      \begin{align*}
+        |f_i(\vec{x}+\vec{h})-f_i(\vec{x})-\sum\limits_{j=1}^{n}\frac{\partial f_i }{\partial x_j}(\vec{x})h_j|& \leqslant \sum\limits_{t=1}^{n} |f_i(\vec{x}+\sum\limits_{j=1}^{t } h_j\vec{e_j})-f_i(\vec{x}+\sum\limits_{j=1}^{t-1}h_j\vec{e_j})-\frac{\partial f_i }{\partial x_t}(\vec{x})h_t|\\
+        &\xlongequal[]{MVT}\sum\limits_{t=1}^{n } \left|\frac{\partial f_i }{\partial x_t}(\vec{x}+\sum\limits_{j=1}^{t-1 } h_j\vec{e_j}+\theta_t h_t \vec{e_t})\cdot h_n-\frac{\partial f_i }{\partial x_t}(\vec{x})h_t \right|\\
+        &\overset{(\ast\ast)}{\leqslant}\frac{\epsilon}{n}[\sum\limits_{t=1}^{n}|h_t| ]\\&\leqslant \epsilon|h| 
+      \end{align*}
+\end{proof}
+\subsection{The Contraction Principle}
+Let  $ X  $ be a metric space with metric  $ d  $. If  $ \varphi:X\rightarrow X    $ and  $ \exists c\in [0,1) $  s.t.
+\[d(\varphi(x),\varphi(y)) \leqslant c\,d(x,y),\quad \forall x,y\in X \]
+then  $ \varphi  $ is said to be a \underline{contraction} of  $ X  $ into  $ X $.
+\begin{theorem}[Banach fixed point theorem]
+    If  $ X  $ is a complete metric space, and if  $ \varphi $  is a contraction of  $ X  $ into  $ X  $, then there exists one and only one  $ x\in X  $ s.t.  $ \varphi(x)=x $. 
+\end{theorem}
+\begin{proof}
+    The proof is given in Mid-exam.
+\end{proof}  
+\subsection{The Inverse Function Theorem}
+\begin{theorem}[the inverse function theorem]
+    Suppose   $ E\subset \mathbb{R}^n $ is open, and  $ f:E\rightarrow \mathbb{R}^n $,  $ f\in \mathscr{C}'(E)   $,  $ f'(\vec{a}) $ is invertible for some  $ \vec{a}\in E  $, and  $ \vec{b}=f(\vec{a}) $.
+    Then \begin{enumerate}
+        \item[$ (a) $] $ \exists  $ open sets  $ U,V\subset \mathbb{R}^n  $ s.t. $ \vec{a}\in U, \vec{b}\in V  $,  $ f:U\rightarrow V  $ is 1-1 and onto.
+        \item[$ (b) $] if  $ g  $ is the inverse of  $ f  $, defined on  $ V  $ by  $ g(f(\vec{x}))=\vec{x},\quad\forall \vec{x}\in V     $, then  $ g\in \mathscr{C}'(V) $.  
+    \end{enumerate}   
+\end{theorem}
+\begin{remark}
+    The theorem says: the system of n equation:
+    \[y_i=f_i(x_1,\cdots,x_n),\quad1 \leqslant i \leqslant n\]
+    can be solved for  $ x_1,\cdots,x_n  $ in terms of  $ y_1,\cdots,y_n  $, if we restrict  $ \vec{x }  $ and  $ \vec{y} $ to small enough NBHDs of  $ \vec{a}  $ and  $ \vec{b} $.  
+\end{remark}
+\begin{proof}
+    Let  $ A:=f'(\vec{a}) $, and choose  $ \lambda  $ s.t.
+    \begin{equation}
+        2\lambda||A^{-1}||=1\tag{ $ \ast $ }
+    \end{equation} 
+     $ f' $ is continuous at  $ \vec{a } $  $ \Rightarrow  $  $ \exists  $ open ball  $ U\subset E  $ centered at  $ \vec{a}  $ s.t.
+     \begin{equation}
+        ||f'(\vec{x})-A||<\lambda,\quad\forall \vec{x}\in U\tag{ $ \ast\ast $ }
+     \end{equation}
+     For each  $ \vec{y }\in \mathbb{R}^n  $, we define a function  $ \varphi  $ by 
+     \begin{equation}
+        \varphi(\vec{x})=\vec{x}+A^{-1}(\vec{y}-f(\vec{x})),\quad \forall\vec{x}\in E\tag{ $ \ast\ast\ast $ }
+     \end{equation}
+     Then  $ f(\vec{x})=\vec{y} $ iff  $ \vec{x} $ is a fixed point of  $ \varphi  $. And 
+     \begin{equation}
+        \varphi'(\vec{x})=I-A^{-1}f'(\vec{x})=A^{-1}(A-f'(\vec{x}))\notag
+     \end{equation} 
+     \[(\ast)(\ast\ast)\Rightarrow||\varphi(\vec{x})||<\frac{1 }{2 },\quad\forall \vec{x}
+     \in U\]
+     4th theorem in 9.2  $ \Rightarrow  $   
+     \[ |\varphi(\vec{x_1})-\varphi(\vec{x_2})| \leqslant \frac{1 }{2 }|\vec{x_1}-\vec{x_2}|,\,\forall \vec{x_1},\vec{x_2}\in U \tag{ $ \ast\ast\ast\ast $ }\]
+     The uniqueness part of the fixed point theorem  $ \Rightarrow  $  $ \varphi  $ has at most one fixed point in  $ U  $.\\
+      $ \Rightarrow  $  $ f(\vec{x})=\vec{y} $ for at most one  $ \vec{x}\in U  $ $ \Rightarrow  $  $ f  $ is 1-1 in  $ U $.\\
+      Let  $ V:=f(U) $ and pick  $ \vec{y_0 }\in V  $. Then  $ \vec{y_0 }=f(\vec{x_0 }) $ for some  $ \vec{x_0}\in U $.\\
+      Let  $ B:=N_r(\vec{x_0}) $ with  $ r>0  $ s.t.  $ \overline{B } \subset U  $\\
+      For  $ \forall \vec{y }\in \mathbb{R}  $ with  $ |\vec{y}-\vec{y_0}|<\lambda r $, we will prove  $ \vec{y }\in V  $ (Thus  $ V  $ is open).
+      \[|\varphi(\vec{x_0})-\vec{x_0}|\xlongequal[]{(\ast\ast\ast)}|A^{-1}(\vec{y}-f(\vec{x_0}))|=|A^{-1}(\vec{y}-\vec{y_0})|<||A^{-1}||\lambda r \overset{(\ast)}{=}\frac{r }{2}\]
+      For  $ \forall \vec{x }\in \overline{B} $,  $ |\varphi(x)-\vec{x_0}| \leqslant |\varphi(\vec{x})-\varphi(\vec{x_0})|+|\varphi(\vec{x_0})-\vec{x_0}|\overset{(\ast\ast\ast\ast)}{<}\frac{1 }{2 }|\vec{x}-\vec{x_0}|+\frac{r }{2 } \leqslant r $.\\
+       $ \Rightarrow \varphi(\vec{x})\in B  $ $ \Rightarrow   $  $ \varphi   $ is a contraction of  $ \overline{B} $ into  $ \overline{B} $.\\
+       The fixed point theorem $ \Rightarrow  $  $ \varphi  $ has a fixed point  $ \Rightarrow  $  $ \vec{y}\in f(\overline{B})\subset f(U)=V $ \\
+       Now let  $ \vec{y }\in V  $ and  $ \vec{y}+\vec{k}\in V  $.\\
+        $ \Rightarrow  $  $ \exists \vec{x}\in U,\vec{x}+\vec{h}\in U  $ s.t.  $ \vec{y}=f(\vec{x}),\vec{y}+\vec{k}=f(\vec{x}+\vec{h}) $\\
+          $ (\ast\ast\ast) $  $ \Rightarrow  $  $ \varphi(\vec{x}+\vec{h})-\varphi(\vec{x})=\vec{h}-A^{-1}\vec{k} $\\
+          \begin{align}
+                (\ast\ast\ast\ast)&\Rightarrow |\vec{h}-A^{-1}\vec{k}|<\frac{1 }{2 }|\vec{h}|\notag\\
+                &\Rightarrow |A^{-1}\vec{k}|\geqslant |\vec{h}|-|\vec{h}-A^{-1}\vec{k}|>\frac{1 }{2 }|\vec{h}|\notag\\
+                &\Rightarrow |\vec{h}| \leqslant 2|A^{-1}\vec{k}| \leqslant 2||A^{-1}||\cdot||\vec{k}||=\lambda^{-1}|\vec{k}|\tag{ $ \square $ }
+          \end{align}  
+        With Theorem 9.1.5,  $ f'(\vec{x}) $ has an inverse, say  $ T $.
+        \begin{equation}
+            \Rightarrow \dfrac{|g(\vec{y}+\vec{k})-g(\vec{y})-T\vec{k}|}{|\vec{k}|}\overset{(\square)}{\leqslant}\dfrac{||T||}{\lambda}\cdot\dfrac{|f(\vec{x}+\vec{h})-f(\vec{x})-f'(\vec{x})\vec{h}|}{|\vec{h}|}\tag{ $ \square\square $ }
+        \end{equation}  
+         $ \Rightarrow  $  $ g'(\vec{y})=T $ is continuous in  $ V  $ with 5th theorem in section 9.1. 
+\end{proof}
+An immediate consequence of part (a) of the previous theorem is 
+\begin{theorem}
+    If  $ f:E\rightarrow \mathbb{R}^n $ and  $ f\in \mathscr{C}'(E) $, and  $ f'(\vec{x})  $ is invertible for  $ \forall \vec{x }\in E  $, then  $ f(W ) $ is an open subset of  $ \mathbb{R}^n   $ for every open set  $ W\subset E $. i.e.  $ f  $ is an \underline{open mapping} of  $ E $ into  $ \mathbb{R}^n $.     
+\end{theorem}

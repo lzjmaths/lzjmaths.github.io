@@ -1,0 +1,37 @@
+\section{Rings and Fields}
+\begin{definition}[Group]
+    A group is a set G with an operation $ \cdot $ :  $ G\times G\rightarrow G $ such that:
+    \begin{enumerate}[$ (1) $]
+        \item (associative law) $ \forall x,y,z\in G, (x\cdot y)\cdot z=x\cdot(y\cdot z)$
+        \item There is an \textbf{identity} element  $ 1 $ such that  $ 1\cdot x=x\cdot 1=x,\forall x\in G $
+        \item For any  $ x\in G $,  $ \exists $ an \textbf{inverse}  $ x^{-1} $ such that  $ x\cdot x^{-1}=x^{-1}\cdot x=1 $       
+    \end{enumerate}
+    A group  $ G  $ is called \textbf{Abelian/commutative}, if  $ \forall x,y\in G ,x\cdot y=y\cdot x $ 
+\end{definition}
+\begin{definition}[Ring]
+    A ring is a set with two operations  $ + $ and $ \cdot $ such that for  $ x,y,z\in\mathbb{R} $ 
+    \begin{enumerate}[$ (1) $]
+        \item (commutative law) $ x+y=y+x $ 
+        \item (associative law) $ (x+y)+z=x+(y+z) $,\quad  $ (x\cdot y)\cdot z=x\cdot (y\cdot z) $
+        \item (distribution law) $ (x+y)\cdot z=x\cdot z+y\cdot z $,\quad  $ z\cdot (x+y)=z\cdot x+z\cdot y $       
+    \end{enumerate}   
+    Moreover, there is a \textbf{zerojjj element}  $ 0 $   and \textbf{identity element}  $ 1\not=0 $ s.t.  $ \forall x\in \mathbb{R}$  
+    \begin{enumerate}[$ (4) $]
+        \item $ x+0=0+x=x=x\cdot 1=1\cdot x $ 
+        \item[$ (5) $]  $ \exists $ \textbf{opposite}  $ -x $ of  $ x $ such that  $ -x+x=0=x+(-x) $ 
+    \end{enumerate} 
+     $ x\in R $ is called \textbf{invertible} or a \textbf{unit} if  $ \exists x^{-1}\in R  $ s.t.  $ x^{-1}\cdot x=x\cdot x^{-1}=1  $. 
+     Then  $ x^{-1} $ is called the \textbf{inverse} of  $ x $.\\
+     A ring  $ (R,+,\cdot ) $ is called \textbf{commutative} if  $ \forall x,y\in R, xy=yx $ (say x \textbf{commutes} y)
+
+\end{definition}
+\begin{remark}
+    If  $ xy=1 $, then  $ y  $ is called a \textbf{right inverse} of  $ x $ 
+\end{remark}
+\begin{proposition}[Cancellation law]
+    If  $ x,y,z\in R,x+y=x+z $, then  $ y=z  $.\\
+    If  $ x  $ is unit, $ x\cdot y=x\cdot z  $, then  $ y=z  $. 
+\end{proposition}
+\begin{definition}[Field]
+    A commutative ring is a \textbf{field} if every nonzero element is a unit
+\end{definition}

@@ -1,0 +1,89 @@
+\subsection{The Implicit Function Theorem}
+If  $ \vec{x }=(x_1,\cdots,x_n)\in \mathbb{R}^n  $ and  $ \vec{y}=(y_1,\cdots,y_m)\in\mathbb{R}^m $, we write  $ (\vec{x},\vec{y}) $ for the point  \[ (x_1,\cdots,x_n,y_1,\cdots,y_m)\in\mathbb{R}^{n+m} \]
+ $ \forall A\in L(\mathbb{R}^{n+m},\mathbb{R}^n) $ can be split into two linear tranformations  $ A_x  $ and  $ A_y  $, defined by 
+ \[A_x\vec{h}:=A(\vec{h},0),\,A_y\vec{k}=A(0,\vec{k}),\,\forall \vec{h }\in \mathbb{R}^n,k\in\mathbb{R}^m\]
+ Then  $ A_x\in L(\mathbb{R}^n),\,A_Y\in L(\mathbb{R}^m,\mathbb{R}^n) $, and\[A(\vec{h},\vec{k})=A_x\vec{h}+A_y\vec{k}\tag{ $ \ast $ }\]   
+ \begin{theorem}
+    If  $ A\in L(\mathbb{R}^{n+m},\mathbb{R}^n) $ and if  $ A_x $ is invertible, then for  $ \forall \vec{k}\in \mathbb{R}^m $,  $ \exists  $ a unique  $ \vec{h}\in \mathbb{R}^n  $ s.t.  $ A(\vec{h},\vec{k})=\vec{0} $. This  $ \vec{h} $ can be computed from  $ \vec{k} $    by 
+    \[\vec{h}=-(A_x)^{-1}A_y\vec{k}\]
+ \end{theorem}
+ \begin{theorem}[the implicit function theorem]
+    Let  $ f  $ be a  $ \mathscr{C}' $-mapping of an open set  $ E\subset \mathbb{R}^{n+m } $ into  $ \mathbb{R}^n $ s.t. $ f(\vec{a},\vec{b})=\vec{0} $ for some  $ (\vec{a},\vec{b})\in E $. Let  $ A:=f'(\vec{a},\vec{b}) $ and assume that  $ A_x  $ is invertible. Then  $ \exists  $ open sets  $ U\subset \mathbb{R}^{n+m} $ and  $ W\subset\mathbb{R}^m  $, with  $ (\vec{a},\vec{b})\in U  $ and  $ \vec{b}\in W $, having the following property.\\
+    \\
+    For  $ \forall \vec{y}\in W $, $ \exists  $ a unit  $ \vec{x}  $ s.t.  $ (\vec{x},\vec{y})\in U $ and  $ f(\vec{x},\vec{y})=\vec{0} $. If this  $ \vec{x} $ is defined to be  $ g(\vec{y }) $; then  $ g\in \mathscr{C}'(W) $,  $ g(\vec{b})=\vec{a} $ and  $ g'(\vec{b})=-(A_x)^{-1}A_y $             
+ \end{theorem}
+ \begin{remark}
+    \begin{equation}\tag{ $ \square $ }
+        f(\vec{x},\vec{y})=\vec{0}\Leftrightarrow \left\{
+            \begin{matrix}
+                f_1(\vec{x},\vec{y})=\vec{0}\\
+                f_2(\vec{x},\vec{y})=\vec{0}\\
+                \vdots \\
+                f_n(\vec{x},\vec{y})=\vec{0}
+            \end{matrix}
+        \right.
+    \end{equation}
+    \begin{equation}\notag
+        A_x \text{ is invertible}\Leftrightarrow
+        \begin{pmatrix}
+            \dfrac{\partial f_1}{\partial x_1} (x) & \cdots &
+            \dfrac{\partial f_1}{\partial x_n} (x) \\
+            \vdots & & \vdots \\
+            \dfrac{\partial f_n}{\partial x_1} (x) & \cdots &
+            \dfrac{\partial f_n}{\partial x_n} (x)
+        \end{pmatrix} \text{ evaluated at  $ (\vec{a},\vec{b}) $ is invertible}
+    \end{equation}
+    If  $ (\square) $ holds when  $ \vec{x}=\vec{a} $ and  $ \vec{y}=\vec{b} $, the theorem say that  $ (\square )$  can be solved for  $ x_1,\cdots,x_n $ in terms of  $ y_1,\cdots,y_m $, for  $ \forall \vec{y}  $ in a NBHD of  $ \vec{b} $, and that these solutions are continuously differentiable functions of  $ \vec{y} $.   
+ \end{remark}
+ \begin{proof}
+    Define  $ F $ by  $ F(\vec{x},\vec{y})=(f(\vec{x},\vec{y}),\vec{y}),\,\forall (\vec{x},\vec{y})\in E $.\\
+    Then  $ F $ is a  $ \mathscr{C}' $-mapping of  $ E $ into  $ \mathbb{R}^{n+m} $. We will prove  $ F'(\vec{a},\vec{b})$ is invertible.\\
+     $ \Rightarrow  $  $ F'(\vec{a},\vec{b})\in L(\mathbb{R}^{n+m}) $ which maps  $ (\vec{h},\vec{k}) $ to  $ (A(\vec{h},\vec{k}),\vec{k}) $.\\
+     And  $ (A(\vec{h},\vec{k}),\vec{k})=\vec{0} $  $ \Rightarrow $  $ \vec{h}=\vec{k}=\vec{0} $ with the previous theorem.\\
+     Then  $ F'(\vec{a},\vec{b}) $ is  1-1  $ \Rightarrow $  $ F'(\vec{a},\vec{b}) $ is invertible.\\
+     The inverse function theorem applied to  $ F  $  $ \Rightarrow  $  $ \exists $ open sets  $ U,V\subset\mathbb{R}^{n+m} $ with  $ (\vec{a},\vec{b})\in U, (\vec{0},\vec{b})\in V $ s.t. $ F:U\rightarrow V  $ is 1-1 and onto\\
+     Define  $ W:=\{\vec{y}\in \mathbb{R}^m:(\vec{0},\vec{y})\in V\} $. Then  $ \vec{b}\in W  $. $ V $ is open  $ \Rightarrow $  $ W  $ is open.\\
+     For  $ \forall \vec{y}\in W $,  $ (\vec{0},\vec{y})=F(\vec{x},\vec{y}) $ for some  $ (\vec{x},\vec{y})\in U $.\\
+     Suppose that with the same  $ \vec{y} $,  $ \exists (\vec{x'},\vec{y})\in U  $ s.t.  $ f(\vec{x'},\vec{y})=\vec{0} $ which means  $ F(\vec{x'},\vec{y})=F(\vec{x},\vec{y})=\vec{0} $ with contraction to that $ F $ is 1-1.\\
+     For the second part of the theorem, for  $ \forall \vec{y}\in W $, define  $ g(\vec{y}) $ s.t.  
+     \[ (g(\vec{y}),\vec{y})\in U  \text{ and }  f(g(\vec{y}),\vec{y})=\vec{0} \tag{ $ \square\square $ }\]
+     Then \[F(g(\vec{y}),\vec{y})=(\vec{0},\vec{y}),\forall \vec{y}\in W\tag{ $ \ast\ast\ast $ }\]
+     Let  $ G:W\rightarrow U  $ be the inverse of F, then the inverse function  $ \Rightarrow  $  $ G\in \mathscr{C}'(V) $.\\
+      $ (\ast\ast\ast)\Rightarrow(g(\vec{y}),\vec{y})=G(0,\vec{y}),\forall \vec{y}\in W $\\
+       $ \Rightarrow g\in \mathscr{C}'(W) $ since  $ G\in \mathscr{C}'(V) $.
+       Now to compute  $ g'(\vec{b}) $, define  $ \Phi(\vec{y}):=(g(\vec{y}),\vec{y}),\,\forall \vec{y}\in W $.\\
+       Then  $ \Phi'(\vec{y})\vec{k}=(g'(\vec{y})\vec{k},\vec{k}) $, for  $ \forall \vec{y}\in W,\vec{k}\in \mathbb{R}^m $.\\
+        $ f(\Phi(\vec{y}))=\vec{0},\forall \vec{y}\in W $ $ \Rightarrow  $  $ f'(\Phi(\vec{y}))\Phi'(\vec{y})=0 $.\\
+         $ \Phi(\vec{b})=(\vec{a},\vec{b}) $ and  $ f'(\Phi(\vec{b}))=A $  $ \Rightarrow  $  $ A\Phi'(\vec{b})=0 $.\\
+         i.e.  \[ A_x g'(\vec{b})\vec{k}+A_y\vec{k}=\vec{0},\forall \vec{k}\in \mathbb{R}^m\tag{ $ \triangle $ } \].\\
+         With  $ A_x  $ is invertible we know that  $ g'(\vec{b})=-A_x^{-1}A_y $           
+ \end{proof}
+\begin{remark}
+     $ (\triangle )$  $ \Leftrightarrow  $ 
+     \[\sum\limits_{j=1 }^{n } \dfrac{\partial f_i }{\partial x_j }(\vec{a},\vec{b})\dfrac{\partial g_j }{\partial y_k }(\vec{b})=-\dfrac{\partial f_i}{\partial y_k}(\vec{a},\vec{b}),\quad 1 \leqslant i \leqslant n,1 \leqslant k \leqslant m\] 
+\end{remark}
+\begin{example}
+    Take  $ n=2,m=3 $, and consider the mapping  $ f:\mathbb{R}^5\rightarrow\mathbb{R}^2 $ given by 
+    \[\left\{
+        \begin{aligned}
+            f_1(x_1,x_2,y_1,y_2,y_3)&=2e^{x_1}+x_2y_1-4y_2+3\\
+            f_2(x_1,x_2,y_1,y_2,y_3)&=x_2\cos (x_1)-6x_1+2y_1-y_3
+        \end{aligned}
+    \right.\] 
+     $ \vec{a}=(0,1),\vec{b}=(3,2,7) $, then  $ f(\vec{a},\vec{b})=\vec{0} $. We can use the previous theorem there   
+\end{example}
+\subsection{The Rank Theorem}
+For  $ \forall A\in L(X,Y) $, the null space of A,  $ \mathscr{N}(A)$ is the set of all  $ \vec{x}
+\in X $ s.t.  $ A\vec{x}=\vec{0} $. It is clear that  $ \mathscr{N}(A) $ is a vector space in  $ X $.\\
+The \underline{range} of  $ A  $,  $ \mathscr{R}(A) $, is a vector space in  $ Y  $.\\
+The \underline{rank} of  $ A  $ is the dimension of  $ \mathscr{R}(A)$.\\
+An operator  $ P\in L(X) $ is said to be a \underline{projection} in  $ X  $ if  $ P^2=P $.
+\begin{proposition}
+    \begin{enumerate}
+        \item[$ (a) $] If  $ P  $ is a projection in  $ X  $, then every  $ \vec{x}\in X  $ has a unique representation of the form  $ \vec{x}=\vec{x_1}+\vec{x_2} $.\\
+        where  $ x_1\in \mathscr{P},\vec{x_2}\in \mathscr{N}(P) $.
+        \item[$ (b) $] If  $ X  $ is finite dimensional vector space and  $ X_1  $ is a vector space in  $ X  $, then  $ \exists  $ a projection in  $ X  $ with  $ \mathscr{R }(P )=X $.  
+    \end{enumerate}
+    \item[$ (c) $] The level sets of  $ F  $ in  $ U  $ are the images under  $ H  $ of the flat level sets of  $ \Phi  $ in  $ V  $. They are  ''$ (n-r) $-dimension surface'' in  $ U  $ since  $ \dim \mathscr{N }
+    (A)=n-r $.  
+\end{proposition}        

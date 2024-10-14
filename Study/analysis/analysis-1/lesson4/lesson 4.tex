@@ -1,0 +1,30 @@
+\begin{theorem}
+    If  $ X  $ is a metric space. Then  $  X  $ is compact
+     $ \Leftrightarrow $  $ X  $ is sequentially compact.
+\end{theorem}
+\begin{definition}
+     $ X $ is a topo. space.  $ X  $ is called \textbf{net-compact} if every net in  $ X  $ has a convergent subnet.\\
+      $ X  $ is called \textbf{countably compact} if every countable open cover of  $ X  $ has a finite subcover. 
+\end{definition}
+Easy to see that:\\
+compact $ \Rightarrow  $ countably compact.\\
+\begin{proposition}
+    For topology space, net-compact  $ \Leftrightarrow $ compact.\\
+    For metric space, Four compactness are equivalent. 
+\end{proposition}
+\begin{example}[Extreme Value Theorem]
+    If  $ X  $ is compact,  $ f:X\rightarrow \mathbb{R } $ continuous, then f attains it max(and min).
+\end{example}
+It suffices to prove  $ f(X ) $ is bounded.
+
+\underline{steps of proof}:\\
+Step1: Prove finiteness locally;\\
+Step2: Use compactness to go from local to global.
+\begin{proposition}
+     $ X  $ is a topo. space. TFAE:
+     \begin{enumerate}
+        \item[$ (1) $]  $ X  $ is compact.
+        \item[$ (2) $](Increasing chain property) If  $ (U_\mu)_{\mu\in I} $ is an increasing net of open subsets of  $ X  $, s.t.  $ \cup_{\mu\in I}U_\mu=X $, then  $ \exists \mu\in I  $ s.t.  $ U_\mu=X $.
+        \item[$ (3) $](Decreasing chain property) If  $ (U_\mu)_{\mu\in I} $ is an dncreasing net of closd subsets of  $ X  $, s.t.  $ \forall \mu\in I,E_\mu\not=\emptyset  $, then  $ \cap_{\mu\in I }E_\mu\not=\emptyset $    
+     \end{enumerate}
+\end{proposition}

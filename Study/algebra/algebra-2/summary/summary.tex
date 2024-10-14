@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{mathrsfs}
+\usepackage{imakeidx}
+\usepackage[UseMSWordMultipleLineSpacing,MSWordLineSpacingMultiple=1.4]{zhlineskip}
+\usepackage{lipsum}
+\usepackage[all]{xy}
+\usepackage[a4paper,margin=1in]{geometry}
+\geometry{}
+\title{Algebra-2 Note}
+\author{lin150117 }
+\date{}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[subsection]
+
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{example}{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{observe}{Observation}
+
+\newtheorem{lemma}{Lemma}[subsection]
+
+\theoremstyle{remark}
+\newtheorem*{fact}{Fact}
+\newtheorem*{hint}{Hint}
+\newtheorem{claim}{Claim}
+\newtheorem*{note}{Note}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\img}{Im}
+\DeclareMathOperator{\dd}{d\!}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\N}{N}
+\newcommand{\card}{\texttt{\#}}
+\newcommand{\ie}{\emph{i.e. }}
+\newcommand{\st}{\emph{s.t. }}
+
+\usepackage{hyperref}
+\makeindex[columns=2, title=Index, options=-s example_style.ist]
+\hypersetup{
+    colorlinks=true, % 设置链接颜色
+    linkcolor=blue, % 设置普通链接颜色
+    citecolor=green, % 设置引用链接颜色
+    urlcolor=red % 设置URL颜色
+}
+\usepackage{cleveref}    
+\begin{document}
+\maketitle
+\tableofcontents
+\setlength{\parindent}{0pt}
+\input{/Users/mycomputer/study/algebra/algebra-2/week5-2/week5-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week6-1/week6-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week6-2/week6-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week7-1/week7-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week7-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week8-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week9-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week11-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week12-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week12-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week13-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week13-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week14-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week14-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week15-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week15-2.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week16-1.tex}
+\input{/Users/mycomputer/study/algebra/algebra-2/week16-2.tex}
+\printindex
+\end{document}

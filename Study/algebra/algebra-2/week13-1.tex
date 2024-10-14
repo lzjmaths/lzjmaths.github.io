@@ -1,0 +1,55 @@
+\subsection{Complement on Tensor Product}
+\begin{proposition}[Universality of  $ R'\otimes_R V $ ]
+    \[\Hom_{R-linear}(V,W')=\Hom_{R'-linear}(R'\otimes_R V,W')\]
+    for every  $W' $ $ R' $-module. 
+    \[
+    \xymatrix{
+         V 
+            \ar[r]
+                ^{ \forall  R  -linear}
+            \ar[d]_{inclusion}
+        &W' 
+        \\R'\otimes_R V
+            \ar[ur]_{ \exists !  R' -linear  }
+    }
+    \]
+\end{proposition}
+\begin{proposition}[Universality of  $ R'\otimes R'' $ ]
+    \[
+        \xymatrix{
+            &{}&R'\ar[dr]^{\forall g'}\ar[d]\\
+            &R\ar[ur]^{f'}\ar[dr]_{f''}
+            &R'\otimes_R R''\ar[r]^{\,\quad\exists ! h}
+            &T\\
+            &{}&R''\ar[u]\ar[ur]_{g''}
+        }
+    \]
+    where  $ f',f'' $  inclusion map and  $ f'\circ g'=f''\circ g'' $.  $ h  $ is a ring homomorphism. 
+\end{proposition}
+\section{Field and Galois Theory}
+\subsection{Field extension}
+\begin{definition}
+    A \textbf{Field extension}\index{field extension}  $ K/F $ means  $ F\xrightarrow[\text{ring homo}]{injective} K $ which  $ K  $ is a field.\\
+    Note that  $ K  $ is a  $ F  $-vector space, we can define the dimension of  $ K $ where  $ \dim_F K=[K:F] $.\\
+    If  $ [K:F]<+\infty $ say  $ K/F  $ is of \textbf{finite} \index{field extension!finite}extension. \\
+    If  $ F\hookrightarrow M \hookrightarrow K $, then  $ M  $ is called the \textbf{intermediate field}\index{field extension!intermediate} of  $ K/F $.  
+\end{definition}
+Now we consider the adjoining elements  $ \alpha_1,\cdots,\alpha_n\in K $.\\
+ $ F(\alpha_1,\cdots,\alpha_n)\subset K $ is  the smallest subfield of  $ K  $ containing  $ F  $ and $ \alpha_1,\cdots,\alpha_n $.\\
+  $ F(\alpha)/F $ is called a \textbf{simple extension}\index{field extension!simple}\\
+  Say  $ \alpha $ is a \textbf{primitive element} of  $ F(\alpha)/F $\index{field extension!primitive element}
+There is a unique  $ \varphi_\alpha:F[x]\rightarrow K $ \st  $ \varphi_\alpha(x)=\alpha $.\\
+For  $ \ker\varphi_\alpha=0 $, call  $ \alpha $ \textbf{transcendental}\\
+For  $ \ker\varphi_\alpha=(f_\alpha(x))\not=0 $, call  $ f_\alpha $ the \textbf{minimal polynomial} for  $ \alpha $ over  $ F  $.Call  $ \alpha $ \textbf{algebraic}
+
+\subsection{algebraic extension}      
+\begin{lemma}
+    If  $ \alpha,\beta\in K $ algebraic over  $ F  $ $ \Rightarrow  $  $ \alpha\pm \beta,\alpha\beta $ are algebraic over  $ F  $.   
+\end{lemma}
+It is proved by proposition of  integral over rings.
+\begin{definition}
+    Say  $ K/F $ is \textbf{algebraic} if every element in  $ K  $ is algebraic
+\end{definition}
+\begin{proposition}
+     $ [K:F]<+\infty $  $ \Rightarrow $  $ K/F $ is algebraic.
+\end{proposition}

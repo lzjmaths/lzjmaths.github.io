@@ -1,0 +1,91 @@
+\subsection{polynomials and discriminant}
+\begin{definition}
+    \[\Delta(f):=\prod\limits_{i<j}(\alpha_i-\alpha_j)^2\in \overline{F}\]
+    called the \textbf{discriminant}\index{discriminant} of  $ f  $.
+\end{definition}
+\begin{note}
+    \,
+    \begin{enumerate}[(1)]
+        \item  $ \Delta(f)  $ is independent of order of  $ \alpha_1,\cdots,\alpha_n $\\
+        \item  $ \Delta(f)\not=0\Leftrightarrow  $   $ f  $ is separable. 
+    \end{enumerate}
+\end{note}
+\begin{proposition}
+     $ \Delta(f)\in F $ 
+\end{proposition}
+\begin{proof}
+     $ \Delta(f)  $ is a symmetric function in  $ \alpha_i $. So it can be written in terms of elementary symmetric function in   $ \alpha_i\in F $. 
+\end{proof}
+\begin{definition}
+    Call  $ G:=\Gal(K/F ) $ the Galois group of  $ f  $ for  $ K  $ splitting field of a separable  $ f  $. 
+\end{definition}
+Noticed that  $ \sigma(\Delta(f))=\prod\limits_{i<j}(\sigma(\alpha_i-\alpha_j))^2=\Delta(f) $.\\
+So  $ \Delta(f)\in K^G=F $.
+\begin{proposition}
+     $ G=\Gal(K/F)\hookrightarrow Perm(\{\alpha_1,\cdots,\alpha_n\})=S_n $.\\
+     Moreover, if  $ f  $ is irreducible,  $ K\supset F(\alpha_1)\supset F  $,  $ n|\left|G\right| $  
+\end{proposition}  
+Set  $ \delta:=\prod\limits_{i<j}(\alpha_i-\alpha_j)\in K $. Then  $ \sigma(\delta)=\sign(\sigma)\cdot\delta $.
+So  $ G=A_n\Leftrightarrow  \forall \sigma\in G,\sign(\sigma)=1\Leftrightarrow  \delta\in K^G=F  $ in the case that  $ n=3 $. \\
+i.e.  $ G=A_3 $ if and only if  $ \sqrt{\Delta(f)} $ exists in  $ F  $.\\
+ $ G=S_3  $ if and only if  $ \Delta(f)  $ doesn't exists.\\
+For  $ n=4  $ there is some similar result.\\
+Now we consider  $ K:=F(u_1,\cdots,u_n) $, and the induced injection  $ S_n\hookrightarrow \Aut(K/F)$.\\
+Let  $ \Lambda_i  $ be the elementary symmetric function in  $ u_i\in K  $ of degree i. 
+ $ (\Lambda_1=u_1+\cdots,u_n) $ 
+ \begin{theorem}
+     $ K/F(\Lambda_1,\cdots,\Lambda_n) $ is a Galois extension with Galois group  $ S_n $ 
+ \end{theorem}
+ \begin{proof}
+     $ K\supset K^{S_n}\supset F(\Lambda_1,\cdots,\Lambda_i) $.\\
+     By fixed field theorem, the Galois group is of order  $ n!  $. So it has degree of  $ n! $\\
+     However,  $ f(x)=x^n-\Lambda_1x^{n-1}+\cdots+(-1)^n\Lambda_n\in F(\Lambda_1,\cdots,\Lambda_n)[x] $ and $ f(x)=(x-u_1)\cdots(x-u_n)\in K[x] $.\\
+     So  $ K  $ is the splitting field of  $ f  $. \\\
+      $ [K:F(\Lambda_1,\cdots,\Lambda_n)] \leq (\deg f)!=n! $.   
+ \end{proof}
+ \subsection{Cyclotomic fields}
+ \begin{definition}
+    Call  $ \psi\in F  $ is an  \textbf{$ n^{th } $ root of unity}\index{ $ n^{th} $ root of unity} if  $ \psi^n=1 $. \\
+    If  $ \forall d|n,d<n, \psi^d\not=1 $. Call  $ \psi  $ is \textbf{primitive}\index{$ n^{th } $ root of unity!primitive} 
+ \end{definition}
+ For  $ \Char F=p  $, there is no  $ n^{th} $ primitive root of unity for  $ p|n $.\\
+ Now assume  $ n\in F^{\times} $.\\
+ Let  $ K  $ be the splitting field of  $ x^n-1 $ over  $ F  $, which is separable be  $ n\in F^{\times} $.\\
+ Then  $ K=F(\psi ) $ is simple, and  $ \psi   $ is a primitive  $ n^{th } $ root of unity.\\
+ Now it induces a map
+ \begin{align*}
+    \Gal(K/F)&\xrightarrow{\chi}(\mathbb{Z}/n)^\times\\
+    \sigma&\mapsto \chi(\sigma)\st   \psi^{\chi(\sigma)}=\sigma(\psi) 
+ \end{align*}
+ Now we get these proposition:
+ \begin{proposition}
+    \,\begin{enumerate}[(1)]
+        \item  $ \psi'=\psi^a $ is another primitive  $ n^{th} $ root of unity and  $ \sigma(\psi')=(\psi')^{\chi(\sigma)} $
+        \item $  \chi $ is group homomorphism.
+        \item  $ \chi(\sigma)=1  $ is and only if  $ \sigma(\psi)=\psi  $ $ \Leftrightarrow  $  $ \sigma=id $  \ie  $ \chi $ is injective.  
+    \end{enumerate}
+ \end{proposition}
+ So there is a injective homomorphism so-called \textbf{cyclotomic character}\index{cyclotomic character} for  $ n\in F^\times $
+ \[\Gal(F(\psi_n)/F)\xhookrightarrow{\chi}(\mathbb{Z}/n)^\times\] 
+ \[\Phi_n(x):=\prod\limits_{a\in(\mathbb{Z}/n)^\times}(x-\psi_n^a)\in F[x]\] is called the \textbf{cyclotomic polynomial}\index{clclotomic polymomial}.\\
+ \begin{proposition}
+    \,
+    \begin{enumerate}[(1)]
+        \item  $ \deg \Phi_n=|(\mathbb{Z/n})^\times|=\varphi(n) $
+        \item  $ x^n-1=\prod\limits_{d|n}\Phi_d(x) $  
+        \item  $ \chi  $ is isomorphism if and only if  $ \Phi_n(x)  $ is irreducible over  $ F  $.
+    \end{enumerate}
+ \end{proposition}
+ \begin{theorem}
+     $ \Phi_n(x)\in \mathbb{Q}[x] $ is irreducible.\\
+     In particular,  $ \chi:\Gal(\mathbb{Q}(e^{\frac{2\pi i}{n}})/\mathbb{Q})\rightarrow (\mathbb{Z}/n)^\times   $ is isomorphism.  
+ \end{theorem}
+ \begin{proof}
+     $ \psi_n  $ is an algebra integer so  $ \Phi_n\in \mathbb{Z}[x] $.\\
+     By Gauss' lemma, it suffices to prove  $ \Phi_n(x)  $ is irreducible over  $ \mathbb{Z} $.\\
+     However, every polymomial that has one root should have all the roots.  
+ \end{proof}
+ \begin{theorem}[Kronecher-Weber]
+    If  $ K/Q  $ is abelian, then  $ \exists n\st   K\subset\mathbb{Q}(\psi_n)   $.\\
+    In other words, abelian extensions of  $ \mathbb{Q } $ are governed by cyclotomic extensions. 
+ \end{theorem}
