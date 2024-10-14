@@ -4,7 +4,7 @@ layout: page
 
 # About Me
 
-#<img src="https://caihanlin.com/caihanlin.jpg" class="floatpic" width="360" height="480">
+<img src="https://caihanlin.com/caihanlin.jpg" class="floatpic" width="360" height="480">
 
 Here is **Lin Zejin (林则缙)**.
 
@@ -13,9 +13,18 @@ I am an undergraduated sdudent at Qiuzhen College of Tsinghua University. If you
 
 ---
 
-## Notes
-- **[Differential Geometry](https://overleaf.tsinghua.edu.cn/read/vjpzjynprygk)**
+## Lecture Notes
+- **[Differential Geometry](https://overleaf.tsinghua.edu.cn/read/vjpzjynprygk)**<br>
 Differential Geometry is an undergraduate course taught by [Lin Jianfeng](linjian5477@mail.tsinghua.edu.cn) at Qiuzhen College of Tsinghua University.
+
+## Leave a Message
+
+<br>
+
+{% include disqus.html %} 
+
+<br>
+
 
 
 ## News and Updates
