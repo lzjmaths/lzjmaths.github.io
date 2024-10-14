@@ -20,7 +20,7 @@ I write some lecture notes in the courses of Qiuzhen College. If you want to che
 Differential Geometry is an undergraduate course taught by Lin Jianfeng([linjian5477@mail.tsinghua.edu.cn](linjian5477@mail.tsinghua.edu.cn)) at Qiuzhen College of Tsinghua University.
 - **[Complex Analysis](https://github.com/lzjmaths/lzjmaths.github.io/Study/Complex Analysis/lecture notes/lecture/summary.pdf)**<br>
 Complex Analysis is an undergraduated course taught by Jiang Jianping([jianpingjiang@tsinghua.edu.cn](jianpingjiang@tsinghua.edu.cn)) at Qiuzhen College of Tsinghua University.
-- **[Latex Template](https://github.com/lzjmaths/lzjmaths.github.io/blob/f0f0374dc5bb23bb9dc5f4ac37eab12040e3301d/Study/LaTex%20mod/Bingui_fixed_mod.tex)**
+- **[Latex Template](https://github.com/lzjmaths/lzjmaths.github.io/blob/f0f0374dc5bb23bb9dc5f4ac37eab12040e3301d/Study/LaTex%20mod/Bingui_fixed_mod.tex)**<br>
 This is my latex template to complete these notes, offered by Bin Gui([binguimath@gmail.com](binguimath@gmail.com)).
 
 ## Notes in High School
