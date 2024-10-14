@@ -1,0 +1,154 @@
+\documentclass[a4paper,10pt,twoside]{article}
+\usepackage{geometry}
+\geometry{a4paper,scale=0.85}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{mathrsfs}
+\usepackage[UseMSWordMultipleLineSpacing,MSWordLineSpacingMultiple=1.4]{zhlineskip}
+\usepackage{lipsum}
+\usepackage{ctex}
+\title{解析几何性质解析}
+\author{lin150117}
+\date{}
+\newtheorem{definition}{定义}[subsection]
+\newtheorem{theorem}{定理}[subsection]
+\newtheorem{example}{例子}[section]
+\newtheorem{remark}{评论}
+\newtheorem{corollary}{推论}
+\newtheorem{proposition}{性质}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{椭圆的性质}
+\begin{proposition}
+    $  (1) $ $ \dfrac{x_px }{a^2}+\dfrac{y_py}{b^2}=1 $ \\此为对圆锥曲线光学性质的考察：从椭圆焦点射出的光线必反射后经过另一焦点。反射的意思其实是当光线接触到椭圆时我们将椭圆该点视作微小的镜面再反射，本质上就是椭圆过点 $ P $ 的切线与 $ PF_1,PF_2 $ 所成角度相同，即外角平分线就是切线。之后我们需要用到过一点椭圆切线的公式。
+    \begin{remark}
+        此性质是椭圆光学性质的等价描述。
+    \end{remark}
+     $ (2) $  $ x^2+y^2=a^2 $,\,  $ (3) $ 内切\\
+    取 $ PF_2  $ 中点 $ T  $，原点为 $ O  $。 则 $ \angle PF_2H=90^{\circ }-\angle F_2PH= \frac{1}{2}\angle F_1PF_2 $，则 $ \angle PTH=2\angle PF_2H=\angle F_1PF_2  $，故 $ PF_1\parallel TH  $ 。而 $ OT\parallel PF_1 $，故 $ O,T,H  $ 三点共线，且 $ OH=TH+OT=\frac{1 }{2}PF_2+\frac{1 }{2}PF_1=2a $。即 $ H  $ 的轨迹是圆，该圆就是以长轴为直径的圆，故内切。
+    \begin{remark}
+        此为$ (1) $ 性质的应用，我们发现焦点与切线有一定联系。同时值得一提的是，解析几何中有时候点出中点也是很有用的。
+    \end{remark}
+     $ (4) $  $ x_M=\frac{c^2}{a^2}x_p,\,x_N=\frac{a^2}{x_P},\,|OM|\cdot |ON|=c^2 $\\我们已经知道 $ PN  $ 的方程，而 $ PM\perp PN $，自然可以求出 $ PM  $ 的方程。关于一条已知直线上一点垂直的直线的方程是容易确定的（已知斜率与直线上一点，用这个表达式即可）
+     \begin{remark}
+        另一种解决方式是利用几何性质： $ F_1M:F_2M=PF_1:PF_2 $，即角平分线定理。 $ |OM|\cdot|ON| $ 为调和点列的性质，即 $ O,F_2,M,N  $ 成调和点列。 但是解析几何我们尽量还是不介绍几何性质。
+     \end{remark}
+      $ (5) $  $ e,(ex_0,\dfrac{ey_0}{1+e}),\dfrac{x^2}{c^2}+\dfrac{(a+c)^2y^2}{b^2c^2}=1 $ 
+      \\ $ \dfrac{MI}{IP } $ 可以通过角平分线定理 $ \dfrac{MI}{IP }=\dfrac{IF_2}{PF_2} $ 求出。已知比例可以求出 $ I  $ 的坐标，进而得到轨迹方程。
+      \begin{remark}
+        求轨迹方程时，即使我们知道这个点的坐标也不一定好求，需要去凑，例如猜测是椭圆方程轨迹。但是通用的做法还是点参，即现设出该点然后找到符合条件的点，进而得到方程并化简。一定要注意曲线不一定完整，即定义域问题一定要注意！
+      \end{remark}
+       $ (6) $  $ x=a $\\外旁心没讲过吧，省去。\\
+        $ (7) $  $ b^2\tan \frac{theta}{2} $ \\利用 $ theta  $ 和内切圆可以表示出内切圆半径 $ r=(a-c)\tan\frac{\theta }{2} $,  再利用  $ S=\frac{1}{2}r(PF_1+PF_2+F_1F_2)=b^2\tan\frac{\theta}{2} $\\
+         $ (8) $  $ a^2+b^2 $ \\焦点弦公式的运用\\
+\end{proposition}
+\begin{remark}
+    性质一主要是对角平分线的一些观点，重点掌握圆锥曲线的光学性质，剩下的都可以现推。
+\end{remark}
+\begin{proposition}
+     $ (1) $  $ \dfrac{xx_0}{a^2}+\dfrac{yy_0}{b^2}=1 $\\
+      $ (2) $ 共线\\可以硬算，但我们可以用点差法来得到 $ k_{OM}\cdot k_{AB}=-\frac{b^2}{a^2} $，求出 $ k_{OM } $ 后就证明 $ k_{OM}=k_{OP} $ 即可。\\
+
+       $ (3) $ 1\\此为调和性质，任意圆锥曲线都满足 $ O,Q,M,P  $ 成调和点列。\\
+        $ (4) $  
+        \begin{proof}
+            $ x_0^2+y_0^2=a^2+b^2 $ \\设 $ A(x_1,y_1),B(x_2,y_2)\Rightarrow k_{AP}=-\dfrac{b^2}{a^2}\dfrac{x_1}{y_1},k_{BP}=-\dfrac{b^2}{a^2}\dfrac{x_2}{y_2} $。只需
+        \begin{equation}
+            \dfrac{b^4}{a^4}\cdot \dfrac{x_1x_2}{y_1y_2}=-1
+        \end{equation} 
+        而 $ AB:\dfrac{xx_0}{a^2}+\dfrac{yy_0}{b^2}=1 $，则 $ A,B  $ 适合方程 $ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1=(\dfrac{xx_0}{a^2}+\dfrac{yy_0}{b^2})^2 $，设 $ \dfrac{x }{y }=t $，则 $ (\dfrac{1}{b^2}-\dfrac{y_0^2}{b^4})t^2-\dfrac{x_0y_0}{a^2b^2}t+\dfrac{1}{a^2 }-\dfrac{x_0^2}{a^4}=0 $，由韦达定理， $ -1=t_1*t_2=\dfrac{\dfrac{1}{a^2 }-\dfrac{x_0^2}{a^4}}{-\dfrac{1}{b^2}+\dfrac{y_0^2}{b^4}} $ 
+        \end{proof} 
+        \begin{remark}
+            研究一下思路，和之前说的一样，求轨迹方程时，我们不得不以 $ P  $ 为主要参数。但是很明显 $ A,B  $ 不能直接由 $ P  $ 直接表示出来，因此只能“间接表示出”。利用韦达定理的间接表示是很重要的理解方式。利用韦达定理算出 $ x_1x_2,y_1y_2 $ 即可。但是这里运用了“齐次化”的方法，其实是注意到我们要求的问题只关心 $ \dfrac{x }{y} $，因此联立方程时可以同时保留 $ x,y  $。这个方法还是比较有意思，就留给读者自行思考为什么会这么想了。  \\
+            虽然这道题没有触及到齐次化手法的实质（因为还能用别的方法算出来）但是齐次化本质上就是方便计算 $ \dfrac{x }{y } $，而如果问题中没有 $ \dfrac{x }{y } $的话，有时就要考虑平移使斜率变成 $ \dfrac{x}{y} $。 
+        \end{remark}
+     $ (5) $ 相等。\\一道有意思的几何题。 
+\end{proposition}
+\begin{remark}
+    性质二考察圆外一点的切点弦的性质。这里（4）的方法还是有意思的，整体不是特别重要。
+\end{remark}
+\begin{proposition}
+     $ (1) $  $ |AF|=\dfrac{b^2}{a+c\cos \theta },|BF|=\dfrac{b^2 }{a-c\cos \theta },|AB|=\dfrac{2ab^2 }{b^2+c^2\sin^2\theta} $\\极坐标表示边长\\
+      $ (2 ) $  $ \dfrac{2a }{b^2} $\\
+       $ (3) $  $ [\dfrac{\sqrt{3}}{3},1)  $\\
+     $ (4) $  $ a^2y^2=b^2cx-b^2x^2 $ \\
+      $ (5)  $  $ (\dfrac{a^2 }{2c }+\dfrac{c }{2 },0) $\\
+       $ (6 ) $  $ x=\dfrac{a^2 }{c } $\\
+        $ (7) $ $ = $ , $ < $    
+\end{proposition}
+\begin{remark}
+    主要考察椭圆第二定义的相关性质。
+\end{remark}
+\begin{proposition}
+     $ =,90^{\circ},90^{\circ},F(c,0),x=\dfrac{a^2}{c }$ 
+\end{proposition}
+\begin{proposition}
+     $ a^2-cx_0,[2a-\sqrt{(x_0^2+y_0^2)},2a+\sqrt{(x_0+c)^2+y_0^2}] $ 
+\end{proposition}
+
+\begin{proposition}
+    都是 $ a^2 $ 
+\end{proposition}
+\begin{proposition}
+     $ -\dfrac{b^2 }{a^2 },-\dfrac{(a+c)^2 }{a^2},y^2=-\dfrac{(a+c)^4 }{a^2b^2 }(x^2-a^2) $ 
+\end{proposition}
+\begin{proposition}
+     $ \dfrac{1 }{a^2}+\dfrac{1 }{b^2 },x^2+y^2=\dfrac{a^2b^2 }{a^2+b^2} $ 
+\end{proposition}
+\begin{example}
+     $ \dfrac{a^2 }{c}-\dfrac{am }{2c } $ 
+\end{example}
+\section{双曲线的性质}
+\begin{proposition}
+     $ (1) $  $ ex_0+a,ex_0-a $ \\ $  (2) \, \dfrac{xx_0 }{a^2 }-\dfrac{yy_0 }{b^2 }=1$  \qquad $ (3)\, x^2+y^2=a^2  $,外切\\ $ (4) \, x_M=\dfrac{a^2 }{x_0 },x_N =\dfrac{c^2 }{a^2 }x_0 ,|OM|\cdot |ON|=c^2 $\\
+      $ (5)  $  $ x=a(x\not=0) $ \\
+       $ (6) $  $ \dfrac{x^2 }{c^2 }-\dfrac{(c+a)y^2 }{c^2(c-a) }=1(y\not=0,x>0 ) $\\
+        $ (7) \,S=b^2\cot \dfrac{\theta }{2 } $  \\
+         $ (8 )\, b^2-a^2 $   
+\end{proposition}
+\begin{proposition}
+     $ \dfrac{xx_0 }{a^2 }-\dfrac{yy_0 }{b^2 }=1 $,共线 $ x^2+y^2=a^2-b^2  $,  相等， $ x_0 $   
+\end{proposition}
+\begin{proposition}
+     $ (1)\,|AF|=\left|\dfrac{b^2}{a-c\cos\theta}\right| ,|BF|=\left|\dfrac{b^2}{a+c\cos\theta}\right|,|AB|=\left|\dfrac{2ab^2 }{a^2-\cos^2\theta \cdot c^2}\right|  $， $ AB $ 在同一支上时， $ \dfrac{2ab^2 }{c^2\cos \theta -a^2 } $， $ AB  $ 在不同支上时。\\
+
+      $ (2)  $ 同一支： $ (\arccos\frac{a }{c },\pi-\arccos\frac{a }{c },\frac{2b^2 }{a}) $。不同支上时： $ [0,\arccos \frac{a }{c })\cup(\pi-\arccos \frac{ a }{c },\pi ),2a $\\
+       $ (3)b^2x^2-b^2cx-a^2y^2=0 $ \\ $ (4)\, \dfrac{a^2+c^2 }{2c } $\\ $ (5) \, x=\frac{a ^2 }{c },=  $ 
+       \\ $ (6)\, \dfrac{ b^2 }{a^2 },-\dfrac{(a+c)^2 }{a^2 } $   
+\end{proposition}
+\begin{proposition}
+     $ \frac{a^2 }{c },\frac{ab }{c },(\sqrt{2 },+\infty),\dfrac{\sqrt{2\lambda^2+2 }}{1-\lambda},1 $ 
+\end{proposition}
+\begin{proposition}
+     $ |\frac{\beta -\alpha }{2 },90^{\circ }+\frac{\beta-\alpha }{2},-\dfrac{2 }{e } $ 
+\end{proposition}
+\section{抛物线的性质}
+\begin{proposition}
+     $ (1)  $  $ yy_1=p(x+x_1) $ \\
+      $ (2) $  $ y_M=\dfrac{px_1 }{y_1 }`' $ 共线，相切\\
+       $ (3)  $  $ y=\dfrac{2p }{y_1+y_2 }x +\dfrac{y_1y_2 }{y_1+y_2 } $ \\
+        $ (4)  $, $ \dfrac{y_1y_2 }{2p } ,\dfrac{y_1+y_2 }{2},\dfrac{y_1+y_2 }{2 },\dfrac{y_1+y_2 }{2}$ 
+\end{proposition}
+\begin{proposition}
+     $ (1)x_1x_2=\dfrac{p^2 }{4},y_1y_2=-p^2,|AB|\dfrac{2p }{\sin ^2\theta },|AB|_{min}=2p    $\\
+      $ (2)  $共线. $ (3)90^{\circ},90^{\circ} $，相切。\\
+       $ =,\frac{1 }{4 },1,y_M^2-px_M+\frac{p^2 }{2 }=0 $  
+\end{proposition}
+\begin{proposition}
+     $ x_P=\frac{y_1y_2}{2p },y_P =\frac{y_1+y_2}{2},yy_0=p(x+x_0) $，焦点 $ (\frac{p }{2 },0) $, $ =,= $   
+\end{proposition}
+\begin{proposition}
+     $ (\frac{3 }{2 }p,0 ),y^2+x^2-\frac{3 }{2 }px=0$ 
+\end{proposition}
+\begin{proposition}
+     $ 2p,(x-p)^2+y^2=p^2(x\not=0),-\frac{2p }{x_M  },=,(m,0),(x_0+2p,-y_0),4p^2 $ 
+\end{proposition}
+\begin{proposition}
+     $ 9y^2=-8p^2+2px,-\frac{p }{2} $ 
+\end{proposition}
+\end{document}

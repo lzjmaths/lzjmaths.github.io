@@ -1,0 +1,330 @@
+\documentclass[a4paper,10pt,twoside]{article}
+\usepackage{geometry}
+\geometry{a4paper,scale=0.85}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{extarrows}
+\usepackage{mathrsfs}
+\usepackage[UseMSWordMultipleLineSpacing,MSWordLineSpacingMultiple=1.4]{zhlineskip}
+\usepackage{lipsum}
+\usepackage{ctex}
+\title{解析几何}
+\author{lin150117}
+\date{}
+\newtheorem{definition}{定义}[subsection]
+\newtheorem{theorem}{定理}[subsection]
+\newtheorem{example}{例子}[section]
+\newtheorem{remark}{评论}
+\newtheorem{corollary}{推论}
+\newtheorem{proposition}{性质}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\setlength{\parindent}{0pt}
+\section{椭圆的性质}
+\subsection{基础性质}
+\begin{proposition}
+    已知：椭圆 $ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 的左右焦点为 $ F_1,F_2 $, $ P(x_p,y_p) $ 为椭圆上一点， $ \angle F_1PF_2=\theta $ 
+    \begin{enumerate}[ $ (1) $ ]
+        \item  $ \angle F_1PF_2 $ 外角平分线的方程为\_
+        \item 过 $ F_2 $ 作 $ \angle F_1PF_2 $ 外角平分线的垂线，其垂足的轨迹方程为\_
+        \item 以焦半径 $ PF_2 $ 为直径的圆，与以椭圆长轴为直径的圆\_（位置关系）
+    \end{enumerate} 
+    设 $ \angle F_1PF_2 $ 的角平分线 $ PM $ 与 $ x  $ 轴交于点 $ M $, $ \angle F_1PF_2 $ 外角平分线 $ PN $ 与 $ x  $ 轴交于点 $ N $
+    \begin{enumerate}
+        \item[ $ (4) $ ]  $ x_M=\_,\,x_N=\_,|OM|\cdot|ON|=\_ $
+        \item[ $ (5) $ ] 设 $ \triangle PF_1F_2 $ 的内心为 $ I  $, 则 $ \dfrac{MI}{IP}=\_ $\\点 $ I $ 的坐标为（用 $ x_P,y_P  $ 表示）\_\\点 $ I  $ 的轨迹方程为\_
+        \item[ $ (6) $ ]  $ PF_2 $ 外旁心的轨迹方程为\_
+        \item[ $ (7) $ ]  $ \triangle F_1PF_2 $ 的面积为\_（用 $ a,b,\theta $ 表示）
+        \item[ $ (8) $ ]  $ |OP|^2+|PF_1|\cdot|PF_2|=\_ $    
+    \end{enumerate}   
+\end{proposition}
+\begin{proposition}
+     $ P(x_0,y_0) $ 为椭圆外一点，过 $ P  $ 作切线切于 $ AB $，则
+     \begin{enumerate}[ $ (1) $ ]
+        \item  $ AB  $ 的方程为\_
+        \item 设 $ AB  $ 的中点为 $ M  $，则 $ OMP  $ 三点\_
+        \item 若 $ OP  $ 交椭圆于 $ Q  $，则 $ \dfrac{x_Q^2}{x_Px_M}=\_ $
+        \item 若 $ \angle APB =90^{\circ} $，则 $ P  $ 点的轨迹方程为\_
+        \item 若 $ F_1,F_2  $ 为左右焦点，则 $ \angle AF_1P\_\_\angle BF_1P $   
+     \end{enumerate} 
+\end{proposition}
+\begin{proposition}
+     $ F  $ 为椭圆 $ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1  $ 的右焦点， $ l  $ 为右准线, $ AB  $ 为过 $ F  $ 的弦, $ \angle AFx=\theta  $ 
+     \begin{enumerate}[ $ (1) $ ]
+        \item  $ |AF|=\_\_,\,|BF|=\_\_,\,|AB|=\_\_ $
+        \item  $ \dfrac{1}{|AF|}+\dfrac{1}{|BF|}=\_ $
+        \item 若 $ l  $ 上存在点 $ C  $，使得 $ \triangle ABC  $ 为正三角形，则离心率 $ e $ 的范围 \_
+        \item 求 $ AB  $ 中点 $ M  $ 的轨迹方程\_
+        \item 设 $ AA_1\perp l,BB_1\perp l  $，若 $ AB_1  $ 交 $ x  $ 轴于点 $ N  $，则 $ N  $ 的坐标为\_  
+     \end{enumerate}
+     设 $ A,B  $ 处椭圆的切线分别为 $ l_A,l_B  $
+     \begin{enumerate}
+        \item[ $ (6 ) $ ] 设 $ l_A,l_B  $ 交于点 $ D  $，则 $ D  $ 的轨迹方程为\_
+        \item[ $ (7 ) $ ]  $ \angle AFD\_90^{\circ },\quad \angle ADB\_ 90^{} $  
+     \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    设椭圆 $ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 右焦点为 $ F  $，右准线为 $ l  $ 
+    \begin{enumerate}[ $ (1) $ ]
+        \item 弦 $ AB  $ 延长交 $ l  $ 于点 $ C  $,  $ \angle AFB $ 的外角平分线交 $ l  $ 于点 $ D  $，则 $ y_C\_y_D $
+        \item 椭圆上点 $ E  $ 的切线与 $ l  $ 交于点 $ E  $，则 $ \angle EFE_1=\_  $
+        \item  $ A  $ 为椭圆上一点，过 $ F  $ 的弦交椭圆于 $ MN $, $ AM $ 和 $ AN  $分别交右准线于 $ P,Q $, 则 $ \angle PFQ=\_ $
+        \item 过 $ l  $ 上一点 $ P  $ 作椭圆的两条切线 $ PA,PB $，则直线AB经过定点\_
+        \item 设 $ AB,CD  $ 为过焦点的两动弦， $ AC,BD  $ 交于点 $ M   $，则 $ M  $ 的轨迹方程为\_    
+    \end{enumerate}
+\end{proposition}
+\begin{proposition}
+     $ P(x_0,y_0) $ 为椭圆$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1  $ 内定点， $ x_0\in(0,a) $, $ Q $ 在椭圆上，  $ F  $ 为右焦点，则
+     \begin{align*}
+        (c|PQ|+a|QF|)_{min}&=\_\_\\
+        |PQ|+|QF|&\in\_\_
+     \end{align*} 
+\end{proposition}
+\begin{proposition}
+    \begin{enumerate}[ $ (1) $ ]
+        \item  $ M  $ 为 $ x=x_M  $ 上一动点,  $ A_1,A_2  $ 为左右顶点, $ A_1M,A_2M  $ 交椭圆于 $ S,T  $， $ ST $ 交 $ x  $ 轴于  $ N  $，则 $ x_M\cdot x_N=\_ $
+        \item 过 $ P(x_P,0) $ 作直线交$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 于 $ AB  $，椭圆左右顶点为 $ M,N  $,  $ AM,BN  $ 交于点 $ R  $,则 $ x_P\cdot x_R=\_  $
+        \item       过 $ P(x_P,0) $ 作直线交$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 于 $ AB  $, $ B  $ 关于 $ x  $ 轴的对称点为 $ B_1 $, $ AB_1  $ 交 $ x  $ 轴于 $ Q  $，则 $ x_P\cdot x_Q=\_  $
+        \item 过 $ P(x_P,0) $ 作两条直线交$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 于 $ AB,CD  $，直线 $ AC,BD  $ 交于点 $ S  $，则 $ x_P\cdot x_S=\_ $  
+    \end{enumerate}
+\end{proposition}
+\begin{remark}
+    可以看见，这里的 $ Q,R,S $ 均在同一条直线 $ x=\dfrac{a^2}{x_P} $ 上。看看它的特殊情况是什么！
+\end{remark}
+\begin{proposition}
+     $ P  $ 为椭圆$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 上一点, $ A,B  $ 为左右顶点, $ F_1,F_2  $ 为左右焦点, $ PF_1,PF_2  $ 交椭圆于 $ M,N  $，则
+     \begin{enumerate}[ $ (1) $ ]
+        \item  $ k_{AP }\cdot k_{PB}=\_ $ \quad (椭圆第三定义)
+        \item  $ k_{AP}\cdot k_{AM }=\_ $
+        \item 若 $ AM,BN  $ 交于 $ Q  $，则 $ Q  $ 点的方程为\_  
+     \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    椭圆$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $ 上两点 $ A,B  $ 满足： $ OA\perp OB  $
+    \begin{enumerate}
+        \item[ $ (1) $ ]  $ \dfrac{1}{|OA|^2}+\dfrac{1}{|OB|^2}=\_ $
+        \item[ $ (2) $ ] 设 $ OM\perp AB  $ 于点 $ M  $，则 $ M  $ 的轨迹方程为\_  
+    \end{enumerate} 
+\end{proposition}
+\subsection{补充}
+\begin{example}
+    设椭圆$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $有两点距离为 $ m(\dfrac{2b^2}{a}<m<2a) $，试求他们的中点到 $ y  $ 轴的距离最大值 
+\end{example}
+\begin{example}
+    椭圆上的点 $ A  $ 作两条倾斜角互补的直线与椭圆交于 $ BC  $，设过 $ A  $ 的切线为 $ l  $，设直线 $ l  $ 与直线 $ BC  $ 的斜率分别为 $ k_l  $ 和 $ k_{BC}  $，
+    求证: $ k_l=-k_{BC } $ 
+\end{example}
+\begin{example}
+    过椭圆内一点 $ A  $ 作两条倾斜角互补的直线，与椭圆交于 $ BC,DE  $，设直线 $ BD  $ 和直线 $ CE  $的斜率分别为 $ k_{BD} ,k_{CE}$，求证: $ k_{BD}+k_{CE}=0 $   
+\end{example}
+\begin{example}
+    设 $ A,B  $ 为椭圆$ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 $的左右顶点。点 $ M (x_0,y_0 ) $ 为 $ x  $ 轴上方椭圆上一点，已知 $ \angle AMB =\gamma  $，求三角形 $ AMB  $ 的面积
+\end{example}
+\section{双曲线的性质}
+\subsection{基础性质}
+\begin{proposition}
+    已知：双曲线 $ \dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1 $ 的左右焦点为 $ F_1,F_2 $, $ P(x_0,y_0) $ 为椭圆上一点， $ \angle F_1PF_2=\theta $ 
+    \begin{enumerate}[ $ (1) $ ]
+        \item  $ |PF_1|=\_\_,\,|PF_2|=\_\_ $（用 $ x_0,y_0  $ 表示） 
+        \item  $ \angle F_1PF_2 $ 角平分线的方程为\_
+        \item 过 $ F_1 $ 作 $ \angle F_1PF_2 $ 角平分线的垂线，其垂足的轨迹方程为\_
+        \item 以焦半径 $ PF_2 $ 为直径的圆，与以实轴为直径的圆\_（位置关系）
+    \end{enumerate} 
+    设 $ \angle F_1PF_2 $ 的角平分线 $ PM $ 与 $ x  $ 轴交于点 $ M $, $ \angle F_1PF_2 $ 外角平分线 $ PN $ 与 $ x  $ 轴交于点 $ N $
+    \begin{enumerate}
+        \item[ $ (4) $ ]  $ x_M=\_,\,x_N=\_,|OM|\cdot|ON|=\_ $
+        \item[ $ (5) $ ] 设 $ \triangle PF_1F_2 $ 的内心为 $ I  $, 则点 $ I  $ 的轨迹方程为\_
+        \item[ $ (6) $ ]  $ \triangle F_1PF_2 $ 中$ PF_2 $ 所对外旁心的轨迹方程为\_
+        \item[ $ (7) $ ]  $ \triangle F_1PF_2 $ 的面积为\_（用 $ a,b,\theta $ 表示）
+        \item[ $ (8) $ ]  $ |PF_1|\cdot|PF_2|-|OP|^2=\_ $    
+    \end{enumerate}   
+\end{proposition}
+\begin{remark}
+    双曲线和椭圆性质类似，对比一下即知。角平分线由于有到两边距离相同的性质以及内切圆的边长性质，和椭圆和双曲线的第一定义有一定联系，故有如上性质。
+\end{remark}
+\begin{proposition}
+    $ P(x_0,y_0) $ 为双曲线外一点，过 $ P  $ 作切线切于 $ AB $，则
+    \begin{enumerate}[ $ (1) $ ]
+       \item  $ AB  $ 的方程为\_
+       \item 设 $ AB  $ 的中点为 $ M  $，则 $ OMP  $ 三点\_
+       \item 若 $ \angle APB =90^{\circ} $，则 $ P  $ 点的轨迹方程为\_
+       \item 若 $ F_1,F_2  $ 为左右焦点，则 $ \angle AF_1P\_\_\angle BF_1P $   
+       \item 设双曲线左右顶点为 $ M,N  $, $ AM,BN  $ 相交于点 $ Q  $，则 $ x_Q =\_ $ 
+    \end{enumerate} 
+\end{proposition}
+\begin{proposition}
+    $ F  $ 为双曲线 $ \dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1  $ 的右焦点， $ l  $ 为右准线, $ AB  $ 为过 $ F  $ 的弦, 倾斜角为$ \theta  $ 
+    \begin{enumerate}[ $ (1) $ ]
+       \item  $ |AF|=\_\_,\,|BF|=\_\_,\,|AB|=\_\_ $
+       \item   $ A,B  $ 在双曲线同一支上时， $ \theta  $ 的范围\_\\ $ A,B  $ 在双曲线不同支时， $ \theta  $ 的范围\_
+       \item 求 $ AB  $ 中点 $ M  $ 的轨迹方程\_
+       \item 设 $ AA_1\perp l,BB_1\perp l  $，若 $ AB_1  $ 交 $ x  $ 轴于点 $ N  $，则 $ N  $ 的坐标为\_  
+    \end{enumerate}
+    设 $ A,B  $ 处双曲线的切线分别为 $ l_A,l_B  $
+    \begin{enumerate}
+       \item[ $ (6 ) $ ] 设 $ l_A,l_B  $ 交于点 $ D  $，则 $ D  $ 的轨迹方程为\_, $ \angle AFD\_90^{\circ }$  
+       \item[ $ (7 ) $ ] 设左右顶点分别为 $ C,D  $，则 $ k_{AC}\cdot k_{AD}=\_,\,k_{DA}\cdot k_{DB}= $ 
+    \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    设双曲线 $ \dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1  $ 的渐近线为 $ l_1,l_2 $，右焦点为 $ F  $ 
+    \begin{enumerate}[ $ (1) $ ]
+        \item 过 $ F  $ 作 $ FH\perp l_1  $，则 $ x_H =\_\_ \,y_H=\_\_ $\\若 $ FH  $ 与左右两支各有一个交点 $ B,A  $，则 $ e\in\_\_ $\\若 $ \vec{BH}=\lambda \vec{HA } $，则 $ e=\_\_ $ 
+        \item 直线 $ l  $ 与双曲线, $ l_1,l_2 $ 的交点依次为 $ A,B,C,D  $，则 $ \dfrac{|AD|}{|BC|}=\_\_  $    
+    \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    设双曲线 $ \dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1  $ 的右焦点为 $ F  $，右准线为 $ l  $
+    \begin{enumerate}[ $ (1) $ ]
+        \item 直线 $ AB  $ 交双曲线的右支分别于 $ A,B  $，交 $ l  $ 于  $ M  $,  $ \angle BAF =\alpha ,\angle ABF=\beta  $，则 $ \angle AMF=\_ $
+        \item 直线 $ AB  $ 交双曲线的左右两支分别于 $ A,B  $，交 $ l  $ 于 $ M  $, $ \angle BAF =\alpha ,\angle ABF=\beta$，则 $ \angle AMF=\_ $
+        \item 以 $ F  $ 为圆心做半圆交左右两支分别于 $ A,B  $，设 $ C  $ 为双曲线左顶点，记 $ \angle AFC=\alpha,\angle BFC=\beta $，则 $ \cos \beta -\cos \alpha =\_\_ $  
+    \end{enumerate} 
+\end{proposition}
+\section{抛物线的性质}
+\begin{proposition}
+    抛物线 $ y^2=2px(p>0) $ 的焦点为 $ F  $，准线为 $ l  $,  $ A(x_1,y_1),B(x_2,y_2) $ 是抛物线上的点 $ AA_1\perp l  $ 于 $ A_1 $, $ \angle A_1AF,\angle B_1BF $ 的平分线分别为 $ l_a,l_b $
+    \begin{enumerate}[ $ (1) $ ]
+        \item 求 $ l_a $ 的方程\_
+        \item 设 $ l_a  $ 与 $ y  $ 轴交于点 $ M  $，则 $ y_M =\_\_  $， $ A_1,M,F  $ 三点\_\_，以焦半径为直径的圆与 $ y  $ 轴\_\_
+        \item  $ AB  $ 的方程为 $ \_\_  $（用 $ y_1,y_2 $ 表示）它与 $ l_a  $ 方程有什么联系\_\_
+        \item 设 $ l_a,l_b  $ 交于点 $ C  $，则 $ x_C=\_\_,\,y_C=\_\_  $\\设 $ C' $ 在抛物线上，过 $ C'  $ 的切线与 $ AB  $ 平行，则 $ y_{C'}=\_\_ $\\设 $ C''  $ 在抛物线上, $ y_A<y_C<y_B  $，当 $ C'' $ 到 $ AB  $ 距离最大时, $ y_{C''}=\_\_ $  
+    \end{enumerate}     
+\end{proposition}
+\begin{proposition}
+    抛物线 $ y^2=2px(p>0) $ 的焦点为 $ F  $，准线为 $ l  $，过 $ F  $ 的直线交抛物线于 $ A(x_1,y_1),B(x_2,y_2) $， $ AB $ 倾斜角为 $ \theta  $ 
+    \begin{enumerate}[ $ (1) $ ]
+        \item  $ x_1x_2=\_\_,\,y_1y_2=\_\_,\,|AB|=\_\_ $（用 $ \theta  $ 表示） $ | A_1OB $三点\_\_
+        \item  $ \angle A_1FB_1=\_\_ $\\设 $ M_1  $ 为 $ A_1B_1 $中点，则 $ \angle AM_1B =\_\_$\\以 $ AB  $ 为直径的圆与 $ l  $ 相切
+        \item  $ l  $ 与 $ x  $ 轴交于 $ F_1  $，则 $ \angle AF_1F\_\_\angle BF_1F $
+        \item 若 $ S_{\triangle AA_1F}\cdot S_{\triangle BB_1F}=\lambda S_{\triangle AF_1B}^2 $，则 $ \lambda=\_\_ $
+        \item  $ M_1F^2=k|AF|\cdot|BF| $, $ k=\_\_ $
+        \item  $ AB  $ 中点 $ M  $ 的轨迹方程为\_\_          
+    \end{enumerate} 
+\end{proposition}
+\begin{remark}
+    抛物线在保有类似双曲线和椭圆的一些性质外还独有一些性质。这是因为抛物线计算上相对简单，因此许多量都可以直接表示，这里建议把直接可以表示的量尽量记住，抛物线的性质是最有可能用到的。
+\end{remark}
+\begin{proposition}
+     $ P  $为抛物线 $ y^2=2px(p>0) $ 外一点，过点 $ P  $ 作切线切于 $ A(x_1,y_1),B(x_2,y_2) $ 
+     \begin{enumerate}[ $ (1) $ ]
+        \item  $ x_P=\_\_ ,\,y_P=\_\_ $（用 $ A,B  $ 坐标表示）
+        \item 设 $ P  $ 坐标为 $ (x_0,y_0)  $，则 $ A,B  $ 方程为\_\_ \\当 $ P  $ 在准线上时, $ AB  $ 经过定点\_\_
+        \item  $ |PF|^2\_\_|AF|\cdot|BF| $ 
+        \item  $ \angle AFP\_\_\angle BFP $  
+     \end{enumerate}
+\end{proposition}
+\begin{proposition}
+    过抛物线 $ y^2=2px(p>0) $焦点 $ F  $ 作 $ l_1\perp l_2 $ 交抛物线于 $ A,B,C,D  $
+    \begin{enumerate}
+        \item 若 $ AB,CD  $的中点为 $ M,N  $，则 $ MN  $ 经过定点\_\_ 
+        \item   若以 $ AB,CD $ 为直径的圆的公共线中点为 $ Q  $，则
+         $ Q  $ 的轨迹方程为\_\_  
+    \end{enumerate} 
+\end{proposition}
+\begin{proposition}
+    设抛物线 $ y^2=2px(p>0) $ 顶点为 $ O  $，弦 $ AB  $ 与 $ x  $ 轴交于点 $ M $
+    \begin{enumerate}
+        \item 若 $ AO\perp BO  $， $ x_M=\_\_ $\\过 $ O  $作弦 $ AB   $ 的垂线，垂足为 $ H  $，则 $ H  $ 的轨迹方程为\_\_ 
+        \item 若 $ M  $ 为定点 $ (m,0)  $, $ k_{OA}\cdot k_{OB}=\_\_  $ \\设 $ N(-m,0)  $ 是 $ M  $ 关于原点的对称点，则 $ \angle ANM\_\_\angle BNM $\\过 $ N  $ 的两条倾斜角互补的直线与抛物线分别交于 $ A_1,A_2,B_1,B_2 $，则 $ A_1B_2  $ 必经过定点\_\_ 
+        \item 设 $ P(x_0,y_0 ) $ 为抛物线上一点，且  $ PA\perp PB  $，则 $ AB  $ 必经过定点 $ \_\_  $ 
+        \item 抛物线上动点 $ Q  $满足: $ QA\perp QB,
+        |QA|=|QB| $，则 $ S_{\triangle QBA } $ 的最小值为\_\_    
+    \end{enumerate} 
+
+\end{proposition}
+\begin{proposition}
+     $ \triangle ABC  $ 顶点在抛物线 $ y^2=2px(p>0) $上
+     \begin{enumerate}
+        \item 若 $ \triangle ABC  $ 为等边三角形，则重心的轨迹方程为\_\_
+        \item 抛物线在这三点的切线围成的三角形的垂心的横坐标\_\_ 
+     \end{enumerate}
+\end{proposition}
+\section{解析几何基本解法}
+限于笔者水平，若有不当或情况未列出请指正！\\
+解析几何关键要看思路的流畅性，即计算对象的不断变化，我们在以下题型中重点放在计算顺序上。通常的计算顺序都是两边凑，我们要时刻对“什么东西已经可以表示“保持警惕。建议把计算顺序在写完题后特别是不会的总结一下，非常推荐，这让你能理解更深一点解析几何的计算逻辑
+\paragraph{定点定直线问题}总体而言，我们要去思考如何证明一条直线过顶点或一个点一定在一条直线上，以下是一些解决方式。笔者希望读者能从中理解“两边凑的思想”。
+
+（一）直接猜：考虑一下 $ x  $ 轴和 $ y  $ 上的点，平行于 $  x,y $ 轴的直线是否符合条件
+\begin{example}
+    已知椭圆$ C:\dfrac{x^2}{4}+\dfrac{y^2}{2}=1 $，过点 $ P (0,1 ) $ 的动直线 $ l  $ 与椭圆交于 $ A,B  $两点，点 $ B  $ 关于 $ y  $ 轴的对称点为点 $ D  $ (不同于点 $ A $ )，证明：直线 $ AD  $ 恒过顶点，并求出该点坐标。 
+\end{example}
+\begin{remark}
+    对称永远是数学的主题。一方面解析几何的一些对称性质大多还是需要一定经验的，但另一方面由 $ x  $ 轴开始，由 $ x/y  $ 轴结束是非常自然的，因为从坐标轴出发的往往计算上会简单一点，以及我们有很多表示法，过 $ x  $ 轴上一点的直线是表示上是很简单的。
+
+    这里， $ P  $ 在 $ y  $ 轴上，根据对称性，我们让 $ l  $ 分别为两条对称的直线，那么定点只能是两个 $ AD  $ 相交而得，所以一定在 $ y  $ 轴上。
+\end{remark}
+
+（二）慎重考虑设出的对象，不一定是问题中第一条引出的直线，也可以是问题中问的直线
+\begin{example}
+    已知椭圆的标准方程为 $ \dfrac{x ^2 }{4}+\dfrac{3y^2}{4}=1 $。其左顶点为点 $ A  $，动点 $ B,C  $ 在椭圆上，且 $ AB\perp AC  $，求证：直线 $ BC  $ 恒过一定点。 
+\end{example}
+\begin{example}
+    已知抛物线 $ x^2=4y $ 上一点 $ N (2,1) $。动点 $ A,B  $ 在椭圆上，且 $ NB\perp NA  $，求证：直线 $ AB  $ 恒过一定点。
+\end{example}
+\begin{example}
+    已知椭圆的标准方程为 $ \dfrac{x ^2 }{4}+y^2=1 $。点 $ P(0,1) $，设直线 $ l  $ 不经过 $ P  $ 点不垂直于 $ x  $ 轴，且与 $ C  $ 相交于 $ A,B  $ 两点。若直线 $ PA,PB  $ 的斜率的和为 $ -1  $，求证：直线 $ l $ 过定点。
+\end{example}
+\begin{example}
+    从双曲线 $ C:\dfrac{x^2}{4}-y^2=1 $ 上一点 $ A(4,\sqrt{3}) $ 引两条直线 $ AM,AN  $，分别交 $ C  $ 于 $ M,N  $,且 $ AM,AN  $ 的斜率为 $ k_1,k_2 $，满足 $ k_1\cdot k_2=1 $，判断直线 $ MN  $ 是否过定点。    
+\end{example}
+\begin{remark}
+    这里就是解析几何思想的非常关键的东西：设出的对象是什么。我们肯定要确保未知字母的个数尽量不超过3，然而我们不能死脑筋，一定要以全题审视的视角看看把哪一个点，哪一条直线用未知数表示出来。当然，经验上谈一般就是设开头引出的直线或者最后问的直线。我们这道题就是设出最后的一条直线，这在此类问题中非常常见。其原因是：一条直线 $ y=mx+n  $ 过顶点就是在问 $ m,n  $ 的关系是什么，那么我们设出这条直线，去对照什么样的 $ m,n  $ 可以符合条件中做的一系列点。
+\end{remark}
+（三）发现特点，利用几何性质
+\begin{example}
+    设 $ F_1,F_2  $ 分别为椭圆 $ \dfrac{x^2}{a^2}+\dfrac{y^2 }{1-a^2 }=1 $ 的左右焦点，点 $ P  $ 为椭圆 $ E  $ 上的第一象限内的点，直线 $ F_2P  $ 交 $ y  $ 轴于点 $ Q  $，并且 $ PF_1\perp F_1Q  $。证明：当 $ a  $ 变化时，点 $ P  $ 在某定直线上
+\end{example}
+\begin{example}
+    已知椭圆 $ C:\dfrac{x^2 }{18 }+\dfrac{y^2}{9}=1 $，过点 $ M(0,-1) $ 的动直线 $ l  $ 与椭圆C交于 $ A,B  $ 两点。试判断 $ AB  $ 直线的圆是否恒过定点，并说明理由。  
+\end{example}
+\begin{remark}
+    思考从哪里入手，入手点和思路都是很重要的需要积累的经验。
+\end{remark}
+\paragraph{定值问题}
+类似上述方法，定点问题和定值问题几乎是一样的，关键是对我们如何去设参数的考量。下面介绍一下点差法的运用。
+\begin{example}
+    已知椭圆$ C:9x^2+y^2=m^2(m>0) $，直线 $ l  $ 不过原点 $ O  $且不平行于坐标轴， $ l  $ 与 $ C  $ 有两个交点 $ A,B  $，线段 $ AB  $ 的中点为 $ M  $，证明：直线 $ OM  $的斜率与直线 $ l  $ 的斜率的乘积为定值。
+\end{example}
+\begin{example}[2020浙江21]
+    已知椭圆 $ C_1:\dfrac{x^2}{2}+y^2=1 $，抛物线 $ C_2:y^2=2px(p>0) $，点 $ A  $是椭圆 $ C_1 $ 与抛物线 $ C_2  $ 的交点，过点 $ A  $ 的直线 $ l $ 交椭圆 $ C_1  $ 于点 $ B  $，交抛物线 $ C_2 $ 于点 $ M $（ $ B,M  $ 不同于 $ A 1 $ )若存在 $ l  $ 使 $ M  $ 为线段 $ AB  $ 的中点，求 $ p  $ 的最大值。   
+\end{example}
+\begin{remark}
+    这里有一种全新的思想：设点。我们可以称之为点参。事实上，回顾一下我们之前的思路，无非就是设出一条直线
+     $ y=kx+b $ （但这条直线需要仔细琢磨）然后再设点 $ (x_1,y_1),(x_2,y_2) $ 用韦达定理建立起 $ x_1,x_2 $ 与 $ k,b  $ 的联系，之后再回答问题。这称之为线参。其实就是把参数的重点放在点上还是线上，即用点的坐标表示线还是用线的方程表示点（当然线的方程不能直接表示点，但不妨我们将韦达定理作为一种表示形式。不得不说，由于美妙的对称性，一般不太可能出现超出韦达定理的情况）
+    \\点参和线参需要按照实际情况来使用，也需要结合一定的逻辑。例如本题中，很明显直线的作用仅仅只是把两点表示出来，而其实先点出两点再连这条线也是没有任何问题的，因此完全可以将线隐去，利用点满足的方程进行一定的操作。这同时也体现出一个思想：曲线上的点适合曲线的方程，且两者是等价关系。那么我们只要对两点的方程进行对照，消消乐即可（笔者还没有想出超出相减的做法）
+    \\回到点差法的思想，基本上用于弦上的定比分点（多为中点）通过构建两条方程乘以系数作差以消去某些项。因此，点差法的关键是能不能消去一些没有用的，如常数项。
+\end{remark}
+\subsection{反思与总结}
+\paragraph{注意事项}
+
+一、一些特殊情况，如斜率不存在，仅有唯一交点等。
+
+二、注意左支右支导致的多种情况，焦点位置（可能方程不是标准方程而在 $ y  $ 轴）引来结果多样
+
+三、多注意对称性以及“地位”上的平等（例如一条直线交曲线两个点，那这两个点地位就是平等的）
+
+\paragraph{基本手法}
+点差法、平移坐标轴（对仅有斜率、边比的问题能简便运算，关键是选取原点使点利于计算）、齐次化（化简得到 $ f(x,y)=1 $ 后齐次化解出 $ \dfrac{y}{x } $，一般在平移后用）、参数方程（相当于三角换元，能将一些结构变得简单）
+
+\paragraph{处理思想}
+
+一、换角度看问题：如何用简洁好用的算式表达一个条件，这需要我们多元的看待一个对象。
+
+二、合理安排计算顺序：从哪里计算很重要，是点参还是线参，用点表示线还是用线通过韦达定理表达交点。做题不能死板，既可以用已知量去表示一个量，也可以设出这个量列得有关方程。
+
+三、倒推思想：先设最后得到的反推初始状态，可以列得方程。
+
+四、方程思想：在原本方程式上进行代数变形，如点差法
+
+\paragraph{小结}
+解析几何是计算的艺术，第一点的误区是不能把解析几何看成非常多的技巧的组合，至少以上的内容涉及了几乎所有“在考场上想不到的人方法”，因此，熟练的计算代数式是要练就的功底。当然经验也很重要，你需要知道什么样的东西大概是能解出来的。如果做多了，很容易发现，有根号的东西往往不以加法形式存在，往往会保留到最后几步自然消去。三次及以上的方程几乎都能因式分解，一般的式子就是形如 $ x-y $ 的对称式或者一次式。
+
+限于笔者水平，一些方法还没有面面俱到，但笔者认为数学思想比方法更为重要，关注重点，找到联系，从熟悉的地方出发逐个攻破就是很好的思想。正如我所说，想不到的方法我已经列在上面了，剩下的关键在能不能发现。一定的积累是非常必要的，笔者推荐有一本笔记本，专门记你觉得的好题，但关键不是记录题目，而是记录你的思考，读者可以在题下面写关于入手点，思想方法，思维逻辑，数学对象之间的联系，关注点，重点等等，或许笔者上面对一些题的评语会对你有帮助。笔者一直认为，每个人的思维不同，因此关注点不同会导致差距，这也就是不同人擅长不同东西的原因。但是我们要汲取别人以及答案的思维方式，重点要关注他们是怎么审视这道题的。具体的操作就有读者自行斟酌了。
+
+任何东西都可以记，为的其实是让自己记住。人类忽视了很多很多的细节，我们要做的就是重新审视，从旧的中获得新的。这也是我们汲取经验的方式。
+\end{document}

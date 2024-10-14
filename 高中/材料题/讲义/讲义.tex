@@ -1,0 +1,254 @@
+\documentclass[UTF8,oneside,11pt]{book}
+                               % UTF8 指定文件编码
+                               % oneside 指定书籍为单开页 (防止多余的空白页出现)
+\usepackage[a4paper,margin=1in]{geometry}
+                               % 设置纸张大小为 A4，页边距为1英寸
+
+\usepackage{amsmath}           % AMS 的主包
+\usepackage{amssymb}           % AMS 符号包，会自动加载 amsfonts
+\usepackage{latexsym}          % 几个额外的特殊符号，包括 \Box
+\usepackage{mathrsfs}          % \mathscr 字体样式
+\usepackage{eucal}             % 更改 \mathcal 的字体样式
+\usepackage{amsthm}            % AMS 的定理环境
+\usepackage{mathtools}         % 一些额外的数学环境功能，包括 \dfrac
+\usepackage{stmaryrd}          % 更更多的特殊符号
+\usepackage{esint}             % 更多积分符号
+\usepackage{extarrows}         % 提供在箭头上下写字的命令
+\usepackage{enumerate}         % 带序号列表环境
+\usepackage{xcolor}            % 让 latex 支持花里胡哨的颜色的包
+\usepackage{graphicx}          % 插入各种类型图片支持
+\usepackage{tikz}              % tikz 绘图环境
+\usepackage{tikz-3dplot}       % 一个简单的 tikz 3d 绘图宏包
+\usepackage{tikz-cd}           % 基于 tikz 的交换图表绘制工具
+\usepackage[all,cmtip]{xy}     % 交换图表绘制工具，命令为 \xymatrix
+\usepackage{pgfplots}          % 高级绘图包，基于 tikz，包括 2d 和 3d 绘图
+\pgfplotsset{compat=newest}    % 设置 pgfplots 兼容性选项，以使用新功能
+\usepackage{subcaption}        % 可以交叉引用的图表并排环境
+\usepackage[ocgcolorlinks,linkcolor=blue,linktoc=page]{hyperref}
+                               % 更 fancy (如带颜色，可以点击等等) 的引用
+\usepackage{cleveref}          % 更“聪明”的引用，使用此宏包，在引用一个公式/定理等时
+                               % 请使用 \cref 而非 \ref
+\usepackage[hyperref=true,backend=biber,style=alphabetic,backref=true,url=false]{biblatex}
+                               % 使用 biblatex 管理参考文献，后端采用 biber，取代
+                               % 古老的 natbib + bibtex，使用方法自行上网查阅
+                               % 如果需要用 natbib，请自行注释掉这一行然后正常使用
+\usepackage{tcolorbox}         % 绘制彩色文本框的宏包
+\tcbuselibrary{most}           % 加载 tcolorbox 的库
+\usepackage{bm}                % 为所有数学字体添加粗体，命令 \bm{abcd}
+\usepackage{slashed}           % 在符号上添加反划线，命令 \slashed
+\usepackage{ctex}
+%==============================%
+%     请在这里添加其它宏包     %
+%------------------------------%
+
+% \usepackage{physics}         % 提供了方便地打出 d/dx 等符号的命令
+
+
+
+%==============================%
+
+%==============================%
+%    私货，定义了一些小命令    %
+%------------------------------%
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\img}{Im}
+\DeclareMathOperator{\dd}{d\!}
+\newcommand{\card}{\texttt{\#}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\st}{\emph{s.t.}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vphi}{\varphi}
+\newcommand{\vthe}{\vartheta}
+\newcommand{\II}{I\!I}
+\renewcommand{\emptyset}{\varnothing}
+%==============================%
+
+%==============================%
+%         定理环境设置         %
+%------------------------------%
+\theoremstyle{plain}\newtheorem{thm}{定理}[chapter]
+\theoremstyle{definition}\newtheorem{definition}[thm]{定义}
+\theoremstyle{plain}\newtheorem{axiom}[thm]{公理}
+\theoremstyle{plain}\newtheorem{coro}[thm]{推论}
+\theoremstyle{plain}\newtheorem{lemma}[thm]{引理}
+\theoremstyle{plain}\newtheorem{prop}[thm]{性质}
+\theoremstyle{plain}\newtheorem{conj}[thm]{猜想}
+\theoremstyle{plain}\newtheorem{ques}[thm]{问题}
+\theoremstyle{plain}\newtheorem{const}[thm]{构造}
+\theoremstyle{remark}\newtheorem{notation}[thm]{注记}
+\theoremstyle{plain}\newtheorem*{app}{应用}
+\theoremstyle{plain}\newtheorem*{exam}{测试}
+\theoremstyle{plain}\newtheorem*{exer}{例子}
+\theoremstyle{plain}\newtheorem*{remark}{评论}
+\theoremstyle{remark}\newtheorem*{note}{\small{注}}
+\numberwithin{equation}{section}
+\numberwithin{thm}{chapter}
+%==============================%
+
+%==============================%
+%    定义标题图片和背景图片    %
+%------------------------------%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead{}
+    \chead{\includegraphics[width=0.4\linewidth]{qiuzhen.png}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\addtolength{\headheight}{0.025\paperheight}
+\addtolength{\topmargin}{-0.025\paperheight}
+\fancyhead{}
+\chead{\includegraphics[width=0.4\linewidth]{qiuzhen.png}}
+%------------------------------%
+% \usepackage{eso-pic}
+%\DeclareHookRule{shipout/background}{title/opac}{before}{pgfrcs}
+%\AddToHook{shipout/background}[title/opac]{
+%    \begin{tikzpicture}[remember picture,overlay]
+%        \centering
+%        \node [opacity=0.1] at (current page.center) {
+%            \includegraphics[height=0.2\paperheight]{redqiuzhen.png}
+%        };
+%    \end{tikzpicture}
+%}
+%==============================%
+
+%==============================%
+%  添加参考文献库 (.bib 文件)  %
+%  例 \addbibresource{XX.bib}  %
+%------------------------------%
+
+%\addbibresource{}
+
+%==============================%
+
+%==============================%
+% 定义封面样式，请将 XX 替换为 %
+% 具体的课程名和人名           %
+%------------------------------%
+\title{
+    \huge{数学中有趣的问题}
+    \vspace{0.4\paperheight}
+}
+\author{
+    \Large{作者: lin150117}
+    \vspace{0.1\paperheight}
+}
+
+\begin{document}
+\maketitle
+\frontmatter
+\tableofcontents
+\newpage
+\setlength{\parindent}{0pt}
+\chapter{引言}
+\setcounter{chapter}{1}
+定义 $ D^2=\{(x,y)\in\mathbb{R}^2|x^2+y^2<1\} $ 为单位圆盘。 $ S^1=\{(x,y)\in\mathbb{R}^2|x^2+y^2=1\} $ 为单位圆盘的边界。 
+\begin{definition}
+    对 $ X,Y  $ 为 $ \mathbb{R}^2 $ 的子集。我们考虑映射$ f:X\rightarrow Y $，如果 $ f  $ 满足：
+    \begin{center}
+        $ \forall \,\varepsilon>0,x\in 
+        X,\exists\, \delta>0  $ 使得  $ \forall \,y\in Y,\,|x-y|<\delta  $ 我们有 $  |f(x)-f(y)|<\varepsilon $ 一定成立。
+    \end{center}
+    我们称 $ f  $ 是\textbf{连续}的。
+\end{definition}
+\begin{remark}
+    连续这里采用了 $ \varepsilon-\delta  $ 语言定义，读者可能理解上有一定困难，通俗地讲，当 $ y $ 无限接近于 $ x $ 时, $ f(y) $ 也会无限接近于 $ f(x) $。举个例子， $ f(x)=e^x  $ 就是连续的，如果你画图的话，这个现象就更直观了。\\
+    当然我们也可以这样想，其实就是将 $ X  $ 这个对象通过“捏泥巴”变成 $ Y  $， 那么 $ X $ 的点对应 $ Y  $ 中的点形成的映射就是连续映射。  
+\end{remark}
+我们假定我们已经证明了定理:
+\begin{thm}[二维空间的零点存在定理]\label{定理1}
+    对一个连续函数 $ f:D^2\rightarrow \mathbb{R}^2  $, 如果对所有 $ |x|=1 $, 存在 $ t>0,f(x)=tx $. 则存在 $ x\in D^2 $ 使得 $ f(x)=0 $. 
+\end{thm}
+
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{topo.jpg}
+    \caption{\cref{定理1}中的f}
+    \label{定理1中的f}
+\end{figure}
+
+这个定理其实很好理解，如果我们学过拓扑学的一些知识就会知道，若0不在 $ f  $ 的值域中，那么 $ 0 $ 周围会有一个“洞”，“洞内”的点均不在值域中。但是我们不可能将一个圆盘通过捏泥巴（连续的直观解释）的方式让它里面有洞，所以不可能零点不存在。如果我们相信这个定理，那么我们有如下推论：
+\begin{thm}[Brouwer fixed point theorem]
+    任何连续函数 $ f:D^2\rightarrow D^2  $ 都存在不动点。也就是说， $ \exists \,x\in D^2 $ 使得 $ f(x)=x $ 
+\end{thm}
+\begin{remark}
+    我们可以简单的理解这个定理，它其实的意思是：如果我们搅拌一个咖啡杯，我们假定咖啡杯表面的液体分子不会向下走。那么无论我们怎么搅拌，咖啡杯表面总是有一个点与最初的位置相同，这是因为我们搅拌的过程总是连续的。\\
+    事实上，这个定理可以拓展到三维领域，因此，我们不需要做任何假设就可以得出一个数学上绝对正确的结论：如果我们在玩一个榨汁机，无论我们怎么在榨汁机里搅拌，榨汁机里总是有一个点与最初的位置相同。这就是拓扑学研究的事情。
+\end{remark}
+\begin{proof}
+    假设 $ f  $ 没有不动点，那么对于任意的 $ x\in D^2 $,  $ f(x)  $ 与 $ x  $ 不是同一个点，因此我们可以画出从 $ f(x) $ 到 $ x  $ 的射线 $ l_x $。设 $ l_x  $ 与单位圆边界 $ S^1 $ 交于点 $ g(x) $。这样我们就构造出了一个函数 $ g:D^2\rightarrow D^2  $， $  x\mapsto g(x) $。\\
+    容易验证这几点要求：
+    \begin{enumerate}
+        \item $ g(x) $ 是连续的。
+        \item 对 $ x\in S^1 $, $ g(x) $ 满足 $ g(x)=x $.
+        \item  $ g(x)\in S^1 $，故不存在 $ g(x)=0 $.  
+    \end{enumerate}  
+    但是由\cref{定理1}， $ g  $ 满足存在 $ x $,  $ g(x)=0 $。这与上面的第三点矛盾！\\
+    这样我们就证明了问题。   
+\end{proof}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Brouwer.jpg}
+    \caption{$ g(x) $的构造}
+    \label{Brouwer定理}
+\end{figure}
+\begin{remark}
+    这个证明非常的漂亮，特别是运用了反证法这一事情，居然有利用反证法证明存在性的方法！尽管这个定理的证明由Brouwer给出，但是他在后期并不承认这个证明。这是数学中非常著名的\textbf{直觉主义}学派，他们宣称，数学的对象只能通过直接证明而不能通过反证法。因此存在性证明必须是构造性的。这从这个定理中也可以理解：你证明了不存在不动点是有问题的，但却完全不能描述它的大概位置。那么凭什么认为这个无中生有的不动点存在呢。
+\end{remark}
+
+笔者介绍了一个拓扑学中的经典例子和直觉主义学派作为本节的引言部分，目的是想让读者们了解数学的概念是不断的抽象的过程，例如我们可以用连续函数去描述搅拌咖啡机的起始点到终点。拓扑学就是这样一个学科，本质上是研究多维空间下的“捏娃娃”或者说“搅拌”对于一个对象中的点的影响。图就是一个拓扑对象。\\以及，有关数学的哲学和思想也是不断的与时俱进的。以往的数学家通常都是以“直觉”作为证明的基础，这一思想对现代数学家也有很深远的影响，往往数学家认为idea重要而详细而繁琐的证明不重要。然而我们不得不承认的是，现代数学必须建立在一个“欧几里得”式的严格的公理体系之下，但这个体系每个人往往都有不同的看法，例如直觉主义的观点。\\
+有的人也会认为选择公理（我们可以从无穷个非空集合中分别选择出一个元素组成一个集合）是不成立的。这听上去很奇怪，但似乎你也没有一个理由去解释它，特别是当罗素提出罗素悖论后，人们对集合的态度往往很谨慎。\\
+我们唯一能做的，就是严谨的研究每一个证明过程，这样认同或不认同的人都能找到适合自己的一个定理。而严谨体现在方方面面，例如“连续”的定义，我们必须对“搅拌”或者“捏娃娃”或者说”连续“的东西的概念作出数学上的定义。而这样的定义也是帮助我们理解这个对象的，例如Brower定理就是这样一个例子，只有严格的定义我们才能更自然地去研究。\\
+引言到这里基本结束了，接下来我会引导读者研究数学的方方面面，以材料的形式探讨数学家的思维方式。
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{麒麟.jpg}
+    \caption{三维空间中一个外表面封闭的形状内部不一定与外界不连通}
+    \label{麒麟图}
+\end{figure}
+\newpage
+\chapter{竞赛题}
+\section{数列}
+\begin{ques}[2022CMO, T1]
+    设正实数序列 $ \{a_n\},\{b_n\} $ 满足：对任意正整数 $ n  $， 均有
+    \begin{equation}
+        a_{n+1}=a_n-\frac{1 }{1+\sum\limits_{i=1}^n\frac{1 }{a_i}},\,b_{n+1}=b_n+\frac{1 }{1+\sum\limits_{i=1}^n\frac{1 }{b_i}}
+    \end{equation}
+    $ (1) $ 试证明 $ \{a_n\} $ 为等比数列。\\ 
+    $ (2) $ 若 $ a_{100}b_{100}=a_{101}b_{101} $, 求 $ a_1-b_1 $ 的值；\\
+    $ (3) $ 若 $ a_{100}=-b_{99} $, 试比较 $ a_{100}+b_{100} $ 与 $ a_{101}+b_{101}  $ 的大小；
+\end{ques}
+\begin{remark}
+    这道题是全国中学生数学奥林匹克2022年的第一题，即笔者参加的那一年的比赛。这里用到的数列技巧还是比较全面的，关键就是取倒数变形的技巧。我们多次提及，代数题最关键的就是变形，而变形无非就这么几种。可以看见，一个简单的等比数列都能变形成 $ \{a_n\} $ 这样吓唬你，我们要做的就是不被吓到。\\
+    值得一提的是，当时笔者在考场上就被吓住了，事实上这里的第一问是笔者杜撰的问题，为的是更贴近高考题。在没有第一题的情况下，笔者完全没有求出通项，仅仅是通过上述的递推式来解决后续的问题。以至于在后续讨论的过程中，被人不解为什么不直接求出通项呢，令人忍俊不禁。这告诉我们一个教训，一切考场上的题目难度都是假的，我们不能把题目想太复杂，要做的是能想到的都去尝试而不是直接往最难的方向想。谁能想到当年的\textrm{CMO}第一题仅仅是一个高考难度，甚至能求出通项的题目呢。
+\end{remark}
+\begin{ques}[2023全国高中数学联赛一试T11]
+    求出所有满足下面要求的不小于1的实数 $ t  $：对任意 $ a,b\in[-1,t] $, 总存在 $ c,d\in[-1,t]  $ 使得 $ (a+c)(b+d)=1 $.
+\end{ques} 
+\begin{remark}
+    非常繁琐的分类讨论题。用作练习可以锻炼逻辑的思考。我们总会遇到这样的题目：求最大/最小的t，满足$ \cdots $；在考虑这样的题目时往往有两种思路：
+    \begin{enumerate}
+        \item 是否能找到 $ t \geq f(x) $ 或 $ t \leq f(x)  $，那么我们就将题目化归为求 $ f(x)  $ 的最大/最小值。此类想法适用于 $ t  $ 单变元时。
+        \item  这种方法是我们不想见到的，因为没有章法。就是将其它变元进行一定控制调整逐渐找到 $ t  $ 的界。事实上，考虑函数的变化是比较难的，因此这种情况我们一般就是“先猜后证”。特别的，对于求界的问题，我们其实没有必要去“证明”它，仅仅构造一个例子去说明一些 $ t $ 不行就行。 
+    \end{enumerate} 
+    由此可见，这种问题比较的难分析，但思考深度不大，在一试八十分钟的限时考试中还是会难到很多人的，但这不意味着它是个难题。
+\end{remark}
+\begin{ques}[2022全国高中数学联赛一试T11]
+    在平面直角坐标系中，双曲线 $ \Gamma:\frac{x^2}{3}-y^2=1  $. 对平面内不在 $ \Gamma  $ 上的任何一点 $ P  $， 记 $ \Omega_P  $ 为过点 $ P  $ 且与 $ \Gamma  $ 有两个交点的直线全体。对任意直线 $ l\in \Omega_P  $， 记  $ M,N  $ 为 $ l  $ 与 $ \Gamma  $ 的两个交点，定义 $ f_P(l)=|PM|\cdot|PN| $. 拖存在一条直线 $ l_0\in \Omega_P  $ 满足： $ l_0  $ 与 $ \Gamma  $ 的两个交点位于 $ y  $ 轴异侧，且对于任意直线 $ l\in\Omega_P  $， $ l\not=l_0 $，均有 $ f_P(l)>f_P(l_0) $，则称 $ P  $ 为“好点”。求所有好点所构成的区域的面积。  
+\end{ques}
+\begin{remark}
+    本题关键在读题，理解斜率，渐近线等在这里的作用。这道题是一道很典型的要集中注意放在几个关键量上的解析几何题。\\
+    本题作为当年一试压轴难度适中，也符合近几年高联高考+的难度的趋势。笔者当时在考场上也思考将近半个小时，实属不该。冷静是非常重要的一环，笔者显然没有达到这样的要求。当年联赛判卷严，甚至在最后改卷还因为没有解释清楚其中一个性质的原因而被扣了五分。实属是笔者考卷分数的下限了。但是好在幸运地压线进了省队。不得不说，我们不能以幸运作为自己的祈祷。笔者的考试似乎从来没有幸运过，然而分数线却告诉我人生的最大幸事降落在我头上。但反过来想，笔者的水平真仅限于此吗，或许不是，如果我能在考场上再冷静点，或者是简单的希望当时考试的时候没有看错题，没有想着跳过题目，那么结果就不是压线了。当然这些都是后话。但是我们唯一能做的就是\textbf{做自己}。相信自己就是最大的幸运。如果从上帝视角看，或许笔者的“压线”只不过是水平的真实体现罢了，没有什么幸运之事在佐使。
+        \begin{quote}
+            清楚自己的水平，就是人生最大的幸事。
+        \end{quote}
+\end{remark}
+
+\end{document}
