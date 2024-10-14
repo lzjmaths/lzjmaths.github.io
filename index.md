@@ -17,15 +17,6 @@ I am an undergraduated sdudent at Qiuzhen College of Tsinghua University. If you
 - **[Differential Geometry](https://overleaf.tsinghua.edu.cn/read/vjpzjynprygk)**<br>
 Differential Geometry is an undergraduate course taught by [Lin Jianfeng](linjian5477@mail.tsinghua.edu.cn) at Qiuzhen College of Tsinghua University.
 
-## Leave a Message
-
-<br>
-
-{% include disqus.html %} 
-
-<br>
-
-
 
 ## News and Updates
 
