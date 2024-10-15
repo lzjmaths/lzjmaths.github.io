@@ -1,0 +1,91 @@
+\section{Smooth Manifold}
+\begin{definition}[Topological manifold]
+    A space  $ M  $ is called a topological manifold if 
+    \begin{enumerate}
+        \item locally Euclidean
+        \item Hausdorff
+        \item second countable
+    \end{enumerate}
+\end{definition}
+\begin{definition}[Smooth Manifold]
+     A smooth structure is given by an equivalence class of smooth atlas  $ \{(U_\alpha,\varphi_\alpha)\} $ \st  $ \varphi_{\alpha\beta}:\varphi_\alpha(U_\alpha\cap U_\beta)\rightarrow \varphi_\beta(U_\alpha\cap U_\beta) $  is smooth  $ \forall \alpha,\beta $.  $ M=\cup U_\alpha $.
+     
+     A \name{smooth manifold} is a topological manifold with a smooth structure.
+     
+     Define when a continuous map  $ f:M_1\rightarrow M_2 $ is smooth if  $ \forall (U_1,\varphi_1)\in\mathcal{A}_1,(U_2,\varphi_2)\in\mathcal{A}_2 $, we have  $ \varphi_2\circ f\circ \varphi_1^{-1}:\varphi_1(U_1\cap U_2)\rightarrow \varphi_2(U_1\cap U_2) $ is smooth. 
+\end{definition}
+\begin{definition}
+    Given  $ (M_1,\mathcal{A}_1),(M_2,\mathcal{A}_2) $. A homeomorphism  $ f:M_1\rightarrow M_2 $ is called a diffeomorphism if   $ f $, $ f^{-1} $  is smooth. 
+    
+    In this case we say  $ (M_1,\mathcal{A}_1),(M_2,\mathcal{A}_2) $ are diffeomorphism. 
+\end{definition}
+\begin{theorem}[Kervaire]
+     $ \exists  $ a 10-dimensional topological manifold without smooth manifold.
+\end{theorem}
+\begin{theorem}[Milnor]
+     $ \exists  $ a smooth manifold  $ M  $ \st  $ M\cong S^7 $ but not in diffeomorphism meaning.  
+\end{theorem}
+\begin{theorem}[Kervaire-Milnor]
+     $ \exists  $ 28 smooth structrues (up to orientation preserving diffeomorphism) on  $ S^7 $ 
+\end{theorem}
+\begin{theorem}[Morse-Birg]
+    On  $ S^7  $. If  $ n \leq 3  $, then any  $ n  $-dimensional topological manifold  $ M  $ has a unique smooth structure up to diffeomorphism.
+\end{theorem}
+\begin{theorem}[Stallings]
+    If  $ n\not=4  $, then  $ \exists  $ a unique smooth structure on  $ \mathbb{R}^n  $ up to diffeomorphism.
+\end{theorem}
+\begin{theorem}[Donaldson-Freedom-Gompf-Faubes]
+     $ \exists  $ uncountable smooth structures on  $ \mathbb{R}^4 $ up to diffeomorphism. 
+\end{theorem}
+\begin{definition}[topological manifold with boundary]
+    A space  $ M  $ is called a topological manifold with boundary if 
+    \begin{enumerate}
+        \item  $ M  $ is Hausdorff
+        \item  $ M  $ is second countable 
+        \item  $ \forall  p\in M $,  $ \exists   $ a neibourhood  $ U  $ of  $ p  $ and a homeomorphism  $ \varphi:U\rightarrow V    $  where  $ V  $ is open in  $ \mathbb{H}^n $ 
+    \end{enumerate}
+    We say a manifold  $ M  $ is closed if  $ M  $ is compact and  $ \partial M  $ is empty.
+\end{definition}
+Our motivation for studying manifold is to study the space of solution for equations.
+\begin{question}
+    Given  $ f:\mathbb{R}^n\rightarrow \mathbb{R} $ smooth,  $ q\in \mathbb{R}^n $, when is  $ f^{-1}(q)  $ is a smooth manifold?
+\end{question}
+
+For  $ f:U\rightarrow \mathbb{R}^n $ smooth,  $ U  $ open in  $ \mathbb{R}^m $,  the differential of  $ f  $ at  $ p\in U  $ denoted as  $ \mathrm{d}f(p) $.  
+\begin{definition}
+    We say  $ p\in U  $ is a \textbf{regular point}\index{regular point} of  $ f  $ if  $ \mathrm{d}f(p)  $ is surjective. Otherwise we say  $ p\in U  $ is a \textbf{critical point}\index{critical point}.
+    
+    A point  $ q\in \mathbb{R}^n  $ is called a \textbf{regular value}\index{regular value} of  $ f  $ if  $ \forall  p\in f^{-1}(q)  $ ,  $ p  $ is a regular point of  $ f $.
+    
+    A point  $ q\in \mathbb{R}^n  $ is called a \textbf{critical value}\index{critical value} of  $ f  $ if  $ \forall  p\in f^{-1}(q)  $ ,  $ p  $ is a critical point of  $ f $.
+    
+\end{definition}
+\begin{theorem}[Implicit function theorem]
+    If  $ p\in U  $ is a regular point of  $ f:U\rightarrow \mathbb{R}^n  $. Then there exists 
+    \begin{itemize}
+        \item An open neighbourhood  $ V  $ of  $ p  $ in  $ U  $
+        \item An open subset  $ V'  $ of  $ \mathbb{R}^m $
+        \item  A diffeomorphism  $ \varphi:V\rightarrow V'  $ such that  $ P\circ \varphi=f $ where  $ P  $ is the projection from  $ \mathbb{R}^m $ to  $ \mathbb{R}^n $. 
+    \end{itemize}
+    In other words, near a regular point, we can do local coordinate change to turn  $ f  $ into the projection.
+\end{theorem}
+\begin{remark}
+    In particular, we have a homeomorphism
+    \[ f^{-1}(f(p))\cap V \xrightarrow[\text{restriction of  $ \varphi $ }]{\cong }\{(x_1,\dots,x_m)\in V'|(x_1,\cdots.x_n)=f(p)\}\]
+    \ie if we set  $ M=f^{-1}(f(p)) $, then  $ (M\cap V,\varphi_p) $ is a chart that contains  $ p  $.  
+\end{remark}
+\begin{corollary}
+    If  $ q  $ is a regular value of  $ f:U\rightarrow \mathbb{R}^n $ then  $ f^{-1}(q) $ is a smooth manifold.
+\end{corollary}
+\begin{remark}
+    It suffices to show that the corresponding charts are compatible.
+\end{remark}
+\begin{theorem}[Sard]
+    If  $ f:U\rightarrow \mathbb{R}^n $ is a smooth map, then the set of critical values of  $ f $ has measure $  0 $.
+\end{theorem}
+\begin{remark}
+    For a "generic"  $ q  $,  $ f^{-1}(q)  $ is a manifold of dimension  $ m-n $. 
+\end{remark}
+\begin{corollary}
+    If  $ f:U\rightarrow\mathbb{R}^n $ is smooth and  $ m<n  $ then  $ f(U ) $ has measure $  0  $. 
+\end{corollary}

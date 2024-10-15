@@ -1,0 +1,82 @@
+\subsection{Lie groups and homogeneous spaces}
+
+\begin{definition}
+    We say  $ G  $ is a \name{Lie group} if it is a topological group with a smooth structure such that the multiplication map $ \cdot : G \times G \to G $ and the inverse map  $ G\rightsquigarrow G  $  is smooth. 
+\end{definition}
+\begin{example}
+     $ GL(n,\mathbb{R})=\{n\times n \text{ matrices with non-zero determinant}\}\subset \mathbb{R}^{n\times n } $\\
+      $ O(n)=\{A\in GL(n,\mathbb{R})|AA^T=I\} $\\
+       $ SO(n)=\{A\in O(n)|\det A=1\} $\\
+        $ U(n)=\{A\in GL(n,\mathbb{C})|A\overline{A}^T=1\} $\\
+         $ SU(n)=\{A\in U(n)|\det A=1\} $     
+\end{example}
+\begin{exercise}
+    \begin{align}
+        O(1)&\cong S^2 &SO(1)&\cong *\\
+            SO(2)&\cong S^1 &SO(3)&\cong \mathbb{R}\mathbb{P}^3 \\
+            SU(2)&\cong S^3 &U(n)&\cong S^1\times SU(n)
+    \end{align}
+    The last one is a diffeomorphism but do not preserve the multiplicatioin, \ie not an isomorphism of Lie group.
+\end{exercise}
+\begin{theorem}[Carton]
+    Let  $ H  $ be a closed subgroup of Lie group  $ G  $. Then  $ H  $ is a Lie group. More precisely,  $ H  $ is topological manifold, carries a canonical smooth structure that makes  the multiplication and inverse smooth. Also,  $ G/H  $ is a smooth manifold
+\end{theorem}
+\begin{definition}
+    Let  $ M  $ be a smooth manifold. We say   $ M  $ is a \name{homogeneous space} if  $ \exists  $ a Lie group 
+     $ G  $ with a smooth transitive action $ \rho: G\times M \rightarrow M  $.
+\end{definition}
+\begin{definition}
+    For  $ M  $ be a homogeneous space.
+    The \name{isotropy} group of  $ x\in M  $ is defined as 
+    \[Iso(x)=\{g\in G|gx=x\}\]
+    closed subgroup of  $ G $\\
+    Given any  $ x,x'\in M  $,  $ Iso(x)\cong Iso(x') $ because the group  action is transitive. \\
+    Hence, we have a well-defined map 
+    \begin{align}
+        p:G/_{Iso(x)}&\rightarrow M \\
+        g\mapsto gx
+    \end{align}
+\end{definition}
+\begin{theorem}
+     $ p  $ is always a diffeomorphism.
+\end{theorem}
+Therefore, we have this proposition
+\begin{proposition}
+    $ M  $ is a homogeneous space  $ \Leftrightarrow  $  $ M=G/H  $ for some closed subgroup  $ H  $.
+\end{proposition}
+\begin{example}
+    If  $ M=S^n  $, let  $ G=SO(n+1)  $.\\
+    Then  $ Iso(1,0,\cdots,0)\cong SO(n) $.\\
+    So  $ S^n\cong SO(n+1)/(SO(n)) $. \\
+    Similarly, we can prove  $ \mathbb{RP}^n\cong SO(n+1)/(O(n)) $,  $ \mathbb{CP}^n\cong SO(n+1)/(U(n))$\\
+    The isotropy k dimensional linear subspaces of  $ \mathbb{R}^n  $ can be  $ O(k)\times O(n-k) $ if  $ G=O
+    (n) $   
+\end{example}
+A connected closed surface is a homogeneous space if and only if it is diffeomorphic to  $ \mathbb{RP}^2,S^2,T^2 $ and Klein bottle. 
+\begin{theorem}[Whithead]
+    Any smooth manifold has a triangulation.
+\end{theorem}
+\begin{theorem}[Poincare-Hopf]
+     $ G  $ is compact Lie group  $ \Rightarrow  $  $ \chi(G)=0 $. 
+\end{theorem}
+\begin{theorem}[Mostow2005]
+     $ M  $ is a compact homogeneous space  $ \Rightarrow  $  $ \chi(M) \geq 0 $. 
+\end{theorem}
+\subsection{Bump Function and Partition of Unity}
+\begin{theorem}[Urysohn smooth version]
+    Given  $ M  $, closed disjoint  $ A,B  $,  $ \exists  $ smooth  $ f:M\rightarrow[0,q) $ \st  $ f|_A=0,f|_B=1 $.  
+\end{theorem}
+\begin{theorem}[Tietze]
+    Given  $ M  $, closed  $ A  $, smooth  $ f:A\rightarrow \mathbb{R}^n  $, there exists smooth  $ \hat{f }:M\rightarrow \mathbb{R}^n $ \st  $ \hat{f}|_A=f $  
+\end{theorem}
+To prove these and much more result we need partition of unity theorem.
+
+First we define bump function.
+\begin{lemma}
+    Let  $ U  $ be a neighbourhood of  $ p\in M $. Then  $ \exists   $ smooth  $ \sigma:M\rightarrow [0,1]  $ \st 
+    \begin{enumerate}
+        \item  $ \sigma \equiv 1  $ near  $ p $
+        \item Supp $ \sigma \subset U  $  
+    \end{enumerate}
+    Such  $ \sigma  $ is called a \name{bump function } at  $ p  $, supported in  $ U $. 
+\end{lemma}
