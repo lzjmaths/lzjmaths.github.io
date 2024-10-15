@@ -1,5 +1,5 @@
 \begin{lemma}\label{Lemma A}
-    $\mathfrak{T}_p{M} \rightarrow \mathbb{R}$-linear map $\mathbb{C}^\infty(M)\rightarrow\mathbb{R} \st D_p(f\cdot g)=D_p(f)\cdot g(p)+f(p)\cdot D_p(g)$ is an isomorphism of vector spaces.
+    $D_p:\mathfrak{T}_p{M} \rightarrow \mathbb{R}$-linear map $\mathbb{C}^\infty(M)\rightarrow\mathbb{R} \st D_p(f\cdot g)=D_p(f)\cdot g(p)+f(p)\cdot D_p(g)$ is an isomorphism of vector spaces.
 \end{lemma}
 \begin{proof}
 
@@ -24,10 +24,10 @@
      
       $ \rho $ is injective: $ D_x=D_y\Rightarrow $ $ D_{X_p}=D_{Y_p} $ as maps  $ C^\infty(M) $ to  $ \mathbb{R} $. By Lemma \ref{Lemma A}, we have  $ X_p=Y_p,\,\forall p $. So  $ X=Y $.  
       
-       $ \rho $ is surjective: Given  $ D:C^\infty(M)\rightarrow C^\infty(M) $. Define  $ D_p:C^\infty(M)\rightarrow \mathbb{R} $ by  $ D_p(f):=D(f)(p) $ satisfies the Leibuniz rule. By Lemma \ref{Lemma A},  $ D_p=D_{X_p} $ for some  $ X_p\in T_pM $. Define  $ X=\{X_p\}_{p\in M} $. Then  $ X(f)=D(f) ,\,\forall f\in C^\infty(M)$. By Lemma\ref{B},  $ X $ is a smooth vector field.    
+       $ \rho $ is surjective: Given  $ D:C^\infty(M)\rightarrow C^\infty(M) $. Define  $ D_p:C^\infty(M)\rightarrow \mathbb{R} $ by  $ D_p(f):=D(f)(p) $ satisfies the Leibniz rule. By Lemma \ref{Lemma A},  $ D_p=D_{X_p} $ for some  $ X_p\in T_pM $. Define  $ X=\{X_p\}_{p\in M} $. Then  $ X(f)=D(f) ,\,\forall f\in C^\infty(M)$. By Lemma\ref{B},  $ X $ is a smooth vector field.    
 \end{proof}
 \subsection{Lie bracket}
-In this section, we can actualy find those identification:
+In this section, we can actually find those identification:
 \begin{align*}
     \{\text{Tangent vector at $ p $}\}&=\{\text{point derivation at $ p $}\}\\
     &=\{\text{$ \mathbb{R} $-linear maps  $ C^\infty_p(M)\xrightarrow{D_p} \mathbb{R} $ \st}\\&D_p(fg)=D_p(f)g(p)+f(p)D_p(g)\}
@@ -37,7 +37,7 @@ In this section, we can actualy find those identification:
     &=\{\text{derivation on  $ M $}\}
 \end{align*}
 \begin{notation}
-    We will identify  $ X\in \mathfrak{T}M$  with its detivation  $ D_x:C^\infty(M)\rightarrow C^\infty(M) $. So a vector field is just a  $ \mathbb{R} $-linear map  $ X:C^\infty(M)\rightarrow C^\infty(M) $ \st  $ X(fg)=fX(g)+X(f)g $.    
+    We will identify  $ X\in \mathfrak{T}M$  with its derivation  $ D_x:C^\infty(M)\rightarrow C^\infty(M) $. So a vector field is just a  $ \mathbb{R} $-linear map  $ X:C^\infty(M)\rightarrow C^\infty(M) $ \st  $ X(fg)=fX(g)+X(f)g $.    
 \end{notation}
 \begin{definition}[Lie bracket]
     Given two (smooth) vector field  $ X,Y:C^\infty(M)\rightarrow C^\infty(M) $, we define the \name{Lie bracket}

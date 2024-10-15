@@ -8,25 +8,22 @@
     \end{enumerate}
 \end{definition}
 \begin{definition}[Smooth Manifold]
-     A smooth structure is given by an equivalence class of smooth atlas  $ \{(U_\alpha,\varphi_\alpha)\} $ \st  $ \varphi_{\alpha\beta}:\varphi_\alpha(U_\alpha\cap U_\beta)\rightarrow \varphi_\beta(U_\alpha\cap U_\beta) $  is smooth  $ \forall \alpha,\beta $.  $ M=\cup U_\alpha $.
-     
-     A \name{smooth manifold} is a topological manifold with a smooth structure.
-     
+     A smooth structure is given by an equivalence class of smooth atlas  $ \{(U_\alpha,\varphi_\alpha)\} $ \st  $ \varphi_{\alpha\beta}:\varphi_\alpha(U_\alpha\cap U_\beta)\rightarrow \varphi_\beta(U_\alpha\cap U_\beta) $  is smooth  $ \forall \alpha,\beta $.  $ M=\cup U_\alpha $.\\
+     A \name{smooth manifold} is a topological manifold with a smooth structure.\\
      Define when a continuous map  $ f:M_1\rightarrow M_2 $ is smooth if  $ \forall (U_1,\varphi_1)\in\mathcal{A}_1,(U_2,\varphi_2)\in\mathcal{A}_2 $, we have  $ \varphi_2\circ f\circ \varphi_1^{-1}:\varphi_1(U_1\cap U_2)\rightarrow \varphi_2(U_1\cap U_2) $ is smooth. 
 \end{definition}
 \begin{definition}
-    Given  $ (M_1,\mathcal{A}_1),(M_2,\mathcal{A}_2) $. A homeomorphism  $ f:M_1\rightarrow M_2 $ is called a diffeomorphism if   $ f $, $ f^{-1} $  is smooth. 
-    
+    Given  $ (M_1,\mathcal{A}_1),(M_2,\mathcal{A}_2) $. A homeomorphism  $ f:M_1\rightarrow M_2 $ is called a diffeomorphism if   $ f $, $ f^{-1} $  is smooth. \\
     In this case we say  $ (M_1,\mathcal{A}_1),(M_2,\mathcal{A}_2) $ are diffeomorphism. 
 \end{definition}
 \begin{theorem}[Kervaire]
-     $ \exists  $ a 10-dimensional topological manifold without smooth manifold.
+     $ \exists  $ 1 10-dimensional topological manifold without smooth manifold.
 \end{theorem}
 \begin{theorem}[Milnor]
      $ \exists  $ a smooth manifold  $ M  $ \st  $ M\cong S^7 $ but not in diffeomorphism meaning.  
 \end{theorem}
 \begin{theorem}[Kervaire-Milnor]
-     $ \exists  $ 28 smooth structrues (up to orientation preserving diffeomorphism) on  $ S^7 $ 
+     $ \exists  $ 28 smooth structures (up to orientation preserving diffeomorphism) on  $ S^7 $ 
 \end{theorem}
 \begin{theorem}[Morse-Birg]
     On  $ S^7  $. If  $ n \leq 3  $, then any  $ n  $-dimensional topological manifold  $ M  $ has a unique smooth structure up to diffeomorphism.
@@ -42,7 +39,7 @@
     \begin{enumerate}
         \item  $ M  $ is Hausdorff
         \item  $ M  $ is second countable 
-        \item  $ \forall  p\in M $,  $ \exists   $ a neibourhood  $ U  $ of  $ p  $ and a homeomorphism  $ \varphi:U\rightarrow V    $  where  $ V  $ is open in  $ \mathbb{H}^n $ 
+        \item  $ \forall  p\in M $,  $ \exists   $ a neighbourhood  $ U  $ of  $ p  $ and a homeomorphism  $ \varphi:U\rightarrow V    $  where  $ V  $ is open in  $ \mathbb{H}^n $ 
     \end{enumerate}
     We say a manifold  $ M  $ is closed if  $ M  $ is compact and  $ \partial M  $ is empty.
 \end{definition}
@@ -53,12 +50,9 @@ Our motivation for studying manifold is to study the space of solution for equat
 
 For  $ f:U\rightarrow \mathbb{R}^n $ smooth,  $ U  $ open in  $ \mathbb{R}^m $,  the differential of  $ f  $ at  $ p\in U  $ denoted as  $ \mathrm{d}f(p) $.  
 \begin{definition}
-    We say  $ p\in U  $ is a \textbf{regular point}\index{regular point} of  $ f  $ if  $ \mathrm{d}f(p)  $ is surjective. Otherwise we say  $ p\in U  $ is a \textbf{critical point}\index{critical point}.
-    
-    A point  $ q\in \mathbb{R}^n  $ is called a \textbf{regular value}\index{regular value} of  $ f  $ if  $ \forall  p\in f^{-1}(q)  $ ,  $ p  $ is a regular point of  $ f $.
-    
+    We say  $ p\in U  $ is a \textbf{regular point}\index{regular point} of  $ f  $ if  $ \mathrm{d}f(p)  $ is surjective. Otherwise we say  $ p\in U  $ is a \textbf{critical point}\index{critical point}.\\
+    A point  $ q\in \mathbb{R}^n  $ is called a \textbf{regular value}\index{regular value} of  $ f  $ if  $ \forall  p\in f^{-1}(q)  $ ,  $ p  $ is a regular point of  $ f $.\\
     A point  $ q\in \mathbb{R}^n  $ is called a \textbf{critical value}\index{critical value} of  $ f  $ if  $ \forall  p\in f^{-1}(q)  $ ,  $ p  $ is a critical point of  $ f $.
-    
 \end{definition}
 \begin{theorem}[Implicit function theorem]
     If  $ p\in U  $ is a regular point of  $ f:U\rightarrow \mathbb{R}^n  $. Then there exists 

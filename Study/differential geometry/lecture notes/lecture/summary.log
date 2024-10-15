@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  14 OCT 2024 10:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  15 OCT 2024 11:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1355,30 +1355,29 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
  [1
 
-] (/Users/mycomputer/study/differential geometry/lecture notes/DG1/1.tex
+] (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG1/1.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 2.
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 22.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 19.
  [2]
-Package hyperref Info: bookmark level for unknown question defaults to 0 on input line 51.
- [3]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 66.
+Package hyperref Info: bookmark level for unknown question defaults to 0 on input line 48.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 60.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 73.
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 78.
-) (/Users/mycomputer/study/differential geometry/lecture notes/DG2.tex
+) [3]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 67.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 72.
+) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG2.tex
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 7.
  [4]
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 14.
  [5]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 45.
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 76.
- [6]) (/Users/mycomputer/study/differential geometry/lecture notes/DG3.tex [7]) (/Users/mycomputer/study/differential geometry/lecture notes/DG4.tex [8]) (/Users/mycomputer/study/differential geometry/lecture notes/DG5.tex [9] [10] [11]) (/Users/mycomputer/study/differential geometry/lecture notes/DG6.tex [12] [13]) (/Users/mycomputer/study/differential geometry/lecture notes/DG7.tex
+ [6]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG3.tex [7]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG4.tex [8]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG5.tex [9] [10] [11]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG6.tex [12] [13]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG7.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [14] [15] [16] [17]) (/Users/mycomputer/study/differential geometry/lecture notes/DG8.tex [18]
+) [14] [15] [16] [17]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG8.tex [18]
 
 LaTeX Warning: Reference `B' on page 19 undefined on input line 27.
 
@@ -1416,11 +1415,11 @@ Package rerunfilecheck Info: File `summary.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  35454 strings out of 476683
- 696894 string characters out of 5804047
+ 697540 string characters out of 5804047
  1854018 words of memory out of 5000000
  54954 multiletter control sequences out of 15000+600000
  552933 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,17n,101p,498b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,17n,101p,517b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on summary.pdf (25 pages).
