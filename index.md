@@ -16,7 +16,7 @@ I am an undergraduated sdudent at Qiuzhen College of Tsinghua University. If you
 ## Lecture Notes
 I write some lecture notes in the courses of Qiuzhen College. You can view the pdf file by clicking the tile of notes.< If you want to find more details (like source code of pdf file) I do not mention below, just click [HERE](https://github.com/lzjmaths/lzjmaths.github.io/tree/3c1b475a190d89232429fa10d5d39d31464b8899/Study). If you have any question about those notes, please contact me.
 
-- **[<u>Differential Geometry</u>](Study/differential geometry/lecture notes/lecture/summary.pdf)**<br>
+- **[<u>Differential Geometry</u>](Study/Differential Geometry/lecture notes/lecture/summary.pdf)**<br>
 Differential Geometry is an undergraduate course taught by Lin Jianfeng([linjian5477@mail.tsinghua.edu.cn](linjian5477@mail.tsinghua.edu.cn)) at Qiuzhen College of Tsinghua University.
 - **[<u>Complex Analysis</u>](Study/Complex Analysis/lecture notes/lecture/summary.pdf)**<br>
 Complex Analysis is an undergraduated course taught by Jiang Jianping([jianpingjiang@tsinghua.edu.cn](jianpingjiang@tsinghua.edu.cn)) at Qiuzhen College of Tsinghua University.
