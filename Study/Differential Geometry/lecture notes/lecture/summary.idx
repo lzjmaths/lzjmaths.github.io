@@ -1,41 +1,48 @@
-\indexentry{smooth manifold|hyperpage}{2}
-\indexentry{regular point|hyperpage}{3}
-\indexentry{critical point|hyperpage}{3}
-\indexentry{regular value|hyperpage}{3}
-\indexentry{critical value|hyperpage}{3}
-\indexentry{Lie group|hyperpage}{4}
-\indexentry{homogeneous space|hyperpage}{5}
-\indexentry{isotropy|hyperpage}{5}
-\indexentry{bump function |hyperpage}{7}
-\indexentry{locally finite|hyperpage}{7}
-\indexentry{exhaust|hyperpage}{7}
-\indexentry{refinement|hyperpage}{7}
-\indexentry{partition of unity subordinat(P.O.U)|hyperpage}{8}
-\indexentry{genus of smooth function|hyperpage}{8}
-\indexentry{partial-derivative|hyperpage}{9}
-\indexentry{tangent vector|hyperpage}{9}
-\indexentry{tangent space|hyperpage}{9}
-\indexentry{differential|hyperpage}{9}
-\indexentry{curve|hyperpage}{10}
-\indexentry{curve!velocity|hyperpage}{10}
-\indexentry{curve!tangent|hyperpage}{10}
-\indexentry{tangent bundle|hyperpage}{10}
-\indexentry{vector bundle|hyperpage}{11}
-\indexentry{fiber|hyperpage}{11}
-\indexentry{vector bundle!isomorphism|hyperpage}{12}
-\indexentry{trivialization|hyperpage}{12}
-\indexentry{smooth section|hyperpage}{13}
-\indexentry{vector field|hyperpage}{13}
-\indexentry{gradient vector field|hyperpage}{13}
-\indexentry{integral curve|hyperpage}{14}
-\indexentry{$ \mathfrak  {T}M $|hyperpage}{14}
-\indexentry{flow|hyperpage}{14}
+\indexentry{smooth manifold|hyperpage}{3}
+\indexentry{regular point|hyperpage}{4}
+\indexentry{critical point|hyperpage}{4}
+\indexentry{regular value|hyperpage}{4}
+\indexentry{critical value|hyperpage}{4}
+\indexentry{Lie group|hyperpage}{5}
+\indexentry{homogeneous space|hyperpage}{6}
+\indexentry{isotropy|hyperpage}{6}
+\indexentry{bump function |hyperpage}{8}
+\indexentry{locally finite|hyperpage}{8}
+\indexentry{exhaust|hyperpage}{8}
+\indexentry{refinement|hyperpage}{8}
+\indexentry{partition of unity subordinat(P.O.U)|hyperpage}{9}
+\indexentry{genus of smooth function|hyperpage}{9}
+\indexentry{partial-derivative|hyperpage}{10}
+\indexentry{tangent vector|hyperpage}{10}
+\indexentry{tangent space|hyperpage}{10}
+\indexentry{differential|hyperpage}{10}
+\indexentry{curve|hyperpage}{11}
+\indexentry{curve!velocity|hyperpage}{11}
+\indexentry{curve!tangent|hyperpage}{11}
+\indexentry{tangent bundle|hyperpage}{11}
+\indexentry{vector bundle|hyperpage}{12}
+\indexentry{fiber|hyperpage}{12}
+\indexentry{vector bundle!isomorphism|hyperpage}{13}
+\indexentry{trivialization|hyperpage}{13}
+\indexentry{smooth section|hyperpage}{14}
+\indexentry{vector field|hyperpage}{14}
+\indexentry{gradient vector field|hyperpage}{14}
+\indexentry{integral curve|hyperpage}{15}
+\indexentry{$ \mathfrak  {T}M $|hyperpage}{15}
 \indexentry{flow|hyperpage}{15}
-\indexentry{$ \mathrm  {Supp}X $|hyperpage}{15}
-\indexentry{one-parameter transformation group|hyperpage}{16}
-\indexentry{vector field!Time dependent|hyperpage}{17}
-\indexentry{integral curve|hyperpage}{17}
-\indexentry{$ \mathrm  {Supp}X $|hyperpage}{17}
-\indexentry{Lie bracket|hyperpage}{20}
-\indexentry{$ F $-related|hyperpage}{21}
-\indexentry{push forward|hyperpage}{22}
+\indexentry{flow|hyperpage}{16}
+\indexentry{$ \mathrm  {Supp}X $|hyperpage}{16}
+\indexentry{one-parameter transformation group|hyperpage}{17}
+\indexentry{vector field!Time dependent|hyperpage}{18}
+\indexentry{integral curve|hyperpage}{18}
+\indexentry{$ \mathrm  {Supp}X $|hyperpage}{18}
+\indexentry{Lie bracket|hyperpage}{21}
+\indexentry{$ F $-related|hyperpage}{22}
+\indexentry{push forward|hyperpage}{23}
+\indexentry{Lie algebra|hyperpage}{23}
+\indexentry{left invariant|hyperpage}{24}
+\indexentry{right invariant|hyperpage}{24}
+\indexentry{$ \mathrm  {Lie}(G) $|hyperpage}{24}
+\indexentry{$ \mathrm  {gl}(n,\mathbb  {R}) $|hyperpage}{25}
+\indexentry{morphism|hyperpage}{26}
+\indexentry{morphism|hyperpage}{26}

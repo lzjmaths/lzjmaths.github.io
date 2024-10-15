@@ -76,24 +76,24 @@ So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
 \begin{example}
      $ V=x\partial x+y\partial y $,  $ W=-y\partial x+x\partial y $ commutes.  
 \end{example}
-\begin{proposition}[Properties of Lie bracket]
+\begin{proposition}[Properties of Lie bracket]\label{properties of Lie bracket}
     \,
-    \begin{itemize}
-        \item Natuality under push-forword.
+    \begin{enumerate}
+        \item[(a)] Natuality under push-forword.
         
         Given any  $ F\in \Diff(M,N) $,  $ V\in \mathfrak{T}M, W\in \mathfrak{T}M  $, we have  $ [F_*V,F_*W]=F_*[V,W] $.
-        \item  $ \mathbb{R} $-linearity  $ \forall a,b\in \mathbb{R} $
+        \item[(b)]  $ \mathbb{R} $-linearity  $ \forall a,b\in \mathbb{R} $
         \begin{align*}
             [aX+bV,W]&=a[X,W]+b[V,W]\\
             [W,aX+bV]&=b[W,X]+a[W,V]
         \end{align*}  
         
-        \item anti-symmetric  $ [V,W]=-[W,V] $
-        \item Jacobi identity 
+        \item[(c)] anti-symmetric  $ [V,W]=-[W,V] $
+        \item[(d)] Jacobi identity 
         \[[V,[W,X]]+[W,[X,V]]+[X,[V,W]]=0\]     
-        \item Leibuniz rule 
+        \item[(f)] Leibuniz rule 
         \[[fV,gW]=fg[V,W]+(f\cdot Vg)W-(g\cdot Wf)V\]
-    \end{itemize}
+    \end{enumerate}
 \end{proposition}
 \begin{definition}
     Given  $ F\in C^\infty(M,N) $,  $ V\in \mathfrak{T}M $,  $ W\in \mathfrak{T}N $. We say  $ W $ is  \name{$ F $-related} to  $ V $ if  $ \forall p\in M $,  $ F_{p,*}(V_p)=W_{F(p)}, F_{p,X}:T_pM\rightarrow T_{f(p)}N $      
@@ -117,9 +117,6 @@ So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
 \begin{proposition}
     Given  $ V_0,V_1\in \mathfrak{T}M $,  $ W_0,W_1\in \mathfrak{T}N $,  $ F\in C^\infty(M,N) $,  $ W_i $ is  $ F $-related to  $ V_i $, $ i=0,1 $  $ \Rightarrow  $ $ [W_0,W_1] $  is  $ F $-related to  $ [V_0,V_1] $         
 \end{proposition}
-\begin{proof}
-    
-\end{proof}
 \begin{corollary}[Natuality of Lie bracket]
     Given any  $ F\in \Diff(M,N) $,  $ V\in \mathfrak{T}M, W\in \mathfrak{T}M  $, we have  $ [F_*V,F_*W]=F_*[V,W] $   
 \end{corollary}

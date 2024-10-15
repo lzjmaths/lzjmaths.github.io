@@ -1,87 +1,96 @@
 \begin{theindex}
 
-  \item $ F $-related, \hyperpage{21}
-  \item $ \mathfrak  {T}M $, \hyperpage{14}
-  \item $ \mathrm  {Supp}X $, \hyperpage{15}, \hyperpage{17}
+  \item $ F $-related, \hyperpage{22}
+  \item $ \mathfrak  {T}M $, \hyperpage{15}
+  \item $ \mathrm  {Lie}(G) $, \hyperpage{24}
+  \item $ \mathrm  {Supp}X $, \hyperpage{16}, \hyperpage{18}
+  \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{25}
 
   \indexspace
 
-  \item bump function , \hyperpage{7}
+  \item bump function , \hyperpage{8}
 
   \indexspace
 
-  \item critical point, \hyperpage{3}
-  \item critical value, \hyperpage{3}
-  \item curve, \hyperpage{10}
-    \subitem tangent, \hyperpage{10}
-    \subitem velocity, \hyperpage{10}
+  \item critical point, \hyperpage{4}
+  \item critical value, \hyperpage{4}
+  \item curve, \hyperpage{11}
+    \subitem tangent, \hyperpage{11}
+    \subitem velocity, \hyperpage{11}
 
   \indexspace
 
-  \item differential, \hyperpage{9}
+  \item differential, \hyperpage{10}
 
   \indexspace
 
-  \item exhaust, \hyperpage{7}
+  \item exhaust, \hyperpage{8}
 
   \indexspace
 
-  \item fiber, \hyperpage{11}
-  \item flow, \hyperpage{14, 15}
+  \item fiber, \hyperpage{12}
+  \item flow, \hyperpage{15, 16}
 
   \indexspace
 
-  \item genus of smooth function, \hyperpage{8}
-  \item gradient vector field, \hyperpage{13}
+  \item genus of smooth function, \hyperpage{9}
+  \item gradient vector field, \hyperpage{14}
 
   \indexspace
 
-  \item homogeneous space, \hyperpage{5}
+  \item homogeneous space, \hyperpage{6}
 
   \indexspace
 
-  \item integral curve, \hyperpage{14}, \hyperpage{17}
-  \item isotropy, \hyperpage{5}
+  \item integral curve, \hyperpage{15}, \hyperpage{18}
+  \item isotropy, \hyperpage{6}
 
   \indexspace
 
-  \item Lie bracket, \hyperpage{20}
-  \item Lie group, \hyperpage{4}
-  \item locally finite, \hyperpage{7}
+  \item left invariant, \hyperpage{24}
+  \item Lie algebra, \hyperpage{23}
+  \item Lie bracket, \hyperpage{21}
+  \item Lie group, \hyperpage{5}
+  \item locally finite, \hyperpage{8}
 
   \indexspace
 
-  \item one-parameter transformation group, \hyperpage{16}
+  \item morphism, \hyperpage{26}
 
   \indexspace
 
-  \item partial-derivative, \hyperpage{9}
-  \item partition of unity subordinat(P.O.U), \hyperpage{8}
-  \item push forward, \hyperpage{22}
+  \item one-parameter transformation group, \hyperpage{17}
 
   \indexspace
 
-  \item refinement, \hyperpage{7}
-  \item regular point, \hyperpage{3}
-  \item regular value, \hyperpage{3}
+  \item partial-derivative, \hyperpage{10}
+  \item partition of unity subordinat(P.O.U), \hyperpage{9}
+  \item push forward, \hyperpage{23}
 
   \indexspace
 
-  \item smooth manifold, \hyperpage{2}
-  \item smooth section, \hyperpage{13}
+  \item refinement, \hyperpage{8}
+  \item regular point, \hyperpage{4}
+  \item regular value, \hyperpage{4}
+  \item right invariant, \hyperpage{24}
 
   \indexspace
 
-  \item tangent bundle, \hyperpage{10}
-  \item tangent space, \hyperpage{9}
-  \item tangent vector, \hyperpage{9}
-  \item trivialization, \hyperpage{12}
+  \item smooth manifold, \hyperpage{3}
+  \item smooth section, \hyperpage{14}
 
   \indexspace
 
-  \item vector bundle, \hyperpage{11}
-    \subitem isomorphism, \hyperpage{12}
-  \item vector field, \hyperpage{13}
-    \subitem Time dependent, \hyperpage{17}
+  \item tangent bundle, \hyperpage{11}
+  \item tangent space, \hyperpage{10}
+  \item tangent vector, \hyperpage{10}
+  \item trivialization, \hyperpage{13}
+
+  \indexspace
+
+  \item vector bundle, \hyperpage{12}
+    \subitem isomorphism, \hyperpage{13}
+  \item vector field, \hyperpage{14}
+    \subitem Time dependent, \hyperpage{18}
 
 \end{theindex}
