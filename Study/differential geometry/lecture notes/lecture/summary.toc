@@ -10,4 +10,4 @@
 \contentsline {subsection}{\numberline {2.6}Lie algebra of a Lie group}{23}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Morphisms between Lie group and Lie algebras}{26}{subsection.2.7}%
 \contentsline {section}{Index}{28}{section*.2}%
-\contentsline {section}{List of Theorems}{29}{section*.3}%
+\contentsline {section}{List of Theorems}{30}{section*.3}%

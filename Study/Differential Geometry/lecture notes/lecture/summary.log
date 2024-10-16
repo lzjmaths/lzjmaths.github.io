@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  15 OCT 2024 15:19
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  17 OCT 2024 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1392,28 +1392,27 @@ Package hyperref Info: bookmark level for unknown claim defaults to 0 on input l
 runsystem(makeindex summary.idx)...executed safely (allowed).
 
  (./summary.ind
-Underfull \hbox (badness 2495) in paragraph at lines 62--63
+Underfull \hbox (badness 2495) in paragraph at lines 63--64
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
 [28
 
 
+] [29
+
 ])
 showing theorem
 showing proposition
-(./summary.loe [29
+(./summary.loe [30
 
 ])
 \tf@loe=\write7
 \openout7 = `summary.loe'.
 
- [30] (./summary.aux)
+ [31] (./summary.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `summary.out' has not changed.
 (rerunfilecheck)             Checksum: 60DB05EA977B2578240B5813EE966411;2224.
@@ -1427,4 +1426,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  87i,17n,101p,517b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on summary.pdf (30 pages).
+Output written on summary.pdf (31 pages).
