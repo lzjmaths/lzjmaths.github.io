@@ -37,3 +37,11 @@
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}7.2\else \numberline {7.2}Example\fi }{18}{example.7.2}%
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}7.3\else \numberline {7.3}Remark\fi }{19}{remark.7.3}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.4\else \numberline {7.4}Theorem\fi }{20}{theorem.7.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.5\else \numberline {7.5}Theorem\fi \thmtformatoptarg {Fundamental theorem of Calculus for integrals on $ \mathbb {C} $}}{20}{theorem.7.5}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}7.6\else \numberline {7.6}Remark\fi }{20}{remark.7.6}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}7.7\else \numberline {7.7}Corollary\fi }{20}{corollary.7.7}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.8\else \numberline {7.8}Theorem\fi \thmtformatoptarg {Cauch's theorem for a rectangle}}{21}{theorem.7.8}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.9\else \numberline {7.9}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's theorem for a rectangle}}{22}{theorem.7.9}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.10\else \numberline {7.10}Theorem\fi \thmtformatoptarg {Cauchy's Theorem for a disk}}{22}{theorem.7.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.11\else \numberline {7.11}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's Theorem for a disk}}{23}{theorem.7.11}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}7.12\else \numberline {7.12}Lemma\fi }{23}{lemma.7.12}%

@@ -63,18 +63,18 @@ It is easy to show that piecewise differentiable arcs are rectifiable.
 The integral of a continuous function  $ f $ on a rectifiable arc may be defined as 
 \[\dps\int_\gamma f(z)\mathrm{d}z=\lim \sum_{k=1}^nf(z(\psi_k))[z(t_k)-z(t_{k-1})]\] 
 \begin{theorem}
-    Let  $ \gamma\subset \mathbb{C} $ be a region, and  $ P,Q $ two (possibly complex-valued) functions that are continuous on  $ \Omega $,  $ \gamma $ closed curve. The integral  $ \int_\gamma p(x,y)\mathrm{d}x+Q(x,y)\mathrm{d}y $ depends only on the end point of  $ \gamma $ iff there exists a function   $ U(x,y) $ on  $ \Omega $ with  $ \dps\frac{\partial U}{\partial x}=P,\frac{\partial U}{\partial y}=Q $.  
+    Let  $ \Omega\subset \mathbb{C} $ be a region, and  $ P,Q $ two (possibly complex-valued) functions that are continuous on  $ \Omega $,  $ \gamma $ closed curve. The integral  $ \int_\gamma p(x,y)\mathrm{d}x+Q(x,y)\mathrm{d}y $ depends only on the end point of  $ \gamma $ iff there exists a function   $ U(x,y) $ on  $ \Omega $ with  $ \dps\frac{\partial U}{\partial x}=P,\frac{\partial U}{\partial y}=Q $.  
 \end{theorem}
 \begin{proof}
     "$ \Leftarrow $": If such a  $ U $ exists, then 
     \[\int_\gamma P\mathrm{d}x+Q\mathrm{d}y=\int_\gamma\frac{\partial U}{\partial x}\mathrm{d}x+\frac{\partial U}{\partial y}\mathrm{d}y=\int_\gamma\frac{\mathrm{d}U}{\mathrm{d}t}\mathrm{d}t=U(\gamma(b))-U(\gamma(a))\] 
     "$ \Rightarrow $": Fix a point  $ (x_0,y_0)\in \Omega $. We define  $ U(x,y)=\int_\gamma P\mathrm{d}x+Q\mathrm{d}y$ where  $ \gamma $ is any curve between  $ (x_0,y_0) $ and  $ (x,y) $. Easy to check that it is true.     
 \end{proof}
-\begin{theorem}[Fundamental theorem of Calculus for integrals on  $ \mathbb{C} $]
+\begin{theorem}[Fundamental theorem of Calculus for integrals on  $ \mathbb{C} $]\label{FTC for integrals}
     Let  $ f $ be continuous on a region  $ \Omega $  containing  $ \gamma $.  $ \int_\gamma f\mathrm{d}z $ depends on the endpoints iff  $ f $ is the derivative of an analytic function  $ F $ in  $ \Omega $.     
 \end{theorem}
 \begin{remark}
-    We will prove  $ \dps\int_\gamma f\mathrm{d}z=F(\omega_2)-F(\omega_1) $ where  $ \gamma $ begins at  $ \onemga_1 $ and ends at  $ \omega_2 $.    
+    We will prove  $ \dps\int_\gamma f\mathrm{d}z=F(\omega_2)-F(\omega_1) $ where  $ \gamma $ begins at  $ \omega_1 $ and ends at  $ \omega_2 $.    
 \end{remark}
 \begin{proof}
     Transform  the line integration into  the composition of two real integration.

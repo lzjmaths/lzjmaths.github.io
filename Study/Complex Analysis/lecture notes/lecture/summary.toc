@@ -23,5 +23,9 @@
 \contentsline {subsection}{\numberline {7.1}Fundamental Theorems}{16}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Line integral and rectifiable arcs}{16}{subsubsection.7.1.1}%
 \contentsline {subsubsection}{\numberline {7.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{18}{subsubsection.7.1.2}%
-\contentsline {section}{Index}{21}{section*.3}%
-\contentsline {section}{List of Theorems}{22}{section*.4}%
+\contentsline {subsubsection}{\numberline {7.1.3}Cauchy's theorem for a rectangle}{20}{subsubsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.4}Cauchy's Theorem for a disk}{22}{subsubsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.2}Cauchy's integral formula}{23}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Index of a point with resect to a closed curve}{23}{subsubsection.7.2.1}%
+\contentsline {section}{Index}{25}{section*.3}%
+\contentsline {section}{List of Theorems}{26}{section*.4}%
