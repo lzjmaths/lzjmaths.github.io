@@ -6,7 +6,9 @@ title: Hobbies
 
 # Hobbies
 
-**Sports**<br>
+**Sports**
+
+
 I like sports very much, including tennis, badminton, skating, pingpong, and so on.
 
 I  consider showcasing my sports photos in the future. You can look forward to the update.
