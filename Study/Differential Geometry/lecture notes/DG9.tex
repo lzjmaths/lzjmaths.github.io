@@ -26,13 +26,14 @@ So we can find a natural Lie algebra of  $ G $:
 \begin{corollary}
      $ \dps \Lie(G)\cong T_eG $ as vector spaces. 
 \end{corollary}
-\begin{proof}[Proof of Theorem \ref{left invariant vector field is determined at e}]
+\begin{proof}[Proof of Theorem \ref{left invariant vector field is determined at e}]\,
+
     \textbf{Uniqueness of  $ \hat{V} $:}  $ \hat{V_g}=l_{e,*}^g(\hat{V_e})=l_{e,*}^g(V) $. So  $ \hat{V} $ is determined by  $ V $.
     
     \textbf{Existence of  $ \hat{V} $:} Let  $ \hat{V}=\{\hat{V_g}\}_{g\in G} $ where  $ \hat{V_g}=l_{e,*}^g(\hat{V_e}) $.
     
      $ \hat{V} $ is left-invariant because 
-     \[\dps(l_*^h(\hat{V}))_g=l_{h^{-1}g,*}^h(\hat{h^{-1}g})=l_{h^{-1}g,*}^h(l_{e,*}^{h^{-1}g}(V))=l_{e,*}^g(V)=\hat{V_g}\] 
+     \[\dps(l_*^h(\hat{V}))_g=l_{h^{-1}g,*}^h(\hat{V}_{h^{-1}g})=l_{h^{-1}g,*}^h(l_{e,*}^{h^{-1}g}(V))=l_{e,*}^g(V)=\hat{V_g}\] 
 
       $ \hat{V} $ is smooth: Take any  $ f\in C^\infty(G) $ suffices to show  $ \hat{V}(f)\in C^\infty(G) $.
       
@@ -101,10 +102,19 @@ What is the meaning of Lie bracket. There is a fact about it:
 A smooth map  $ F:G\rightarrow H $ between two Lie group is called a \name{morphism} if  $ F(gh)=F(g)F(h) $.
 
 A linear map  $ L:g\rightarrow h$ between Lie algebra is called a \name{morphism} if  $ L[u,v]=[Lu,Lv] $. 
-\begin{claim}
-     $ \hat{W_i} $ is  $ F $-compatible with  $ \hat{V_i} $ for  $ i=0,1 $.    
-\end{claim}
+\begin{proposition}
+     Let  $ F:G\rightarrow H $ be a morphism of Lie groups. Then  $ F_{e,*}:\Lie(G)\rightarrow \Lie(H) $ is a morphism of Lie algebra.  
+\end{proposition}
 \begin{proof}
-     $ \forall g\in G $,  $ F_*(\hat{V_g})=F_*(l_*^g(V))=(F\circ l^g)_*(V)=(l^{F(g)}\circ F)_*(V)=l^{F(g)}(W)=\hat{W}_{F(g)} $  
+      $ V_0,V_1\in \Lie(G)=T_eG $,  $ W_i=F_{e,*}(V_i)\in \Lie(H)=T_eH $. Let  $ \hat{V},\hat{W} $ be left-invariant vector fields.   
+     \begin{claim}
+          $ \hat{W_i} $ is  $ F $-compatible with  $ \hat{V_i} $ for  $ i=0,1 $.    
+     \end{claim}
+     \begin{proof}[Proof of Claim]
+          $ \forall g\in G $,  $ F_*(\hat{V_g})=F_*(l_*^g(V))=(F\circ l^g)_*(V)=(l^{F(g)}\circ F)_*(V)=l^{F(g)}(W)=\hat{W}_{F(g)} $  
+     \end{proof}
+     So  $ [\hat{W_0},\hat{W_1}] $ is  $ F $-compatible with  $ [\hat{V_0},\hat{V_1}] $. In particular,  $ [W_0,W_1]=F_*([V_0,V_1]) $.  
 \end{proof}
-In particular,  $ [W_0,W_1]=F_*([V_0,V_1]) $. 
+
+
+ 
