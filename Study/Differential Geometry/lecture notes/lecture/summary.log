@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  17 OCT 2024 10:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  18 OCT 2024 09:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1161,10 +1161,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \c@definition=\count381
 \c@question=\count382
-\c@note=\count383
-\c@problem=\count384
-\c@cond=\count385
-\c@Mthm=\count386
+\c@problem=\count383
+\c@cond=\count384
+\c@Mthm=\count385
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fundus-calligra/calligra.sty
 Package: calligra 2012/04/10 v1.9 LaTeX package calligra
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/aurical/aurical.sty
@@ -1355,7 +1354,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
  [1
 
-] [2] (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG1/1.tex
+] [2] (../DG1/1.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 2.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 19.
  [3]
@@ -1366,18 +1365,18 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [4]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 67.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 72.
-) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG2.tex
+) (../DG2.tex
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 7.
  [5]
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 14.
  [6]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 45.
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 76.
- [7]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG3.tex [8]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG4.tex [9]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG5.tex [10] [11] [12]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG6.tex [13] [14]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG7.tex
+ [7]) (../DG3.tex [8]) (../DG4.tex [9]) (../DG5.tex [10] [11] [12]) (../DG6.tex [13] [14]) (../DG7.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [15] [16] [17] [18]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG8.tex [19]
+) [15] [16] [17] [18]) (../DG8.tex [19]
 
 LaTeX Warning: Reference `B' on page 20 undefined on input line 27.
 
@@ -1386,9 +1385,9 @@ Package hyperref Info: bookmark level for unknown notation defaults to 0 on inpu
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input line 62.
  [21]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 105.
- [22]) (/Users/mycomputer/lzjmaths.github.io/Study/Differential Geometry/lecture notes/DG9.tex [23] [24] [25]
-Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 105.
- [26]) [27]
+ [22]) (../DG9.tex [23] [24] [25] [26]
+Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 111.
+) [27]
 runsystem(makeindex summary.idx)...executed safely (allowed).
 
  (./summary.ind
@@ -1418,12 +1417,12 @@ Package rerunfilecheck Info: File `summary.out' has not changed.
 (rerunfilecheck)             Checksum: 60DB05EA977B2578240B5813EE966411;2224.
  ) 
 Here is how much of TeX's memory you used:
- 35466 strings out of 476683
- 698059 string characters out of 5804047
+ 35459 strings out of 476683
+ 695119 string characters out of 5804047
  1854018 words of memory out of 5000000
- 54963 multiletter control sequences out of 15000+600000
+ 54956 multiletter control sequences out of 15000+600000
  554613 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,17n,101p,517b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,17n,101p,449b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on summary.pdf (31 pages).

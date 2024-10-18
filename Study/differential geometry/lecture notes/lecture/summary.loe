@@ -82,7 +82,7 @@
 \contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.40\else \numberline {2.40}Proposition\fi \thmtformatoptarg {Properties of Lie bracket}}{22}{proposition.2.40}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.41\else \numberline {2.41}Definition\fi }{22}{definition.2.41}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.42\else \numberline {2.42}Example\fi }{22}{example.2.42}%
-\contentsline {note}{\ifthmt@listswap note\nobreakspace {}1\else \numberline {1}note\fi }{23}{note.1}%
+\contentsline {note}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Note}{23}{thmt@dummyctr.dummy.85}%
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.43\else \numberline {2.43}Lemma\fi }{23}{lemma.2.43}%
 \contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.44\else \numberline {2.44}Proposition\fi }{23}{proposition.2.44}%
 \contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}2.45\else \numberline {2.45}Corollary\fi \thmtformatoptarg {Natuality of Lie bracket}}{23}{corollary.2.45}%
@@ -95,4 +95,5 @@
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.52\else \numberline {2.52}Remark\fi }{25}{remark.2.52}%
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.53\else \numberline {2.53}Lemma\fi }{25}{lemma.2.53}%
 \contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}2.54\else \numberline {2.54}Fact\fi }{26}{fact.2.54}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.55\else \numberline {2.55}Claim\fi }{26}{claim.2.55}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.55\else \numberline {2.55}Proposition\fi }{27}{proposition.2.55}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{27}{thmt@dummyctr.dummy.99}%

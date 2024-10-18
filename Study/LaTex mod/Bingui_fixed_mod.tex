@@ -133,11 +133,11 @@
 
 \pagestyle{plain}
 
-\captionsetup[figure]
-{
-	labelsep=none	
-}
-
+% \captionsetup[figure]
+% {
+% 	labelsep=none	
+% }
+% 控制图表结构
 
 
 
@@ -167,8 +167,9 @@
 \newtheorem{sexe}[definition]{$\star$ Exercise}
 \newtheorem{sdf}[definition]{$\star$ Definition}
 \newtheorem{question}{Question}
-
-
+\theoremstyle{remark}
+\newtheorem*{note}{Note}
+\newtheorem*{claim}{Claim}
 
 
 \newtheorem{problem}{\color{red}Problem}[section]
@@ -188,10 +189,10 @@
 \newtheorem{lemma}[definition]{Lemma}
 \newtheorem{sthm}[definition]{$\star$ Theorem}
 \newtheorem{slm}[definition]{$\star$ Lemma}
-\newtheorem{claim}[definition]{Claim}
+
 \newtheorem{spp}[definition]{$\star$ Proposition}
 \newtheorem{scorollary}[definition]{$\star$ Corollary}
-
+\newtheorem{fact}[definition]{Fact}
 
 \newtheorem{cond}{Condition}
 \newtheorem{Mthm}{Main Theorem}
@@ -465,7 +466,7 @@
 
 
 
-\title{***********}
+\title{Differential Geometry}
 \author{{\sc Lin150117}
 	\\
 	{\small \sc Tsinghua University.}\\
@@ -482,6 +483,7 @@
 \newcommand{\st}{ \textit{ s.t. }}
 \newcommand{\name}[1]{\textbf{#1}\index{#1}}
 \newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
+%\makeindex[columns=2,title=Index, options=-s example_style.ist]
 
 \begin{document}
 \sloppy
@@ -489,9 +491,7 @@
 \maketitle
 \tableofcontents
 \newpage
-
 %put your code here
-
 \printindex
 \newpage
 \listoftheorems[ignoreall, show={theorem,proposition}]

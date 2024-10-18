@@ -54,7 +54,7 @@ In this section, we can actually find those identification:
         [X,Y](fg)&=X\circ Y(fg)-Y\circ X(fg)\\
         &=X(Yf\cdot g+f\cdot Yg)-Y(Xf\cdot g+f\cdot Xg)\\
         &=(X\cdot Y)(f)\cdot g+f\cdot(X\circ Y)(g)-(Y\cdot X)(g)-f\cdot ((Y\circ X)(g))\\
-        &=[X,Y](f)\cdot f\cdot [X,Y](g)
+        &=[X,Y](f)\cdot g- f\cdot [X,Y](g)
     \end{align*}
 \end{proof}
 So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
@@ -96,7 +96,7 @@ So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
     \end{enumerate}
 \end{proposition}
 \begin{definition}
-    Given  $ F\in C^\infty(M,N) $,  $ V\in \mathfrak{T}M $,  $ W\in \mathfrak{T}N $. We say  $ W $ is  \name{$ F $-related} to  $ V $ if  $ \forall p\in M $,  $ F_{p,*}(V_p)=W_{F(p)}, F_{p,X}:T_pM\rightarrow T_{f(p)}N $      
+    Given  $ F\in C^\infty(M,N) $,  $ V\in \mathfrak{T}M $,  $ W\in \mathfrak{T}N $. We say  $ W $ is  \name{$ F $-related} to  $ V $ if  $ \forall p\in M $,  $ F_{p,*}(V_p)=W_{F(p)} $ where $  F_{p,*}:T_pM\rightarrow T_{f(p)}N $      
 \end{definition}
 \begin{example}
      $ F:S^1\rightarrow \mathbb{R}^2,\theta\mapsto (\cos \theta,\sin \theta) $,  $ V=\partial \theta,W=-y\partial x+x\partial y $. 
