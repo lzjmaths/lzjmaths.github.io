@@ -129,66 +129,6 @@
 
 \counterwithin*{footnote}{section}   % Footnote numbering is recounted from the beginning of each subsection
 
-\renewcommand\theenumi{(\arabic{enumi})}
-\renewcommand\theenumii{\alph(enumii)}
-\renewcommand\theenumiii{\roman{enumii})}
-
-%Greek letters counter
-\newcounter{greek}
-\renewcommand{\thegreek}{
-  \ifcase\value{gr}
-     $ \alpha $ 
-  \or
-     $ \beta $ 
-  \or
-     $ \gamma $ 
-  \or
-    $\delta  $ 
-  \or
-    $\epsilon  $ 
-  \or
-    $\zeta  $ 
-  \or
-    $\eta  $ 
-  \or
-    $\theta  $ 
-  \or
-    $\iota  $ 
-  \or
-    $\kappa  $ 
-  \or
-    $\lambda  $ 
-  \or
-    $\mu  $ 
-  \or
-    $\nu  $ 
-  \or
-    $\xi  $ 
-  \or
-    $\omicron  $ 
-  \or
-    $\pi  $ 
-  \or
-    $\rho  $ 
-  \or
-    $\sigma  $ 
-  \or
-    $\tau  $ 
-  \or
-    $\upsilon  $ 
-  \or
-    $\phi  $ 
-  \or
-    $\chi  $ 
-  \or
-    $\psi  $ 
-  \or
-    $\omega  $ 
-  \else
-    % 超出范围时的默认输出
-    \text{None}
-  \fi
-}
 
 
 \pagestyle{plain}
@@ -228,7 +168,7 @@
 \newtheorem{sdf}[definition]{$\star$ Definition}
 \newtheorem{question}{Question}
 \theoremstyle{remark}
-\newtheorem*{note}{Note}
+\newtheorem{note}{Note}
 \newtheorem*{claim}{Claim}
 
 
@@ -509,13 +449,9 @@
 
 
 
-% make some new environment such that we can put line_in math mode in the center.
 
-\newenvironment{Then}
-{Then%
-\hspace{\stretch{1}}}
-{\hspace{\stretch{1}}%
-\phantom{Then}}
+
+
 
 
 
@@ -547,11 +483,7 @@
 \newcommand{\st}{ \textit{ s.t. }}
 \newcommand{\name}[1]{\textbf{#1}\index{#1}}
 \newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
-
-
-
-
-
+%\makeindex[columns=2,title=Index, options=-s example_style.ist]
 
 \begin{document}
 \sloppy
@@ -569,6 +501,7 @@
 \input{../DG8.tex}
 
 \input{../DG9.tex}
+
 \input{../DG10.tex}
 \printindex
 \newpage

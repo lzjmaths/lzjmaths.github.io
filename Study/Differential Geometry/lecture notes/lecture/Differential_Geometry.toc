@@ -14,4 +14,5 @@
 \contentsline {subsection}{\numberline {4.1}Canonical form of a field}{27}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Lie derivative of vector field}{28}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Commuting vector fields}{30}{subsection.4.3}%
-\contentsline {section}{List of Theorems}{33}{section*.2}%
+\contentsline {section}{Index}{33}{section*.2}%
+\contentsline {section}{List of Theorems}{35}{section*.3}%
