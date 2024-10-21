@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  18 OCT 2024 09:49
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 OCT 2024 10:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1348,13 +1348,13 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 49
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 492.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (./summary.toc)
+) (./summary.toc [1
+
+])
 \tf@toc=\write6
 \openout6 = `summary.toc'.
 
- [1
-
-] [2] (../DG1/1.tex
+ [2] (../DG1/1.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 2.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 19.
  [3]
@@ -1364,15 +1364,15 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 60
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [4]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 67.
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 72.
-) (../DG2.tex
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 74.
+) (../DG2.tex [5]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 7.
- [5]
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 14.
  [6]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 45.
+ [7]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 76.
- [7]) (../DG3.tex [8]) (../DG4.tex [9]) (../DG5.tex [10] [11] [12]) (../DG6.tex [13] [14]) (../DG7.tex
+) (../DG3.tex [8]) (../DG4.tex [9]) (../DG5.tex [10] [11] [12]) (../DG6.tex [13] [14]) (../DG7.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1387,42 +1387,45 @@ Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 105.
  [22]) (../DG9.tex [23] [24] [25] [26]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 111.
-) [27]
+) (../DG10.tex [27] [28] [29] [30]) [31]
 runsystem(makeindex summary.idx)...executed safely (allowed).
 
  (./summary.ind
-Underfull \hbox (badness 2495) in paragraph at lines 63--64
+Underfull \hbox (badness 2495) in paragraph at lines 66--67
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[28
+[32
 
 
-] [29
+] [33
 
 ])
 showing theorem
 showing proposition
-(./summary.loe [30
+(./summary.loe [34
 
 ])
 \tf@loe=\write7
 \openout7 = `summary.loe'.
 
- [31] (./summary.aux)
+ [35] (./summary.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `summary.out' has not changed.
-(rerunfilecheck)             Checksum: 60DB05EA977B2578240B5813EE966411;2224.
+(rerunfilecheck)             Checksum: 3D2C77E48DEA896E8F1E6E843E36AAC1;2950.
  ) 
 Here is how much of TeX's memory you used:
- 35459 strings out of 476683
- 695119 string characters out of 5804047
- 1854018 words of memory out of 5000000
- 54956 multiletter control sequences out of 15000+600000
+ 35552 strings out of 476683
+ 697372 string characters out of 5804047
+ 1856018 words of memory out of 5000000
+ 55046 multiletter control sequences out of 15000+600000
  554613 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,17n,101p,449b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on summary.pdf (31 pages).
+Output written on summary.pdf (35 pages).

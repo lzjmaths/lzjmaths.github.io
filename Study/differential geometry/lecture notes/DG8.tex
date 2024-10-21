@@ -44,7 +44,7 @@ In this section, we can actually find those identification:
     \[[X,Y]=X\circ Y-Y\circ X:C^\infty(M)\rightarrow C^\infty(M)\] 
 \end{definition}
 \begin{theorem}
-    For any  $ X,y\in\mathfrak{T}M $,  $ [X,Y]\in \mathfrak{T}M $  
+    For any  $ X,Y\in\mathfrak{T}M $,  $ [X,Y]\in \mathfrak{T}M $  
 \end{theorem}
 \begin{proof}
     Easy to check that  $ [X,Y] $ is linear.
@@ -68,8 +68,8 @@ So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
 \begin{proposition}[Calculation of    { $ \left[V,W\right] $ }    using local charts]
     Chart  $ (U,x^1,\cdots,x^n) $,  $ V,W\in \mathfrak{T}M $,  $ V|_U=\dps\sum_{i=1}^n V^i\frac{\partial }{\partial  x^i} $,  $ W|_U=\dps\sum_{i=1}^nW^i\frac{\partial}{\partial x^i} $. Then 
     \begin{align*}
-        [V,W]|_U&=\sum_{i=1}^n(V(W^i-W(V^i)))\frac{\partial}{\partial x^i}\\
-        &=\sum_{i=1}^n(\sum_{j=1}^nV^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial X^j})\frac{\partial }{\partial x^j}\\
+        [V,W]|_U&=\sum_{i=1}^n(V(W^i)-W(V^i))\frac{\partial}{\partial x^i}\\
+        &=\sum_{i=1}^n(\sum_{j=1}^nV^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial x^j})\frac{\partial }{\partial x^j}\\
         &=\sum_{1 \leq i,j \leq n}(V^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial x^j})\frac{\partial}{\partial x^j}
     \end{align*}
 \end{proposition}

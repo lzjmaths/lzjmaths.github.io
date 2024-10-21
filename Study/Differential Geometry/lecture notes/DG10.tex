@@ -1,0 +1,140 @@
+\section{Differential form}
+
+\subsection{Canonical form of a field}
+Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point} if  $ V_p\not=0 $, and is called a \name{singular point} if  $ V_p=0 $.
+\begin{theorem}[Canonical Form Theorem]\label{Canonical Form Theorem}
+    Let  $ p $ be a regular point of  $ V $. Then  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ \st  $ V|_U=\partial x^1 $      
+\end{theorem}    
+\begin{proof}
+    This is a local problem. We may assume  $ M\subset \mathbb{R}^n $ open. We may also assume  $ p=0,V_0=\partial r^1|_0$ where  $ r^i $ coordinate function.
+    
+    Let  $ \varphi:(-\epsilon,\epsilon)\times (-\epsilon,\epsilon)^n\rightarrow M $ be the local flow of  $ V $.
+    
+    Define  $ \psi:(-\epsilon,\epsilon)^n\rightarrow M $ by  $ \psi(t,r^2,\cdots,r^n)=\varphi(t,(0,r^2,\cdots,r^n)) $. Then  $ \psi(-,r^2,\cdots, r^n) $ is an integral curve for  $ V $. Therefore,  $ \psi_*(\partial t)=V $.   
+    
+    At  $ \vec{0} $, we have  $ \psi_{\vec{0},*}(\partial t)=V_{\vec{0}}=\partial r^1 $,  $ \psi_{\vec{0},*}(\partial r^i)=\partial r^i $.
+    
+    So  $ \psi_{*,\vec{0}}:T_{\vec{0}}(-\epsilon,\epsilon)^n\rightarrow T_{\vec{0}}M $ is an isomorphism.
+
+    By the inverse function theorem,  $ \exists U'\subset (-\epsilon,\epsilon)^n $,  $ U\subset M $ \st  $ \psi|_{U'}:U'\rightarrow U $ is a diffeomorphism.
+    
+    Then  $ (U,(\psi|_{U'})^{-1}) $ is the local chart what we need.
+\end{proof}
+\begin{remark}
+    Regular point in a vector field is simple, as we can view it in the standard chart locally. However, behavior of  $ V $ art a singular point can be complicated. For example,
+    for  $ f(x,y)=x^2-y^2 $,  $ \nabla f=2x\partial x-2y\partial y$,  $ g:\mathbb{C}\rightarrow C,z\mapsto z^n $, they behave differently at  $ \vec{0} $.     
+\end{remark}
+\subsection{Lie derivative of vector field}
+ $ V,W\in \mathfrak{T}M $,  \name{$ \mathcal{L}_VW $}= is the directional derivative of  $ W $ in the direction of  $ V $.
+ \begin{definition}
+    The \name{Lie derivative}  $ \mathcal{L}_VW\in \mathfrak{T}M $ is defined as follows: $ \forall p\in M $, let  $ \{\theta_t:U\rightarrow M\}_{t\in (-\epsilon,\epsilon)} $ be the local flow for  $ V $. Then  \[\dps (\mathcal{L}_VW)_p=\lim\limits_{t\to 0}\frac{(\theta_{-t})_*W_{\theta_t(p)}-W_p}{t} \]    
+ \end{definition}
+ \begin{remark}
+    This defintion is actually a difference between  $ T_{\theta_t(p)} $ and  $ T_p $, which need pullback.  
+ \end{remark}
+ \begin{lemma}
+     $ \mathcal{L}_VW $ is well-defined  and smooth.
+ \end{lemma}    
+ \begin{proof}
+    For  $ p\in M $, take local chart  $ (U,x^1,\cdots,x^n) $. Let  $ \theta :(-\epsilon,\epsilon)\times U\rightarrow M $ be the flow of  $ V $. Take  $ J_0\subset(-\epsilon,\epsilon) $,  $ U_0\subset U $. Let  $ \theta ^i=x^i\circ \theta:J_0\times U_0\rightarrow \mathbb{R} ,  $   $ \dps W|_U=\sum\limits_{i=1}^nW^i\partial x^i $.    
+    
+    Under the basis  $ \{\partial x^i\} $,  $ (\theta_{-t})_*:T_{\theta_t(p)}M\rightarrow T_pM $ is represented by 
+    \[ \left(\dps\frac{\partial \theta^i(-t,\theta(t,x))}{\partial x^j}\right)_{i,j}\]
+    
+    So  $ \dps(\theta_{-t})_*W_{\theta_t(x)}=\sum\limits_{i,j}\frac{\partial \theta^i(-t,\theta(t,x))}{\partial x^j}W^j(\theta(t,x))\cdot \partial x^i $ is smooth in  $ t,x $.
+    So 
+    \[(\mathcal{L}_VW)_x=\dps\frac{\partial ((\theta_{-t})_*(W_{\theta_t(x)}))}{\partial t}|_{t=0}\] is well-defined and smooth.  
+ \end{proof}
+ \begin{theorem}
+    For all  $ V,W\in \mathfrak{T}M $,  $ \mathcal{L}_VW=[V,W] $.  
+ \end{theorem}
+ \begin{proof}
+    For  $ p $ is a regular point of  $ V $.  By canonical form theorem \ref{Canonical Form Theorem},  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $\st  $ V|_U=\partial x^1 $. Let  $ W|_U=\dps\sum\limits_{i=1}^nW^i\partial x^i $.
+    
+    Then  $ \theta_t(x_1,\cdots,x_n)=(x_1+t,x_2,\cdots,x_n) $. So  \[ \mathcal{L}_VW|_U=\dps\sum\limits_i\frac{\partial W^i}{\partial x^1}\cdot \partial x^i \].  \[[V,W]|_U=\dps\sum\limits_iV(W^i)\partial x^i-\sum\limits_iW(V^i)\partial x^i=\sum\limits_i\frac{\partial W^i}{\partial x^1}\cdot\partial x^i \]
+    Then  $ [V,W]|_U=\mathcal{L}_VW $.
+    
+    For  $ p $ is a singular point but  $ p\in \Supp(V) $. Then  $ \exists  $ $ p_i\rightarrow p $ \st  $ V_p\not=0 $. By the previous case  $ (\mathcal{L}_VW)_{p_i}=[V,W]|_{p_i} $. By continuity,  We have  $ (\mathcal{L}_VW)_p=[V,W]_p $.
+    
+    For  $ p \not\in \Supp(V)$,  $ \exists $ Nbd  $ U $ of  $ p $ \st  $ V|_U=0 $. Then  $ \theta_t(q)=q $. So 
+    \[(\mathcal{L}_VW)|_U=0=[V,W]|_U\]     
+ \end{proof}
+ \begin{corollary}
+    \,
+    \begin{itemize}
+        \item  $ \mathcal{L}_VW $ is  $ \mathbb{R} $-linear with respect to  $ V,W $.
+        \item  $ \mathcal{V}W=-\mathcal{L}_WV $.
+        \item  $ \mathcal{L}_V[W,X] $.
+        \item(Jacobian identity)  $ \mathcal{L}_V[W,X]=[\mathcal{L}_VW,X]+[W,\mathcal{L}_VX] $.
+        \item (Jacobian identity) $ \mathcal{L}_{[V,W]}X=\mathcal{L}_V\mathcal{L}_WX-\mathcal{L}_W\mathcal{L}_VX $.
+        \item  $ \mathcal{L}_V(fW)=(Vf)\cdot W+f\mathcal{L}_VW $
+        \item Let  $ F:M\rightarrow N $ be a diffeomorphism. Then  $ F_*(\mathcal{L}_VW)=\mathcal{L}_{F_*(V)}F_*(W) $.           
+    \end{itemize}
+ \end{corollary}
+ \subsection{Commuting vector fields}
+ \begin{definition}
+    We say  $ V,W\in\mathfrak{T}M $ \name{commutes} if  $ [V,W]=0 $.  
+ \end{definition}
+ \begin{theorem}\label{Equivalent condition of Commuting vector fields}
+    TFAE:
+    \begin{enumerate}
+        \item  $ V,W $ commutes.
+        \item   $ W $ is invariant under the flow generated by  $ V $,\ie  $ \theta_{t,*}(W_p)=W_{\theta_t(p)} $
+        \item The flow for  $ V,W $ commutes, \ie  $ \theta_t\circ \eta_s=\eta_s\circ \theta_t $ whenever either side is defined or equivalently, whose the domain is compatible.     
+    \end{enumerate}
+ \end{theorem}
+ \begin{lemma}
+     Given  $ F\in C^\infty(M,N) $,  $ V\in\mathfrak{T}M ,W\in \mathfrak{T}N$. Then  $ W $ is  $ F $-related to  $ V $ if and only  if  $ \forall t\in \mathbb{R} $,  $ \eta_t\circ F=F\circ \theta_t $ on the domain of  $ \theta_t $, which means 
+    {\begin{center}
+        \begin{tikzcd}
+            M\arrow[r,"F"]\arrow[d,"\theta_t"]&N\arrow[d,"\eta_t"]\\
+            M\arrow[r]&N
+        \end{tikzcd}
+        commutes.
+    \end{center}
+    
+     }
+      
+ \end{lemma}
+ \begin{proof}
+    "$ \Rightarrow $" Let  $ \gamma=F\circ \theta^p:J\rightarrow N $ satisfies 
+     \[\gamma'(t)=(F\circ \theta^p)'(t)=F_*((\theta^p)'(t))=F_*(V_{\theta^p(t)})=W_{F(\theta^p(t))}=W_{\gamma(t)}\]
+     So  $ \gamma $ is an inetgral curve of  $ W $ starting at  $ \gamma(0)=F(p) $\ie  $ F\circ \theta^p =\gamma(t)=\eta^{F(p)}(t)$ \ie  $ F\circ \theta_t=\eta\circ F $.
+     
+     "$ \Leftarrow $" Suppose  $ F\circ \theta_t =\eta\circ F $. Then   $ (F\circ \theta^p)(t)=\eta^{F(p)}(t) $.
+     
+     Then  $ F_*V_p=F_*((\theta^p)'(0))=(F\circ \theta^p)'(0)=(\eta^{F(p)})'(0)=W_{F(p)} $. So  $ W $ is  $ F $-related to  $ V $.   
+ \end{proof}
+ \begin{proof}[Proof of Theorem \ref{Equivalent condition of Commuting vector fields}]
+     $ 2\Rightarrow 1 $:  $ (\theta_{-t})_*(W_{\theta_t(p)})=W_p $. So  \[ \mathcal L_VW=\dps\lim\limits_{t\to 0}\frac{(\theta_{-t})_*(W_{\theta_t(p)})-W_p}{t}=0 \]
+     
+     
+     $ 1\Rightarrow 2 $: Let  $ X(t)=(\theta_{-t})_*(W_{\theta_t(p)}) $,  $ p\in M $.
+     
+     Want to show that  $ X(t)=X_p $ for all  $ t $. Suffices to show  $ \dps\frac{\mathrm{d}}{\mathrm{d}t}|_{t=t_0}X(t)=0 $. 
+     
+     For  $ t_0=0 $,  $ \dps\frac{\mathrm{d}}{\mathrm{d}t}|_{t=0}X(t)=(\mathcal{L}_VW)_p=0 $.
+     
+     In general, set  $ s=t-t_0 $,  $ X(t)=(\theta_{-t_0})_*\circ (\theta_{-s})_*(W_{\theta_s(\theta_{t_0}(p))}) $.
+     Then 
+     \begin{align*}
+        \frac{\mathrm{d}}{\mathrm{d}t}|_{t=t_0}X(t)&=\frac{\mathrm{d}}{\mathrm{d}s}|_sX(s+t_0)\\
+        &=\frac{\mathrm{d}}{\mathrm{d}s}|_s(\theta_{-t_0})_*\circ (\theta_{-s})_*(W_{\theta_s(\theta_{t_0}(p))})\\
+        &=(\theta_{t_0})_*\frac{\mathrm{d}}{\mathrm{d}s}|_{s=0}(\theta_{-s})_*(W_{\theta_s(\theta_{t_0}(p))})\\
+        &=(\theta_{t_0})_*(\mathcal{L}_VW)_{\theta_{t_0}(p)}\\
+        &=0
+     \end{align*}
+     
+      $ 2\Rightarrow3 $. For simplicity, assume  $ V,W $ are complete.  $ F=\theta_s:M\rightarrow M $. By 2,  $ W $ is  $ F $-related to  $ W $. So by the lemma,
+      \begin{center}
+        \begin{tikzcd}
+            M\arrow[r,"F"]\arrow[d,"\theta_t"]&M\arrow[d,"\eta_t"]\\
+            M\arrow[r,"F"]&M
+        \end{tikzcd}
+        commutes.
+    \end{center}  
+    
+    $ \eta_t $ is flow for  $ W $. \ie  $ \theta_s\circ\eta_t=\eta\circ \theta_s $ 
+      
+       $ 3\Rightarrow 2 $  is similar. The diagram commutes, so  $ W $ is  $ F $-related to  $ W $.   
+ \end{proof}

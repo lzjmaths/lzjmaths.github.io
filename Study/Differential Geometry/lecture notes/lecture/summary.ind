@@ -1,6 +1,7 @@
 \begin{theindex}
 
   \item $ F $-related, \hyperpage{22}
+  \item $ \mathcal  {L}_VW $, \hyperpage{28}
   \item $ \mathfrak  {T}M $, \hyperpage{15}
   \item $ \mathrm  {Lie}(G) $, \hyperpage{24}
   \item $ \mathrm  {Supp}X $, \hyperpage{16}, \hyperpage{18}
@@ -12,6 +13,7 @@
 
   \indexspace
 
+  \item commutes, \hyperpage{30}
   \item complete, \hyperpage{16}
   \item critical point, \hyperpage{4}
   \item critical value, \hyperpage{4}
@@ -29,12 +31,12 @@
 
   \indexspace
 
-  \item fiber, \hyperpage{12}
+  \item fiber, \hyperpage{13}
   \item flow, \hyperpage{15, 16}
 
   \indexspace
 
-  \item genus of smooth function, \hyperpage{9}
+  \item genus of smooth function, \hyperpage{10}
   \item gradient vector field, \hyperpage{14}
 
   \indexspace
@@ -51,7 +53,8 @@
   \item left invariant, \hyperpage{24}
   \item Lie algebra, \hyperpage{23}
   \item Lie bracket, \hyperpage{21}
-  \item Lie group, \hyperpage{5}
+  \item Lie derivative, \hyperpage{28}
+  \item Lie group, \hyperpage{6}
   \item locally finite, \hyperpage{8}
 
   \indexspace
@@ -71,12 +74,13 @@
   \indexspace
 
   \item refinement, \hyperpage{8}
-  \item regular point, \hyperpage{4}
+  \item regular point, \hyperpage{4}, \hyperpage{27}
   \item regular value, \hyperpage{4}
   \item right invariant, \hyperpage{24}
 
   \indexspace
 
+  \item singular point, \hyperpage{27}
   \item smooth manifold, \hyperpage{3}
   \item smooth section, \hyperpage{14}
 
