@@ -1,0 +1,120 @@
+The rest of Proposition \ref{properties of Lie bracket} is easy to check if it is viewed as a mapping  $ C^\infty(M)\rightarrow C^\infty(M) $.
+
+\subsection{Lie algebra of a Lie group}
+\begin{definition}
+    A \name{Lie algebra} $ g $ is  $ \mathbb{R} $-linear space  $ g $ with map   $ [-,-]:g\times g\rightarrow g $ \st it is bilinear, anti-symmetric and satisfies the Jacobian identity.
+    
+    Then  $ (\mathfrak{T}M,[-,-]) $ is an infinite dimensional Lie algebra.
+\end{definition}
+For  $ G $ Lie group,  $ \forall g\in G $ we have diffeomorphism  
+\begin{align*}
+    l^g:G\rightarrow G&,h\mapsto gh\\
+    r^g:G\rightarrow G&,h\mapsto hg   
+\end{align*}
+We say  $ X\in \mathfrak{T}G $ is \name{left invariant} if  $ l_*^g(X)=X $,  $ \forall g\in G $. Similarly,  $ X $ is \name{right invariant} if  $ r_*^g(X)=X $.   
+\begin{proposition}
+     $ X,Y $ are left/right invariant  $ \Rightarrow  $  $ [X,Y] $ is left/right invariant.  
+\end{proposition}
+\begin{proof}
+     $ l_*^g[X,Y]=[l_*^gX,l_*^gY]=[X,Y] $ 
+\end{proof}
+So we can find a natural Lie algebra of  $ G $: 
+\[\name{$ \Lie(G) $}:=\{\text{left invariant vector fields on  $ G $}\},\text{with  $ [-,-] $ restricted from  $ \mathfrak{T}G $}\]
+\begin{theorem}\label{left invariant vector field is determined at e}
+    Given any  $ V\in T_eG $,  $ \exists $ unique left invariant  $ \hat{V}\in \mathfrak{T}G $ \st  $ \hat{V_e}=V $.    
+\end{theorem} 
+\begin{corollary}
+     $ \dps \Lie(G)\cong T_eG $ as vector spaces. 
+\end{corollary}
+\begin{proof}[Proof of Theorem \ref{left invariant vector field is determined at e}]\,
+
+    \textbf{Uniqueness of  $ \hat{V} $:}  $ \hat{V_g}=l_{e,*}^g(\hat{V_e})=l_{e,*}^g(V) $. So  $ \hat{V} $ is determined by  $ V $.
+    
+    \textbf{Existence of  $ \hat{V} $:} Let  $ \hat{V}=\{\hat{V_g}\}_{g\in G} $ where  $ \hat{V_g}=l_{e,*}^g(\hat{V_e}) $.
+    
+     $ \hat{V} $ is left-invariant because 
+     \[\dps(l_*^h(\hat{V}))_g=l_{h^{-1}g,*}^h(\hat{V}_{h^{-1}g})=l_{h^{-1}g,*}^h(l_{e,*}^{h^{-1}g}(V))=l_{e,*}^g(V)=\hat{V_g}\] 
+
+      $ \hat{V} $ is smooth: Take any  $ f\in C^\infty(G) $ suffices to show  $ \hat{V}(f)\in C^\infty(G) $.
+      
+      Take any smooth  $ \gamma:\mathbb{R}\rightarrow G $ \st  $ \gamma(0)=e,\gamma'(0)=V $. Then  $ l^g\circ \gamma :\mathbb{R}\rightarrow G $ satisfies  $ l^g\circ\gamma(0)=g,(l^g\circ\gamma)(0)=g,(l^g\circ \gamma)'(0)=l_{e,*}^g(V)=\hat{V_g} $   
+
+      So  \begin{equation}
+        \hat{V}(f)(g)=\hat{V_g}(f)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(l^g\circ \gamma(t))|_{t=0}=\frac{\mathrm{d}}{\mathrm{d}t}f(g\cdot \gamma(t))|_{t=0} \label{eq:lie derivative}
+      \end{equation}
+      
+      Consider the map 
+      \begin{align*}
+        \hat{f}:G\times \mathbb{R}&\xrightarrow{\id\times \gamma}G\times G&\xrightarrow{\cdot}G&\xrightarrow{f}\mathbb{R}\\
+        (g,t)&\mapsto (g,\gamma(t))&\mapsto g\cdot\gamma(t)&\mapsto f(g\cdot\gamma(t))
+      \end{align*}
+      Then  $ \hat{f} $ s smooth,  $ \dps\frac{\partial \hat{f}}{\partial t}|_{t=0}:G\rightarrow \mathbb{R} $ is smooth, but  $ \dps\frac{\partial f}{\partial t}|_{t=0}(g)=\hat{V}(f)(g) $ by \ref{eq:lie derivative}. So  $ \hat{V}(f)\in C^\infty(G) $.    
+\end{proof}
+\begin{example}
+     $ G=\GL(n,\mathbb{R})=\{A\in M_n(\mathbb R)|\det A\not=0\}\subset M_n(\mathbb{R})\cong \mathbb{R}^2 $.
+     
+      \name{$ \mathrm{gl}(n,\mathbb{R}) $}$ =\Lie(\GL(n,\mathbb{R}))=T_I\GL(n,\mathbb{R})=M_n(\mathbb{R}) $ 
+\end{example}
+\begin{theorem}\label{Theorem:Lie bracket of GLn}
+     $ \forall A,B\in\mathrm{gl}(n,\mathbb{R})=M_n(\mathbb{R}) $,  $ [A,B]=AB-BA $.  
+\end{theorem}
+\begin{remark}
+    This theorem shows that the Lie bracket viewed as the Lie algebra and matrix are the same. In some sense, it means the Lie bracket defined in three sets  $ \mathrm{gl}(n,\mathbb{R})=T_I\GL(n,\mathbb
+    R)=M_n(\mathbb{R}) $ can commute with those corresponding, or equivalently, are just the same. 
+\end{remark}
+\begin{lemma}
+     $ \forall A\in \mathrm{gl}(n,\mathbb{R}) $, the left invariant vector field  $ \hat{A} $ is complete and generated the flow  $ \dps\varphi_t:\GL(n,\mathbb{R})\rightarrow \GL(n,\mathbb{R}), \varphi_t(g)=ge^{At}=g(I+At+\frac{A^2t^2}{2!}+\cdots) $   
+\end{lemma}
+\begin{proof}
+     \[\hat{A_g}=g\cdot A\in T_gG=M_n(\mathbb{R})\]
+      \[\frac{\partial}{\partial t}\varphi_t(g)=\frac{\partial}{\partial t}(g(e^{At}))=ge^{At}A=\hat{A_{g\cdot e^{At}}}=\hat{A}_{\varphi_t(g)}\]
+\end{proof}
+\begin{proof}[Proof of Theorem \ref{Theorem:Lie bracket of GLn}]
+    Take  $ A,B\in \mathrm{gl}(n,\mathbb{R}) $. Want to show  $ [\hat{A},\hat{B}]_I=AB-BA $.
+    
+    Pick  $ f\in C^\infty_I(G) $, need to show  $ A(\hat{B}(f))-B(\hat{A}(f))=(AB-BA)(f) $
+    
+    Further Simplification: Just need to focus on  $ f=x^{ij} $, where  $ x^{ij}:\GL(n,\mathbb{R})\rightarrow \mathbb{R}, E\mapsto (E-I)_{ij} $.
+    
+    Such  $ f $ satisfies  $ f(I+-) $ is  $ \mathbb{R} $-linear.
+    
+    Recall that Given  $ W\in \mathfrak{T}M $,  $ W(f)(p)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(\varphi_t^W(p))|_{t=0} $.
+    
+    So  $ \hat{B}(f)(g)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(ge^{tB})|_{t=0} $.
+    
+    So  \[\dps A(\hat{B}(f)) =\frac{\mathrm{d}}{\mathrm{d}t}(\hat{B}(f)(e^{As}))|_{s=0}=\frac{\mathrm{d}^2}{\mathrm{d}s\mathrm{d}t}f(I+sA+tB+\frac{s^2}{2}A^2+stAB+\frac{t^2}{2}B^2+\cdots)|_{s=t=0}\]
+    Similarly,
+    \[\dps B(\hat{A}(f))=\frac{\mathrm{d}^2}{\mathrm{d}s\mathrm{d}t}f(I+sA+tB+\frac{s^2}{2}A^2+stBA+\frac{t^2}{2}B^2+\cdots)|_{s=t=0}\]
+    So $ A(\hat{B}(f))-B(\hat{A}(f))=f(I+(AB-BA))=(AB-BA)(f) $ since  $ f $ is  $ \mathbb{R} $-linear.  
+\end{proof}
+Similarly, for  $ G=\GL(n,\mathbb{C}), \Lie(G)=\mathrm{gl}(n,\mathbb{C})=M_n(\mathbb{C}) $, we have  $ [A,B]=AB-BA $.
+  
+Actually, we have those properties of Lie group and Lie algebra.
+\begin{itemize}
+    \item Any simply connected Lie group are determined by its Lie algebra.
+    \item Given any connected Lie group  $ G $, its universal cover  $ \hat{G} $  is simply-connected with  $ \pi^{-1}(G)\subset Z(\hat{G}) $. 
+\end{itemize}
+What is the meaning of Lie bracket. There is a fact about it:
+\begin{fact}
+     $ G $ is connected Lie group.  $ G $ is abelian iff  $ [-,-]=0 $ on  $ \Lie(G) $    
+\end{fact}
+\subsection{Morphisms between Lie group and Lie algebras}
+A smooth map  $ F:G\rightarrow H $ between two Lie group is called a \name{morphism} if  $ F(gh)=F(g)F(h) $.
+
+A linear map  $ L:g\rightarrow h$ between Lie algebra is called a \name{morphism} if  $ L[u,v]=[Lu,Lv] $. 
+\begin{proposition}
+     Let  $ F:G\rightarrow H $ be a morphism of Lie groups. Then  $ F_{e,*}:\Lie(G)\rightarrow \Lie(H) $ is a morphism of Lie algebra.  
+\end{proposition}
+\begin{proof}
+      $ V_0,V_1\in \Lie(G)=T_eG $,  $ W_i=F_{e,*}(V_i)\in \Lie(H)=T_eH $. Let  $ \hat{V},\hat{W} $ be left-invariant vector fields.   
+     \begin{claim}
+          $ \hat{W_i} $ is  $ F $-compatible with  $ \hat{V_i} $ for  $ i=0,1 $.    
+     \end{claim}
+     \begin{proof}[Proof of Claim]
+          $ \forall g\in G $,  $ F_*(\hat{V_g})=F_*(l_*^g(V))=(F\circ l^g)_*(V)=(l^{F(g)}\circ F)_*(V)=l^{F(g)}(W)=\hat{W}_{F(g)} $  
+     \end{proof}
+     So  $ [\hat{W_0},\hat{W_1}] $ is  $ F $-compatible with  $ [\hat{V_0},\hat{V_1}] $. In particular,  $ [W_0,W_1]=F_*([V_0,V_1]) $.  
+\end{proof}
+
+
+ 
