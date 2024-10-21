@@ -29,5 +29,4 @@
 \contentsline {subsubsection}{\numberline {7.2.1}Index of a point with resect to a closed curve}{23}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Cauchy's integral formula}{25}{subsubsection.7.2.2}%
 \contentsline {subsubsection}{\numberline {7.2.3}Higher derivatives}{26}{subsubsection.7.2.3}%
-\contentsline {section}{Index}{28}{section*.3}%
-\contentsline {section}{List of Theorems}{29}{section*.4}%
+\contentsline {section}{List of Theorems}{28}{section*.3}%
