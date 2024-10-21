@@ -129,15 +129,75 @@
 
 \counterwithin*{footnote}{section}   % Footnote numbering is recounted from the beginning of each subsection
 
+\renewcommand\theenumi{(\arabic{enumi})}
+\renewcommand\theenumii{\alph(enumii)}
+\renewcommand\theenumiii{\roman{enumii})}
+
+%Greek letters counter
+\newcounter{greek}
+\renewcommand{\thegreek}{
+  \ifcase\value{gr}
+     $ \alpha $ 
+  \or
+     $ \beta $ 
+  \or
+     $ \gamma $ 
+  \or
+    $\delta  $ 
+  \or
+    $\epsilon  $ 
+  \or
+    $\zeta  $ 
+  \or
+    $\eta  $ 
+  \or
+    $\theta  $ 
+  \or
+    $\iota  $ 
+  \or
+    $\kappa  $ 
+  \or
+    $\lambda  $ 
+  \or
+    $\mu  $ 
+  \or
+    $\nu  $ 
+  \or
+    $\xi  $ 
+  \or
+    $\omicron  $ 
+  \or
+    $\pi  $ 
+  \or
+    $\rho  $ 
+  \or
+    $\sigma  $ 
+  \or
+    $\tau  $ 
+  \or
+    $\upsilon  $ 
+  \or
+    $\phi  $ 
+  \or
+    $\chi  $ 
+  \or
+    $\psi  $ 
+  \or
+    $\omega  $ 
+  \else
+    % 超出范围时的默认输出
+    \text{None}
+  \fi
+}
 
 
 \pagestyle{plain}
 
-\captionsetup[figure]
-{
-	labelsep=none	
-}
-
+% \captionsetup[figure]
+% {
+% 	labelsep=none	
+% }
+% 控制图表结构
 
 
 
@@ -172,8 +232,6 @@
 \newtheorem*{claim}{Claim}
 
 
-
-
 \newtheorem{problem}{\color{red}Problem}[section]
 %\renewcommand*{\theprob}{{\color{red}\arabic{section}.\arabic{prob}}}
 \newtheorem{sprob}[problem]{\color{red}$\star$ Problem}
@@ -191,9 +249,10 @@
 \newtheorem{lemma}[definition]{Lemma}
 \newtheorem{sthm}[definition]{$\star$ Theorem}
 \newtheorem{slm}[definition]{$\star$ Lemma}
+
 \newtheorem{spp}[definition]{$\star$ Proposition}
 \newtheorem{scorollary}[definition]{$\star$ Corollary}
-
+\newtheorem{fact}[definition]{Fact}
 
 \newtheorem{cond}{Condition}
 \newtheorem{Mthm}{Main Theorem}
@@ -429,6 +488,7 @@
 
 
 
+
 \usepackage{tipa} % wierd symboles e.g. \textturnh
 \newcommand{\tipar}{\text{\textrtailr}}
 \newcommand{\tipaz}{\text{\textctyogh}}
@@ -449,9 +509,13 @@
 
 
 
+% make some new environment such that we can put line_in math mode in the center.
 
-
-
+\newenvironment{Then}
+{Then%
+\hspace{\stretch{1}}}
+{\hspace{\stretch{1}}%
+\phantom{Then}}
 
 
 
@@ -484,6 +548,12 @@
 \newcommand{\name}[1]{\textbf{#1}\index{#1}}
 \newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
 
+
+
+
+
+\setcounter{tocdepth}{3}
+
 \begin{document}
 \sloppy
 \pagenumbering{arabic}
@@ -501,6 +571,8 @@
 \input{../7.tex}
 
 \input{../8.tex}
+
+\input{../9.tex}
 
 \printindex
 \listoftheorems[ignoreall, show={theorem,proposition}]

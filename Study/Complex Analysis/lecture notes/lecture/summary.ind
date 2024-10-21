@@ -6,6 +6,7 @@
 
   \indexspace
 
+  \item Cauchy's integral formula, \hyperpage{26}
   \item change of parameter, \hyperpage{8}
   \item circular net, \hyperpage{15}
   \item conformal, \hyperpage{9}
@@ -27,6 +28,7 @@
 
   \indexspace
 
+  \item index of the point $ z $, \hyperpage{24}
   \item integral, \hyperpage{16}
     \subitem $ \bar  {z} $, \hyperpage{18}
     \subitem arc length, \hyperpage{19}
@@ -76,5 +78,9 @@
 
   \item totally bounded , \hyperpage{7}
   \item trigonometric function, \hyperpage{6}
+
+  \indexspace
+
+  \item winding number, \hyperpage{24}
 
 \end{theindex}

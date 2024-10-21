@@ -1,0 +1,87 @@
+The \name{index of the point $ z $} w.r.t. the closed curve  $ \gamma $ is the number 
+\[\dps n(\gamma,z)=\frac{1}{2\pi i}\int_\gamma\frac{\mathrm{d}\zeta}{\zeta-z}\] 
+ $ n $ is also called the \name{winding number}.
+ 
+\begin{theorem}\label{Winding Number Theorem}
+    Let  $ \gamma $ be a piecewise differentiable closed curve. The function  $ z\mapsto n(\gamma,z) $ is constant on each connected set of  $ \mathbb{C}\backslash \gamma $, and zero if this set is unbounded.   
+  \end{theorem}
+  \begin{proof}
+    Define  $ f:\mathbb{C}\backslash \gamma\rightarrow \gamma, z\mapsto n(\gamma,z)=\dps\frac{1}{2\pi i}\int_\gamma\frac{\mathrm{d}\zeta}{\zeta-z} $.
+    
+    Then  \[\left|f(z)-f(z_0)\right|=\frac{1}{2\pi}\left|\int_\gamma\frac{z-z_0}{(\zeta-z)(\zeta-z_0)}\mathrm{d}\zeta\right| \leq \frac{|z-z_0}{2\pi}\int_\gamma\frac{1}{|\zeta-z|\cdot|\zeta-z_0}|\mathrm{d}\zeta| \] 
+     $ \Rightarrow  $  $ f $ is continuous on each open connected set of  $ \mathbb{C}\backslash \gamma $. Let  $ \Omega $ be any open connected set of  $ \mathbb{C}\backslash\gamma $. We have  $ f(\Omega) $ is connected $ \overset{f(\Omega)\subset \mathbb{Z}}{\Rightarrow} $ $ f(\Omega) $ contains at most one point  $ \Rightarrow  $ $ f $ is constant on  $ \Omega $.      
+     
+     If  $ |z| $ is sufficient large,  $ \exists $ a disk of radius  $ R $,  $ B(0,R) $, \st  $ \gamma\subset B(0,R) $ but  $ z\not\in B(0,R) $. Cauchy's theorem for a disk \ref{Cauchy's theorem for a disk} tells us that  $ f(z)=n(\gamma,z)=0 $. So it is zero if this set is unbounded.       
+  \end{proof}
+  \begin{lemma}
+    Let  $ z_1,z_2 $ be two points on a closed curve  $ \gamma $ and  $ 0\not\in \gamma $.
+    
+    Suppose  $ z_1 $ in the lower half space and  $ z_2 $ in upper half space. If  $ \gamma_1\cap\{(x,0):x \leq 0\}=\emptyset $, and  $ \gamma_2\cap\{(x,0):x \geq 0\}=\emptyset $, then  $ n(\gamma,0)=1 $.
+  \end{lemma}
+  \begin{remark}
+    One method to prove this lemma is to create two segment from  $ z_i $ to the point in the unit circle. By divide the curve into two parts, we can easily remove the part of previous curve by using the theorem \ref{Winding Number Theorem}, since  $ 0 $ is in the unbounded set. 
+    
+    In this proof, we can find that Theorem \ref{Winding Number Theorem} is such powerful that we can change any curve to a more simple curve easily!
+
+  \end{remark}
+
+  \subsubsection{Cauchy's integral formula}
+\begin{theorem}[Cauch's integral formula]\label{Cauchy's integral formula}
+    Suppose that  $ f $ is analytic in an open disk  $ \triangle $, and let  $ \gamma $ be a closed curve in  $ \triangle $. For  $ \forall z\not\in \gamma $,
+    \[n(\gamma,z)f(z)=\frac{1}{2\pi i}\int_\gamma \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\]
+    where  $ n(\gamma,z) $ is the index of  $ z  $ w.r.t.  $ \gamma $.        
+\end{theorem}
+\begin{proof}
+    If  $ z\not\in \triangle $, The both sides of the equation is  $ 0 $.
+    
+    So we may assume  $ z\in \triangle $ and  $ z\not\in \gamma $. Define  $ F:\triangle\backslash\{z\}\rightarrow \mathbb{C},\zeta\mapsto \dps\frac{f(\zeta)-f(z)}{\zeta-z} $.
+    
+    Then  $ F $ is analytic in  $ \triangle\backslash\{z\} $, and  $ \dps\lim\limits_{\zeta\to z}(\zeta-z)F(zeta) $.
+    
+    By Cauchy's Theorem \ref{stronger version of Cauchy's theorem for a rectangle} $ \Rightarrow $ $ \int_\gamma F(\zeta)\mathrm{d}\zeta=0 $  $\Rightarrow $ $ \dps\int_\gamma \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta=f(z)\int_\gamma\frac{1}{\zeta-z}\mathrm{d}\zeta=f(z)\cdot 2\pi i \cdot n(\gamma,z) $   
+\end{proof}
+\begin{remark}\label{Cauch's integral formula Remark}
+    This proof let us find that for a good-enough function, its integral over a closed curve is a constant.
+    
+    The theorem still holds if  $ f $ is analytic except at a finite number of  $ \zeta_j $ \st  \[ \dps\lim\limits_{\zeta\to\zeta_j}(\zeta-\zeta_j)f(\zeta)=0 \] and  $ z\not=\zeta_j $ for each  $ j $,  since Cauchy's theorem is still applicable. 
+\end{remark}
+\begin{theorem}[The mean value property for analytic functions]
+     $ f $  is analytic in a region $ \Omega $ which contain  $ \overline{B(z,R)} $. Then  \[ f(z)=\dps\frac{1}{2\pi}\int_0^{2\pi}f(z+Re^{i\theta})\mathrm{d}t \]  
+\end{theorem}
+\begin{proof}
+    The previous theorem \ref{Cauchy's integral formula} $ \Rightarrow  $ \[ \dps f(z)=\frac{1}{2\pi i}\int_{|\zeta-z|=R}\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\xlongequal{\zeta=z+Re^{it}}\frac{1}{2\pi}\int_0^{2\pi} f(z+Re^{it})\mathrm{d}t \]
+\end{proof}
+If  $ f $ is analytic in an open disk $ \triangle $, and  $ \gamma $ is a closed curve in  $ \triangle $. And  $ n(\gamma,z)=1$. Then 
+
+\[\dps f(z)=\frac{1}{2\pi i}\int_\gamma\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\]
+
+This is usually referred to as \name{Cauchy's integral formula}
+
+\subsubsection{Higher derivatives}
+\begin{lemma}
+    Let  $ \Omega\subset\mathbb{C}$ be a region and  $ \gamma $ be an arc in  $ \Omega $. If  $ \varphi $ is continuous on  $ \gamma $, then the function 
+    \[F_n(z):=\dps\int_\gamma\frac{\varphi(\zeta)}{(\zeta-z)^n}\mathrm{d}\zeta\]
+    is analytic in each of the regions  $ \Omega\backslash \gamma $, and its derivative is  $ F_n'(z)=nF_{n+1}(z) $
+\end{lemma}
+\begin{proof}
+    We prove it by induction. 
+    
+    The lemma is true if  $ n=0 $:  $ F_0(z)=\int_\gamma\varphi(\zeta)\mathrm{d}\zeta $ and  $ F_0'(z)=0=0\cdot F_1(z) $.
+    
+    We suppose that the lemma holds for  $ n-1 $ with  $ n\in \mathbb{N} $:  $ \forall  $ contoinuous $ \varphi $ on  $ \gamma $,  $ F_{n-1} $ is analytic in  $ \Omega\backslash \gamma $ and  $ F_{n-1}'
+    (z)=(n-1)F_n(z),\forall z\in \Omega\backslash \gamma $.
+    
+    Fix  $ z_0\in \Omega\backslash \gamma $. For  $ \forall z\in B(z_0,\frac{\delta}{2}) $, with  $ B(z_0,\delta)\subset \Omega\backslash \gamma $, we have  $ |\zeta-z|>\frac{delta}{2},\,\forall \zeta\in \gamma $.
+    
+    For  $ \forall  $ continuous  $ \varphi $ on  $ \gamma $,  
+    \begin{align*}
+        F_n(z)-F_n(z_0)&=\int_\gamma \frac{\varphi(\zeta)(\zeta-z+z-z_0)}{(\zeta-z)^n(\zeta-z_0)} \mathrm{d}\zeta-\int_\gamma\frac{\varphi(\zeta)}{(\zeta-z_0)^n}\mathrm{d}\zeta\\
+        &=\left[
+        \int_\gamma\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta-z_0)}\mathrm{d}\zeta-\int_\gamma\frac{\varphi(\zeta)}{(\zeta-z_0)^{n-1}(\zeta-z)} \mathrm{d}\zeta
+    \right]\\
+    &+(z-z_0)\int_\gamma\frac{\varphi(\zeta)\mathrm{d}\zeta}{(\zeta-z)^n(\zeta-z_0)}
+    \end{align*}   
+    Let  $ \psi(\zeta)=\dps\frac{\psi(\zeta)}{\zeta-z_0} $, which is continuous except  $ \gamma $. 
+    
+    Using the induction condition to  $ \psi $, we can finish the proof. 
+\end{proof}

@@ -45,3 +45,10 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.10\else \numberline {7.10}Theorem\fi \thmtformatoptarg {Cauchy's Theorem for a disk}}{22}{theorem.7.10}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.11\else \numberline {7.11}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's Theorem for a disk}}{23}{theorem.7.11}%
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}7.12\else \numberline {7.12}Lemma\fi }{23}{lemma.7.12}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.13\else \numberline {7.13}Theorem\fi }{24}{theorem.7.13}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}7.14\else \numberline {7.14}Lemma\fi }{24}{lemma.7.14}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}7.15\else \numberline {7.15}Remark\fi }{24}{remark.7.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.16\else \numberline {7.16}Theorem\fi \thmtformatoptarg {Cauch's integral formula}}{25}{theorem.7.16}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}7.17\else \numberline {7.17}Remark\fi }{25}{remark.7.17}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}7.18\else \numberline {7.18}Theorem\fi \thmtformatoptarg {The mean value property for analytic functions}}{25}{theorem.7.18}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}7.19\else \numberline {7.19}Lemma\fi }{26}{lemma.7.19}%
