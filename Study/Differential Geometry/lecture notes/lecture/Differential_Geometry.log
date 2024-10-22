@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  22 OCT 2024 15:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  22 OCT 2024 21:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1433,11 +1433,11 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input 
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 74.
 ) (../DG2.tex [5]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 7.
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 14.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 15.
  [6]
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 45.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 46.
  [7]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 76.
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 77.
 ) (../DG3.tex [8]) (../DG4.tex [9]) (../DG5.tex [10] [11] [12]) (../DG6.tex [13] [14]) (../DG7.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1454,7 +1454,7 @@ Package hyperref Info: bookmark level for unknown claim defaults to 0 on input l
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
  (./Differential_Geometry.ind
-Underfull \hbox (badness 2495) in paragraph at lines 72--73
+Underfull \hbox (badness 2495) in paragraph at lines 75--76
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
@@ -1474,7 +1474,7 @@ showing proposition
 
  [40] [41] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: 9286A4925BEE3C7F4BCF635A4E8D6B3E;3394.
+(rerunfilecheck)             Checksum: FDA90D78E0AAE5343E8EFFCF909D3ADB;3369.
  ) 
 Here is how much of TeX's memory you used:
  46064 strings out of 476683

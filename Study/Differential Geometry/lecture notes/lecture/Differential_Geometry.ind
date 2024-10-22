@@ -7,7 +7,10 @@
   \item $ \mathrm  {Lie}(G) $, \hyperpage{24}
   \item $ \mathrm  {Supp}X $, \hyperpage{16}, \hyperpage{18}
   \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{25}
+  \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{6}
   \item $M\DOTSB \lhook \joinrel  \rightarrow N$, \hyperpage{34}
+  \item $\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$, 
+		\hyperpage{36}
 
   \indexspace
 
