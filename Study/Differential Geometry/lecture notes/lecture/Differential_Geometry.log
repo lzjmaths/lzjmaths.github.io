@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  22 OCT 2024 15:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  22 OCT 2024 15:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1443,11 +1443,8 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [15] [16] [17] [18]) (../DG8.tex [19]
-
-LaTeX Warning: Reference `B' on page 20 undefined on input line 27.
-
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on input line 41.
-[20]
+ [20]
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input line 63.
  [21] [22]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 106.
@@ -1476,17 +1473,14 @@ showing proposition
 \openout7 = `Differential_Geometry.loe'.
 
  [40] [41] (./Differential_Geometry.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
 (rerunfilecheck)             Checksum: 9286A4925BEE3C7F4BCF635A4E8D6B3E;3394.
  ) 
 Here is how much of TeX's memory you used:
- 46065 strings out of 476683
- 1047456 string characters out of 5804047
+ 46064 strings out of 476683
+ 1047453 string characters out of 5804047
  1857018 words of memory out of 5000000
- 65409 multiletter control sequences out of 15000+600000
+ 65408 multiletter control sequences out of 15000+600000
  554613 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
