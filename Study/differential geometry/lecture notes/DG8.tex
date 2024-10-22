@@ -1,5 +1,5 @@
 \begin{lemma}\label{Lemma A}
-    $D_p:\mathfrak{T}_p{M} \rightarrow \mathbb{R}$-linear map $\mathbb{C}^\infty(M)\rightarrow\mathbb{R} \st D_p(f\cdot g)=D_p(f)\cdot g(p)+f(p)\cdot D_p(g)$ is an isomorphism of vector spaces.
+    $D_p:\mathfrak{T}_p{M} \rightarrow \mathbb{R}$-linear map $C^\infty(M)\rightarrow\mathbb{R} \st D_p(f\cdot g)=D_p(f)\cdot g(p)+f(p)\cdot D_p(g)$ is an isomorphism of vector spaces.
 \end{lemma}
 \begin{proof}
 
@@ -70,8 +70,8 @@ So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
     Chart  $ (U,x^1,\cdots,x^n) $,  $ V,W\in \mathfrak{T}M $,  $ V|_U=\dps\sum_{i=1}^n V^i\frac{\partial }{\partial  x^i} $,  $ W|_U=\dps\sum_{i=1}^nW^i\frac{\partial}{\partial x^i} $. Then 
     \begin{align*}
         [V,W]|_U&=\sum_{i=1}^n(V(W^i)-W(V^i))\frac{\partial}{\partial x^i}\\
-        &=\sum_{i=1}^n(\sum_{j=1}^nV^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial x^j})\frac{\partial }{\partial x^j}\\
-        &=\sum_{1 \leq i,j \leq n}(V^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial x^j})\frac{\partial}{\partial x^j}
+        &=\sum_{i=1}^n(\sum_{j=1}^nV^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial x^j})\frac{\partial }{\partial x^i}\\
+        &=\sum_{1 \leq i,j \leq n}(V^j\frac{\partial W^i}{\partial x^j}-W^j\frac{\partial V^i}{\partial x^j})\frac{\partial}{\partial x^i}
     \end{align*}
 \end{proposition}
 \begin{example}
@@ -118,6 +118,6 @@ So What is the geometric meaning of  $ [X,Y] $? Non commutatiy of flows.
 \begin{proposition}
     Given  $ V_0,V_1\in \mathfrak{T}M $,  $ W_0,W_1\in \mathfrak{T}N $,  $ F\in C^\infty(M,N) $,  $ W_i $ is  $ F $-related to  $ V_i $, $ i=0,1 $  $ \Rightarrow  $ $ [W_0,W_1] $  is  $ F $-related to  $ [V_0,V_1] $         
 \end{proposition}
-\begin{corollary}[Natuality of Lie bracket]
+\begin{corollary}[Naturality of Lie bracket]
     Given any  $ F\in \Diff(M,N) $,  $ V\in \mathfrak{T}M, W\in \mathfrak{T}M  $, we have  $ [F_*V,F_*W]=F_*[V,W] $   
 \end{corollary}
