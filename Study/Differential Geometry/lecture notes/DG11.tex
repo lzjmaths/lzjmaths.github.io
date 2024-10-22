@@ -1,0 +1,157 @@
+\subsubsection{Canonical form of commuting vector field}
+\begin{theorem}
+    Given  $ V_1,\cdots,V_k\in\mathfrak{T}M $, \st  
+    \begin{enumerate}[label=\arabic*)]
+        \item  $ [V_i,V_j]=0 $,  $ \forall i,j $.  
+        \item  $ V_{1,p},V_{2,p},\cdots,V_{k,p} $ linearly independent at some  $ p\in M $ 
+    \end{enumerate} 
+    Then  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ \st  $ V_i|_U=\dps\frac{\partial}{\partial x^i} $, $ \forall 1 \leq i \leq k $    
+\end{theorem}
+We prove it using the inverse function theorem.
+\begin{proof}
+    This is a local problem. So we may assume  $ M\subset \mathbb{R}^m $ be open with coordinate function  $ r^i:M\rightarrow \mathbb{R},1 \leq i \leq m $.
+    
+    After translation and linear transformation, we may assume  $ p=\vec{0} $,  $ V_{i,\vec{0}}=\left.\dps\frac{\partial}{\partial x^i}\right|_{\vec{0}},1 \leq i \leq k $.
+    
+    Take local flow  $ \{\theta_t^i:(-\epsilon,\epsilon)^m\rightarrow M\}_{t\in (-\epsilon,\epsilon)} $ for  $ V_i $.
+    
+    Define  $ \psi:(-\epsilon,\epsilon)^k\times (-\epsilon,\epsilon)^{m-k}\rightarrow M $,  $ \psi(t^1,\cdots,t^k,r^{k+1},\cdots,r^m)=\theta_{t_1}^1\circ \theta_{t_2}^2\cdots\circ\theta_{t_k}^k(0,0,\cdots,0,r^{k+1},\cdots,r^m) $, where  $ \theta^i $ commutes with each other.
+    
+    So if we fix  $ t^j,j\not=i $ except  $ t^i $,  $ \psi(t^1,\cdots,t^{i-1},-,t^{i+1},\cdots,t^k,r^{k+1},\cdots,r^{m}) $ is an integral curve for  $ V^i $.  
+    Then  $ V^i $ is  $ \psi $-related to  $ \partial t^i $.
+    
+    On the other hand.  $ \psi(0,0,\cdots,0,r^{k+1},\cdots,r^m)=(0,0,\cdots,0,r^{k+1},\cdots,r^m) $. So  $ \psi_{\vec{0},*}:T_{\vec{0},*}:T_{\vec{0}}(-\epsilon',\epsilon')^m\rightarrow T_{\vec{0}}M,\partial t^i\mapsto V_{i,0}=\partial x^i|_0 $ and  $ \partial r^i\mapsto \partial r^i, k+1 \leq i \leq m $.
+    
+    So  $ \psi_{\vec{0},*} $ is an isomorphism.
+    
+    By the inverse function theorem,  there exists Nbh  $ U'\subset(-\epsilon',\epsilon')^m $\st  $ \psi:U'\rightarrow U $ is a diffeomorphism and  $ U\subset M $ open.
+    
+    Then  $ (U,(\psi|_U)^{-1}) $ is the local chart we need. 
+\end{proof} 
+\subsection{The constant rank theorem}
+$ F\in C^\infty (M,N) $,  $ p\in M $. The \name{rank} of  $ F $ at  $ p  $  is 
+     \begin{align*}
+        \rank_pF&:=\rank(F_{p,*}:T_pM\rightarrow T_{F(p)}N)\\
+        &=\rank\left(\dps\frac{\partial F^i(p)}{\partial x^j}\right)_{i,j}
+     \end{align*}
+We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists $ Nbh  $ U $ of  $ p $ \st  $ \rank_qF=k $,  $ \forall q\in U $        
+
+\begin{proposition}
+    \[\rank_q(F) \leq \min(\dim(M),\dim(N))\]
+\end{proposition}
+     
+\begin{theorem}[The constant rank theorem]\label{The constant rank theorem}
+     Suppose  $ F:M\rightarrow N $ has constant rank  $ k $ near  $ p\in M $, then  $ \exists  $ local charts  $ U\xlongrightarrow[\cong]{\varphi}\mathbb{R}^m $ around  $ p $,  $ V\xlongrightarrow[\cong]{\psi}\mathbb{R}^n $ around  $ F(p) $ \st 
+     \[\psi\circ F\circ \varphi^{-1}:\mathbb{R}^m\rightarrow \mathbb{R}^n\text{ is given by }(x^1,\cdots,x^m)\mapsto (x^1,\cdots,x^k,0,\cdots,0)\]         
+\end{theorem}
+\begin{proof}
+    This is a local problem. So we may assume  $ M=\mathbb{R}^m,N=\mathbb{R}^n $ by restricting to local charts. And  $ p=0, F(p)=0 $. Afer changing orders of coordinates, may assume 
+     $ \dps\left(\frac{\partial F^i}{\partial x^j}(0)\right)_{1 \leq i,j \leq k} $ is invertible. Write  $ \mathbb{R}^m=\mathbb{R}^k\times \mathbb{R}^{m-k},\mathbb{R}^n=\mathbb{R}^k\times \mathbb R^{n-k} $.
+     
+     Then  $ F(x,y)=(Q(x,y),R(x,y)) $. Consider  $ \varphi:\mathbb{R}^m\rightarrow \mathbb{R}^m, (x,y)\mapsto (Q(x,y),y) $. Then 
+     \begin{equation}
+        \varphi_{(0,0),*}=\begin{bmatrix}
+            \dps\frac{\partial Q^i}{\partial x^j}(0)&0\\ \\
+            \dps\frac{\partial Q^i}{\partial y^j}(0)&I_{m-k}
+        \end{bmatrix}
+     \end{equation}  
+     is invertible.
+
+     By inverse function theorem,  $ \exists  $ Nbh  $ U_0\subset \mathbb{R}^m $,  $ \tilde{U_0}\subset \mathbb{R}^m $ of  $ 0 $ \st  $ \varphi:U_0\rightarrow \tilde{U_0} $ is a diffeomorphism.
+     
+     \begin{align*}
+        \tilde{U_0}&\xrightleftharpoons[\varphi]{\varphi^{-1}}U_0\xrightarrow{F}\mathbb{R}^n\\
+        (Q(x,y),y)&\mapsfrom (x,y)\mapsto (Q(x,y),R(x,y))
+     \end{align*}
+     So  $ F\circ \varphi^{-1}:\tilde{U_i} \rightarrow \mathbb{R}^n,(x,y)\mapsto (x,A(x,y))$.
+     And 
+     \begin{equation}
+        (F\circ\varphi^{-1})_{p,*}=\begin{bmatrix}
+            I_k&0\\ \\
+            \dps\frac{\partial A}{\partial x}(p)&\dps\frac{\partial A}{\partial y}(p)
+        \end{bmatrix}
+     \end{equation} 
+     Since  $ \rank(F\circ\varphi^{-1}) $ is k,  $ \dps\frac{\partial A}{\partial y}(p)=0 $. \ie  $ A(x,y)=A(x) $.
+     
+     We can find a map  $ \psi:(x,y)\mapsto (x,y-A(x)) $ in a smaller neighbourhood of  $ 0 $   by the inverse theorem similarly.
+     
+     And  $ \psi\circ F\circ \varphi $ maps  $ (x,y) $ to  $ (x,0) $.  So we end the proof.
+\end{proof}
+\begin{definition}
+     $ F\in C^\infty(M,N) $. 
+     
+     We say  $ F $ is \name{submersion} if  $ F_{p,*} $ is surjective $ \forall p\in M $.
+     
+     We say  $ F $ is \name{immersion} if  $ F_{p,*} $ is injective $ \forall p\in M $.
+
+     We say  $ F $ is \name{embedding} if  $ F $ is  immersion and  $ F $ is a topological embedding.(i.e.  $ F:M\rightarrow F(M) $ is a homeomorphism) 
+
+     If  $ F $ is embedding(immersion resp.), we say  $ M $ or  $ F(M) $ is an \name{embedded submanifold}(\name{immersed submanifold},resp.) of  $ N $.   
+     
+     Denote  \name{$ M\looparrowright N $} be the immersion. \name{$M\hookrightarrow N$} be the embedding.
+\end{definition}
+\begin{example}
+    \,\begin{itemize}
+        \item There is an example  $ F:S^1\rightarrow\mathbb{R}^2 $ where  $ F $ is an immersion but not an embedding.
+        \item  Projection $ M\times N\rightarrow M $ is a submersion.
+        \item  $ E\xrightarrow{p}B $ is a smooth vector bundle, then  $ p $ is a submersion.
+        \item  $ \gamma:\mathbb{R}\rightarrow M $ is an immersion $ \Leftrightarrow $ $ \gamma'(t)\not=0 $,  $ \forall t $.
+        \item There is an example  $ \gamma:\mathbb{R}\rightarrow \mathbb{R}^2 $ is injective immersion but not an embedding   
+        \item  $ \gamma:\mathbb{R}\rightarrow \mathrm{T}^2=\mathbb{R}/2\mathbb{Z}\times   \mathbb{R}/2\mathbb{Z} $,  $ x\mapsto (x,cx) $,  $ c\not\in \mathbb{Q} $ is injective immersion but not embedding.         
+    \end{itemize}
+\end{example}
+\begin{definition}
+    For  $ F:X\rightarrow Y $, we say  $ F $ is \name{proper} if for any compact set  $ K\subset N $,  $ F^{-1}(K) $ is compact.    
+\end{definition}
+\begin{lemma}
+     $ X $ is compact,  $ Y $ Hausdorff, then  $ F:X\rightarrow Y $ is proper.  
+\end{lemma}
+\begin{proposition}
+     $ F\in C^\infty(M,N)  $ is an injective immersion, and  $ F $ is proper. Then  $ F $ is an embedding.   
+\end{proposition}
+\begin{proof}
+     $ F:M\rightarrow F(M) $ is a closed map. 
+\end{proof}
+\begin{definition}
+    For  $ F\in C^\infty(M,N) $.
+    
+     $ p\in M $ is called \name{regular point} if  $ F_{p,*}:T_pM\rightarrow T_{F(p)}N $ is surjective.
+     
+      $ p\in M $ is called \name{critical point} if  $ F_{p,*}:T_pM\rightarrow T_{F(p)}N $ is not surjective. 
+     
+      $ q \in N$ is called \name{regular value} if  $ \forall p\in F^{-1}(q) $,  $ p $ is a regular point.
+      
+       $ q\in N $ is called \name{critical value}(or \name{singular value}) if  $ \exists p\in F^{-1}(q) $,  $ p $ is a critical point. 
+\end{definition}
+\begin{theorem}[Sard]
+    Singular value has measure  $ 0 $. 
+\end{theorem}
+\begin{proof}
+    We will not prove it in this lecture. 
+\end{proof}
+\begin{theorem}
+     $ M $ is an embedded submanifold of  $ N $ if and only if   $ \forall p\in M\subset N $,  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ of  $ N $ \st  $ M\cap U=\{(x^1,\cdots,x^m,0,\cdots,0)\} $       
+\end{theorem}
+\begin{proof}
+    "$ \Rightarrow $": $ F:M\rightarrow N $ is embedding  $ \Rightarrow  $ $ F $ has constant rank  $ m $. Apply constant rank theorem near  $ p $, and we finish the proof of  "$\Rightarrow $"
+
+    The converse is trivial.
+    
+\end{proof}
+\begin{theorem}
+     $ F\in C^\infty(M,N) $,  $ q $ is a regular valur of  $ F $. Then  $ F^{-1}(q) $ is an embedded submanifold of  $ M $. And 
+     \[\forall p\in F^{-1}(q),T_pF^{-1}(q)=\ker(F_{p,*}:T_pM\rightarrow T_{F(p)}N)\]     
+\end{theorem}
+\begin{proof}
+     $ q $ is regular value $ \Rightarrow  $ $ \rank_pF=n $, $ \forall p\in F^{-1}(q) $.
+
+      $ \Rightarrow  $ $ \rank_{p'}F=n $,  $ \forall p' $ near  $ p $, since we know  the rank of  $ p' $ near  $ p $ should not be less than that of  $ p $ 
+      
+      So by the constant rank theorem,  $ F^{-1}(q) $ is a submanifold near  $ p $.  
+      
+\end{proof}
+Denote  \[\mathfrak{so}(n)=\mathfrak{o}(n)=\{A\in M_n(\mathbb{R})|A+A^T=0\} \]
+\[\mathfrak{u}(n)=\{A\in M_n(\mathbb{C})|A+A^*=0\}\]
+\[\mathfrak{su}(n)=\{A\in u(n)|\tr A=0\}\]
+\[\mathfrak{sl}(n,\mathbb{R})=\{A\in M_n(\mathbb{R})|\tr A=0\}\]
+\[\mathfrak{sl}(n,\mathbb{C})=\{A\in M_n(\mathbb{C})|\tr A=0\}\]

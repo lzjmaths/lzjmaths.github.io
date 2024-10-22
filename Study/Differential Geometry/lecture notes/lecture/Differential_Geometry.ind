@@ -1,11 +1,13 @@
 \begin{theindex}
 
   \item $ F $-related, \hyperpage{23}
+  \item $ M\looparrowright N $, \hyperpage{34}
   \item $ \mathcal  {L}_VW $, \hyperpage{28}
   \item $ \mathfrak  {T}M $, \hyperpage{15}
   \item $ \mathrm  {Lie}(G) $, \hyperpage{24}
   \item $ \mathrm  {Supp}X $, \hyperpage{16}, \hyperpage{18}
   \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{25}
+  \item $M\DOTSB \lhook \joinrel  \rightarrow N$, \hyperpage{34}
 
   \indexspace
 
@@ -15,8 +17,8 @@
 
   \item commutes, \hyperpage{30}
   \item complete, \hyperpage{16}
-  \item critical point, \hyperpage{4}
-  \item critical value, \hyperpage{4}
+  \item critical point, \hyperpage{4}, \hyperpage{35}
+  \item critical value, \hyperpage{4}, \hyperpage{35}
   \item curve, \hyperpage{11}
     \subitem tangent, \hyperpage{11}
     \subitem velocity, \hyperpage{11}
@@ -27,6 +29,8 @@
 
   \indexspace
 
+  \item embedded submanifold, \hyperpage{34}
+  \item embedding, \hyperpage{34}
   \item exhaust, \hyperpage{8}
 
   \indexspace
@@ -45,6 +49,8 @@
 
   \indexspace
 
+  \item immersed submanifold, \hyperpage{34}
+  \item immersion, \hyperpage{34}
   \item integral curve, \hyperpage{15}, \hyperpage{18}
   \item isotropy, \hyperpage{6}
 
@@ -69,20 +75,25 @@
 
   \item partial-derivative, \hyperpage{10}
   \item partition of unity subordinat(P.O.U), \hyperpage{9}
+  \item proper, \hyperpage{35}
   \item push forward, \hyperpage{23}
 
   \indexspace
 
+  \item rank, \hyperpage{33}
+    \subitem constant rank, \hyperpage{33}
   \item refinement, \hyperpage{8}
-  \item regular point, \hyperpage{4}, \hyperpage{27}
-  \item regular value, \hyperpage{4}
+  \item regular point, \hyperpage{4}, \hyperpage{27}, \hyperpage{35}
+  \item regular value, \hyperpage{4}, \hyperpage{35}
   \item right invariant, \hyperpage{24}
 
   \indexspace
 
   \item singular point, \hyperpage{27}
+  \item singular value, \hyperpage{35}
   \item smooth manifold, \hyperpage{3}
   \item smooth section, \hyperpage{14}
+  \item submersion, \hyperpage{34}
 
   \indexspace
 
