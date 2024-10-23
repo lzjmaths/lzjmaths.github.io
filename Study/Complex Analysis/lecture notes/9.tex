@@ -58,7 +58,7 @@ If  $ f $ is analytic in an open disk $ \triangle $, and  $ \gamma $ is a closed
 This is usually referred to as \name{Cauchy's integral formula}
 
 \subsubsection{Higher derivatives}
-\begin{lemma}
+\begin{lemma}\label{Lemma of Analytic Properties of integral function}
     Let  $ \Omega\subset\mathbb{C}$ be a region and  $ \gamma $ be an arc in  $ \Omega $. If  $ \varphi $ is continuous on  $ \gamma $, then the function 
     \[F_n(z):=\dps\int_\gamma\frac{\varphi(\zeta)}{(\zeta-z)^n}\mathrm{d}\zeta\]
     is analytic in each of the regions  $ \Omega\backslash \gamma $, and its derivative is  $ F_n'(z)=nF_{n+1}(z) $
@@ -68,7 +68,7 @@ This is usually referred to as \name{Cauchy's integral formula}
     
     The lemma is true if  $ n=0 $:  $ F_0(z)=\int_\gamma\varphi(\zeta)\mathrm{d}\zeta $ and  $ F_0'(z)=0=0\cdot F_1(z) $.
     
-    We suppose that the lemma holds for  $ n-1 $ with  $ n\in \mathbb{N} $:  $ \forall  $ contoinuous $ \varphi $ on  $ \gamma $,  $ F_{n-1} $ is analytic in  $ \Omega\backslash \gamma $ and  $ F_{n-1}'
+    We suppose that the lemma holds for  $ n-1 $ with  $ n\in \mathbb{N} $:  $ \forall  $ continuous $ \varphi $ on  $ \gamma $,  $ F_{n-1} $ is analytic in  $ \Omega\backslash \gamma $ and  $ F_{n-1}'
     (z)=(n-1)F_n(z),\forall z\in \Omega\backslash \gamma $.
     
     Fix  $ z_0\in \Omega\backslash \gamma $. For  $ \forall z\in B(z_0,\frac{\delta}{2}) $, with  $ B(z_0,\delta)\subset \Omega\backslash \gamma $, we have  $ |\zeta-z|>\frac{delta}{2},\,\forall \zeta\in \gamma $.

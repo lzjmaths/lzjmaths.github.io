@@ -1,0 +1,124 @@
+\begin{theorem}
+    An analytic function on a region  $ \Omega $ has derivatives of all orders which are analytic in  $ \Omega $. More precisely,  $ \forall z_0\in \Omega $, choose  $ B(z,\delta)\subset \Omega $ and a circle  $ C\subset B(z_0,\delta) $ with center  $ z_0 $. For  $ \forall  $  $ z $ in the interior of  $ C $, Cauchy's integral formula gives 
+    \[f(z)=\frac{1}{2\pi i}\int_C\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\]     
+    Then the previous lemma implies  $ f'(z)=\dps\frac{1}{2\pi i}\int_C\frac{f(\zeta)}{(\zeta-z)^2}\mathrm{d}\zeta $ is analytic in the interior of  $ C $. More generally, for  $ \forall n\in \mathbb{N} $, 
+    \begin{equation}
+        f^{(n)}=\dps\frac{n!}{2\pi i}\int_C\frac{f(\zeta)}{(\zeta-z)^{n+1}}\mathrm{d}\zeta \label{Cauchy's Integral Formula for derivative vertion}
+    \end{equation}
+\end{theorem}
+\subsubsection{Consequences of Cauchy}
+\begin{theorem}[Morera's Theorem]
+    If  $ f $ is continuous in a region  $ \Omega $, and if  $ \int_\gamma f(z)\mathrm{d}z $ for  $ \forall $ closed curve $ \gamma $ in  $ \Omega $. Then  $ f $ is analytic in   $ \Omega $.       
+\end{theorem}
+\begin{proof}
+    We proved in Corollary \ref{Corollary of Fundamental Theorem} that under the hypothesis of theorem,  $ f=F' $ where  $ F $ is analytic in  $ \Omega $. The last theorem  $ \Rightarrow  $ $ f $ is analytic.
+\end{proof}
+Suppose  $ f $ is analytic in a disk, $ \overline{B(z_0,R)} $, and   bounded on the circle $ \gamma $ given by  $ |z-z_0|=R $. Then  $ \forall z\in \gamma $, $ |f(z)| \leq M $  for some  $ M \geq 0 $. By  $ (\ref{Cauchy's Integral Formula for derivative vertion}) $,
+\begin{equation}
+    |f^{(n)}(z)| \leq \frac{n!}{2\pi}\int_C\frac{f(\zeta)}{|\zeta-z_0|^{n+1}}|\mathrm{d}\zeta| \leq \frac{n!}{2\pi}\cdot\frac{M}{R^{n+1}}\cdot 2\pi R=MR^{-n}n!
+\end{equation}    
+This inequality is known as \name{Cauchy's estimate}.
+\begin{theorem}[Liouville's Theorem]
+    A bounded entire function (\ie analytic in  $ \mathbb{C} $) is constant.
+\end{theorem}
+\begin{proof}
+    Suppose  $ |f(z)| \leq M $, $ \forall z\in \mathbb{C} $. Cauchy's estimate $ \Rightarrow   $ 
+    \begin{equation}
+        |f'(z)| \leq \frac{M}{R},\,\forall z\in \mathbb{C},\forall R>0
+    \end{equation}  
+\end{proof}
+ $ \xLongrightarrow{R\to\infty}  $ $ f'(z)=0 $ for  $ z\in \mathbb{C} $   $ \Rightarrow  $ $ f=0 $.  
+ \begin{theorem}[Fundamental Theorem for Algebra]
+    Every polynomial of degree  $ n \geq 1 $ has  $ n $ roots.  
+ \end{theorem}
+\begin{proof}
+    It suffices to prove it has at least one root.
+
+    Suppose  $ P(z)=a_nz^n+\cdots a_1z+a_0 $ with  $ a_0\not=0 $ does not have a root.
+    
+    Then  $ f(z):=\frac{1}{P(z)} $ is an entire function. As  $ z\rightarrow \infty $,  $ \dps\lim\limits_{|z|\to\infty}\frac{|P(z)}{|z|^n}=|a_n| $ $ \Rightarrow  $ $ \dps\lim\limits_{|z|\to\infty}\frac{1}{|P(z)|}=0 $.
+
+    So  $ f $ is bounded. By Liouville's Theorem,  $ f  $ is a constant. Where  $ f=f(\infty)=0 $. That causes contradiction.   
+\end{proof}
+\begin{theorem}[Power series]
+    If  $ f $ is analytic in a region  $ \Omega $ which contains a closed disk  $ \overline{B(z_0,R)} $, then  $ f $ has a power series expansion at  $ z_0 $,
+    \begin{equation}
+        f(z)=\sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n,\quad \forall z\in B(z_0,R)
+    \end{equation}  
+    \begin{proof}
+         $ \forall z\in B(z_0,R)$, $ \forall \zeta $ with  $ |\zeta-z_0|=R $.
+         \begin{equation}
+            \begin{aligned}
+                \frac{1}{\zeta-z}&=\frac{1}{(\zeta-z_0)-(z-z_0)}\\
+                &=\frac{1}{\zeta-z_0}\cdot\frac{1}{1-\frac{z-z_0}{\zeta-z_0}}\\
+                &=\frac{1}{\zeta-z_0}\sum_{n=0}^\infty\left(\frac{z-z_0}{\zeta-z_0}\right)^n\\
+                &=\sum_{n=0}^\infty\frac{(z-z_0)^n}{(\zeta-z_0)^{n+1}}
+            \end{aligned}
+         \end{equation}   
+         This series converges uniformly in  $ \zeta $ with  $ |\zeta-z_0|=R $.
+         
+         For  $ \forall z\in B(z,R) $,
+         \begin{equation}
+            \begin{aligned}
+                f(z)&=\frac{1}{2\pi i}\int_{|\zeta-z|=R}\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\\
+                &=\frac{1}{2\pi i}\int_{|\zeta-z|=R}f(\zeta)\sum_{n=0}^\infty\frac{(z-z_0)^n}{(\zeta-z_0)^{n+1}}\mathrm{d}\zeta\\
+                &\xlongequal{\text{uniformly}}\sum_{n=0}^\infty \frac{1}{2\pi i}\int_{|\zeta-z|=R}\frac{f(\zeta)}{(\zeta-z_0)^{n+1}}\mathrm{d}\zeta\cdot(z-z_0)^n\\
+                &\overset{(\ref{Cauchy's Integral Formula for derivative vertion})}{=}\sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n
+            \end{aligned}
+         \end{equation}
+    \end{proof}   
+\end{theorem}
+\subsection{Local properties of analytic functions}
+\subsubsection{Removable Singularities and Taylor's Theorem}
+We remarked that  Cauchy's integral formula holds if  $ f $ is analytic except at a finite number of point  $ \zeta_j $ \st  $ \lim\limits_{\zeta\to\zeta_j}(\zeta-\zeta_j)(f\zeta)=0 $. We will prove  $ f $ can be extended to an analytic function in  $ \triangle $.
+In other word,  $ \zeta_j $ are \name{removable singularities}.
+\begin{theorem}[Riemann's Removable Singularities Theorem]\label{Riemann's Removable Singularities Theorem}
+    Suppose that  $ f $ is analytic in the region  $ \Omega'=\Omega\backslash\{\zeta_0\} $ where  $ \Omega $ is also a region. Then there exists an analytic function in  $ \Omega $ which coincides with $ f $ in  $ \Omega' $ if and only if  $ \dps\lim\limits_{z\to \zeta_0}(z-\zeta_0)f(z)=0 $.       
+\end{theorem}       
+\begin{proof}
+    The uniqueness and  "$ \Rightarrow $" part  is trivial since the extended function is continuous at  $ \psi_0 $. 
+
+    "$ \Leftarrow $": Cauchy's integral formula $ \Rightarrow $  
+    \begin{equation}
+        f(z)=\dps\frac{1}{2\pi i}\int_C \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta,\,\forall z\in \triangle  \text{ and }  z\not=\zeta_0\label{10eq1}
+    \end{equation} 
+    Lemma \ref{Lemma of Analytic Properties of integral function} $ \Rightarrow $ the RHS of the last equation \ref{10eq1} is analytic in  $ z\in \triangle $. Then 
+    \begin{equation}
+        \hat{f}(z)=\begin{cases}
+            f(z),&z\not=\zeta_0\\
+            \dps\frac{1}{2\pi i}\int_C\frac{f(\zeta)}{\zeta-\zeta_0}\mathrm{d}\zeta,z=\zeta_0
+        \end{cases}
+    \end{equation} 
+    is analytic in  $ \Omega $. 
+\end{proof}
+We apply Theorem \ref{Riemann's Removable Singularities Theorem} to the function  $ F(z)=\dps\frac{f(z)-f(\zeta)}{z-\zeta} $, where  $ f $ is analytic in a region  $ \Omega $. Note that 
+\begin{equation}
+    \lim\limits_{z\to \zeta_0}(z-\zeta)F(z)=0,\,\lim_{z\to\zeta}F(z)=f'(\zeta)
+\end{equation} 
+Theorem \ref{Riemann's Removable Singularities Theorem} $ \Rightarrow $  $ \exists $ analytic function  $ f_1 $ on  $ \Omega $ \st 
+\begin{equation}
+    f_1(z)=\begin{cases}
+        F(z),&z\not=\zeta_0\\
+        f'(\zeta),z=\zeta_0
+    \end{cases}
+\end{equation}  
+we may thus write  $ f(z)=f(\zeta)+(z-\zeta)f_1(z) $.
+
+Repeating this process for  $ f_1 $, we get an analytic function  $ f_2 $ on  $ \Omega $ \st 
+\begin{equation}
+    f_1(z)=f_1(\zeta)+(z-\zeta)f_2(z)
+\end{equation} 
+where 
+\begin{equation}
+    f_2(z)=\begin{cases}
+        \dps\frac{f_1(z)-f_1(\zeta)}{z-\zeta},&z\not=\zeta\\
+        f_2'(\zeta),&z=\zeta
+    \end{cases}
+\end{equation}
+Continuing the recursion, we have the general form 
+\begin{equation}
+    f_{n-1}(z)=f_{n-1}(\zeta)+(z-\zeta)f_n(z)
+\end{equation}
+ $ \Rightarrow $ \begin{equation}
+    f(z)=f(\zeta)+(z-\zeta)f_1(\zeta)+\cdots+(z-\zeta)^{n-1}f_n(\zeta)+(z-\zeta)^nf_n(z)
+ \end{equation}  

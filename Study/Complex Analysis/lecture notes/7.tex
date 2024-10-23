@@ -1,8 +1,8 @@
-Let  $ \gamma $ br a piecewise differential arc in  $ \mathbb{C} $ with the equation  $ z=z(t),a \leq t \leq b $. If  $ f  $ is continuous on  $ \gamma $, then  $ f(z(t)) $ is conitnuous on  $ [a,b] $, and we define
+Let  $ \gamma $ be a piecewise differential arc in  $ \mathbb{C} $ with the equation  $ z=z(t),a \leq t \leq b $. If  $ f  $ is continuous on  $ \gamma $, then  $ f(z(t)) $ is continuous on  $ [a,b] $, and we define
 \begin{equation}
     \int_\gamma f(z)\mathrm{d}z=\int_a^bf(z(t))z'(t)\mathrm{d}t\label{integration of complex curve}
 \end{equation}  
-The integral defined in \ref{integration of complex curve} is independent of the parametrization of  $ \gamma $. Suppose that anther parrametrization of  $ \gamma $ is  $ \gamma:(\alpha,\beta)\rightarrow \mathbb{C} ,\tau\mapsto z(t(\tau))$, where  $ t:(\alpha,\beta)\rightarrow (a,b),\tau\mapsto t(\tau) $ is piecewise differentiable. Then we have
+The integral defined in \ref{integration of complex curve} is independent of the parametrization of  $ \gamma $. Suppose that anther parametrization of  $ \gamma $ is  $ \gamma:(\alpha,\beta)\rightarrow \mathbb{C} ,\tau\mapsto z(t(\tau))$, where  $ t:(\alpha,\beta)\rightarrow (a,b),\tau\mapsto t(\tau) $ is piecewise differentiable. Then we have
 \begin{equation}
     \int_a^b f(z(t))z'(t)\mathrm{d}t=\int_\alpha^\beta f(z(t(\tau)))z'(t(\tau))t'(\tau)\mathrm{d}t=\int_\alpha^\beta f(z(t(\tau)))\frac{\mathrm{d}z(t(\tau))}{\mathrm{d}\tau}\mathrm{d}\tau
 \end{equation}
@@ -79,7 +79,7 @@ The integral of a continuous function  $ f $ on a rectifiable arc may be defined
 \begin{proof}
     Transform  the line integration into  the composition of two real integration.
 \end{proof}
-\begin{corollary}
-    If  $ F $ is analytic on  $ \Omega $ with  $ F'=f $, and  $ \gamma $ is a closed curve in  $\Omega $, then  $ \int_\gamma f\mathrm{d}z=0 $. Conversely if  $ f $  is continuous on  $ \Omega $ and  $ \int_\gamma f\mathrm{d}z=0 $ for any closed curve in  $ \Omega $, then  $ f $ is the derivartive of an analytic function  $ F $ in  $\Omega $.          
+\begin{corollary}\label{Corollary of Fundamental Theorem}
+    If  $ F $ is analytic on  $ \Omega $ with  $ F'=f $, and  $ \gamma $ is a closed curve in  $\Omega $, then  $ \int_\gamma f\mathrm{d}z=0 $. Conversely if  $ f $  is continuous on  $ \Omega $ and  $ \int_\gamma f\mathrm{d}z=0 $ for any closed curve in  $ \Omega $, then  $ f $ is the derivative of an analytic function  $ F $ in  $\Omega $.          
 \end{corollary}
 

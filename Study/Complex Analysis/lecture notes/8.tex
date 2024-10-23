@@ -9,7 +9,7 @@ There is some notes in this section:
     For  $ \forall $ rectangle  $ \tilde{R}  $ inside  $ R $, we define  $ {Z}(\tilde{R})=\dps\int_{\partial \tilde{R}}f(z)\mathrm{d}z $. Then  $ Z(R)=Z(R_1)+Z(R_2) $ if  $ R $ is divided into  $ Z_1,Z_2 $.  
     
     Since we can divide  $ R $ into four equal rectangles, and find a rectangle with  $ |{Z}(R^{(1)})| \geq \frac{1}{4}|{Z}(R)| $.
-    Then repeat the above steps and we obetain a sequence of nested rectangles
+    Then repeat the above steps and we obtain a sequence of nested rectangles
      $ R\supset R^{(1)}\supset\cdots $ with the property 
      \begin{equation}
         {Z}(R^{(n)}) \geq \frac{1}{4}|{Z}(R^{(n-1)})| \geq \cdots \geq \frac{1}{4^{n}}{Z}(R)\label{eq:2}
@@ -52,12 +52,12 @@ There is some notes in this section:
   \begin{proof}
     Suppose the center of  $ \Delta $ is  $ z_0=x_0+iy_0 $,  $ z=x+iy $. We define 
     \[F(z)=\int_\gamma f(z)\mathrm{d}z\]
-    where  $ \gamma $ is the horizotal line segment from  $ z_0 $ to  $ (x,y_0) $ added with vertical line segment from  $ (x,y_0) $ to  $ z $. We have
+    where  $ \gamma $ is the horizontal line segment from  $ z_0 $ to  $ (x,y_0) $ added with vertical line segment from  $ (x,y_0) $ to  $ z $. We have
     
     \begin{equation}
         \frac{\partial F}{\partial y}=\lim_{\delta y\to 0}\frac{F(x,y+\delta y)-F(x,y)}{\delta y}=\lim_{\delta y\to 0}\frac{1}{\delta y}\int_{\delta\gamma}f(z)\mathrm{d}z=if(z)
     \end{equation}
-    By Cauchy' thm on rectangles, one has  $ F(z)=-\int_{\tilde{\gamma}}f(z)\mathrm{d}z $, where  $ \tilde{\gamma} $ is the vertical line segment from  $ z_0 $ to  $ (x_0,y) $ added with horizontal line segment from  $ (x_0,y) $ to  $ z $.
+    By Cauchy' theorem on rectangles, one has  $ F(z)=-\int_{\tilde{\gamma}}f(z)\mathrm{d}z $, where  $ \tilde{\gamma} $ is the vertical line segment from  $ z_0 $ to  $ (x_0,y) $ added with horizontal line segment from  $ (x_0,y) $ to  $ z $.
     
     Similarly,  $ \dps\frac{\partial F}{\partial x}=f(z) $.
     
