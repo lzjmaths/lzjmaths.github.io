@@ -6,7 +6,7 @@ layout: page
 
 <img src="https://lzjmaths.github.io/images/my_photo.jpg" class="floatpic" width="360" height="480">
 
-![weijf](chinaHigh.svg){:width="360" height="900"}
+
 
 Here is **Lin Zejin (林则缙)**.
 
@@ -33,5 +33,5 @@ I wrote or just organized notes into electronic format when I was free. Those no
 - **[解析几何性质](高中/解析几何/geometry/geometry.pdf)**
 
 ## News and Updates
-
+![weijf](chinaHigh.svg){:width="1000" height="900"}
 - **Oct14 2024:** I create my personal website with the help of [Hanlin Cai](https://caihanlin.com/).
