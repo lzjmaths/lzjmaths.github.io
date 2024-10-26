@@ -33,5 +33,4 @@ I wrote or just organized notes into electronic format when I was free. Those no
 - **[解析几何性质](高中/解析几何/geometry/geometry.pdf)**
 
 ## News and Updates
-![weijf](chinaHigh.svg){:width="1000" height="900"}
 - **Oct14 2024:** I create my personal website with the help of [Hanlin Cai](https://caihanlin.com/).
