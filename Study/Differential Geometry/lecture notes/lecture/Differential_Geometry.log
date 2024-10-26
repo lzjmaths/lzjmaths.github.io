@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  26 OCT 2024 23:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  26 OCT 2024 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1254,8 +1254,7 @@ File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
-
-No file Differential_Geometry.aux.
+ (./Differential_Geometry.aux)
 \openout1 = `Differential_Geometry.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 500.
@@ -1268,7 +1267,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 500.
 LaTeX Font Info:    ... okay on input line 500.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 500.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 500.
-(c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 500.
@@ -1393,11 +1392,10 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 500.
+(./Differential_Geometry.out) (./Differential_Geometry.out)
 \@outlinefile=\write6
 \openout6 = `Differential_Geometry.out'.
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.16).
 
@@ -1418,35 +1416,79 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 50
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 504.
  (c:/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-No file Differential_Geometry.toc.
+) (./Differential_Geometry.toc [1
+
+])
 \tf@toc=\write7
 \openout7 = `Differential_Geometry.toc'.
 
-[1
+ [2] (../DG1/1.tex
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 2.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 19.
+ [3]
+Package hyperref Info: bookmark level for unknown question defaults to 0 on input line 48.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 60.
+ (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [4]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 67.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 74.
+) (../DG2.tex [5]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 7.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 15.
+ [6]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 46.
+ [7]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 77.
+) (../DG3.tex [8]) (../DG4.tex [9]) (../DG5.tex [10] [11] [12]) (../DG6.tex [13] [14]) (../DG7.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [15] [16] [17] [18]) (../DG8.tex [19]
+Package hyperref Info: bookmark level for unknown notation defaults to 0 on input line 41.
+ [20]
+Package hyperref Info: bookmark level for unknown fact defaults to 0 on input line 63.
+ [21] [22]
+Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 106.
+) (../DG9.tex [23] [24] [25] [26]
+Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 111.
+) (../DG10.tex [27] [28] [29] [30] [31]) (../DG11.tex [32] [33] [34] [35]) [36]
+runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
-]
-./Differential_Geometry.tex:506: I can't write on file `../DG1/1.aux'.
-\@include ...mmediate \openout \@partaux "#1.aux" 
-                                                  \immediate \write \@partau...
-l.506 \include{../DG1/1.tex}
-                            
-(Press Enter to retry, or Control-Z to exit; default file extension is `.tex')
-Please type another output file name
-./Differential_Geometry.tex:506: Emergency stop.
-\@include ...mmediate \openout \@partaux "#1.aux" 
-                                                  \immediate \write \@partau...
-l.506 \include{../DG1/1.tex}
-                            
-*** (job aborted, file error in nonstop mode)
+ (./Differential_Geometry.ind
+Underfull \hbox (badness 2495) in paragraph at lines 75--76
+[]\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
+ []
 
- 
+[37
+
+
+] [38
+
+])
+showing theorem
+showing proposition
+(./Differential_Geometry.loe [39
+
+])
+\tf@loe=\write8
+\openout8 = `Differential_Geometry.loe'.
+
+ [40] [41] (./Differential_Geometry.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
+(rerunfilecheck)             Checksum: FDA90D78E0AAE5343E8EFFCF909D3ADB;3369.
+ ) 
 Here is how much of TeX's memory you used:
- 45285 strings out of 474773
- 1020527 string characters out of 5761289
- 1922842 words of memory out of 5000000
- 66627 multiletter control sequences out of 15000+600000
- 579638 words of font info for 83 fonts, out of 8000000 for 9000
+ 45908 strings out of 474773
+ 1034025 string characters out of 5761289
+ 1932842 words of memory out of 5000000
+ 67168 multiletter control sequences out of 15000+600000
+ 600395 words of font info for 144 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,7n,102p,748b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on Differential_Geometry.pdf (1 page).
+ 87i,21n,102p,748b,1208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on Differential_Geometry.pdf (41 pages).
