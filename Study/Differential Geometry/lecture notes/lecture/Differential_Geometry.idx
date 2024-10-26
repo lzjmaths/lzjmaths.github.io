@@ -1,71 +1,30 @@
-\indexentry{smooth manifold|hyperpage}{3}
-\indexentry{regular point|hyperpage}{4}
-\indexentry{critical point|hyperpage}{4}
-\indexentry{regular value|hyperpage}{4}
-\indexentry{critical value|hyperpage}{4}
-\indexentry{Lie group|hyperpage}{6}
-\indexentry{$GL(n),O(n),SO(n),U(n),SU(n)$|hyperpage}{6}
-\indexentry{homogeneous space|hyperpage}{6}
-\indexentry{isotropy|hyperpage}{6}
-\indexentry{bump function |hyperpage}{8}
-\indexentry{locally finite|hyperpage}{8}
-\indexentry{exhaust|hyperpage}{8}
-\indexentry{refinement|hyperpage}{8}
-\indexentry{partition of unity subordinat(P.O.U)|hyperpage}{9}
-\indexentry{genus of smooth function|hyperpage}{10}
-\indexentry{partial-derivative|hyperpage}{10}
-\indexentry{tangent vector|hyperpage}{10}
-\indexentry{tangent space|hyperpage}{10}
-\indexentry{differential|hyperpage}{10}
-\indexentry{curve|hyperpage}{11}
-\indexentry{curve!velocity|hyperpage}{11}
-\indexentry{curve!tangent|hyperpage}{11}
-\indexentry{tangent bundle|hyperpage}{11}
-\indexentry{vector bundle|hyperpage}{12}
-\indexentry{fiber|hyperpage}{13}
-\indexentry{vector bundle!isomorphism|hyperpage}{13}
-\indexentry{trivialization|hyperpage}{13}
-\indexentry{smooth section|hyperpage}{14}
-\indexentry{vector field|hyperpage}{14}
-\indexentry{gradient vector field|hyperpage}{14}
-\indexentry{integral curve|hyperpage}{15}
-\indexentry{$ \mathfrak  {T}M $|hyperpage}{15}
-\indexentry{flow|hyperpage}{15}
-\indexentry{flow|hyperpage}{16}
-\indexentry{complete|hyperpage}{16}
-\indexentry{$ \mathrm  {Supp}X $|hyperpage}{16}
-\indexentry{one-parameter transformation group|hyperpage}{17}
-\indexentry{vector field!Time dependent|hyperpage}{18}
-\indexentry{integral curve|hyperpage}{18}
-\indexentry{$ \mathrm  {Supp}X $|hyperpage}{18}
-\indexentry{Lie bracket|hyperpage}{21}
-\indexentry{$ F $-related|hyperpage}{23}
-\indexentry{push forward|hyperpage}{23}
-\indexentry{Lie algebra|hyperpage}{23}
-\indexentry{left invariant|hyperpage}{24}
-\indexentry{right invariant|hyperpage}{24}
-\indexentry{$ \mathrm  {Lie}(G) $|hyperpage}{24}
-\indexentry{$ \mathrm  {gl}(n,\mathbb  {R}) $|hyperpage}{25}
-\indexentry{morphism|hyperpage}{27}
-\indexentry{morphism|hyperpage}{27}
-\indexentry{regular point|hyperpage}{27}
-\indexentry{singular point|hyperpage}{27}
-\indexentry{$ \mathcal  {L}_VW $|hyperpage}{28}
-\indexentry{Lie derivative|hyperpage}{28}
-\indexentry{commutes|hyperpage}{30}
-\indexentry{rank|hyperpage}{33}
-\indexentry{rank!constant rank|hyperpage}{33}
-\indexentry{submersion|hyperpage}{34}
-\indexentry{immersion|hyperpage}{34}
-\indexentry{embedding|hyperpage}{34}
-\indexentry{embedded submanifold|hyperpage}{34}
-\indexentry{immersed submanifold|hyperpage}{34}
-\indexentry{$ M\looparrowright N $|hyperpage}{34}
-\indexentry{$M\DOTSB \lhook \joinrel  \rightarrow N$|hyperpage}{34}
-\indexentry{proper|hyperpage}{35}
-\indexentry{regular point|hyperpage}{35}
-\indexentry{critical point|hyperpage}{35}
-\indexentry{regular value|hyperpage}{35}
-\indexentry{critical value|hyperpage}{35}
-\indexentry{singular value|hyperpage}{35}
-\indexentry{$\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$|hyperpage}{36}
+\indexentry{$GL(n),O(n),SO(n),U(n),SU(n)$|hyperpage}{4}
+\indexentry{bump function |hyperpage}{5}
+\indexentry{refinement|hyperpage}{5}
+\indexentry{genus of smooth function|hyperpage}{6}
+\indexentry{partial-derivative|hyperpage}{6}
+\indexentry{differential|hyperpage}{7}
+\indexentry{vector bundle!isomorphism|hyperpage}{7}
+\indexentry{trivialization|hyperpage}{7}
+\indexentry{gradient vector field|hyperpage}{8}
+\indexentry{integral curve|hyperpage}{8}
+\indexentry{$ \mathfrak  {T}M $|hyperpage}{8}
+\indexentry{flow|hyperpage}{9}
+\indexentry{complete|hyperpage}{9}
+\indexentry{$ \mathrm  {Supp}X $|hyperpage}{9}
+\indexentry{one-parameter transformation group|hyperpage}{9}
+\indexentry{vector field!Time dependent|hyperpage}{10}
+\indexentry{integral curve|hyperpage}{10}
+\indexentry{$ \mathrm  {Supp}X $|hyperpage}{10}
+\indexentry{push forward|hyperpage}{13}
+\indexentry{left invariant|hyperpage}{14}
+\indexentry{right invariant|hyperpage}{14}
+\indexentry{$ \mathrm  {Lie}(G) $|hyperpage}{14}
+\indexentry{morphism|hyperpage}{15}
+\indexentry{morphism|hyperpage}{15}
+\indexentry{regular point|hyperpage}{15}
+\indexentry{singular point|hyperpage}{15}
+\indexentry{$ \mathcal  {L}_VW $|hyperpage}{16}
+\indexentry{rank|hyperpage}{17}
+\indexentry{rank!constant rank|hyperpage}{17}
+\indexentry{$\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$|hyperpage}{18}
