@@ -6,6 +6,8 @@ layout: page
 
 <img src="https://lzjmaths.github.io/images/my_photo.jpg" class="floatpic" width="360" height="480">
 
+![weijf](chinaHigh.svg){:width="360" height="900"}
+
 Here is **Lin Zejin (林则缙)**.
 
 

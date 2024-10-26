@@ -1,76 +1,115 @@
 \begin{theindex}
 
-  \item $ \mathcal  {L}_VW $, \hyperpage{16}
-  \item $ \mathfrak  {T}M $, \hyperpage{8}
-  \item $ \mathrm  {Lie}(G) $, \hyperpage{14}
-  \item $ \mathrm  {Supp}X $, \hyperpage{9, 10}
-  \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{4}
+  \item $ F $-related, \hyperpage{23}
+  \item $ M\looparrowright N $, \hyperpage{34}
+  \item $ \mathcal  {L}_VW $, \hyperpage{28}
+  \item $ \mathfrak  {T}M $, \hyperpage{15}
+  \item $ \mathrm  {Lie}(G) $, \hyperpage{24}
+  \item $ \mathrm  {Supp}X $, \hyperpage{16}, \hyperpage{18}
+  \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{25}
+  \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{6}
+  \item $M\DOTSB \lhook \joinrel  \rightarrow N$, \hyperpage{34}
   \item $\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$, 
-		\hyperpage{18}
+		\hyperpage{36}
 
   \indexspace
 
-  \item bump function , \hyperpage{5}
+  \item bump function , \hyperpage{8}
 
   \indexspace
 
-  \item complete, \hyperpage{9}
+  \item commutes, \hyperpage{30}
+  \item complete, \hyperpage{16}
+  \item critical point, \hyperpage{4}, \hyperpage{35}
+  \item critical value, \hyperpage{4}, \hyperpage{35}
+  \item curve, \hyperpage{11}
+    \subitem tangent, \hyperpage{11}
+    \subitem velocity, \hyperpage{11}
 
   \indexspace
 
-  \item differential, \hyperpage{7}
+  \item differential, \hyperpage{10}
 
   \indexspace
 
-  \item flow, \hyperpage{9}
+  \item embedded submanifold, \hyperpage{34}
+  \item embedding, \hyperpage{34}
+  \item exhaust, \hyperpage{8}
 
   \indexspace
 
-  \item genus of smooth function, \hyperpage{6}
-  \item gradient vector field, \hyperpage{8}
+  \item fiber, \hyperpage{13}
+  \item flow, \hyperpage{15, 16}
 
   \indexspace
 
-  \item integral curve, \hyperpage{8}, \hyperpage{10}
+  \item genus of smooth function, \hyperpage{10}
+  \item gradient vector field, \hyperpage{14}
 
   \indexspace
 
-  \item left invariant, \hyperpage{14}
+  \item homogeneous space, \hyperpage{6}
 
   \indexspace
 
-  \item morphism, \hyperpage{15}
+  \item immersed submanifold, \hyperpage{34}
+  \item immersion, \hyperpage{34}
+  \item integral curve, \hyperpage{15}, \hyperpage{18}
+  \item isotropy, \hyperpage{6}
 
   \indexspace
 
-  \item one-parameter transformation group, \hyperpage{9}
+  \item left invariant, \hyperpage{24}
+  \item Lie algebra, \hyperpage{23}
+  \item Lie bracket, \hyperpage{21}
+  \item Lie derivative, \hyperpage{28}
+  \item Lie group, \hyperpage{6}
+  \item locally finite, \hyperpage{8}
 
   \indexspace
 
-  \item partial-derivative, \hyperpage{6}
-  \item push forward, \hyperpage{13}
+  \item morphism, \hyperpage{27}
 
   \indexspace
 
-  \item rank, \hyperpage{17}
-    \subitem constant rank, \hyperpage{17}
-  \item refinement, \hyperpage{5}
-  \item regular point, \hyperpage{15}
-  \item right invariant, \hyperpage{14}
+  \item one-parameter transformation group, \hyperpage{17}
 
   \indexspace
 
-  \item singular point, \hyperpage{15}
+  \item partial-derivative, \hyperpage{10}
+  \item partition of unity subordinat(P.O.U), \hyperpage{9}
+  \item proper, \hyperpage{35}
+  \item push forward, \hyperpage{23}
 
   \indexspace
 
-  \item trivialization, \hyperpage{7}
+  \item rank, \hyperpage{33}
+    \subitem constant rank, \hyperpage{33}
+  \item refinement, \hyperpage{8}
+  \item regular point, \hyperpage{4}, \hyperpage{27}, \hyperpage{35}
+  \item regular value, \hyperpage{4}, \hyperpage{35}
+  \item right invariant, \hyperpage{24}
 
   \indexspace
 
-  \item vector bundle
-    \subitem isomorphism, \hyperpage{7}
-  \item vector field
-    \subitem Time dependent, \hyperpage{10}
+  \item singular point, \hyperpage{27}
+  \item singular value, \hyperpage{35}
+  \item smooth manifold, \hyperpage{3}
+  \item smooth section, \hyperpage{14}
+  \item submersion, \hyperpage{34}
+
+  \indexspace
+
+  \item tangent bundle, \hyperpage{11}
+  \item tangent space, \hyperpage{10}
+  \item tangent vector, \hyperpage{10}
+  \item trivialization, \hyperpage{13}
+
+  \indexspace
+
+  \item vector bundle, \hyperpage{12}
+    \subitem isomorphism, \hyperpage{13}
+  \item vector field, \hyperpage{14}
+    \subitem Time dependent, \hyperpage{18}
 
 \end{theindex}

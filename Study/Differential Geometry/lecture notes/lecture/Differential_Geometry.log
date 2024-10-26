@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  26 OCT 2024 18:08
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  26 OCT 2024 20:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1251,7 +1251,7 @@ Package pgfplots: loading complementary utilities for your pgf version...
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) Excluding comment 'proof' Excluding comment 'remark' Excluding comment 'definition' Excluding comment 'example' Excluding comment 'exercise'
+)))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (./Differential_Geometry.aux)
@@ -1422,64 +1422,73 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \tf@toc=\write7
 \openout7 = `Differential_Geometry.toc'.
 
- [2] (../DG1/1.tex Excluding 'definition' comment. Excluding 'definition' comment. Excluding 'definition' comment.
+ [2] (../DG1/1.tex
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 2.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 19.
- Excluding 'definition' comment.
+ [3]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on input line 48.
- Excluding 'definition' comment.
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 60.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [3] Excluding 'remark' comment.
+) [4]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 67.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 74.
- Excluding 'remark' comment. Excluding 'remark' comment.) (../DG2.tex Excluding 'definition' comment. Excluding 'example' comment. Excluding 'exercise' comment. Excluding 'definition' comment. Excluding 'definition' comment.
+) (../DG2.tex [5]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 7.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 15.
+ [6]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 46.
- Excluding 'example' comment. [4]
+ [7]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 77.
-) (../DG3.tex Excluding 'definition' comment. Excluding 'definition' comment. [5] Excluding 'definition' comment.) (../DG4.tex Excluding 'definition' comment.) (../DG5.tex [6] Excluding 'definition' comment.) (../DG6.tex Excluding 'example' comment. Excluding 'example' comment. Excluding 'example' comment. Excluding 'proof' comment. [7] Excluding 'definition' comment. Excluding 'definition' comment. Excluding 'example' comment.) (../DG7.tex
+) (../DG3.tex [8]) (../DG4.tex [9]) (../DG5.tex [10] [11] [12]) (../DG6.tex [13] [14]) (../DG7.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 1.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [8] Excluding 'definition' comment. Excluding 'example' comment. Excluding 'proof' comment. Excluding 'proof' comment. [9] Excluding 'proof' comment. Excluding 'proof' comment. Excluding 'proof' comment. Excluding 'proof' comment. [10]) (../DG8.tex Excluding 'proof' comment. Excluding 'proof' comment. Excluding 'proof' comment. [11]
+) [15] [16] [17] [18]) (../DG8.tex [19]
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on input line 41.
- Excluding 'definition' comment. Excluding 'proof' comment.
+ [20]
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input line 63.
- Excluding 'example' comment. [12] Excluding 'definition' comment. Excluding 'example' comment.
+ [21] [22]
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 106.
- Excluding 'proof' comment. [13]) (../DG9.tex Excluding 'definition' comment. Excluding 'proof' comment. Excluding 'proof' comment. Excluding 'example' comment. Excluding 'remark' comment. [14] Excluding 'proof' comment. Excluding 'proof' comment. Excluding 'proof' comment.) (../DG10.tex [15] Excluding 'proof' comment. Excluding 'remark' comment. Excluding 'definition' comment. Excluding 'proof' comment. Excluding 'proof' comment.) (../DG11.tex Excluding 'proof' comment. [16] Excluding 'proof' comment. Excluding 'definition' comment. Excluding 'example' comment. Excluding 'definition' comment. Excluding 'proof' comment. Excluding 'definition' comment. Excluding 'proof' comment. Excluding 'proof' comment. Excluding 'proof' comment. [17]) [18]
+) (../DG9.tex [23] [24] [25] [26]
+Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 111.
+) (../DG10.tex [27] [28] [29] [30] [31]) (../DG11.tex [32] [33] [34] [35]) [36]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [19
+ (./Differential_Geometry.ind
+Underfull \hbox (badness 2495) in paragraph at lines 75--76
+[]\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
+ []
 
+[37
+
+
+] [38
 
 ])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [20
+(./Differential_Geometry.loe [39
 
 ])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [21] (./Differential_Geometry.aux)
+ [40] [41] (./Differential_Geometry.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: 5CC5BB0F23ABA4A4086B7317500A9F37;3059.
+(rerunfilecheck)             Checksum: FDA90D78E0AAE5343E8EFFCF909D3ADB;3369.
  ) 
 Here is how much of TeX's memory you used:
- 45775 strings out of 474773
- 1030635 string characters out of 5761289
- 1930842 words of memory out of 5000000
- 67035 multiletter control sequences out of 15000+600000
+ 45908 strings out of 474773
+ 1034025 string characters out of 5761289
+ 1932842 words of memory out of 5000000
+ 67168 multiletter control sequences out of 15000+600000
  600395 words of font info for 144 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,17n,102p,748b,1137s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,21n,102p,748b,1208s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (21 pages).
+Output written on Differential_Geometry.pdf (41 pages).
