@@ -3,19 +3,19 @@
     \[f(z)=\frac{1}{2\pi i}\int_C\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\]     
     Then the previous lemma implies  $ f'(z)=\dps\frac{1}{2\pi i}\int_C\frac{f(\zeta)}{(\zeta-z)^2}\mathrm{d}\zeta $ is analytic in the interior of  $ C $. More generally, for  $ \forall n\in \mathbb{N} $, 
     \begin{equation}
-        f^{(n)}=\dps\frac{n!}{2\pi i}\int_C\frac{f(\zeta)}{(\zeta-z)^{n+1}}\mathrm{d}\zeta \label{Cauchy's Integral Formula for derivative vertion}
+        f^{(n)}(z)=\dps\frac{n!}{2\pi i}\int_C\frac{f(\zeta)}{(\zeta-z)^{n+1}}\mathrm{d}\zeta \label{Cauchy's Integral Formula for derivative vertion}
     \end{equation}
 \end{theorem}
 \subsubsection{Consequences of Cauchy}
 \begin{theorem}[Morera's Theorem]
-    If  $ f $ is continuous in a region  $ \Omega $, and if  $ \int_\gamma f(z)\mathrm{d}z $ for  $ \forall $ closed curve $ \gamma $ in  $ \Omega $. Then  $ f $ is analytic in   $ \Omega $.       
+    If  $ f $ is continuous in a region  $ \Omega $, and if  $ \int_\gamma f(z)\mathrm{d}z=0 $ for  $ \forall $ closed curve $ \gamma $ in  $ \Omega $. Then  $ f $ is analytic in   $ \Omega $.       
 \end{theorem}
 \begin{proof}
     We proved in Corollary \ref{Corollary of Fundamental Theorem} that under the hypothesis of theorem,  $ f=F' $ where  $ F $ is analytic in  $ \Omega $. The last theorem  $ \Rightarrow  $ $ f $ is analytic.
 \end{proof}
 Suppose  $ f $ is analytic in a disk, $ \overline{B(z_0,R)} $, and   bounded on the circle $ \gamma $ given by  $ |z-z_0|=R $. Then  $ \forall z\in \gamma $, $ |f(z)| \leq M $  for some  $ M \geq 0 $. By  $ (\ref{Cauchy's Integral Formula for derivative vertion}) $,
 \begin{equation}
-    |f^{(n)}(z)| \leq \frac{n!}{2\pi}\int_C\frac{f(\zeta)}{|\zeta-z_0|^{n+1}}|\mathrm{d}\zeta| \leq \frac{n!}{2\pi}\cdot\frac{M}{R^{n+1}}\cdot 2\pi R=MR^{-n}n!
+    |f^{(n)}(z)| \leq \frac{n!}{2\pi}\int_C\frac{|f(\zeta)|}{|\zeta-z_0|^{n+1}}|\mathrm{d}\zeta| \leq \frac{n!}{2\pi}\cdot\frac{M}{R^{n+1}}\cdot 2\pi R=MR^{-n}n!
 \end{equation}    
 This inequality is known as \name{Cauchy's estimate}.
 \begin{theorem}[Liouville's Theorem]
@@ -36,7 +36,7 @@ This inequality is known as \name{Cauchy's estimate}.
 
     Suppose  $ P(z)=a_nz^n+\cdots a_1z+a_0 $ with  $ a_0\not=0 $ does not have a root.
     
-    Then  $ f(z):=\frac{1}{P(z)} $ is an entire function. As  $ z\rightarrow \infty $,  $ \dps\lim\limits_{|z|\to\infty}\frac{|P(z)}{|z|^n}=|a_n| $ $ \Rightarrow  $ $ \dps\lim\limits_{|z|\to\infty}\frac{1}{|P(z)|}=0 $.
+    Then  $ f(z):=\frac{1}{P(z)} $ is an entire function. As  $ z\rightarrow \infty $,  $ \dps\lim\limits_{|z|\to\infty}\frac{|P(z)|}{|z|^n}=|a_n| $ $ \Rightarrow  $ $ \dps\lim\limits_{|z|\to\infty}\frac{1}{|P(z)|}=0 $.
 
     So  $ f $ is bounded. By Liouville's Theorem,  $ f  $ is a constant. Where  $ f=f(\infty)=0 $. That causes contradiction.   
 \end{proof}
