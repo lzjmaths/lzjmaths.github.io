@@ -82,17 +82,17 @@ A smooth  $ \varphi:\mathbb{R}\times M\rightarrow M $ is called an \name{one-par
      
       $ \Rightarrow  $  $ \gamma_p(-+s) $ is an integral curve for  $ X  $ starting at  $ \gamma_p(s)=\varphi_s(p) $. But  $ \gamma_{\varphi_s(p)} $ is also an integral curve starting at  $ \varphi_s(p) $. Thus  $ \gamma_{\varphi_s(p)}=\gamma_p(-+s) $ $ \Rightarrow $  $ \varphi_r\circ \varphi_s(p)=\gamma_{r+s}(p) $     
 \end{proof}
-\begin{lemma}
+\begin{lemma}\label{Vector field is invariant under its flow}
     Let  $ \varphi:(-\epsilon,\epsilon)\times U\rightarrow M $ be a local flow for some  $ X\in \mathfrak{T}M $. Then  $ \varphi_{s,*}(X_p)=X_{\varphi_s(p)}\in T_{\varphi_s(p)}M $ \ie any vector field is invariant under its flow.  
 \end{lemma}
 \begin{proof}
     Take  $ f\in C^\infty_{\varphi(p)}(M) $.  
-    \begin{align}
+    \begin{align*}
         \varphi_{s,*}(X_p)(f)&=X_p(f\circ \varphi_s)\\
         &=\frac{\mathrm{d}}{\mathrm{d}t}(f\circ\varphi_s(\varphi_t(p)))|_{t=0}\\
         &=\frac{\mathrm{d}}{\mathrm{d}t}(f\circ\varphi_t(\varphi_s(p)))|_{t=0}\\
         &=X_{\varphi_s(p)}(f)
-    \end{align} 
+    \end{align*} 
 \end{proof}
 \begin{proof}[Proof of \ref{equivalence of one-parameter transformation group}]
     "$ \Leftarrow $" is because the lemma  $ \varphi_s\circ \varphi_r=\varphi_{s+r} $ 

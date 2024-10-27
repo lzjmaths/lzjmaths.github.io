@@ -25,7 +25,7 @@ Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point
     for  $ f(x,y)=x^2-y^2 $,  $ \nabla f=2x\partial x-2y\partial y$,  $ g:\mathbb{C}\rightarrow C,z\mapsto z^n $, they behave differently at  $ \vec{0} $.     
 \end{remark}
 \subsection{Lie derivative of vector field}
- $ V,W\in \mathfrak{T}M $,  \name{$ \mathcal{L}_VW $}= is the directional derivative of  $ W $ in the direction of  $ V $.
+ $ V,W\in \mathfrak{T}M $,  \name{$ \mathcal{L}_VW $} is the directional derivative of  $ W $ in the direction of  $ V $.
  \begin{definition}
     The \name{Lie derivative}  $ \mathcal{L}_VW\in \mathfrak{T}M $ is defined as follows: $ \forall p\in M $, let  $ \{\theta_t:U\rightarrow M\}_{t\in (-\epsilon,\epsilon)} $ be the local flow for  $ V $. Then  \[\dps (\mathcal{L}_VW)_p=\lim\limits_{t\to 0}\frac{(\theta_{-t})_*W_{\theta_t(p)}-W_p}{t} \]    
  \end{definition}
@@ -88,7 +88,7 @@ Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point
     {\begin{center}
         \begin{tikzcd}
             M\arrow[r,"F"]\arrow[d,"\theta_t"]&N\arrow[d,"\eta_t"]\\
-            M\arrow[r]&N
+            M\arrow[r,"F"]&N
         \end{tikzcd}
         commutes.
     \end{center}

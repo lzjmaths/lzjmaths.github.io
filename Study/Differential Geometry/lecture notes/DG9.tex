@@ -45,10 +45,10 @@ So we can find a natural Lie algebra of  $ G $:
       
       Consider the map 
       \begin{align*}
-        \hat{f}:G\times \mathbb{R}&\xrightarrow{\id\times \gamma}G\times G&\xrightarrow{\cdot}G&\xrightarrow{f}\mathbb{R}\\
-        (g,t)&\mapsto (g,\gamma(t))&\mapsto g\cdot\gamma(t)&\mapsto f(g\cdot\gamma(t))
+        \hat{f}:G\times \mathbb{R}&\xrightarrow{\id\times \gamma}G\times G\xrightarrow{\cdot}G\xlongrightarrow{f}\mathbb{R}\\
+        (g,t)&\mapsto (g,\gamma(t))\mapsto g\cdot\gamma(t)\mapsto f(g\cdot\gamma(t))
       \end{align*}
-      Then  $ \hat{f} $ s smooth,  $ \dps\frac{\partial \hat{f}}{\partial t}|_{t=0}:G\rightarrow \mathbb{R} $ is smooth, but  $ \dps\frac{\partial f}{\partial t}|_{t=0}(g)=\hat{V}(f)(g) $ by \ref{eq:lie derivative}. So  $ \hat{V}(f)\in C^\infty(G) $.    
+      Then  $ \hat{f} $ is smooth,  $ \dps\frac{\partial \hat{f}}{\partial t}|_{t=0}:G\rightarrow \mathbb{R} $ is smooth, but  $ \dps\frac{\partial f}{\partial t}|_{t=0}(g)=\hat{V}(f)(g) $ by \ref{eq:lie derivative}. So  $ \hat{V}(f)\in C^\infty(G) $.    
 \end{proof}
 \begin{example}
      $ G=\GL(n,\mathbb{R})=\{A\in M_n(\mathbb R)|\det A\not=0\}\subset M_n(\mathbb{R})\cong \mathbb{R}^2 $.
@@ -63,26 +63,30 @@ So we can find a natural Lie algebra of  $ G $:
     R)=M_n(\mathbb{R}) $ can commute with those corresponding, or equivalently, are just the same. 
 \end{remark}
 \begin{lemma}
-     $ \forall A\in \mathrm{gl}(n,\mathbb{R}) $, the left invariant vector field  $ \hat{A} $ is complete and generated the flow  $ \dps\varphi_t:\GL(n,\mathbb{R})\rightarrow \GL(n,\mathbb{R}), \varphi_t(g)=ge^{At}=g(I+At+\frac{A^2t^2}{2!}+\cdots) $   
+     $ \forall A\in \mathrm{gl}(n,\mathbb{R}) $, the left invariant vector field  $ \hat{A} $ is complete and generate the flow  $ \dps\varphi_t:\GL(n,\mathbb{R})\rightarrow \GL(n,\mathbb{R}), \varphi_t(g)=ge^{At}=g(I+At+\frac{A^2t^2}{2!}+\cdots) $   
 \end{lemma}
 \begin{proof}
      \[\hat{A_g}=g\cdot A\in T_gG=M_n(\mathbb{R})\]
-      \[\frac{\partial}{\partial t}\varphi_t(g)=\frac{\partial}{\partial t}(g(e^{At}))=ge^{At}A=\hat{A_{g\cdot e^{At}}}=\hat{A}_{\varphi_t(g)}\]
+      \[\frac{\partial}{\partial t}\varphi_t(g)=\frac{\partial}{\partial t}(g(e^{At}))=ge^{At}A=\hat{A}_{g\cdot e^{At}}=\hat{A}_{\varphi_t(g)}\]
 \end{proof}
+\begin{remark}
+     This lemma tells how to compute  $ A(f)=\hat{A}(f)(I) $ as a tangent vector or a vector field, as we will see in the next proof. 
+\end{remark}
 \begin{proof}[Proof of Theorem \ref{Theorem:Lie bracket of GLn}]
     Take  $ A,B\in \mathrm{gl}(n,\mathbb{R}) $. Want to show  $ [\hat{A},\hat{B}]_I=AB-BA $.
     
     Pick  $ f\in C^\infty_I(G) $, need to show  $ A(\hat{B}(f))-B(\hat{A}(f))=(AB-BA)(f) $
     
-    Further Simplification: Just need to focus on  $ f=x^{ij} $, where  $ x^{ij}:\GL(n,\mathbb{R})\rightarrow \mathbb{R}, E\mapsto (E-I)_{ij} $.
+    Further Simplification: Just need to focus on  $ f=x^{ij} $, where  $ x^{ij}:\GL(n,\mathbb{R})\rightarrow \mathbb{R}, E\mapsto (E-I)_{ij} $. Actually,  $ \partial x^{ij} $ is what we choose as a basis of  $ T_I\GL(n,\mathbb{R}) $.  
     
     Such  $ f $ satisfies  $ f(I+-) $ is  $ \mathbb{R} $-linear.
     
-    Recall that Given  $ W\in \mathfrak{T}M $,  $ W(f)(p)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(\varphi_t^W(p))|_{t=0} $.
+    Recall that Given  $ W\in \mathfrak{T}M $,  $ W(f)(p)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(\varphi_t^W(p))|_{t=0} $. 
     
-    So  $ \hat{B}(f)(g)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(ge^{tB})|_{t=0} $.
+    So  $ \hat{B}(f)(g)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(ge^{Bt})|_{t=0} $.
     
-    So  \[\dps A(\hat{B}(f)) =\frac{\mathrm{d}}{\mathrm{d}t}(\hat{B}(f)(e^{As}))|_{s=0}=\frac{\mathrm{d}^2}{\mathrm{d}s\mathrm{d}t}f(I+sA+tB+\frac{s^2}{2}A^2+stAB+\frac{t^2}{2}B^2+\cdots)|_{s=t=0}\]
+    So  since  $ A(\hat{B}(f))=\hat{A}((\hat{B})(f))(I)=\dps \frac{\mathrm{d}}{\mathrm{d}s}(\hat{B}(f)(e^{As}))|_{s=0}  $, 
+    \[\dps A(\hat{B}(f)) =\frac{\mathrm{d}}{\mathrm{d}s}(\hat{B}(f)(e^{As}))|_{s=0}=\frac{\mathrm{d}^2}{\mathrm{d}s\mathrm{d}t}f(I+sA+tB+\frac{s^2}{2}A^2+stAB+\frac{t^2}{2}B^2+\cdots)|_{s=t=0}\]
     Similarly,
     \[\dps B(\hat{A}(f))=\frac{\mathrm{d}^2}{\mathrm{d}s\mathrm{d}t}f(I+sA+tB+\frac{s^2}{2}A^2+stBA+\frac{t^2}{2}B^2+\cdots)|_{s=t=0}\]
     So $ A(\hat{B}(f))-B(\hat{A}(f))=f(I+(AB-BA))=(AB-BA)(f) $ since  $ f $ is  $ \mathbb{R} $-linear.  

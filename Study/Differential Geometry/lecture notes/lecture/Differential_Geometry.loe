@@ -57,7 +57,7 @@
 \contentsline {definition}{\ifthmt@listswap Definition~2.15\else \numberline {2.15}Definition\fi \thmtformatoptarg {smooth section}}{14}{definition.2.15}%
 \contentsline {definition}{\ifthmt@listswap Definition~2.16\else \numberline {2.16}Definition\fi }{14}{definition.2.16}%
 \contentsline {example}{\ifthmt@listswap Example~2.17\else \numberline {2.17}Example\fi }{14}{example.2.17}%
-\contentsline {theorem}{\ifthmt@listswap Theorem~2.18\else \numberline {2.18}Theorem\fi \thmtformatoptarg {Poincare-Hopf}}{14}{theorem.2.18}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~2.18\else \numberline {2.18}Theorem\fi \thmtformatoptarg {Poincare-Hopf}}{15}{theorem.2.18}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~2.19\else \numberline {2.19}Theorem\fi \thmtformatoptarg {MaoQiu}}{15}{theorem.2.19}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~2.20\else \numberline {2.20}Theorem\fi \thmtformatoptarg {Fundamental theorem of integral curve}}{15}{theorem.2.20}%
 \contentsline {definition}{\ifthmt@listswap Definition~2.21\else \numberline {2.21}Definition\fi }{16}{definition.2.21}%
@@ -68,12 +68,12 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem~2.26\else \numberline {2.26}Theorem\fi }{17}{theorem.2.26}%
 \contentsline {lemma}{\ifthmt@listswap Lemma~2.27\else \numberline {2.27}Lemma\fi \thmtformatoptarg {Translation lemma}}{17}{lemma.2.27}%
 \contentsline {lemma}{\ifthmt@listswap Lemma~2.28\else \numberline {2.28}Lemma\fi }{17}{lemma.2.28}%
-\contentsline {lemma}{\ifthmt@listswap Lemma~2.29\else \numberline {2.29}Lemma\fi }{17}{lemma.2.29}%
+\contentsline {lemma}{\ifthmt@listswap Lemma~2.29\else \numberline {2.29}Lemma\fi }{18}{lemma.2.29}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~2.30\else \numberline {2.30}Theorem\fi }{19}{theorem.2.30}%
 \contentsline {lemma}{\ifthmt@listswap Lemma~2.31\else \numberline {2.31}Lemma\fi }{19}{lemma.2.31}%
 \contentsline {lemma}{\ifthmt@listswap Lemma~2.32\else \numberline {2.32}Lemma\fi }{19}{lemma.2.32}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~2.33\else \numberline {2.33}Theorem\fi }{20}{theorem.2.33}%
-\contentsline {notation}{\ifthmt@listswap Notation~3.1\else \numberline {3.1}Notation\fi }{20}{notation.3.1}%
+\contentsline {notation}{\ifthmt@listswap Notation~3.1\else \numberline {3.1}Notation\fi }{21}{notation.3.1}%
 \contentsline {definition}{\ifthmt@listswap Definition~3.2\else \numberline {3.2}Definition\fi \thmtformatoptarg {Lie bracket}}{21}{definition.3.2}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~3.3\else \numberline {3.3}Theorem\fi }{21}{theorem.3.3}%
 \contentsline {fact}{\ifthmt@listswap Fact~3.4\else \numberline {3.4}Fact\fi }{21}{fact.3.4}%
@@ -86,7 +86,7 @@
 \contentsline {lemma}{\ifthmt@listswap Lemma~3.10\else \numberline {3.10}Lemma\fi }{23}{lemma.3.10}%
 \contentsline {proposition}{\ifthmt@listswap Proposition~3.11\else \numberline {3.11}Proposition\fi }{23}{proposition.3.11}%
 \contentsline {corollary}{\ifthmt@listswap Corollary~3.12\else \numberline {3.12}Corollary\fi \thmtformatoptarg {Naturality of Lie bracket}}{23}{corollary.3.12}%
-\contentsline {definition}{\ifthmt@listswap Definition~3.13\else \numberline {3.13}Definition\fi }{23}{definition.3.13}%
+\contentsline {definition}{\ifthmt@listswap Definition~3.13\else \numberline {3.13}Definition\fi }{24}{definition.3.13}%
 \contentsline {proposition}{\ifthmt@listswap Proposition~3.14\else \numberline {3.14}Proposition\fi }{24}{proposition.3.14}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~3.15\else \numberline {3.15}Theorem\fi }{24}{theorem.3.15}%
 \contentsline {corollary}{\ifthmt@listswap Corollary~3.16\else \numberline {3.16}Corollary\fi }{24}{corollary.3.16}%
@@ -94,28 +94,29 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem~3.18\else \numberline {3.18}Theorem\fi }{25}{theorem.3.18}%
 \contentsline {remark}{\ifthmt@listswap Remark~3.19\else \numberline {3.19}Remark\fi }{25}{remark.3.19}%
 \contentsline {lemma}{\ifthmt@listswap Lemma~3.20\else \numberline {3.20}Lemma\fi }{25}{lemma.3.20}%
-\contentsline {fact}{\ifthmt@listswap Fact~3.21\else \numberline {3.21}Fact\fi }{26}{fact.3.21}%
-\contentsline {proposition}{\ifthmt@listswap Proposition~3.22\else \numberline {3.22}Proposition\fi }{27}{proposition.3.22}%
-\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{27}{thmt@dummyctr.dummy.99}%
-\contentsline {theorem}{\ifthmt@listswap Theorem~4.1\else \numberline {4.1}Theorem\fi \thmtformatoptarg {Canonical Form Theorem}}{27}{theorem.4.1}%
+\contentsline {remark}{\ifthmt@listswap Remark~3.21\else \numberline {3.21}Remark\fi }{26}{remark.3.21}%
+\contentsline {fact}{\ifthmt@listswap Fact~3.22\else \numberline {3.22}Fact\fi }{27}{fact.3.22}%
+\contentsline {proposition}{\ifthmt@listswap Proposition~3.23\else \numberline {3.23}Proposition\fi }{27}{proposition.3.23}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{27}{thmt@dummyctr.dummy.100}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~4.1\else \numberline {4.1}Theorem\fi \thmtformatoptarg {Canonical Form Theorem}}{28}{theorem.4.1}%
 \contentsline {remark}{\ifthmt@listswap Remark~4.2\else \numberline {4.2}Remark\fi }{28}{remark.4.2}%
-\contentsline {definition}{\ifthmt@listswap Definition~4.3\else \numberline {4.3}Definition\fi }{28}{definition.4.3}%
-\contentsline {remark}{\ifthmt@listswap Remark~4.4\else \numberline {4.4}Remark\fi }{28}{remark.4.4}%
-\contentsline {lemma}{\ifthmt@listswap Lemma~4.5\else \numberline {4.5}Lemma\fi }{28}{lemma.4.5}%
+\contentsline {definition}{\ifthmt@listswap Definition~4.3\else \numberline {4.3}Definition\fi }{29}{definition.4.3}%
+\contentsline {remark}{\ifthmt@listswap Remark~4.4\else \numberline {4.4}Remark\fi }{29}{remark.4.4}%
+\contentsline {lemma}{\ifthmt@listswap Lemma~4.5\else \numberline {4.5}Lemma\fi }{29}{lemma.4.5}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~4.6\else \numberline {4.6}Theorem\fi }{29}{theorem.4.6}%
 \contentsline {corollary}{\ifthmt@listswap Corollary~4.7\else \numberline {4.7}Corollary\fi }{30}{corollary.4.7}%
 \contentsline {definition}{\ifthmt@listswap Definition~4.8\else \numberline {4.8}Definition\fi }{30}{definition.4.8}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~4.9\else \numberline {4.9}Theorem\fi }{30}{theorem.4.9}%
-\contentsline {lemma}{\ifthmt@listswap Lemma~4.10\else \numberline {4.10}Lemma\fi }{30}{lemma.4.10}%
+\contentsline {lemma}{\ifthmt@listswap Lemma~4.10\else \numberline {4.10}Lemma\fi }{31}{lemma.4.10}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~4.11\else \numberline {4.11}Theorem\fi }{32}{theorem.4.11}%
 \contentsline {proposition}{\ifthmt@listswap Proposition~4.12\else \numberline {4.12}Proposition\fi }{33}{proposition.4.12}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~4.13\else \numberline {4.13}Theorem\fi \thmtformatoptarg {The constant rank theorem}}{33}{theorem.4.13}%
-\contentsline {definition}{\ifthmt@listswap Definition~4.14\else \numberline {4.14}Definition\fi }{34}{definition.4.14}%
-\contentsline {example}{\ifthmt@listswap Example~4.15\else \numberline {4.15}Example\fi }{34}{example.4.15}%
+\contentsline {definition}{\ifthmt@listswap Definition~4.14\else \numberline {4.14}Definition\fi }{35}{definition.4.14}%
+\contentsline {example}{\ifthmt@listswap Example~4.15\else \numberline {4.15}Example\fi }{35}{example.4.15}%
 \contentsline {definition}{\ifthmt@listswap Definition~4.16\else \numberline {4.16}Definition\fi }{35}{definition.4.16}%
 \contentsline {lemma}{\ifthmt@listswap Lemma~4.17\else \numberline {4.17}Lemma\fi }{35}{lemma.4.17}%
-\contentsline {proposition}{\ifthmt@listswap Proposition~4.18\else \numberline {4.18}Proposition\fi }{35}{proposition.4.18}%
-\contentsline {definition}{\ifthmt@listswap Definition~4.19\else \numberline {4.19}Definition\fi }{35}{definition.4.19}%
-\contentsline {theorem}{\ifthmt@listswap Theorem~4.20\else \numberline {4.20}Theorem\fi \thmtformatoptarg {Sard}}{35}{theorem.4.20}%
+\contentsline {proposition}{\ifthmt@listswap Proposition~4.18\else \numberline {4.18}Proposition\fi }{36}{proposition.4.18}%
+\contentsline {definition}{\ifthmt@listswap Definition~4.19\else \numberline {4.19}Definition\fi }{36}{definition.4.19}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~4.20\else \numberline {4.20}Theorem\fi \thmtformatoptarg {Sard}}{36}{theorem.4.20}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~4.21\else \numberline {4.21}Theorem\fi }{36}{theorem.4.21}%
 \contentsline {theorem}{\ifthmt@listswap Theorem~4.22\else \numberline {4.22}Theorem\fi }{36}{theorem.4.22}%

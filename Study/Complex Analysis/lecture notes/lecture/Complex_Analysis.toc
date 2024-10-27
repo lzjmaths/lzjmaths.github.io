@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {4.1}Connectedness}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Compactness}{7}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Continuous Functions}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}short}{8}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Arcs and closed curves}{8}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Analytic Functions in Regions}{8}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Conformal Mappings}{9}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Length and Area}{10}{subsection.4.7}%
