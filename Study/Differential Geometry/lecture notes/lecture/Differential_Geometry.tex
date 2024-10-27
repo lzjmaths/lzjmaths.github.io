@@ -555,3 +555,40 @@
 
 
 %%%%%%%%
+
+
+%%%%%%%%
+% An example to draw Mayer-Vietoris sequence 
+% \documentclass{article}
+% \usepackage{tikz-cd}
+
+% \tikzset{
+%   curarrow/.style={
+%   rounded corners=8pt,
+%   execute at begin to={every node/.style={fill=red}},
+%     to path={-- ([xshift=-50pt]\tikztostart.center)
+%     |- (#1) node[fill=white] {$\scriptstyle d_*$}
+%     -| ([xshift=50pt]\tikztotarget.center)
+%     -- (\tikztotarget)}
+%     }
+% }
+
+% \begin{document}
+
+%     \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
+%        \cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
+%        H_{k}(M) \arrow[curarrow=Y]{urr}{} & H_{k}(U) \oplus H_{k}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H_{k}(U \cap V) \arrow[l] \\
+%        H_{k+1}(M) \arrow[curarrow=Z]{urr}{} & H_{k+1}(U) \oplus H_{k+1}(V) \arrow[l] & \cdots \arrow[l]
+%    \end{tikzcd}
+
+% \end{document}
+
+
+
+
+
+
+
+
+
+%%%%%%%%
