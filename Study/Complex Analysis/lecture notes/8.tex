@@ -4,22 +4,22 @@ There is some notes in this section:
  $ R $ is the rectangle in  $ \mathbb{C} $,  $ R=\{x+iy\in\mathbb{C}:a \leq x \leq b,c \leq y \leq d\} $. And  $ \partial R $ is boundary curve oriented in the counterclockwise direction.
  \begin{theorem}[Cauch's theorem for a rectangle]\label{Cauchy's theorem for a rectangle}
     If  $ f $ is analytic on an open set which contains  $ R $, then  $ \dps\int_{\partial R}f(z)\mathrm{d}z=0 $   
- \end{theorem}
- \begin{proof}
+\end{theorem}
+\begin{proof}
     For  $ \forall $ rectangle  $ \tilde{R}  $ inside  $ R $, we define  $ {Z}(\tilde{R})=\dps\int_{\partial \tilde{R}}f(z)\mathrm{d}z $. Then  $ Z(R)=Z(R_1)+Z(R_2) $ if  $ R $ is divided into  $ Z_1,Z_2 $.  
     
     Since we can divide  $ R $ into four equal rectangles, and find a rectangle with  $ |{Z}(R^{(1)})| \geq \frac{1}{4}|{Z}(R)| $.
     Then repeat the above steps and we obtain a sequence of nested rectangles
      $ R\supset R^{(1)}\supset\cdots $ with the property 
-     \begin{equation}
+   \begin{equation}
         {Z}(R^{(n)}) \geq \frac{1}{4}|{Z}(R^{(n-1)})| \geq \cdots \geq \frac{1}{4^{n}}{Z}(R)\label{eq:2}
-     \end{equation}
+   \end{equation}
       $ \forall \delta>0 $,  $ \exists n\in \mathbb{N} $ \st  $ R^{(n)}\subset\{z\in\mathbb{C}:|z-z_0|<\delta\},\forall n \geq N $, where  $ z_0 $ is the limit of  $ R^{(n)} $ as  $ n\rightarrow \infty $.
       
        $ f $ is analytic  in  $ R $ $ \Rightarrow $  $ \forall \epsilon $,  $ \exists \delta>0$ \st 
-       \begin{equation}
+      \begin{equation}
         \left|\dps\frac{f(z)-f(z_0)}{z-z_0}-f'(z_0)\right|<\epsilon,\forall z\text{ with }|z-z_0|<\delta\label{eq:1}
-       \end{equation}
+      \end{equation}
        We assume that  $ \delta $ satisfies both conditions. We have 
        \[{Z}(R^{(n)})=\int_{\partial R^{(n)}}f(z)\mathrm{d}z=\int_{\partial R^{(n)}}[f(z)-f(z_0)-(z-z_0)f'(z_0)]\mathrm{d}z\]
        \[\Rightarrow |{Z}(R^{(n)})| \leq \epsilon \int_{\partial R^{(n)}}|z-z_0|\mathrm{d}z \text{ by \ref{eq:1}} \]   
@@ -28,12 +28,12 @@ There is some notes in this section:
        $ \Rightarrow |{Z}(R^{(n)})| \leq \epsilon d_nL_n=\epsilon \dps\frac{D}{2^n}\cdot\frac{L}{2^n} $ where  $ D $,  $ L $ are the diameter and perimeter of  $ R $.
        
         $ \Rightarrow  $  $ |{Z(R)}| \overset{\ref{eq:2}}{ \leq }4^n|{Z}(R^{(n)})| \leq \epsilon DL \Rightarrow Z(R)=0 $ since  $ \epsilon $ is arbitary.  
- \end{proof}    
+\end{proof}    
  We will next prove the following stronger theorem:
- \begin{theorem}[stronger version of Cauchy's theorem for a rectangle]\label{stronger version of Cauchy's theorem for a rectangle}
+\begin{theorem}[stronger version of Cauchy's theorem for a rectangle]\label{stronger version of Cauchy's theorem for a rectangle}
     Let  $ f $ be analytic on  $ R'=R\backslash\{\psi_1,\cdots,\psi_m\}, m\in \mathbb{N} $. If  $ \dps\lim\limits_{z\to\psi_j}(z-\psi_j)f(z)=0,\forall 1 \leq j \leq m $, then  $ \dps\int_{\partial R}f(z)\mathrm{d}z=0 $.    
- \end{theorem}
- \begin{proof}
+\end{theorem}
+\begin{proof}
     WLOG, we may assume  $ f $ is not analytic at only one point  $ \psi\in R $. If we put  $ psi  $ into a small rectangle $ S_0 $, then the previous theorem tells us  $ \int_{
         \partial R
     }f(z)\mathrm{d}z=\int_{\partial S_0}f(z)\mathrm{d}z $.
@@ -43,45 +43,44 @@ There is some notes in this section:
       $\dps \Rightarrow|\int_{\partial R}f(z)\mathrm{d}z \leq \epsilon \int_{\partial S_0}\frac{|\mathrm{d}z|}{|z-\psi|} \leq \epsilon \frac{1}{\frac{l}{2}}\cdot 4l=8\epsilon $ 
       
        $ \Rightarrow $ $ \int_{\partial R}f(z)\mathrm{d}z=0 $ since  $ \epsilon $ is arbitrary.   
- \end{proof}
- \subsubsection{Cauchy's Theorem for a disk}
-  $ \Delta:=\{z\in \mathbb{C}:|z-z_0|<R\} $ where  $ R>0 $.
-  \begin{theorem}[Cauchy's Theorem for a disk]\label{Cauchy's theorem for a disk}
-    If  $ f $ is analytic in an open disk  $ \Delta $, then  $ \int_\gamma f(z)\mathrm{d}z=0 $  for closed curve  $ \gamma $ in  $ \Delta $.  
-  \end{theorem}  
-  \begin{proof}
-    Suppose the center of  $ \Delta $ is  $ z_0=x_0+iy_0 $,  $ z=x+iy $. We define 
-    \[F(z)=\int_\gamma f(z)\mathrm{d}z\]
-    where  $ \gamma $ is the horizontal line segment from  $ z_0 $ to  $ (x,y_0) $ added with vertical line segment from  $ (x,y_0) $ to  $ z $. We have
+\end{proof}
+\subsubsection{Cauchy's Theorem for a disk}
+$ \Delta:=\{z\in \mathbb{C}:|z-z_0|<R\} $ where  $ R>0 $.
+\begin{theorem}[Cauchy's Theorem for a disk]\label{Cauchy's theorem for a disk}
+   If  $ f $ is analytic in an open disk  $ \Delta $, then  $ \int_\gamma f(z)\mathrm{d}z=0 $  for closed curve  $ \gamma $ in  $ \Delta $.  
+\end{theorem}  
+\begin{proof}
+   Suppose the center of  $ \Delta $ is  $ z_0=x_0+iy_0 $,  $ z=x+iy $. We define 
+   \[F(z)=\int_\gamma f(z)\mathrm{d}z\]
+   where  $ \gamma $ is the horizontal line segment from  $ z_0 $ to  $ (x,y_0) $ added with vertical line segment from  $ (x,y_0) $ to  $ z $. We have
     
-    \begin{equation}
-        \frac{\partial F}{\partial y}=\lim_{\delta y\to 0}\frac{F(x,y+\delta y)-F(x,y)}{\delta y}=\lim_{\delta y\to 0}\frac{1}{\delta y}\int_{\delta\gamma}f(z)\mathrm{d}z=if(z)
-    \end{equation}
-    By Cauchy' theorem on rectangles, one has  $ F(z)=-\int_{\tilde{\gamma}}f(z)\mathrm{d}z $, where  $ \tilde{\gamma} $ is the vertical line segment from  $ z_0 $ to  $ (x_0,y) $ added with horizontal line segment from  $ (x_0,y) $ to  $ z $.
-    
-    Similarly,  $ \dps\frac{\partial F}{\partial x}=f(z) $.
-    
-     $ \Rightarrow \frac{\partial F}{\partial x}=-i\frac{\partial F}{\partial y} $ $ \Rightarrow  $ $ F  $   is analytic in  $ \Delta $  with derivative  $ f $.
-     
-     By Fundamental Theorem \ref{FTC for integrals} of Calulus $ \Rightarrow  $  $ \int_\gamma f(z)\mathrm{d}z=0 $ for  $ \forall  $ closed curve in  $ \Delta $.    
-  \end{proof}
-  Here is a stronger version.
-  \begin{theorem}[stronger version of Cauchy's Theorem for a disk]\label{stronger version of Cauchy's theorem for a disk}
+\begin{equation}
+      \frac{\partial F}{\partial y}=\lim_{\delta y\to 0}\frac{F(x,y+\delta y)-F(x,y)}{\delta y}=\lim_{\delta y\to 0}\frac{1}{\delta y}\int_{\delta\gamma}f(z)\mathrm{d}z=if(z)
+\end{equation}
+   By Cauchy' theorem on rectangles, one has  $ F(z)=-\int_{\tilde{\gamma}}f(z)\mathrm{d}z $, where  $ \tilde{\gamma} $ is the vertical line segment from  $ z_0 $ to  $ (x_0,y) $ added with horizontal line segment from  $ (x_0,y) $ to  $ z $.
+   
+   Similarly,  $ \dps\frac{\partial F}{\partial x}=f(z) $.
+   
+   $ \Rightarrow \frac{\partial F}{\partial x}=-i\frac{\partial F}{\partial y} $ $ \Rightarrow  $ $ F  $   is analytic in  $ \Delta $  with derivative  $ f $.
+   By Fundamental Theorem \ref{FTC for integrals} of Calulus $ \Rightarrow  $  $ \int_\gamma f(z)\mathrm{d}z=0 $ for  $ \forall  $ closed curve in  $ \Delta $.    
+\end{proof}
+Here is a stronger version.
+\begin{theorem}[stronger version of Cauchy's Theorem for a disk]\label{stronger version of Cauchy's theorem for a disk}
     Let  $ f $ be analytic in a region  $ \Delta'=\Delta\backslash\{\psi_1,\cdots,\psi_m\} $ with  $ m\in \mathbb{N} $. If  $ f $ satisfies  $ \dps\lim\limits_{z\to \psi_j}(z-\psi_j)f(z)=0,\forall 1\leq j\leq m $, then  $ \dps\int_\gamma f(z)\mathrm{d}z=0,\forall \gamma $ closed in  $ \Delta'  $     
-  \end{theorem}
-  \begin{proof}
+\end{theorem}
+\begin{proof}
     It is similar to the above proof.
     
     For the case no  $ \psi_j $ lies on  $ x=x_0 $ and  $ y=y_0 $, we can find a similar curve $ \gamma $ with last segment is a vertical one. Let  $ F(z)=\int_\gamma f(z)\mathrm{d}z $. And continue the process of proof of the previous theorem.  
     
     For the case that  $ \exists $  $ \psi_j $ lies on the lines  $ x=x_0,y=y_0 $, we actually can move the center to another point \st no  $ \psi_j $ lies on the lines  $ x=x_0',y=y_0'$.   
-  \end{proof}
-  \subsection{Cauchy's integral formula}
-  \subsubsection{Index of a point with resect to a closed curve}
-  \begin{lemma}
+\end{proof}
+\subsection{Cauchy's integral formula}
+\subsubsection{Index of a point with resect to a closed curve}
+\begin{lemma}
     If the piecewise differentiable closed curve  $ \gamma $ does not pass through  $ z\in \mathbb{C} $, then the value of the integral  $ \int_\gamma \frac{\mathrm{d}\zeta}{\zeta -z}$  is a multiple of  $ 2\pi i $. 
-  \end{lemma}
-  \begin{proof}
+\end{lemma}
+\begin{proof}
      $ \gamma:\zeta=\zeta(t),\alpha \leq t \leq \beta $.  $ h(t)=\int_\alpha^t\frac{\zeta'(x)}{\zeta(s)-z}\mathrm{d}s $.
      
       $ z\in \gamma $  $ \Rightarrow  $  $ h $ is defined and continuous on  $ [\alpha,\beta] $. For all  $ t $ \st  $ \zeta'(t) $ is continuous, we have 
@@ -89,7 +88,7 @@ There is some notes in this section:
       So  $ \dps e^{-h(t)}(\zeta(t)-z) $ is constant on  $ [\alpha,\beta] $.
       
       Then  $ e^{h(t)}=\dps\frac{\zeta(t)-z}{\zeta(\alpha)-z} $ $ \Rightarrow  $ $ e^{h(\beta)}=1 $ $ \Rightarrow  $ $ h(\beta)\in \{2k\pi i:k\in \mathbb{Z}\} $.
-  \end{proof}
+\end{proof}
  
  
   

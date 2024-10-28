@@ -1,88 +1,97 @@
 \begin{theindex}
 
-  \item Apollonius, \hyperpage{15}
-  \item arc, \hyperpage{8}
-  \item area, \hyperpage{10}
+  \item Apollonius, \hyperpage{16}
+  \item arc, \hyperpage{9}
+  \item area, \hyperpage{11}
 
   \indexspace
 
-  \item Cauchy's estimate, \hyperpage{28}
-  \item Cauchy's integral formula, \hyperpage{26}
-  \item change of parameter, \hyperpage{8}
-  \item circular net, \hyperpage{15}
-  \item conformal, \hyperpage{9}
-  \item conjugate harmonic function of $ u $ , \hyperpage{3}
-  \item cross ratio, \hyperpage{11}
-  \item curve, \hyperpage{8}
-    \subitem closed curve, \hyperpage{8}
-    \subitem Jordan curve, \hyperpage{8}
-    \subitem simple , \hyperpage{8}
+  \item Cauchy's estimate, \hyperpage{29}
+  \item Cauchy's integral formula, \hyperpage{27}
+  \item change of parameter, \hyperpage{9}
+  \item circular net, \hyperpage{16}
+  \item conformal, \hyperpage{10}
+  \item conjugate harmonic function of $ u $ , \hyperpage{4}
+  \item cross ratio, \hyperpage{12}
+  \item curve, \hyperpage{9}
+    \subitem closed curve, \hyperpage{9}
+    \subitem Jordan curve, \hyperpage{9}
+    \subitem simple , \hyperpage{9}
 
   \indexspace
 
-  \item exponential function , \hyperpage{6}
+  \item exponential function , \hyperpage{7}
 
   \indexspace
 
-  \item harmonic, \hyperpage{3}
-  \item homothetic transformation, \hyperpage{11}
+  \item harmonic, \hyperpage{4}
+  \item homothetic transformation, \hyperpage{12}
 
   \indexspace
 
-  \item index of the point $ z $, \hyperpage{24}
-  \item integral, \hyperpage{16}
-    \subitem $ \bar  {z} $, \hyperpage{18}
-    \subitem arc length, \hyperpage{19}
-  \item inversion, \hyperpage{11}
+  \item index of the point $ z $, \hyperpage{25}
+  \item integral, \hyperpage{17}
+    \subitem $ \bar  {z} $, \hyperpage{19}
+    \subitem arc length, \hyperpage{20}
+  \item inversion, \hyperpage{12}
+  \item isolated singularity, \hyperpage{35}
 
   \indexspace
 
-  \item Laplace equation, \hyperpage{3}
-  \item left, \hyperpage{14}
-  \item length, \hyperpage{10}, \hyperpage{19}
-  \item linear fraction, \hyperpage{4}
-  \item logorithmic function, \hyperpage{6}
+  \item Laplace equation, \hyperpage{4}
+  \item left, \hyperpage{15}
+  \item length, \hyperpage{11}, \hyperpage{20}
+  \item linear fraction, \hyperpage{5}
+  \item logorithmic function, \hyperpage{7}
 
   \indexspace
 
-  \item M{\"o}bius transformation, \hyperpage{4}, \hyperpage{10}
+  \item meromorphic function, \hyperpage{35}
+  \item M{\"o}bius transformation, \hyperpage{5}, \hyperpage{11}
 
   \indexspace
 
-  \item order of a pole, \hyperpage{4}
-  \item order of the rational function, \hyperpage{4}
+  \item order of a pole, \hyperpage{5}
+  \item order of the pole, \hyperpage{35}
+  \item order of the rational function, \hyperpage{5}
 
   \indexspace
 
-  \item parallel translation, \hyperpage{11}
-  \item partial fractions, \hyperpage{4}
-  \item poles, \hyperpage{4}
+  \item parallel translation, \hyperpage{12}
+  \item partial fractions, \hyperpage{5}
+  \item pole, \hyperpage{35}
+  \item poles, \hyperpage{5}
 
   \indexspace
 
-  \item rectifiable, \hyperpage{19}
-  \item reflection, \hyperpage{12}
-  \item region, \hyperpage{7}
-  \item removable singularities, \hyperpage{29}
-  \item reversible , \hyperpage{8}
-  \item right, \hyperpage{14}
-  \item rotation, \hyperpage{11}
+  \item rectifiable, \hyperpage{20}
+  \item reflection, \hyperpage{13}
+  \item region, \hyperpage{8}
+  \item removable singularities, \hyperpage{30}
+  \item reversible , \hyperpage{9}
+  \item right, \hyperpage{15}
+  \item rotation, \hyperpage{12}
 
   \indexspace
 
-  \item singular part, \hyperpage{5}
-  \item singular point, \hyperpage{5}
-  \item Steiner circles, \hyperpage{15}
-  \item symmetric, \hyperpage{12}
-  \item symmetric w.r.t C through $ z_1,z_2,z_3 $, \hyperpage{12}
+  \item singular part, \hyperpage{6}
+  \item singular point, \hyperpage{6}
+  \item Steiner circles, \hyperpage{16}
+  \item symmetric, \hyperpage{13}
+  \item symmetric w.r.t C through $ z_1,z_2,z_3 $, \hyperpage{13}
 
   \indexspace
 
-  \item totally bounded , \hyperpage{7}
-  \item trigonometric function, \hyperpage{6}
+  \item Taylor's Theorem, \hyperpage{32}
+  \item totally bounded , \hyperpage{8}
+  \item trigonometric function, \hyperpage{7}
 
   \indexspace
 
-  \item winding number, \hyperpage{24}
+  \item winding number, \hyperpage{25}
+
+  \indexspace
+
+  \item zero of order $ N $, \hyperpage{34}
 
 \end{theindex}

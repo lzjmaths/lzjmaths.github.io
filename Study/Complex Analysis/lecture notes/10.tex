@@ -70,7 +70,7 @@ This inequality is known as \name{Cauchy's estimate}.
 \end{theorem}
 \subsection{Local properties of analytic functions}
 \subsubsection{Removable Singularities and Taylor's Theorem}
-We remarked that  Cauchy's integral formula holds if  $ f $ is analytic except at a finite number of point  $ \zeta_j $ \st  $ \lim\limits_{\zeta\to\zeta_j}(\zeta-\zeta_j)(f\zeta)=0 $. We will prove  $ f $ can be extended to an analytic function in  $ \triangle $.
+We remarked that  Cauchy's integral formula holds if  $ f $ is analytic except at a finite number of point  $ \zeta_j $ \st  $ \lim\limits_{\zeta\to\zeta_j}(\zeta-\zeta_j)f(\zeta)=0 $. We will prove  $ f $ can be extended to an analytic function in  $ \triangle $.
 In other word,  $ \zeta_j $ are \name{removable singularities}.
 \begin{theorem}[Riemann's Removable Singularities Theorem]\label{Riemann's Removable Singularities Theorem}
     Suppose that  $ f $ is analytic in the region  $ \Omega'=\Omega\backslash\{\zeta_0\} $ where  $ \Omega $ is also a region. Then there exists an analytic function in  $ \Omega $ which coincides with $ f $ in  $ \Omega' $ if and only if  $ \dps\lim\limits_{z\to \zeta_0}(z-\zeta_0)f(z)=0 $.       
@@ -119,6 +119,7 @@ Continuing the recursion, we have the general form
 \begin{equation}
     f_{n-1}(z)=f_{n-1}(\zeta)+(z-\zeta)f_n(z)
 \end{equation}
- $ \Rightarrow $ \begin{equation}
+ $ \Rightarrow $ 
+\begin{equation}
     f(z)=f(\zeta)+(z-\zeta)f_1(\zeta)+\cdots+(z-\zeta)^{n-1}f_n(\zeta)+(z-\zeta)^nf_n(z)
- \end{equation}  
+\end{equation}  

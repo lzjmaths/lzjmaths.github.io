@@ -1,0 +1,123 @@
+Differentiating  $ n $ times and setting  $ z=\zeta $ $ \Rightarrow $ $ f^{(n)}(\zeta) =n!f_n(\zeta)$    
+
+We just prove \name{Taylor's Theorem}
+\begin{theorem}[Taylor's Theorem]\label{Taylor's Theorem}
+    If  $ f $ is analytic in a region  $ \Omega $,  $ \zeta\in\Omega $, then we have 
+    \begin{equation}
+        f(z)=f(\zeta)+(z-\zeta)f'(\zeta)+\cdot+\dps\frac{f^{(n-1)}(\zeta)}{(n-1)!}(z-\zeta)^{n-1}+f_n(z)(z-\zeta)^n\label{Taylor's expansion equation}
+    \end{equation}   
+    where  $ f_n $ is analytic in  $ \Omega $. Moreover,
+    \begin{equation}
+        f_n(z)=\dps\frac{1}{2\pi i}\int_C\frac{f(\omega)}{(\omega-\zeta)^n(\omega-z)}\mathrm{d}z
+    \end{equation}  
+    where  $ C $ is a circle in  $ \Omega $ \st  its interior  $ \triangle $ is also in  $ \Omega $ and  $ \zeta,z\in \triangle $     
+\end{theorem}
+\begin{proof}
+    It suffices to prove the second part.
+    
+    Cauchy's integral formula $ \Rightarrow  $ $ f_n(z)=\frac{1}{2\pi i}\int_C\frac{f_n(\omega)}{\omega-z}\mathrm{d}\omega $, $ \forall z\in\triangle $.
+    
+    For  $ f_n(z) $, we substitute the expression from  (\ref{Taylor's expansion equation}). The first term is 
+    \begin{equation}
+        \frac{1}{2\pi i}\int_C\frac{f(\omega)}{(\omega-\zeta)^n(\omega-z)}\mathrm{d}\omega
+    \end{equation}
+    The remaining terms have the following form, except for constant factors:
+    \begin{equation}
+        g_k(\zeta)=\int_C\frac{1}{(\omega-\zeta)^n(\omega-z)}\mathrm{d}\omega,\,1 \leq k \leq n
+    \end{equation}
+    The lemma \ref{Lemma of Analytic Properties of integral function} applies to  $ \varphi(\omega)=\dps\frac{1}{\omega-z} $,  $ g_k'(\zeta)=kg_{k-1}(\zeta),k\in\mathbb{N},\forall \zeta\in\triangle $. So 
+    \begin{equation}
+        \begin{aligned}
+            g_1(\zeta)&=\int_C\frac{1}{(\omega-\zeta)(\omega-z)}\mathrm{d}\omega\\
+            &=\frac{1}{\zeta-z}\left[\int_C\frac{1}{\omega-\zeta}\mathrm{d}\omega-\int_C\frac{1}{\omega-z}\mathrm{d}\omega\right]\\
+            &=\frac{1}{\omega-z}[2\pi i-2\pi i]=0
+        \end{aligned}
+    \end{equation}  
+    So  $ g_k(z)=0,\,\forall k\in\mathbb{N},\forall z\in\triangle $. 
+\end{proof}
+\subsubsection{Zeros and poles}
+\begin{theorem}
+    If  $ f $ is analytic in a region  $ \Omega $ and  $ \exists a\in \Omega $ \st  $ f^{(n)}(a)=0 $ for  $ \forall n\in \mathbb{N}\cup\{0\} $, then  $ f\equiv 0 $ in  $ \Omega $.      
+\end{theorem}
+\begin{proof}
+    Let  $ B(a,R) $ be the disk \st  $ \overline{B(a,R)}\subset \Omega $. Let  $ C=\partial B(0,R) $.
+    
+    Taylor's theorem  $ \Rightarrow $ $ f(z)=(z-a)^nf_n(z) $  with 
+    \begin{equation}
+        f_n(z)=\frac{1}{2\pi i}\int_C \frac{f(\omega)}{(\omega-a)^n(\omega-z)}\mathrm{d}\omega,\,\forall n\in \mathbb{N}\cup\{0\},\forall z\in B(a,R)
+    \end{equation}
+    Let  $ M=\dps\max\limits_{z\in \mathbb{C}}|f(z)| $.
+    \begin{equation*}
+        \begin{aligned}
+            \Rightarrow&|f_n(z)| \leq \frac{1}{2\pi}\cdot\frac{M}{R^n(R-|z-a|)}\cdot 2\pi R \\
+            \Rightarrow&|f(z)| \leq \frac{|z-a|^n}{R^n}\cdot \frac{MR}{R-|z-a|}\rightarrow 0 \text{ as } n\rightarrow \infty,\,\forall z\in B(0,R)\\
+            \Rightarrow&f(z)=0,\,\forall z\in B(0,R)
+        \end{aligned}
+    \end{equation*}
+    Now define  
+    \begin{equation*}
+        \begin{aligned}
+            E_1&=\dps\left\{z\in\Omega|f^{(n)}(z)=0,\forall n\in \mathbb{N}\cup\{0\}\right\} \\
+            E_2&=\Omega\backslash E_1=\dps\left\{z\in\Omega|f^{(n)}(z)\not=0,\text{ for some }n\in \mathbb{N}\cup\{0\}\right\}
+        \end{aligned}
+    \end{equation*}
+    We just proved  $ E_1 $ is open.  $ E_2 $ is open because  $ f^{(n)} $ is continuous in  $ \Omega $ for  $ \forall n\in \mathbb{N}\cup\{0\} $.  $ \Omega $ is a region $ \Rightarrow $ either $ R_1=\emptyset $ or  $ R_2=\emptyset $.
+    
+    The assumption of the theorem  $ \Rightarrow  $ $ E_1\not=\emptyset $  $ \Rightarrow E_1=\Omega $.  
+\end{proof}
+Let  $ f $ be analytic in  $ \Omega $ which is not identically zero,  $ f(a)=0 $ for some  $ a\in \Omega $.
+The previous theorem implies  $ \exists  $ first  $ N\in\mathbb{N} $ \st  $ f^{(N)}(a)\not=0 $. Taylor's theorem implies that  $ f(a)=(z-a)^Nf_N(z) $ where  $ f_N $ is analytic and  $ f_N(a)\not=0 $. We say that  $ a $ is a \name{zero of order $ N $} of  $ f $.
+
+$ f_N $ is continuous  $ \Rightarrow  $ $ \exists\delta>0 $\st  $ f(z)\not=0 $ for  $ \forall z\in B(a,\delta)\backslash\{0\}$.
+
+So we have just proved an important result: Zeros of  analytic are isolated, or equivalently, we have a famous theorem:
+\begin{theorem}[Identity Theorem]\label{Identity Theorem}
+    If  $ f $ and  $ g $ are analytic in a region  $ \omega $, and  $ f=g $ on a set which has an accumulation point in  $ \Omega $, then  $ f(z)=g(z) $.     
+\end{theorem}    
+\begin{corollary}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item If  $ f\equiv0 $ in a subregion of  $ \Omega $ and  $ f $ is analytic in  $ \Omega $, then  $ f\equiv0 $ in  $ \Omega $.
+        \item If  $ f $ is analytic in  $ \Omega $ and vanishes on an arc in  $ \Omega $ which doesn't reduce to a point, then  $ f\equiv0 $ in  $ \Omega $.          
+    \end{enumerate}
+\end{corollary}
+
+If  $ f $ is analytic in a neighborhood of  $ a $, but perhaps not at  $ a $ itself, then  $ a $ is called an \name{isolated singularity} of  $ f $. 
+
+If  $ \dps\lim\limits_{z\to a}f(z)=\infty $, then  $ a $ is said to be a \name{pole} of  $ f $, and we set  $ f(a)=\infty $.
+Continuity implies  $ \exists \delta>0 $ \st $ f(z)\not=0 $ for  $ \forall z\in B(0,\delta)\backslash\{a\} $. Thus,  $ g(z)=\dps\frac{1}{f(z)} $ is analytic in  $ B(a,\delta)\backslash\{a\} $.  $ \dps\lim\limits_{z\to a}(z-a)g(z)=0 $ $ \Rightarrow  $ $ a $ is a removable singularity of  $ g $, and  $ g $ has an analytic extension with  $ g(a)=0 $. $ g\not\equiv0 $ $ \Rightarrow $ $ a $ is a zero of  $ g $ with finite order. The \name{order of the pole} of  $ f $  at  $ a $ is the order  $ N $ of the zero of  $ g $ at  $ a $. 
+
+We can write 
+\begin{equation}
+    f(z)=(z-a)^{-N}f_N(z),\,\forall z\in B(a,\delta)\backslash \{a\}
+\end{equation} 
+where  $ f_N $ is analytic and nonzero in a neighborhood of  $ a $. 
+
+\begin{definition}
+    A function which is analytic in a region $ \Omega $ excpet for (isolated) poles is called a \name{meromorphic function}.
+\end{definition}
+\begin{example}
+    If  $ f $ and  $ g $ are analytic in  $ \Omega $ and  $ g\not\equiv 0 $, then  $ \frac{f}{g} $ is a meromorphic function in  $ \Omega $. (See the Identity Theorem \ref{Identity Theorem})
+\end{example}
+\begin{remark}
+    The sum, the product and quotient (if denominator is not always zero) of two meromorphic functions are meromorphic.
+\end{remark}
+If  $ f $ has a pole of order  $ N $ at  $ a $, then  $ (z-a)^Nf(z) $ is analytic at  $ a $, and Taylor's theorem \ref{Taylor's Theorem} implies 
+\begin{equation}
+    (z-a)^Nf(z)=b_N+b_{N-1}(z-a)+\cdots+b_1(z-a)+\varphi(z)\cdot(z-a)^N
+\end{equation}
+where  $ \varphi $ is analytic at  $ a $.
+\begin{equation}
+    \Rightarrow  f(z)=b_N(z-a)^{-N}+b_{N-1}(z-a)^{-(N-1)}+\cdots+b_1(z-a)^{-1}+\varphi(z),\,\forall z\not= a . 
+\end{equation} 
+\begin{theorem}
+    If  $ f $ is analytic in a neighborhood of  $ a $, but perhaps not at  $ a $ itself, then exactly one of the following  $ 3 $ cases ocuurs:
+    \begin{enumerate}[label=(\roman*)]
+        \item  $ f\equiv 0 $ in this neighborhood.
+        \item  $ \exists $ integer  $ N\in \mathbb{Z} $ \st  $ \dps\lim\limits_{z\to a}|z-a|^\alpha\cdot |f(z)|=\begin{cases}
+            0,&\alpha>N \\
+            \infty,&\alpha<N
+        \end{cases} $ 
+        \item neither  $ \lim\limits_{z\to a}|z-a|^\alpha\cdot|f(z)|=0 $ for any  $ \alpha\in \mathbb R $ nor  $ \lim\limits_{z\to a}|z-a|^\alpha\cdot|f(z)|=\infty $ for any  $ \alpha\in \mathbb{R} $   
+    \end{enumerate}    
+\end{theorem} 

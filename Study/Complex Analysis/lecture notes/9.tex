@@ -4,28 +4,28 @@ The \name{index of the point $ z $} w.r.t. the closed curve  $ \gamma $ is the n
  
 \begin{theorem}\label{Winding Number Theorem}
     Let  $ \gamma $ be a piecewise differentiable closed curve. The function  $ z\mapsto n(\gamma,z) $ is constant on each connected set of  $ \mathbb{C}\backslash \gamma $, and zero if this set is unbounded.   
-  \end{theorem}
-  \begin{proof}
+\end{theorem}
+\begin{proof}
     Define  $ f:\mathbb{C}\backslash \gamma\rightarrow \gamma, z\mapsto n(\gamma,z)=\dps\frac{1}{2\pi i}\int_\gamma\frac{\mathrm{d}\zeta}{\zeta-z} $.
     
     Then  \[\left|f(z)-f(z_0)\right|=\frac{1}{2\pi}\left|\int_\gamma\frac{z-z_0}{(\zeta-z)(\zeta-z_0)}\mathrm{d}\zeta\right| \leq \frac{|z-z_0}{2\pi}\int_\gamma\frac{1}{|\zeta-z|\cdot|\zeta-z_0}|\mathrm{d}\zeta| \] 
      $ \Rightarrow  $  $ f $ is continuous on each open connected set of  $ \mathbb{C}\backslash \gamma $. Let  $ \Omega $ be any open connected set of  $ \mathbb{C}\backslash\gamma $. We have  $ f(\Omega) $ is connected $ \xLongrightarrow{f(\Omega)\subset \mathbb{Z}} $ $ f(\Omega) $ contains at most one point  $ \Rightarrow  $ $ f $ is constant on  $ \Omega $.      
      
      If  $ |z| $ is sufficient large,  $ \exists $ a disk of radius  $ R $,  $ B(0,R) $, \st  $ \gamma\subset B(0,R) $ but  $ z\not\in B(0,R) $. Cauchy's theorem for a disk \ref{Cauchy's theorem for a disk} tells us that  $ f(z)=n(\gamma,z)=0 $. So it is zero if this set is unbounded.       
-  \end{proof}
-  \begin{lemma}
+\end{proof}
+\begin{lemma}
     Let  $ z_1,z_2 $ be two points on a closed curve  $ \gamma $ and  $ 0\not\in \gamma $.
     
     Suppose  $ z_1 $ in the lower half space and  $ z_2 $ in upper half space. If  $ \gamma_1\cap\{(x,0):x \leq 0\}=\emptyset $, and  $ \gamma_2\cap\{(x,0):x \geq 0\}=\emptyset $, then  $ n(\gamma,0)=1 $.
-  \end{lemma}
-  \begin{remark}
+\end{lemma}
+\begin{remark}
     One method to prove this lemma is to create two segment from  $ z_i $ to the point in the unit circle. By divide the curve into two parts, we can easily remove the part of previous curve by using the theorem \ref{Winding Number Theorem}, since  $ 0 $ is in the unbounded set. 
     
     In this proof, we can find that Theorem \ref{Winding Number Theorem} is such powerful that we can change any curve to a more simple curve easily!
 
-  \end{remark}
+\end{remark}
 
-  \subsubsection{Cauchy's integral formula}
+\subsubsection{Cauchy's integral formula}
 \begin{theorem}[Cauch's integral formula]\label{Cauchy's integral formula}
     Suppose that  $ f $ is analytic in an open disk  $ \triangle $, and let  $ \gamma $ be a closed curve in  $ \triangle $. For  $ \forall z\not\in \gamma $,
     \[n(\gamma,z)f(z)=\frac{1}{2\pi i}\int_\gamma \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta\]
@@ -58,7 +58,7 @@ If  $ f $ is analytic in an open disk $ \triangle $, and  $ \gamma $ is a closed
 This is usually referred to as \name{Cauchy's integral formula}
 
 \subsubsection{Higher derivatives}
-\begin{lemma}\label{Lemma of Analytic Properties of integral function}
+\begin{lemma}\label{Lemma of Analytic Properties of integral function}\label{lemma in section 2.3}
     Let  $ \Omega\subset\mathbb{C}$ be a region and  $ \gamma $ be an arc in  $ \Omega $. If  $ \varphi $ is continuous on  $ \gamma $, then the function 
     \[F_n(z):=\dps\int_\gamma\frac{\varphi(\zeta)}{(\zeta-z)^n}\mathrm{d}\zeta\]
     is analytic in each of the regions  $ \Omega\backslash \gamma $, and its derivative is  $ F_n'(z)=nF_{n+1}(z) $
