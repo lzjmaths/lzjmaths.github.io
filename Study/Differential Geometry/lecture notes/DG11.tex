@@ -1,4 +1,4 @@
-\subsubsection{Canonical form of commuting vector field}
+`````````\subsubsection{Canonical form of commuting vector field}
 \begin{theorem}
     Given  $ V_1,\cdots,V_k\in\mathfrak{T}M $, \st  
     \begin{enumerate}[label=\arabic*)]
@@ -45,7 +45,7 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
      \[\psi\circ F\circ \varphi^{-1}:\mathbb{R}^m\rightarrow \mathbb{R}^n\text{ is given by }(x^1,\cdots,x^m)\mapsto (x^1,\cdots,x^k,0,\cdots,0)\]         
 \end{theorem}
 \begin{proof}
-    This is a local problem. So we may assume  $ M=\mathbb{R}^m,N=\mathbb{R}^n $ by restricting to local charts. And  $ p=0, F(p)=0 $. Afer changing orders of coordinates, may assume 
+    This is a local problem. So we may assume  $ M=\mathbb{R}^m,N=\mathbb{R}^n $ by restricting to local charts. And  $ p=0, F(p)=0 $. After changing orders of coordinates, may assume 
      $ \dps\left(\frac{\partial F^i}{\partial x^j}(0)\right)_{1 \leq i,j \leq k} $ is invertible. Write  $ \mathbb{R}^m=\mathbb{R}^k\times \mathbb{R}^{m-k},\mathbb{R}^n=\mathbb{R}^k\times \mathbb R^{n-k} $.
      
      Then  $ F(x,y)=(Q(x,y),R(x,y)) $. Consider  $ \varphi:\mathbb{R}^m\rightarrow \mathbb{R}^m, (x,y)\mapsto (Q(x,y),y) $. Then 
@@ -97,7 +97,7 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
         \item  $ E\xrightarrow{p}B $ is a smooth vector bundle, then  $ p $ is a submersion.
         \item  $ \gamma:\mathbb{R}\rightarrow M $ is an immersion $ \Leftrightarrow $ $ \gamma'(t)\not=0 $,  $ \forall t $.
         \item There is an example  $ \gamma:\mathbb{R}\rightarrow \mathbb{R}^2 $ is injective immersion but not an embedding   
-        \item  $ \gamma:\mathbb{R}\rightarrow \mathrm{T}^2=\mathbb{R}/2\mathbb{Z}\times   \mathbb{R}/2\mathbb{Z} $,  $ x\mapsto (x,cx) $,  $ c\not\in \mathbb{Q} $ is injective immersion but not embedding.         
+        \item  $ \gamma:\mathbb{R}\rightarrow \mathrm{T}^2=\mathbb{R}/_\mathbb{Z}\times   \mathbb{R}/_\mathbb{Z} $,  $ x\mapsto (x,cx) $,  $ c\not\in \mathbb{Q} $ is injective immersion but not embedding.         
     \end{itemize}
 \end{example}
 \begin{definition}
@@ -139,7 +139,7 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
     
 \end{proof}
 \begin{theorem}
-     $ F\in C^\infty(M,N) $,  $ q $ is a regular valur of  $ F $. Then  $ F^{-1}(q) $ is an embedded submanifold of  $ M $. And 
+     $ F\in C^\infty(M,N) $,  $ q $ is a regular value of  $ F $. Then  $ F^{-1}(q) $ is an embedded submanifold of  $ M $. And 
      \[\forall p\in F^{-1}(q),T_pF^{-1}(q)=\ker(F_{p,*}:T_pM\rightarrow T_{F(p)}N)\]     
 \end{theorem}
 \begin{proof}
@@ -152,7 +152,7 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
 \end{proof}
 Denote  \[\mathfrak{so}(n)=\mathfrak{o}(n)=\{A\in M_n(\mathbb{R})|A+A^T=0\} \]
 \[\mathfrak{u}(n)=\{A\in M_n(\mathbb{C})|A+A^*=0\}\]
-\[\mathfrak{su}(n)=\{A\in \mathfrak u(n)|\tr A=0\}\]
+\[\mathfrak{su}(n)=\{A\in u(n)|\tr A=0\}\]
 \[\mathfrak{sl}(n,\mathbb{R})=\{A\in M_n(\mathbb{R})|\tr A=0\}\]
 \[\mathfrak{sl}(n,\mathbb{C})=\{A\in M_n(\mathbb{C})|\tr A=0\}\]
 \index{$\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$}
