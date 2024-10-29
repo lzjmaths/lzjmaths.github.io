@@ -49,46 +49,47 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
      $ \dps\left(\frac{\partial F^i}{\partial x^j}(0)\right)_{1 \leq i,j \leq k} $ is invertible. Write  $ \mathbb{R}^m=\mathbb{R}^k\times \mathbb{R}^{m-k},\mathbb{R}^n=\mathbb{R}^k\times \mathbb R^{n-k} $.
      
      Then  $ F(x,y)=(Q(x,y),R(x,y)) $. Consider  $ \varphi:\mathbb{R}^m\rightarrow \mathbb{R}^m, (x,y)\mapsto (Q(x,y),y) $. Then 
-     \begin{equation}
+    \begin{equation}
         \varphi_{(0,0),*}=\begin{bmatrix}
             \dps\frac{\partial Q^i}{\partial x^j}(0)&0\\ \\
             \dps\frac{\partial Q^i}{\partial y^j}(0)&I_{m-k}
         \end{bmatrix}
-     \end{equation}  
-     is invertible.
+    \end{equation}  
+    is invertible.
 
-     By inverse function theorem,  $ \exists  $ Nbh  $ U_0\subset \mathbb{R}^m $,  $ \tilde{U_0}\subset \mathbb{R}^m $ of  $ 0 $ \st  $ \varphi:U_0\rightarrow \tilde{U_0} $ is a diffeomorphism.
-     
-     \begin{align*}
+    By inverse function theorem,  $ \exists  $ Nbh  $ U_0\subset \mathbb{R}^m $,  $ \tilde{U_0}\subset \mathbb{R}^m $ of  $ 0 $ \st  $ \varphi:U_0\rightarrow \tilde{U_0} $ is a diffeomorphism.
+    
+    \begin{align*}
         \tilde{U_0}&\xrightleftharpoons[\varphi]{\varphi^{-1}}U_0\xrightarrow{F}\mathbb{R}^n\\
         (Q(x,y),y)&\mapsfrom (x,y)\mapsto (Q(x,y),R(x,y))
-     \end{align*}
-     So  $ F\circ \varphi^{-1}:\tilde{U_i} \rightarrow \mathbb{R}^n,(x,y)\mapsto (x,A(x,y))$.
-     And 
-     \begin{equation}
+    \end{align*}
+    
+    So  $ F\circ \varphi^{-1}:\tilde{U_i} \rightarrow \mathbb{R}^n,(x,y)\mapsto (x,A(x,y))$.
+    And 
+    \begin{equation}
         (F\circ\varphi^{-1})_{p,*}=\begin{bmatrix}
             I_k&0\\ \\
             \dps\frac{\partial A}{\partial x}(p)&\dps\frac{\partial A}{\partial y}(p)
         \end{bmatrix}
-     \end{equation} 
-     Since  $ \rank(F\circ\varphi^{-1}) $ is k,  $ \dps\frac{\partial A}{\partial y}(p)=0 $. \ie  $ A(x,y)=A(x) $.
-     
-     We can find a map  $ \psi:(x,y)\mapsto (x,y-A(x)) $ in a smaller neighborhood of  $ 0 $   by the inverse theorem similarly.
-     
-     And  $ \psi\circ F\circ \varphi $ maps  $ (x,y) $ to  $ (x,0) $.  So we end the proof.
+    \end{equation} 
+    Since  $ \rank(F\circ\varphi^{-1}) $ is k,  $ \dps\frac{\partial A}{\partial y}(p)=0 $. \ie  $ A(x,y)=A(x) $.
+    
+    We can find a map  $ \psi:(x,y)\mapsto (x,y-A(x)) $ in a smaller neighborhood of  $ 0 $   by the inverse theorem similarly.
+    
+    And  $ \psi\circ F\circ \varphi $ maps  $ (x,y) $ to  $ (x,0) $.  So we end the proof.
 \end{proof}
 \begin{definition}
-     $ F\in C^\infty(M,N) $. 
-     
-     We say  $ F $ is \name{submersion} if  $ F_{p,*} $ is surjective $ \forall p\in M $.
-     
-     We say  $ F $ is \name{immersion} if  $ F_{p,*} $ is injective $ \forall p\in M $.
+    $ F\in C^\infty(M,N) $. 
+    
+    We say  $ F $ is \name{submersion} if  $ F_{p,*} $ is surjective $ \forall p\in M $.
+    
+    We say  $ F $ is \name{immersion} if  $ F_{p,*} $ is injective $ \forall p\in M $.
 
-     We say  $ F $ is \name{embedding} if  $ F $ is  immersion and  $ F $ is a topological embedding.(i.e.  $ F:M\rightarrow F(M) $ is a homeomorphism) 
+    We say  $ F $ is \name{embedding} if  $ F $ is  immersion and  $ F $ is a topological embedding.(i.e.  $ F:M\rightarrow F(M) $ is a homeomorphism) 
 
-     If  $ F $ is embedding(immersion resp.), we say  $ M $ or  $ F(M) $ is an \name{embedded submanifold}(\name{immersed submanifold}, resp.) of  $ N $.   
-     
-     Denote  \name{$ M\looparrowright N $} be the immersion. \name{$M\hookrightarrow N$} be the embedding.
+    If  $ F $ is embedding(immersion resp.), we say  $ M $ or  $ F(M) $ is an \name{embedded submanifold}(\name{immersed submanifold}, resp.) of  $ N $.   
+    
+    Denote  \name{$ M\looparrowright N $} be the immersion. \name{$M\hookrightarrow N$} be the embedding.
 \end{definition}
 \begin{example}
     \,\begin{itemize}
@@ -104,24 +105,24 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
     For  $ F:X\rightarrow Y $, we say  $ F $ is \name{proper} if for any compact set  $ K\subset N $,  $ F^{-1}(K) $ is compact.    
 \end{definition}
 \begin{lemma}
-     $ X $ is compact,  $ Y $ Hausdorff, then  $ F:X\rightarrow Y $ is proper.  
+    $ X $ is compact,  $ Y $ Hausdorff, then  $ F:X\rightarrow Y $ is proper.  
 \end{lemma}
 \begin{proposition}
-     $ F\in C^\infty(M,N)  $ is an injective immersion, and  $ F $ is proper. Then  $ F $ is an embedding.   
+    $ F\in C^\infty(M,N)  $ is an injective immersion, and  $ F $ is proper. Then  $ F $ is an embedding.   
 \end{proposition}
 \begin{proof}
-     $ F:M\rightarrow F(M) $ is a closed map. 
+    $ F:M\rightarrow F(M) $ is a closed map. 
 \end{proof}
 \begin{definition}
     For  $ F\in C^\infty(M,N) $.
     
-     $ p\in M $ is called \name{regular point} if  $ F_{p,*}:T_pM\rightarrow T_{F(p)}N $ is surjective.
-     
-      $ p\in M $ is called \name{critical point} if  $ F_{p,*}:T_pM\rightarrow T_{F(p)}N $ is not surjective. 
-     
-      $ q \in N$ is called \name{regular value} if  $ \forall p\in F^{-1}(q) $,  $ p $ is a regular point.
-      
-       $ q\in N $ is called \name{critical value}(or \name{singular value}) if  $ \exists p\in F^{-1}(q) $,  $ p $ is a critical point. 
+    $ p\in M $ is called \name{regular point} if  $ F_{p,*}:T_pM\rightarrow T_{F(p)}N $ is surjective.
+    
+    $ p\in M $ is called \name{critical point} if  $ F_{p,*}:T_pM\rightarrow T_{F(p)}N $ is not surjective. 
+    
+    $ q \in N$ is called \name{regular value} if  $ \forall p\in F^{-1}(q) $,  $ p $ is a regular point.
+    
+    $ q\in N $ is called \name{critical value}(or \name{singular value}) if  $ \exists p\in F^{-1}(q) $,  $ p $ is a critical point. 
 \end{definition}
 \begin{theorem}[Sard]
     Singular value has measure  $ 0 $. 
@@ -130,7 +131,7 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
     We will not prove it in this lecture. 
 \end{proof}
 \begin{theorem}
-     $ M $ is an embedded submanifold of  $ N $ if and only if   $ \forall p\in M\subset N $,  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ of  $ N $ \st  $ M\cap U=\{(x^1,\cdots,x^m,0,\cdots,0)\} $       
+    $ M $ is an embedded submanifold of  $ N $ if and only if   $ \forall p\in M\subset N $,  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ of  $ N $ \st  $ M\cap U=\{(x^1,\cdots,x^m,0,\cdots,0)\} $       
 \end{theorem}
 \begin{proof}
     "$ \Rightarrow $": $ F:M\rightarrow N $ is embedding  $ \Rightarrow  $ $ F $ has constant rank  $ m $. Apply constant rank theorem near  $ p $, and we finish the proof of  "$\Rightarrow $"
@@ -139,16 +140,16 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
     
 \end{proof}
 \begin{theorem}
-     $ F\in C^\infty(M,N) $,  $ q $ is a regular value of  $ F $. Then  $ F^{-1}(q) $ is an embedded submanifold of  $ M $. And 
-     \[\forall p\in F^{-1}(q),T_pF^{-1}(q)=\ker(F_{p,*}:T_pM\rightarrow T_{F(p)}N)\]     
+    $ F\in C^\infty(M,N) $,  $ q $ is a regular value of  $ F $. Then  $ F^{-1}(q) $ is an embedded submanifold of  $ M $. And 
+    \[\forall p\in F^{-1}(q),T_pF^{-1}(q)=\ker(F_{p,*}:T_pM\rightarrow T_{F(p)}N)\]     
 \end{theorem}
 \begin{proof}
-     $ q $ is regular value $ \Rightarrow  $ $ \rank_pF=n $, $ \forall p\in F^{-1}(q) $.
+    $ q $ is regular value $ \Rightarrow  $ $ \rank_pF=n $, $ \forall p\in F^{-1}(q) $.
 
-      $ \Rightarrow  $ $ \rank_{p'}F=n $,  $ \forall p' $ near  $ p $, since we know  the rank of  $ p' $ near  $ p $ should not be less than that of  $ p $ 
-      
-      So by the constant rank theorem,  $ F^{-1}(q) $ is a submanifold near  $ p $.  
-      
+    $ \Rightarrow  $ $ \rank_{p'}F=n $,  $ \forall p' $ near  $ p $, since we know  the rank of  $ p' $ near  $ p $ should not be less than that of  $ p $ 
+    
+    So by the constant rank theorem,  $ F^{-1}(q) $ is a submanifold near  $ p $.  
+    
 \end{proof}
 Denote  \[\mathfrak{so}(n)=\mathfrak{o}(n)=\{A\in M_n(\mathbb{R})|A+A^T=0\} \]
 \[\mathfrak{u}(n)=\{A\in M_n(\mathbb{C})|A+A^*=0\}\]

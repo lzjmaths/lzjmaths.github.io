@@ -22,14 +22,14 @@ For  $ V_1,\cdots,V_n,W $ be  $ \mathbb{R} $-vector spaces,  $ f:V_1\times\cdots
     \,
     \begin{itemize}
         \item Inner product  $ \mathbb{R}^n\times\mathbb{R}^n\xrightarrow{\cdot}\mathbb{R} $.
-        \item Matrix multiplication  $ M_{n\times m}(\mathbb{R})\times M_{m\times k}(\mathbb{R})\rightarrow M_{n\times k} $.
+        \item Matrix multiplication  $ M_{n\times m}(\mathbb{R})\times M_{m\times k}(\mathbb{R})\rightarrow M_{n\times k}(\mathbb{R}) $.
         \item Cross product  $ \mathbb{R}^3\times \mathbb{R}^3\xrightarrow{\times} \mathbb{R}^3$.
         \item Bilinear form.   
     \end{itemize}
 \end{example}
 We hope that we can construct a vector space  $ V_1\otimes\cdots\otimes V_n $ \st we have canonical isomorphism:
 \begin{equation}
-    \{\text{multi  $ \mathbb{R} $-linear maps }V_1\times \cdots V_n\rightarrow W\}\cong \{\text{linear map }V_1\otimes V_n\rightarrow W\}
+    \{\text{multi  $ \mathbb{R} $-linear maps }V_1\times \cdots\times V_n\rightarrow W\}\cong \{\text{linear map }V_1\otimes\cdots\otimes  V_n\rightarrow W\}
 \end{equation}
 Then we can transform the study of multilinear algebra into the study of the normal linear algebra.
 
@@ -85,7 +85,7 @@ Given any  $ l_i\in \Hom(V_i,W_i) $, $ 1 \leq i \leq n $, we define
 \begin{equation}
     \begin{aligned}
         l_1\otimes\cdots \otimes l_n&\in \Hom(V_1\otimes \cdots \otimes V_n,W_1\otimes \cdots W_n)\\
-        (l_1\otimes\cdots \otimes l_n)(v_1\otimes \cdots v_n)&=l_1(v_1)\otimes \cdots \otimes l_n(v_n)
+        (l_1\otimes\cdots \otimes l_n)(v_1\otimes \cdots \otimes v_n)&=l_1(v_1)\otimes \cdots \otimes l_n(v_n)
     \end{aligned}
 \end{equation}  
 \begin{proposition}
@@ -97,7 +97,7 @@ Given any  $ l_i\in \Hom(V_i,W_i) $, $ 1 \leq i \leq n $, we define
         \end{aligned}
     \end{equation}
 \end{proposition}
-For  $ \bigotimes\limits_{n}V=\underbrace{V\otimes\cdots \otimes V}_{n} $,  $ S_n=\left\{\text{bijection on }\{1,2,\cdots,n\}\right\} $ acts on  $ \bigotimes\limits_n V $, where 
+For  \(\dps\bigotimes\limits_{n}V=\dps\underbrace{\dps V\otimes\cdots \otimes V}_n \),  $ S_n=\left\{\text{bijection on }\{1,2,\cdots,n\}\right\} $ acts on  $ \bigotimes\limits_n V $, where 
 \begin{equation}
     \begin{aligned}
         \sigma\cdot (v_1\otimes \cdots \otimes v_n)&=v_{\sigma(1)}\otimes \cdots \otimes v_{\sigma(n)}

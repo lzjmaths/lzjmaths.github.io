@@ -3,17 +3,21 @@
 \documentclass[12pt,b5paper,notitlepage]{article}
 \usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
 %\usepackage{fullpage}
+\usepackage{mathtools} % perfect math mode, but seems not well for underbrace. It is recommended to use \begingroup in the file.
+\let\underbrace\overbrace\relax
 \usepackage{amsmath,amscd,amssymb,amsthm,mathrsfs,amsfonts,layout,indentfirst,graphicx,caption,mathabx, stmaryrd,appendix,calc,imakeidx,upgreek,amsbsy,thmtools} % mathabx for \wtidecheck
 %\usepackage{ulem} %wave underline
 \usepackage[dvipsnames]{xcolor}
 \usepackage{palatino}  %template
-\usepackage{mathtools}
+
 \usepackage{stmaryrd}
+
 
 \usepackage{slashed} % Dirac operator
 \usepackage{mathrsfs} % Enable using \mathscr
 %\usepackage{eufrak}  another template/font
 \usepackage{extarrows} % long equal sign, \xlongequal{blablabla}
+\usepackage{pdfMsym}
 \usepackage{enumitem} % enumerate label change e.g. [label=(\alph*)]  shows (a) (b) 
 
 \usepackage{comment} % hide something
@@ -58,7 +62,6 @@
 \tcbuselibrary{theorems}
 % box around equations   \tcboxmath
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 
@@ -141,7 +144,6 @@
 % 	labelsep=none	
 % }
 % 控制图表结构
-
 
 
 
@@ -506,6 +508,7 @@
 \maketitle
 \tableofcontents
 \newpage
+
 \input{../DG1/1.tex}
 \input{../DG2.tex}
 \input{../DG3.tex}
