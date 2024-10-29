@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  28 OCT 2024 16:55
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  29 OCT 2024 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1383,7 +1383,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 36.
 
-[19] [20]) (../8.tex [21] [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31]) (../11.tex [32] [33] [34] [35]) [36]
+[19] [20]) (../8.tex [21] [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31]) (../11.tex [32] [33] [34] [35]) (../12.tex) [36]
 runsystem(makeindex Complex_Analysis.idx)...executed safely (allowed).
 
  (./Complex_Analysis.ind [37
@@ -1401,17 +1401,14 @@ showing proposition
 \openout7 = `Complex_Analysis.loe'.
 
  [40] (./Complex_Analysis.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
 (rerunfilecheck)             Checksum: 5ECE4ABFEE57A58EDF9B1F295CC747F7;6725.
  ) 
 Here is how much of TeX's memory you used:
- 35248 strings out of 476683
- 690493 string characters out of 5804047
+ 35253 strings out of 476683
+ 690543 string characters out of 5804047
  1854018 words of memory out of 5000000
- 54753 multiletter control sequences out of 15000+600000
+ 54755 multiletter control sequences out of 15000+600000
  547747 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,15n,101p,595b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -1,0 +1,174 @@
+\section{Differential forms}
+\subsection{Introduction}
+Our goal is to define the integration  $ \dps\int_M\alpha $ \st 
+\begin{itemize}
+    \item Works for any smooth manifold  $ M $, without embedding  $ M $ into  $ \mathbb{R}^n  $
+    \item Generalize two types of surface integral, \ie $ \int_\Sigma f\mathrm{d}S $ and  $ \int_\Sigma f\mathrm{d}x\wedge \mathrm{d}y $     
+\end{itemize}
+For Canton's idea,  $ \alpha $ is a "differential $ k $-form" on  $ M $ \st   
+\begin{itemize}
+    \item  $ \forall F\in C^\infty(N,M) $,  $ F^*(\alpha) $ is a  $ k $-form on  $ N $
+    \item If  $ k=\dim M $, then  $ \int_M\alpha\in\mathbb{R} $      
+\end{itemize}   
+\subsection{Alternating vector linear algebra}
+For  $ V_1,\cdots,V_n,W $ be  $ \mathbb{R} $-vector spaces,  $ f:V_1\times\cdots \times V_n\rightarrow W $ is called \name{multi  $ \mathbb{R} $-linear} if 
+\begin{equation}
+    f(v_1,\cdots,v_{i-1},av_i+bv_i',v_{i+1},\cdots,v_n)=af(v_1,\cdots,v_{i-1},v_i,v_{i+1},\cdots,v_n)+bf(v_1,\cdots,v_{i-1},v_i',v_{i+1},\cdots,v_n)
+\end{equation}
+\begin{example}
+    \,
+    \begin{itemize}
+        \item Inner product  $ \mathbb{R}^n\times\mathbb{R}^n\xrightarrow{\cdot}\mathbb{R} $.
+        \item Matrix multiplication  $ M_{n\times m}(\mathbb{R})\times M_{m\times k}(\mathbb{R})\rightarrow M_{n\times k} $.
+        \item Cross product  $ \mathbb{R}^3\times \mathbb{R}^3\xrightarrow{\times} \mathbb{R}^3$.
+        \item Bilinear form.   
+    \end{itemize}
+\end{example}
+We hope that we can construct a vector space  $ V_1\otimes\cdots\otimes V_n $ \st we have canonical isomorphism:
+\begin{equation}
+    \{\text{multi  $ \mathbb{R} $-linear maps }V_1\times \cdots V_n\rightarrow W\}\cong \{\text{linear map }V_1\otimes V_n\rightarrow W\}
+\end{equation}
+Then we can transform the study of multilinear algebra into the study of the normal linear algebra.
+
+For any set  $ S $, let 
+\begin{equation}
+    \name{$ \mathbb{R}\left<S\right> $}=\left\{\text{formal linear combination }\dps\sum_{i=1}^na_is_i|a_i\in\mathbb{R},s_i\in S,n<\infty\right\}
+\end{equation} 
+Consider  $ \mathbb{R}\left<V_1\times \cdots \times V_n\right>=\left\{\dps\sum_{i=1}^ka^i(V_{i,1},\cdots,V_{i,n})|a^i\in\mathbb{R},v_{i,j}\in V_j\right\} $. Denote 
+\begin{equation}
+    W=\Span\{(\cdots,av_i+bv_i',\cdots)-a(\cdots,v_i,\cdots)-b(\cdots,v_i',\cdots)|a,b\in \mathbb{R},v_i,v_i'\in V_i\}
+\end{equation}
+Define  \name{$ V_1\otimes \cdots\otimes V_n $}$ =\mathbb{R}\left<V_1\times \cdots\times V_n\right>/_W $, write  $ \left[(v_1,\cdots,v_n)\right] $ as  $ v_1\otimes \cdots\otimes v_n $, called a \name{$ n $-tensor}.   
+
+\begin{proposition}[Universal Property]\label{Universal Property of tensor space}
+    We have a multi  $ \mathbb{R } $-linear map  $ q:V_1\times \cdots \times V_n\rightarrow V_1\otimes \cdots \otimes V_n $,  $ (v_1,v_2,\cdots,v_n)\mapsto v_1\otimes v_2\otimes \cdots\otimes v_n $. It satisfies the universal property:
+     
+     $ \forall  $ multi  $ \mathbb{R} $-linear map  $ f:V_1\times \cdots \times V_n\rightarrow W $,  $ \exists $  unique linear map  $ \tilde{f}:V_1\otimes \cdots \otimes V_n\rightarrow W $ \st  $ \tilde{f}\circ q =f$. \ie The diagram commutes:
+     \begin{center}
+        \begin{tikzcd}
+            V_1\otimes \cdots \otimes V_n\arrow[rd,"\exists ! \tilde{f}"]\\
+            V_1\times \cdots\times V_n\arrow[u,"\rho"]\arrow[r,"f"]&W
+        \end{tikzcd}
+     \end{center}
+\end{proposition}
+\begin{corollary}
+    \begin{equation}
+        \begin{aligned}
+            \{\text{multi  $ \mathbb{R} $-linear maps }V_1\times \cdots \times V_n\rightarrow W\}&\cong \{\text{linear map }V_1\otimes \cdots \otimes V_n\rightarrow W\}\\
+            f&\leftrightarrow \tilde{f}
+        \end{aligned}
+    \end{equation}
+\end{corollary}
+\begin{proposition}
+    \,\begin{itemize}
+        \item Any element in  $ V_1\otimes \cdots \otimes V_n $ can be written as  $ \sum_{i=1}^n a_i\otimes v_i $ for some  $ a_i\in\mathbb{R} $.
+        \item If  $ (e_i^j)_{j\in \mathcal{A}_i} $ is a basis for  $ V_i $, then  $ \{e_1^{j_1}\otimes e_2^{j_2}\otimes \cdots \otimes e_{n}^{j_n}|j_i\in \mathcal{A}_i\} $ is a basis of  $ V_1\otimes \cdots \otimes V_n $.
+        \item  $ \dim (V_1\otimes \cdots \otimes V_n)=\dps\prod_{i=1}^n \dim(V_i) $    
+    \end{itemize}
+\end{proposition}
+\begin{proposition}
+    Denote  $ W^*=\Hom(W,\mathbb{R}) $, then  we have an injection 
+    \begin{equation}
+        \begin{aligned}
+            V\otimes W^*&\xrightarrow{e}\Hom(W,V)\\
+            v\otimes f&\mapsto \left(w\mapsto f(w)\cdot v\right) 
+        \end{aligned}
+    \end{equation}
+    If  $ \dim V $ or  $ \dim W $ is finite, then  $ e $ is an isomorphism.
+    
+    Indeed, if  $ \dim V=\infty $, then  $ \id_V\not\in e(V\otimes V^*) $  
+\end{proposition}
+Given any  $ l_i\in \Hom(V_i,W_i) $, $ 1 \leq i \leq n $, we define 
+\begin{equation}
+    \begin{aligned}
+        l_1\otimes\cdots \otimes l_n&\in \Hom(V_1\otimes \cdots \otimes V_n,W_1\otimes \cdots W_n)\\
+        (l_1\otimes\cdots \otimes l_n)(v_1\otimes \cdots v_n)&=l_1(v_1)\otimes \cdots \otimes l_n(v_n)
+    \end{aligned}
+\end{equation}  
+\begin{proposition}
+    If  $ \dim V_i<\infty $,  $ \forall 1 \leq i \leq n $, then we have isomorphism 
+    \begin{equation}
+        \begin{aligned}
+            V_1^*\otimes \cdots \otimes V_n^*&\xrightarrow{\cong}(V_1\otimes \cdots \otimes V_n)^*\\
+            f_1\otimes \cdots \otimes f_n&\mapsto \left((v_1\otimes \cdots \otimes v_n\mapsto \prod_{i=1}^nf_i(v_i))\right)
+        \end{aligned}
+    \end{equation}
+\end{proposition}
+For  $ \bigotimes\limits_{n}V=\underbrace{V\otimes\cdots \otimes V}_{n} $,  $ S_n=\left\{\text{bijection on }\{1,2,\cdots,n\}\right\} $ acts on  $ \bigotimes\limits_n V $, where 
+\begin{equation}
+    \begin{aligned}
+        \sigma\cdot (v_1\otimes \cdots \otimes v_n)&=v_{\sigma(1)}\otimes \cdots \otimes v_{\sigma(n)}
+    \end{aligned}
+\end{equation} 
+A tensor  $ T\in \bigotimes\limits_n V$ is called \name{symmetric} if  $ \sigma(T)=T,\,\forall \sigma\in S_n $.
+
+$ T $ is called \name{anti-symmetric} if  $ \sigma(T)=\sgn(\sigma)\cdot T ,\,\forall \sigma\in S_n $.
+
+Define 
+\begin{equation}
+    \begin{aligned}
+        \name{$ \mathrm{Sym}^n(V) $}&=\{\text{symmetric tensors in }\bigotimes_n V\}\\
+        \name{$ \bigwedge{}^n(V) $}&=\{\text{anti-symmetric tensors in }\bigotimes_n V\}
+    \end{aligned}
+\end{equation}
+which are both in  $ \bigotimes\limits_nV $.  $ \bigwedge^n(V) $ is also denoted as  \name{$ \mathrm{Alt}^n(V) $}   And
+\begin{equation}
+    \dim (\mathrm{Sym}^n(V))=\binom{\dim(V)+n-1}{n-1}\quad\dim(\bigwedge{}^n  V)=\binom{\dim(V)}{n}
+\end{equation}
+From now on, we may assume  $ \dim V<\infty $. Define 
+\begin{equation}
+    \name{$ L^n(V) $}=\left(\bigotimes\limits_n V\right)^*\cong \bigotimes_n V^*\cong \left\{\text{multi  $ \mathbb{R} $-linear maps }V_1\times \cdots\times V\rightarrow \mathbb{R}\right\}
+\end{equation} 
+And by the assumption we can obtain
+\begin{equation}
+    \begin{aligned}
+        \mathrm{Sym}^n(V^*)&\cong\{\text{symmetric multi  $ \mathbb{R} $-linear maps }l:V\times \cdots \times V\rightarrow \mathbb{R}\}\\
+        \bigwedge{}^n(V^*)&\cong \{\text{anti-symmetric multi  $ \mathbb{R} $-linear maps }l:V\times \cdots \times V\rightarrow \mathbb{R}\}
+    \end{aligned}
+\end{equation}
+Denote  \name{$ \mathrm{Alt}^k(V) $}$=\bigwedge^n(V^*)  $.  
+An element in  $ \mathrm{Alt}^k(V) $ is called a (linear) \name{$ k $-form} on  $ V $ 
+Now for  $ V=\mathbb{R}\left<e_1,\cdots,e_n\right> $,  $ V^*=\mathbb{R}\left<e_1^*,\cdots,e_n^*\right> $. Then 
+\begin{align*}
+    L^2(V)&=\left\{\text{all bilinear forms on }V\right\}\\  
+    L^2(V)&\cong \mathrm{Sym}^2(V^*)\oplus \bigwedge{}^2(V^*)
+\end{align*}
+And  $ \mathrm{Sym}^2(V^*)=\dps\mathbb{R}\left<e_i^*\otimes e_j^*+e_j^*\otimes e_i^*|1 \leq i \leq i \leq n \right> $ is symmetric bilinear form
+
+$ \mathrm{Alt}^2(V)=\bigwedge^2(V^*)=\dps\mathbb{R}\left<e_i^*\otimes e_j^*-e_j^*\otimes e_i^*|1 \leq i \leq i \leq n \right> $ is anti-symmetric bilinear form.
+
+The determinant  $ \det\in \mathrm{Alt}^n(\mathbb{R}^n) $.
+\begin{definition}[Exterior product]\index{exterior product}
+    \[\bigwedge:\mathrm{Alt}^k(V)\times\mathrm{Alt}^l(V)\rightarrow \mathrm{Alt}^{k+l}(V)\]
+    \begin{align*}
+        \omega_1\wedge \omega_2(v_1,\cdots,v_{k+l})&=\dps\frac{1}{k!l!}\sum_{\sigma\in S_{k+l}}\sgn(\sigma)\omega_1(v_{\sigma(1)},\cdots,v_{\sigma(k)})\omega_2(v_{\sigma(k+1)},\cdots,v_{\sigma(k+l)})\\
+        &=\sum_{\sigma\in S_{k,l}}\sgn(\sigma)\omega_1(v_{\sigma(1)},\cdots,v_{\sigma(k)})\omega_2(v_{\sigma(k+1)},\cdots,v_{\sigma(k+l)})
+    \end{align*}
+    where  $ S_{k,l}=\{\sigma\in S_{k+l}|\sigma(1)<\cdots<\sigma(k),\sigma(k+1)<\cdots<\sigma(k+l)\} \subset S_{k+l}$. 
+\end{definition}
+Then we have those properties:
+\begin{proposition}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ \omega_1\wedge \omega_2=(-1)^{|\omega_1|\cdot|\omega_2|}\omega_2\wedge \omega_1  $,  $ |\omega|=k $ is  $ \omega\in\mathrm{Alt}^k(V) $. In particular,  $ \omega\wedge \omega=0 $ if  $ |\omega| $ is odd.    
+        \item  $ (\omega_1\wedge \omega_2)\wedge w_3=\omega_1\wedge(\omega_2\wedge \omega_3) $ 
+        \item Given any  $ \omega_1,\cdots,\omega_k\in \mathrm{Alt}^1(V)=V^* $,  $ v_1,\cdots,v_k\in V $. Then 
+        \begin{equation}
+            (\omega_1\wedge \cdots \wedge \omega_k)(v_1,\cdots,v_k)=\det\left[w_i(v_j)\right]_{i,j}
+        \end{equation}  
+        Moreover,  $ \omega_1\wedge \cdots\wedge_n\not=0 $ iff  $ \omega_i $ are linearly independent.
+        \item  $ V=\mathbb{R}\left<e_1,\cdots,e_n\right> $. Then 
+        \begin{equation}
+            \mathrm{Alt}^k(V)=\mathbb{R}\left<e_{i_1}^*\wedge\cdots \wedge e_{i_k}^*|i_1<\cdots<i_k\right>
+        \end{equation}  
+        In particular,  $ \mathrm{Alt}^n(V)=\mathbb{R}\left<e_1^*\wedge\cdots\wedge e_n^*\right> $.
+        And we denote
+             $ \mathrm{Alt}^0(V)=\mathbb{R} $,  $ \mathrm{Alt}^k(V)=0 $,  $ k>n $. 
+        \item Any  $ f\in \Hom (V,W) $ induces  $ \mathrm{Alt}^k(f)\in \Hom(\mathrm{Alt}^k(V),\mathrm{Alt}^k(W)) $, where 
+        \begin{equation}
+            \mathrm{Alt}^k(f)(\omega)(w_1,\cdots , w_k)=\omega(f(w_1),\cdots,f(w_k))
+        \end{equation}
+        We have   $ \mathrm{Alt}^k(f\circ g)=\mathrm{Alt}^k(g)\circ \mathrm{Alt}^k(f) $,  $ \Alt^k(\id_V)=\id_{\mathrm{Alt}^k(V)} $.
+        Such  $ \mathrm{Alt}^k(-) $ is called  a \name{contravariant functor}.  
+    \end{enumerate}
+\end{proposition}
