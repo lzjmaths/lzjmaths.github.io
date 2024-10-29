@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  29 OCT 2024 16:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  29 OCT 2024 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,12 +1451,7 @@ Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 106.
 ) (../DG9.tex [23] [24] [25] [26]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 115.
-) (../DG10.tex [27] [28] [29] [30] [31]) (../DG11.tex [32] [33] [34] [35] [36]) (../DG12.tex [37]
-Overfull \hbox (99.22467pt too wide) detected at line 17
-[][][]\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 v[]; []  ; v[]; av[] \U/matha/m/n/12 ^^@ \OML/cmm/m/it/12 bv[]; v[]; []  ; v[]\U/matha/m/n/12 q ^^P \OML/cmm/m/it/12 af\U/matha/m/n/12 p\OML/cmm/m/it/12 v[]; []  ; v[]; v[]; v[]; []  ; v[]\U/matha/m/n/12 q ^^@ \OML/cmm/m/it/12 bf\U/matha/m/n/12 p\OML/cmm/m/it/12 v[]; []  ; v[]; v[]; v[]; []  ; v[]\U/matha/m/n/12 q
- []
-
-[38] [39] [40] [41] [42]) [43]
+) (../DG10.tex [27] [28] [29] [30] [31]) (../DG11.tex [32] [33] [34] [35] [36]) (../DG12.tex [37] [38] [39] [40] [41] [42]) [43]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
  (./Differential_Geometry.ind [44
