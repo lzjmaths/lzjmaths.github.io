@@ -8,7 +8,7 @@ We just prove \name{Taylor's Theorem}
     \end{equation}   
     where  $ f_n $ is analytic in  $ \Omega $. Moreover,
     \begin{equation}
-        f_n(z)=\dps\frac{1}{2\pi i}\int_C\frac{f(\omega)}{(\omega-\zeta)^n(\omega-z)}\mathrm{d}z
+        f_n(z)=\dps\frac{1}{2\pi i}\int_C\frac{f(\omega)}{(\omega-\zeta)^n(\omega-z)}\mathrm{d}\omega
     \end{equation}  
     where  $ C $ is a circle in  $ \Omega $ \st  its interior  $ \triangle $ is also in  $ \Omega $ and  $ \zeta,z\in \triangle $     
 \end{theorem}
@@ -46,7 +46,7 @@ We just prove \name{Taylor's Theorem}
     \begin{equation}
         f_n(z)=\frac{1}{2\pi i}\int_C \frac{f(\omega)}{(\omega-a)^n(\omega-z)}\mathrm{d}\omega,\,\forall n\in \mathbb{N}\cup\{0\},\forall z\in B(a,R)
     \end{equation}
-    Let  $ M=\dps\max\limits_{z\in \mathbb{C}}|f(z)| $.
+    Let  $ M=\dps\max\limits_{z\in C}|f(z)| $.
     \begin{equation*}
         \begin{aligned}
             \Rightarrow&|f_n(z)| \leq \frac{1}{2\pi}\cdot\frac{M}{R^n(R-|z-a|)}\cdot 2\pi R \\
@@ -70,7 +70,7 @@ The previous theorem implies  $ \exists  $ first  $ N\in\mathbb{N} $ \st  $ f^{(
 
 $ f_N $ is continuous  $ \Rightarrow  $ $ \exists\delta>0 $\st  $ f(z)\not=0 $ for  $ \forall z\in B(a,\delta)\backslash\{0\}$.
 
-So we have just proved an important result: Zeros of  analytic are isolated, or equivalently, we have a famous theorem:
+So we have just proved an important result: Zeros of  analytic functions are isolated, or equivalently, we have a famous theorem:
 \begin{theorem}[Identity Theorem]\label{Identity Theorem}
     If  $ f $ and  $ g $ are analytic in a region  $ \omega $, and  $ f=g $ on a set which has an accumulation point in  $ \Omega $, then  $ f(z)=g(z) $.     
 \end{theorem}    
@@ -104,7 +104,7 @@ where  $ f_N $ is analytic and nonzero in a neighborhood of  $ a $.
 \end{remark}
 If  $ f $ has a pole of order  $ N $ at  $ a $, then  $ (z-a)^Nf(z) $ is analytic at  $ a $, and Taylor's theorem \ref{Taylor's Theorem} implies 
 \begin{equation}
-    (z-a)^Nf(z)=b_N+b_{N-1}(z-a)+\cdots+b_1(z-a)+\varphi(z)\cdot(z-a)^N
+    (z-a)^Nf(z)=b_N+b_{N-1}(z-a)+\cdots+b_1(z-a)^{N-1}+\varphi(z)\cdot(z-a)^N
 \end{equation}
 where  $ \varphi $ is analytic at  $ a $.
 \begin{equation}
