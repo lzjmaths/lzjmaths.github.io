@@ -1,0 +1,111 @@
+\begin{proof}
+    \,
+    
+    \ding{192} If  $ \dps\lim\limits_{z\to a}|z-a|^\alpha \cdot |f(z)|=0 $ for  $ \forall \alpha\in \mathbb{R} $, then  $ \lim\limits_{z\to a}|z-a|^m\cdot |f(z)|=0 $ for  $ \forall  $ integer  $ m>\alpha $. 
+    
+     $ \Rightarrow $  $ (z-a)^mf(z) $ has a removable singularity at  $ a $ and vanishes at  $ z=a $ 
+
+      $ \Rightarrow  $ Either  $ f\equiv 0 $ in  $ B(a,\delta)\backslash \{a\} $, which is case  (\romannumeral1), or $ (z-a)^mf(\alpha) $ has a zero of finite order  $ k $ at  $ a $  $ \Rightarrow $ $ \dps\lim\limits_{z\to a}|z-a|^\alpha\cdot |f(z)|=\begin{cases}
+        0, &\alpha>m-k \\
+        \infty,&\alpha<m-k
+      \end{cases} $   
+
+      \ding{193} If  $ \dps\lim\limits_{z\to a}|z-a|^\alpha |f(z)|=\infty $ for some  $ \alpha\in \mathbb{R} $, then  $ \dps\lim\limits_{z\to a}|z-a|^n\cdot |f(z)|=\infty $ for  $ \forall $ integer  $ n<\alpha $.
+      
+       $ \Rightarrow  $ $ (z-a)^nf(z) $ has a pole of finite order  $ l $ at  $ a $
+       
+        $ \Rightarrow $  $ \dps\lim\limits_{z\to a}|z-a|^\alpha \cdot |f(z)|=\begin{cases}
+            0,&\alpha>n+l \\
+            \infty, \alpha<n+l
+        \end{cases} $  
+\end{proof}
+\begin{remark}
+    In case (\romannumeral2),  $ N $ may be called the \name{algebraic order} of  $ f $ at  $ a $.  $ N>0 $ if  $ a $  is a pole,  $ N<0 $ if  $ a $ is a zero, and  $ N=0 $  if  $ f $ is analytic at  $ a $ and  $ f(a)\not=0 $. The order is always an integer, there is no analytic function which tends to  $ 0 $ or  $ \infty $, like a fractional power of  $ |z-a| $.
+
+    In some sense, three cases depends on whether  $ \dps\lim\limits_{z\to a}(z-a)^Nf(z) $ converges for some  $ N $. 
+    
+    In case (\romannumeral3), the point  $ a $ is an \name{essential isolated singularity}. 
+\end{remark}
+\begin{example}
+    $ f(z)=\exp(\frac{1}{z}) $ has an essential isolated singularity  $ z=0 $.  
+\end{example}
+\begin{theorem}[Weierstrass]\label{Weierstrass Theorem for Essential singularity}
+    An analytic function comes arbitarily close to any complex value in every neighborhood of an essential singularity. Or equivalently, the codomain of  $ f $ on every neighborhood of an essential singularity is dense in  $ \mathbb{C} $.  
+\end{theorem}
+\begin{proof}
+    Suppose the statement is false.
+
+    $ \exists A\in\mathbb{C} $,  $ \delta>0 $ and  $ \epsilon>0 $ \st    
+    \begin{equation}
+        |f(z)-A|>\delta,\,\forall z\text{ with }0<|z-a|<\epsilon
+    \end{equation}   
+    $ \Rightarrow $  $ \dps\lim_{z\to a}|z-a|^\alpha\cdot|f(z)-A|=\infty $ for  $ \forall \alpha<0 $. $ \Rightarrow  $  $ a $ is not an essential singularity of  $ f(z)-A $.   
+
+    The previous theorem  $ \Rightarrow  $  $ \exists  $ $ \beta\in\mathbb{R} $ \st  $ \dps\lim_{z\to a}|z-a|^\beta \cdot |f(z)-A|=0 $, and we may choose  $ \beta>0 $. 
+    
+    Then  $ \dps\lim_{z\to a}|z-a|^\beta\cdot |A|=0 $  $ \Rightarrow $ $ \dps\lim_{z\to a}|z-a|^\beta\cdot|f(z)|=0 $ by the triangular inequality. 
+    
+    So  $ a $ is not an essential singularity of  $ f $, which causes contradiction!
+    
+    So the statement has to be true.
+\end{proof}
+\begin{remark}
+    If  $ f $ is analytic in  $ |z|>R $. We treat  $ \infty $ as an isolated singularity. Removable singularity, pole or essential singularity of  $ f $ at  $ \infty $ is defined according to  $ g(z)=f(\frac{1}{z}) $ at  $ z=0 $.       
+\end{remark}
+\subsubsection{The Local Mappings}
+\begin{theorem}[The Argument Principle]\label{The Argument Principle}
+    Let  $  f$ be analytic in a disk  $ \triangle $ \st  $ f $  does not vanish identically. Let  $ z_j $ be the zeros of  $ f $, each zero being counted as many times as its order indicates. For every closed curve $ \gamma $ in  $ \triangle $ which does not pass through a zero, we have 
+    \begin{equation}
+        \sum_jn(\gamma,z_j)=\frac{1}{2\pi i}\int_\gamma\frac{f'(z)}{f(z)}\mathrm{d}z \label{eq:The Argument Principle}
+    \end{equation}     
+    where the sum has only a finite number of terms with  nonzero value. 
+\end{theorem}
+\begin{proof}
+    \,
+
+    Case \uppercase\expandafter{\romannumeral1}:  $ f $ has exactly  $ n $ zeros  $ z_1,\cdots,z_n $.
+    
+    By repeated application of Taylor' Theorem \ref{Taylor's Theorem}, we can write 
+    \begin{equation}
+        f(z)=(z-z_1)(z-z_2)\cdots(z-z_n)g(z),\,z\in\triangle
+    \end{equation}
+    where  $ g $ is analytic in  $ \triangle $ and  $ g(z)\not=0 $ for  $ \forall z\in \triangle $.
+    $ \Rightarrow  $
+    \begin{equation}
+        \frac{f'(z)}{f(z)}=\frac{1}{z-z_1}+\frac{1}{z-z_2}+\cdots+\frac{1}{z-z_n}+\frac{g'(z)}{g(z)},\,\forall z\in\triangle\text{ and }z\not=z_j
+    \end{equation}  
+    Cauchy' Theorem \ref{Cauchy's theorem for a disk} $ \Rightarrow $ 
+    \begin{equation}
+        \dps\int_\gamma\frac{g'(z)}{g(z)}\mathrm{d}z=0 \Rightarrow  \dps\frac{1}{2\pi i}\int_\gamma\frac{f'(z)}{f(z)}\mathrm{d}z=\dps\sum_{j=1}^nn(\gamma,z_j)\label{eq1:proof of the argument principle}
+    \end{equation}  
+    
+    Case \uppercase\expandafter{\romannumeral2}:  $ f $ has infinitely many zeros in  $ \triangle $. Then  $ \gamma $ is inside a concentric disk  $ \triangle' $ smaller than  $ \triangle $.
+
+    $ f\not\equiv 0 $ $ \Rightarrow $ There is only a finite number of zeros in  $ \triangle' $.
+    
+    So we can apply \eqref{eq1:proof of the argument principle} to the disk  $ \triangle' $  $ \Rightarrow $ \eqref{eq:The Argument Principle} holds since  $ n(\gamma,z_j)=0 $ if  $ z\not\in\triangle' $.  
+\end{proof}
+\begin{remark}
+    \, 
+    \begin{itemize}
+        \item The function  $ \omega=f(z) $ maps  $ \gamma $ onto a closed curve  $ \Gamma $ in the  $ \omega $-plane, and we have 
+        \begin{equation}
+            \int_\Gamma\frac{\mathrm{d}\omega}{\omega}=\int_\gamma\frac{f'(z)}{f(z)}\mathrm{d}z
+        \end{equation}    
+        Then \eqref{eq:The Argument Principle} can be interpreted as  $ n(\Gamma,0)=\sum\limits_jn(\gamma,z_j) $.
+        \item The most useful application of the theorem is to the case when  $ \gamma $ is a circle (or more generally a simple closed curve). So that \\ $\dps n(\gamma,z)=\begin{cases}
+            1,&z\text{ is inside }\gamma \\
+            0,&z\text{ is outside }\gamma
+        \end{cases} $   
+        Then \eqref{eq:The Argument Principle} yields a formula for the total number of zeros enclosed by  $ \gamma $. 
+    \end{itemize}
+\end{remark}
+Let  $ a\in \mathbb{C} $. Apply the previous theorem to  $ f(z)-a $
+\[\sum_jn(\gamma,z_j(a))=\frac{1}{2\pi i}\int_\gamma\frac{f'(z)}{f(z)-a}\mathrm{d}z\]
+where  $ z_j(a) $ are zeros of  $ f-a $ (or roots of  $ f(z)=a $), and  $ \gamma $ is a closed curve in  $ \triangle $ which doesn't pass  $ z_j(a) $  $ \Rightarrow $
+\[n(\Gamma,a)=\sum_jn(\gamma,z_j(a))\]
+If  $ a $ and  $ b $ are in the same region determined by  $ \Gamma $, then  $ n(\Gamma,a)=n(\Gamma,b) $ $ \Rightarrow $
+\begin{equation}
+    \sum_jn(\gamma,z_j(a))=\sum_jn(\gamma,z_j(b))
+\end{equation}      
+If  $ \gamma $ is a circle, then  $ f $ takes the values  $ a $ and  $ b $ equally many times inside  $ \gamma $.    

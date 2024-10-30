@@ -1,7 +1,7 @@
 \begin{theorem}
     An analytic function in a region(\ie open and connected) $ \Omega $ whose derivative is 0 must reduce to a constant. The same hold if the real part, the imaginary part, the modulus, or the argument is constant.
 \end{theorem}
-\subsection{Conformal Mappings}
+\subsubsection{Conformal Mappings}
 Suppose  $ f:\Omega\rightarrow \mathbb{C}$ is analytic in  $ \Omega $.  $ r_1=z_1(t),r_2=z_2(t) $, $ \alpha \leq t \leq \beta $.
 
  $ z_0=z_1(t_0)=z_2(t_0') ,z_1'(t_0)\not=0,z_2'(\hat{t_0})\not=0,\alpha<t_0,\hat{t_0}<\beta$.
@@ -28,7 +28,7 @@ Now we give the definition.
 \end{definition}
 Easy to prove that linear change of scale at  $ z_0 $  is independent of the direction.\\
 \ie  $ |f'(z_0)|=\lim\limits_{z\to z_0}\frac{\delta \sigma}{\delta s} $ 
-\subsection{Length and Area}
+\subsubsection{Length and Area}
 The \name{length} of a differentiable arc  $ \gamma $ with the equation  $ z(t)=x(t)+iy(t) $, $ a \leq t \leq b $
 \[L(\gamma)=\int_{a }^{b }\sqrt{(x'(t))^2+(y'(t))^2}\mathrm{d}t=\int_{a }^{b }|z'(t)|\mathrm{d}t\]   
 For  $ \Gamma=f(\gamma) $ where  $ f  $ conformal mapping.\\
@@ -39,7 +39,7 @@ Then by the differentiable functional transformation, the area $ \hat{E}=f(E) $ 
 \[A(\hat{E})=\int \int_E|u_xv_y-u_yv_x|\mathrm{d}x\mathrm{d}y\]  
 If  $ f  $ is the conformal mapping of an open set containing  $ E  $, then by Caucht-Riemann equation
 \[A(\hat{E})=\int\int_E|f'(z)|^2\mathrm{d}x\mathrm{d}y\]
-\section{M{\"o}bius Transformation}
+\subsection{M{\"o}bius Transformation}
 Recall that a \name{M{\"o}bius transformation} is a function of the form
 \[w=s(z)=\frac{az+b}{cz+d},\quad ad-bc\not=0\]
 Then it has an inverse  $ z=S^{-1}(w)=\dfrac{dw-b}{-cw+a} $.\\
@@ -57,7 +57,7 @@ $ x=\frac{1 }{z }  $ is called an \name{inversion}.
 \begin{proposition}
     Every M{\"o}bius transformation is a composition of the above four operations.
 \end{proposition}    
-\subsection{Cross ratio}
+\subsubsection{Cross ratio}
 For three distinct points  $ z_2,z_3,z_4\in\hat{\mathbb{C}} $,we can find a M{\"o}bius transformation  $ S $ such that  $ S(z_2)=0,S(z_3)=1,S(z_4)=\infty $.
 \begin{lemma}
     The M{\"o}bius transformation satisfying the above conditions is unique.

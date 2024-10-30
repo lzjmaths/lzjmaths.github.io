@@ -1,37 +1,43 @@
-\contentsline {section}{\numberline {1}Harmonic function}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Polynomial rational function}{4}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Power Series}{7}{section.2}%
-\contentsline {section}{\numberline {3}Exponential, Trigonometric and logorithmic functions}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Exponential and Trigonometric function}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Logorithmic Functions}{7}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Conformal Mappings}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Connectedness}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Compactness}{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Continuous Functions}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Arcs and closed curves}{9}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Analytic Functions in Regions}{9}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Conformal Mappings}{10}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Length and Area}{11}{subsection.4.7}%
-\contentsline {section}{\numberline {5}M{\"o}bius Transformation}{11}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Cross ratio}{12}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Symmetry}{13}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Geometric Meaning of Symmetry}{13}{subsubsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.3}Steiner Circles}{15}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Elementary Conformal mapping}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Elementary Riemann surfaces}{17}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Complex Integration}{17}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Fundamental Theorems}{17}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Line integral and rectifiable arcs}{17}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{19}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Cauchy's theorem for a rectangle}{21}{subsubsection.7.1.3}%
-\contentsline {subsubsection}{\numberline {7.1.4}Cauchy's Theorem for a disk}{23}{subsubsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.2}Cauchy's integral formula}{24}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Index of a point with resect to a closed curve}{24}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Cauchy's integral formula}{26}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Higher derivatives}{27}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Consequences of Cauchy}{28}{subsubsection.7.2.4}%
-\contentsline {subsection}{\numberline {7.3}Local properties of analytic functions}{30}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Removable Singularities and Taylor's Theorem}{30}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Zeros and poles}{33}{subsubsection.7.3.2}%
-\contentsline {section}{Index}{37}{section*.3}%
-\contentsline {section}{List of Theorems}{39}{section*.4}%
+\contentsline {section}{\numberline {2}Complex Functions}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Analytic functions and rational functions}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Harmonic function}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Polynomials and rational function}{4}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Power Series}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Power series}{7}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Exponential, Trigonometric and logorithmic functions}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Exponential and Trigonometric function}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Logorithmic Functions}{7}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Conformal Mappings}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Basic topology}{8}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Connectedness}{8}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Compactness}{8}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Continuous Functions}{9}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Conformality, geometric consequences of the existence of a derivative}{9}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Arcs and closed curves}{9}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Analytic Functions in Regions}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Conformal Mappings}{10}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Length and Area}{11}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}M{\"o}bius Transformation}{11}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Cross ratio}{12}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Symmetry}{13}{subsubsection.3.3.2}%
+\contentsline {paragraph}{Geometric Meaning of Symmetry}{13}{section*.3}%
+\contentsline {subsubsection}{\numberline {3.3.3}Steiner Circles, circular net}{15}{subsubsection.3.3.3}%
+\contentsline {section}{\numberline {4}Elementary Conformal mapping}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Elementary Riemann surfaces}{17}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Complex Integration}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Fundamental Theorems}{18}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Line integral and rectifiable arcs}{18}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{19}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Cauchy's theorem for a rectangle}{22}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Cauchy's Theorem for a disk}{23}{subsubsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.2}Cauchy's integral formula}{24}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Index of a point with resect to a closed curve}{24}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Cauchy's integral formula}{26}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Higher derivatives}{27}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Consequences of Cauchy}{28}{subsubsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.3}Local properties of analytic functions}{31}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Removable Singularities and Taylor's Theorem}{31}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Zeros and poles}{33}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}The Local Mappings}{38}{subsubsection.5.3.3}%
+\contentsline {section}{Index}{40}{section*.4}%
+\contentsline {section}{List of Theorems}{42}{section*.5}%

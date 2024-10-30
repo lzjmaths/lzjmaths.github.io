@@ -1,5 +1,6 @@
 \begin{theindex}
 
+  \item algebraic order, \hyperpage{37}
   \item Apollonius, \hyperpage{16}
   \item arc, \hyperpage{9}
   \item area, \hyperpage{11}
@@ -10,7 +11,7 @@
   \item Cauchy's integral formula, \hyperpage{27}
   \item change of parameter, \hyperpage{9}
   \item circular net, \hyperpage{16}
-  \item conformal, \hyperpage{10}
+  \item conformal, \hyperpage{11}
   \item conjugate harmonic function of $ u $ , \hyperpage{4}
   \item cross ratio, \hyperpage{12}
   \item curve, \hyperpage{9}
@@ -20,6 +21,7 @@
 
   \indexspace
 
+  \item essential isolated singularity, \hyperpage{37}
   \item exponential function , \hyperpage{7}
 
   \indexspace
@@ -30,7 +32,7 @@
   \indexspace
 
   \item index of the point $ z $, \hyperpage{25}
-  \item integral, \hyperpage{17}
+  \item integral, \hyperpage{18}
     \subitem $ \bar  {z} $, \hyperpage{19}
     \subitem arc length, \hyperpage{20}
   \item inversion, \hyperpage{12}
@@ -64,10 +66,10 @@
 
   \indexspace
 
-  \item rectifiable, \hyperpage{20}
+  \item rectifiable, \hyperpage{21}
   \item reflection, \hyperpage{13}
   \item region, \hyperpage{8}
-  \item removable singularities, \hyperpage{30}
+  \item removable singularities, \hyperpage{31}
   \item reversible , \hyperpage{9}
   \item right, \hyperpage{15}
   \item rotation, \hyperpage{12}
