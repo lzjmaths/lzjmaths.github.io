@@ -1,0 +1,93 @@
+We have the equation that 
+\begin{equation}
+    \begin{aligned}
+        \frac{1}{2\pi i}\int_\gamma\frac{f'(z)}{f(z)-a}\mathrm{d}z&=n(\Gamma,a)=n(\Gamma,b)\\
+        &=\frac{1}{2\pi i}\int_\Gamma\frac{\mathrm{d}\omega}{\omega-b}=\frac{1}{2\pi i}\frac{f'(z)\mathrm{d}z}{f(z)-b}\\
+        &=\card\{z\text{ inside }\gamma:f(z)=b\}
+    \end{aligned}\label{consequence of the argument principle}
+\end{equation}
+\begin{theorem}\label{theorem of the argument principle}
+    Suppose  $ f $ is analytic at  $ z_0 $, and  $ f(z)-\omega_0 $ has a zero of order  $ N\in\mathbb{N} $ at  $ z_0 $. Then for  $ \forall\epsilon>0 $ sufficiently small,  $ \exists\delta>0 $\st for  $ \forall a$ with  $ |a-\omega_0|<\delta $, the equation  $ f(z)=a $ has exactly  $ N $ roots in the disk  $ |z-z_0|<\epsilon $            
+\end{theorem}
+\begin{proof}
+    We choose  $ \epsilon>0 $ \st 
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ f $ is analytic in  $ |z-z_0| \leq \epsilon $
+        \item  $ z_0 $ is the only zero of  $ f(z)-\omega_0 $ in this disk.
+        \item  $ f'(z)\neq 0 $ for  $ \forall z $ with  $ 0<|z-z_0|<\epsilon $     
+    \end{enumerate} 
+    Let  $ \gamma $ be the circle  $ |z-z_0|<\epsilon $ and  $ \Gamma=f\circ \gamma $.
+    
+     $ \omega_0\not\in\Gamma $ $ \Rightarrow  $ $ \exists \delta>0$ \st  $ B(\omega_0,\delta)\cap \Gamma=\emptyset $.
+     
+     The consequence of the argument principle \ref{The Argument Principle},\ie \eqref{consequence of the argument principle} $ \Rightarrow $ $ f $ takes all values  $ a\in B(\omega_0,\delta) $  the same number of times  $ N $ inside  $ \gamma $, since  $ f(z)=\omega_0 $ has exactly  $ N $ coiciding roots inside  $ \gamma $.
+     
+    (3) $ \Rightarrow $ all roots  $ f(z)=a $ with  $ a\in B(\omega_0,\delta)\backslash \{\omega_0\} $   are simple
+\end{proof}
+\begin{corollary}[open mapping theorem]\label{open mapping theorem}
+    A nonconstant analytic function maps open sets onto open sets.
+\end{corollary}
+\begin{proof}
+    The previous theorem  $ \Rightarrow $ $ \forall \epsilon>0 $,  $ f(B(z_0,\epsilon))\supset B(\omega_0,\delta) $   
+\end{proof}
+\begin{corollary}\label{Corollary of theorem of the argument principle}
+    If  $ f $ is analytic at  $ z_0 $ with  $ f'(z_0)\neq 0 $. It maps a neighborhood of  $ z_0 $ conformally and topologically onto a region.   
+\end{corollary}
+\begin{proof}
+    This is the case  $ N=0 $. The previous theorem  $ \Rightarrow  $ There is 1-1 corresponding between the disk  $ |\omega-\omega_0|<\delta $ and an open subset of  $ |z-z_0|<\epsilon $. The open mapping theorem \ref{open mapping theorem} $ \Rightarrow $  $ f^{-1} $ is continuous  $ \Rightarrow  $ $ f $ is a topological map. And  
+    $ f $ is conformal  on  $ |z-z_0|<\epsilon $ 
+\end{proof}
+\begin{remark}
+    Under the assumption of Corollary \ref{Corollary of theorem of the argument principle},  $ f^{-1} $ is continuous  $ \Rightarrow  $ $ f^{-1} $ is analytic $ \Rightarrow $ $ f^{-1} $ is conformal map.  
+    
+    If  $ f:\Omega\rightarrow \mathbb{C} $ is 1-1 and analytic,  Theorem \ref{theorem of the argument principle} can hold only with  $ N=1 $ $ \Rightarrow $ $ f'(z)\neq 0 $ for  $ \forall z\in\mathbb{C} $. So this condition is stronger than the conformal condition.    
+\end{remark}
+\subsubsection{The Maximum Principle}
+\begin{theorem}[The maximum principle]\label{The Maximum principle on an open set}
+    If  $ f $ is analytic and nonconstant in a region  $ \Omega $, then its   modules  $ |f| $ has no maximum in  $ \Omega $.  
+\end{theorem}
+\begin{proof}
+     $ \forall z_0\in \Omega $, the open mapping theorem \ref{open mapping theorem}  $ \Rightarrow $ $ \exists $ an open disk  $ |\omega-f(z_0)|<\delta $ contained in  $ F(\Omega) $. In this disk,  $ \exists $ $ \omega $ \st  $ |\omega|>|f(z_0)| $  $ \Rightarrow  $  $ |f(z_0)| $ is not the maximum of  $ |f| $.       
+\end{proof}
+\begin{theorem}[The maximum principle]\label{The Maximum principle on a closed bounded set}
+    If  $ f $ is defined and continuous on a closed bounded set  $ E $ and analytic in the interior of  $ E $, then the maximum of  $ |f| $ on  $ E $ is assumed on the boundary of  $ E $.      
+\end{theorem}
+\begin{remark}
+    The maximum principle can also be proved by the mean value theorem \ref{mean value property} for analytic functions.
+\end{remark}
+\begin{theorem}[Schwarz Lemma]\label{Schwarz lemma}
+    If  $ f $ is analytic in the disk  $ |z|<1 $ and satisfies  $ f(0)=0 $, $ |f(z)| \leq 1 $, $ \forall z\in B(0,1) $, then  $ |f(z)| \leq |z| $ and  $ |f'(0)| \leq 1 $. Furthermore, if  $ |f(z)|=|x| $ for some  $ z\neq 0 $, or if  $ |f'(0)|=1 $, then  $ f(z)=cz $ where  $ c\in \mathbb C $ with  $ |c|=1 $.      
+\end{theorem}
+\begin{proof}
+    We define  $ \dps g(z)\begin{cases}
+        \dps\frac{f(z)}{z},&z\neq 0,z\in B(0,1)\\
+        f'(0),&z=0
+    \end{cases} $.
+
+    Then  $ g $ is analytic with  $ g'(0)=\dps\frac{f'(0)}{2} $ using Taylor series \eqref{Taylor's expansion equation}.
+
+    The maximum principle implies that  $ |g'(z)| \leq \dps\frac{1}{r} $, $ \forall z\in \overline{B(0,r)} $ where  $ 0<r<1 $.   
+
+    Setting  $ r\rightarrow 1 $, we get  $ |g(z)| \leq 1 $, $ \forall |z|<1 $.
+    
+    If  $ |f(z)|=|z| $ for some  $ z\neq 0 $, or  $ |f'(0)|=1 $, then  $ |g|=1  $ attains its maximum at some interior points. By maximum principle,  $ g $ has to be a constant.     
+\end{proof}
+\begin{remark}
+    For a general analytic function $ f:B(0,R)\rightarrow B(0,M),z_0\mapsto w_0 $.
+
+    Let  $ T(z)=\dps\frac{\frac{z}{R}-\frac{z_0}{R}}{1-\frac{\bar{z_0}}{R}\cdot \frac{z}{R}} $
+    
+     $ S(\omega)=\dps\frac{\frac{\omega}{M}-\frac{\omega_0}{M}}{1-\frac{\bar{\omega_0}}{M}\cdot \frac{\omega}{M}} $.
+     
+     Then  $ S\circ f\circ T^{-1} $ satisfies  $ S\circ f\circ T^{-1}(0)=0 $ and  $ |S\circ f\circ T^{-1}(z)| \leq 1 $ $ \overset{Schwarz\,lemma}{\Longrightarrow} $  $ |S\circ f\circ T^{-1}(\zeta)| \leq |\zeta| $.
+     
+      $ \Rightarrow  $ $ |S\circ f(z)| \leq |T(z)| $  $ \Rightarrow  $
+      \[\left|\frac{M(f(z)-\omega_0)}{M^2-\bar{\omega_0}f(z)}\right| \leq \left|\frac{R(z-z_0)}{R^2-\bar{z_0}z}\right|,\forall z\in B(0,R)\]  
+\end{remark}
+\subsection{The General Form of Cauchy's Theorem}
+\subsubsection{Chains and Cycles}
+Let  $ \Omega\subset \mathbb{C} $ be open. Let  $ \gamma_j:[\alpha_j,\beta_j]\rightarrow \Omega $ be piecewise continuously differentiable curves in  $ \Omega $. The sum  $ \gamma_1+\gamma_2+\cdots+\gamma_N $, which need not be a curve is called a \name{chain}. The \subname{integral}{chain} of a continuous  $ f $ in  $ \Omega $ along this chain is defined by 
+\begin{equation}
+    \int_{\gamma_1+\gamma_2+\cdots+\gamma_N}f=\sum_{j=1}^N\int_{\gamma_j}f.
+\end{equation}   
+Two chains are \subname{identical}{chain} if they yield the same line integrals for all function $ f $. 

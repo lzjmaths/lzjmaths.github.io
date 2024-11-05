@@ -1,7 +1,7 @@
 \section{Vector Field}
 
 \subsection{Canonical form of a field}
-Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point} if  $ V_p\not=0 $, and is called a \name{singular point} if  $ V_p=0 $.
+Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point} if  $ V_p\neq 0 $, and is called a \name{singular point} if  $ V_p=0 $.
 \begin{theorem}[Canonical Form Theorem]\label{Canonical Form Theorem}
     Let  $ p $ be a regular point of  $ V $. Then  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ \st  $ V|_U=\partial x^1 $      
 \end{theorem}    
@@ -54,7 +54,7 @@ Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point
     Then  $ \theta_t(x_1,\cdots,x_n)=(x_1+t,x_2,\cdots,x_n) $. So  \[ \mathcal{L}_VW|_U=\dps\sum\limits_i\frac{\partial W^i}{\partial x^1}\cdot \partial x^i \].  \[[V,W]|_U=\dps\sum\limits_iV(W^i)\partial x^i-\sum\limits_iW(V^i)\partial x^i=\sum\limits_i\frac{\partial W^i}{\partial x^1}\cdot\partial x^i \]
     Then  $ [V,W]|_U=\mathcal{L}_VW $.
     
-    For  $ p $ is a singular point but  $ p\in \Supp(V) $. Then  $ \exists  $ $ p_i\rightarrow p $ \st  $ V_p\not=0 $. By the previous case  $ (\mathcal{L}_VW)_{p_i}=[V,W]|_{p_i} $. By continuity,  We have  $ (\mathcal{L}_VW)_p=[V,W]_p $.
+    For  $ p $ is a singular point but  $ p\in \Supp(V) $. Then  $ \exists  $ $ p_i\rightarrow p $ \st  $ V_p\neq 0 $. By the previous case  $ (\mathcal{L}_VW)_{p_i}=[V,W]|_{p_i} $. By continuity,  We have  $ (\mathcal{L}_VW)_p=[V,W]_p $.
     
     For  $ p \not\in \Supp(V)$,  $ \exists $ Nbd  $ U $ of  $ p $ \st  $ V|_U=0 $. Then  $ \theta_t(q)=q $. So 
     \[(\mathcal{L}_VW)|_U=0=[V,W]|_U\]     

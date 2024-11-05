@@ -4,8 +4,19 @@
   \item $ L^n(V) $, \hyperpage{41}
   \item $ M\looparrowright N $, \hyperpage{35}
   \item $ V_1\otimes \cdots  \otimes V_n $, \hyperpage{39}
+  \item $ \Gamma (E) $, \hyperpage{46}
+  \item $ \Omega ^k(M) $, \hyperpage{46}
   \item $ \bigwedge {}^n(V) $, \hyperpage{40}
+  \item $ \mathbb  {R} $-algebra, \hyperpage{44}
+    \subitem graded, \hyperpage{44}
+    \subitem homogeneous elements, \hyperpage{44}
+    \subitem unitary, \hyperpage{44}
   \item $ \mathbb  {R}\left <S\right > $, \hyperpage{38}
+  \item $ \mathbb{R} $-algebra
+    \subitem graded
+      \subsubitem anticommutative, \hyperpage{44}
+      \subsubitem commutative, \hyperpage{44}
+      \subsubitem connected, \hyperpage{44}
   \item $ \mathcal  {L}_VW $, \hyperpage{28}
   \item $ \mathfrak  {T}M $, \hyperpage{15}
   \item $ \mathrm  {Alt}^k(V) $, \hyperpage{41}
@@ -42,12 +53,15 @@
   \indexspace
 
   \item differential, \hyperpage{10}
+  \item Dual bundle of a vector bundle, \hyperpage{45}
+  \item dual vector bundle, \hyperpage{45}
 
   \indexspace
 
   \item embedded submanifold, \hyperpage{35}
   \item embedding, \hyperpage{35}
   \item exhaust, \hyperpage{8}
+  \item exterior algebra, \hyperpage{45}
   \item exterior product, \hyperpage{41}
 
   \indexspace

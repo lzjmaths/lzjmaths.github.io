@@ -19,7 +19,7 @@ Suppose  $ f $ is analytic in a disk, $ \overline{B(z_0,R)} $, and   bounded on 
 \end{equation}    
 This inequality is known as \name{Cauchy's estimate}.
 \begin{theorem}[Liouville's Theorem]
-    A bounded entire function (\ie analytic in  $ \mathbb{C} $) is constant.
+    A bounded entire function (\textit{i.e.} analytic in  $ \mathbb{C} $) is constant.
 \end{theorem}
 \begin{proof}
     Suppose  $ |f(z)| \leq M $, $ \forall z\in \mathbb{C} $. Cauchy's estimate $ \Rightarrow   $ 
@@ -34,7 +34,7 @@ This inequality is known as \name{Cauchy's estimate}.
 \begin{proof}
     It suffices to prove it has at least one root.
 
-    Suppose  $ P(z)=a_nz^n+\cdots a_1z+a_0 $ with  $ a_0\not=0 $ does not have a root.
+    Suppose  $ P(z)=a_nz^n+\cdots a_1z+a_0 $ with  $ a_0\neq0 $ does not have a root.
     
     Then  $ f(z):=\frac{1}{P(z)} $ is an entire function. As  $ z\rightarrow \infty $,  $ \dps\lim\limits_{|z|\to\infty}\frac{|P(z)|}{|z|^n}=|a_n| $ $ \Rightarrow  $ $ \dps\lim\limits_{|z|\to\infty}\frac{1}{|P(z)|}=0 $.
 
@@ -80,12 +80,12 @@ In other word,  $ \zeta_j $ are \name{removable singularities}.
 
     "$ \Leftarrow $": Cauchy's integral formula $ \Rightarrow $  
     \begin{equation}
-        f(z)=\dps\frac{1}{2\pi i}\int_C \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta,\,\forall z\in \triangle  \text{ and }  z\not=\zeta_0\label{10eq1}
+        f(z)=\dps\frac{1}{2\pi i}\int_C \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta,\,\forall z\in \triangle  \text{ and }  z\neq\zeta_0\label{10eq1}
     \end{equation} 
     Lemma \ref{Lemma of Analytic Properties of integral function} $ \Rightarrow $ the RHS of the last equation \ref{10eq1} is analytic in  $ z\in \triangle $. Then 
     \begin{equation}
         \hat{f}(z)=\begin{cases}
-            f(z),&z\not=\zeta_0\\
+            f(z),&z\neq\zeta_0\\
             \dps\frac{1}{2\pi i}\int_C\frac{f(\zeta)}{\zeta-\zeta_0}\mathrm{d}\zeta,z=\zeta_0
         \end{cases}
     \end{equation} 
@@ -98,7 +98,7 @@ We apply Theorem \ref{Riemann's Removable Singularities Theorem} to the function
 Theorem \ref{Riemann's Removable Singularities Theorem} $ \Rightarrow $  $ \exists $ analytic function  $ f_1 $ on  $ \Omega $ \st 
 \begin{equation}
     f_1(z)=\begin{cases}
-        F(z),&z\not=\zeta_0\\
+        F(z),&z\neq\zeta_0\\
         f'(\zeta),z=\zeta_0
     \end{cases}
 \end{equation}  
@@ -111,7 +111,7 @@ Repeating this process for  $ f_1 $, we get an analytic function  $ f_2 $ on  $ 
 where 
 \begin{equation}
     f_2(z)=\begin{cases}
-        \dps\frac{f_1(z)-f_1(\zeta)}{z-\zeta},&z\not=\zeta\\
+        \dps\frac{f_1(z)-f_1(\zeta)}{z-\zeta},&z\neq\zeta\\
         f_2'(\zeta),&z=\zeta
     \end{cases}
 \end{equation}

@@ -58,17 +58,17 @@ We just prove \name{Taylor's Theorem}
     \begin{equation*}
         \begin{aligned}
             E_1&=\dps\left\{z\in\Omega|f^{(n)}(z)=0,\forall n\in \mathbb{N}\cup\{0\}\right\} \\
-            E_2&=\Omega\backslash E_1=\dps\left\{z\in\Omega|f^{(n)}(z)\not=0,\text{ for some }n\in \mathbb{N}\cup\{0\}\right\}
+            E_2&=\Omega\backslash E_1=\dps\left\{z\in\Omega|f^{(n)}(z)\neq0,\text{ for some }n\in \mathbb{N}\cup\{0\}\right\}
         \end{aligned}
     \end{equation*}
     We just proved  $ E_1 $ is open.  $ E_2 $ is open because  $ f^{(n)} $ is continuous in  $ \Omega $ for  $ \forall n\in \mathbb{N}\cup\{0\} $.  $ \Omega $ is a region $ \Rightarrow $ either $ R_1=\emptyset $ or  $ R_2=\emptyset $.
     
-    The assumption of the theorem  $ \Rightarrow  $ $ E_1\not=\emptyset $  $ \Rightarrow E_1=\Omega $.  
+    The assumption of the theorem  $ \Rightarrow  $ $ E_1\neq\emptyset $  $ \Rightarrow E_1=\Omega $.  
 \end{proof}
 Let  $ f $ be analytic in  $ \Omega $ which is not identically zero,  $ f(a)=0 $ for some  $ a\in \Omega $.
-The previous theorem implies  $ \exists  $ first  $ N\in\mathbb{N} $ \st  $ f^{(N)}(a)\not=0 $. Taylor's theorem implies that  $ f(a)=(z-a)^Nf_N(z) $ where  $ f_N $ is analytic and  $ f_N(a)\not=0 $. We say that  $ a $ is a \name{zero of order $ N $} of  $ f $.
+The previous theorem implies  $ \exists  $ first  $ N\in\mathbb{N} $ \st  $ f^{(N)}(a)\neq0 $. Taylor's theorem implies that  $ f(a)=(z-a)^Nf_N(z) $ where  $ f_N $ is analytic and  $ f_N(a)\neq0 $. We say that  $ a $ is a \name{zero of order $ N $} of  $ f $.
 
-$ f_N $ is continuous  $ \Rightarrow  $ $ \exists\delta>0 $\st  $ f(z)\not=0 $ for  $ \forall z\in B(a,\delta)\backslash\{0\}$.
+$ f_N $ is continuous  $ \Rightarrow  $ $ \exists\delta>0 $\st  $ f(z)\neq0 $ for  $ \forall z\in B(a,\delta)\backslash\{0\}$.
 
 So we have just proved an important result: Zeros of  analytic functions are isolated, or equivalently, we have a famous theorem:
 \begin{theorem}[Identity Theorem]\label{Identity Theorem}
@@ -85,7 +85,7 @@ So we have just proved an important result: Zeros of  analytic functions are iso
 If  $ f $ is analytic in a neighborhood of  $ a $, but perhaps not at  $ a $ itself, then  $ a $ is called an \name{isolated singularity} of  $ f $. 
 
 If  $ \dps\lim\limits_{z\to a}f(z)=\infty $, then  $ a $ is said to be a \name{pole} of  $ f $, and we set  $ f(a)=\infty $.
-Continuity implies  $ \exists \delta>0 $ \st $ f(z)\not=0 $ for  $ \forall z\in B(0,\delta)\backslash\{a\} $. Thus,  $ g(z)=\dps\frac{1}{f(z)} $ is analytic in  $ B(a,\delta)\backslash\{a\} $.  $ \dps\lim\limits_{z\to a}(z-a)g(z)=0 $ $ \Rightarrow  $ $ a $ is a removable singularity of  $ g $, and  $ g $ has an analytic extension with  $ g(a)=0 $. $ g\not\equiv0 $ $ \Rightarrow $ $ a $ is a zero of  $ g $ with finite order. The \name{order of the pole} of  $ f $  at  $ a $ is the order  $ N $ of the zero of  $ g $ at  $ a $. 
+Continuity implies  $ \exists \delta>0 $ \st $ f(z)\neq0 $ for  $ \forall z\in B(0,\delta)\backslash\{a\} $. Thus,  $ g(z)=\dps\frac{1}{f(z)} $ is analytic in  $ B(a,\delta)\backslash\{a\} $.  $ \dps\lim\limits_{z\to a}(z-a)g(z)=0 $ $ \Rightarrow  $ $ a $ is a removable singularity of  $ g $, and  $ g $ has an analytic extension with  $ g(a)=0 $. $ g\not\equiv0 $ $ \Rightarrow $ $ a $ is a zero of  $ g $ with finite order. The \name{order of the pole} of  $ f $  at  $ a $ is the order  $ N $ of the zero of  $ g $ at  $ a $. 
 
 We can write 
 \begin{equation}
@@ -94,7 +94,7 @@ We can write
 where  $ f_N $ is analytic and nonzero in a neighborhood of  $ a $. 
 
 \begin{definition}
-    A function which is analytic in a region $ \Omega $ excpet for (isolated) poles is called a \name{meromorphic function}.
+    A function which is analytic in a region $ \Omega $ except for (isolated) poles is called a \name{meromorphic function}.
 \end{definition}
 \begin{example}
     If  $ f $ and  $ g $ are analytic in  $ \Omega $ and  $ g\not\equiv 0 $, then  $ \frac{f}{g} $ is a meromorphic function in  $ \Omega $. (See the Identity Theorem \ref{Identity Theorem})
@@ -108,10 +108,10 @@ If  $ f $ has a pole of order  $ N $ at  $ a $, then  $ (z-a)^Nf(z) $ is analyti
 \end{equation}
 where  $ \varphi $ is analytic at  $ a $.
 \begin{equation}
-    \Rightarrow  f(z)=b_N(z-a)^{-N}+b_{N-1}(z-a)^{-(N-1)}+\cdots+b_1(z-a)^{-1}+\varphi(z),\,\forall z\not= a . 
+    \Rightarrow  f(z)=b_N(z-a)^{-N}+b_{N-1}(z-a)^{-(N-1)}+\cdots+b_1(z-a)^{-1}+\varphi(z),\,\forall z\neq a . 
 \end{equation} 
 \begin{theorem}
-    If  $ f $ is analytic in a neighborhood of  $ a $, but perhaps not at  $ a $ itself, then exactly one of the following  $ 3 $ cases ocuurs:
+    If  $ f $ is analytic in a neighborhood of  $ a $, but perhaps not at  $ a $ itself, then exactly one of the following  $ 3 $ cases occurs:
     \begin{enumerate}[label=(\roman*)]
         \item  $ f\equiv 0 $ in this neighborhood.
         \item  $ \exists $ integer  $ N\in \mathbb{Z} $ \st  $ \dps\lim\limits_{z\to a}|z-a|^\alpha\cdot |f(z)|=\begin{cases}

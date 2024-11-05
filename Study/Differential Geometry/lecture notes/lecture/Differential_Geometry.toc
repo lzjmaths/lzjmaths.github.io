@@ -19,5 +19,7 @@
 \contentsline {section}{\numberline {5}Differential forms}{37}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Introduction}{37}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Alternating vector linear algebra}{38}{subsection.5.2}%
-\contentsline {section}{Index}{44}{section*.2}%
-\contentsline {section}{List of Theorems}{46}{section*.3}%
+\contentsline {subsection}{\numberline {5.3}Operation on vector bundles}{45}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Differential forms using local chart}{47}{subsection.5.4}%
+\contentsline {section}{Index}{48}{section*.2}%
+\contentsline {section}{List of Theorems}{50}{section*.3}%

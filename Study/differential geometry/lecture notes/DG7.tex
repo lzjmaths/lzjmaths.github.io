@@ -27,10 +27,10 @@ Locally, solving integral curve starting at  $ p  $ is equivalent to solving ODE
     \,
     \begin{itemize}
         \item  $ X=x\cdot\partial x\in\mathfrak{T}\mathbb{R} $ is complete, where global flow  $ \varphi:\mathbb{R}\times M\rightarrow M $,  $ \varphi(t,p)=p\cdot e^t $.
-        \item  $ X=x^2\partial x $ is not complete. Max integral curve starting at  $ 1 $ is given by  $ \gamma(t)=\dps\frac{1}{1-t},t\in (-\infty,1)\not=\mathbb{R} $.  
+        \item  $ X=x^2\partial x $ is not complete. Max integral curve starting at  $ 1 $ is given by  $ \gamma(t)=\dps\frac{1}{1-t},t\in (-\infty,1)\neq\mathbb{R} $.  
     \end{itemize}
 \end{example}
- Given  $ X\in \mathfrak{T}M $, we define \name{$ \Supp X $}$=\overline{\{p\in M:X_p\not=0\}}  $.
+ Given  $ X\in \mathfrak{T}M $, we define \name{$ \Supp X $}$=\overline{\{p\in M:X_p\neq0\}}  $.
 \begin{theorem}
     If a vector field  $ X  $ is compactly supported, then  $ X  $ is complete.\label{completeness of compact supported vector field}
 \end{theorem}  
@@ -38,7 +38,7 @@ Locally, solving integral curve starting at  $ p  $ is equivalent to solving ODE
     Any vector field on closed  manifold is complete.
 \end{corollary}
 \begin{lemma}[Escaping lemma]
-    Suppose  $ \gamma:(a,b)\rightarrow M $ is a max integral curve, with  $ (a,b)\not=\mathbb{R} $. Then  $ \not\exists  $ compact  $ K\subset M $ \st  $ \gamma(a,b)\subset K $    
+    Suppose  $ \gamma:(a,b)\rightarrow M $ is a max integral curve, with  $ (a,b)\neq\mathbb{R} $. Then  $ \not\exists  $ compact  $ K\subset M $ \st  $ \gamma(a,b)\subset K $    
 \end{lemma}
 \begin{proof}
     Otherwise, suppose  $ \gamma(a,b)\subset K $. WLOG, we may assume  $ b<+\infty $.
@@ -56,7 +56,7 @@ Locally, solving integral curve starting at  $ p  $ is equivalent to solving ODE
     Then  $ \hat{\gamma} $ is an integral curve with larger domain, then  $ \gamma $ contradiction with the maxity of  $ \gamma $.   
 \end{proof}
 \begin{proof}[Proof of \ref{completeness of compact supported vector field}]
-    Take any max integral curve  $ \gamma:(a,b)\rightarrow M $. Suppose  $ (a,b)\not=\mathbb{R} $. Then  $ X_{\gamma(s)}\not=0 $, $ \forall s $. Otherwise, the constant map  $ \mathbb{R}\rightarrow M,t\mapsto \gamma(s) $ is an integral curve with lager domain.
+    Take any max integral curve  $ \gamma:(a,b)\rightarrow M $. Suppose  $ (a,b)\neq\mathbb{R} $. Then  $ X_{\gamma(s)}\neq0 $, $ \forall s $. Otherwise, the constant map  $ \mathbb{R}\rightarrow M,t\mapsto \gamma(s) $ is an integral curve with lager domain.
     
     So  $ \forall s $,  $ \gamma(s)\in \Supp X $ $ \Rightarrow  $ $ \gamma(a,b)\subset \Supp X $ which is compact  $ \Rightarrow $  $ (a,b)=\mathbb{R} $ by the lemma. This causes contradiction!      
 \end{proof}
@@ -113,7 +113,7 @@ In local chart, solving  $ \gamma $ is still solving ODE, so most results still 
     \item Local flow exists.
 \end{itemize}
 
-Now define \name{$ \Supp X $}$ =\overline{\{p\in M: X_{t,p}\not=0\text{ for some }t\}} $.
+Now define \name{$ \Supp X $}$ =\overline{\{p\in M: X_{t,p}\neq0\text{ for some }t\}} $.
 
 Then  $ X  $ is compactly supported, then  $ X $ is complete(\ie a global flow  $ \varphi:\mathbb{R}\times M \rightarrow M$)
 

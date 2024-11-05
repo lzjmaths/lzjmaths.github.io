@@ -20,7 +20,7 @@
         \end{cases} $  
 \end{proof}
 \begin{remark}
-    In case (\romannumeral2),  $ N $ may be called the \name{algebraic order} of  $ f $ at  $ a $.  $ N>0 $ if  $ a $  is a pole,  $ N<0 $ if  $ a $ is a zero, and  $ N=0 $  if  $ f $ is analytic at  $ a $ and  $ f(a)\not=0 $. The order is always an integer, there is no analytic function which tends to  $ 0 $ or  $ \infty $, like a fractional power of  $ |z-a| $.
+    In case (\romannumeral2),  $ N $ may be called the \name{algebraic order} of  $ f $ at  $ a $.  $ N>0 $ if  $ a $  is a pole,  $ N<0 $ if  $ a $ is a zero, and  $ N=0 $  if  $ f $ is analytic at  $ a $ and  $ f(a)\neq0 $. The order is always an integer, there is no analytic function which tends to  $ 0 $ or  $ \infty $, like a fractional power of  $ |z-a| $.
 
     In some sense, three cases depends on whether  $ \dps\lim\limits_{z\to a}(z-a)^Nf(z) $ converges for some  $ N $. 
     
@@ -54,7 +54,7 @@
 \end{remark}
 \subsubsection{The Local Mappings}
 \begin{theorem}[The Argument Principle]\label{The Argument Principle}
-    Let  $  f$ be analytic in a disk  $ \triangle $ \st  $ f $  does not vanish identically. Let  $ z_j $ be the zeros of  $ f $, each zero being counted as many times as its order indicates. For every closed curve $ \gamma $ in  $ \triangle $ which does not pass through a zero, we have 
+    Let  $  f$ be analytic in a disk  $ \triangle $ \st  $ f $  does not vanish identically. Let  $ z_j $ be the zeros of  $ f $, each zero being counted as many times as \textbf{its order indicates}. For every closed curve $ \gamma $ in  $ \triangle $ which does not pass through a zero, we have 
     \begin{equation}
         \sum_jn(\gamma,z_j)=\frac{1}{2\pi i}\int_\gamma\frac{f'(z)}{f(z)}\mathrm{d}z \label{eq:The Argument Principle}
     \end{equation}     
@@ -69,10 +69,10 @@
     \begin{equation}
         f(z)=(z-z_1)(z-z_2)\cdots(z-z_n)g(z),\,z\in\triangle
     \end{equation}
-    where  $ g $ is analytic in  $ \triangle $ and  $ g(z)\not=0 $ for  $ \forall z\in \triangle $.
+    where  $ g $ is analytic in  $ \triangle $ and  $ g(z)\neq0 $ for  $ \forall z\in \triangle $.
     $ \Rightarrow  $
     \begin{equation}
-        \frac{f'(z)}{f(z)}=\frac{1}{z-z_1}+\frac{1}{z-z_2}+\cdots+\frac{1}{z-z_n}+\frac{g'(z)}{g(z)},\,\forall z\in\triangle\text{ and }z\not=z_j
+        \frac{f'(z)}{f(z)}=\frac{1}{z-z_1}+\frac{1}{z-z_2}+\cdots+\frac{1}{z-z_n}+\frac{g'(z)}{g(z)},\,\forall z\in\triangle\text{ and }z\neq z_j
     \end{equation}  
     Cauchy' Theorem \ref{Cauchy's theorem for a disk} $ \Rightarrow $ 
     \begin{equation}
@@ -108,4 +108,4 @@ If  $ a $ and  $ b $ are in the same region determined by  $ \Gamma $, then  $ n
 \begin{equation}
     \sum_jn(\gamma,z_j(a))=\sum_jn(\gamma,z_j(b))
 \end{equation}      
-If  $ \gamma $ is a circle, then  $ f $ takes the values  $ a $ and  $ b $ equally many times inside  $ \gamma $.    
+If  $ \gamma $ is a circle, then  $ f $ takes the values  $ a $ and  $ b $ equally many times inside  $ \gamma $, \underline{counted as many times as their orders indicate}.

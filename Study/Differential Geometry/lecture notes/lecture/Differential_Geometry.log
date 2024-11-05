@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  30 OCT 2024 08:09
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  5 NOV 2024 08:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,37 +1451,47 @@ Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 106.
 ) (../DG9.tex [23] [24] [25] [26]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 115.
-) (../DG10.tex [27] [28] [29] [30] [31]) (../DG11.tex [32] [33] [34] [35] [36]) (../DG12.tex [37] [38] [39] [40] [41] [42]) [43]
+) (../DG10.tex [27] [28] [29] [30] [31]) (../DG11.tex [32] [33] [34] [35] [36]) (../DG12.tex [37] [38] [39] [40] [41] [42]) (../DG13.tex [43]
+Underfull \hbox (badness 1917) in paragraph at lines 41--42
+[]\T1/ppl/m/n/12 If $\OML/cmm/m/it/12 A$ \T1/ppl/m/n/12 is graded $\U/msb/m/n/12 R$\T1/ppl/m/n/12 -algebra, we say $\OML/cmm/m/it/12 A$ \T1/ppl/m/n/12 is \T1/ppl/b/n/12 an-ti-com-mu-ta-tive[] \T1/ppl/m/n/12 if $\OML/cmm/m/it/12 ^^V\U/matha/m/n/12 p\OML/cmm/m/it/12 a; b\U/matha/m/n/12 q ^^P
+ []
+
+[44] [45]
+Overfull \hbox (14.31363pt too wide) detected at line 91
+[][]\U/matha/m/n/12 p\OML/cmm/m/it/12 M\U/matha/m/n/12 q[] ^^P t[]\OML/cmm/m/it/12 l \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 ^^B [] ^^B \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 Ñ \U/msb/m/n/12 R\U/matha/m/n/12 u ^^P t[]\OML/cmm/m/it/12 T[]M\U/matha/m/n/12 u
+ []
+
+[46]) [47]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [44
+ (./Differential_Geometry.ind [48
 
 
 ]
-Underfull \hbox (badness 2495) in paragraph at lines 90--91
+Underfull \hbox (badness 2495) in paragraph at lines 104--105
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[45])
+[49])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [46
+(./Differential_Geometry.loe [50
 
-] [47])
+] [51])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [48] (./Differential_Geometry.aux)
+ [52] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: 3A0E1F484C4B6FA26DDE7818700AD1FE;3856.
+(rerunfilecheck)             Checksum: 423961D346B947D7B43740A37B6E0E53;4308.
  ) 
 Here is how much of TeX's memory you used:
- 46555 strings out of 476683
- 1055732 string characters out of 5804047
+ 46675 strings out of 476683
+ 1058716 string characters out of 5804047
  1857018 words of memory out of 5000000
- 65889 multiletter control sequences out of 15000+600000
+ 66006 multiletter control sequences out of 15000+600000
  554613 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (48 pages).
+Output written on Differential_Geometry.pdf (52 pages).
