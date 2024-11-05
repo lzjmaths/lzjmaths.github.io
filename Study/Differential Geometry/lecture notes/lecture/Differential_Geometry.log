@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  5 NOV 2024 08:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  5 NOV 2024 19:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1461,37 +1461,57 @@ Overfull \hbox (14.31363pt too wide) detected at line 91
 [][]\U/matha/m/n/12 p\OML/cmm/m/it/12 M\U/matha/m/n/12 q[] ^^P t[]\OML/cmm/m/it/12 l \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 ^^B [] ^^B \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 Ñ \U/msb/m/n/12 R\U/matha/m/n/12 u ^^P t[]\OML/cmm/m/it/12 T[]M\U/matha/m/n/12 u
  []
 
-[46]) [47]
+[46]) (../DG14.tex
+Underfull \hbox (badness 10000) in paragraph at lines 21--30
+[]\T1/ppl/m/n/12 It suf-fices to prove that [] is com-pat-i-ble for two charts
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--30
+\U/matha/m/n/12 p\OML/cmm/m/it/12 U; x[]; []  ; x[]\U/matha/m/n/12 q\OML/cmm/m/it/12 ; \U/matha/m/n/12 p\OML/cmm/m/it/12 V; y[]; []  ; y[]\U/matha/m/n/12 q$\T1/ppl/m/n/12 , \T1/ppl/m/it/12 i.e. \T1/ppl/m/n/12 the di-a-gram is com-mu-ta-tive.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--30
+[]
+ []
+
+[47] [48]
+Overfull \hbox (21.13608pt too wide) in paragraph at lines 74--75
+[][] 
+ []
+
+[49]) [50]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [48
+ (./Differential_Geometry.ind [51
 
 
 ]
-Underfull \hbox (badness 2495) in paragraph at lines 104--105
+Underfull \hbox (badness 2495) in paragraph at lines 105--106
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[49])
+[52])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [50
+(./Differential_Geometry.loe [53
 
-] [51])
+] [54])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [52] (./Differential_Geometry.aux)
+ [55] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: 423961D346B947D7B43740A37B6E0E53;4308.
+(rerunfilecheck)             Checksum: AC7B6FDDFB5826813422C1DB30A5586A;4699.
  ) 
 Here is how much of TeX's memory you used:
- 46675 strings out of 476683
- 1058716 string characters out of 5804047
- 1857018 words of memory out of 5000000
- 66006 multiletter control sequences out of 15000+600000
- 554613 words of font info for 140 fonts, out of 8000000 for 9000
+ 46980 strings out of 476683
+ 1066321 string characters out of 5804047
+ 1863018 words of memory out of 5000000
+ 66308 multiletter control sequences out of 15000+600000
+ 559603 words of font info for 157 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (52 pages).
+Output written on Differential_Geometry.pdf (55 pages).

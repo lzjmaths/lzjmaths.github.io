@@ -1,0 +1,114 @@
+We give the notation that  $ I=\left(i_1,\cdots,i_k\right) $, write  $ f_{i_1,\cdots,i_k}\mathrm{d}x_{i_1}\wedge\cdots\wedge \mathrm{d}x_{i_k} $ as  $ f^I\mathrm{d}x^I $.
+\paragraph{Change of coordinate} If  $ (U,x^1,\cdots,x^n) $ and  $ (V,y^1,\cdots,y^n)$ two charts of  $ M $ and  $ p\in U\cap V $, then 
+\begin{equation}
+    \mathrm{d}y^i=\sum_{1 \leq i \leq n}\frac{\partial y_i}{\partial x^i}\mathrm{d}x^i.
+\end{equation}      
+\subsection{Exterior differential}
+For  $ k=0 $, define  $ d:\Omega^0(M)\rightarrow \Omega^1(M) $ as follows:
+
+$ \forall p\in M $,  $ X_p\in T_pM $,  $ \mathrm{d}f|_p(X_p)=X_p(f)\in \mathbb{R} $.   
+In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\mathrm{d}x^i $.
+\begin{theorem}
+    $ \exists $ linear operator  $ \mathrm{d}:\Omega^k(M)\rightarrow \Omega^{k+1}(M) $  \st 
+    For $ \alpha\in \Omega^k(M) $,  
+    \begin{equation}
+        \alpha|_U=\dps\sum_If^I\mathrm{d}x^I \Rightarrow \mathrm{d}\alpha|_U=\dps\sum_{I}\mathrm{d}f^I\wedge\mathrm{d}x^I \label{eq:local coordinate of exterior differential}
+    \end{equation}
+    Called the \name{exterior differential}
+\end{theorem} 
+
+\begin{proof}
+    It suffices to prove that \eqref{eq:local coordinate of exterior differential} is compatible for two charts  $ (U,x^1,\cdots,x^n),(V,y^1,\cdots,y^n) $, \textit{i.e.} the diagram is commutative.
+    {
+    \footnotesize
+    \begin{tikzcd}
+        f\mathrm{d}y^1\wedge\cdots\wedge\mathrm{d}y^k\arrow[r,leftrightarrow]\arrow[d,"\mathrm{d}"]&\dps\sum_{1 \leq i_1,i_2,\cdots,i_k \leq n}f\frac{\partial y^{i_1}}{\partial x^1}\cdots\frac{\partial y^{i_k}}{\partial x^k}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_k}\arrow[d,"d"],\arrow[d,"?",swap]\\
+        \dps\sum_{1 \leq i \leq n}\frac{\partial f}{\partial y^i}\mathrm{d}y^i\wedge\mathrm{d}y^{i_1}\wedge\cdots\wedge\mathrm{d}y^{i_k}\arrow[r,leftrightarrow,"?"]
+        &\dps\sum_{1 \leq i_1,i_2,\cdots,i_k \leq n}\frac{\partial f}{\partial x^j}\cdot\frac{\partial y^{i_1}}{\partial x^1}\cdots\frac{\partial y^{i_k}}{\partial x^k}\mathrm{d}x^j\wedge\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_k}
+    \end{tikzcd}
+    }
+\end{proof}
+\begin{theorem}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item $ \mathrm{d}^2=0 $.
+        \item  $ \forall \alpha\in \Omega^k(M),\beta\in \Omega^l(M) $,  $ \mathrm{d}(\alpha\wedge\beta)=\mathrm{d}\alpha\wedge\beta+(-1)^{k}\alpha\wedge\mathrm{d}\beta $. 
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item If  $ \alpha|_U=\dps\sum_{U}f^I\mathrm{d}x^I $. By linearity suffices to  check 
+        \begin{equation*}
+            \begin{aligned}
+                \mathrm{d}\circ \mathrm{d}(f\mathrm{d}x^I)&=\mathrm{d}\left(\dps\sum_{1 \leq i \leq n}\frac{\partial f}{\partial x^i}\mathrm{d}x^i\wedge\mathrm{d}x^I\right)\\
+                &=\dps\sum_{\substack{1 \leq i \leq n\\1 \leq j \leq n}}\dps\frac{\partial ^2 f}{\partial x^i}\mathrm{d}x^j\wedge\mathrm{d}x^i\wedge\mathrm{d}x^I\\
+                &=0
+            \end{aligned}
+        \end{equation*}
+        \item By linearity, suffices to assume  $ \alpha=f\mathrm{d}x^I $,  $ \beta=g\mathrm{d}x^I $.
+        \begin{equation*}
+            \begin{aligned}
+                \mathrm{d}(\alpha\wedge\beta)&=\dps \mathrm{d}(fg\mathrm{d}x^I\wedge x^J)\\
+                &=\dps\sum_{1 \leq i \leq n}\frac{\partial(fg)}{\partial x^i}\mathrm{d}x^I\wedge\mathrm{d}x^J\\
+                &=\dps\sum_{1 \leq i \leq n}\left(\frac{f}{\partial x^i}g+f\frac{\partial g}{\partial x^i} \right)\mathrm{d}x^i\wedge\mathrm{d}x^I\wedge\mathrm{d}x^J
+            \end{aligned}
+        \end{equation*}
+        And 
+        \begin{equation*}
+            \mathrm{d}\alpha\wedge\beta=\dps\sum_i\frac{\partial f}{\partial x^i}g\mathrm{d}x^i\wedge\mathrm{d}x^I\wedge\mathrm{d}x^J
+        \end{equation*}
+        \begin{equation*}
+            \alpha\wedge\mathrm{d}\beta=\dps\sum_i\frac{\partial g}{\partial x^i}f\mathrm{d}x^I\wedge \mathrm{d}x^i\wedge\mathrm{d}x^J=\dps\sum_i (-1)^k \frac{\partial g}{\partial x^i}f\mathrm{d}x^i\wedge\mathrm{d}x^I\wedge\mathrm{d}x^J
+        \end{equation*}
+    \end{enumerate}
+\end{proof}
+\begin{example}
+    For  $ M=\mathbb{R}^3 $,
+    
+    {\small\begin{tikzcd}
+        \Omega^0(\mathbb{R}^3)\arrow[d,"d"]\arrow[r,equal]&C^\infty(\mathbb{R}^3)\\
+        \Omega^1(\mathbb{R}^3)\arrow[r,leftrightarrow]\arrow[d,"d"]&\mathfrak{T}\mathbb{R}^3\arrow[d,"\text{curl}"],&f\mathrm{d}x+g\mathrm{d}y+h\mathrm{d}z\arrow[r,leftrightarrow]&f\partial x+g\partial y+h\partial z\\
+        \Omega^2(\mathbb{R}^3)\arrow[r,leftrightarrow]\arrow[d,"d"]&\mathfrak{T}\mathbb{R}^3\arrow[d,"\text{divergent}"],&f\mathrm{d}x\wedge\mathrm{d}y+g\mathrm{d}x\wedge\mathrm{d}z+h\mathrm{d}y\wedge\mathrm{d}z\arrow[r,leftrightarrow]&f\partial z+g\partial x+h\partial y\\
+        \Omega^3(\mathbb{R}^3)\arrow[r,leftrightarrow]&C^\infty(\mathbb{R}^3),&f\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z\arrow[r,leftrightarrow]&f
+    \end{tikzcd}}
+\end{example}
+\subsection{Pull back of differential forms}
+For  $ F\in C^\infty(M,N) $,  $ \alpha\in \Omega^k(N) $, define the \name{pullback}  $ F^*(\alpha) \in \Omega^k(M)$ as follows:
+\begin{equation*}
+    \forall p\in M, V_1\cdots,V_k\in T_pM, F^*(\alpha)|_p(V_1,\cdots,V_k)=\alpha|_{F(p)}(F_{p,*}(V_1),\cdots,F_{p,*}(V_k))\in \mathbb{R}
+\end{equation*}
+Actually,  $ F^*(\alpha)=\Alt^k(F_{p,*}):\Alt^k(T_{F(p)N})\rightarrow \Alt^k(T_pM) $.
+
+\begin{proposition}\label{proposition of pull back}
+    For  $ F:M\rightarrow N $,  $ G:N\rightarrow L $.
+
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ f\in \Omega^0(N) $,  $ F^*(f)=f\circ F\in \Omega^0(M) $.
+        \item  $ F^*(\alpha\wedge \beta)=F^*(\alpha)\wedge F^*(\beta) $.
+        \item  $ F^*(\mathrm{d}\alpha)=\mathrm{d} F^*(\alpha) $.
+        \item  $ (G\circ F)^*=F^*\circ G^* $     
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item \begin{tikzcd}
+            \Alt^0(T_{F(p)}N)\arrow[r,"\Alt^0(F_{p,*})"]\arrow[d,equal]&\Alt^0(T_pM)\arrow[d,equal]\\
+            \mathbb{R}\arrow[r,"id"]&\mathbb{R}
+        \end{tikzcd}commutes.
+        \item \begin{tikzcd}
+            \Alt^k(T_{F(p)N})\times \Alt^l(T_{F(p)}N)\arrow[r,"\wedge"]\arrow[d,"\Alt^k(F_{p,*})\times \Alt^l(F_{p,*})"]&\Alt^{k+l}(T_pM)\arrow[d,"\Alt^{k+l}(F_{p,*})"]\\
+            \Alt^k(T_pM)\times \Alt^l(T_pM)\arrow[r,"\wedge"]&\Alt^{k+l}(T_pM)
+        \end{tikzcd} commutes.
+        \item By linearity it suffices to check 
+        \[\mathrm{d}F^*(f \mathrm{d}x^I)=F^*\mathrm{d}(f\mathrm{d}x^I)\]
+        By Leibniz rule for  $ \mathrm{d} $ and (2), it suffices to show 
+        \begin{enumerate}
+            \item  $ \mathrm{d} F^*(\mathrm{d}f)=F^*(\mathrm{d}f) $ 
+            \item  $ \mathrm{d}F^*(\mathrm{d}x^i)=F^*(\mathrm{d}(\mathrm{d}x^i)) $ 
+        \end{enumerate} 
+        Which leaves to the readers.
+        \item By definition.
+    \end{enumerate}
+\end{proof}
