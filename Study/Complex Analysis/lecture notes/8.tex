@@ -2,7 +2,7 @@
 There is some notes in this section:
 
  $ R $ is the rectangle in  $ \mathbb{C} $,  $ R=\{x+iy\in\mathbb{C}:a \leq x \leq b,c \leq y \leq d\} $. And  $ \partial R $ is boundary curve oriented in the counterclockwise direction.
- \begin{theorem}[Cauch's theorem for a rectangle]\label{Cauchy's theorem for a rectangle}
+ \begin{theorem}[Cauchy's theorem for a rectangle]\label{Cauchy's theorem for a rectangle}
     If  $ f $ is analytic on an open set which contains  $ R $, then  $ \dps\int_{\partial R}f(z)\mathrm{d}z=0 $   
 \end{theorem}
 \begin{proof}
@@ -81,7 +81,7 @@ Here is a stronger version.
     If the piecewise differentiable closed curve  $ \gamma $ does not pass through  $ z\in \mathbb{C} $, then the value of the integral  $ \int_\gamma \frac{\mathrm{d}\zeta}{\zeta -z}$  is a multiple of  $ 2\pi i $. 
 \end{lemma}
 \begin{proof}
-     $ \gamma:\zeta=\zeta(t),\alpha \leq t \leq \beta $.  $ h(t)=\int_\alpha^t\frac{\zeta'(x)}{\zeta(s)-z}\mathrm{d}s $.
+     $ \gamma:\zeta=\zeta(t),\alpha \leq t \leq \beta $.  $ h(t)=\int_\alpha^t\frac{\zeta'(s)}{\zeta(s)-z}\mathrm{d}s $.
      
       $ z\in \gamma $  $ \Rightarrow  $  $ h $ is defined and continuous on  $ [\alpha,\beta] $. For all  $ t $ \st  $ \zeta'(t) $ is continuous, we have 
       \[h'(t)=\frac{\zeta'(t)}{\zeta(t)-z}\Rightarrow \frac{\mathrm{d}}{\mathrm{d}t}\left[e^{-h(t)}(\zeta(t)-z)\right]=0\]

@@ -36,7 +36,7 @@ The \name{index of the point $ z $} w.r.t. the closed curve  $ \gamma $ is the n
     
     So we may assume  $ z\in \triangle $ and  $ z\not\in \gamma $. Define  $ F:\triangle\backslash\{z\}\rightarrow \mathbb{C},\zeta\mapsto \dps\frac{f(\zeta)-f(z)}{\zeta-z} $.
     
-    Then  $ F $ is analytic in  $ \triangle\backslash\{z\} $, and  $ \dps\lim\limits_{\zeta\to z}(\zeta-z)F(zeta) $.
+    Then  $ F $ is analytic in  $ \triangle\backslash\{z\} $, and  $ \dps\lim\limits_{\zeta\to z}(\zeta-z)F(\zeta) $.
     
     By Cauchy's Theorem \ref{stronger version of Cauchy's theorem for a rectangle} $ \Rightarrow $ $ \int_\gamma F(\zeta)\mathrm{d}\zeta=0 $  $\Rightarrow $ $ \dps\int_\gamma \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta=f(z)\int_\gamma\frac{1}{\zeta-z}\mathrm{d}\zeta=f(z)\cdot 2\pi i \cdot n(\gamma,z) $   
 \end{proof}
@@ -71,7 +71,7 @@ This is usually referred to as \name{Cauchy's integral formula}
     We suppose that the lemma holds for  $ n-1 $ with  $ n\in \mathbb{N} $:  $ \forall  $ continuous $ \varphi $ on  $ \gamma $,  $ F_{n-1} $ is analytic in  $ \Omega\backslash \gamma $ and  $ F_{n-1}'
     (z)=(n-1)F_n(z),\forall z\in \Omega\backslash \gamma $.
     
-    Fix  $ z_0\in \Omega\backslash \gamma $. For  $ \forall z\in B(z_0,\frac{\delta}{2}) $, with  $ B(z_0,\delta)\subset \Omega\backslash \gamma $, we have  $ |\zeta-z|>\frac{delta}{2},\,\forall \zeta\in \gamma $.
+    Fix  $ z_0\in \Omega\backslash \gamma $. For  $ \forall z\in B(z_0,\frac{\delta}{2}) $, with  $ B(z_0,\delta)\subset \Omega\backslash \gamma $, we have  $ |\zeta-z|>\frac{\delta}{2},\,\forall \zeta\in \gamma $.
     
     For  $ \forall  $ continuous  $ \varphi $ on  $ \gamma $,  
     \begin{align*}
