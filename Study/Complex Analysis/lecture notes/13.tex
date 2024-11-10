@@ -56,17 +56,17 @@ We have the equation that
     The maximum principle can also be proved by the mean value theorem \ref{mean value property} for analytic functions.
 \end{remark}
 \begin{theorem}[Schwarz Lemma]\label{Schwarz lemma}
-    If  $ f $ is analytic in the disk  $ |z|<1 $ and satisfies  $ f(0)=0 $, $ |f(z)| \leq 1 $, $ \forall z\in B(0,1) $, then  $ |f(z)| \leq |z| $ and  $ |f'(0)| \leq 1 $. Furthermore, if  $ |f(z)|=|x| $ for some  $ z\neq 0 $, or if  $ |f'(0)|=1 $, then  $ f(z)=cz $ where  $ c\in \mathbb C $ with  $ |c|=1 $.      
+    If  $ f $ is analytic in the disk  $ |z|<1 $ and satisfies  $ f(0)=0 $, $ |f(z)| \leq 1 $, $ \forall z\in B(0,1) $, then  $ |f(z)| \leq |z| $ and  $ |f'(0)| \leq 1 $. Furthermore, if  $ |f(z)|=|z| $ for some  $ z\neq 0 $, or if  $ |f'(0)|=1 $, then  $ f(z)=cz $ where  $ c\in \mathbb C $ with  $ |c|=1 $.      
 \end{theorem}
 \begin{proof}
-    We define  $ \dps g(z)\begin{cases}
+    We define  $ \dps g(z)=\begin{cases}
         \dps\frac{f(z)}{z},&z\neq 0,z\in B(0,1)\\
         f'(0),&z=0
     \end{cases} $.
 
     Then  $ g $ is analytic with  $ g'(0)=\dps\frac{f'(0)}{2} $ using Taylor series \eqref{Taylor's expansion equation}.
 
-    The maximum principle implies that  $ |g'(z)| \leq \dps\frac{1}{r} $, $ \forall z\in \overline{B(0,r)} $ where  $ 0<r<1 $.   
+    The maximum principle implies that  $ |g(z)| \leq \dps\frac{1}{r} $, $ \forall z\in \overline{B(0,r)} $ where  $ 0<r<1 $.   
 
     Setting  $ r\rightarrow 1 $, we get  $ |g(z)| \leq 1 $, $ \forall |z|<1 $.
     
