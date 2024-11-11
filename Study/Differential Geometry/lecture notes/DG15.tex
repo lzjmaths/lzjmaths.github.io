@@ -1,0 +1,101 @@
+\begin{definition}
+    A  $ k $-form  $ \omega $ is \textbf{closed}\index{closed form}  if  $ \omega\in\ker\left(\Omega^k(M)\xrightarrow{d}\Omega^{k+1}(M)\right) $.
+    
+    A  $ k $-form  $ \omega $ is \textbf{exact}\index{exact form}  if there exists a  $ (k-1) $-form  $ \eta $ such that  $ d\eta=\omega $, or equivalently,  $ \omega\in \img\left(\Omega^{k-1}(M)\xrightarrow{d}\Omega^k(M)\right) $.   
+    
+    By Proposition \ref{proposition of pull back} (1), exact  $ k $-form are all closed. 
+
+So we may define the  $ k $-th  \name{de Rham cohomology} of  $ M $
+\begin{equation}
+    H^k_{\mathrm{DR}}(M):=\dps\frac{\dps\ker\left(d:\Omega^k(M)\xrightarrow{d} \Omega^{k+1}(M)\right)}{\dps\img\left(\Omega^{k-1}(M)\xrightarrow{d}\Omega^k(M)\right)}
+\end{equation}  
+\end{definition}
+
+By Proposition \ref{proposition of pull back} (2), we have  $ \forall F\in C^\infty(M,N) $, 
+$ \omega\in \Omega^k(N) $.
+
+Then  $ \omega $ closed  $ \Rightarrow  $  $ F^*\omega $ is closed.  $ \omega $ exact $ \Rightarrow $  $ F^*\omega $ exact.
+
+So  $ F $ induces a linear map 
+\begin{equation*}
+    \begin{aligned}
+        F^*:H^k_{\mathrm{DR}}(N)&\rightarrow H^k_{\mathrm{DR}}(M)\\
+        [\omega]&\mapsto [F^*\omega]
+    \end{aligned}
+\end{equation*} 
+\begin{proposition}[Key properties of  $ H^k_{\mathrm{DR}}(M) $]\label{key properties of de Rham cohomology}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ (F\circ G)^*=G^* \circ F^* $
+        \item  $ (\id)^*=\id $.
+        \item  $ F,G\in C^\infty(M,N) $,  $ F $ homotopic to  $ G $ $ \Rightarrow  $ $ F^*=G^* $     
+        \item If  $ F $ is a homotopy equivalence $ \Rightarrow $  $ F^*:H^k_{\mathrm{DR}}(M)\rightarrow H^k_{\mathrm{DR}}(N) $  is an isomorphism.    
+    \end{enumerate}
+\end{proposition}
+\begin{remark}
+    Properties (3),(4) are nontrivial, which is the essential part of the theory of de Rham cohomology
+\end{remark}
+\begin{proposition}\label{Computation of cohomology at 0}
+     $ H^k_{\mathrm{DR}}(M)\cong \mathbb{R} \left<\pi_0(M)\right>$, where  $ \pi_0(M)=\{\text{path component of  $ M $}\} $.  
+\end{proposition}
+It suffices to prove the lemma that
+\begin{lemma}
+     $ \alpha\in \Omega^0(M)=C^\infty(M,n\mathbb{R}) $. Then $ \alpha $ is closed iff  $ \alpha $  is constant on each component of  $ M $.  
+\end{lemma}
+\begin{proof}
+    The inverse part is trivial.
+    
+    Assume  $ \alpha $ is closed. Pick  $ p,q\in M $ in some path component.  $ \exists $ smooth path  $ \gamma:\mathbb{R}\rightarrow M $,  $ \gamma(0)=p,\gamma(1)=q $.
+    
+    $ \dd \alpha=0 $ $ \Rightarrow  $  $ \mathrm{d}(\gamma^*\alpha)=0 $ $ \Rightarrow  $  $ \dd(\alpha\circ \gamma)=0 $  $ \Rightarrow $ $ \dps\frac{\dd (\alpha\circ \gamma)}{\dd t}=0 $ $ \Rightarrow  $ $ \alpha\circ \gamma(1)=\alpha\circ\gamma(0) $.
+     
+    So  $ \alpha(p)=\alpha(q) $ 
+\end{proof}
+We have  $ H^k_{\mathrm{DR}}(M)\cong \mathrm{Ab}(\pi_1(M))\otimes_\mathbb{Z} \mathbb{R} $.  $  \mathrm{Ab}(\pi_1(M)) $ is the Abelian group of  $ \pi_1(M) $. In particular,  $ H^1_{\mathrm{DR}}(\mathbb R^2)=0 $,  $ H^1_{\mathrm{DR}}(\mathbb R^2\backslash \{0\})\neq 0 $.
+
+Let us stop the discussion of de Rham cohomology for a moment, and move on to the next topic.
+\section{Integration of differential form}
+\subsection{Orientation on manifold}
+An orientation on a finite dimensional vector space  $ V $ is an equivalent class of ordered basis 
+\[\alpha=(\alpha_1,\cdots,\alpha_n)^T\sim\beta=(\beta_1,\cdots,\beta_n)^T\Leftrightarrow \det(\alpha\beta^T)\]
+Each vector space has exactly two orientations. And we actually have the 1-1 correspondence 
+
+\[\{\text{orientation on  $ V $}\}\leftrightarrow(\Alt^n(V)\backslash\{0\})/_{\mathbb{R}^+}\]
+\[[(e_!,\cdots,e_n)]\leftrightarrow [e_1^*\wedge\cdots\wedge e_n^*]\]
+An \name{orientation form} on  $ M $ of dimension  $ n $  is a nowhere vanishing  $ \omega\in \Omega^n(M) $  \ie an orientation form is a nowhere vanishing section of  $ \Alt^n(TM) $. 
+
+Two orientation forms  $ \omega_1,\omega_2 $ are equivalent if  $ \exists f\in C^\infty(M,\mathbb{R}^+) $ \st  $ \omega_1=f\omega_2 $. An \name{orientation} on  $ M $ is an equivalent class of  orientation form.
+
+An \name{orientation manifold} is a manifold that has an orientation.
+
+An \name{oriented manifold} is a manifold equipped with an orientation.
+\begin{example}
+     $ |\pi_0(M)|=k $ $ \Rightarrow $  $ M $ has  $ 2^k $ orientations or no orientations.    
+\end{example}
+
+\begin{example}
+    \,
+    \begin{enumerate}
+        \item $ U\subset \mathbb{R}^n $ open.  $ U $ has a standard orientation, represented by the form  $ \dd x^1\wedge\cdots\wedge \dd x^n $.
+        \item  $ (M,\mathcal{O}_M),(N,\mathcal{O}_N) $ oriented manifolds $ \Rightarrow $  $ (M\times N,\mathcal{O}_M\times \mathcal{O}_N) $. If  $ \mathcal{O}_M=[\omega_M],\mathcal{O}_N=[\omega_N] $, then  $ \mathcal{O}_M\times \mathcal{O}_N $ is defined by $ [\pi_M^*(\omega_M)\wedge\pi_N^*(\omega_N)] $. ($ \pi_M,\pi_N $ is the pullback of the projection map)     
+        \item  $ T^n ,S^n$ are orientable.
+        \item  $ \mathbb{RP}^n $ orientable iff  $ n $ is odd.  
+    \end{enumerate}
+\end{example}
+\begin{proposition}
+    Let  $ \mathcal{U}=\{U_\alpha\} $ be an open cover of  $ M $. Suppose we have an orientation  $ \mathcal{O}_\alpha $ on each  $ U_\alpha $ \st  $ \mathcal{O}_\alpha|_{U_\alpha\cap U_\beta}=\mathcal{O}_\beta|_{U_\alpha\cap U_\beta} $, $ \forall \alpha,\beta $. Then  $ \exists  $ unique orientation  $ \mathcal{O}_M $ on  $ M $ \st  $ \mathcal{O}_M|_{U_\alpha}=\mathcal{O}_\alpha $.         
+\end{proposition}
+\begin{proof}
+    For each  $ \alpha $, we have  $ \omega_\alpha\in \Omega^n(U_\alpha) $ nowhere-vanishing. And 
+    \begin{equation}
+        \omega_\alpha|_{U_\alpha\cap U_\beta}=f_{\alpha\beta}\cdot\omega_\beta|_{U_\alpha\cap U_\beta},\,f_{\alpha\beta}:U_\alpha\cap U_\beta\rightarrow \mathbb{R}^+\label{eq:14}
+    \end{equation}
+    Take partition of unity subordinate to  $ \mathcal{U} $,  $ \{\varphi_\alpha\} $.
+    
+    Set  $ \omega=\dps\sum_\alpha\varphi_\alpha\cdot\omega_\alpha $. Then  $ \omega $ is nowhere-vanishing by \eqref{eq:14}.
+
+    The uniqueness follows from the fact that  $ n $-form is equivalent if and only if it is equivalent on each chart. 
+\end{proof}
+\begin{definition}
+    Given  $ (M,\mathcal{O}_M),(N,\mathcal{O}_N) $.  $ f\in \Diff(M,N) $. Say  $ f $ is \name{orientation preserving} if  $ f^*(\mathcal{O}_N)=\mathcal{O}_M $.  $ f $ is \name{orientation reversing} if  $ f^*(\mathcal{O}_N)=-\mathcal{O}_M $.      
+\end{definition}

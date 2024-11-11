@@ -41,6 +41,7 @@
 
   \indexspace
 
+  \item closed form, \hyperpage{50}
   \item commutes, \hyperpage{30}
   \item complete, \hyperpage{16}
   \item contravariant functor, \hyperpage{43}
@@ -52,6 +53,7 @@
 
   \indexspace
 
+  \item de Rham cohomology, \hyperpage{50}
   \item differential, \hyperpage{10}
   \item Dual bundle of a vector bundle, \hyperpage{45}
   \item dual vector bundle, \hyperpage{45}
@@ -60,6 +62,7 @@
 
   \item embedded submanifold, \hyperpage{35}
   \item embedding, \hyperpage{35}
+  \item exact form, \hyperpage{50}
   \item exhaust, \hyperpage{8}
   \item exterior algebra, \hyperpage{45}
   \item exterior differential, \hyperpage{47}
@@ -103,6 +106,12 @@
   \indexspace
 
   \item one-parameter transformation group, \hyperpage{17}
+  \item orientation, \hyperpage{52}
+  \item orientation form, \hyperpage{52}
+  \item orientation manifold, \hyperpage{52}
+  \item orientation preserving, \hyperpage{53}
+  \item orientation reversing, \hyperpage{53}
+  \item oriented manifold, \hyperpage{52}
 
   \indexspace
 
