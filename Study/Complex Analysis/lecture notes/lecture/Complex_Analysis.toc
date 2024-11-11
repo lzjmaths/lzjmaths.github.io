@@ -42,5 +42,7 @@
 \contentsline {subsubsection}{\numberline {5.3.4}The Maximum Principle}{41}{subsubsection.5.3.4}%
 \contentsline {subsection}{\numberline {5.4}The General Form of Cauchy's Theorem}{42}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Chains and Cycles}{42}{subsubsection.5.4.1}%
-\contentsline {section}{Index}{43}{section*.4}%
-\contentsline {section}{List of Theorems}{45}{section*.5}%
+\contentsline {subsubsection}{\numberline {5.4.2}Simple connectivity and homology}{43}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}The general form of Cauchy's theorem}{44}{subsubsection.5.4.3}%
+\contentsline {section}{Index}{46}{section*.4}%
+\contentsline {section}{List of Theorems}{48}{section*.5}%

@@ -1,0 +1,102 @@
+A chain is a \name{cycle} if it can be represented as a finite sum of closed curves.
+\subsubsection{Simple connectivity and homology}
+A region is \name{simply connected} if its complement w.r.t.  $ \hat{\mathbb C} $ is connected.
+\begin{example}
+    A disk, a half plane, a parallel strip are simply connected.
+
+     $ \mathbb{C}\backslash \overline{B(0,1)} $ is not simply connected since its complement w.r.t.  $ \hat{\mathbb C} $ consists of  $ \overline{B(0,1)} $ and  $ \infty $.    
+\end{example} 
+\begin{theorem}\label{thm in sec:4.2: Equivalence of simply connectness}
+    A region  $ \Omega\subset \mathbb C $ is simply connected iff $ n(\gamma,z)=0 $ for all cycles  $ \gamma  $ in  $ \Omega  $ and all points  $ z\not\in \Omega $.   
+\end{theorem}
+\begin{proof}
+    "$\Rightarrow$":
+    $ \forall   $ cycle  $ \gamma\subset \Omega $,  $ \hat{\mathbb{C}}\backslash \Omega$ must be in one of the regions in  $ \hat{\mathbb C}\backslash\gamma $ since  $ \hat{\mathbb C}\backslash \Omega $  is connected.
+    
+    $ \infty\in \hat{\Cbb}\backslash\Omega $ $ \Rightarrow  $  $ \Cbb\backslash\Omega  $ is in the unbounded region of  $ \Cbb\backslash \gamma $.  By theorem \ref{sec2.1:Winding Number Theorem}  $ n(\gamma,z)=0 $, $ \forall z\in \Cbb\backslash\Omega $.
+    
+    "$ \Leftarrow $": Suppose  $ \Omega  $ is not simply connected, \ie,  $ \hat{C}\backslash\Omega $ is not connected. Let  $ \hat{\Cbb}\backslash \Omega=A\sqcup B $ with  $ A,B $ disjoint closed sets.
+    
+    Suppose that  $ \infty\in B $. Then  $ A  $ is the bounded set. $ \delta $ is defined to be the distance between  $ A  $ and  $ B $. The  $ \delta>0 $. Cover  $ A  $ with a net of squares  $ \Omega $   of side less than  $ \dps\frac{\delta}{\sqrt{2}} $.
+    
+    Suppose  $ z_0\in A  $ lies at the center of a square cycle  $ \gamma:=\sum\limits_{Q:Q\cap A\neq 0}\partial \Omega $.
+    
+    $ z_0  $ is only in one of these squares  $ \Rightarrow  $ $ n(\gamma,z_0)=1 $.
+    
+    Since sides of squares are less than  $ \dps\frac{\delta }{\sqrt{2}} $,  $ \gamma\cap B\neq \emptyset $.
+    
+     $ \gamma\cap A=\emptyset $ after  cancellations of the multiple sides.
+     
+     $ \Rightarrow  $  $ \gamma\in \Omega $ with  $ n(\gamma,z_0)=1 $. That's a contradiction. 
+\end{proof}
+A cycle $ \gamma    $ in an open set  $ \Omega  $ is said to be \name{homologous to zero} w.r.t.  $ \Omega  $ if  $ n(\gamma,z)=0  $ for  $ \forall z\in\Cbb\backslash \Omega $. 
+
+In symbols, we write  $ \gamma\sim 0(\mathrm{mod}\, \Omega) $. So  $ \gamma_1\sim \gamma_2 $ means  $ \gamma_1-\gamma_2\sim 0(\mathrm{mod}\, \Omega) $.  
+\subsubsection{The general form of Cauchy's theorem}
+\begin{theorem}[General form of Cauchy's theorem]\label{General form of Cauchy's theorem}
+    If  $ f  $ is analytic in an open set  $ \Omega  $, then  $ \int_\gamma f(z)\mathrm{d} z=0  $ for  $ \forall  $ cycle  $ \gamma  $ which is homologous to zero in  $ \Omega $. 
+\end{theorem}
+In combination with the theorem \ref{thm in sec:4.2: Equivalence of simply connectness} in the previous section, we have 
+\begin{corollary}\label{Corollary 1 of general Cauchy's theorem}
+    If  $ f  $ is analytic in a simply connected region  $ \Omega  $, then  $ \int_\gamma f(z)\mathrm{d}z=0 $ for all cycles  $ \gamma $ in  $ \Omega $.    
+\end{corollary}
+In combination with the fundamental theorem \ref{Fundamental theorem of Calculus for integrals} of Calculus for integrals in  $ \Cbb $, we have 
+\begin{corollary}\label{Corollary 2 of general Cauchy's theorem}
+    If  $ f  $ is analytic in a simply connected region  $ \Omega  $, then  $ \exists  $ an analytic function  $ F $ in  $ \Omega  $ \st  $ F'(z)=f(z) $ for  $ \forall z\in \Omega $.     
+\end{corollary} 
+\begin{corollary}\label{Corollary 3 of general Cauchy's theorem}
+    If  $ f  $ is analytic  in a simply connected region  $ \Omega  $ and  $ f(z)\neq 0 $  for  $ \forall z\in \Omega $, then it is possible to define single-valued analytic branches of  $ \ln f(z)  $ and  $ \dps\sqrt[n]{f(z)} $ in  $ \Omega $      
+\end{corollary}
+\begin{proof}
+     $ \dps\frac{f'(z)}{f(z)} $ is analytic in  $ \Omega $ $ \overset{Corollary \ref{Corollary 2 of general Cauchy's theorem}}{\Longrightarrow} $ $ \exists  $ an analytic function  $ F $ \st  $ F'(z)=\dps\frac{f'(z) }{f(z)} $, $ \forall z\in \Omega $.
+     
+      $ \Rightarrow  $  $ \dps\frac{\dd }{\dd z}\left[f(z)\dps e^{-F(z)}\right]=0,\forall z\in \Omega $ $ \Rightarrow  $ $ f(z)=C\cdot e^{F(z)} $ for some  $ C\in \Cbb\backslash\{0\} $.
+      
+    Choose  $ z_0\in \Omega $ and one of the infinite values of  $ \ln f(z_0) $.
+    
+     $ \Rightarrow  $  $ \dps\exp\left[F(z)-F(z_0)+\ln f(z_0)\right]=\dps\frac{f(z)}{C}\cdot e^{-F(z_0)}=f(z) $, $ \forall z\in \Omega $.
+     
+     We may define  $ \ln f(z)=F(z)-F(z_0)+\ln f(z_0) $,  $ \sqrt[n]{f(z)}=\exp\dps\left[\frac{1}{n}\ln f(z)\right] $.
+  
+\end{proof}
+\begin{proof}[Proof of Cauchy's Theorem \ref{General form of Cauchy's theorem}]
+    Let  $ \gamma  $ be a cycle in  $ \Omega $ satisfying  $ \gamma\sim 0 \mod \Omega$. The theorem in \ref{sec2.1:Winding Number Theorem} implies that 
+    \begin{center}
+         $ E:=\{z\in \Cbb\backslash\gamma:n(\gamma,z)=0\} $ is open 
+    \end{center} 
+    We define  $ g :\Omega\times\Omega\rightarrow \Cbb$ by 
+    \begin{equation}\label{sec4.3:g def}
+        g(z,\zeta):=\begin{cases}
+            \dps\frac{f(z)-f(\zeta)}{z-\zeta},&z\neq \zeta \\
+            f'(z),&z=\zeta
+        \end{cases}
+    \end{equation}  
+    Taylor's theorem implies  $ g $ is continuous in  $ (z,\zeta)\in \Omega\times\Omega $. For  $ \forall \zeta_0\in \Omega $,  $ g(z,\zeta_0) $ is analytic in  $ \Omega $ since  $ \dps\lim_{z\to\zeta_0}(z-\zeta_0)g(z,\zeta_0)=0$.
+    
+    Define  $ h(z)=\begin{cases}
+        \dps\frac{1}{2\pi i}\int_\gamma g(z,\zeta)\dd \zeta,&z\in \Omega\\
+        \dps\frac{1}{2\pi i}\int_\gamma\frac{f(z)}{z-\zeta}\dd \zeta,&z\in E
+    \end{cases} $. 
+     $ \gamma\sim 0 $ $ \Rightarrow  $  $ n(\gamma,z)=0,\forall z\in \Cbb\backslash \Omega $ $ \Rightarrow  $ $ C\backslash \Omega\subset E $ $ \Rightarrow  $ $ \Omega\cup E=\Cbb $. So  $ h $ is defined on  $ \Cbb $.
+     
+     These two expressions are equal on  $ \Omega\cap E $ since  $ n(\gamma,z)=0 $, $ \forall z\in \Omega\cap E $.
+     
+    Lemma \ref{lemma in section 2.3} implies that  $ h $ is analytic in  $ E $.
+    
+    The last exercise in Homework 6 $ \Rightarrow $  $ h $  is analytic on  $ \Omega $ $ \Rightarrow $  $ h $ is entire.
+    
+     $ n(\gamma,z)=0 $ if  $ |z| $ is sufficiently large  $ \Rightarrow  $   $ z\in E $ if  $ |z| $ large enough.
+     
+      $ f $ is bounded on  $ \gamma $ $ \Rightarrow  $ $ h(z)\rightarrow 0 $ as  $ |z|\rightarrow\infty $ $ \Rightarrow $  $ h $ is bounded and thus  $ h\equiv 0 $. By Liouville's Theorem \ref{Liouville's Theorem}, 
+      
+       $ \dps\frac{1}{2\pi i}\int_\gamma g(z,\zeta)\dd \zeta=0 $, $ \forall z\in \Omega\backslash \gamma $. Then 
+       \begin{equation}
+        n(\gamma,z)f(z)=\dps\frac{1}{2\pi i}\int_\gamma\frac{f(\zeta)}{\zeta-z}\dd \zeta ,\,\forall z\in \Omega\backslash \gamma\label{Generalized version of Cauchy's integral formula}
+       \end{equation}
+       \autoref{Generalized version of Cauchy's integral formula} is the \textbf{generalized version of Cauchy's integral formula}.
+
+       Let  $ z_0\in \Omega\backslash \gamma $. Define  $ h_1(z)=(z-z_0)f(z) $. Then  $ h_1 $ analytic and 
+       \begin{equation}
+        \int_\gamma f(z)\dd z=\int_\gamma\frac{h_1(z)}{z-z_0}\dd z\overset{\eqref{Generalized version of Cauchy's integral formula}}{=}2\pi i\cdot n(\gamma,z_0)\cdot h_1(z_0)=0
+       \end{equation}  
+\end{proof}

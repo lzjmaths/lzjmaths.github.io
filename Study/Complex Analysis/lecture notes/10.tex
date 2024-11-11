@@ -18,12 +18,12 @@ Suppose  $ f $ is analytic in a disk, $ \overline{B(z_0,R)} $, and   bounded on 
     |f^{(n)}(z)| \leq \frac{n!}{2\pi}\int_C\frac{|f(\zeta)|}{|\zeta-z_0|^{n+1}}|\mathrm{d}\zeta| \leq \frac{n!}{2\pi}\cdot\frac{M}{R^{n+1}}\cdot 2\pi R=MR^{-n}n!
 \end{equation}    
 This inequality is known as \name{Cauchy's estimate}.
-\begin{theorem}[Liouville's Theorem]
+\begin{theorem}[Liouville's Theorem]\label{Liouville's Theorem}
     A bounded entire function (\textit{i.e.} analytic in  $ \mathbb{C} $) is constant.
 \end{theorem}
 \begin{proof}
     Suppose  $ |f(z)| \leq M $, $ \forall z\in \mathbb{C} $. Cauchy's estimate $ \Rightarrow   $ 
-    \begin{equation}
+    \begin{equation}b
         |f'(z)| \leq \frac{M}{R},\,\forall z\in \mathbb{C},\forall R>0
     \end{equation}  
 \end{proof}
@@ -82,7 +82,7 @@ In other word,  $ \zeta_j $ are \name{removable singularities}.
     \begin{equation}
         f(z)=\dps\frac{1}{2\pi i}\int_C \frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta,\,\forall z\in \triangle  \text{ and }  z\neq\zeta_0\label{10eq1}
     \end{equation} 
-    Lemma \ref{Lemma of Analytic Properties of integral function} $ \Rightarrow $ the RHS of the last equation \ref{10eq1} is analytic in  $ z\in \triangle $. Then 
+    Lemma \ref{sec5.2.3:Lemma of Analytic Properties of integral function} $ \Rightarrow $ the RHS of the last equation \ref{10eq1} is analytic in  $ z\in \triangle $. Then 
     \begin{equation}
         \hat{f}(z)=\begin{cases}
             f(z),&z\neq\zeta_0\\
