@@ -74,6 +74,9 @@ So we can define the integral over special  $ \omega $ and  general  $ M $.
     For any oriented  $ (M,\mathcal{O}) $,  $ \exists $ unique linear map  $ \int_M:\Omega_c^n(M)\rightarrow\Rbb $ that extends  $ \int_M:\Omega_s^n(M)\rightarrow \Rbb $.   
 \end{theorem}
 \begin{proof}
+    \,
+
+    
     {\noindent\textbf{Step1:} There exists an oriented atlas  $ \mathcal{U}=\{\varphi_\alpha:U_\alpha\rightarrow V_\alpha\opensub\Rbb^n\}_{\alpha\in \mathcal{A}} $.
     }
     Indeed, pick any smooth atlas  $ \mathcal{U}=\{U_\alpha\xrightarrow{\varphi_\alpha} V_\alpha\}_{\alpha\in\mathcal{A}} $. By replacing  $ \varphi_\alpha $ with  $ r\circ \varphi_\alpha $ where  $ r(x_1,\cdots,x_n)=(-x_1,\cdots,x_n) $. We can get the oriented atlas  $ \mathcal{U}' $.
@@ -104,11 +107,14 @@ So we can define the integral over special  $ \omega $ and  general  $ M $.
     
     So  $ \dps\int_M\omega=\sum_{i=1}^n\int_M\omega_i $ is uniquely defined. 
 \end{proof}
+\begin{remark}
+    We actually obtain that each  $ \omega\in \Omega_c^n(M) $ can be expressed as  $ \dps\sum_{k=1}^n\omega_k $ where  $ \omega_k\in\Omega_s^n(M) $.   
+\end{remark}
 \begin{proposition}
     \,
     \begin{enumerate}
         \item  $ f:(M,\mathcal{O}_M)\xrightarrow{\cong}(N,\mathcal{O}_N) $. If  $ f $ is orientation preserving, then  $ \int_Mf^*(\omega)=\int_N\omega $. If  $ f $ is orientation reversing, then  $ \int_Mf^*(M)=-\int_N\omega $. 
-        \item  $ \int_(M,\mathcal{I})\omega=-\int_{(M,\overline{\mathcal{O}})}\omega $.
+        \item  $ \int_{(M,\mathcal{I})}\omega=-\int_{(M,\overline{\mathcal{O}})}\omega $.
         \item If  $ \Supp(\omega)\subset U\opensub M $, then  $ \int_M\omega=\int_U\omega $.       
     \end{enumerate}
 \end{proposition}
