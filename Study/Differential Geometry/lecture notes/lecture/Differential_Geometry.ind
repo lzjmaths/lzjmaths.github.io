@@ -6,6 +6,8 @@
   \item $ V_1\otimes \cdots  \otimes V_n $, \hyperpage{39}
   \item $ \Gamma (E) $, \hyperpage{46}
   \item $ \Omega ^k(M) $, \hyperpage{46}
+  \item $ \Omega _c^n(M) $, \hyperpage{54}
+  \item $ \Omega _s^n(M) $, \hyperpage{55}
   \item $ \bigwedge {}^n(V) $, \hyperpage{40}
   \item $ \mathbb  {R} $-algebra, \hyperpage{44}
     \subitem graded, \hyperpage{44}
@@ -18,6 +20,7 @@
       \subsubitem commutative, \hyperpage{44}
       \subsubitem connected, \hyperpage{44}
   \item $ \mathcal  {L}_VW $, \hyperpage{28}
+  \item $ \mathcal  {O}_{\mathrm  {std}} $, \hyperpage{53}
   \item $ \mathfrak  {T}M $, \hyperpage{15}
   \item $ \mathrm  {Alt}^k(V) $, \hyperpage{41}
   \item $ \mathrm  {Lie}(G) $, \hyperpage{24}
@@ -111,12 +114,17 @@
   \item orientation manifold, \hyperpage{52}
   \item orientation preserving, \hyperpage{53}
   \item orientation reversing, \hyperpage{53}
+  \item oriented atlas, \hyperpage{54}
+  \item oriented basis, \hyperpage{54}
+  \item oriented chart, \hyperpage{54}
   \item oriented manifold, \hyperpage{52}
+  \item outward, \hyperpage{57}
 
   \indexspace
 
   \item partial-derivative, \hyperpage{10}
   \item partition of unity subordinat(P.O.U), \hyperpage{9}
+  \item positive atlas, \hyperpage{54}
   \item proper, \hyperpage{35}
   \item pullback, \hyperpage{49}
   \item push forward, \hyperpage{23}

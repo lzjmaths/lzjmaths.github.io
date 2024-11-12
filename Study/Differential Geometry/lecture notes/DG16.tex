@@ -1,0 +1,156 @@
+\begin{lemma}\label{sec6.1:orientation preserving is equivalent to detereminant positive at any point}
+     $ U_1,U_2\subset \mathbb R^n $ open. Then  $ f:(U_1,\mathcal{O}_{\mathrm{std}})\rightarrow(U_2,\mathcal{O}_{\mathrm{std}}) $ is orientation preserving iff 
+    \begin{equation*}
+        \forall p\in  U_1,\det(\mathrm{D}f|_p)>0\quad \mathrm{D}f=\left(\dps\frac{\partial f^i}{\partial x^j}\right)_{1 \leq i,j \leq n}
+    \end{equation*} 
+\end{lemma}
+\begin{proof}
+    For  $ \stdO=\left[\dd x^1\wedge\cdots\wedge\dd x^n\right] $,
+    \begin{equation*}
+        \begin{aligned}
+            f^*(\stdwedge{x})&=\stdwedge{f},\quad \dd f^i=\sum_{i=1}^n\frac{\partial f^i}{\partial x^i}\dd x^i\\
+            &=\det(\mathrm{D}f)\stdwedge{x}
+        \end{aligned}
+    \end{equation*} 
+    Then 
+    \begin{equation*}
+        \begin{aligned}
+            \det(\mathrm{D}f)>0&\Leftrightarrow f^*(\stdwedge{x})\sim\stdwedge{x}\\
+            &\Leftrightarrow f^*\stdO=\stdO\\
+            &\Leftrightarrow\text{ $ f $ is orientation preserving }
+        \end{aligned}
+    \end{equation*}
+\end{proof}
+Given  $ (M,\mc O) $,  $ p\in M $, a basis  $ e_1,\cdots,e_n $ of  $ T_pM $ is called \textbf{oriented} \index{oriented basis}if  $ \mathcal{O}_p=[(e_1,\cdots,e_n)] $.
+
+A chart  $ U\xrightarrow{\varphi}V\overset{\text{open}}{\subset}\mathbb{R}^n $ is \textbf{oriented}\index{oriented chart} if  $ \varphi^*(\stdO)=\mathcal{O}|_U $.
+
+A smooth atlas  $ \left\{U_\alpha\xrightarrow{\varphi_\alpha}V_\alpha\right\}_{\alpha\in\mathcal{A}} $ is \textbf{oriented}\index{oriented atlas} if each chart  $ U_\alpha\xrightarrow{V_\alpha} $ is oriented.
+
+A smooth atlas  $ \left\{U_\alpha\xrightarrow{\varphi_\alpha}V_\alpha\right\}_{\alpha\in\mathcal{A}}  $ is called \textbf{positive}\index{positive atlas} if  $ \forall \alpha,\beta\in\mathcal{A} $,
+\[\varphi_{\alpha\beta}=\varphi_\beta\circ\varphi_\alpha':\varphi(U_\alpha\cap U_\beta)\rightarrow\varphi_\beta(U_\alpha\cap U_\beta)\text{ is orientation preserving}\] 
+By Lemma \ref{sec6.1:orientation preserving is equivalent to detereminant positive at any point}, this is equivalent to  $ \det(\mathrm{D}\varphi_{\alpha\beta}|_p)>0 $ for any  $ p\in \varphi_\alpha(U_\alpha\cap U_\beta) $.
+
+\subsection{Integration on Oriented Manifold}
+\paragraph{Goal:} Given  $ M,\mathcal{O} $,  $ \omega\in  \name{$ \Omega_c^n(M) $} =\{\text{compactly supported  $ n $-form on  $ M $}\} $. Then  $ \Supp(\omega)=\overline{\{p\in M|\omega_p\neq 0\in \Alt^n(T_pM)\}} $ is compact.
+
+We hope to define  $ \int_M\omega\in\Rbb $.
+
+For  $ M\opensub \Rbb^n $,  $ \mathcal{O}=\stdO $. Then  $ \forall \omega\in \Omega_c^n(M) $,
+\[\omega=f\stdwedge{x},\,f\in C_c^\infty(M)\]
+Define  $ \int_M\omega=\int_M f\dd \mu $ where  $ \mu $ is the standart Lebesgue measure on  $ \Rbb^n $.
+
+\begin{lemma}\label{Lemma:invariant integration under orientation preserving map}
+     $ U,V\opensub\Rbb^n $, $ \varphi:U\xrightarrow{\cong}V $ is orientation preserving. Then  $ \forall \omega\in \Omega_c^n(V) $, we have  $ \int_U\varphi^*(\omega)=\int_V\omega $.    
+\end{lemma}
+\begin{proof}
+    If $ \omega=f\stdwedge{x} $, then 
+    \begin{equation}
+        \begin{aligned}
+            \varphi^*(\omega)&=\varphi^*(f)\wedge\stdwedge{\varphi}\\
+            &=(f\circ\varphi)\det\left(\frac{\partial \varphi^i}{\partial x^j}\right)_{1 \leq i,j \leq n}\stdwedge{x^1}
+        \end{aligned}
+    \end{equation}
+    So  $ \int_U\varphi^*(\omega)=\dps\int_U (f\circ\varphi)\det\left(\frac{\partial \varphi^i}{\partial x^j}\right)_{1 \leq i,j \leq n}\dd \mu=\int_Vf\dd \mu=\int_V\omega$ 
+      
+\end{proof}
+So we can define the integral over special  $ \omega $ and  general  $ M $.
+\begin{definition}
+    If  $ \omega\in\name{$ \Omega_s^n(M) $}=\{\text{$ n $-forms with "small" support}\}\\= \{\omega\in\Omega_c^n(M)|\exists\text{oriented chart  $ \varphi:U\xrightarrow{ \cong} $ \st }\Supp(\omega)\subset U\} $.
+    
+    We define  $ \int_M\omega:=\int_V\varphi^{-1,*}(\omega) $ 
+\end{definition} 
+\begin{claim}
+    If  $ \Supp(\omega)\subset U_\alpha\cap U_\beta $, then  $ \int_{V_\alpha}\varphi_\alpha^{-1,*}(\omega)=\int_{V_\beta}\varphi_\beta^{-1,*}(\omega) $  
+\end{claim}
+\begin{proof}
+    \begin{align*}
+        \varphi_{\alpha\beta}:\varphi_\alpha(U_\alpha\cap U_\beta)&\xrightarrow{\cong}\varphi_\beta(U_\alpha\cap U_\beta)\\
+        \varphi_\alpha^{-1,*}(\omega)&\mapsto \varphi_\beta^*(\omega)
+    \end{align*}
+    By Lemma \ref{Lemma:invariant integration under orientation preserving map}, we have  $ \int_{V_\alpha}\varphi_\alpha^{-1,*}(\omega)=\int_{V_\beta}\varphi_\beta^{-1,*}(\omega) $ 
+\end{proof}
+\begin{theorem}
+    For any oriented  $ (M,\mathcal{O}) $,  $ \exists $ unique linear map  $ \int_M:\Omega_c^n(M)\rightarrow\Rbb $ that extends  $ \int_M:\Omega_s^n(M)\rightarrow \Rbb $.   
+\end{theorem}
+\begin{proof}
+    {\noindent\textbf{Step1:} There exists an oriented atlas  $ \mathcal{U}=\{\varphi_\alpha:U_\alpha\rightarrow V_\alpha\opensub\Rbb^n\}_{\alpha\in \mathcal{A}} $.
+    }
+    Indeed, pick any smooth atlas  $ \mathcal{U}=\{U_\alpha\xrightarrow{\varphi_\alpha} V_\alpha\}_{\alpha\in\mathcal{A}} $. By replacing  $ \varphi_\alpha $ with  $ r\circ \varphi_\alpha $ where  $ r(x_1,\cdots,x_n)=(-x_1,\cdots,x_n) $. We can get the oriented atlas  $ \mathcal{U}' $.
+    
+    {\noindent\textbf{Step2.} Pick a partition of unity subordinate to  $ \mathcal{U} $, $ \{\varphi_\alpha:M\rightarrow [0,1]\} $ }
+
+    Now we begin the main proof:
+
+    Let  $ \omega_\alpha=\rho_\alpha\cdot \omega $.  $ \Supp(\omega_\alpha)\subset \Supp(\rho_\alpha)\cap \Supp(\omega)\subset U_\alpha $. And  $ \omega_\alpha\in\Omega_s^n(M) $ 
+    \begin{claim}
+         $ \omega_\alpha\neq=0 $ for only finite many  $ \alpha\in\mathcal{A} $ 
+    \end{claim}  
+    \begin{proof}
+         $ \forall p\in \Supp(\omega) $,  $ \exists $ neighbourhood $ W_p $ only intersects  $ \Supp(\rho_\alpha) $ for finitely many  $ \alpha $.
+        
+         Since  $ \{W_p\}_{p\in\Supp(\omega)} $ is an open cover of  $ \Supp(\omega) $, by compactness,  $ \Supp(\omega) $ only intersects  $ \Supp(\rho_\alpha) $ for finitely many  $ \alpha $.
+         
+        Therefore,  $ \omega_\alpha\neq0 $ for only finitely many  $ \alpha $  
+    \end{proof}
+    By this claim, since  $ \dps\sum_{\alpha\in\mathcal{A}}\rho_\alpha=1 $ $ \Rightarrow $  $ \omega=\omega_{\alpha_1}+\cdots+\omega_{\alpha_n} $ for some  $ \alpha_1,\cdots,\alpha_k\in\mathcal{A} $.
+    We may define 
+    \begin{equation}
+        \int_M\omega=\dps\sum_{\alpha\in\mathcal{A}}\int_M\omega_\alpha=\int_M\omega_{\alpha_1}+\cdots+\int_M\omega_{\alpha_k}\in \Rbb
+    \end{equation}
+    This proves existence  $ \int_{(M,\mathcal{O},\mathcal{U},\{\rho_\alpha\})}:\Omega_c^n(M)\rightarrow\Rbb $.
+    
+    \textbf{Uniqueness:} $ \forall \omega\in \Omega_c^n(M) $,  $ \exists \omega_1,\cdots,\omega_k\in\Omega_s^n(M) $,  $ \omega=\omega_1+\cdots+\omega_n $ as the claim proved.
+    
+    So  $ \dps\int_M\omega=\sum_{i=1}^n\int_M\omega_i $ is uniquely defined. 
+\end{proof}
+\begin{proposition}
+    \,
+    \begin{enumerate}
+        \item  $ f:(M,\mathcal{O}_M)\xrightarrow{\cong}(N,\mathcal{O}_N) $. If  $ f $ is orientation preserving, then  $ \int_Mf^*(\omega)=\int_N\omega $. If  $ f $ is orientation reversing, then  $ \int_Mf^*(M)=-\int_N\omega $. 
+        \item  $ \int_(M,\mathcal{I})\omega=-\int_{(M,\overline{\mathcal{O}})}\omega $.
+        \item If  $ \Supp(\omega)\subset U\opensub M $, then  $ \int_M\omega=\int_U\omega $.       
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Leave as exercise.
+\end{proof}
+
+\subsection{Smooth Manifold with boundary}
+Now let  $ M $ be the smooth manifold with boundary,  $ \partial M=N $. \ie  $ M $ has a smooth atlas  $ \{\varphi_\alpha:U_\alpha\xrightarrow{\cong}V_\alpha\opensub\Rbb_{-}\times\Rbb^{n-1}\} $.
+
+We can define  $ T_pM $,  $ TM $, $ \Alt^k(M) $, $ \Omega^k(M) $,  $ \Omega_c^k(M) $,  $ \Omega_s^k(M) $ and orientation similar as before.
+
+For  $ p\in\partial M $,  $ X\in T_pM $ is called \name{outward}  if  $ \exists $ local chart  $ \varphi:U\xrightarrow{\cong}V $ around  $ p $ \st 
+\[\varphi_{p,*}(X)=a_1\partial x^1+\cdots+a_n\partial x^n\text{ with }a_1>0\]   
+
+Recall that if  $ M $ is  $ n $ dimensional manifold with boundary, then  $ N=\partial M $ is a  $ n-1 $ dimensional manifold without boundary.  
+
+\begin{proposition}
+    For any orientation  $ \mathcal{O}_M $ on  $ M $,  $ \exists $  a unique induced orientation  $ \mathcal{O}_N $ on  $ N=\partial M $  \st  $ \forall p\in N $,  $ X=T_pM $ outward,  $ e_2,\cdots,e_n\in T_pN $  is an oriented basis. Moreover,  $ (X,e_2,\cdots,e_n) $ is oriented basis of  $ T_pM $.       
+\end{proposition}
+\begin{proof}
+    Take oriented atlas  $ \mathcal{U}=\{\varphi_\alpha:U_\alpha\xrightarrow{\cong}V_\alpha\}_{\alpha\in \mathcal{A}} $.
+    
+    We have  $ \varphi_\alpha(U_\alpha\cap U_\beta)\subset \{0\}\times \Rbb^{n-1} $.
+    
+    Define  $ \psi_\alpha:N\cap U_\alpha\xrightarrow{\cong}(\{0\}\times \Rbb^{n-1})\cap U_\alpha $. Then  $ \mathcal{U}'\{\psi_\alpha\}  $  is a smooth atlas for  $ N $.
+    
+     $ \mathcal{U} $ is oriented implies  $ \mathcal{U} $ is positive, so is  $ \mathcal{U} $. So there exists the unique  $ \mathcal{O}_N $ \st  $ \mathcal{U}' $ is  oriented.
+\end{proof}
+\begin{theorem}[Stokes' Theorem]\label{Stokes Theorem}
+     $ M $ is  $ n $ dimensional manifold with boundary, oriented by  $ \mathcal{O}_M $.
+      $ N=\partial M $, with induced orientation  $ \mathcal{O}_N $.  $ \iota:N\hookrightarrow M $ is the inclusion map. Then  $ \forall \omega\in \Omega_c^{n-1}(M) $, we have 
+    \begin{equation}
+        \int_M\dd \omega=\int_N \iota^*(\omega)
+    \end{equation}       
+\end{theorem}
+\begin{proof}
+     $ \forall \omega\in \Omega_c^{n-1}(M) $,  $ \omega=\omega_1+\cdots+\omega_k $,  $ \omega_j\int\Omega_s^n(M) $.
+     
+     By linearity, we may assume  $ \omega\in \Omega_s^n(M) $,  $ \Supp(\omega)\subset U_\alpha $ for chart  $ \varphi_\alpha:U_\alpha\xrightarrow{\cong}V_\alpha $.
+     
+      $ \varphi_\alpha^{-1,*}(\omega)\in\Omega_c^n(V_\alpha) $ induces  $ \omega'\in \Omega_c^n(\Rbb_{-}\times \Rbb^{n-1}) $ if we extend it by 0.
+      
+      By considering  $ \omega' $ instead of  $ \omega $, we may assume  $ M=\Rbb_{-}\times\Rbb^{n-1} $   
+\end{proof}

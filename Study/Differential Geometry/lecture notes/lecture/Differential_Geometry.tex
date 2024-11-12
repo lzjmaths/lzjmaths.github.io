@@ -486,11 +486,14 @@
 \DeclareMathOperator{\ran}{ran}
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\img}{Im}
-\DeclareMathOperator{\dd}{\mathrm{d}}
+\newcommand{\dd}{\mathrm{d}}
 \newcommand{\ie}{ \textit{ i.e. } }
 \newcommand{\st}{ \textit{ s.t. }}
 \newcommand{\name}[1]{\textbf{#1}\index{#1}}
 \newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
+\newcommand{\stdO}{\mathcal{O}_{\mathrm{std}}}
+\newcommand{\stdwedge}[1]{\dd {#1}^1\wedge\cdots\wedge\dd {#1}^n}
+\newcommand{\opensub}{\overset{\text{open}}{\subset}}
 %\makeindex[columns=2,title=Index, options=-s example_style.ist]
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.16}
@@ -532,6 +535,7 @@
 
 \input{../DG15.tex}
 
+\input{../DG16.tex}
 % \begin{tikzpicture}
 % 	\begin{axis}[view={0}{90},domain=-4:4,axis lines=middle,xlabel={$ x $},ylabel={$ y $}]
 % 	\addplot3 [blue,-stealth,samples=16,
