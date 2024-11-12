@@ -9,15 +9,15 @@
         \end{cases} $.
         $ \sgn(\sigma)=(-1)^{k+l} $.
         \item By definition.
-        \item By linearity, we assume  $ \omega_i=e^*_{a(i)},v_j=e_{b(j)} $ for some  $ a(i),b(j) $. Further more, can assume  $ \{a(i)\}=\{b(i)\} $. (Otherwise,  $ LHS=RHS=0 $.) 
-        
+        \item By linearity, we assume  $ \omega_i=e^*_{a(i)},v_j=e_{b(j)} $ for some  $ a(i),b(j) $. Further more, can assume  $ \{a(i)\}=\{b(i)\} $. (Otherwise,  $ LHS=RHS=0 $.)
+
         Then  $ e_{a(i)}^*(e_{b(j)})=\delta_{a(i),b(j)} $. After permutation, may assume  $ a(i)=b(i),\forall i $. It is direct to check  $ LHS=1=RHS $.
         \item  If  $ \omega_1,\cdots,\omega_k $ are linear independent. Then  $ \exists $ basis  $ e^*_1,\cdots,e^*_n $  of  $ V^* $, basis  $ e_1,\cdots,e_n $ of  $ V $  \st  $ \omega_i=e_i^* $, $ \forall 1 \leq i \leq n $.
-        
+
         \[(\omega_1\wedge\cdots\wedge\omega_n)(e_1,\cdots,e_n)=\det(I)=1\neq0\Rightarrow \omega_1\wedge\cdots\wedge\omega_n\neq0\]
         If  $ \omega_1,\cdots,\omega_k $ are linearly dependent. WLOG, we assume  $ \omega_k=\dps\sum_{i=1}^{k-1}a_i\omega_i $.
-        \[(\omega_1\wedge\cdots\wedge\omega_k)(e_1,\cdots,e_n)=\dps\sum_{i=1}^{k-1}a_i(\omega_1\wedge\cdots\wedge\omega_{k-1}\wedge\omega_i)(e_1,\cdots,e_n)=0\] 
-        \item For  $ i_1<\cdots<i_k,j_1<\cdots<j_n $ we have 
+        \[(\omega_1\wedge\cdots\wedge\omega_k)(e_1,\cdots,e_n)=\dps\sum_{i=1}^{k-1}a_i(\omega_1\wedge\cdots\wedge\omega_{k-1}\wedge\omega_i)(e_1,\cdots,e_n)=0\]
+        \item For  $ i_1<\cdots<i_k,j_1<\cdots<j_n $ we have
         \begin{equation}
             (e_{i_1}^*\wedge\cdots\wedge e_{i_k}^*)(e_{j_1},\cdots,e_{j_k})=\begin{cases}
                 1&j_t=i_t,\forall 1 \leq t \leq k\\
@@ -25,7 +25,7 @@
             \end{cases}
         \end{equation}
         Since  $ \dim\Alt(V)=\dim\bigwedge^k(V^*)=\binom{n }{k }=\left|\{e_{i_1}\wedge\cdots e_{i_k}|i_1<\cdots<i_k\}\right| $.
-        \item For  $ \omega\in\Alt^k(W),f\in \Hom(V,W) $, define  $ \Alt^k(f)(\omega)\in\Alt^k(V) $ by  
+        \item For  $ \omega\in\Alt^k(W),f\in \Hom(V,W) $, define  $ \Alt^k(f)(\omega)\in\Alt^k(V) $ by
         \[\Alt^k(f)(\omega(V_1,\cdots,V_k))=\omega(fV_1,\cdots,fV_k)\in\mathbb{R}\]
     \end{enumerate}
 \end{proof}
@@ -33,37 +33,39 @@
     \,
 
     An  \name{$ \mathbb{R} $-algebra} consists of an  $ \mathbb{R} $-vector space  $ A $ with a bilinear map  $ \mu:A\times A\rightarrow A $ that is associate, \ie  $ \mu(a,\mu(b,c))=\mu(\mu(a,b),c) $.
-    
-    Say  $ A $ is  \subname{unitary}{$ \mathbb{R} $-algebra} if    $ \exists 1\in A $ \st  $ \mu(a,1)=\mu(1,a)=a,\forall a\in A $ 
 
-    Say  $ A $ is \subname{graded}{$ \mathbb{R} $-algebra} if  $ A=\dps\bigoplus_{k\in \mathbb Z}A_k $ as vector space, and  $ \mu(A_k\times A_l)\subset A_{k+l} $. Elements in  $ A_k $ are called \subname{homogeneous elements}{$ \mathbb{R} $-algebra} of degree  $ k $.  
+    Say  $ A $ is  \subname{unitary}{$ \mathbb{R} $-algebra} if    $ \exists 1\in A $ \st  $ \mu(a,1)=\mu(1,a)=a,\forall a\in A $
+
+    Say  $ A $ is \subname{graded}{$ \mathbb{R} $-algebra} if  $ A=\dps\bigoplus_{k\in \mathbb Z}A_k $ as vector space, and  $ \mu(A_k\times A_l)\subset A_{k+l} $. Elements in  $ A_k $ are called \subname{homogeneous elements}{$ \mathbb{R} $-algebra} of degree  $ k $.
 
     If  $ A $ is graded  $ \mathbb{R} $-algebra, we say  $ A $ is \textbf{anticommutative}\index{$ \mathbb{R} $-algebra!graded!anticommutative} if  $ \mu(a,b)=(-1)^{k+l}\mu(b,a),\forall a\in A_k,b\in A_l $. And say  $ A $ is \textbf{commutative}\index{$ \mathbb{R} $-algebra!graded!commutative}  if  $ \mu(a,b)=\mu(b,a),\forall a,b $.
-    
+
     If  $ A $ is graded $ \mathbb{R} $-algebra, say  $ A $ is \textbf{connected}\index{$ \mathbb{R} $-algebra!graded!connected} if  $ \exists $ unit  $ 1\in A_0 $ \st the map  $ \epsilon:\mathbb{R}\rightarrow A_0,r\mapsto r\cdot 1 $ is an isomorphism.
 
 \end{definition}
-Given vector space  $ V $, let 
+Given vector space  $ V $, let
 
-    \begin{tikzcd}
-        \Alt^k(V)\arrow[d,equal]\arrow[r,equal]&\bigoplus_{k \geq 0}\Alt^k(V)\arrow[d,equal]\\
-        \Alt^*(V^*)\arrow[r,equal]&\bigoplus_{k \geq 0}\wedge^k(V^*)
-    \end{tikzcd}
+    \begin{center}
+        \begin{tikzcd}
+            \Alt^k(V)\arrow[d,equal]\arrow[r,equal]&\bigoplus_{k \geq 0}\Alt^k(V)\arrow[d,equal]\\
+            \Alt^*(V^*)\arrow[r,equal]&\bigoplus_{k \geq 0}\wedge^k(V^*)
+        \end{tikzcd}
+    \end{center}
 
     By Proposition \ref{Property of exterior product}, we have the theorem
 \begin{theorem}
-    $ (\Alt^*(V),\wedge) $  is a graded connected anticommutative $ \mathbb{R} $-algebra, called the \name{exterior algebra} of  $ V $ or \name{exterior algebra} of  $ V $  
+    $ (\Alt^*(V),\wedge) $  is a graded connected anticommutative $ \mathbb{R} $-algebra, called the \name{exterior algebra} of  $ V $ or \name{exterior algebra} of  $ V $
 \end{theorem}
 \subsection{Operation on vector bundles}
 Given  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $, meaning a vector bundle of dimension  $ n $, local trivialization  $ \left\{U_\alpha,\varphi_\alpha:\pi^{-1}(U_\alpha)\xrightarrow{\cong}U_\alpha\times \mathbb{R}^n\right\}_{\alpha\in\mathcal{A}} $. By shrinking  $ U_\alpha $, we may assume we have an smooth atlas  $ \{\varphi_\alpha:U_\alpha\xrightarrow{\cong}\mathbb{R}^m\}_{\alpha\in \mathcal{A}} $.
 
-For  $ x\in M $, use  $ E_x $ to denote  $ \pi^{-1}(x) $, fiber over  $ x $, which is a vector space of dimension  $ n $.  
+For  $ x\in M $, use  $ E_x $ to denote  $ \pi^{-1}(x) $, fiber over  $ x $, which is a vector space of dimension  $ n $.
 
-Then \name{Dual bundle of a vector bundle}  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $ is 
+Then \name{Dual bundle of a vector bundle}  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $ is
 \begin{equation}
     E^*:=\left\{(x,l)|x\in M,l\in (E_x)^*\right\},\pi':E^*\rightarrow M, (x,l)\mapsto x, (\pi')^{-1}(x)=(E_x)^*
-\end{equation} 
-Define topology or smooth structure on  $ E^* $ \st  $ \pi':E^*\rightarrow M $ is a smooth vector bundle. 
+\end{equation}
+Define topology or smooth structure on  $ E^* $ \st  $ \pi':E^*\rightarrow M $ is a smooth vector bundle.
 
 For  $ \alpha\in\mathcal{A} $, let  $ E_\alpha^*={\pi'}^{-1}(U_\alpha) $, we have a bijection
 
@@ -72,27 +74,27 @@ For  $ \alpha\in\mathcal{A} $, let  $ E_\alpha^*={\pi'}^{-1}(U_\alpha) $, we hav
     (x,l)\arrow[r,mapsto]&(\psi_\alpha(x),(\varphi_{\alpha,x})^{-1}(l))&
 \end{tikzcd}
 
-We can check that 
+We can check that
 \begin{enumerate}[label=(\arabic*)]
     \item  $ \{\tilde{\varphi_{\alpha}}^{-1}|\alpha\in\mathcal{A},V\subset \mathbb{R}^{m+n}\text{ open}\} $ is a basis, we use it to generate a topology on  $ E^* $.
     \item Use  $ \tilde{\varphi_\alpha}:E_\alpha^*\xrightarrow{\cong}\mathbb{R}^{m+n},\alpha\in\mathcal{A} $ as an atlas to give  $ E^* $ a smooth structure.
-    \item  $ E^*\xrightarrow{\pi'}M $ is a smooth vector bundle, called the  \name{dual vector bundle} of  $ E\xrightarrow{\pi}M $, where 
+    \item  $ E^*\xrightarrow{\pi'}M $ is a smooth vector bundle, called the  \name{dual vector bundle} of  $ E\xrightarrow{\pi}M $, where
     \[(E^*)_x=E_x^*\]
 \end{enumerate}
 We can define other operations on vector bundles in similar way:
 
-Given  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $,  $ \mathbb{R}^m\hookrightarrow F\xrightarrow{\pi}M $, we can define 
+Given  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $,  $ \mathbb{R}^m\hookrightarrow F\xrightarrow{\pi}M $, we can define
 \[\mathbb{R}^{m+n}\hookrightarrow E\oplus F\xrightarrow{\pi}M\text{ with }(E\oplus F)_x=E_x\oplus F_x\]
-\[\mathbb{R}^{mn}\hookrightarrow E\otimes F\xrightarrow{\pi}M\text{ with }(E\otimes F)_x=E_x\otimes F_x\]  
+\[\mathbb{R}^{mn}\hookrightarrow E\otimes F\xrightarrow{\pi}M\text{ with }(E\otimes F)_x=E_x\otimes F_x\]
 \[\mathbb{R}^{mn}\hookrightarrow \Hom(E,F)\xrightarrow{\pi}M\text{\ with}\Hom(E,F)_x=\Hom(E_x,F_x)\]
 \[\mathbb{R}^{\binom{n }{k }}\hookrightarrow \Alt^k(E)\rightarrow M \text{ with }\]
 \[\Alt^k(E)_x=\Alt^k(E_l)=\{\text{alternating  $ k $-linear } l:E_x\times \cdots\times E_x\rightarrow \mathbb{R}\}\]
-Then  $ \Alt^k(TM)=\bigwedge^k(T^*M) $. 
-\[\Alt^k(M)_x=\{\text{alternating  $ k $-linear } l:T_xM\times \cdots\times T_xM\rightarrow \mathbb{R}\}=\{\text{linear  $ k $-form on }T_xM\}\] 
-Define 
+Then  $ \Alt^k(TM)=\bigwedge^k(T^*M) $.
+\[\Alt^k(M)_x=\{\text{alternating  $ k $-linear } l:T_xM\times \cdots\times T_xM\rightarrow \mathbb{R}\}=\{\text{linear  $ k $-form on }T_xM\}\]
+Define
 \[\name{$ \Gamma(E) $}:=\{\text{smooth sections of }E\}=\{s\in C^\infty(M,E):\pi\circ s=\mathrm{id}_M\}\]
 \begin{definition}
-    Given smooth  $ M $, define a differential  $ k $-form on  $ M $ to be an element in  $ \Gamma(\Alt^k(TM)) $    is a differential  $ k $-form  $ \alpha $ assigns each  $ x\in M $ a linear  $ k $-form  $ \alpha(x)\in \Alt^k(T_xM) $.    
+    Given smooth  $ M $, define a differential  $ k $-form on  $ M $ to be an element in  $ \Gamma(\Alt^k(TM)) $    is a differential  $ k $-form  $ \alpha $ assigns each  $ x\in M $ a linear  $ k $-form  $ \alpha(x)\in \Alt^k(T_xM) $.
 \end{definition}
 Denote \name{$ \Omega^k(M) $} be the set of all the differential  $ k $-forms.
 
@@ -109,4 +111,4 @@ We  denote the dual basis of  $ T_x^*M $ by  $ \{\mathrm{d}x^i|_p\}_{1 \leq i \l
 For any  $ \alpha\in \Omega^1(M) $,  $ \alpha|_U $ can be written as  $ \dps\sum_{i=1}^nf_1\mathrm{d}x^i $, where  $ f^i\in C^\infty(U,\mathbb{R}) $.
 
 Similarly,  $ \{\mathrm{d} x^{i_1}|_1\wedge\cdots\wedge\mathrm{d}x^{i_k}|_p|i_1<\cdots<i_k\} $ is a basis for  $ \bigwedge^k(T_x^*M) $, so  $ \forall \alpha\in \Omega^k(M) $,
-\[\alpha|_U=\sum_{i_1<\cdots<i_k}f_{i_1,\cdots,i_k}\mathrm{d} x^{i_1}\wedge\cdots\wedge\mathrm{d} x^{i_k},\,f_{i_1,\cdots,i_k}\in C^\infty(U,\mathbb{R})\]   
+\[\alpha|_U=\sum_{i_1<\cdots<i_k}f_{i_1,\cdots,i_k}\mathrm{d} x^{i_1}\wedge\cdots\wedge\mathrm{d} x^{i_k},\,f_{i_1,\cdots,i_k}\in C^\infty(U,\mathbb{R})\]

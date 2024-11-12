@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  12 NOV 2024 10:10
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  12 NOV 2024 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1457,11 +1457,11 @@ Underfull \hbox (badness 1917) in paragraph at lines 41--42
  []
 
 [44] [45]
-Overfull \hbox (14.31363pt too wide) detected at line 91
+Overfull \hbox (14.31363pt too wide) detected at line 93
 [][]\U/matha/m/n/12 p\OML/cmm/m/it/12 M\U/matha/m/n/12 q[] ^^P t[]\OML/cmm/m/it/12 l \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 ^^B [] ^^B \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 Ñ \U/msb/m/n/12 R\U/matha/m/n/12 u ^^P t[]\OML/cmm/m/it/12 T[]M\U/matha/m/n/12 u
  []
 
-[46]) (../DG14.tex
+[46]) (../DG14.tex [47]
 Underfull \hbox (badness 10000) in paragraph at lines 21--30
 []\T1/ppl/m/n/12 It suf-fices to prove that [] is com-pat-i-ble for two charts
  []
@@ -1476,7 +1476,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--30
 []
  []
 
-[47] [48]
+[48]
 Overfull \hbox (21.13608pt too wide) in paragraph at lines 74--75
 [][] 
  []
