@@ -57,7 +57,8 @@ Given vector space  $ V $, let
     $ (\Alt^*(V),\wedge) $  is a graded connected anticommutative $ \mathbb{R} $-algebra, called the \name{exterior algebra} of  $ V $ or \name{exterior algebra} of  $ V $
 \end{theorem}
 \subsection{Operation on vector bundles}
-Given  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $, meaning a vector bundle of dimension  $ n $, local trivialization  $ \left\{U_\alpha,\varphi_\alpha:\pi^{-1}(U_\alpha)\xrightarrow{\cong}U_\alpha\times \mathbb{R}^n\right\}_{\alpha\in\mathcal{A}} $. By shrinking  $ U_\alpha $, we may assume we have an smooth atlas  $ \{\varphi_\alpha:U_\alpha\xrightarrow{\cong}\mathbb{R}^m\}_{\alpha\in \mathcal{A}} $.
+Given  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $, meaning a vector bundle $ E\xrightarrow{\pi}M $  of dimension  $ n $, local trivialization  $ \left\{U_\alpha,\varphi_\alpha:\pi^{-1}(U_\alpha)\xrightarrow{\cong}U_\alpha\times \mathbb{R}^n\right\}_{\alpha\in\mathcal{A}} $. By shrinking  $ U_\alpha $, we may assume we have an smooth atlas  $ 
+\left\{\varphi_\alpha:U_\alpha\xrightarrow{\cong}\mathbb{R}^m\right\}_{\alpha\in \mathcal{A}} $.
 
 For  $ x\in M $, use  $ E_x $ to denote  $ \pi^{-1}(x) $, fiber over  $ x $, which is a vector space of dimension  $ n $.
 
@@ -69,11 +70,13 @@ Define topology or smooth structure on  $ E^* $ \st  $ \pi':E^*\rightarrow M $ i
 
 For  $ \alpha\in\mathcal{A} $, let  $ E_\alpha^*={\pi'}^{-1}(U_\alpha) $, we have a bijection
 
-\begin{tikzcd}
-    \tilde{\varphi_\alpha}:E_\alpha^*\arrow[r,"bijection"]&\mathbb{R}^m\times(\mathbb{R}^n)^*\arrow[r,"\cong"]&\mathbb{R}^{m+n}\\
-    (x,l)\arrow[r,mapsto]&(\psi_\alpha(x),(\varphi_{\alpha,x})^{-1}(l))&
-\end{tikzcd}
-
+\begin{center}
+    \begin{tikzcd}
+        \tilde{\varphi_\alpha}:E_\alpha^*\arrow[r,"bijection"]&\mathbb{R}^m\times(\mathbb{R}^n)^*\arrow[r,"\cong"]&\mathbb{R}^{m+n}\\
+        (x,l)\arrow[r,mapsto]&(\psi_\alpha(x),(\varphi_{\alpha,x})^{-1}(l))&
+    \end{tikzcd}
+    
+\end{center}
 We can check that
 \begin{enumerate}[label=(\arabic*)]
     \item  $ \{\tilde{\varphi_{\alpha}}^{-1}|\alpha\in\mathcal{A},V\subset \mathbb{R}^{m+n}\text{ open}\} $ is a basis, we use it to generate a topology on  $ E^* $.

@@ -1,21 +1,21 @@
 We give the notation that  $ I=\left(i_1,\cdots,i_k\right) $, write  $ f_{i_1,\cdots,i_k}\mathrm{d}x_{i_1}\wedge\cdots\wedge \mathrm{d}x_{i_k} $ as  $ f^I\mathrm{d}x^I $.
-\paragraph{Change of coordinate} If  $ (U,x^1,\cdots,x^n) $ and  $ (V,y^1,\cdots,y^n)$ two charts of  $ M $ and  $ p\in U\cap V $, then 
+\paragraph{Change of coordinate} If  $ (U,x^1,\cdots,x^n) $ and  $ (V,y^1,\cdots,y^n)$ two charts of  $ M $ and  $ p\in U\cap V $, then
 \begin{equation}
     \mathrm{d}y^i=\sum_{1 \leq i \leq n}\frac{\partial y_i}{\partial x^i}\mathrm{d}x^i.
-\end{equation}      
+\end{equation}
 \subsection{Exterior differential}
 For  $ k=0 $, define  $ d:\Omega^0(M)\rightarrow \Omega^1(M) $ as follows:
 
-$ \forall p\in M $,  $ X_p\in T_pM $,  $ \mathrm{d}f|_p(X_p)=X_p(f)\in \mathbb{R} $.   
+$ \forall p\in M $,  $ X_p\in T_pM $,  $ \mathrm{d}f|_p(X_p)=X_p(f)\in \mathbb{R} $.
 In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\mathrm{d}x^i $.
 \begin{theorem}
-    $ \exists $ linear operator  $ \mathrm{d}:\Omega^k(M)\rightarrow \Omega^{k+1}(M) $  \st 
-    For $ \alpha\in \Omega^k(M) $,  
+    $ \exists $ linear operator  $ \mathrm{d}:\Omega^k(M)\rightarrow \Omega^{k+1}(M) $  \st
+    For $ \alpha\in \Omega^k(M) $,
     \begin{equation}
         \alpha|_U=\dps\sum_If^I\mathrm{d}x^I \Rightarrow \mathrm{d}\alpha|_U=\dps\sum_{I}\mathrm{d}f^I\wedge\mathrm{d}x^I \label{eq:local coordinate of exterior differential}
     \end{equation}
     Called the \name{exterior differential}
-\end{theorem} 
+\end{theorem}
 
 \begin{proof}
     It suffices to prove that \eqref{eq:local coordinate of exterior differential} is compatible for two charts  $ (U,x^1,\cdots,x^n),(V,y^1,\cdots,y^n) $, \textit{i.e.} the diagram is commutative.
@@ -32,13 +32,13 @@ In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\m
     \,
     \begin{enumerate}[label=(\arabic*)]
         \item $ \mathrm{d}^2=0 $.
-        \item  $ \forall \alpha\in \Omega^k(M),\beta\in \Omega^l(M) $,  $ \mathrm{d}(\alpha\wedge\beta)=\mathrm{d}\alpha\wedge\beta+(-1)^{k}\alpha\wedge\mathrm{d}\beta $. 
+        \item  $ \forall \alpha\in \Omega^k(M),\beta\in \Omega^l(M) $,  $ \mathrm{d}(\alpha\wedge\beta)=\mathrm{d}\alpha\wedge\beta+(-1)^{k}\alpha\wedge\mathrm{d}\beta $.
     \end{enumerate}
 \end{theorem}
 \begin{proof}
     \,
     \begin{enumerate}[label=(\arabic*)]
-        \item If  $ \alpha|_U=\dps\sum_{U}f^I\mathrm{d}x^I $. By linearity suffices to  check 
+        \item If  $ \alpha|_U=\dps\sum_{U}f^I\mathrm{d}x^I $. By linearity suffices to  check
         \begin{equation*}
             \begin{aligned}
                 \mathrm{d}\circ \mathrm{d}(f\mathrm{d}x^I)&=\mathrm{d}\left(\dps\sum_{1 \leq i \leq n}\frac{\partial f}{\partial x^i}\mathrm{d}x^i\wedge\mathrm{d}x^I\right)\\
@@ -54,7 +54,7 @@ In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\m
                 &=\dps\sum_{1 \leq i \leq n}\left(\frac{f}{\partial x^i}g+f\frac{\partial g}{\partial x^i} \right)\mathrm{d}x^i\wedge\mathrm{d}x^I\wedge\mathrm{d}x^J
             \end{aligned}
         \end{equation*}
-        And 
+        And
         \begin{equation*}
             \mathrm{d}\alpha\wedge\beta=\dps\sum_i\frac{\partial f}{\partial x^i}g\mathrm{d}x^i\wedge\mathrm{d}x^I\wedge\mathrm{d}x^J
         \end{equation*}
@@ -65,9 +65,9 @@ In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\m
 \end{proof}
 \begin{example}
     For  $ M=\mathbb{R}^3 $,
-    
+
     {\small\begin{tikzcd}
-        \Omega^0(\mathbb{R}^3)\arrow[d,"d"]\arrow[r,equal]&C^\infty(\mathbb{R}^3)\\
+        \Omega^0(\mathbb{R}^3)\arrow[d,"d"]\arrow[r,equal]&C^\infty(\mathbb{R}^3)\arrow[d,"\text{gradient}"]\\
         \Omega^1(\mathbb{R}^3)\arrow[r,leftrightarrow]\arrow[d,"d"]&\mathfrak{T}\mathbb{R}^3\arrow[d,"\text{curl}"],&f\mathrm{d}x+g\mathrm{d}y+h\mathrm{d}z\arrow[r,leftrightarrow]&f\partial x+g\partial y+h\partial z\\
         \Omega^2(\mathbb{R}^3)\arrow[r,leftrightarrow]\arrow[d,"d"]&\mathfrak{T}\mathbb{R}^3\arrow[d,"\text{divergent}"],&f\mathrm{d}x\wedge\mathrm{d}y+g\mathrm{d}x\wedge\mathrm{d}z+h\mathrm{d}y\wedge\mathrm{d}z\arrow[r,leftrightarrow]&f\partial z+g\partial x+h\partial y\\
         \Omega^3(\mathbb{R}^3)\arrow[r,leftrightarrow]&C^\infty(\mathbb{R}^3),&f\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z\arrow[r,leftrightarrow]&f
@@ -87,7 +87,7 @@ Actually,  $ F^*(\alpha)=\Alt^k(F_{p,*}):\Alt^k(T_{F(p)N})\rightarrow \Alt^k(T_p
         \item  $ f\in \Omega^0(N) $,  $ F^*(f)=f\circ F\in \Omega^0(M) $.
         \item  $ F^*(\alpha\wedge \beta)=F^*(\alpha)\wedge F^*(\beta) $.
         \item  $ F^*(\mathrm{d}\alpha)=\mathrm{d} F^*(\alpha) $.
-        \item  $ (G\circ F)^*=F^*\circ G^* $     
+        \item  $ (G\circ F)^*=F^*\circ G^* $
     \end{enumerate}
 \end{proposition}
 \begin{proof}
@@ -101,13 +101,13 @@ Actually,  $ F^*(\alpha)=\Alt^k(F_{p,*}):\Alt^k(T_{F(p)N})\rightarrow \Alt^k(T_p
             \Alt^k(T_{F(p)N})\times \Alt^l(T_{F(p)}N)\arrow[r,"\wedge"]\arrow[d,"\Alt^k(F_{p,*})\times \Alt^l(F_{p,*})"]&\Alt^{k+l}(T_pM)\arrow[d,"\Alt^{k+l}(F_{p,*})"]\\
             \Alt^k(T_pM)\times \Alt^l(T_pM)\arrow[r,"\wedge"]&\Alt^{k+l}(T_pM)
         \end{tikzcd} commutes.
-        \item By linearity it suffices to check 
+        \item By linearity it suffices to check
         \[\mathrm{d}F^*(f \mathrm{d}x^I)=F^*\mathrm{d}(f\mathrm{d}x^I)\]
-        By Leibniz rule for  $ \mathrm{d} $ and (2), it suffices to show 
+        By Leibniz rule for  $ \mathrm{d} $ and (2), it suffices to show
         \begin{enumerate}
-            \item  $ \mathrm{d} F^*(\mathrm{d}f)=F^*(\mathrm{d}f) $ 
-            \item  $ \mathrm{d}F^*(\mathrm{d}x^i)=F^*(\mathrm{d}(\mathrm{d}x^i)) $ 
-        \end{enumerate} 
+            \item  $ \mathrm{d} F^*(\mathrm{d}f)=F^*(\mathrm{d}f) $
+            \item  $ \mathrm{d}F^*(\mathrm{d}x^i)=F^*(\mathrm{d}(\mathrm{d}x^i)) $
+        \end{enumerate}
         Which leaves to the readers.
         \item By definition.
     \end{enumerate}
