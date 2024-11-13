@@ -1,0 +1,116 @@
+\subsection{The Calculus of Residues}
+\subsubsection{The Residue Theorem}
+Suppose  $ f  $ is analytic in a region  $ \Omega  $ except for the isolated singularity at  $ a  $. Consider a circle  $ C  $ centered at  $ a  $ and contained in  $ \Omega  $. The \name{residue} of  $ f $ at  $ a  $ is defined by 
+\begin{equation}
+    \Res_{z=a}f(z):=\dps\frac{1 }{2\pi i}\int_Cf(z)\mathrm{d}z
+\end{equation} 
+It is independent of choice of circle followed from the general Cauchy's theorem \ref{General form of Cauchy's theorem}.
+
+Now suppose  $ f  $ is analytic in a region  $ \Omega  $ except for finitely many singularities  $ a_j $. Let  $ \gamma  $ be cycle in  $ \Omega'=\Omega\backslash\{a_1,\cdots,a_n\} $ which is homologous to zero w.r.t.  $ \Omega $. Then  
+\begin{equation}
+    \gamma\sim\sum_{j=1}^Nn(\gamma,a_j)C_j\mod \Omega'
+\end{equation}  
+where  $ C_j $ is any circle centered at  $ a_j $ and contained in  $ \Omega' $.
+
+The general Cauchy's theorem  \ref{General form of Cauchy's theorem} implies 
+\begin{equation}
+    \int_\gamma f(z)\dd z=\sum_{j=1}^N n(\gamma,a_j)\int_{C_j}f(z)\mathrm{d}z
+\end{equation}
+So  $ \dps\frac{1}{2\pi i}\int_\gamma f(z)\dd z=\sum_{j=1}^Nn(\gamma,a_j)\Res_{z=a_j}f(z) $.
+
+We just proved the residue theorem under the assumption that there are only a finite number of singularities
+\begin{theorem}[The Residue Theorem]\label{sec:5.5.1:The Residue Theorem}
+    Let  $ f  $ be analytic except for countably many isolated singularities  $ a_j  $ in a region $ \Omega  $. Then
+    \begin{equation}
+        \frac{1}{2\pi i}\int_\gamma f(z)\dd z=\sum_{j=1}^N n(\gamma,a_j)\Res_{z=a_j}f(z)
+    \end{equation}
+    for any circle  $ \gamma    $ which is homologous to zero in  $ \Omega  $ and does not pass through any of  $ a_j $. 
+\end{theorem}
+\begin{proof}
+    We already proved the case when  number of singularities is finite. For the general case,
+
+    it is enough to prove that  $ n(\gamma,a_j)=0 $ except for a finite number of  $ a_j $.
+    
+    Let  $ E:=\{z\in \Cbb\backslash\gamma:n(\gamma,z)=0\} $.
+    
+    Then  $ E  $ is open by theorem \ref{sec2.1:Winding Number Theorem} and contains all points outside of a large circle.  $ \Rightarrow  $  $ E^c $ is compact. So  $ E^c $ contains a finite number of the isolated points  $ a_j $ $ \Rightarrow  $  $ n(\gamma,a_j)\neq 0 $ only for a finite number of  $ a_j $.   
+\end{proof}
+\begin{remark}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item In the applications it is often the case that each  $ n(\gamma,a_j)\in\{0,1\} $.
+        \item When  $ f  $ has essential  singularity, there is usually no simple method to compute residues.
+        \item If  $ f  $ has a pole of order  $ N $ at  $ a $, we proved in \S 3.2 that 
+        \begin{equation}
+            (z-a)^Nf(z)=b_N+b_{N-1}(z-a)+\cdots+b_1(z-a)^{N-1}+\varphi(z)(z-a)^N,\,z\neq a
+        \end{equation}
+        where  $ \varphi(z) $ is analytic at   $ a  $ and  $ b_N \neq 0 $. So we have
+        
+        \begin{equation}\label{sec5.5.1:Calculation of residues of a pole}
+            \Res_{z=a}f(z)=b_1=\frac{1}{(N-1)!}\cdot\frac{\dd ^{N-1}}{\dd z^{N-1}}\left[(z-a)^Nf(z)\right]
+        \end{equation}
+        This is because when the term  $ b_1(z-a)^{-1}  $ is omitted, the remainder of the RHS of  $ \eqref{sec5.5.1:Calculation of residues of a pole} $ is a derivative.
+
+        In particular, if  $ f(z)=\frac{g(z)}{h(z)} $, $ h  $ has a simple zero at  $ a $ and  $ g(a)\neq 0 $, then 
+        \begin{equation}
+            \Res_{z=a}f(z)=\lim_{z\to a}\left[\frac{g(z) }{h(z)}(z-a)\right]=\lim_{z\to a}\frac{g(z)}{\frac{h(z)-h(a)}{h-a}}=\frac{g(a)}{h'(a)}
+        \end{equation}  
+    \end{enumerate}
+    
+\end{remark}
+\begin{example}
+    Compute  $ \int_{|z|=1}\frac{e^{iz}}{z^3}\dd z $.
+\end{example}
+\begin{proof}[Solution]
+    The only pole is at  $z=0  $ with order  $ 3 $. The residue theorem  \ref{sec:5.5.1:The Residue Theorem} implies:
+    \begin{equation}
+        \int_{|z|=1}\frac{e^{iz}}{z^3}\dd z=2\pi i \Res_{z=0}f(z)=2\pi i \frac{1 }{2!}\frac{\dd^2}{\dd z^2}\left[z^3\cdot\frac{e^{iz }}{z^3}\right]|_{z=0}=-\pi i
+    \end{equation}
+    Or one can use Taylor's series \eqref{Taylor's expansion equation}
+    \begin{equation}
+        \int_{|z|=1}\frac{\dps e^{iz}}{\dps z^3}\dd z=\int_{|z|=1}\frac{\dps1+iz++\frac{(iz)^2}{2}+\cdots}{z^3}\dd z=-\pi i
+    \end{equation}
+\end{proof}
+\subsubsection{The Argument Principle}
+\begin{theorem}[The Argument Principle]\label{sec5.5.2:The generalized version of argument principle}
+    If  $ f $ is  meromorphic in a region  $ \Omega  $ with zeros  $ a_j  $ and  poles   $ b_k $. Then 
+    \begin{equation}\label{eq5.5.2:equation of generalized version of argument principle}
+        \frac{1}{2\pi i}\int_\gamma\frac{f'(z)}{f(z)}\dd z=\sum_j n(\gamma,a_j)-\sum_k n(\gamma,b_k)
+    \end{equation} 
+    for every cycle  $ \gamma  $ which is homologous to zero in  $ \Omega  $ and does not pass through any of zeros and poles. The sums in \eqref{eq5.5.2:equation of generalized version of argument principle} are finite, and multiple zeros and poles have to be repeated as many times as their order indicates.
+\end{theorem}
+\begin{proof}
+    We assume that  $ f  $ has a finite number of zeros and poles, and denote that number by  $ K $.
+
+    Let  $ N_j  $ be the order of the zero or pole of  $ f  $ at  $ z_j\in\{a_1,a_2,\cdots,b_1,b_2,\cdots\}  $.
+    
+    Define  $ \tilde{N}_j:=\begin{cases}
+        N_{j},& z_j\text{ is a zero}\\
+        -N_j, & z_j\text{ is a pole}
+    \end{cases} $ 
+    
+    Let  $ g(z)=f(z)\dps\cdot\prod_{j=1}^K(z-z_j)^{-\tilde{N}_j} $. Then  $ g  $ only has removable singularities in  $ \Omega $, and we can view it as analytic in  $ \Omega $.
+    Moreover,  $ g(z)\neq 0  $ for  $ \forall z\in \Omega  $.
+
+     $ f(z)=g(z)\dps\cdot\prod_{j=1}^K(z-z_j)^{\tilde{N}_j} $ implies that 
+     \begin{equation}
+        \frac{f'(z)}{f(z)}=\frac{g'(z)}{g(z)}+\sum_{j=1}^N\frac{\tilde{N}_j}{(z-z_j)},\,\forall z\neq z_j
+     \end{equation}
+    Then
+        \begin{equation*}
+            \begin{aligned}
+                \dps\frac{1 }{2\pi i}\int_\gamma\frac{f'(z)}{f(z)}\dd z&=\frac{1 }{2\pi i}\int_\gamma\frac{g'(z)}{g(z)}\dd z+\sum_{j=1}^K\frac{1 }{2\pi i}\int_\gamma\frac{\tilde{N}_j}{z-z_j}\dd z\\
+                &=\sum_{j=1}^K\tilde{N}_j\cdot n(\gamma,z_j)\\
+                &=\sum_j n(\gamma,a_j)-\sum_k n(\gamma,b_k) 
+            \end{aligned}
+        \end{equation*}
+    If  $ f  $ has  infinite number of zeros or poles, the proof is the same as that of the residue theorem. \ie  $ n(\gamma,z)\neq=0 $ for finite many  $ z $ zeros or poles. 
+\end{proof}
+\begin{theorem}[Rouch{\=e}'s Theorem]\label{sec5.5.2:Roche's Theorem}
+    Let  $ \gamma  $ be a cycle which is homologous to zero in a region  $ \Omega  $ \st  $ n(\gamma,z)\in\{0,1\},\forall z\in \Omega\backslash\gamma $.
+    
+    Suppose  $ f ,g  $ are analytic in  $ \Omega  $,  $ |f(z)-g(z)|<|f(z)|,\forall z\in\gamma $. Then  $ f  $ and  $ g  $ have the same number of zeros enclosed by  $ \gamma $.  
+\end{theorem}
+\begin{proof}
+    First we have  $ f(z)\neq0,g(z)\neq 0 $ for  $ z\in \gamma $.  
+\end{proof}
