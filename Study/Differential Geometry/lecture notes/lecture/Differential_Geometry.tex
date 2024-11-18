@@ -504,6 +504,16 @@
 % \excludecomment{example}
 % \excludecomment{exercise}
 
+\tikzset{
+  curarrow/.style={
+  rounded corners=8pt,
+  execute at begin to={every node/.style={fill=red}},
+    to path={-- ([xshift=-50pt]\tikztostart.center)
+    |- (#1) node[fill=white] {$\scriptstyle d_*$}
+    -| ([xshift=50pt]\tikztotarget.center)
+    -- (\tikztotarget)}
+    }
+}
 
 \begin{document}
 \sloppy
@@ -512,7 +522,7 @@
 \tableofcontents
 \newpage
 
-\input{../DG1/1.tex}
+\input{../DG1.tex}
 \input{../DG2.tex}
 \input{../DG3.tex}
 \input{../DG4.tex}
@@ -536,6 +546,17 @@
 \input{../DG15.tex}
 
 \input{../DG16.tex}
+
+
+
+% \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
+% 	\cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
+% 	H_{k}(M) \arrow[curarrow=Y]{urr}{} & H_{k}(U) \oplus H_{k}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H_{k}(U \cap V) \arrow[l] \\
+% 	H_{k+1}(M) \arrow[curarrow=Z]{urr}{} & H_{k+1}(U) \oplus H_{k+1}(V) \arrow[l] & \cdots \arrow[l]
+% \end{tikzcd}
+
+
+
 % \begin{tikzpicture}
 % 	\begin{axis}[view={0}{90},domain=-4:4,axis lines=middle,xlabel={$ x $},ylabel={$ y $}]
 % 	\addplot3 [blue,-stealth,samples=16,
@@ -581,16 +602,7 @@
 % \documentclass{article}
 % \usepackage{tikz-cd}
 
-% \tikzset{
-%   curarrow/.style={
-%   rounded corners=8pt,
-%   execute at begin to={every node/.style={fill=red}},
-%     to path={-- ([xshift=-50pt]\tikztostart.center)
-%     |- (#1) node[fill=white] {$\scriptstyle d_*$}
-%     -| ([xshift=50pt]\tikztotarget.center)
-%     -- (\tikztotarget)}
-%     }
-% }
+
 
 % \begin{document}
 
