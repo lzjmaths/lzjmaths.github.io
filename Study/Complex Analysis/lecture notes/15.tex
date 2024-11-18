@@ -112,5 +112,12 @@ We just proved the residue theorem under the assumption that there are only a fi
     Suppose  $ f ,g  $ are analytic in  $ \Omega  $,  $ |f(z)-g(z)|<|f(z)|,\forall z\in\gamma $. Then  $ f  $ and  $ g  $ have the same number of zeros enclosed by  $ \gamma $.  
 \end{theorem}
 \begin{proof}
-    First we have  $ f(z)\neq0,g(z)\neq 0 $ for  $ z\in \gamma $.  
+    First we have  $ f(z)\neq0,g(z)\neq 0 $ for  $ z\in \gamma $.
+    
+    Let  $ \psi(z)=\frac{g(z)}{f(z)},z\in\gamma$. Then  $ |\psi(z)-1|<1,\,\forall z\in \gamma  $. For  $ \Gamma=\psi(\gamma) $ 
+    
+    \[\int_\gamma\frac{\psi'(z)}{\psi(z)}\dd z=\int_\Gamma\frac{\dd \omega }{\omega}=2\pi i \cdot n(\Gamma,0)=0\]
+    since  $ 0 $ is in the unbounded connected component of  $ \Cbb\backslash \Gamma $.
+    
+    The argument principle implies that  $ 0=\dps\frac{1 }{2\pi i}\int_\gamma\frac{\psi'(z)}{\psi(z)}\dd z $ is equal to the difference of number of zeros of  $ g   $ and  $ f $.  
 \end{proof}

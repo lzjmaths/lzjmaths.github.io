@@ -1,0 +1,169 @@
+The argument principle can be generalized to 
+\begin{theorem}[The Argument Principle]\label{sec5.5.3:The most generalized version of argument principle with an extra function}
+    Under the hypothesis of the argument principle \ref{sec5.5.2:The generalized version of argument principle}, and if  $ h  $ is analytic in  $ \Omega  $, then we have 
+    \begin{equation}
+        \label{eq5.5.2:The most generalized version of argument principle with an extra function}\frac{1 }{2\pi i}\int_\gamma h(z)\frac{f'(z)}{f(z)}\dd z=\sum_j n(\gamma,a_j)h(a_j)-\sum_kn(\gamma,b_k)h(b_k)
+    \end{equation}
+\end{theorem}
+\begin{remark}
+    In \S 5.3.3, we proved Theorem \ref{sec:5.3.3:Theorem of the argument principle tells f has exactly N roots in a small region} that if  $ f  $ is analytic at  $ z_0  $, and  $ f(z)-\omega_0  $ has zero of order  $ N  $ at  $ z_0 $, then for  $ \epsilon  $ small enough, there exists  $ \delta>0  $ \st  $ \forall \omega  $ with  $ |\omega-\omega_0|<\delta  $,  $ f(z)=\omega  $ has exactly  $ N  $ roots  $ z_j(\omega ) $ in the disk  $ |z-z_0|<\epsilon $. If we apply    \eqref{eq5.5.2:The most generalized version of argument principle with an extra function} with  $ h(z)=z $, we get 
+    \begin{equation}
+        \sum_{j=1}^Nz_j(\omega)=\frac{1 }{2\pi i }\int_{|z-z_0|=\epsilon}z\frac{f'(z)}{f(z)-\omega}\dd z,\,\forall \omega\in B(\omega_0,\delta)
+    \end{equation} 
+    For  $ N=1  $, the inverse function  $ f^{-1}(\omega ) $ can thus be represented by 
+    \begin{equation}
+        f^{-1}(\omega )=\frac{1 }{2\pi i}\int_{|z-z_0|=\epsilon}z\frac{f'(z)}{f(z)-\omega}\dd z,\,\forall \omega\in B(\omega_0,\delta)
+    \end{equation}
+    If we apply \eqref{eq5.5.2:The most generalized version of argument principle with an extra function} with  $ h(z)=z^m  $, we get 
+    \begin{equation}
+        \sum_{j=1}^Nz_j^m(\omega)=\frac{1}{2\pi i}\int_{|z-z_0|=\epsilon}\frac{z^mf'(z)}{f(z)-\omega}\dd z,\,\forall \omega\in B(\omega_0,\delta)
+    \end{equation}
+\end{remark}
+\subsubsection{Evaluation of Definite integrals}
+    \noindent\ding{192}\,\,\,\,All integrals of the form  $ \int_0^{2\pi } R(\cos \theta,\sin\theta)\dd \theta$, where the integrand is a rational function of  $ \cos\theta  $ and  $ \sin\theta $. The substitution  $ z=e^{i\theta} $ transform it into the line integral 
+    \[\int_{|z|=1}R(\frac{z+z^{-1}}{2},\frac{z-z^{-1}}{2i})\frac{\dd z}{iz}\]
+    
+    It remains to determine the residues which correspond to the poles of the integrand inside  $ \{z:|z|<1\} $.
+    \begin{example}
+        Compute  $ \dps\int_0^\pi\frac{\dd \theta }{a+\cos\theta},a>1 $. 
+        \begin{equation*}
+            \begin{aligned}
+                \int_0^\pi \frac{\dd \theta}{a+\cos\theta   }&=\frac{1 }{2}\int_0^{2\pi }\frac{\dd \theta}{a+\cos\theta}\\
+                &\overset{z=e^{i\theta }}{a+\frac{z+z^{-1}}{2}}\cdot\frac{\dd z }{iz}=\frac{1 }{i }\int_{|z|=1}\frac{1 }{z^2+2az+z}\dd z\\
+                &=\frac{1 }{i }\int_{|z|=1}\frac{1}{\left[z-(-a+\sqrt{a^2-1})\right]\cdot\left[z-(-a-\sqrt{a^2-1})\right]}\dd z
+            \end{aligned}
+        \end{equation*}
+        
+        Note that  $ |-a+\sqrt{a^2-1}|=\frac{1 }{|a+\sqrt{a^2-1}|}<1 $ and  $ |-a-\sqrt{a^2-1}|>1 $.
+
+        Residue Theorem \ref{sec:5.5.1:The Residue Theorem} implies that 
+        \begin{align*}
+            \int_0^\pi \frac{\dd \theta }{a+\cos\theta}&=\frac{1 }{i }\cdot 2\pi i\Res_{z=-a+\sqrt{a^2-1}}f(z)\\
+            &=2\pi \cdot \frac{1}{-a+\sqrt{a^2-1}-(-a-\sqrt{a^2-1})}\\
+            &=\frac{\pi    }{\sqrt{a^2-1}}
+        \end{align*}
+    \end{example} 
+    \noindent\ding{193}\,\,\,\,An integral of the form  $ \int_{-\infty}^\infty R(x)\dd x $ converges if and only if in the rational function  $ R $, the degree of denominator  $ \geq $  the degree of numerator+2 and has no pole lies in  $ \Rbb $.
+
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+
+% \begin{center}
+    % A clipped circle is drawn
+    \begin{scope}
+        \clip (-2,0) rectangle (2,2);
+        \draw [
+            decoration={markings, mark=at position 0.15 with {\arrow{>}}},
+            postaction={decorate}
+            ](0,0) circle(1.5);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](-1.5,0) -- (1.5,0);
+    \end{scope}
+    %
+    %%Labels for the vertices are typeset.
+    \node[below left= 1mm of {(-1.5,0)}] {$A(-\rho,0)$};
+    \node[below right= 1mm of {(1.5,0)}] {$B(\rho,0)$};
+    \end{tikzpicture}
+% \end{center}
+
+Consider this semicircle  $ \gamma $. If  $ \rho  $ is large enough,  $ \gamma    $ encloses all poles of  $ R  $ in the upper half-plane. It is easy to see that 
+\[\lim_{\rho\to \infty}\int_{z=\rho e^{it},0 \leq t \leq \pi}R(z)\dd z=0\]
+So we have  $ \dps\int_{-\infty}^{+\infty} R(x)\dd x=2\pi i\sum_{y>0}\Res_{x+iy}R(z) $.
+
+\noindent\ding{194}
+
+(a) The same method can be applied to  $ \dps\int_{-\infty}^\infty R(x)e^{ix}\dd x $, where the rational function has a zero of at least two at  $ \infty $. Then  $ |e^{iz}|=e^{-y} \geq 1 $ in the upper-half plane. So 
+\begin{equation*}
+    \int_{-\infty}^\infty R(x)e^{ix}\dd x=2\pi i\sum_{y>0}\Res_{x+iy}R(z)e^{iz}
+\end{equation*}   
+
+(b) We now consider the case that  $ R  $ has only a simple zero at  $ \infty $ and no pole on  $ \Rbb $.
+
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+
+    % A clipped circle is drawn
+    \begin{scope}
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](-1.5,0) -- (1.5,0);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](1.5,0) -- (1.5,1);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](1.5,1) -- (-1.5,1);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](-1.5,1) -- (-1.5,0);
+    \end{scope}
+    %
+    %%Labels for the vertices are typeset.
+    \node[below left= 1mm of {(-1.5,0)}] {$(-x_1,0)$};
+    \node[below right= 1mm of {(1.5,0)}] {$(x_2,0)$};
+    \node[above = 1mm of {(0,1)}] {$(0,Y)$};
+    \end{tikzpicture}
+    
+There exists  $ M>0  $ and  $ C>0  $ \st this rectangle all poles of  $ R  $ in the upper half-plane if  $ x_1>M,x_2>M $, and  $ Y>M $.  $ |zR(z)| \leq C $ if  $ |z| \geq M $.
+
+\begin{equation*}
+    \left|\int_{\text{right vertical line}}R(z)e^{iz}\dd z\right| \leq \int_0^\gamma\frac{C}{|z|}e^{-y}\dd y \leq \frac{C}{x_2}\int_0^Ye^{-y}\dd y \leq \frac{C}{x_2}
+\end{equation*}
+Similarly,
+\begin{equation*}
+    \left|\int_{\text{left vertical line}}R(z)e^{iz}\dd z\right| \leq \frac{C}{x_1}
+\end{equation*}
+\begin{equation*}
+    \left|\int_{\text{upper horizontal line}}R(z)e^{iz}\dd z\right| \leq \int_{-x_1}^{x_2}\frac{C}{|z|}e^{-Y}\dd x \leq \frac{Ce^{-Y}}{Y}\int_{-x_1}^{x_2}\dd x=\frac{Ce^{-Y}(x_1+x_2)}{Y}
+\end{equation*}
+Fix  $ x_1  $ and  $ x_2 $, setting  $ Y\rightarrow \infty $. Then 
+\begin{equation*}
+    \left|\int_{-x_1}^{x_2}R(x)e^{ix}\dd x-2\pi i\sum_{y>0}\Res_{x+iy}R(z)e^{iz}\right| \leq C\left(\frac{1}{x_1}+\frac{1}{x_2}\right)
+\end{equation*} 
+So 
+\begin{equation*}
+    \int_{-x_1}^{x_2}R(x)e^{ix}\dd x=2\pi i\sum_{y>0}\Res_{x+iy}R(z)e^{iz}
+\end{equation*}
+
+(c)  $ R  $ has only a single zero at  $ \infty  $ and a simple pole at  $ 0 $. Suppose that  $ R(z)e^{iz}=\frac{B}{z}+\varphi(z) $ where  $ \varphi  $ is analytic at  $ 0 $.
+
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+
+    % A clipped circle is drawn
+    \begin{scope}
+        % \clip (-0.2,0) rectangle (0.2,0.2);
+        \draw[decoration={markings, mark=at position 0.25 with {\arrow{>}}},
+        postaction={decorate}](-1.5,0) -- (1.5,0);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](1.5,0) -- (1.5,1);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](1.5,1) -- (-1.5,1);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+        postaction={decorate}](-1.5,1) -- (-1.5,0);
+        \draw [
+            decoration={markings, mark=at position 0.75 with {\arrow{>}}},
+            postaction={decorate}
+            ](0,0) arc[start angle=180, end angle=360, radius=0.2];
+    \end{scope}
+    %
+    %%Labels for the vertices are typeset.
+    \end{tikzpicture}
+
+Then it is easy to use this curve to prove that 
+\begin{equation*}
+    \lim_{\delta\to 0^+}\left[\int_{-\infty}^{-\delta}R(x)e^{ix}\dd x+\int_{\delta}^\infty R(x)e^{ix}\dd x\right]=2\pi i \left[\sum_{y>0}\Res_{x+iy}R(z)e^{iz}+\frac{B}{2}\right]
+\end{equation*}
+Denote this integral as  $ \mathrm{P.V.}\left[\int_{-\infty}^\infty R(x)e^{ix}\dd x\right] $, called \name{Cauchy principle value of the integral}.
+
+\begin{example}
+    \begin{align*}
+        \mathrm{P.V.}\left(\int_{-\infty}^\infty \frac{e^{ix}}{x}\dd x\right)&=2\pi i \cdot\frac{1 }{2}=\pi i\\
+        &=\mathrm{P.V.}\left(\int_{-\infty}^\infty \frac{\cos x}{x}\dd x+i\int_{-\infty}^\infty\frac{\sin x}{x}\dd x\right)\\
+        &=\mathrm{P.V.}\left(\int_{-\infty}^\infty \frac{\cos x}{x}\dd x\right)+i\int_{-\infty}^\infty \frac{\sin x}{x}\dd x\\
+        &=i\cdot 2\int_{0}^\infty\frac{\sin x}{x}\dd x
+    \end{align*}
+    So we obtain  $ \int_0^\infty\frac{\sin x}{x}\dd x=\frac{\pi }{2} $ 
+\end{example}
+\noindent\ding{195}\,\,\,\,Calculate  $ \dps\int_0^\infty x^\alpha R(x)\dd x $, where  $ \alpha\in(0,1) $, $ R(z) $ has a zero of order larger than  $ 2 $ at  $ \infty $, and at most a simple pole at  $ 0 $.
+Then 
+\begin{equation}
+    \int_0^\infty x^\alpha R(x)\dd x\overset{x=t^2}{=}2\int_0^\infty t^{2\alpha+1}R(t^2)\dd t
+\end{equation}
+ $ f(x)=z^{2\alpha } $ is analytic in  $ \Cbb\backslash\{iy:y \leq 0\} $ if we require  $ \arg f(x)\in(-\pi \alpha,3\pi\alpha) $. Applying residue theorem \ref{sec:5.5.1:The Residue Theorem} to  $ z^{2\alpha+1}R(z^2) $ we have 
+\begin{equation*}
+    \int_{-\infty}^\infty z^{2\alpha+1}R(z^2)\dd z=2\pi i\sum_{y>0}\Res_{x+iy}z^{2\alpha+1}R(z^2)
+\end{equation*}
