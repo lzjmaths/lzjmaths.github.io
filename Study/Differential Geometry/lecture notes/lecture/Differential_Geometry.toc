@@ -29,5 +29,6 @@
 \contentsline {subsection}{\numberline {6.2}Integration on Oriented Manifold}{54}{subsection.6.2}%
 \contentsline {paragraph}{Goal:}{54}{section*.3}%
 \contentsline {subsection}{\numberline {6.3}Smooth Manifold with boundary}{57}{subsection.6.3}%
-\contentsline {section}{Index}{59}{section*.4}%
-\contentsline {section}{List of Theorems}{62}{section*.5}%
+\contentsline {subsection}{\numberline {6.4}Riemannian metric}{60}{subsection.6.4}%
+\contentsline {section}{Index}{65}{section*.4}%
+\contentsline {section}{List of Theorems}{68}{section*.5}%

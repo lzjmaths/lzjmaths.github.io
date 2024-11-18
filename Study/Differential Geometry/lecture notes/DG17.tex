@@ -1,0 +1,176 @@
+\begin{theorem}
+    For any smooth orientable compact manifold  $ M $,  $ \partial M $ is not a \name{retract} of  $ M  $, \ie there is no continuous map $ r:M\rightarrow\partial M $ \st  $ r|_{\partial M}=\id_{\partial M} $   
+\end{theorem}
+\begin{proof}
+    Assume such retraction  $ r  $ exists. After homotopy, we may assume  $ r  $ is smooth followed form Whitney approximation Theorem \ref{Whitney approximation theorem}
+
+    Pick an orientation on  $ M  $ and such an orientation induces orientation on  $ \partial M  $ and  hence, there exists an orientation form  $ \omega\in \Omega^{n-1}(\partial M) $ \st  $ \omega  $ is nowhere vanishing.
+    
+    Then  $ \int_{\partial M}\omega\neq 0 $. 
+    
+    Noticed that  $ r\circ i=\id $, 
+    we have  $ \int_{\partial M}\omega=\int_{\partial M}\iota^*(r^*(\omega))=\int_M\dd (r^*(\omega))=\int_Mr^*(\dd \omega)=0 $ 
+\end{proof}
+\begin{corollary}
+     $ f:D^n\rightarrow D^n  $ continuous. Then  $ \exists x\in D^n  $ \st  $ f(x)=x $. 
+\end{corollary}
+\begin{proof}
+    Suppose there is no  $ x  $ \st  $ f(x)=x $. Let  $ l_x  $ be the unique ray form  $ f(x)  $ to  $ x  $.
+
+    Define  $ r:D^n\rightarrow S^{n-1}$ by  $ r(x)=l_x\cap S^{n-1} $. Then  $ r  $ is continuous,  $ r(x)=x  $ for  $ x\in S^{n-1} $, which is contradiction to the previous theorem.  
+\end{proof} 
+\subsection{Riemannian metric}
+A \name{Riemannian metric} $ g   $ on  $ M  $ is a smooth section of  $ T^*M\otimes T^*M  $ \st  $ \forall p\in M  $,  $ g_p:T_pM\otimes T_pM\rightarrow \Rbb $ is symmetric and positive definite.
+
+Or equivalently,  $ g_p  $ is a bilinear map from  $ T_pM\times T_pM\rightarrow \Rbb $ \st 
+\[g_p(v,w)=g_p(w,v),\quad g_p(v,v) \geq 0\text{ with equality holds iff  $ v=0 $}\] 
+
+We also write  $ g_p(v,w ) $ as  $ \<v,w\>_p  $  $ v,w\in T_pM $.
+
+In a local chart  $ (U,x^1,\cdots,x^n) $, 
+\[g|_U=\sum_{1 \leq i,j \leq n}g_{i,j}\dd x^i\otimes \dd x^j\]
+where  $ g_{i,j}\in C^\infty(U,\Rbb) $,  $ g_{i,j}(p)=\<\frac{\partial }{\partial x^i}|_p,\frac{\partial }{\partial x^j}|_p\>_p $.
+
+We will abbreviate Riemannian metric to just metric in this lecture, just for convenience.
+
+\begin{example}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item Euclidean metric on  $ \Rbb^n $,  $ g_{std}=\dps\sum_{i=1}^n\dd x^i\otimes \dd x^j $.
+        \item Given any  $ N\overset{f }{\looparrowright}M$, any metric  $ g_M  $ on  $ M  $, we can pullback  $ g_M  $ to metric on  $ g_N  $ by  $ \<V,W\>_p:=\<f_{p,*(V)},f_{p,*}(W)\>_{f(p)}\in\Rbb,\forall p\in N,V,W\in T_pN $.
+        
+        When  $ f  $ is an embedding, also write  $ f^*(g_M) $ as  $ g_M|_N $ 
+        \item For  $ S^{n-1}\hookrightarrow \Rbb^n $,  $ g_{std}|_{S^{n-1}}=g_{S^{n-1}} $,  $ T_pS^{n-1}\cong p^\bot  $. So $ \<v,w\>_p=\<v,w\>_{\Rbb^n} $. Hence  $ S^{n-1}  $ has \textbf{constant positive sectional curvature}
+        \item For  $ M=\overset{\circ}{D}^n $,  $ g=\dps\frac{\dps\sum_{i=1}^n\dd x^i\otimes \dd x^i}{(\dps 1-\sum_{i=1}^n x^i)^2} $ called \name{Poincar{\'e} disk model}, has \textbf{constant sectional curvature -1}.     
+    \end{enumerate}
+\end{example}
+\begin{proposition}
+    Any smooth manifold has a Riemannian metric,
+\end{proposition}
+\begin{proof}
+    Take a smooth atlas  $ \mathcal{U}=\{(U_\alpha,\varphi_\alpha)\} $, take partition of unity  $ \rho_\alpha:M\rightarrow [0,1 ] $ subordinate to  $ \mathcal{U } $. 
+    
+    On each  $ (U_\alpha,x^1,\cdots,x^n) $, take the standard metric 
+    \[g_\alpha=\sum_{i=1}^n\dd x^i\otimes \dd x^i\]
+    Then  $ g=\dps\sum_{\alpha}\rho_\alpha g_\alpha \in \Gamma(T^*M\otimes T^* M)$.
+    
+    For  $ \forall p\in\alpha $, there exists finitely many  $ \alpha_i  $ \st  $ g_p=\dps\sum_{i=1}^m\rho_{\alpha_i }(p)g_{\alpha_i} $. Positive linear combination of positive definite symmetric form is still positive definite and symmetric. Thus,  $ g  $ is what we need.
+\end{proof}
+Consider  $ \Rbb^n\hookrightarrow E\rightarrow M  $ a smooth vector bundle.
+
+A \name{Riemannian metric} on  $ E  $ is a smooth section  $ g\in \Gamma(E^*\otimes E^*)$ \st  $ \forall p\in M  $,  $ g_p  $ is a symmetric, positive definite bilinear form.
+
+\begin{proposition}
+    Any smooth vector bundle has a metric.
+\end{proposition}
+\begin{proof}
+    It suffices to replace $ T_pM  $ to vector bundle in the previous proof.
+\end{proof}
+\begin{corollary}
+    For any smooth vector bundle  $ E  $,  $ E  $ is isomorphic to  $ E^* $. \ie  $ \exists \rho  $ diffeomorphism \st  $ \rho  $ restricts to linear isomorphism  $ E_p\rightarrow E_p^*M  $ for any  $ p\in M $.  
+\end{corollary}
+\begin{proof}
+    Pick a metric  $ g  $ on  $ E  $. Define  $ E\xrightarrow{\rho}E^*,v\mapsto g_p(v,-) $. It is easy to check  $ \rho  $ is an isomorphism.  
+\end{proof}
+In particular,  $ TM\cong T^*M $.
+
+\begin{theorem}
+    Let  $ M  $ be oriented manifold. Then any Riemannian metric  $ g  $ determines an oriented  $ n  $-form  $ \Vol\in \Omega^n(M ) $, called \name{volume form}.
+\end{theorem}
+\begin{proof}
+    Take oriented chart  $ (U_\alpha,x^1,\cdots,x^n) $, we get vector fields  $ \partial x^i $  on  $ U_\alpha $.
+    
+    Apply Gram-Schmidt process,
+    \begin{equation*}
+        e_1=\frac{\partial x^1}{||\partial x^1||_g},e_2=\frac{\partial x^2-\<\partial x^2,e_1\>_g}{||\partial x^2-\<\partial x^2,e_1\>_g||},e_3=\cdots
+    \end{equation*}
+    We get smooth orthonormal vector fields  $ e_1,\cdots,e_n  $ on  $ U_\alpha $. Let  $ e_1^*,\cdots,e_n^* \in \Omega^1(U_\alpha ) $ be the dual of  $ \{e_i \} $. 
+    
+    \textbf{Set}\ $ \omega_\alpha:=e_1^*\wedge\cdots\wedge e_n^*\in \Omega^n(U_\alpha) $.
+    
+    Now suppose we have another chart  $ (U_\beta,y^1,\cdots,y^n ) \rightsquigarrow e_\beta=e'^*_1\wedge\cdots\wedge e'^*_n$.
+    
+    Then  $ \forall p\in U_\alpha\cap U_\beta  $,  $ \{e_{i,p}\},\{e'_{i,p}\} $ are both orientaed orthogonormal basis of  $ (T_pM ,g_p)$.
+    
+    Then there exists  $ A\in SO(n) $ \st     
+    \[\begin{pmatrix}
+        e_{1,p}\\
+        \vdots\\
+        e_{n,p}
+    \end{pmatrix}=
+    A\begin{pmatrix}
+        e'_{1,p}\\
+        \vdots\\
+        e'_{n,p}
+    \end{pmatrix}\] 
+    Then 
+    \[
+    \begin{pmatrix}
+        e^*_{1,p}\\
+        \vdots\\
+        e^*_{n,p}
+    \end{pmatrix}
+    =A^T\begin{pmatrix}
+        e'^*_{1,p}\\
+        \vdots\\
+        e'^*_{n,p}
+    \end{pmatrix}
+    \]
+    So  $ e'^*_{1,p}\wedge\cdots\wedge e'^*_{n,p}=\det(A^T)e^*_{1,p}\wedge\cdots\wedge e^*_{n,p } $  $ \Rightarrow  $  $ \omega_{\alpha,p}=\omega_{\beta,p} $.
+    
+    Therefore,  $ \omega_\alpha|_{U_\alpha\cap U_\beta }=\omega_\beta|_{U_\alpha\cap U_\beta} $. 
+    So  $ \{\omega_\alpha \} $ induces a unique  $ \Vol\in\Omega^n(M) $ \st  $ \Vol|_{U_\alpha}=\omega_\alpha $  
+\end{proof}
+\begin{remark}
+    In this proof, we know that the wedge product of orthogonormal basis at any point are all the same except signs.
+\end{remark}
+\begin{proposition}[Calculation of volume form in local chart]\label{prop:Calculation of volume form in local chart}
+    In a local chart  $ (U,x^1,\cdots,x^n ) $,  $ g|_U =\dps\sum_{1 \leq i,j \leq n}g_{i,j}\dd x^i\otimes \dd x^j $, then 
+    \begin{equation}
+        \Vol=\sqrt{\det(g_{ij})}\dd x^1\wedge\cdots\wedge \dd x^n\label{eq:Calculation of volume form in local chart}
+    \end{equation} 
+\end{proposition}
+\begin{proof}
+    If  $ \dps\begin{pmatrix}
+        \partial x^1\\
+        \vdots\\
+        \partial x^n
+    \end{pmatrix}=A\begin{pmatrix}
+        e_1\\
+        \vdots\\
+        e_n
+    \end{pmatrix} $, where  $ A:U\rightarrow \GL_n(\Rbb) $.
+    
+    Then  $ \dps\begin{pmatrix}
+        e_1^*\\
+        \vdots\\
+        e_n^*
+    \end{pmatrix}=A^T\begin{pmatrix}
+        \dd x^1\\
+        \vdots\\
+        \dd x^n
+    \end{pmatrix} $ $ \Rightarrow  $ \[\Vol=e_1^*\wedge\cdots\wedge e_n^*=\det(A^T)\dd x^1\wedge\cdots\wedge x^n=\sqrt{\det(g_{ij})}\dd x^1\wedge\cdots\wedge \dd x^n \]
+    
+    The final equality is because  \[\dps (g_{ij})=\dps\begin{pmatrix}
+        \partial x^1\\
+        \vdots\\
+        \partial x^n
+    \end{pmatrix}\begin{pmatrix}
+        \partial x^1&\cdots &\partial x^n
+    \end{pmatrix}=A\begin{pmatrix}
+        e_1\\
+        \vdots\\
+        e_n
+    \end{pmatrix}\begin{pmatrix}
+        e_1&\cdots&e_n
+    \end{pmatrix}A^T=AA^T \]
+    The multiplication of matrix is defined by the Riemannian metric  $ \<-,-\>_{g_p} $ 
+\end{proof}
+\begin{example}
+    For  $ \omega_0\in\Omega^{n-1}(\Rbb^n ) $ defined by 
+    \[\omega_{0,x}(v_1,\cdots,v_{n-1})=\det(x,v_1,\cdots,v_{n-1})\]
+    Then   $ \omega_{0,x}(\partial x^1,\cdots,\hat{\partial x^k},\cdots,\partial x^n)=(-1)^ix^i $. 
+    So 
+    \[\omega_0=\dps\sum_{i=1}^n(-1)^{i-1}\dd x^1\wedge\cdots\wedge\hat{\dd x^i}\wedge\cdots\wedge\dd x^n\]
+    And we have  $ \omega_0|_{S^{n-1}}=\Vol_{S^{n-1}} $. Leave it as an exercise. 
+\end{example}

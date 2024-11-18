@@ -493,7 +493,12 @@
 \newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
 \newcommand{\stdO}{\mathcal{O}_{\mathrm{std}}}
 \newcommand{\stdwedge}[1]{\dd {#1}^1\wedge\cdots\wedge\dd {#1}^n}
+\newcommand{\stddownwedge}[1]{\dd {#1}_1\wedge\cdots\wedge\dd {#1}_n}
+
 \newcommand{\opensub}{\overset{\text{open}}{\subset}}
+\newcommand{\chart}[2]{({#1}_\alpha,{#2}^1,\cdots,{#2}^n)}
+\newcommand{\<}{\left<}
+\renewcommand{\>}{\right>}
 %\makeindex[columns=2,title=Index, options=-s example_style.ist]
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.16}
@@ -547,7 +552,7 @@
 
 \input{../DG16.tex}
 
-
+\input{../DG17.tex}
 
 % \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
 % 	\cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\

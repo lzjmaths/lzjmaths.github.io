@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  15 NOV 2024 20:28
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  18 NOV 2024 15:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1257,100 +1257,100 @@ Package csquotes Info: ... none found.
  (./Differential_Geometry.aux)
 \openout1 = `Differential_Geometry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 518.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 518.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 523.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 523.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 518.
-LaTeX Font Info:    ... okay on input line 518.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 518.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 518.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 523.
+LaTeX Font Info:    ... okay on input line 523.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 523.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 523.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    ... okay on input line 523.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1386,12 +1386,12 @@ LaTeX Font Info:    ... okay on input line 518.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 518.
-LaTeX Info: Command `\ddddot' is already robust on input line 518.
+LaTeX Info: Command `\dddot' is already robust on input line 523.
+LaTeX Info: Command `\ddddot' is already robust on input line 523.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 518.
+Package hyperref Info: Link coloring ON on input line 523.
 (./Differential_Geometry.out) (./Differential_Geometry.out)
 \@outlinefile=\write6
 \openout6 = `Differential_Geometry.out'.
@@ -1399,21 +1399,21 @@ Package hyperref Info: Link coloring ON on input line 518.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.16).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 522.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 527.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 522.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 527.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 522.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 527.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 522.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 527.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 522.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 527.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./Differential_Geometry.toc [1
@@ -1481,10 +1481,10 @@ Overfull \hbox (21.13608pt too wide) in paragraph at lines 74--75
 [][] 
  []
 
-[49]) (../DG15.tex [50] [51] [52]) (../DG16.tex [53] [54] [55] [56] [57]) [58]
+[49]) (../DG15.tex [50] [51] [52]) (../DG16.tex [53] [54] [55] [56] [57] [58]) (../DG17.tex [59] [60] [61] [62] [63]) [64]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [59
+ (./Differential_Geometry.ind [65
 
 
 ]
@@ -1492,28 +1492,28 @@ Underfull \hbox (badness 2495) in paragraph at lines 111--112
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[60] [61
+[66] [67
 
 ])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [62
+(./Differential_Geometry.loe [68
 
-] [63])
+] [69])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [64] (./Differential_Geometry.aux)
+ [70] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: 8A82F24DDAB9C040A75D0ECCE76791A5;5530.
+(rerunfilecheck)             Checksum: 45BD20AD66C1F888EED7F23682007EDE;5676.
  ) 
 Here is how much of TeX's memory you used:
- 47002 strings out of 476683
- 1066832 string characters out of 5804047
+ 47014 strings out of 476683
+ 1067185 string characters out of 5804047
  1864018 words of memory out of 5000000
- 66325 multiletter control sequences out of 15000+600000
+ 66334 multiletter control sequences out of 15000+600000
  559603 words of font info for 157 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (64 pages).
+Output written on Differential_Geometry.pdf (70 pages).

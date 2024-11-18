@@ -107,7 +107,7 @@ So we can define the integral over special  $ \omega $ and  general  $ M $.
    
    So  $ \dps\int_M\omega=\sum_{i=1}^n\int_M\omega_i $ is uniquely defined. 
 \end{proof}
-\begin{remark}
+\begin{remark}\label{Remark:Every form with compact support can be expressed as the sum of form with small support}
    We actually obtain that each  $ \omega\in \Omega_c^n(M) $ can be expressed as  $ \dps\sum_{k=1}^n\omega_k $ where  $ \omega_k\in\Omega_s^n(M) $.   
 \end{remark}
 \begin{proposition}
@@ -152,11 +152,45 @@ Recall that if  $ M $ is  $ n $ dimensional manifold with boundary, then  $ N=\p
    \end{equation}       
 \end{theorem}
 \begin{proof}
-    $ \forall \omega\in \Omega_c^{n-1}(M) $,  $ \omega=\omega_1+\cdots+\omega_k $,  $ \omega_j\int\Omega_s^n(M) $.
+    By Remark \ref{Remark:Every form with compact support can be expressed as the sum of form with small support}$ \forall \omega\in \Omega_c^{n-1}(M) $,  $ \omega=\omega_1+\cdots+\omega_k $,  $ \omega_j\in\Omega_s^n(M) $.
     
     By linearity, we may assume  $ \omega\in \Omega_s^n(M) $,  $ \Supp(\omega)\subset U_\alpha $ for chart  $ \varphi_\alpha:U_\alpha\xrightarrow{\cong}V_\alpha $.
     
      $ \varphi_\alpha^{-1,*}(\omega)\in\Omega_c^n(V_\alpha) $ induces  $ \omega'\in \Omega_c^n(\Rbb_{\leq 0}\times \Rbb^{n-1}) $ if we extend it by 0.
      
-     By considering  $ \omega' $ instead of  $ \omega $, we may assume  $ M=\Rbb_{\leq 0}\times\Rbb^{n-1} $   
+     By considering  $ \omega' $ instead of  $ \omega $, we may assume  $ M=\Rbb_{\leq 0}\times\Rbb^{n-1} $ and we just need to prove 
+     \[\int_{\Rbb^{n-1}}\iota^*(\omega')=\int_{\Rbb_{\leq 0}\times \Rbb^{n-1}}\dd \omega'\]
+     Let  $ \omega'=\sum_{k=1}^nf^k\dd x^1\wedge\cdots\wedge \hat{\dd x^k}\wedge\cdots\wedge\dd x^n $.
+     
+     By linearity, we may assume  $ \omega'=f^k\dd x^1\wedge\cdots\wedge\hat{\dd x^k}\wedge\cdots\wedge\dd x^n $.
+     
+    \begin{equation}
+        \begin{aligned}
+            \dd \omega'&=\left(\dps\sum_{i=1}^n\frac{\partial f^k}{\partial x^i}\dd x^i\right)\\
+            &=\frac{\partial f^k}{\partial x^k}(-1)^{k-1}\dd x^1\wedge\cdots\wedge\dd x^n
+        \end{aligned}
+    \end{equation}
+    
+    For  $ k=1 $,  
+    
+    \begin{equation*}
+        \begin{aligned}
+            \int_{\Rbb_{ \leq 0}\times \Rbb^{n-1}}\dd \omega'&=\int_{\Rbb^{n-1}}\left(\int_{\Rbb_{\leq 0}}\frac{\partial f^1}{\partial x^1}\dd x^1\right)\dd x^2\wedge\cdots\wedge x^n\\
+            &=\int_{\Rbb^{n-1}}\left(f^1(0,x_2,\cdots,x_n)-\dps\lim_{x_1\to\infty}f^1(x_1,x_2,\cdots,x_n)\right)\dd x^2\cdots\wedge \dd x^n\\
+            &=\int_{\Rbb^{n-1}}f^1(0,x^2,\cdots,x^n)\dd x^2\wedge\dd x^3\wedge\cdots\wedge\dd x^n\\
+            &=\int_{\Rbb^{n-1}}\iota^*(\omega')
+        \end{aligned}
+    \end{equation*}
+
+    For  $ k\neq 1 $, 
+    
+    \begin{equation*}
+        \begin{aligned}
+            \int_{\Rbb_{\leq 0}\times \Rbb^{n-1}}\dd \omega'&=\int_{\Rbb_{\leq 0}\times \Rbb^{n-1}}\left(\int_{\Rbb_{\leq 0}}\frac{\partial f^k}{\partial x^k}\dd x^k\right)\\
+            &=\int_{\Rbb^{n-1}}\left(\dps\lim_{x_k\to+\infty}f^k(x_1,x_2,\cdots,0,\cdots,x_n)-\dps\lim_{x_k\to-\infty}f^k(x_1,x_2,\cdots,x_n)\right)\\
+            &\quad\dd x^1\wedge\dd x^2\cdots\wedge\hat{\dd x_k}\wedge\cdots\wedge \dd x^n\\
+            &=0\\
+            &=\int_{\partial M}\iota^*(\omega')
+        \end{aligned}
+    \end{equation*}
 \end{proof}

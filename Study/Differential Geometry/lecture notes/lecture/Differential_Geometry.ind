@@ -124,6 +124,7 @@
 
   \item partial-derivative, \hyperpage{10}
   \item partition of unity subordinat(P.O.U), \hyperpage{9}
+  \item Poincar{\'e} disk model, \hyperpage{61}
   \item positive atlas, \hyperpage{54}
   \item proper, \hyperpage{35}
   \item pullback, \hyperpage{49}
@@ -136,6 +137,8 @@
   \item refinement, \hyperpage{8}
   \item regular point, \hyperpage{4}, \hyperpage{28}, \hyperpage{36}
   \item regular value, \hyperpage{4}, \hyperpage{36}
+  \item retract, \hyperpage{59}
+  \item Riemannian metric, \hyperpage{60, 61}
   \item right invariant, \hyperpage{24}
 
   \indexspace
@@ -160,5 +163,6 @@
     \subitem isomorphism, \hyperpage{13}
   \item vector field, \hyperpage{14}
     \subitem Time dependent, \hyperpage{18}
+  \item volume form, \hyperpage{62}
 
 \end{theindex}
