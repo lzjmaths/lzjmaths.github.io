@@ -1,3 +1,5 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
 \begin{theorem}
     For any smooth orientable compact manifold  $ M $,  $ \partial M $ is not a \name{retract} of  $ M  $, \ie there is no continuous map $ r:M\rightarrow\partial M $ \st  $ r|_{\partial M}=\id_{\partial M} $   
 \end{theorem}
@@ -19,7 +21,7 @@
 
     Define  $ r:D^n\rightarrow S^{n-1}$ by  $ r(x)=l_x\cap S^{n-1} $. Then  $ r  $ is continuous,  $ r(x)=x  $ for  $ x\in S^{n-1} $, which is contradiction to the previous theorem.  
 \end{proof} 
-\subsection{Riemannian metric}
+\subsection{Riemannian Metric}
 A \name{Riemannian metric} $ g   $ on  $ M  $ is a smooth section of  $ T^*M\otimes T^*M  $ \st  $ \forall p\in M  $,  $ g_p:T_pM\otimes T_pM\rightarrow \Rbb $ is symmetric and positive definite.
 
 Or equivalently,  $ g_p  $ is a bilinear map from  $ T_pM\times T_pM\rightarrow \Rbb $ \st 
@@ -149,19 +151,19 @@ In particular,  $ TM\cong T^*M $.
         \dd x^1\\
         \vdots\\
         \dd x^n
-    \end{pmatrix} $ $ \Rightarrow  $ \[\Vol=e_1^*\wedge\cdots\wedge e_n^*=\det(A^T)\dd x^1\wedge\cdots\wedge x^n=\sqrt{\det(g_{ij})}\dd x^1\wedge\cdots\wedge \dd x^n \]
+    \end{pmatrix} $ $ \Rightarrow  $ \[\Vol=e_1^*\wedge\cdots\wedge e_n^*=\det(A^T)\dd x^1\wedge\cdots\wedge \dd x^n=\sqrt{\det(g_{ij})}\dd x^1\wedge\cdots\wedge \dd x^n \]
     
     The final equality is because  \[\dps (g_{ij})=\dps\begin{pmatrix}
         \partial x^1\\
         \vdots\\
         \partial x^n
-    \end{pmatrix}\begin{pmatrix}
+    \end{pmatrix}_{g}\begin{pmatrix}
         \partial x^1&\cdots &\partial x^n
     \end{pmatrix}=A\begin{pmatrix}
         e_1\\
         \vdots\\
         e_n
-    \end{pmatrix}\begin{pmatrix}
+    \end{pmatrix}_g\begin{pmatrix}
         e_1&\cdots&e_n
     \end{pmatrix}A^T=AA^T \]
     The multiplication of matrix is defined by the Riemannian metric  $ \<-,-\>_{g_p} $ 
@@ -172,5 +174,5 @@ In particular,  $ TM\cong T^*M $.
     Then   $ \omega_{0,x}(\partial x^1,\cdots,\hat{\partial x^k},\cdots,\partial x^n)=(-1)^ix^i $. 
     So 
     \[\omega_0=\dps\sum_{i=1}^n(-1)^{i-1}\dd x^1\wedge\cdots\wedge\hat{\dd x^i}\wedge\cdots\wedge\dd x^n\]
-    And we have  $ \omega_0|_{S^{n-1}}=\Vol_{S^{n-1}} $. Leave it as an exercise. 
+    And we have  $ \omega_0|_{S^{n-1}}=\Vol_{S^{n-1}} $. 
 \end{example}

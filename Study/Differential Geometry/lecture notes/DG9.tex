@@ -1,6 +1,8 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
 The rest of Proposition \ref{properties of Lie bracket} is easy to check if it is viewed as a mapping  $ C^\infty(M)\rightarrow C^\infty(M) $.
 
-\subsection{Lie algebra of a Lie group}
+\subsection{Lie Algebra of a Lie Group}
 \begin{definition}
     A \name{Lie algebra} $ g $ is  $ \mathbb{R} $-linear space  $ g $ with map   $ [-,-]:g\times g\rightarrow g $ \st it is bilinear, anti-symmetric and satisfies the Jacobian identity.
     
@@ -21,26 +23,26 @@ We say  $ X\in \mathfrak{T}G $ is \name{left invariant} if  $ l_*^g(X)=X $,  $ \
 So we can find a natural Lie algebra of  $ G $: 
 \[\name{$ \Lie(G) $}:=\{\text{left invariant vector fields on  $ G $}\},\text{with  $ [-,-] $ restricted from  $ \mathfrak{T}G $}\]
 \begin{theorem}\label{left invariant vector field is determined at e}
-    Given any  $ V\in T_eG $,  $ \exists $ unique left invariant  $ \hat{V}\in \mathfrak{T}G $ \st  $ \hat{V_e}=V $.    
+    Given any  $ V\in T_eG $,  $ \exists $ unique left invariant  $ \hat{V}\in \mathfrak{T}G $ \st  $ \hat{V}_e=V $.    
 \end{theorem} 
 \begin{corollary}
      $ \dps \Lie(G)\cong T_eG $ as vector spaces. 
 \end{corollary}
 \begin{proof}[Proof of Theorem \ref{left invariant vector field is determined at e}]\,
 
-    \textbf{Uniqueness of  $ \hat{V} $:}  $ \hat{V_g}=l_{e,*}^g(\hat{V_e})=l_{e,*}^g(V) $. So  $ \hat{V} $ is determined by  $ V $.
+    \textbf{Uniqueness of  $ \hat{V} $:}  $ \hat{V}_g=l_{e,*}^g(\hat{V}_e)=l_{e,*}^g(V) $. So  $ \hat{V} $ is determined by  $ V $.
     
-    \textbf{Existence of  $ \hat{V} $:} Let  $ \hat{V}=\{\hat{V_g}\}_{g\in G} $ where  $ \hat{V_g}=l_{e,*}^g(\hat{V_e}) $.
+    \textbf{Existence of  $ \hat{V} $:} Let  $ \hat{V}=\{\hat{V}_g\}_{g\in G} $ where  $ \hat{V}_g=l_{e,*}^g(\hat{V}_e) $.
     
      $ \hat{V} $ is left-invariant because 
-     \[\dps(l_*^h(\hat{V}))_g=l_{h^{-1}g,*}^h(\hat{V}_{h^{-1}g})=l_{h^{-1}g,*}^h(l_{e,*}^{h^{-1}g}(V))=l_{e,*}^g(V)=\hat{V_g}\] 
+     \[\dps(l_*^h(\hat{V}))_g=l_{h^{-1}g,*}^h(\hat{V}_{h^{-1}g})=l_{h^{-1}g,*}^h(l_{e,*}^{h^{-1}g}(V))=l_{e,*}^g(V)=\hat{V}_g\] 
 
       $ \hat{V} $ is smooth: Take any  $ f\in C^\infty(G) $ suffices to show  $ \hat{V}(f)\in C^\infty(G) $.
       
-      Take any smooth  $ \gamma:\mathbb{R}\rightarrow G $ \st  $ \gamma(0)=e,\gamma'(0)=V $. Then  $ l^g\circ \gamma :\mathbb{R}\rightarrow G $ satisfies  $ l^g\circ\gamma(0)=g,(l^g\circ\gamma)(0)=g,(l^g\circ \gamma)'(0)=l_{e,*}^g(V)=\hat{V_g} $   
+      Take any smooth  $ \gamma:\mathbb{R}\rightarrow G $ \st  $ \gamma(0)=e,\gamma'(0)=V $. Then  $ l^g\circ \gamma :\mathbb{R}\rightarrow G $ satisfies  $ l^g\circ\gamma(0)=g,(l^g\circ\gamma)(0)=g,(l^g\circ \gamma)'(0)=l_{e,*}^g(V)=\hat{V}_g $   
 
       So  \begin{equation}
-        \hat{V}(f)(g)=\hat{V_g}(f)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(l^g\circ \gamma(t))|_{t=0}=\frac{\mathrm{d}}{\mathrm{d}t}f(g\cdot \gamma(t))|_{t=0} \label{eq:lie derivative}
+        \hat{V}(f)(g)=\hat{V}_g(f)=\dps\frac{\mathrm{d}}{\mathrm{d}t}f(l^g\circ \gamma(t))|_{t=0}=\frac{\mathrm{d}}{\mathrm{d}t}f(g\cdot \gamma(t))|_{t=0} \label{eq:lie derivative}
       \end{equation}
       
       Consider the map 
@@ -66,7 +68,7 @@ So we can find a natural Lie algebra of  $ G $:
      $ \forall A\in \mathrm{gl}(n,\mathbb{R}) $, the left invariant vector field  $ \hat{A} $ is complete and generate the flow  $ \dps\varphi_t:\GL(n,\mathbb{R})\rightarrow \GL(n,\mathbb{R}), \varphi_t(g)=ge^{At}=g(I+At+\frac{A^2t^2}{2!}+\cdots) $   
 \end{lemma}
 \begin{proof}
-     \[\hat{A_g}=g\cdot A\in T_gG=M_n(\mathbb{R})\]
+     \[\hat{A}_g=g\cdot A\in T_gG=M_n(\mathbb{R})\]
       \[\frac{\partial}{\partial t}\varphi_t(g)=\frac{\partial}{\partial t}(g(e^{At}))=ge^{At}A=\hat{A}_{g\cdot e^{At}}=\hat{A}_{\varphi_t(g)}\]
 \end{proof}
 \begin{remark}
@@ -112,12 +114,12 @@ A linear map  $ L:g\rightarrow h$ between Lie algebra is called a \name{morphism
 \begin{proof}
       $ V_0,V_1\in \Lie(G)=T_eG $,  $ W_i=F_{e,*}(V_i)\in \Lie(H)=T_eH $. Let  $ \hat{V},\hat{W} $ be left-invariant vector fields.   
      \begin{claim}
-          $ \hat{W_i} $ is  $ F $-compatible with  $ \hat{V_i} $ for  $ i=0,1 $.    
+          $ \hat{W}_i $ is  $ F $-compatible with  $ \hat{V}_i $ for  $ i=0,1 $.    
      \end{claim}
      \begin{proof}[Proof of Claim]
-          $ \forall g\in G $,  $ F_*(\hat{V_g})=F_*(l_*^g(V))=(F\circ l^g)_*(V)=(l^{F(g)}\circ F)_*(V)=l^{F(g)}(W)=\hat{W}_{F(g)} $  
+          $ \forall g\in G $,  $ F_*(\hat{V}_g)=F_*(l_*^g(V))=(F\circ l^g)_*(V)=(l^{F(g)}\circ F)_*(V)=l^{F(g)}(W)=\hat{W}_{F(g)} $  
      \end{proof}
-     So  $ [\hat{W_0},\hat{W_1}] $ is  $ F $-compatible with  $ [\hat{V_0},\hat{V_1}] $. In particular,  $ [W_0,W_1]=F_*([V_0,V_1]) $.  
+     So  $ [\hat{W}_0,\hat{W}_1] $ is  $ F $-compatible with  $ [\hat{V}_0,\hat{V}_1] $. In particular,  $ [W_0,W_1]=F_*([V_0,V_1]) $.  
 \end{proof}
 
 

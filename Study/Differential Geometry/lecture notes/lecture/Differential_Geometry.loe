@@ -114,7 +114,7 @@
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.14\else \numberline {4.14}Definition\fi }{35}{definition.4.14}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.15\else \numberline {4.15}Example\fi }{35}{example.4.15}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.16\else \numberline {4.16}Definition\fi }{35}{definition.4.16}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.17\else \numberline {4.17}Lemma\fi }{36}{lemma.4.17}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.17\else \numberline {4.17}Lemma\fi }{35}{lemma.4.17}%
 \contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}4.18\else \numberline {4.18}Proposition\fi }{36}{proposition.4.18}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.19\else \numberline {4.19}Definition\fi }{36}{definition.4.19}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.20\else \numberline {4.20}Theorem\fi \thmtformatoptarg {Sard}}{36}{theorem.4.20}%
@@ -165,3 +165,16 @@
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.20\else \numberline {6.20}Remark\fi }{63}{remark.6.20}%
 \contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.21\else \numberline {6.21}Proposition\fi \thmtformatoptarg {Calculation of volume form in local chart}}{63}{proposition.6.21}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}6.22\else \numberline {6.22}Example\fi }{64}{example.6.22}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.23\else \numberline {6.23}Remark\fi }{64}{remark.6.23}%
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace {}6.24\else \numberline {6.24}Exercise\fi }{65}{exercise.6.24}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.25\else \numberline {6.25}Proposition\fi }{65}{proposition.6.25}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.26\else \numberline {6.26}Proposition\fi }{65}{proposition.6.26}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.27\else \numberline {6.27}Theorem\fi }{66}{theorem.6.27}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}6.28\else \numberline {6.28}Example\fi }{66}{example.6.28}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.29\else \numberline {6.29}Lemma\fi }{67}{lemma.6.29}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.30\else \numberline {6.30}Proposition\fi }{67}{proposition.6.30}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.31\else \numberline {6.31}Definition\fi }{68}{definition.6.31}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}6.32\else \numberline {6.32}Example\fi }{68}{example.6.32}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.33\else \numberline {6.33}Lemma\fi }{68}{lemma.6.33}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}6.34\else \numberline {6.34}Example\fi }{69}{example.6.34}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.35\else \numberline {6.35}Theorem\fi \thmtformatoptarg {Cartan's Magical Formula}}{69}{theorem.6.35}%

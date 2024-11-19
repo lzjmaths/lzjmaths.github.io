@@ -7,12 +7,12 @@
 
   \indexspace
 
-  \item Cauchy principle value of the integral, \hyperpage{53}
+  \item Cauchy principle value of the integral, \hyperpage{54}
   \item Cauchy's estimate, \hyperpage{29}
   \item Cauchy's integral formula, \hyperpage{27}
-  \item chain, \hyperpage{42}
-    \subitem identical, \hyperpage{42}
-    \subitem integral, \hyperpage{42}
+  \item chain, \hyperpage{43}
+    \subitem identical, \hyperpage{43}
+    \subitem integral, \hyperpage{43}
   \item change of parameter, \hyperpage{9}
   \item circular net, \hyperpage{16}
   \item conformal, \hyperpage{11}
@@ -32,7 +32,7 @@
   \indexspace
 
   \item harmonic, \hyperpage{4}
-  \item homologous to zero, \hyperpage{43}
+  \item homologous to zero, \hyperpage{44}
   \item homothetic transformation, \hyperpage{12}
 
   \indexspace
@@ -54,7 +54,7 @@
 
   \indexspace
 
-  \item meromorphic function, \hyperpage{35}
+  \item meromorphic function, \hyperpage{36}
   \item M{\"o}bius transformation, \hyperpage{5}, \hyperpage{11}
 
   \indexspace
@@ -75,7 +75,7 @@
   \item rectifiable, \hyperpage{21}
   \item reflection, \hyperpage{13}
   \item region, \hyperpage{8}
-  \item removable singularities, \hyperpage{30}
+  \item removable singularities, \hyperpage{31}
   \item residue, \hyperpage{46}
   \item reversible , \hyperpage{9}
   \item right, \hyperpage{15}
@@ -92,8 +92,8 @@
 
   \indexspace
 
-  \item Taylor's Theorem, \hyperpage{32}
-  \item totally bounded , \hyperpage{8}
+  \item Taylor's Theorem, \hyperpage{33}
+  \item totally bounded , \hyperpage{9}
   \item trigonometric function, \hyperpage{7}
 
   \indexspace
@@ -102,6 +102,6 @@
 
   \indexspace
 
-  \item zero of order $ N $, \hyperpage{34}
+  \item zero of order $ N $, \hyperpage{35}
 
 \end{theindex}

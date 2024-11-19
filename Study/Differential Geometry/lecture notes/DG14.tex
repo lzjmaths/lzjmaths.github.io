@@ -1,9 +1,11 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
 We give the notation that  $ I=\left(i_1,\cdots,i_k\right) $, write  $ f_{i_1,\cdots,i_k}\mathrm{d}x_{i_1}\wedge\cdots\wedge \mathrm{d}x_{i_k} $ as  $ f^I\mathrm{d}x^I $.
 \paragraph{Change of coordinate} If  $ (U,x^1,\cdots,x^n) $ and  $ (V,y^1,\cdots,y^n)$ two charts of  $ M $ and  $ p\in U\cap V $, then
 \begin{equation}
     \mathrm{d}y^i=\sum_{1 \leq i \leq n}\frac{\partial y_i}{\partial x^i}\mathrm{d}x^i.
 \end{equation}
-\subsection{Exterior differential}
+\subsection{Exterior Differential}
 For  $ k=0 $, define  $ d:\Omega^0(M)\rightarrow \Omega^1(M) $ as follows:
 
 $ \forall p\in M $,  $ X_p\in T_pM $,  $ \mathrm{d}f|_p(X_p)=X_p(f)\in \mathbb{R} $.
@@ -73,7 +75,7 @@ In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\m
         \Omega^3(\mathbb{R}^3)\arrow[r,leftrightarrow]&C^\infty(\mathbb{R}^3),&f\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z\arrow[r,leftrightarrow]&f
     \end{tikzcd}}
 \end{example}
-\subsection{Pull back of differential forms}
+\subsection{Pull Back of Differential Forms}
 For  $ F\in C^\infty(M,N) $,  $ \alpha\in \Omega^k(N) $, define the \name{pullback}  $ F^*(\alpha) \in \Omega^k(M)$ as follows:
 \begin{equation*}
     \forall p\in M, V_1\cdots,V_k\in T_pM, F^*(\alpha)|_p(V_1,\cdots,V_k)=\alpha|_{F(p)}(F_{p,*}(V_1),\cdots,F_{p,*}(V_k))\in \mathbb{R}

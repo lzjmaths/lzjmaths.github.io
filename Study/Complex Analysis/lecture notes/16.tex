@@ -1,3 +1,5 @@
+%! TEX root = lecture/Complex_Analysis
+
 The argument principle can be generalized to 
 \begin{theorem}[The Argument Principle]\label{sec5.5.3:The most generalized version of argument principle with an extra function}
     Under the hypothesis of the argument principle \ref{sec5.5.2:The generalized version of argument principle}, and if  $ h  $ is analytic in  $ \Omega  $, then we have 
@@ -44,26 +46,26 @@ The argument principle can be generalized to
         \end{align*}
     \end{example} 
     \noindent\ding{193}\,\,\,\,An integral of the form  $ \int_{-\infty}^\infty R(x)\dd x $ converges if and only if in the rational function  $ R $, the degree of denominator  $ \geq $  the degree of numerator+2 and has no pole lies in  $ \Rbb $.
-
-\begin{tikzpicture}[baseline=(current bounding box.north)]
-
-% \begin{center}
-    % A clipped circle is drawn
-    \begin{scope}
-        \clip (-2,0) rectangle (2,2);
-        \draw [
-            decoration={markings, mark=at position 0.15 with {\arrow{>}}},
-            postaction={decorate}
-            ](0,0) circle(1.5);
-        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
-        postaction={decorate}](-1.5,0) -- (1.5,0);
-    \end{scope}
-    %
-    %%Labels for the vertices are typeset.
-    \node[below left= 1mm of {(-1.5,0)}] {$A(-\rho,0)$};
-    \node[below right= 1mm of {(1.5,0)}] {$B(\rho,0)$};
-    \end{tikzpicture}
-% \end{center}
+    
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[baseline=(current bounding box.north)]
+        % A clipped circle is drawn
+        \begin{scope}
+            \clip (-2,0) rectangle (2,2);
+            \draw [
+                decoration={markings, mark=at position 0.15 with {\arrow{>}}},
+                postaction={decorate}
+                ](0,0) circle(1.5);
+            \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+            postaction={decorate}](-1.5,0) -- (1.5,0);
+        \end{scope}
+        %
+        %%Labels for the vertices are typeset.
+        \node[below left= 1mm of {(-1.5,0)}] {$A(-\rho,0)$};
+        \node[below right= 1mm of {(1.5,0)}] {$B(\rho,0)$};
+        \end{tikzpicture}
+\end{figure}
 
 Consider this semicircle  $ \gamma $. If  $ \rho  $ is large enough,  $ \gamma    $ encloses all poles of  $ R  $ in the upper half-plane. It is easy to see that 
 \[\lim_{\rho\to \infty}\int_{z=\rho e^{it},0 \leq t \leq \pi}R(z)\dd z=0\]
@@ -78,6 +80,8 @@ So we have  $ \dps\int_{-\infty}^{+\infty} R(x)\dd x=2\pi i\sum_{y>0}\Res_{x+iy}
 
 (b) We now consider the case that  $ R  $ has only a simple zero at  $ \infty $ and no pole on  $ \Rbb $.
 
+\begin{figure}[!h]
+    \centering
 \begin{tikzpicture}[baseline=(current bounding box.north)]
 
     % A clipped circle is drawn
@@ -97,7 +101,7 @@ So we have  $ \dps\int_{-\infty}^{+\infty} R(x)\dd x=2\pi i\sum_{y>0}\Res_{x+iy}
     \node[below right= 1mm of {(1.5,0)}] {$(x_2,0)$};
     \node[above = 1mm of {(0,1)}] {$(0,Y)$};
     \end{tikzpicture}
-    
+\end{figure}
 There exists  $ M>0  $ and  $ C>0  $ \st this rectangle all poles of  $ R  $ in the upper half-plane if  $ x_1>M,x_2>M $, and  $ Y>M $.  $ |zR(z)| \leq C $ if  $ |z| \geq M $.
 
 \begin{equation*}
@@ -121,6 +125,9 @@ So
 
 (c)  $ R  $ has only a single zero at  $ \infty  $ and a simple pole at  $ 0 $. Suppose that  $ R(z)e^{iz}=\frac{B}{z}+\varphi(z) $ where  $ \varphi  $ is analytic at  $ 0 $.
 
+
+\begin{figure}[!h]
+\centering
 \begin{tikzpicture}[baseline=(current bounding box.north)]
 
     % A clipped circle is drawn
@@ -141,7 +148,8 @@ So
     \end{scope}
     %
     %%Labels for the vertices are typeset.
-    \end{tikzpicture}
+\end{tikzpicture}
+\end{figure}
 
 Then it is easy to use this curve to prove that 
 \begin{equation*}
@@ -163,7 +171,7 @@ Then
 \begin{equation}
     \int_0^\infty x^\alpha R(x)\dd x\overset{x=t^2}{=}2\int_0^\infty t^{2\alpha+1}R(t^2)\dd t
 \end{equation}
- $ f(x)=z^{2\alpha } $ is analytic in  $ \Cbb\backslash\{iy:y \leq 0\} $ if we require  $ \arg f(x)\in(-\pi \alpha,3\pi\alpha) $. Applying residue theorem \ref{sec:5.5.1:The Residue Theorem} to  $ z^{2\alpha+1}R(z^2) $ we have 
+$ f(x)=z^{2\alpha } $ is analytic in  $ \Cbb\backslash\{iy:y \leq 0\} $ if we require  $ \arg f(x)\in(-\pi \alpha,3\pi\alpha) $. Applying residue theorem \ref{sec:5.5.1:The Residue Theorem} to  $ z^{2\alpha+1}R(z^2) $ we have 
 \begin{equation*}
     \int_{-\infty}^\infty z^{2\alpha+1}R(z^2)\dd z=2\pi i\sum_{y>0}\Res_{x+iy}z^{2\alpha+1}R(z^2)
 \end{equation*}

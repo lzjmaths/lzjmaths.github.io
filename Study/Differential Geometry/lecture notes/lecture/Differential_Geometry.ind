@@ -1,5 +1,6 @@
 \begin{theindex}
 
+  \item $ (a,b) $-tensor field, \hyperpage{66}
   \item $ F $-related, \hyperpage{23}
   \item $ L^n(V) $, \hyperpage{41}
   \item $ M\looparrowright N $, \hyperpage{35}
@@ -48,6 +49,8 @@
   \item commutes, \hyperpage{30}
   \item complete, \hyperpage{16}
   \item contravariant functor, \hyperpage{43}
+  \item contravariant tensor field, \hyperpage{66}
+  \item covariant tensor field, \hyperpage{66}
   \item critical point, \hyperpage{4}, \hyperpage{36}
   \item critical value, \hyperpage{4}, \hyperpage{36}
   \item curve, \hyperpage{11}
@@ -94,15 +97,20 @@
 
   \indexspace
 
+  \item Killing vector field, \hyperpage{68}
+
+  \indexspace
+
   \item left invariant, \hyperpage{24}
   \item Lie algebra, \hyperpage{24}
   \item Lie bracket, \hyperpage{21}
-  \item Lie derivative, \hyperpage{29}
+  \item Lie derivative, \hyperpage{29}, \hyperpage{67}
   \item Lie group, \hyperpage{6}
   \item locally finite, \hyperpage{8}
 
   \indexspace
 
+  \item mixed tensor field, \hyperpage{66}
   \item morphism, \hyperpage{27}
   \item multi $ \mathbb  {R} $-linear, \hyperpage{38}
 

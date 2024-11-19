@@ -22,6 +22,22 @@
 
 \usepackage{comment} % hide something
 
+
+% \usepackage{titlesec}
+% \usepackage{etoolbox}
+% \pretocmd{\section}{\refstepcounter{section}\label{sec:\thesection}}{}{}
+% \AtBeginEnvironment{theorem}{%
+% 	\refstepcounter{theorem}%
+% 	\edef\theoremname{\theoremname}% 获取定理的名字（如果有的话）
+% 	\@ifundefined{theoremname}
+%     {% 如果没有名字，只使用编号
+%      \label{thm:\thesection.\thetheorem}%
+%     }
+%     {% 如果有名字，标签包含编号和名字
+%      \label{thm:\thesection.\thetheorem.\theoremname}%
+%     }
+% }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\usepackage{fontspec}
@@ -35,7 +51,7 @@
 
 
 \usepackage{CJK}   % Chinese package
-
+\usepackage{pifont}
 
 
 
@@ -45,6 +61,17 @@
 %\pmb  mandatory math bold 
 
 \usepackage{fancyhdr} % date in footer
+
+
+
+% 设置章节标题格式
+% \titleformat{\section}[hang]{\normalfont\huge\bfseries}{\thesection}{2pc}{}
+
+% \pagestyle{fancy}
+% \fancyhead[L]{\rightmark}  % 左侧显示章节名
+% \fancyhead[C]{}           % 中间清空
+% \fancyhead[R]{}           % 右侧清空
+\pagestyle{plain}
 
 %\usepackage{soul}  %\ul underline break line automatically
 
@@ -137,7 +164,8 @@
 
 
 
-\pagestyle{plain}
+
+% \pagestyle{plain}
 
 % \captionsetup[figure]
 % {
@@ -478,7 +506,8 @@
 \author{{\sc Lin150117}
 	\\
 	{\small \sc Tsinghua University.}\\
-	{\small linzj23@mails.tsinghua.edu.cn}
+	{\small linzj23@mails.tsinghua.edu.cn}\\
+	{\small \href{lzjmaths.github.io}{lzjmaths.github.io}}
 }
 
 \DeclareMathOperator{\sign}{sign}
@@ -499,6 +528,9 @@
 \newcommand{\chart}[2]{({#1}_\alpha,{#2}^1,\cdots,{#2}^n)}
 \newcommand{\<}{\left<}
 \renewcommand{\>}{\right>}
+\renewcommand{\|}{\vert}
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
 %\makeindex[columns=2,title=Index, options=-s example_style.ist]
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.16}
@@ -554,6 +586,8 @@
 
 \input{../DG17.tex}
 
+
+\input{../DG18.tex}
 % \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
 % 	\cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
 % 	H_{k}(M) \arrow[curarrow=Y]{urr}{} & H_{k}(U) \oplus H_{k}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H_{k}(U \cap V) \arrow[l] \\

@@ -1,6 +1,8 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
 \section{Vector Field}
 
-\subsection{Canonical form of a field}
+\subsection{Canonical form of a Field}
 Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point} if  $ V_p\neq 0 $, and is called a \name{singular point} if  $ V_p=0 $.
 \begin{theorem}[Canonical Form Theorem]\label{Canonical Form Theorem}
     Let  $ p $ be a regular point of  $ V $. Then  $ \exists $ local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ \st  $ V|_U=\partial x^1 $      
@@ -24,7 +26,7 @@ Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point
     Regular point in a vector field is simple, as we can view it in the standard chart locally. However, behavior of  $ V $ art a singular point can be complicated. For example,
     for  $ f(x,y)=x^2-y^2 $,  $ \nabla f=2x\partial x-2y\partial y$,  $ g:\mathbb{C}\rightarrow C,z\mapsto z^n $, they behave differently at  $ \vec{0} $.     
 \end{remark}
-\subsection{Lie derivative of vector field}
+\subsection{Lie Derivative of Vector Field}
  $ V,W\in \mathfrak{T}M $,  \name{$ \mathcal{L}_VW $} is the directional derivative of  $ W $ in the direction of  $ V $.
  \begin{definition}
     The \name{Lie derivative}  $ \mathcal{L}_VW\in \mathfrak{T}M $ is defined as follows: $ \forall p\in M $, let  $ \{\theta_t:U\rightarrow M\}_{t\in (-\epsilon,\epsilon)} $ be the local flow for  $ V $. Then  \[\dps (\mathcal{L}_VW)_p=\lim\limits_{t\to 0}\frac{(\theta_{-t})_*W_{\theta_t(p)}-W_p}{t} \]    
@@ -71,7 +73,7 @@ Recall that  $ V\in \mathfrak{T}M $,  $ p\in M $ is called a \name{regular point
         \item Let  $ F:M\rightarrow N $ be a diffeomorphism. Then  $ F_*(\mathcal{L}_VW)=\mathcal{L}_{F_*(V)}F_*(W) $.           
     \end{itemize}
 \end{corollary}
- \subsection{Commuting vector fields}
+ \subsection{Commuting Vector Fields}
 \begin{definition}
     We say  $ V,W\in\mathfrak{T}M $ \name{commutes} if  $ [V,W]=0 $.  
 \end{definition}

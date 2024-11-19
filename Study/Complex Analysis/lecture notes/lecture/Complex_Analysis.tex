@@ -1,4 +1,4 @@
- % !TeX spellcheck = en_US
+% !TeX spellcheck = en_US
 % !TEX program = pdflatex
 \documentclass[12pt,b5paper,notitlepage]{article}
 \usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
@@ -56,7 +56,9 @@
 % box around equations   \tcboxmath
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\usepackage{titlesec}
+\usepackage{etoolbox}
+\pretocmd{\section}{\refstepcounter{section}\label{sec:\thesection}}{}{}
 
 
 
@@ -548,7 +550,8 @@
 \author{{\sc Lin150117}
 	\\
 	{\small \sc Tsinghua University.}\\
-	{\small linzj23@mails.tsinghua.edu.cn}
+	{\small linzj23@mails.tsinghua.edu.cn}\\
+  {\small \href{lzjmaths.github.io}{lzjmaths.github.io}}
 }
 
 \DeclareMathOperator{\sign}{sign}
@@ -601,6 +604,8 @@
 \input{../15.tex}
 
 \input{../16.tex}
+
+
 \printindex
 \newpage
 \listoftheorems[ignoreall, show={theorem,proposition}]

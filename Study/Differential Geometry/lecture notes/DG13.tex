@@ -1,3 +1,5 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
 \begin{proof}
     \,
     \begin{enumerate}[label=(\arabic*)]
@@ -56,7 +58,7 @@ Given vector space  $ V $, let
 \begin{theorem}
     $ (\Alt^*(V),\wedge) $  is a graded connected anticommutative $ \mathbb{R} $-algebra, called the \name{exterior algebra} of  $ V $ or \name{exterior algebra} of  $ V $
 \end{theorem}
-\subsection{Operation on vector bundles}
+\subsection{Operation on Vector Bundles}
 Given  $ \mathbb{R}^n\hookrightarrow E\xrightarrow{\pi}M $, meaning a vector bundle $ E\xrightarrow{\pi}M $  of dimension  $ n $, local trivialization  $ \left\{U_\alpha,\varphi_\alpha:\pi^{-1}(U_\alpha)\xrightarrow{\cong}U_\alpha\times \mathbb{R}^n\right\}_{\alpha\in\mathcal{A}} $. By shrinking  $ U_\alpha $, we may assume we have an smooth atlas  $ 
 \left\{\varphi_\alpha:U_\alpha\xrightarrow{\cong}\mathbb{R}^m\right\}_{\alpha\in \mathcal{A}} $.
 
@@ -72,15 +74,15 @@ For  $ \alpha\in\mathcal{A} $, let  $ E_\alpha^*={\pi'}^{-1}(U_\alpha) $, we hav
 
 \begin{center}
     \begin{tikzcd}
-        \tilde{\varphi_\alpha}:E_\alpha^*\arrow[r,"bijection"]&\mathbb{R}^m\times(\mathbb{R}^n)^*\arrow[r,"\cong"]&\mathbb{R}^{m+n}\\
+        \tilde{\varphi}_\alpha:E_\alpha^*\arrow[r,"bijection"]&\mathbb{R}^m\times(\mathbb{R}^n)^*\arrow[r,"\cong"]&\mathbb{R}^{m+n}\\
         (x,l)\arrow[r,mapsto]&(\psi_\alpha(x),(\varphi_{\alpha,x})^{-1}(l))&
     \end{tikzcd}
     
 \end{center}
 We can check that
 \begin{enumerate}[label=(\arabic*)]
-    \item  $ \{\tilde{\varphi_{\alpha}}^{-1}|\alpha\in\mathcal{A},V\subset \mathbb{R}^{m+n}\text{ open}\} $ is a basis, we use it to generate a topology on  $ E^* $.
-    \item Use  $ \tilde{\varphi_\alpha}:E_\alpha^*\xrightarrow{\cong}\mathbb{R}^{m+n},\alpha\in\mathcal{A} $ as an atlas to give  $ E^* $ a smooth structure.
+    \item  $ \{\tilde{\varphi}_{\alpha}^{-1}|\alpha\in\mathcal{A},V\subset \mathbb{R}^{m+n}\text{ open}\} $ is a basis, we use it to generate a topology on  $ E^* $.
+    \item Use  $ \tilde{\varphi}_\alpha:E_\alpha^*\xrightarrow{\cong}\mathbb{R}^{m+n},\alpha\in\mathcal{A} $ as an atlas to give  $ E^* $ a smooth structure.
     \item  $ E^*\xrightarrow{\pi'}M $ is a smooth vector bundle, called the  \name{dual vector bundle} of  $ E\xrightarrow{\pi}M $, where
     \[(E^*)_x=E_x^*\]
 \end{enumerate}

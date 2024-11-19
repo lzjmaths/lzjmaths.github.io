@@ -1,0 +1,229 @@
+% !TEX root= lecture/Differential_Geometry.tex
+
+\begin{proof}
+    For  $ x\in S^{n-1} $, pick an orthogonormal basis  $ (e_2,\cdots,e_n) $ for $ T_xS^{n-1}\cong x^\bot\subset \Rbb^n  $. Then  $ (x,e_2,\cdots,e_n ) $ is an oriented orthonormal basis for  $ \Rbb^n  $
+    
+    Then  $ \omega_{0,x}(e_2,\cdots,e_n)=\det(x,e_2,\cdots,e_n)=1 $. So  $ \left(\omega_0|_{S^{n-1}}\right)_x =e_2^*\wedge\cdots\wedge e_n^*=\left(\Vol_{S^{n-1}}\right)_x$. So  $ \omega_0|_{S^{n-1}}=\Vol_{S^{n-1}} $   
+\end{proof}
+\begin{remark}
+    In this example, we see that it is usual to view the differential  $ n $-form as the anti-symmetric map  $ T^nM\rightarrow \Rbb $ and it is uniquely determined by the image of the orthogonormal basis of tangent space.
+\end{remark}
+
+ $ \omega_0  $ is  not closed since  $ \dd \omega_0=n\dd x^1\wedge\cdots\wedge \dd x^n $.
+ 
+ Actually, there is no closed  $ \omega\in\Omega^{n-1}(\Rbb^n ) $ \st  $ \omega|_{S^{n-1}}=\Vol_{S^{n-1}} $, since  $ \Vol(S^{n-1})>0 $ but  $ \dps\int_{S^{n-1}}\omega|_{S^{n-1}}=\int_{D^n}\dd \omega=0 $.
+ 
+However, there exists  $ \omega_1\in\Omega^{n-1}(\Rbb^n\backslash\{0\}) $ \st    $ \dd \omega_1=0 $.  $ \omega_1|_{S^{n-1}}=\Vol_{S^{n-1}} $.
+
+Indeed, for  $ \gamma :\Rbb^n\backslash\{0\}\rightarrow S^{n-1},\,x\mapsto \frac{x}{|x|} $, let  $ \omega_1=r^*(\Vol_{S^{n-1}}) $. Then  $ \dd\omega_1=0 $,  $ \omega_1|_{S^{n-1}}=\Vol_{S^{n-1}} $.
+
+\begin{exercise}
+    \begin{equation*}
+        \omega_1=\sum_{i=1}^n(-1)^{i-1}\frac{1}{|x|^n}x_i\dd x^1\wedge\cdots\wedge\widehat{\dd x_i}\wedge\cdots\wedge\dd x^n
+    \end{equation*}
+\end{exercise}
+\subsection{Orientability of  $ \Rbb\Pbb^{n-1} $}
+
+Define the   $ A:\Rbb^n\rightarrow \Rbb^n ,x\mapsto -x$,  $ A|_{S^{n-1}}:S^{n-1}\rightarrow S^{n-1} $.
+Then  
+\begin{equation}
+    \begin{aligned}
+        \left(A^*(\omega_0)\right)_x(V_2,\cdots,V_n)&=\omega_{0,-x}(-V_2,\cdots,-V_n)\\
+        &=\det(-x,-V_2,\cdots,V_n)\\
+        &=(-1)^n\det(x,V_2,\cdots,V_n)\\
+        &=(-1)^n\omega_{0,x}(V_2,\cdots,V_n)
+    \end{aligned} 
+\end{equation}
+
+Therefore,  $ A^*\omega_0=(-1)^{n} \omega_0$ $ \Rightarrow  $  $ \left(A|_{S^{n-1}}\right)^*(\Vol_{S^{n-1}})=(-1)^n\Vol_{S^{n-1}} $. 
+
+\noindent\ding{192}\,\,\, If  $ n  $ is even,   $ \left(A|_{S^{n-1}}\right)^*(\Vol_{S^{n-1}})=\Vol_{S^{n-1}} $.
+
+Define  $ \Rbb\Pbb^{n-1}=S^{n-1}/_{x\sim Ax} $. Then  $ \Vol_{S^{n-1}} $ induces a nowhere vanishing form  $ \omega\in \Omega^{n-1}(\Rbb\Pbb^{n-1}) $ if  $ n $ is even. So  $ \Rbb\Pbb^{n-1} $ is orientable,  $ \omega  $ is the volume form $ \Vol_{\Rbb\Pbb^{n-1}} $   
+
+\begin{proposition}
+    We have the identification: \[\Rbb\Pbb^1=S^1,\Rbb\Pbb^3\cong \mathrm{SO}(3)\cong\{(u,v)\in\Rbb^3\times\Rbb^3|u\bot v,|u|=|v|=1\} \] 
+\end{proposition}
+
+\noindent\ding{193}\,\,\,If  $ n  $ is odd,  $ (A|_{S^{n-1}})^*(\Vol|_{S^{n-1}})=-\Vol|_{S^{n-1}} $. We claim that 
+\begin{proposition}
+     $ \Rbb\Pbb^{n-1} $ is unorientable for  $ n $ odd.  
+\end{proposition} 
+\begin{proof}
+    Suppose  $ \Rbb\Pbb^{n-1} $ is orientable. Then  $ \exists  $\, nowhere vanishing orientation form  $ \omega'\in\Omega^{n-1}(\Rbb\Pbb^{n-1}) $. Define 
+    \begin{align*}
+        q:S^{n-1}&\rightarrow\Rbb\Pbb^{n-1}\\
+        x&\mapsto [x]
+    \end{align*}  
+    Then  $ q^*(\omega')=f\Vol_{S^{n-1}}\in\Omega^{n-1}(S^{n-1}) $ for  $ f \in C^\infty(S^{n-1}) $ nowhere vanishing.
+
+    By  $ q\circ A=q $,  $ A^*(q^*(\omega'))=q^*(\omega') $ $ \Rightarrow $ $ A^*(f\Vol_{S^{n-1}})=f\Vol_{S^{n-1}} $. Then 
+    \begin{equation}
+        (f\circ A)\cdot A^*(\Vol_{S^{n-1}})=f\Vol_{S^{n-1}}\Rightarrow f\circ A=-f
+    \end{equation}  
+    So  $ f(-x)=-f(x) $, $ \forall x\in S^{n-1} $. $ \Rightarrow  $  $ f  $ can't be nowhere vanshing, which causes contradiction!  
+\end{proof}
+\begin{theorem}
+     $ \Rbb\Pbb^{n-1} $ is orientable iff  $ n  $ is odd. 
+\end{theorem}
+
+\subsection{Tensor Field and Lie Derivative}
+For  $ M  $ smooth manifold,  $ a,n\in \Nbb $.
+
+A  \name{$ (a,b) $-tensor field} is a smooth section  $ \tau  $ of  $ \dps\left(\dps\bigotimes_a TM\right)\bigotimes \left(\dps\bigotimes_b T^*M\right)$.
+
+A  $ (a,b) $-tensor field is called \name{covariant tensor field} if  $ a=0 $.
+
+A  $ (a,b) $-tensor field is called \name{contravariant tensor field} if  $ b=0 $.
+
+A  $ (a,b) $-tensor field is called \name{mixed tensor field} if  $ a\neq 0,b\neq 0$.
+
+Under local chart  $ (U,x^1,\cdots,x^n) $,  a $ (a,b) $-tensor field  $ \tau  $ can be written as 
+\begin{equation}\label{eq:tensor field in local chart}
+    \tau|_U=\dps\sum_{\substack{1 \leq j_1<\cdots<j_b \leq n\\1 \leq i_1<\cdots<i_a \leq n}} \tau_{j_1,\cdots,j_b}^{i_1,\cdots,i_a}\,\partial x^{i_1}\otimes\cdots\otimes \partial x^{i_a}\otimes \dd x^{j_1}\otimes\cdots\otimes\dd x^{j_b}
+\end{equation} 
+
+\begin{example}
+    \,\begin{enumerate}[label=(\arabic*)]
+        \item $ f \in C^{\infty}(M)  $ is a  $ (0,0) $-tensor field. 
+        \item Vector field is a  $ (1,0 ) $-tensor field.
+        \item  $ k  $-form is an anti-symmetric  $ (0,k) $-tensor field.
+        \item A Riemannian metric is a symmetric  $ (0,2) $-tensor field.  
+    \end{enumerate}
+\end{example}
+Given vector field  $ X  $,  $ (a,b) $-tensor field  $ \tau $, one can define the \name{Lie derivative} $ \mathcal{L}_X\tau $ be a  $ (a,b) $-tensor field.  
+
+We focus on the case  $ a=0 $, \ie covariant vector field. (Indeed, we have defined the Lie derivative for the contravariant field when  $ b=0 $)
+
+For  $ p\in M $,  $ \{\varphi_t:U\rightarrow M\}_{r\in(-\epsilon,\epsilon)} $ local flow for  $ X  $. Define  $ \mathcal{L}_X\tau $ as follows:
+
+For  $ X\in\Gamma(TM) $,  $ \varphi_{t,*}:T_pM\rightarrow T_{\varphi_t(q)}M $ induces  $ \varphi_t^*:T_{\varphi_t(p)}^*M\rightarrow T_p^*M $ and 
+\[\varphi_t^*:\bigotimes_{b}T^*_{\varphi_t(p)}M\rightarrow \bigotimes_{b}T^*_{p}M\]
+Since  $ \tau_{\varphi_t(p)}\in\dps\bigotimes_{b}T^*_{\varphi_t(p)}M $,  $ \tau_p\in\dps\bigotimes_{b}T^*_{p}M  $, define 
+\begin{equation}
+    \left(\mathcal{L}_X\tau\right)_p=\lim_{t\to 0}\frac{\varphi_t^*(\tau_{\varphi_t(p)})-\tau_p}{t}
+\end{equation}   
+
+Equivalently,  $ \dps\mathcal{L}_X\tau|_U=\lim_{t\to 0}\frac{\varphi_t^*(\tau)|_U-\tau|_U}{t} $.
+
+\begin{lemma}
+     $ X,\tau  $ smooth  $ \Rightarrow $  $ \mathcal{L}_X\tau  $ smooth. 
+\end{lemma}
+\begin{proof}
+    See Lee's Book
+\end{proof}
+ $ \mathcal{L}_X\tau $ describes the change of  $ \tau  $ under the (local) flow generated by  $ X $.
+ 
+ For simplicity, let's assume  $ X  $ is complete. Let  $ \varphi_t:M\rightarrow M $ be the global flow for  $ X $. We say a covariant tensor field  $ \tau\in \Gamma\left(\dps\bigotimes_b T^*M\right) $ is invariant under  $ \varphi_t $ or invariant under  $ X  $ if  $ \varphi_t^*(\tau)=\tau $.
+ 
+\begin{proposition}
+    \,
+    \begin{itemize}
+        \item $ \tau  $ is invariant under  $ X  $ if and only if  $ \mathcal{L}_X\tau=0 $ 
+        \item  $ \dps\frac{\dd}{\dd t}\varphi_t^*(\tau)|_{t=0}=\mathcal{L}_X\tau $ 
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+    The second part and the necessary of the first part is direct from the definition.
+
+    We only prove the sufficiency for the first part. Assume  $ \mathcal{L}_X\tau=0 $. 
+
+    Consider the map  $ \Rbb\xrightarrow{ f}\bigotimes\limits_{b}T_p^*M ,\,t\mapsto \varphi_t^*(\tau_{\varphi_t(p)})$.
+    
+    Then  $ \forall t_0\in \Rbb $,  $ f(t)=\varphi_{t_0}^*(\varphi_{t-t_0}^*(\tau_{\varphi_{t}(p)})) $.
+    So 
+    \begin{equation}
+        \begin{aligned}
+            \frac{\dd f(t)}{\dd t}|_{t=t_0}&=\lim_{t\to t_0}\frac{\varphi_{t_0}^*(\varphi_{t-t_0}^*(\tau_{\varphi_t(p)}))-\varphi_{t_0}^*(\tau_{\varphi_{t_0}(p)})}{t-t_0}\\
+            &\xlongequal{s=t-t_0}\varphi_{t_0}^*\left(\lim_{s\to 0}\frac{\varphi^*_{s}(\tau_{\varphi_s(\varphi_{t_0}(p))})-\tau_{\varphi_{t_0}(p)}}{s}\right)\\
+            &=\varphi_{t_0}^*\left(\mathcal{L}_X\tau\right)_{\varphi_{t_0}(p)}\\
+            &=0
+        \end{aligned}
+    \end{equation}
+\end{proof}
+\begin{definition}
+    Given Riemannian manifold  $ (M,g)$, a vector field  $ X  $ is called a \name{Killing vector field} if  $ \mathcal{L}_Xg=0 $. Or equivalently, the flow generated by  $ X  $ is an isometry.
+\end{definition}
+\begin{example}
+    \begin{align*}
+        \left\{\text{Killing vector field on }(S^2,g_{S^2})\right\}&\cong \mathfrak{so}(3)\\
+        &=\Span\left(x\partial y-y\partial x,y\partial z-z\partial y,z\partial x-x\partial z\right)
+    \end{align*}
+\end{example}
+\begin{lemma}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ \mathcal{L}_X(\omega\wedge \eta)=\mathcal{L}_X\omega\wedge\eta+\omega\wedge\mathcal{L}_X\eta $ 
+        \item  $ \mathcal{L}_X(\dd \omega)=\dd(\mathcal{L}_X\omega) $ 
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1)\begin{equation}
+            \begin{aligned}
+                \left(\mathcal{L}_X(\omega\wedge\eta)\right)_p&=\lim_{t\to 0}\frac{\varphi_t^*(\omega\wedge\eta)_{\varphi_t(p)}-(\omega\wedge\eta)_p}{t}\\
+                &=\lim_{t\to 0}\frac{\varphi_t^*(\omega_{\varphi_t(p)})\wedge\varphi_t^*(\eta_{\varphi_t(p)})-\varphi_t^*(\omega_{\varphi_t(p)})\wedge\eta_p+\varphi_t^*(\omega_{\varphi_t(p)})\wedge\eta_p-\omega_p\wedge\eta_p}{t}\\
+                &=\lim_{t\to 0}\frac{\varphi_t^*(\omega_{\varphi_t(p)})-\omega_p}{t}\wedge\eta_p+\lim_{t\to 0}\varphi_t^*(\omega_{\varphi_t(p)})\wedge\lim_{t\to 0}\frac{\varphi_t^*(\eta_{\varphi_t(p)})-\eta_p}{t}\\
+                &=\left(\mathcal{L}_X\omega\right)_p\wedge\eta_p+\omega_p\wedge\left(\mathcal{L}_X\eta\right)_p
+            \end{aligned}
+        \end{equation}
+    (2)
+    \begin{align*}
+        \mathcal{L}_X\dd\omega&=\lim_{t\to 0}\frac{\varphi_t^*(\dd\omega)-\dd(\omega)}{t}\\
+        &=\lim_{t\to 0}\frac{\dd (\varphi_t^*(\omega)-\omega)}{t}\\
+        &=\dd\left(\lim_{t\to 0}\frac{\varphi_t^*(\omega)-\omega}{t}\right)\\
+        &=\dd\mathcal{L}_X(\omega)
+    \end{align*}
+\end{proof}
+Given  $ X\in \Gamma(TM) $, define contraction  $ X\mathrel{\lrcorner} -:\Omega^k(M)\rightarrow \Omega^{k-1}(M)  $ by 
+    \[(X\mathrel{\lrcorner}\alpha)(Y_2,\cdots,Y_k):=\alpha(X,Y_2,\cdots,Y_k)\,\text{ for  $ Y_2,\cdots,Y_k\in \Gamma(TX) $ }\] 
+
+\begin{example}
+     $ X=f\partial x^i $,  $ \alpha=g\dd x^{i_1}\wedge\cdots\wedge x^{i_n} $. Then 
+     \begin{equation}
+        x\mathrel{\lrcorner}\alpha=\begin{cases}
+            0,&i\not\in\{i_1,\cdots,i_n\}\\
+            (-1)^{k-1}fg\dd x^{i_1}\wedge\cdots\wedge\widehat{\dd x^{i_k}}\wedge\cdots\wedge \dd x^{i_n},&i=i_k
+         \end{cases}\label{eq:Easy calculation of the Cartan's binary operator}
+     \end{equation}
+\end{example}
+\begin{theorem}[Cartan's Magical Formula]\label{thm:Cartan's Magical Formula}
+     $ \mathcal{L}_X(\omega)=X\mathrel{\lrcorner}\dd \omega+\dd(X\mathrel{\lrcorner}\omega) $ 
+\end{theorem}
+\begin{proof}
+    Need to show  $ \left(\mathcal{L}_X\omega\right)_p=\left(X\mathrel{\lrcorner}(\dd\omega)\right)_p+\left(\dd(X\mathrel{\lrcorner}\omega)\right)_p $.
+
+    For  $ X_p\neq 0 $. By canonical form theorem \ref{Canonical Form Theorem}, there exists local chart around  $ p  $ \st  $ X|_U=\partial x^1 $.
+
+    Let  $ \omega=\dps\sum_{1 \leq i_1<\cdots<i_n \leq n}f^{i_1,\cdots,i_k} \dd x^{i_1}\wedge\cdots\wedge\dd x^{i_k} $. By linearity we may assume  $ \omega=\dps f\dd x^{i_1}\wedge\cdots\wedge x^{i_k} $, $ i_1<\cdots<i_k $.
+
+    For  $ i_1=1 $, 
+    \[\varphi_t(x^1,\cdots,x^n)=(x^1+t,\cdots,x^n)\]
+    \begin{align*}
+        X\mathrel{\lrcorner}\dd\omega&=\frac{\partial}{\partial x^1}\mathrel{\lrcorner}\left(\sum_{1 \leq j \leq n}\frac{\partial f}{\partial x^j}\dd x^j\wedge \dd x^{i_1}\wedge\cdots\wedge \dd x^{i_k}\right)\\
+        &\overset{\eqref{eq:Easy calculation of the Cartan's binary operator}}{=}-\sum_{j\not\in\{i_1,\cdots,i_k\}}\frac{\partial f}{\partial x^j}\dd x^j\wedge \dd x^{i_2}\wedge\cdots\wedge \dd x^{i_k}
+    \end{align*}
+    \[(X\mathrel{\lrcorner}\omega)\overset{\eqref{eq:Easy calculation of the Cartan's binary operator}}{=}f\dd x^{i_2}\wedge\cdots\wedge\dd x^{i_k}\]
+    Then 
+    \begin{align*}
+        \dd(X\mathrel{\lrcorner}\omega)=\sum_{j\not\in\{i_2,\cdots,i_k\}}\frac{\partial f}{\partial x^j}\dd x^j\wedge \dd x^{i_2}\wedge\cdots\wedge \dd x^{i_k}
+    \end{align*}
+    So 
+    \begin{equation*}
+        \left(\dd(X\mathrel{\lrcorner}\omega)+X\mathrel{\lrcorner}\omega\right)_p=\frac{\partial f }{\partial x^1}\dd x^1\wedge\dd x^{i_2}\wedge\cdots\wedge x^{i_k}=\left(\mathcal{L}_X\omega \right)_p
+    \end{equation*}
+    
+    For the case $ i_1\neq 1 $,  
+    \begin{equation*}
+        \begin{aligned}
+            X\mathrel{\lrcorner}\dd\omega&=\frac{\partial}{\partial x^1}\mathrel{\lrcorner}\left(\sum_{1 \leq j \leq n}\frac{\partial f}{\partial x^j}\dd x^j\wedge \dd x^{i_1}\wedge\cdots\wedge \dd x^{i_k}\right)\\
+            &\overset{\eqref{eq:Easy calculation of the Cartan's binary operator}}{=}\frac{\partial f}{\partial x^1}\dd x^{i_1}\wedge\cdots\wedge \dd x^{i_k}
+        \end{aligned}
+    \end{equation*}
+    \[(X\mathrel{\lrcorner}\omega)\overset{\eqref{eq:Easy calculation of the Cartan's binary operator}}{=}0\]
+    Thus, 
+    \begin{equation*}
+        \left(\dd(X\mathrel{\lrcorner}\omega)+X\mathrel{\lrcorner}\omega\right)_p=\frac{\partial f}{\partial x^1}\dd x^{i_1}\wedge\cdots\wedge \dd x^{i_k}=\left(\mathcal{L}_X\omega \right)_p
+    \end{equation*}
+    
+    Now we consider the case that  $ X_p=0 $. For  $ p\in \Supp(X)  $, it is true using continuity. If  $ p\not\in\Supp(X) $, then  $ \exists  $ neighborhood  $ U  $ of  $ p  $  \st  $ X|_U\equiv 0 $. So the two sides of the equation equals  $ 0 $.  
+\end{proof}

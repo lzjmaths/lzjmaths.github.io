@@ -1,4 +1,6 @@
-`````````\subsubsection{Canonical form of commuting vector field}
+% !TEX root = lecture/Differential_Geometry.tex
+
+\subsubsection{Canonical Form of Commuting Vector Field}
 \begin{theorem}
     Given  $ V_1,\cdots,V_k\in\mathfrak{T}M $, \st  
     \begin{enumerate}[label=\arabic*)]
@@ -28,7 +30,7 @@ We prove it using the inverse function theorem.
     
     Then  $ (U,(\psi|_U)^{-1}) $ is the local chart we need. 
 \end{proof} 
-\subsection{The constant rank theorem}
+\subsection{The Constant Rank Theorem}
 $ F\in C^\infty (M,N) $,  $ p\in M $. The \name{rank} of  $ F $ at  $ p  $  is 
      \begin{align*}
         \rank_pF&:=\rank(F_{p,*}:T_pM\rightarrow T_{F(p)}N)\\
@@ -57,14 +59,14 @@ We say  $ F $ has \subname{constant rank}{rank}  $ k $ near  $ p $ if $ \exists 
     \end{equation}  
     is invertible.
 
-    By inverse function theorem,  $ \exists  $ Nbh  $ U_0\subset \mathbb{R}^m $,  $ \tilde{U_0}\subset \mathbb{R}^m $ of  $ 0 $ \st  $ \varphi:U_0\rightarrow \tilde{U_0} $ is a diffeomorphism.
+    By inverse function theorem,  $ \exists  $ Nbh  $ U_0\subset \mathbb{R}^m $,  $ \tilde{U}_0\subset \mathbb{R}^m $ of  $ 0 $ \st  $ \varphi:U_0\rightarrow \tilde{U}_0 $ is a diffeomorphism.
     
     \begin{align*}
-        \tilde{U_0}&\xrightleftharpoons[\varphi]{\varphi^{-1}}U_0\xrightarrow{F}\mathbb{R}^n\\
+        \tilde{U}_0&\xrightleftharpoons[\varphi]{\varphi^{-1}}U_0\xrightarrow{F}\mathbb{R}^n\\
         (Q(x,y),y)&\mapsfrom (x,y)\mapsto (Q(x,y),R(x,y))
     \end{align*}
     
-    So  $ F\circ \varphi^{-1}:\tilde{U_i} \rightarrow \mathbb{R}^n,(x,y)\mapsto (x,A(x,y))$.
+    So  $ F\circ \varphi^{-1}:\tilde{U}_i \rightarrow \mathbb{R}^n,(x,y)\mapsto (x,A(x,y))$.
     And 
     \begin{equation}
         (F\circ\varphi^{-1})_{p,*}=\begin{bmatrix}
