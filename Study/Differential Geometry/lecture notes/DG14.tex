@@ -21,6 +21,7 @@ In local chart,  $ \mathrm{d}f=\dps\sum_{i=1}^n\frac{\partial f}{\partial x_i}\m
 
 \begin{proof}
     It suffices to prove that \eqref{eq:local coordinate of exterior differential} is compatible for two charts  $ (U,x^1,\cdots,x^n),(V,y^1,\cdots,y^n) $, \textit{i.e.} the diagram is commutative.
+    
     {
     \footnotesize
     \begin{tikzcd}
@@ -80,7 +81,7 @@ For  $ F\in C^\infty(M,N) $,  $ \alpha\in \Omega^k(N) $, define the \name{pullba
 \begin{equation*}
     \forall p\in M, V_1\cdots,V_k\in T_pM, F^*(\alpha)|_p(V_1,\cdots,V_k)=\alpha|_{F(p)}(F_{p,*}(V_1),\cdots,F_{p,*}(V_k))\in \mathbb{R}
 \end{equation*}
-Actually,  $ F^*(\alpha)=\Alt^k(F_{p,*}):\Alt^k(T_{F(p)N})\rightarrow \Alt^k(T_pM) $.
+Actually,  $ F^*|_p=\Alt^k(F_{p,*}):\Alt^k(T_{F(p)N})\rightarrow \Alt^k(T_pM) $.
 
 \begin{proposition}\label{proposition of pull back}
     For  $ F:M\rightarrow N $,  $ G:N\rightarrow L $.
