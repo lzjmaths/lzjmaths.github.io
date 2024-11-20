@@ -47,20 +47,22 @@
 \indexentry{winding number|hyperpage}{25}
 \indexentry{Cauchy's integral formula|hyperpage}{27}
 \indexentry{Cauchy's estimate|hyperpage}{29}
-\indexentry{removable singularities|hyperpage}{31}
-\indexentry{Taylor's Theorem|hyperpage}{33}
-\indexentry{zero of order $ N $|hyperpage}{35}
+\indexentry{removable singularities|hyperpage}{30}
+\indexentry{Taylor's Theorem|hyperpage}{32}
+\indexentry{zero of order $ N $|hyperpage}{34}
 \indexentry{isolated singularity|hyperpage}{35}
 \indexentry{pole|hyperpage}{35}
 \indexentry{order of the pole|hyperpage}{35}
-\indexentry{meromorphic function|hyperpage}{36}
+\indexentry{meromorphic function|hyperpage}{35}
 \indexentry{algebraic order|hyperpage}{37}
 \indexentry{essential isolated singularity|hyperpage}{37}
-\indexentry{chain|hyperpage}{43}
-\indexentry{chain!integral|hyperpage}{43}
+\indexentry{chain|hyperpage}{42}
+\indexentry{chain!integral|hyperpage}{42}
 \indexentry{chain!identical|hyperpage}{43}
 \indexentry{cycle|hyperpage}{43}
 \indexentry{simply connected|hyperpage}{43}
-\indexentry{homologous to zero|hyperpage}{44}
+\indexentry{homologous to zero|hyperpage}{43}
 \indexentry{residue|hyperpage}{46}
-\indexentry{Cauchy principle value of the integral|hyperpage}{54}
+\indexentry{Cauchy principle value of the integral|hyperpage}{53}
+\indexentry{harmonic|hyperpage}{55}
+\indexentry{conjugate differential of $ \mathrm  {d}u $|hyperpage}{56}

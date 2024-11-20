@@ -1,52 +1,55 @@
-\contentsline {section}{\numberline {4}Complex Functions}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Analytic functions and rational functions}{4}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Harmonic function}{4}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Polynomials and rational function}{4}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Power Series}{7}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Power series}{7}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Exponential, Trigonometric and logorithmic functions}{7}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Exponential and Trigonometric function}{7}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Logorithmic Functions}{7}{subsubsection.4.3.2}%
-\contentsline {section}{\numberline {6}Conformal Mappings}{8}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Basic topology}{8}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Connectedness}{8}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Compactness}{9}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Continuous Functions}{9}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Conformality, geometric consequences of the existence of a derivative}{9}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Arcs and closed curves}{9}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Analytic Functions in Regions}{10}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Conformal Mappings}{10}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}Length and Area}{11}{subsubsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.3}M{\"o}bius Transformation}{11}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Cross ratio}{12}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Symmetry}{13}{subsubsection.6.3.2}%
+\contentsline {section}{\numberline {2}Complex Functions}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Analytic functions and rational functions}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Harmonic function}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Polynomials and rational function}{4}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Power Series}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Power series}{7}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Exponential, Trigonometric and logorithmic functions}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Exponential and Trigonometric function}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Logorithmic Functions}{7}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Conformal Mappings}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Basic topology}{8}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Connectedness}{8}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Compactness}{9}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Continuous Functions}{9}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Conformality, geometric consequences of the existence of a derivative}{9}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Arcs and closed curves}{9}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Analytic Functions in Regions}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Conformal Mappings}{10}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Length and Area}{11}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}M{\"o}bius Transformation}{11}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Cross ratio}{12}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Symmetry}{13}{subsubsection.3.3.2}%
 \contentsline {paragraph}{Geometric Meaning of Symmetry}{13}{paragraph*.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Steiner Circles, circular net}{15}{subsubsection.6.3.3}%
-\contentsline {section}{\numberline {8}Elementary Conformal mapping}{16}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Elementary Riemann surfaces}{17}{subsection.8.1}%
-\contentsline {section}{\numberline {10}Complex Integration}{18}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Fundamental Theorems}{18}{subsection.10.1}%
-\contentsline {subsubsection}{\numberline {10.1.1}Line integral and rectifiable arcs}{18}{subsubsection.10.1.1}%
-\contentsline {subsubsection}{\numberline {10.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{19}{subsubsection.10.1.2}%
-\contentsline {subsubsection}{\numberline {10.1.3}Cauchy's theorem for a rectangle}{22}{subsubsection.10.1.3}%
-\contentsline {subsubsection}{\numberline {10.1.4}Cauchy's Theorem for a disk}{23}{subsubsection.10.1.4}%
-\contentsline {subsection}{\numberline {10.2}Cauchy's integral formula}{25}{subsection.10.2}%
-\contentsline {subsubsection}{\numberline {10.2.1}Index of a point with resect to a closed curve}{25}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Cauchy's integral formula}{26}{subsubsection.10.2.2}%
-\contentsline {subsubsection}{\numberline {10.2.3}Higher derivatives}{28}{subsubsection.10.2.3}%
-\contentsline {subsubsection}{\numberline {10.2.4}Consequences of Cauchy}{29}{subsubsection.10.2.4}%
-\contentsline {subsection}{\numberline {10.3}Local properties of analytic functions}{31}{subsection.10.3}%
-\contentsline {subsubsection}{\numberline {10.3.1}Removable Singularities and Taylor's Theorem}{31}{subsubsection.10.3.1}%
-\contentsline {subsubsection}{\numberline {10.3.2}Zeros and poles}{34}{subsubsection.10.3.2}%
-\contentsline {subsubsection}{\numberline {10.3.3}The Local Mappings}{38}{subsubsection.10.3.3}%
-\contentsline {subsubsection}{\numberline {10.3.4}The Maximum Principle}{42}{subsubsection.10.3.4}%
-\contentsline {subsection}{\numberline {10.4}The General Form of Cauchy's Theorem}{43}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}Chains and Cycles}{43}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Simple connectivity and homology}{43}{subsubsection.10.4.2}%
-\contentsline {subsubsection}{\numberline {10.4.3}The general form of Cauchy's theorem}{44}{subsubsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.5}The Calculus of Residues}{46}{subsection.10.5}%
-\contentsline {subsubsection}{\numberline {10.5.1}The Residue Theorem}{46}{subsubsection.10.5.1}%
-\contentsline {subsubsection}{\numberline {10.5.2}The Argument Principle}{49}{subsubsection.10.5.2}%
-\contentsline {subsubsection}{\numberline {10.5.3}Evaluation of Definite integrals}{51}{subsubsection.10.5.3}%
-\contentsline {section}{Index}{56}{section.11}%
-\contentsline {section}{List of Theorems}{58}{section.12}%
+\contentsline {subsubsection}{\numberline {3.3.3}Steiner Circles, circular net}{15}{subsubsection.3.3.3}%
+\contentsline {section}{\numberline {4}Elementary Conformal mapping}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Elementary Riemann surfaces}{17}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Complex Integration}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Fundamental Theorems}{18}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Line integral and rectifiable arcs}{18}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{19}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Cauchy's theorem for a rectangle}{22}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Cauchy's Theorem for a disk}{23}{subsubsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.2}Cauchy's integral formula}{24}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Index of a point with resect to a closed curve}{24}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Cauchy's integral formula}{26}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Higher derivatives}{27}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Consequences of Cauchy}{28}{subsubsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.3}Local properties of analytic functions}{30}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Removable Singularities and Taylor's Theorem}{30}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Zeros and poles}{33}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}The Local Mappings}{38}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}The Maximum Principle}{41}{subsubsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.4}The General Form of Cauchy's Theorem}{42}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Chains and Cycles}{42}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Simple connectivity and homology}{43}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}The general form of Cauchy's theorem}{44}{subsubsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.5}The Calculus of Residues}{46}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}The Residue Theorem}{46}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}The Argument Principle}{48}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Evaluation of Definite integrals}{51}{subsubsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.6}Harmonic Functions}{55}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Definition and basis properties}{55}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}The Mean-value Property}{57}{subsubsection.5.6.2}%
+\contentsline {section}{Index}{60}{theorem.5.71}%
+\contentsline {section}{List of Theorems}{62}{theorem.5.71}%
