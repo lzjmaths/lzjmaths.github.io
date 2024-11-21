@@ -4,7 +4,7 @@
     \,
     \begin{enumerate}[label=(\arabic*)]
         \item By definition,
-        \[\omega_1\wedge\omega_2(v_1,\cdots,v_{k+l})=\omega_2\wedge\omega_1(v_{\sigma(1)}),\cdots,v_{\sigma(k+l)}\]
+        \[\omega_1\wedge\omega_2(v_1,\cdots,v_{k+l})=\omega_2\wedge\omega_1(v_{\sigma(1)},\cdots,v_{\sigma(k+l)})\]
         where  $ \dps\sigma(i)=\begin{cases}
             i+k&1 \leq i \leq l\\
             i-l&l+1 \leq i \leq k+l
@@ -26,9 +26,9 @@
                 0&\text{otherwise}
             \end{cases}
         \end{equation}
-        Since  $ \dim\Alt(V)=\dim\bigwedge^k(V^*)=\binom{n }{k }=\left|\{e_{i_1}\wedge\cdots e_{i_k}|i_1<\cdots<i_k\}\right| $.
+        Since  $ \dim\Alt(V)=\dim\bigwedge^k(V^*)=\dps\binom{n }{k }=\left|\{e_{i_1}\wedge\cdots \wedge e_{i_k}|i_1<\cdots<i_k\}\right| $.
         \item For  $ \omega\in\Alt^k(W),f\in \Hom(V,W) $, define  $ \Alt^k(f)(\omega)\in\Alt^k(V) $ by
-        \[\Alt^k(f)(\omega(V_1,\cdots,V_k))=\omega(fV_1,\cdots,fV_k)\in\mathbb{R}\]
+        \[\Alt^k(f)(\omega(V_1,\cdots,V_k))=\omega(f_*V_1,\cdots,f_*V_k)\in\mathbb{R}\]
     \end{enumerate}
 \end{proof}
 \begin{definition}

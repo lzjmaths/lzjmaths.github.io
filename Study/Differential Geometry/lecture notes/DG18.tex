@@ -15,7 +15,7 @@
  
 However, there exists  $ \omega_1\in\Omega^{n-1}(\Rbb^n\backslash\{0\}) $ \st    $ \dd \omega_1=0 $.  $ \omega_1|_{S^{n-1}}=\Vol_{S^{n-1}} $.
 
-Indeed, for  $ \gamma :\Rbb^n\backslash\{0\}\rightarrow S^{n-1},\,x\mapsto \frac{x}{|x|} $, let  $ \omega_1=r^*(\Vol_{S^{n-1}}) $. Then  $ \dd\omega_1=0 $,  $ \omega_1|_{S^{n-1}}=\Vol_{S^{n-1}} $.
+Indeed, for  $ \gamma :\Rbb^n\backslash\{0\}\rightarrow S^{n-1},\,x\mapsto \frac{x}{|x|} $, let  $ \omega_1=\gamma^*(\Vol_{S^{n-1}}) $. Then  $ \dd\omega_1=0 $,  $ \omega_1|_{S^{n-1}}=\Vol_{S^{n-1}} $.
 
 \begin{exercise}
     \begin{equation*}
@@ -64,7 +64,7 @@ Define  $ \Rbb\Pbb^{n-1}=S^{n-1}/_{x\sim Ax} $. Then  $ \Vol_{S^{n-1}} $ induces
     So  $ f(-x)=-f(x) $, $ \forall x\in S^{n-1} $. $ \Rightarrow  $  $ f  $ can't be nowhere vanshing, which causes contradiction!  
 \end{proof}
 \begin{theorem}
-     $ \Rbb\Pbb^{n-1} $ is orientable iff  $ n  $ is odd. 
+     $ \Rbb\Pbb^{n} $ is orientable iff  $ n  $ is odd. 
 \end{theorem}
 
 \subsection{Tensor Field and Lie Derivative}
@@ -174,8 +174,10 @@ Equivalently,  $ \dps\mathcal{L}_X\tau|_U=\lim_{t\to 0}\frac{\varphi_t^*(\tau)|_
         &=\dd\mathcal{L}_X(\omega)
     \end{align*}
 \end{proof}
-Given  $ X\in \Gamma(TM) $, define contraction  $ X\mathrel{\lrcorner} -:\Omega^k(M)\rightarrow \Omega^{k-1}(M)  $ by 
+Given  $ X\in \Gamma(TM) $, define \name{contraction}  $ X\mathrel{\lrcorner} -:\Omega^k(M)\rightarrow \Omega^{k-1}(M)  $ by 
     \[(X\mathrel{\lrcorner}\alpha)(Y_2,\cdots,Y_k):=\alpha(X,Y_2,\cdots,Y_k)\,\text{ for  $ Y_2,\cdots,Y_k\in \Gamma(TX) $ }\] 
+    
+Often abbreviated to  $ \iota_X:\Omega^k(M)\rightarrow \Omega^{k-1}(M) $. 
 
 \begin{example}
      $ X=f\partial x^i $,  $ \alpha=g\dd x^{i_1}\wedge\cdots\wedge x^{i_n} $. Then 
