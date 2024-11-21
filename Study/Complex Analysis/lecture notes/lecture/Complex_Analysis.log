@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  19 NOV 2024 11:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  20 NOV 2024 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1304,7 +1304,14 @@ Package: tipx 2003/01/01 TIPX version 1.2
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (./Complex_Analysis.aux)
+ (./Complex_Analysis.aux
+
+LaTeX Warning: Label `sec:1' multiply defined.
+
+
+LaTeX Warning: Label `sec:5' multiply defined.
+
+)
 \openout1 = `Complex_Analysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 574.
@@ -1499,44 +1506,55 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
 
-[19] [20] [21]) (../8.tex [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31] [32]) (../11.tex [33] [34] [35] [36]) (../12.tex [37] [38] [39]) (../13.tex [40] [41] [42]) (../14.tex [43] [44] [45]) (../15.tex [46] [47] [48] [49]) (../16.tex [50] [51]
+[19] [20] [21]) (../8.tex [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31]) (../11.tex [32] [33] [34] [35]) (../12.tex [36] [37] [38]) (../13.tex [39] [40] [41]) (../14.tex [42] [43] [44]) (../15.tex [45] [46] [47] [48] [49]) (../16.tex [50]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-[52]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[51]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-[53] [54]) [55]
+[52] [53]
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+) (../17.tex [54]
+Overfull \hbox (16.29897pt too wide) detected at line 21
+[][] [] \U/matha/m/n/12 ^^P [][] \OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 z \U/matha/m/n/12 ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi [] [][]f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi\U/matha/m/n/12 r[][]\OML/cmm/m/it/12 f \U/matha/m/n/12 ^^@ [][]\OML/cmm/m/it/12 f\U/matha/m/n/12 s ^^P []
+ []
+
+[55] [56] [57] [58]) [59]
 runsystem(makeindex Complex_Analysis.idx)...executed safely (allowed).
 
- (./Complex_Analysis.ind [56
+ (./Complex_Analysis.ind [60
 
 
-] [57
+] [61
 
 ])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [58
+(./Complex_Analysis.loe [62
 
 ])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [59] (./Complex_Analysis.aux)
+ [63] [64] (./Complex_Analysis.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
-(rerunfilecheck)             Checksum: CCE2C6E8CB69F1D555440111FC7B2399;9978.
+(rerunfilecheck)             Checksum: F7BF544C673BF1F8D9188E2D7202F5D4;10505.
  ) 
 Here is how much of TeX's memory you used:
- 40225 strings out of 476683
- 817462 string characters out of 5804047
- 1854018 words of memory out of 5000000
- 59614 multiletter control sequences out of 15000+600000
+ 40257 strings out of 476683
+ 818408 string characters out of 5804047
+ 1855018 words of memory out of 5000000
+ 59643 multiletter control sequences out of 15000+600000
  548437 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,15n,101p,719b,1132s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,15n,101p,719b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (59 pages).
+Output written on Complex_Analysis.pdf (64 pages).

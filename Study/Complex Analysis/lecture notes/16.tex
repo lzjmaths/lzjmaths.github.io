@@ -102,10 +102,11 @@ So we have  $ \dps\int_{-\infty}^{+\infty} R(x)\dd x=2\pi i\sum_{y>0}\Res_{x+iy}
     \node[above = 1mm of {(0,1)}] {$(0,Y)$};
     \end{tikzpicture}
 \end{figure}
+
 There exists  $ M>0  $ and  $ C>0  $ \st this rectangle all poles of  $ R  $ in the upper half-plane if  $ x_1>M,x_2>M $, and  $ Y>M $.  $ |zR(z)| \leq C $ if  $ |z| \geq M $.
 
 \begin{equation*}
-    \left|\int_{\text{right vertical line}}R(z)e^{iz}\dd z\right| \leq \int_0^\gamma\frac{C}{|z|}e^{-y}\dd y \leq \frac{C}{x_2}\int_0^Ye^{-y}\dd y \leq \frac{C}{x_2}
+    \left|\int_{\text{right vertical line}}R(z)e^{iz}\dd z\right| \leq \int_0^Y\frac{C}{|z|}e^{-y}\dd y \leq \frac{C}{x_2}\int_0^Ye^{-y}\dd y \leq \frac{C}{x_2}
 \end{equation*}
 Similarly,
 \begin{equation*}
@@ -133,18 +134,20 @@ So
     % A clipped circle is drawn
     \begin{scope}
         % \clip (-0.2,0) rectangle (0.2,0.2);
-        \draw[decoration={markings, mark=at position 0.25 with {\arrow{>}}},
-        postaction={decorate}](-1.5,0) -- (1.5,0);
         \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
         postaction={decorate}](1.5,0) -- (1.5,1);
         \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
         postaction={decorate}](1.5,1) -- (-1.5,1);
         \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
         postaction={decorate}](-1.5,1) -- (-1.5,0);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+            postaction={decorate}](-1.5,0) -- (-0.3,0);
+        \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+            postaction={decorate}](0.3,0) -- (1.5,0);
         \draw [
             decoration={markings, mark=at position 0.75 with {\arrow{>}}},
             postaction={decorate}
-            ](0,0) arc[start angle=180, end angle=360, radius=0.2];
+            ](-0.3,0) arc[start angle=180, end angle=360, radius=0.3];
     \end{scope}
     %
     %%Labels for the vertices are typeset.
@@ -164,14 +167,42 @@ Denote this integral as  $ \mathrm{P.V.}\left[\int_{-\infty}^\infty R(x)e^{ix}\d
         &=\mathrm{P.V.}\left(\int_{-\infty}^\infty \frac{\cos x}{x}\dd x\right)+i\int_{-\infty}^\infty \frac{\sin x}{x}\dd x\\
         &=i\cdot 2\int_{0}^\infty\frac{\sin x}{x}\dd x
     \end{align*}
-    So we obtain  $ \int_0^\infty\frac{\sin x}{x}\dd x=\frac{\pi }{2} $ 
+    So we obtain  $ \dps\int_0^\infty\frac{\sin x}{x}\dd x=\frac{\pi }{2} $ 
 \end{example}
 \noindent\ding{195}\,\,\,\,Calculate  $ \dps\int_0^\infty x^\alpha R(x)\dd x $, where  $ \alpha\in(0,1) $, $ R(z) $ has a zero of order larger than  $ 2 $ at  $ \infty $, and at most a simple pole at  $ 0 $.
 Then 
 \begin{equation}
     \int_0^\infty x^\alpha R(x)\dd x\overset{x=t^2}{=}2\int_0^\infty t^{2\alpha+1}R(t^2)\dd t
 \end{equation}
-$ f(x)=z^{2\alpha } $ is analytic in  $ \Cbb\backslash\{iy:y \leq 0\} $ if we require  $ \arg f(x)\in(-\pi \alpha,3\pi\alpha) $. Applying residue theorem \ref{sec:5.5.1:The Residue Theorem} to  $ z^{2\alpha+1}R(z^2) $ we have 
+$ f(x)=z^{2\alpha } $ is analytic in  $ \Cbb\backslash\{iy:y \leq 0\} $ if we require  $ \arg f(x)\in(-\pi \alpha,3\pi\alpha) $. 
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[baseline=(current bounding box.north)]
+        % A clipped circle is drawn
+        \begin{scope}
+            \draw [
+            decoration={markings, mark=at position 0.75 with {\arrow{>}}},
+            postaction={decorate}
+            ](-0.3,0) arc[start angle=180, end angle=0, radius=0.3];
+            \draw [
+            decoration={markings, mark=at position 0.75 with {\arrow{>}}},
+            postaction={decorate}
+            ](1.5,0) arc[start angle=0, end angle=180, radius=1.5];
+            
+            \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+            postaction={decorate}](-1.5,0) -- (-0.3,0);
+            \draw[decoration={markings, mark=at position 0.5 with {\arrow{>}}},
+            postaction={decorate}](0.3,0) -- (1.5,0);
+        \end{scope}
+        %
+        %%Labels for the vertices are typeset.
+        \node[below left= 1mm of {(-1.5,0)}] {$A(-\rho,0)$};
+        \node[below right= 1mm of {(1.5,0)}] {$B(\rho,0)$};
+        \end{tikzpicture}
+\end{figure}
+
+Applying residue theorem \ref{sec:5.5.1:The Residue Theorem} to  $ z^{2\alpha+1}R(z^2) $ and take limits we have 
 \begin{equation*}
     \int_{-\infty}^\infty z^{2\alpha+1}R(z^2)\dd z=2\pi i\sum_{y>0}\Res_{x+iy}z^{2\alpha+1}R(z^2)
 \end{equation*}

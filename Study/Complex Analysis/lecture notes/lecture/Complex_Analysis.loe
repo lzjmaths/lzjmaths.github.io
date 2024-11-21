@@ -1,98 +1,106 @@
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.1\else \numberline {4.1}Definition\fi \thmtformatoptarg {Cauchy-Riemann equation}}{4}{definition.4.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.2\else \numberline {4.2}Definition\fi \thmtformatoptarg {Harmonic function}}{4}{definition.4.2}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.3\else \numberline {4.3}Theorem\fi \thmtformatoptarg {Fundamental Theorem of Algebra}}{4}{theorem.4.3}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.4\else \numberline {4.4}Theorem\fi \thmtformatoptarg {Gauss-Lucus theorem}}{4}{theorem.4.4}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}4.5\else \numberline {4.5}Proposition\fi }{5}{proposition.4.5}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.6\else \numberline {4.6}Theorem\fi }{5}{theorem.4.6}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.7\else \numberline {4.7}Remark\fi }{5}{remark.4.7}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}4.8\else \numberline {4.8}Corollary\fi }{5}{corollary.4.8}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.9\else \numberline {4.9}Theorem\fi \thmtformatoptarg {Abel's theorem}}{7}{theorem.4.9}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.1\else \numberline {6.1}Theorem\fi }{8}{theorem.6.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.2\else \numberline {6.2}Definition\fi }{9}{definition.6.2}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.3\else \numberline {6.3}Theorem\fi }{9}{theorem.6.3}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.4\else \numberline {6.4}Theorem\fi }{9}{theorem.6.4}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.5\else \numberline {6.5}Theorem\fi }{9}{theorem.6.5}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.6\else \numberline {6.6}Theorem\fi }{9}{theorem.6.6}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.7\else \numberline {6.7}Theorem\fi }{10}{theorem.6.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.8\else \numberline {6.8}Definition\fi }{10}{definition.6.8}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.9\else \numberline {6.9}Proposition\fi }{12}{proposition.6.9}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.10\else \numberline {6.10}Lemma\fi }{12}{lemma.6.10}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.11\else \numberline {6.11}Theorem\fi }{12}{theorem.6.11}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.12\else \numberline {6.12}Lemma\fi }{12}{lemma.6.12}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.13\else \numberline {6.13}Theorem\fi }{12}{theorem.6.13}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.14\else \numberline {6.14}Remark\fi }{13}{remark.6.14}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.15\else \numberline {6.15}Theorem\fi }{13}{theorem.6.15}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.16\else \numberline {6.16}Remark\fi }{13}{remark.6.16}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.17\else \numberline {6.17}Theorem\fi \thmtformatoptarg {The Symmetric principle}}{14}{theorem.6.17}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.18\else \numberline {6.18}Remark\fi }{14}{remark.6.18}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.19\else \numberline {6.19}Remark\fi }{15}{remark.6.19}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.20\else \numberline {6.20}Theorem\fi }{16}{theorem.6.20}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.1\else \numberline {8.1}Example\fi }{16}{example.8.1}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.2\else \numberline {8.2}Example\fi }{17}{example.8.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.3\else \numberline {8.3}Example\fi }{17}{example.8.3}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.4\else \numberline {8.4}Example\fi }{17}{example.8.4}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.5\else \numberline {8.5}Example\fi }{17}{example.8.5}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.6\else \numberline {8.6}Example\fi }{17}{example.8.6}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}10.1\else \numberline {10.1}Proposition\fi }{19}{proposition.10.1}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.2\else \numberline {10.2}Example\fi }{19}{example.10.2}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.3\else \numberline {10.3}Remark\fi }{20}{remark.10.3}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.4\else \numberline {10.4}Theorem\fi }{21}{theorem.10.4}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.5\else \numberline {10.5}Theorem\fi \thmtformatoptarg {Fundamental theorem of Calculus for integrals on $ \mathbb {C} $}}{21}{theorem.10.5}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.6\else \numberline {10.6}Remark\fi }{21}{remark.10.6}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.7\else \numberline {10.7}Corollary\fi }{22}{corollary.10.7}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.8\else \numberline {10.8}Theorem\fi \thmtformatoptarg {Cauchy's theorem for a rectangle}}{22}{theorem.10.8}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.9\else \numberline {10.9}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's theorem for a rectangle}}{23}{theorem.10.9}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.10\else \numberline {10.10}Theorem\fi \thmtformatoptarg {Cauchy's Theorem for a disk}}{23}{theorem.10.10}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.11\else \numberline {10.11}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's Theorem for a disk}}{24}{theorem.10.11}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}10.12\else \numberline {10.12}Lemma\fi }{25}{lemma.10.12}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.13\else \numberline {10.13}Theorem\fi }{25}{theorem.10.13}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}10.14\else \numberline {10.14}Lemma\fi }{26}{lemma.10.14}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.15\else \numberline {10.15}Remark\fi }{26}{remark.10.15}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.16\else \numberline {10.16}Theorem\fi \thmtformatoptarg {Cauch's integral formula}}{26}{theorem.10.16}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.17\else \numberline {10.17}Remark\fi }{27}{remark.10.17}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.18\else \numberline {10.18}Theorem\fi \thmtformatoptarg {The mean value property for analytic functions}}{27}{theorem.10.18}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}10.19\else \numberline {10.19}Lemma\fi }{28}{lemma.10.19}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.20\else \numberline {10.20}Theorem\fi }{28}{theorem.10.20}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.21\else \numberline {10.21}Theorem\fi \thmtformatoptarg {Morera's Theorem}}{29}{theorem.10.21}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.22\else \numberline {10.22}Theorem\fi \thmtformatoptarg {Liouville's Theorem}}{29}{theorem.10.22}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.23\else \numberline {10.23}Theorem\fi \thmtformatoptarg {Fundamental Theorem for Algebra}}{30}{theorem.10.23}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.24\else \numberline {10.24}Theorem\fi \thmtformatoptarg {Power series}}{30}{theorem.10.24}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.25\else \numberline {10.25}Theorem\fi \thmtformatoptarg {Riemann's Removable Singularities Theorem}}{31}{theorem.10.25}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.26\else \numberline {10.26}Theorem\fi \thmtformatoptarg {Taylor's Theorem}}{33}{theorem.10.26}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.27\else \numberline {10.27}Theorem\fi }{34}{theorem.10.27}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.28\else \numberline {10.28}Theorem\fi \thmtformatoptarg {Identity Theorem}}{35}{theorem.10.28}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.29\else \numberline {10.29}Corollary\fi }{35}{corollary.10.29}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}10.30\else \numberline {10.30}Definition\fi }{36}{definition.10.30}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.31\else \numberline {10.31}Example\fi }{36}{example.10.31}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.32\else \numberline {10.32}Remark\fi }{36}{remark.10.32}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.33\else \numberline {10.33}Theorem\fi }{36}{theorem.10.33}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.34\else \numberline {10.34}Remark\fi }{37}{remark.10.34}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.35\else \numberline {10.35}Example\fi }{37}{example.10.35}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.36\else \numberline {10.36}Theorem\fi \thmtformatoptarg {Weierstrass}}{37}{theorem.10.36}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.37\else \numberline {10.37}Remark\fi }{38}{remark.10.37}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.38\else \numberline {10.38}Theorem\fi \thmtformatoptarg {The Argument Principle}}{38}{theorem.10.38}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.39\else \numberline {10.39}Remark\fi }{39}{remark.10.39}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.40\else \numberline {10.40}Theorem\fi }{40}{theorem.10.40}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.41\else \numberline {10.41}Corollary\fi \thmtformatoptarg {open mapping theorem}}{41}{corollary.10.41}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.42\else \numberline {10.42}Corollary\fi }{41}{corollary.10.42}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.43\else \numberline {10.43}Remark\fi }{41}{remark.10.43}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.44\else \numberline {10.44}Theorem\fi \thmtformatoptarg {The maximum principle}}{42}{theorem.10.44}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.45\else \numberline {10.45}Theorem\fi \thmtformatoptarg {The maximum principle}}{42}{theorem.10.45}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.46\else \numberline {10.46}Remark\fi }{42}{remark.10.46}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.47\else \numberline {10.47}Theorem\fi \thmtformatoptarg {Schwarz Lemma}}{42}{theorem.10.47}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.48\else \numberline {10.48}Remark\fi }{42}{remark.10.48}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.49\else \numberline {10.49}Example\fi }{43}{example.10.49}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.50\else \numberline {10.50}Theorem\fi }{43}{theorem.10.50}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.51\else \numberline {10.51}Theorem\fi \thmtformatoptarg {General form of Cauchy's theorem}}{44}{theorem.10.51}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.52\else \numberline {10.52}Corollary\fi }{44}{corollary.10.52}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.53\else \numberline {10.53}Corollary\fi }{45}{corollary.10.53}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}10.54\else \numberline {10.54}Corollary\fi }{45}{corollary.10.54}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.55\else \numberline {10.55}Theorem\fi \thmtformatoptarg {The Residue Theorem}}{47}{theorem.10.55}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.56\else \numberline {10.56}Remark\fi }{47}{remark.10.56}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.57\else \numberline {10.57}Example\fi }{48}{example.10.57}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.58\else \numberline {10.58}Theorem\fi \thmtformatoptarg {The Argument Principle}}{49}{theorem.10.58}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.59\else \numberline {10.59}Theorem\fi \thmtformatoptarg {Rouch{\=e}'s Theorem}}{50}{theorem.10.59}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}10.60\else \numberline {10.60}Theorem\fi \thmtformatoptarg {The Argument Principle}}{50}{theorem.10.60}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}10.61\else \numberline {10.61}Remark\fi }{51}{remark.10.61}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.62\else \numberline {10.62}Example\fi }{51}{example.10.62}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}10.63\else \numberline {10.63}Example\fi }{54}{example.10.63}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.1\else \numberline {2.1}Definition\fi \thmtformatoptarg {Cauchy-Riemann equation}}{4}{definition.2.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.2\else \numberline {2.2}Definition\fi \thmtformatoptarg {Harmonic function}}{4}{definition.2.2}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.3\else \numberline {2.3}Theorem\fi \thmtformatoptarg {Fundamental Theorem of Algebra}}{4}{theorem.2.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.4\else \numberline {2.4}Theorem\fi \thmtformatoptarg {Gauss-Lucus theorem}}{4}{theorem.2.4}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.5\else \numberline {2.5}Proposition\fi }{5}{proposition.2.5}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.6\else \numberline {2.6}Theorem\fi }{5}{theorem.2.6}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.7\else \numberline {2.7}Remark\fi }{5}{remark.2.7}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}2.8\else \numberline {2.8}Corollary\fi }{5}{corollary.2.8}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.9\else \numberline {2.9}Theorem\fi \thmtformatoptarg {Abel's theorem}}{7}{theorem.2.9}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.1\else \numberline {3.1}Theorem\fi }{8}{theorem.3.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.2\else \numberline {3.2}Definition\fi }{9}{definition.3.2}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.3\else \numberline {3.3}Theorem\fi }{9}{theorem.3.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.4\else \numberline {3.4}Theorem\fi }{9}{theorem.3.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.5\else \numberline {3.5}Theorem\fi }{9}{theorem.3.5}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.6\else \numberline {3.6}Theorem\fi }{9}{theorem.3.6}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.7\else \numberline {3.7}Theorem\fi }{10}{theorem.3.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.8\else \numberline {3.8}Definition\fi }{10}{definition.3.8}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}3.9\else \numberline {3.9}Proposition\fi }{12}{proposition.3.9}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}3.10\else \numberline {3.10}Lemma\fi }{12}{lemma.3.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.11\else \numberline {3.11}Theorem\fi }{12}{theorem.3.11}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}3.12\else \numberline {3.12}Lemma\fi }{12}{lemma.3.12}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.13\else \numberline {3.13}Theorem\fi }{12}{theorem.3.13}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}3.14\else \numberline {3.14}Remark\fi }{13}{remark.3.14}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.15\else \numberline {3.15}Theorem\fi }{13}{theorem.3.15}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}3.16\else \numberline {3.16}Remark\fi }{13}{remark.3.16}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.17\else \numberline {3.17}Theorem\fi \thmtformatoptarg {The Symmetric principle}}{14}{theorem.3.17}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}3.18\else \numberline {3.18}Remark\fi }{14}{remark.3.18}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}3.19\else \numberline {3.19}Remark\fi }{15}{remark.3.19}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.20\else \numberline {3.20}Theorem\fi }{16}{theorem.3.20}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.1\else \numberline {4.1}Example\fi }{16}{example.4.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.2\else \numberline {4.2}Example\fi }{17}{example.4.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.3\else \numberline {4.3}Example\fi }{17}{example.4.3}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.4\else \numberline {4.4}Example\fi }{17}{example.4.4}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.5\else \numberline {4.5}Example\fi }{17}{example.4.5}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.6\else \numberline {4.6}Example\fi }{17}{example.4.6}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.1\else \numberline {5.1}Proposition\fi }{19}{proposition.5.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.2\else \numberline {5.2}Example\fi }{19}{example.5.2}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.3\else \numberline {5.3}Remark\fi }{20}{remark.5.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.4\else \numberline {5.4}Theorem\fi }{21}{theorem.5.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.5\else \numberline {5.5}Theorem\fi \thmtformatoptarg {Fundamental theorem of Calculus for integrals on $ \mathbb {C} $}}{21}{theorem.5.5}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.6\else \numberline {5.6}Remark\fi }{21}{remark.5.6}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.7\else \numberline {5.7}Corollary\fi }{22}{corollary.5.7}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.8\else \numberline {5.8}Theorem\fi \thmtformatoptarg {Cauchy's theorem for a rectangle}}{22}{theorem.5.8}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.9\else \numberline {5.9}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's theorem for a rectangle}}{23}{theorem.5.9}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.10\else \numberline {5.10}Theorem\fi \thmtformatoptarg {Cauchy's Theorem for a disk}}{23}{theorem.5.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.11\else \numberline {5.11}Theorem\fi \thmtformatoptarg {stronger version of Cauchy's Theorem for a disk}}{24}{theorem.5.11}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.12\else \numberline {5.12}Lemma\fi }{24}{lemma.5.12}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.13\else \numberline {5.13}Theorem\fi }{25}{theorem.5.13}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.14\else \numberline {5.14}Lemma\fi }{25}{lemma.5.14}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.15\else \numberline {5.15}Remark\fi }{26}{remark.5.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.16\else \numberline {5.16}Theorem\fi \thmtformatoptarg {Cauch's integral formula}}{26}{theorem.5.16}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.17\else \numberline {5.17}Remark\fi }{26}{remark.5.17}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.18\else \numberline {5.18}Theorem\fi \thmtformatoptarg {The mean value property for analytic functions}}{27}{theorem.5.18}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.19\else \numberline {5.19}Lemma\fi }{27}{lemma.5.19}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.20\else \numberline {5.20}Theorem\fi }{28}{theorem.5.20}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.21\else \numberline {5.21}Theorem\fi \thmtformatoptarg {Morera's Theorem}}{28}{theorem.5.21}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.22\else \numberline {5.22}Theorem\fi \thmtformatoptarg {Liouville's Theorem}}{29}{theorem.5.22}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.23\else \numberline {5.23}Theorem\fi \thmtformatoptarg {Fundamental Theorem for Algebra}}{29}{theorem.5.23}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.24\else \numberline {5.24}Theorem\fi \thmtformatoptarg {Power series}}{29}{theorem.5.24}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.25\else \numberline {5.25}Theorem\fi \thmtformatoptarg {Riemann's Removable Singularities Theorem}}{30}{theorem.5.25}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.26\else \numberline {5.26}Theorem\fi \thmtformatoptarg {Taylor's Theorem}}{32}{theorem.5.26}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.27\else \numberline {5.27}Theorem\fi }{33}{theorem.5.27}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.28\else \numberline {5.28}Theorem\fi \thmtformatoptarg {Identity Theorem}}{34}{theorem.5.28}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.29\else \numberline {5.29}Corollary\fi }{34}{corollary.5.29}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.30\else \numberline {5.30}Definition\fi }{35}{definition.5.30}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.31\else \numberline {5.31}Example\fi }{35}{example.5.31}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.32\else \numberline {5.32}Remark\fi }{35}{remark.5.32}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.33\else \numberline {5.33}Theorem\fi }{36}{theorem.5.33}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.34\else \numberline {5.34}Remark\fi }{37}{remark.5.34}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.35\else \numberline {5.35}Example\fi }{37}{example.5.35}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.36\else \numberline {5.36}Theorem\fi \thmtformatoptarg {Weierstrass}}{37}{theorem.5.36}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.37\else \numberline {5.37}Remark\fi }{37}{remark.5.37}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.38\else \numberline {5.38}Theorem\fi \thmtformatoptarg {The Argument Principle}}{38}{theorem.5.38}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.39\else \numberline {5.39}Remark\fi }{38}{remark.5.39}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.40\else \numberline {5.40}Theorem\fi }{40}{theorem.5.40}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.41\else \numberline {5.41}Corollary\fi \thmtformatoptarg {open mapping theorem}}{40}{corollary.5.41}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.42\else \numberline {5.42}Corollary\fi }{41}{corollary.5.42}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.43\else \numberline {5.43}Remark\fi }{41}{remark.5.43}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.44\else \numberline {5.44}Theorem\fi \thmtformatoptarg {The maximum principle}}{41}{theorem.5.44}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.45\else \numberline {5.45}Theorem\fi \thmtformatoptarg {The maximum principle}}{41}{theorem.5.45}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.46\else \numberline {5.46}Remark\fi }{41}{remark.5.46}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.47\else \numberline {5.47}Theorem\fi \thmtformatoptarg {Schwarz Lemma}}{41}{theorem.5.47}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.48\else \numberline {5.48}Remark\fi }{42}{remark.5.48}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.49\else \numberline {5.49}Example\fi }{43}{example.5.49}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.50\else \numberline {5.50}Theorem\fi }{43}{theorem.5.50}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.51\else \numberline {5.51}Theorem\fi \thmtformatoptarg {General form of Cauchy's theorem}}{44}{theorem.5.51}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.52\else \numberline {5.52}Corollary\fi }{44}{corollary.5.52}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.53\else \numberline {5.53}Corollary\fi }{44}{corollary.5.53}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.54\else \numberline {5.54}Corollary\fi }{44}{corollary.5.54}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.55\else \numberline {5.55}Theorem\fi \thmtformatoptarg {The Residue Theorem}}{46}{theorem.5.55}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.56\else \numberline {5.56}Remark\fi }{47}{remark.5.56}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.57\else \numberline {5.57}Example\fi }{48}{example.5.57}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.58\else \numberline {5.58}Theorem\fi \thmtformatoptarg {The Argument Principle}}{48}{theorem.5.58}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.59\else \numberline {5.59}Theorem\fi \thmtformatoptarg {Rouch{\=e}'s Theorem}}{49}{theorem.5.59}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.60\else \numberline {5.60}Theorem\fi \thmtformatoptarg {The Argument Principle}}{50}{theorem.5.60}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.61\else \numberline {5.61}Remark\fi }{50}{remark.5.61}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.62\else \numberline {5.62}Example\fi }{51}{example.5.62}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.63\else \numberline {5.63}Example\fi }{53}{example.5.63}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.64\else \numberline {5.64}Example\fi }{54}{example.5.64}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.65\else \numberline {5.65}Lemma\fi }{56}{lemma.5.65}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.66\else \numberline {5.66}Theorem\fi }{56}{theorem.5.66}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.67\else \numberline {5.67}Remark\fi }{57}{remark.5.67}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.68\else \numberline {5.68}Remark\fi }{57}{remark.5.68}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.69\else \numberline {5.69}Theorem\fi \thmtformatoptarg {Mean-value Property}}{57}{theorem.5.69}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.70\else \numberline {5.70}Theorem\fi }{58}{theorem.5.70}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.71\else \numberline {5.71}Theorem\fi \thmtformatoptarg {Maximal Principle of Harmonic Function}}{58}{theorem.5.71}%

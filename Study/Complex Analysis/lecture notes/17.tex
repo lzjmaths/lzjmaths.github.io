@@ -1,0 +1,138 @@
+And 
+\begin{equation*}
+    \begin{aligned}
+        \int_{-\infty}^\infty z^{2\alpha+1}R(z^2)\dd z&=\int_0^\infty z^{2\alpha+1}R(z^2)\dd z+\int_0^\infty(-z)^{2\alpha+1}R(z^2)\dd z\\
+        &=(1-e^{2\alpha\pi i})(1-e^{2\alpha\pi i})\int_0^\infty z^{2\alpha+1}R(z^2)\dd z
+    \end{aligned}
+\end{equation*}
+So  $ \dps\int_0^\infty x^\alpha R(x)=\frac{2}{1-e^{2\alpha \pi i}}\cdot 2\pi i\cdot\sum_{y>0}\Res_{x+iy}z^{2\alpha+1}R(z^2) $.
+
+\begin{example}
+    Compute  $ \dps\int_0^\infty\frac{x^{\frac{1}{2}}}{1+x^2}\dd x $.
+    
+    
+\begin{equation*}
+    \begin{aligned}
+        \int_0^\infty\frac{x^{\frac{1}{2}}}{1+x^2}\dd x=2\int_0^\infty\frac{t^2}{1+t^4}=\int_{-\infty}^\infty\frac{t^2}{1+t^4}\dd t
+    \end{aligned}
+\end{equation*}
+
+Take  $ f(z)=\dps\frac{z^2}{1+z^4} $ and apply Residue Theorem \ref{sec:5.5.1:The Residue Theorem} to  $ f $, we have 
+\[\int_{-\infty}^\infty \frac{t^2}{1+t^4}=\int_{-\infty}^\infty f(z)\dd z=2\pi i \sum_{y>0}\Res_{x+yi}f(z)=2\pi i[\Res_{\exp(\frac{i\pi   }{4})}f+\Res_{\exp(\frac{3i\pi}{4})}f]=\frac{\sqrt{2}\pi }{2}\] 
+\end{example}
+
+\subsection{Harmonic Functions}
+\subsubsection{Definition and basis  properties}
+
+A real-valued function  $ u(z)=u(x,y) $  in a region  $ \Omega  $ is \name{harmonic} if it is in $ C^2 $ and satisfying the Laplace's equation
+\begin{equation}
+    \triangle u=\frac{\partial^2 u }{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=0\label{Laplace's equation}
+\end{equation}
+
+We already know that if  $ f(z)=u(x,y)+iv(x,y) $ is analytic in  $ \Omega  $, then  $ u $ and  $ v  $ satisfy the Cauchy-Riemann equations, and are therefore harmonic in  $ \Omega $.
+
+If  $ u  $ is harmonic in  $ \Omega  $, then  $ f(z)=\dps\frac{\partial u}{\partial x}-i\frac{\partial u}{\partial y} $ is analytic in  $ \Omega $. This is because, for  $ U:=\dps\frac{\partial u}{\partial x}, V=-\frac{\partial u}{\partial y}$.
+\begin{equation}
+    \begin{cases}
+        \dps\frac{\partial U }{\partial x}=\frac{\partial ^2 u}{\partial x^2}=-\frac{\partial ^2 u}{\partial y^2}=\frac{\partial V}{\partial y}\\
+        \\
+        
+        \dps\frac{\partial U}{\partial y}=\frac{\partial ^2 u}{\partial x\partial y}=\frac{\partial ^2 u}{\partial y\partial x}=\frac{\partial V}{\partial x}
+    \end{cases}
+\end{equation}
+
+We may write the differential 
+\begin{equation}
+    f \dd z=\left(\frac{\partial u}{\partial x}-i\frac{\partial u}{\partial y}\right)\left(\dd x+i\dd z\right)=\left(\frac{\partial u}{\partial x}\dd x+\frac{\partial u}{\partial y}\dd y \right)+i\left(\frac{\partial u }{\partial x}\dd y-\frac{\partial u }{\partial y }\dd x\right)\label{eq:5.6.1:differential of f}
+\end{equation}
+
+In this expression, the real part is  $ \dps\dd u=\frac{\partial u }{\partial x}\dd x+\frac{\partial u }{\partial y}\dd y $.
+And if  $ u  $ has a conjugate harmonic function  $ v $, then the imaginary part is  \[\dps \dd v=\frac{\partial v }{\partial x}\dd x+\frac{\partial v}{\partial y}\dd y=-\frac{\partial u}{\partial y}\dd x+\frac{\partial u}{\partial x}\dd y  \]
+
+In general, however, there is no (single-valued) conjugate function. We thus define 
+\begin{equation}
+    {}^*\dd u:=-\frac{\partial u}{\partial y}\dd x+\frac{\partial u}{\partial x}\dd y\label{eq:5.6.1:definition of conjugate differential of du}
+\end{equation}
+and call  $ {}^*\dd u  $ the \name{conjugate  differential of  $ \dd u $}. We may write \eqref{eq:5.6.1:differential of f} as 
+\begin{equation}
+    f\dd z=\dd u+i{}^*\dd u\label{eq:5.6.1:simplication of differential of f}
+\end{equation}
+
+\begin{lemma}\label{lemma:5.6.1:closed integral of *du is zero}
+    Let  $ \gamma     $ be a cycle in a region  $ \Omega  $ \st  $ \gamma\sim 0 \mod \Omega$. Then 
+    \begin{equation}
+        \int_\gamma {}^*\dd u=0
+    \end{equation} 
+\end{lemma}
+\begin{proof}
+    \eqref{eq:5.6.1:simplication of differential of f} implies  $ \dps\int_\gamma f(z)\dd z=\int_\gamma\dd  u+i\int_\gamma {}^*\dd u $.
+    
+    Cauchy's Theorem \ref{General form of Cauchy's theorem} implies  $ \int_\gamma f(z)\dd z=0 $. And  $ \int_\gamma \dd u=0 $ since  $ \dd u  $ is an exact diffenrential. 
+    
+    Hence,  $ \int_\gamma {}^*\dd u=0 $.  
+\end{proof}
+\begin{theorem}\label{thm5.6.1:harmonic function is the real part of an analytic function in simply connected region}
+    If  $ \Omega  $ is simply connected and  $ u  $ is harmonic in  $ \Omega  $, then  $ u  $ has a (single-valued) conjugate function  $ v  $ which uniquely determined up to additive constant.
+\end{theorem}
+\begin{proof}
+    The last lemma \ref{lemma:5.6.1:closed integral of *du is zero} and theorem \ref{thm:5.1.2:integral conserved iff it is a derivative of an analytic function} imply that there is a (single-valued) function  $ v  $ \st  $ {}^*\dd u=\dd v $ \ie 
+    \[\frac{\partial v}{\partial x}=-\frac{\partial u}{\partial x},\,\frac{\partial v}{\partial y}=\frac{\partial u}{\partial x}\] 
+
+    So  $ v  $ is a conjugate function of  $ u $. (Notice that we use the property of simply connection that every cycle in  $ \Omega $ is homologous to zero)
+    
+    If  $ v_1  $ and  $ v_2  $ are two such harmonic functions, then  $ f_1=u+iv_1 $,  $ f_2=u+iv_2 $ are both analytic in  $ \Omega $. So  $ f_1-f_2=i(v_1-v_2) $ is analytic in  $ \Omega $. The open mapping theorem \ref{open mapping theorem} implies   $ f_1-f_2 $ is a constant. 
+\end{proof}
+\begin{remark}
+    We see that the open mapping theorem \ref{open mapping theorem} has such power that it gives a way to prove an analytic function with some closed property is constant.
+\end{remark}
+\begin{remark}
+    The condition on simply connectness can not be removed. For instance,  $ u(z)=\ln|z| $ is harmonic in  $ \Cbb\backslash\{0\} $, but it cannot be written as the real part of an analytic function since  $ \ln|z|=\mathrm{Re}\ln z $   
+\end{remark}
+\subsubsection{The Mean-value Property}
+
+\begin{theorem}[Mean-value Property]\label{thm:5.6.2:mean-value property}
+    Let  $ u  $ be harmonic in a region  $ \Omega  $. If  $ \overline{B(z,R)}\subset \Omega $, then 
+    \begin{equation}
+        u(z)=\int_0^{2\pi }u(z_0+Re^{i\theta})\dd \theta\label{eq:5.6.2:mean-value property}
+    \end{equation} 
+\end{theorem}
+\begin{proof}
+    The previous theorem \ref{thm5.6.1:harmonic function is the real part of an analytic function in simply connected region} implies that  $ u  $ has a conjugate function  $ v  $ on  $ \overline{B(z_0,R)} $. Consider the analytic function  $ f=u+iv $. The Cauchy integral formula \ref{Generalized version of Cauchy's integral formula}  shows 
+    \begin{equation}
+        f(z_0)=\frac{1}{2\pi i}\int_{|z-z_0|=R}\frac{f(z)}{z-z_0}\dd z=\frac{1 }{2\pi }\int_0^{2\pi }f(z_0+Re^{i\theta})\dd \theta
+    \end{equation}
+    This theorem follows by taking the real part of the equation.
+\end{proof}
+\begin{theorem}
+    If  $ u  $ is harmonic in  $ \Omega $, and  $ \{z\in\Cbb:0<R_1 \leq |z-z_0| \leq R_2\}\subset \Omega $, then 
+    \begin{equation}
+        \frac{1 }{2\pi }\int_0^{2\pi }u(z_0+re^{i\theta})\dd\theta=\alpha\ln r+\beta\,r\in [R_1,R_2]
+    \end{equation}  
+    where  $ \alpha $ and  $ \beta $ are constants  
+\end{theorem}
+\begin{proof}
+    In polar coordinate  $ (r,\theta) $,  \[ \dps\triangle=\frac{\partial^2 }{\partial r^2}+\frac{1}{r}\cdot\frac{\partial }{\partial r} +\frac{1}{r^2}\cdot\frac{\partial^2 }{\partial \theta^2}=r^{-1}\frac{\partial }{\partial r}(r\cdot\frac{\partial }{\partial r})+r^{-2}\frac{\partial ^2}{\partial \theta^2}\]
+
+    Let  $ U(r)=\int_0^{2\pi }u(z_0+re^{i\theta})\dd\theta $.  $ z\mapsto u(z_0+z) $ is harmonic. Then 
+    \begin{equation}
+        \triangle U(r)=\frac{1}{2\pi }\int_0^{2\pi }\triangle u(z_0+re^{i\theta})\dd \theta=0
+    \end{equation} 
+    Therefore,  $ \dps\frac{\partial }{\partial r}\left(r\frac{\partial U}{\partial r}\right)=0 $. Therefore,
+     $ U(r)=\alpha\ln \gamma+\beta $.  
+\end{proof}
+\begin{theorem}[Maximal Principle of Harmonic Function]\label{thm:5.6.2:maximal principle of harmonic function}
+    A nonconstant harmonic function has neither a maximum nor a minimum in its region of definition.
+\end{theorem}
+\begin{proof}
+    Suppose  $ u  $ attains a maximum at  $ z_0\in\Omega  $.  $ \exists R>0  $ \st  $ B(z_0,R)\subset \Omega $. Suppose  $ \exists a\in B(z_0,R) $ \st  $ u(a)<u(z_0)=M $.
+    
+    The mean-value property implies 
+    \[M=u(z_0)=\frac{1}{2\pi }\int_0^{2\pi}u(z_0+re^{i\theta})\dd\theta<M \]
+    by continuity. This causes a contradiction.
+    
+    So  $ u  $ is a constant in  $ B(z_0,R) $. 
+    
+    Then for every  $ z_1 $ in the region, since we can find a series of disk such that the center of the disk is in the previous disk and  $ z_0 $ is the center of the first disk,  $ z_1 $ is in the last disk.
+    
+    Then by the property above,  $ u(z_0)=u(z_1) $. So  $ u  $ is a constant, which causes a contradiction! 
+\end{proof}
