@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  19 NOV 2024 23:55
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  21 NOV 2024 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1510,7 +1510,7 @@ runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
 
 ]
-Underfull \hbox (badness 2495) in paragraph at lines 119--120
+Underfull \hbox (badness 2495) in paragraph at lines 120--121
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
