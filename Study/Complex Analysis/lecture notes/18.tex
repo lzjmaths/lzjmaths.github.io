@@ -1,0 +1,130 @@
+%! TEX root = lecture/Complex_Analysis
+
+\begin{theorem}\label{thm:5.6.2:maximal principle of harmonic function on closed subset}
+    $ u $ is harmonic in the interior  of  $ E $ and continuous on  $ \overline{E} $, which is bounded, then the maximum  and minimum of  $ u  $ are taken on  $ \partial E  $.
+\end{theorem}
+\begin{proof}
+    It is followed from Theorem \ref{thm:5.6.2:maximal principle of harmonic function}
+\end{proof}
+It follows that the maximal norm of harmonic function $ u  $ is taken on  $ \partial E $, which implies a corollary 
+\begin{corollary}\label{cor:5.6.2:u1=u2 iff u1=u2 on the boundary}
+    If  $ u_1 $ and  $ u_2  $ are continuous on a closed bounded set  $ E  $ which are harmonic in the interior of  $ E  $ and  $ u_1=u_2  $ on the boundary of  $ E  $, then  $ u_1=u_2  $ on $ E  $.
+\end{corollary}
+\begin{proof}
+    Apply the maximum and minimum principle to  $ u_1-u_2 $ 
+\end{proof}
+\subsubsection{Poisson's Formula}
+\begin{theorem}[Poisson's formula]\label{thm:5.6.3:Poisson's formula}
+    Suppose that  $ u  $ is harmonic on  $ B(0,R ) $ and continuous on  $ \overline{B(0,R)} $. Then 
+    \begin{equation}
+        u(a)=\frac{1 }{2\pi }\int_{|z|=R}\dps\frac{R^2-|a|^2}{|z-a|^2}u(z)\dd \theta\label{eq:5.6.3:Poisson's formula}
+    \end{equation}
+    for  $\forall  a\in B(0,R) $. 
+\end{theorem}
+\begin{proof}
+    The idea is to use M{\"o}bius transformation and apply mean-value property.
+
+    Let  $ \zeta=S^{-1}(z)=\dps\frac{\frac{z}{R}-\frac{a}{R}}{1-\frac{\bar{a}}{R}\cdot \frac{z}{R}}=\frac{R(z-a)}{R^2-\bar{a}\cdot z} $. So  $ \dps z=S(\zeta)=\frac{R(R\zeta+a)}{R+\bar{a}\zeta} $ is a M{\"o}bius transformation mapping the unit circle into  $ B(0,R) $ in which $ 0\mapsto a $.
+    
+    Suppose  $ u(S(\zeta)) $ is harmonic on  $ |\zeta| \leq 1 $(See Remark \ref{rmk:5.6.3:general case in the proof of Poisson's formula}). The mean-value property implies 
+    \begin{equation}\label{eq1:5.6.3:Poisson's formula}
+        \begin{aligned}
+            u(S(0))=u(a)&=\dps\frac{-i}{2\pi}\int_{|\zeta|=1}u(\zeta)\frac{\dd\zeta}{\zeta}
+        \end{aligned}
+    \end{equation} 
+    where
+    \begin{equation}\label{eq2:5.6.3:Poisson's formula}
+        \begin{aligned}
+            \frac{\dd \zeta}{\zeta}&=\frac{R^2-\bar{a}z}{R(z-a)}\cdot\frac{R(R^2-|a|^2)}{(R^2-\bar{a}z)^2}\dd z\\
+            &=\left[\frac{1}{z-a}+\frac{\bar{a}}{R^2-\bar{a}z}\right]\dd z\\
+            &\overset{z=Re^{i\theta}}{=}\left[\dps\frac{iz}{z-a}+\frac{i\bar{a}z}{R^2-\bar{a}z}\right]\dd \theta\\
+            &=\overset{R^2=z\bar{z}}{=}\left[\dps\frac{iz}{z-a}+\frac{i\bar{a}}{\bar{z}-\bar{a}}\right]\dd\theta\\
+            &=i\frac{R^2-a^2}{|z-a|^2}\dd\theta
+        \end{aligned}
+    \end{equation}
+    Combined with \eqref{eq1:5.6.3:Poisson's formula} and \eqref{eq2:5.6.3:Poisson's formula}, we obtain \eqref{eq:5.6.3:Poisson's formula} in a stronger assumption. 
+    \[u(a)=\frac{1}{2\pi}\int_{|z|=R}\frac{R^2-|a|^2}{|z-a|^2}u(z)\dd \theta\]
+\end{proof}
+
+\begin{remark}
+    Note that  
+    \begin{equation}
+        \begin{aligned}
+            \dps\frac{R^2-|a|^2}{|z-a|^2}&=\dps\frac{z}{z-a}+\frac{\bar{a}}{\bar{z}-\bar{a}}\\
+            &=\frac{1}{2}\left[\frac{z}{z-a}+\frac{\bar{a}}{\bar{z}-\bar{a}}+\frac{\bar{z}}{\bar{z}-\bar{a}}+\frac{a}{z-a}\right]\\
+            &=\frac{1}{2}\left(\frac{z+a}{z-a}+\frac{\bar{z}+\bar{a}}{\bar{z}-\bar{a}}\right)\\
+            &=\Real\left(\frac{z+a}{z-a}\right)
+        \end{aligned}
+    \end{equation}
+    So the Poisson's formula can also be written as 
+    \begin{equation}
+        u(a)=\frac{1}{2\pi }\int_{|z|=R}\Real\left(\frac{z+a}{z-a}\right)u(z)\dd \theta,\,\forall a\in B(0,R)\label{eq':5.6.3:another form of Poisson's formula}
+    \end{equation}
+    or 
+    \begin{equation}
+        u(a)=\Real\left[\frac{1}{2\pi i}\dps\int_{|z|=R}\frac{z+a}{z-a}\cdot\frac{u(z)}{z}\dd z\right],\,\forall a\in B(0,R)\label{eq:5.6.3:Schwarz Formula}
+    \end{equation}
+    By Lemma \ref{sec5.2.3:Lemma of Analytic Properties of integral function},  $ u  $ is the real part of the analytic function 
+    \[f(z)=\frac{1}{2\pi i}\int_{|\zeta|=R}\frac{\zeta+z}{\zeta-z}\cdot\frac{u(\zeta)}{\zeta}\dd \zeta+iC\]
+    where  $ C\in\Rbb $. \eqref{eq:5.6.3:Schwarz Formula} is called the \name{Schwarz Formula}.
+\end{remark}
+\begin{remark}\label{rmk:5.6.3:general case in the proof of Poisson's formula}
+    For the general assumption in the theorem \ref{thm:5.6.3:Poisson's formula}, note that if  $ r\in (0,1) $, then  $ u(rz) $ is harmonic in  $ \overline{B(0,R)} $. The above proof implies 
+    \begin{equation}
+        u(ra)=\frac{1}{2\pi}\int_{|z|=R}\frac{R^2-|a|^2}{|z-a|^2}u(rz)\dd\theta\label{eq3:5.6.3:Poisson's formula}
+    \end{equation} 
+    Since   $ u $ is continuous on a compact set  $ \overline{B(0,R)} $, it is uniformly continuous. Then $ u(rz)\rightrightarrows u(z) $ uniformly for  $ |z|=R $ as  $ r\rightarrow 1 $.
+    
+    Then take  $ r\rightarrow 0 $ in \eqref{eq3:5.6.3:Poisson's formula} and we obtain Poisson's formula  holds under the assumption of the theorem.
+\end{remark} 
+\subsubsection{Schwarz's Theorem}
+We can easily define harmonic function $ u $ in the interior if  $ u  $ is piecewise continuous on the boundary by \eqref{eq:5.6.3:Schwarz Formula}. However, it is not always continuous at the boundary. The next theorem gives a condition that such an extended function $ u $ exists if  $ u  $ is continuous on the boundary.  
+\begin{theorem}[Schwarz's theorem]\label{thm:5.6.4:Schwarz's theorem}
+    Given a piecewise continuous function  $ u  $ on  $ [0,2\pi] $, the \name{Poisson integral }
+    \begin{equation}
+        P_u(z)=\frac{1}{2\pi }\int_0^{2\pi}\Real\left(\frac{e^{i\theta}+z}{e^{i\theta}-z}\right)u(\theta)\dd\theta
+    \end{equation} 
+    is harmonic for  $ |z|<1 $. Moreover,  $ \dps\lim_{\substack{\,\,\,z\to e^{i\theta}\\|z|<1}} P_u(z)=u(\theta_0)$  if  $ u $ is continuous t  $ \theta_0 $.   
+\end{theorem}
+\begin{proof}
+    Lemma \ref{sec5.2.3:Lemma of Analytic Properties of integral function} implies  $ P_u $ is harmonic in  $ |z|<1 $.  
+
+    Note that  $ P  $ is a \textbf{linear functional} which maps piecewise continuous function  $ u  $ on  $ [0,2\pi] $ to harmonic function  $ P_u $ on the unit disk. Explicitly,
+    \begin{equation}\label{eq1:5.6.4:Schwarz's theorem}
+        \begin{cases}
+            P_{u_1+u_2}=P_{u_1}+P_{u_2} \\
+            P_{\lambda u}= \lambda P_u
+        \end{cases}
+    \end{equation}
+
+    Applying Poisson's formula \ref{thm:5.6.3:Poisson's formula} to  $ u\equiv 1 $, we get  $ P_1=1 $, and thus  $ P_c=c ,\forall c\in \Rbb$.   
+
+    If  $ u \geq 0 $ on  $ [0,2\pi] $, then  $ P_u \geq 0 $. \eqref{eq1:5.6.4:Schwarz's theorem} follows that if  $ -\infty<m \leq u(\theta) \leq M<\infty $ for  $ \forall \theta\in [0,2\pi] $, then  $ m \leq P_u \leq M $. 
+    
+    By replacing  $ u $ with  $ u-u(\theta_0) $, WLOG, we may assume  $ u(\theta_0)=0 $.
+    
+    If $ u  $ is continuous at  $ \theta_0 $, then  $ \forall \epsilon>0 $, one can choose  $ C_2\subset \partial B(0,1) $ \st  $ e^{i\theta_0}\in\mathrm{int}(C_2) $ and  $ |u(\theta) |<\frac{\epsilon}{2}$ for  $ \forall e^{i\theta}\in C_2 $. Let  $ C_1=\partial B(0,1)\setminus C_2 $. Define
+    \begin{align}
+        u_1(\theta)=\begin{cases}
+            u(\theta),&e^{i\theta}\in C_1\\
+            0,&\text{otherwise}
+        \end{cases}
+        \quad
+        &u_2(\theta)=\begin{cases}
+            u(\theta),&e^{i\theta}\in C_2\\
+            0,&\text{otherwise}
+        \end{cases}
+    \end{align}  
+
+    Linearity of  $ P $ implies  $ P_u=P_{u_1}+P_{u_2} $.  $ \dps|u_2|<\frac{\epsilon}{2} $ $ \Rightarrow |P_{u_1}(z)|<\frac{\epsilon}{2},\forall z\in B(0,1) $. So  $ \dps \lim_{\substack{\,\,\,z\to e^{i\theta}\\|z|<1}} P_{u_2}(z)=0 $ 
+    
+     $ P_{u_1} $ can be viewed as a line integral over  $ C_1 $  $ \Rightarrow $  $ P_{u_1} $ is harmonic in  $ \Cbb\setminus C_1 $. So  $ P_{u_1} $ is harmonic in  $ \Cbb\setminus C_1 $ by lemma \ref{sec5.2.3:Lemma of Analytic Properties of integral function}.
+
+    $ \dps\Real\left(\frac{e^{i\theta}+z}{e^{i\theta}-z}\right)=\frac{1-|z|^2}{|z-e^{i\theta}|^2} $  $ \Rightarrow  $  $ P_{u_1}(z)=0 $ for  $ z\in C_2 $. Continuity  implies  $ \dps \lim_{\substack{\,\,\,z\to e^{i\theta}\\|z|<1}} P_{u_1}(z)=0$.
+
+    Therefore,  $ \dps \lim_{\substack{\,\,\,z\to e^{i\theta}\\|z|<1}} P_{u}(z)=0=u(\theta_0) $ 
+\end{proof}
+\subsubsection{The Reflection Principle}
+\begin{theorem}[The reflection principle]\label{thm:5.6.5:The reflection principle}
+    Let  $ \Omega  $ be a region which is symmetric w.r.t. the  $ x $-axis, and  $ \Omega^+:=\Omega\cap\{z\in \Cbb:\Imag z>0\} $,  $ \sigma=\Omega\cap\{z\in \Cbb:\Imag z=0\} $. Suppose that  $  v  $ is continuous in  $ \Omega^+\cup\sigma $, harmonic on  $ \Omega^+ $, and  zero on  $ \sigma $. Them  $ v  $ has a harmonic extension to  $ \Omega $, which satisfies  $ v(\bar{z})=-v(z) $. In the same situation, if   $ v  $ is the imaginary part of an analytic function  $ f(z) $ in  $ \Omega^+ $, then  $ f(z)  $ has an analytic extension  which satisfies  $ f(z)=\overline{f(\bar{z})} $. 
+\end{theorem}
