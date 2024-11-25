@@ -175,7 +175,7 @@ Equivalently,  $ \dps\mathcal{L}_X\tau|_U=\lim_{t\to 0}\frac{\varphi_t^*(\tau)|_
     \end{align*}
 \end{proof}
 Given  $ X\in \Gamma(TM) $, define \name{contraction}  $ X\mathrel{\lrcorner} -:\Omega^k(M)\rightarrow \Omega^{k-1}(M)  $ by 
-    \[(X\mathrel{\lrcorner}\alpha)(Y_2,\cdots,Y_k):=\alpha(X,Y_2,\cdots,Y_k)\,\text{ for  $ Y_2,\cdots,Y_k\in \Gamma(TX) $ }\] 
+    \[(X\mathrel{\lrcorner}\alpha)(Y_2,\cdots,Y_k):=\alpha(X,Y_2,\cdots,Y_k)\,\text{ for  $ Y_2,\cdots,Y_k\in \Gamma(TM) $ }\] 
     
 Often abbreviated to  $ \iota_X:\Omega^k(M)\rightarrow \Omega^{k-1}(M) $. 
 
@@ -189,7 +189,8 @@ Often abbreviated to  $ \iota_X:\Omega^k(M)\rightarrow \Omega^{k-1}(M) $.
      \end{equation}
 \end{example}
 \begin{theorem}[Cartan's Magical Formula]\label{thm:Cartan's Magical Formula}
-     $ \mathcal{L}_X(\omega)=X\mathrel{\lrcorner}\dd \omega+\dd(X\mathrel{\lrcorner}\omega) $ 
+     $ \mathcal{L}_X(\omega)=X\mathrel{\lrcorner}\dd \omega+\dd(X\mathrel{\lrcorner}\omega) $. Also written as 
+     \[\mathcal{L}_X(\omega)=\iota_X(\dd \omega)+\dd(\iota_X\omega)\] 
 \end{theorem}
 \begin{proof}
     Need to show  $ \left(\mathcal{L}_X\omega\right)_p=\left(X\mathrel{\lrcorner}(\dd\omega)\right)_p+\left(\dd(X\mathrel{\lrcorner}\omega)\right)_p $.
