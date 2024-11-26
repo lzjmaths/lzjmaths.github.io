@@ -29,6 +29,8 @@
   \item $ \mathrm  {Sym}^n(V) $, \hyperpage{40}
   \item $ \mathrm  {Vol}(D) $, \hyperpage{72}
   \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{25}
+  \item $ k $-boundary, \hyperpage{78}
+  \item $ k $-cycles, \hyperpage{78}
   \item $ k $-form, \hyperpage{41}
   \item $ n $-tensor, \hyperpage{39}
   \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{6}
@@ -42,11 +44,14 @@
 
   \indexspace
 
+  \item boundary map, \hyperpage{78}
   \item bump function , \hyperpage{8}
 
   \indexspace
 
+  \item chain map, \hyperpage{78}
   \item closed form, \hyperpage{50}
+  \item cochain complex, \hyperpage{78}
   \item commutes, \hyperpage{30}
   \item complete, \hyperpage{16}
   \item completely integrable, \hyperpage{76}
@@ -63,7 +68,7 @@
   \indexspace
 
   \item de Rham cohomology, \hyperpage{50}
-  \item differential, \hyperpage{10}
+  \item differential, \hyperpage{10}, \hyperpage{78}
   \item Dual bundle of a vector bundle, \hyperpage{45}
   \item dual vector bundle, \hyperpage{46}
 
@@ -81,6 +86,7 @@
 
   \item fiber, \hyperpage{13}
   \item flow, \hyperpage{16}
+  \item foliation, \hyperpage{77}
 
   \indexspace
 
@@ -92,6 +98,7 @@
   \item Hamiltonian flow, \hyperpage{73}
   \item Hamiltonian vector field, \hyperpage{73}
   \item homogeneous space, \hyperpage{6}
+  \item homology, \hyperpage{78}
 
   \indexspace
 

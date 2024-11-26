@@ -94,7 +94,7 @@ Consider vector fields on  $ \Rbb^3 $,  $ X_1=\dps\frac{\partial }{\partial x}+\
 
      Equivalently, this means for any  $ p\in M  $, there exists a neighborhood $ U  $  of  $ p $, and smooth vector fields  $ Y_1,\cdots,Y_k $ on  $ U  $ \st  $ D_q=\Span\<Y_{1,q},\cdots,Y_{k,q}\> $,  $ \forall q\in U $.
 
-     An immersed submanifold  $ \varphi:N\looparrowright M  $ is called an \name{integral manifold} for   $ D  $ if  $ T_qN=D_q $,  $ \forall q\in N $.  \ie  $ \varphi_*(T_qN)=D{\varphi(q)} $. Identify  $ N $ with  $ \varphi(N) $ to simplify notation.
+     An immersed submanifold  $ \varphi:N\looparrowright M  $ is called an \name{integral manifold} for   $ D  $ if  $ \forall q\in N $, $ \varphi_*(T_qN)=D_{\varphi(q)} $. Identify  $ N $ with  $ \varphi(N) $ to simplify notation, It can be abbreviated as $ T_qN=D_q $,  
     
 \end{definition}
 
@@ -126,7 +126,9 @@ Consider vector fields on  $ \Rbb^3 $,  $ X_1=\dps\frac{\partial }{\partial x}+\
     That implies that  $ N  $ contains  $ X-Y $ plane near  $ (0,0,0) $ but now  $ T_pN=\Span\dps\left\{\frac{\partial }{\partial x},\frac{\partial}{\partial y}\right\}\neq D_p $.   
 \end{proof}
 \begin{remark}
-    This example shows that a distribution doesn't have integral manifold always. This property that have integral manifold implies some "linear properties", or equivalently, it should be closed under the action by local flows in that case.
+    This example shows that a distribution doesn't have integral manifold always. This property that have integral manifold implies something more than linearity, or in some sense, it should be closed under the action by local flows in that case.
+
+    Here we introduce Frobenius theorem to explain it.
 \end{remark}
 \begin{definition}
     Let  $ D  $ be a  $ k $-dimensional distribution on  $ M $.

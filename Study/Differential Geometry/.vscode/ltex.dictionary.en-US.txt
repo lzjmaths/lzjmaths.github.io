@@ -3,3 +3,9 @@ orthogonormal
 diffeomorphism
 iff
 Frobenius
+submanifolds
+involutive
+Involutive
+injectively
+submanifold
+cochain

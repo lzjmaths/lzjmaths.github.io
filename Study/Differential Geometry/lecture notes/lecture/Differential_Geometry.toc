@@ -35,5 +35,7 @@
 \contentsline {subsubsection}{\numberline {6.6.1}Divergence of vector fields}{71}{subsubsection.6.6.1}%
 \contentsline {subsubsection}{\numberline {6.6.2}Hamiltonian vector fields on symplectic manifolds}{72}{subsubsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.7}Frobenius Theorem}{74}{subsection.6.7}%
-\contentsline {section}{Index}{77}{section*.4}%
-\contentsline {section}{List of Theorems}{80}{section*.5}%
+\contentsline {section}{\numberline {7}de-Rham Cohomology}{78}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Basic Definition}{78}{subsection.7.1}%
+\contentsline {section}{Index}{80}{section*.4}%
+\contentsline {section}{List of Theorems}{83}{section*.5}%

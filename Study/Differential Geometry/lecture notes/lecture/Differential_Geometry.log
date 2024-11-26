@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  25 NOV 2024 19:20
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  26 NOV 2024 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1512,40 +1512,43 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 109.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 109.
-[75]) [76]
+[75]) (../DG20.tex [76] [77] [78]) [79]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [77
+ (./Differential_Geometry.ind [80
 
 
 ]
-Underfull \hbox (badness 2495) in paragraph at lines 127--128
+Underfull \hbox (badness 2495) in paragraph at lines 134--135
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[78] [79])
+[81] [82])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [80
+(./Differential_Geometry.loe [83
 
-] [81] [82])
+] [84] [85])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [83] (./Differential_Geometry.aux)
+ [86] (./Differential_Geometry.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: 33C239F3FE1580162B218F4562A9A3A6;6323.
+(rerunfilecheck)             Checksum: 32AFBB318A1E7FE3F7E2619783E0B3D7;6601.
  ) 
 Here is how much of TeX's memory you used:
- 47191 strings out of 476683
- 1070748 string characters out of 5804047
+ 47263 strings out of 476683
+ 1072535 string characters out of 5804047
  1864018 words of memory out of 5000000
- 66483 multiletter control sequences out of 15000+600000
+ 66552 multiletter control sequences out of 15000+600000
  564238 words of font info for 173 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (83 pages).
+Output written on Differential_Geometry.pdf (86 pages).

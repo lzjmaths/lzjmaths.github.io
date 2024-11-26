@@ -190,3 +190,9 @@
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.45\else \numberline {6.45}Remark\fi }{75}{remark.6.45}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.46\else \numberline {6.46}Definition\fi }{75}{definition.6.46}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.47\else \numberline {6.47}Theorem\fi \thmtformatoptarg {Local Frobenius}}{76}{theorem.6.47}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.48\else \numberline {6.48}Lemma\fi }{77}{lemma.6.48}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}6.49\else \numberline {6.49}Corollary\fi }{77}{corollary.6.49}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}6.50\else \numberline {6.50}Example\fi }{78}{example.6.50}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.51\else \numberline {6.51}Theorem\fi \thmtformatoptarg {Global Frobenius}}{78}{theorem.6.51}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}7.1\else \numberline {7.1}Example\fi }{78}{example.7.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}7.2\else \numberline {7.2}Example\fi }{79}{example.7.2}%
