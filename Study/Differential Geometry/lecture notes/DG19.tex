@@ -133,10 +133,11 @@ Consider vector fields on  $ \Rbb^3 $,  $ X_1=\dps\frac{\partial }{\partial x}+\
 \begin{definition}
     Let  $ D  $ be a  $ k $-dimensional distribution on  $ M $.
     
+    We say a chart  $ (U,\varphi) $ on  $ M  $ is \name{flat} for  $ D $ if  $ \varphi(U) $ is a product of connected open sets  $ U'\times U''\subset \Rbb^k\times \Rbb^{n-k} $, and at points of  $ U $,  $ D  $ is spanned by the fiest  $ k $ coordinate vector fields  $\dps \frac{\partial}{\partial x^1},\cdots,\frac{\partial}{\partial x^k} $   
     \begin{enumerate}[label=(\arabic*)]
         \item We say  $ D $ is \name{involutive} if for any open  $ U\subset M $, any smooth sections  $ X,Y\in \Gamma(D|_U) $, we have  $ [X,Y]\in\Gamma(D|_U) $.
-        \item We say  $ D $ is \name{integrable} for any  $ p\in M $, there exists an integral submanifold  $ N $ for  $ D $      \st  $ p\in N $
-        \item We say  $ D $ is \name{completely integrable} if  $ \forall p\in M $, there exists local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ \st  $ D|_U=\dps\Span\left\{\frac{\partial}{\partial x^1},\cdots,\frac{\partial}{\partial x^k}\right\} $      
+        \item We say  $ D $ is \name{integrable} for any  $ p\in M $, there exists an integral submanifold  $ N $ for  $ D $      \st  $ p\in N $   
+        \item We say  $ D $ is \name{completely integrable} if  $ \forall p\in M $, there exists local chart  $ (U,x^1,\cdots,x^n) $ around  $ p $ \st  $ D|_U=\dps\Span\left\{\frac{\partial}{\partial x^1},\cdots,\frac{\partial}{\partial x^k}\right\} $.\ \ie There exists a flat chart for  $ D  $ in a neighborhood of every point of  $ M $.       
     \end{enumerate}
 \end{definition}
 \begin{theorem}[Local Frobenius]\label{thm:local-frobenius}
