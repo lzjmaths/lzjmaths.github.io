@@ -4,7 +4,7 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Polynomials and rational function}{4}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Power Series}{7}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Power series}{7}{subsubsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}Exponential, Trigonometric and logorithmic functions}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Exponential, Trigonometric and Logorithmic Functions}{7}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Exponential and Trigonometric function}{7}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Logorithmic Functions}{7}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Conformal Mappings}{8}{section.3}%
@@ -22,37 +22,40 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Symmetry}{13}{subsubsection.3.3.2}%
 \contentsline {paragraph}{Geometric Meaning of Symmetry}{13}{paragraph*.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Steiner Circles, circular net}{15}{subsubsection.3.3.3}%
-\contentsline {section}{\numberline {4}Elementary Conformal mapping}{16}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Elementary Riemann surfaces}{17}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Complex Integration}{18}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Fundamental Theorems}{18}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Line integral and rectifiable arcs}{18}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{19}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Cauchy's theorem for a rectangle}{22}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Cauchy's Theorem for a disk}{23}{subsubsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.2}Cauchy's integral formula}{24}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Index of a point with resect to a closed curve}{24}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Cauchy's integral formula}{26}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Higher derivatives}{27}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}Consequences of Cauchy}{28}{subsubsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.3}Local properties of analytic functions}{30}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Removable Singularities and Taylor's Theorem}{30}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Zeros and poles}{33}{subsubsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3}The Local Mappings}{38}{subsubsection.5.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.4}The Maximum Principle}{41}{subsubsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.4}The General Form of Cauchy's Theorem}{42}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Chains and Cycles}{42}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Simple connectivity and homology}{43}{subsubsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.3}The general form of Cauchy's theorem}{44}{subsubsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.5}The Calculus of Residues}{46}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}The Residue Theorem}{46}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}The Argument Principle}{48}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3}Evaluation of Definite integrals}{51}{subsubsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.6}Harmonic Functions}{55}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}Definition and basis properties}{55}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}The Mean-value Property}{57}{subsubsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.3}Poisson's Formula}{59}{subsubsection.5.6.3}%
-\contentsline {subsubsection}{\numberline {5.6.4}Schwarz's Theorem}{61}{subsubsection.5.6.4}%
-\contentsline {subsubsection}{\numberline {5.6.5}The Reflection Principle}{63}{subsubsection.5.6.5}%
-\contentsline {section}{Index}{64}{theorem.5.78}%
-\contentsline {section}{List of Theorems}{66}{theorem.5.78}%
+\contentsline {subsection}{\numberline {3.4}Elementary Conformal mapping}{16}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Elementary Riemann surfaces}{17}{subsubsection.3.4.1}%
+\contentsline {section}{\numberline {4}Complex Integration}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Fundamental Theorems}{17}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Line integral and rectifiable arcs}{17}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{19}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Cauchy's theorem for a rectangle}{21}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Cauchy's Theorem for a disk}{23}{subsubsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.2}Cauchy's integral formula}{24}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Index of a point with resect to a closed curve}{24}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Cauchy's integral formula}{26}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Higher derivatives}{27}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Consequences of Cauchy}{28}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Local properties of analytic functions}{30}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Removable Singularities and Taylor's Theorem}{30}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Zeros and poles}{33}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}The Local Mappings}{38}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}The Maximum Principle}{41}{subsubsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.4}The General Form of Cauchy's Theorem}{42}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Chains and Cycles}{42}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Simple connectivity and homology}{43}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}The general form of Cauchy's theorem}{44}{subsubsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.5}The Calculus of Residues}{46}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}The Residue Theorem}{46}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}The Argument Principle}{48}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Evaluation of Definite integrals}{51}{subsubsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.6}Harmonic Functions}{55}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Definition and basis properties}{55}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}The Mean-value Property}{57}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Poisson's Formula}{59}{subsubsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.4}Schwarz's Theorem}{61}{subsubsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.5}The Reflection Principle}{63}{subsubsection.4.6.5}%
+\contentsline {section}{\numberline {5}Series and Product Representations}{65}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Power Series Expansions}{65}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Weierstrass's Theorem}{65}{subsubsection.5.1.1}%
+\contentsline {section}{Index}{67}{equation.5.4}%
+\contentsline {section}{List of Theorems}{69}{equation.5.4}%

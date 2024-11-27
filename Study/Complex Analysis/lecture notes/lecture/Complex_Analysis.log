@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  25 NOV 2024 16:55
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  27 NOV 2024 09:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1497,7 +1497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--50
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 65.
  [12]) (../5.tex [13] [14]) (../6.tex [15]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 42.
- [16] [17]) (../7.tex [18]
+ [16]) (../7.tex [17] [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
@@ -1506,7 +1506,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
 
-[19] [20] [21]) (../8.tex [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31]) (../11.tex [32] [33] [34] [35]) (../12.tex [36] [37] [38]) (../13.tex [39] [40] [41]) (../14.tex [42] [43] [44]) (../15.tex [45] [46] [47] [48] [49]) (../16.tex [50]
+[19] [20]) (../8.tex [21] [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31]) (../11.tex [32] [33] [34] [35]) (../12.tex [36] [37] [38]) (../13.tex [39] [40] [41]) (../14.tex [42] [43] [44]) (../15.tex [45] [46] [47] [48] [49]) (../16.tex [50]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
 [51]
@@ -1521,37 +1521,42 @@ Overfull \hbox (16.29897pt too wide) detected at line 23
 [][] [] \U/matha/m/n/12 ^^P [][] \OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 z \U/matha/m/n/12 ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi [] [][]f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi\U/matha/m/n/12 r[][]\OML/cmm/m/it/12 f \U/matha/m/n/12 ^^@ [][]\OML/cmm/m/it/12 f\U/matha/m/n/12 s ^^P []
  []
 
-[55] [56] [57] [58]) (../18.tex [59] [60] [61] [62]) [63]
+[55] [56] [57] [58]) (../18.tex [59] [60] [61] [62]) (../19.tex [63]
+Underfull \hbox (badness 2538) in paragraph at lines 67--72
+[]\T1/ppl/m/n/12 For the sec-ond part of the the-o-rem, it is enough to prove $[]\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P
+ []
+
+[64] [65]) [66]
 runsystem(makeindex Complex_Analysis.idx)...executed safely (allowed).
 
- (./Complex_Analysis.ind [64
+ (./Complex_Analysis.ind [67
 
 
-] [65
+] [68
 
 ])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [66
+(./Complex_Analysis.loe [69
 
-] [67])
+] [70])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [68] (./Complex_Analysis.aux)
+ [71] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
-(rerunfilecheck)             Checksum: 0927687F183794C7F1D5E61D7268E599;11011.
+(rerunfilecheck)             Checksum: EBD11DBA81837ABAF2DBA55EF5A1D36F;11613.
  ) 
 Here is how much of TeX's memory you used:
- 40279 strings out of 476683
- 819128 string characters out of 5804047
+ 40309 strings out of 476683
+ 819890 string characters out of 5804047
  1857018 words of memory out of 5000000
- 59662 multiletter control sequences out of 15000+600000
+ 59689 multiletter control sequences out of 15000+600000
  548437 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,16n,101p,719b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (68 pages).
+Output written on Complex_Analysis.pdf (71 pages).
