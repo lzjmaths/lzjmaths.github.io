@@ -20,6 +20,9 @@
     
     By canonical form of commuting vector fields \ref{Canonical Form of Commuting Vector Field}, there exists local charts  $ (U,x^1,\cdots,x^n) $  \st  $ X_i=\partial x^i $,  $ 1 \leq i \leq k $. So  $ D|_U=\Span\{\partial x^1,\cdots,\partial x^k\} $   
 \end{proof}
+\begin{remark}
+    Indeed, completely integrable means more. We can find an embedding integrable manifold locally for completely integrable.
+\end{remark}
 \begin{lemma}
     Let  $ D  $ be a  $ k $-dimensional distribution. Then  $ D $ is involutive iff there exists an open cover  $ \mathcal{U} $,   $ \forall U\in\mathcal{U} $,  $ \exists X_1,\cdots,X_k\in \Gamma(TU) $ \st  $ D|_U=\Span\{X_1,\cdots,X_k\} $ and  $ [X_i,X_j]\in \Gamma(D|_U) $    
 \end{lemma}
@@ -28,28 +31,28 @@
     
     "$ \Leftarrow $" Just need to show  $ D|_U $ is involutive for each  $ U $.
     
-     $ \forall X,Y\in \Gamma(D|_U) $,  $ X=\dps\sum_{i=1}^nf^iX_i,Y=\sum_{i=1}^n g^iX_i $,  $ f^i,g^i:U\rightarrow \Rbb $.
-     Then 
-     \begin{equation}
+    $ \forall X,Y\in \Gamma(D|_U) $,  $ X=\dps\sum_{i=1}^nf^iX_i,Y=\sum_{i=1}^n g^iX_i $,  $ f^i,g^i:U\rightarrow \Rbb $.
+    Then 
+    \begin{equation}
         \begin{aligned}
             [X,Y]&=\sum_{i,j}f^ig^j[X_i,X_j]+\sum_{i,j}f^iX_i(g^j)X_j-\sum_{i,j}g^jX_j(f)X_i\in \Gamma(D)
         \end{aligned}
-     \end{equation}
+    \end{equation}
 \end{proof}
 \begin{corollary}
-     $ \dps\begin{cases}
+    $ \dps\begin{cases}
         \dps\frac{\partial f}{\partial x}=\alpha(x,y,f(x,y))\\
         \dps\frac{\partial f}{\partial y}=\beta(x,t,f(x,y))
-     \end{cases}, f(x_0,y_0)=z_0 $ has local solution for  $ \forall (x_0,y_0,z_0) $ iff  \[ \dps\frac{\partial \alpha}{\partial y}+\beta\frac{\partial \alpha}{\partial z}=\frac{\partial \beta}{\partial x}+\alpha\frac{\partial \beta}{\partial z} \] 
+    \end{cases}, f(x_0,y_0)=z_0 $ has local solution for  $ \forall (x_0,y_0,z_0) $ iff  \[ \dps\frac{\partial \alpha}{\partial y}+\beta\frac{\partial \alpha}{\partial z}=\frac{\partial \beta}{\partial x}+\alpha\frac{\partial \beta}{\partial z} \] 
 \end{corollary}
 \begin{proof}
-     $ \Rightarrow $ is because of  $ \dps\frac{\partial^2 f}{\partial x\partial y}=\frac{\partial^2 f}{\partial y\partial x} $.
-     
+    $ \Rightarrow $ is because of  $ \dps\frac{\partial^2 f}{\partial x\partial y}=\frac{\partial^2 f}{\partial y\partial x} $.
+    
     "$ \Leftarrow $" Consider  $ D=\Span\{\frac{\partial }{\partial x}+\alpha\frac{\partial }{\partial z},\frac{\partial}{\partial y}+\beta\frac{\partial }{\partial z}\} $   $ 2 $ dimensional distribution on  $ \Rbb^3 $.
     \[[\frac{\partial }{\partial x}+\alpha\frac{\partial}{\partial z},\frac{\partial }{\partial y}+\beta\frac{\partial }{\partial z}]=\left(\frac{\partial \beta}{\partial x}+\alpha\frac{\partial \beta}{\partial z}-\frac{\partial \alpha}{\partial y}-\beta\frac{\partial\alpha}{\partial z}\right)\dps\frac{\partial}{\partial z}=0\]  
-    So  $ D  $ is involutive  $ \Rightarrow  $  $ \forall (x_0,y_0,z_0) $,  $ \exists N\looparrowright \Rbb^3 $ \st  $ (x_0,y_0,z_0) \in N$,  $ N  $ is an integrable manifold of  $ D $.
+    So  $ D  $ is involutive  $ \Rightarrow  $  $ \forall (x_0,y_0,z_0) $,  $ \exists N\hookrightarrow \Rbb^3 $ \st  $ (x_0,y_0,z_0) \in N$,  $ N  $ is an integrable manifold of  $ D $.
     
-    $ N\looparrowright \Rbb^3\xrightarrow{(x,y,z)\mapsto (x,y)}\Rbb^2 $ is a submersion. So  $ N  $ can be locally written as  $ (x,y,f(x,y)) $ for  $ f:U\rightarrow \Rbb $   
+    $ N\hookrightarrow \Rbb^3\xrightarrow{(x,y,z)\mapsto (x,y)}\Rbb^2 $ is a submersion. So  $ N  $ can be locally written as  $ (x,y,f(x,y)) $ for  $ f:U\rightarrow \Rbb $   
 \end{proof}
 
 A  $ k $-dimensional \name{foliation} is a decomposition  $ M=\dps\bigcup_s N_s $ \st (1) Each  $ N_s  $ is an injective immersed  $ k $-dimensional submanifold. (2)  $ \forall p\in M $,  $ \exists  $ local chart  $ (U,x^1,\cdots,x^n) $  \st  $ \forall s\in S $,  $ N_s\cap U=\Rbb^k\times A_s $.  $ A_s $ is a countable subset of  $ \Rbb^{n-k} $,  $ A_s $ is a countable subset of  $ \Rbb^{n-k} $        
@@ -64,7 +67,7 @@ A  $ k $-dimensional \name{foliation} is a decomposition  $ M=\dps\bigcup_s N_s 
 \subsection{Basic Definition}
 A \name{cochain complex} over  $ \Zbb $ is a graded abelian group  $ C=\dps\bigotimes_{b\in \Zbb}C^n $ with a deg-1 map  $ \dd=\dps\bigotimes_n\left(\dd^n:C^n\rightarrow C^{n+1}\right) $ \st  $ \dd^2=0 $.
 
- $ \dd $ is  called \name{differential} or \name{boundary map}
+$ \dd $ is  called \name{differential} or \name{boundary map}
 
 The  $ k $-th \name{homology}
 \begin{equation}
@@ -72,17 +75,17 @@ The  $ k $-th \name{homology}
 \end{equation} 
 The denominator is the set of  \name{$ k $-boundary}. The numerator is the set of  \name{$ k $-cycles} 
 \begin{example}
-     $ C_{DR}^*(M)=\dps\bigotimes_{n\in \Zbb}\Omega^n(M) $ is homology equipped with the exterior differential $ \dd $. And 
-     \begin{equation}
+    $ C_{DR}^*(M)=\dps\bigotimes_{n\in \Zbb}\Omega^n(M) $ is homology equipped with the exterior differential $ \dd $. And 
+    \begin{equation}
         H^k(C_{DR}^*(M),\dd)=H_{DR}^*\cong H^k(M;\Rbb)
-         \end{equation}
+    \end{equation}
     where  $ H^k(M;\Rbb) $ is the singular cohomology.
 \end{example}
 Given cochain complexed  $ (A,\dd_A),(B,\dd_B) $, a \name{chain map}  $ f:(A,\dd_A)\rightarrow (B,\dd_B) $ is a degree 0(\ie  $ f(A^n)\subset B^n $) group homomorphism \st  $ \dd_B\circ f=f\circ \dd_A $.
 
 If $ f  $ is a chain map, then  $ f $ maps  $ k $-cycles to  $ k $-cycles and  $ k $-boundariise to  $ k $-boundaries. So  $ f $ induces  $ f^*:H^k(A,\dd_A)\rightarrow H^k(B,\dd_B) $.
 \begin{example}
-     $ f:\in C^\infty(M,N) $ $ \Rightarrow  $  $ f^*:\Omega^k(N)\rightarrow \Omega^k(M) $  induces a chain map  $ f^*:C_{DR}^*(N)\rightarrow C_{DR}^*(M) $ $ \Rightarrow  $ $ f^*:H^*_{DR}(N)\rightarrow H_{DR}^*(M) $ satisfies  $ (f\circ g)^*=g^*\circ f^*,(\id)^*=\id $    
+    $ f:\in C^\infty(M,N) $ $ \Rightarrow  $  $ f^*:\Omega^k(N)\rightarrow \Omega^k(M) $  induces a chain map  $ f^*:C_{DR}^*(N)\rightarrow C_{DR}^*(M) $ $ \Rightarrow  $ $ f^*:H^*_{DR}(N)\rightarrow H_{DR}^*(M) $ satisfies  $ (f\circ g)^*=g^*\circ f^*,(\id)^*=\id $    
 \end{example}  
 
 Given chain maps  $ f,g:(A,\dd_A)\rightarrow (B,\dd_B) $, a chain homotopy from  $ f  $ to  $ g  $ is a deg-(-1) map  $s: A\rightarrow B $  \st  $ \dd_Bs+d\dd_A=f-g $. In this case we write  $ f\simeq g $.
