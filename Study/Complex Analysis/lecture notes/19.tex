@@ -44,7 +44,7 @@
         v(\bar{z}),&z\in\Omega^-
     \end{cases} $.
 
-    We need to prove that  $ h $ is harmonic in  $ \Omega $. It suffices to prove  $ h  $ is harmonic on  $ \sigma $. Choose  $ \daleth  $ small \st  $ \overline{B(x,\delta)}\subset \Omega $. Let  $ P_h  $ be the Poisson integral  w.r.t.  $ \partial B(x_0,\delta) $ with the boundary values  $ h  $.
+    We need to prove that  $ h $ is harmonic in  $ \Omega $. It suffices to prove  $ h  $ is harmonic on  $ \sigma $. Choose  $ \delta  $ small \st  $ \overline{B(x,\delta)}\subset \Omega $. Let  $ P_h  $ be the Poisson integral  w.r.t.  $ \partial B(x_0,\delta) $ with the boundary values  $ h  $.
 
     Schwarz' theorem \ref{thm:5.6.4:Schwarz's theorem} implies  $ P_h $ is harmonic in  $ \overline{B(x,\delta)} $ and continuous on  $ \overline{B(x_0,\delta)} $. It follows that,
     
@@ -52,7 +52,7 @@
 
     (2) $ v-P_h=0 $ on  $ \partial B(x,\delta)\cap\{z\in\Cbb:\Imag z \geq 0\} $.  
 
-    $ \forall x\in B(x_0,\delta\cap )\sigma $, apply Poisson formula \ref{eq:5.6.3:Poisson's formula}
+    $ \forall x\in B(x_0,\delta)\cap \sigma $, apply Poisson formula \ref{eq:5.6.3:Poisson's formula}
     \begin{equation}
         P_h(x)=\frac{1}{2\pi}\int_0^{2\pi}\dps\frac{\delta^2-|x|^2}{|\delta e^{i\theta}-x|^2}h(\delta e^{i\theta})\dd\theta=0
     \end{equation} 
@@ -85,6 +85,10 @@
 
 
 \end{proof}
+
+\begin{remark}
+    The reflection principle can be applied to any circles with symmetric points by using M{\"o}bius transformation. However, the condition of $ f(\Rbb)\subset \Rbb $ (\ie  $ v(\Rbb)=0) $ transforms to  $ f(C)\subset C $. 
+\end{remark}
 
 \section{Series and Product Representations}
 \subsection{Power Series Expansions}
