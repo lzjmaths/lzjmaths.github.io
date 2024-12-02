@@ -1,41 +1,42 @@
-\contentsline {section}{\numberline {1}Smooth Manifold}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Lie Groups and Homogeneous Spaces}{6}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Bump Function and Partition of Unity}{8}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Tangent space and tangent vectors}{10}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Tangent Space}{10}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Tangent Bundle}{11}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Vector Field, Curves and Flows}{14}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Another Definition of Vector Field}{19}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Lie group, Lie algebra and Lie bracket}{20}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Lie Bracket}{20}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Lie Algebra of a Lie Group}{24}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Morphisms between Lie group and Lie algebras}{27}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Vector Field}{28}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Canonical form of a Field}{28}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Lie Derivative of Vector Field}{28}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Commuting Vector Fields}{30}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Canonical Form of Commuting Vector Field}{32}{subsubsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.4}The Constant Rank Theorem}{33}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Differential forms}{37}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Introduction}{37}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Alternating Vector Linear Algebra}{38}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Operation on Vector Bundles}{45}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Differential forms using local chart}{47}{subsection.5.4}%
-\contentsline {paragraph}{Change of coordinate}{47}{section*.2}%
-\contentsline {subsection}{\numberline {5.5}Exterior Differential}{47}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Pull Back of Differential Forms}{49}{subsection.5.6}%
-\contentsline {section}{\numberline {6}Orientation and Integration of Differential Form}{52}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Orientation on Manifold}{52}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Integration on Oriented Manifold}{54}{subsection.6.2}%
-\contentsline {paragraph}{Goal:}{54}{section*.3}%
-\contentsline {subsection}{\numberline {6.3}Smooth Manifold with Boundary}{57}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Riemannian Metric}{60}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Orientability of $ \mathbb R\mathbb P^{n-1} $}{65}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Tensor Field and Lie Derivative}{66}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Divergence of vector fields}{71}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Hamiltonian vector fields on symplectic manifolds}{72}{subsubsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.7}Frobenius Theorem}{74}{subsection.6.7}%
-\contentsline {section}{\numberline {7}de-Rham Cohomology}{78}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Basic Definition}{78}{subsection.7.1}%
-\contentsline {section}{Index}{80}{section*.4}%
-\contentsline {section}{List of Theorems}{83}{section*.5}%
+\contentsline {section}{\numberline {1}Smooth Manifold}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Lie Groups and Homogeneous Spaces}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Bump Function and Partition of Unity}{9}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Tangent space and tangent vectors}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tangent Space}{11}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Tangent Bundle}{12}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Vector Field, Curves and Flows}{15}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Another Definition of Vector Field}{20}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Lie group, Lie algebra and Lie bracket}{21}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Lie Bracket}{21}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Lie Algebra of a Lie Group}{25}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Morphisms between Lie group and Lie algebras}{28}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Vector Field}{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Canonical form of a Field}{29}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Lie Derivative of Vector Field}{29}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Commuting Vector Fields}{31}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Canonical Form of Commuting Vector Field}{33}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}The Constant Rank Theorem}{34}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Differential forms}{38}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introduction}{38}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Alternating Vector Linear Algebra}{39}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Operation on Vector Bundles}{46}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Differential forms using local chart}{48}{subsection.5.4}%
+\contentsline {paragraph}{Change of coordinate}{48}{section*.2}%
+\contentsline {subsection}{\numberline {5.5}Exterior Differential}{48}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Pull Back of Differential Forms}{50}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Orientation and Integration of Differential Form}{53}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Orientation on Manifold}{53}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Integration on Oriented Manifold}{55}{subsection.6.2}%
+\contentsline {paragraph}{Goal:}{55}{section*.3}%
+\contentsline {subsection}{\numberline {6.3}Smooth Manifold with Boundary}{58}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Riemannian Metric}{61}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Orientability of $ \mathbb R\mathbb P^{n-1} $}{66}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Tensor Field and Lie Derivative}{67}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Divergence of vector fields}{72}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Hamiltonian vector fields on symplectic manifolds}{73}{subsubsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.7}Frobenius Theorem}{75}{subsection.6.7}%
+\contentsline {section}{\numberline {7}de-Rham Cohomology}{79}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Basic Definition}{79}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Integration along Fibers}{81}{subsection.7.2}%
+\contentsline {section}{Index}{85}{section*.4}%
+\contentsline {section}{List of Theorems}{88}{section*.5}%

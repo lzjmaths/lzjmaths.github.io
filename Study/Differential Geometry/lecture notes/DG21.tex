@@ -1,0 +1,125 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
+\begin{lemma}
+    If  $ f\overset{s }{\simeq} $, then  $ f^*=g^* H^*(A,\dd_A)\mapsto H^*(B,\dd_B) $  
+\end{lemma}
+\begin{proof}
+    Take  $ [a]\in H^*(A,\dd_A) $,  $ d_*a =0 $. Then  $ f(a)-g(a)=\dd_B(sa)+s(\dd_A a)=\dd_B(sa)\in \Imag \dd_B $. So  $ f^*[a]=g^*[g] $.    
+\end{proof}
+
+\begin{definition}
+    Given the map  $ f:(A,\dd_A)\rightarrow (B,\dd_B) $, we say  $ f  $ is a chain homotopy equivalence if  $ \exists g:(B,\dd_B)\rightarrow (A,\dd_A) $ \st  $ g\circ f \simeq \id_A $,  $ f\circ g \simeq \id_B $. We call such  $ g  $ the \subname{chain homotopy  inverse}{chain homotopy} of  $ f  $.  And we say  $ (A,\dd_A),(B,\dd_B ) $ are \subname{chain homotopic}{chain homotopy}, denoted as  $ (A,\dd_A)\overset{f }{\simeq}(B,\dd_B) $. 
+\end{definition}
+\begin{corollary}\label{cor:chain homotopy implies the equivalence}
+    If  $ (A,\dd_A)\overset{f}{\simeq}(B,\dd_B) $, then  $ f^*:H^*(A,\dd_A)\rightarrow H^*(B,\dd_B) $ is an isomorphism.  
+\end{corollary}
+\begin{proof}
+    Let  $ g:(B,\dd_B)\rightarrow (A,\dd_A) $ be the chain homotopy inverse of  $ f $. Then  $ g^*\circ f^*=\id_{H^*(A,\dd_A)} $,  $ f^*\circ g^*=\id_{H^*(B,\dd_B)} $. So  $ f^* $  is an isomorphism.    
+\end{proof}
+
+Recall that given smooth manifold $ M  $ (with boundary), define  $ C_{dR}^*(M)=\dps\bigotimes_{i\in \Zbb}\Omega^i(M) $,  $ d:\Omega^i(M)\rightarrow \Omega^{i+1}(M) $ the exterior derivative,  $ H^*_{dR}(M)=H^*(C_{dR},\dd) $.  
+
+$ f\in C^{\infty}(M,N) $ $ \rightarrow  $ chain map   $ f^*:C_{dR}(N)\rightarrow C_{dR}(M),a\mapsto f^*(a) $      $ \rightarrow  $ induced map  $ f^*:H^*_{dR}(N)\rightarrow H^*_{dR}(M) $.
+
+\begin{theorem}\label{thm:theorem A}
+    Given  $ f, g:C^\infty(M,N ) $. Then  $ f\simeq g  $  $ \Rightarrow  $  $ f^*\simeq g^*:C_{dR}^*(N)\rightarrow C_{dR}^*(M) $. Hence,   $ f^*=g^*:H^*_{dR}(N)\rightarrow H^*_{dR}(M) $ by Corollary  \ref{cor:chain homotopy implies the equivalence}
+\end{theorem}
+
+We will use the Whitney approximation theorem over manifolds.
+
+\begin{theorem}[Whitney Approximation Theorem]\label{thm:Whitney Approximation Theorem}
+    Given  $ M,N  $ smooth manifolds. Given embedded submanifold  $ L\hookrightarrow M $. Given a continuous map  $ f:M\rightarrow N  $ \st  $ f|_L:L\rightarrow N  $ is smooth. Then there is a homotopy  $ H  $ from  $ f  $ to  $ g  $ related to  $ L  $ \st  $ g:M\rightarrow N $ is smooth,  $ g|_L=f|_L $. 
+\end{theorem}
+\subsection{Integration along Fibers}
+For  $ F  $ compact oriented smooth manifold possibly with boundary,  $ \dim F=l $.  $ M  $ is an  $ n $-dimensional  smooth manifold possibly with boundaries.
+
+Our goal is to define  $ \int_F-:\Omega^*(F\times M)\rightarrow \Omega^{*-l}(M) $ \st when $ l=* $, this map  $ \int_F:\Omega^l(F)\rightarrow \Rbb  $ is the usual integration.   
+
+Now take  $ \alpha\in \Omega^k(F\times M ) $, we will define $ \int_F\alpha\in\Omega^{k-l}(M) $ step by step.
+
+Case \romannumeral1: If  $ \exists $ chart  $ (U,x^1,\cdots,x^n) $ for  $ M  $ \st  $ \Supp(\alpha) \subset V\times U$ and  $ \exists  $ oriented chart  $ (V,t^1,\cdots,t^l) $ for  $ F $. Then
+
+\begin{equation}
+     \alpha=\dps\sum_{\substack{I\subset\{1,\cdots,l\}\\J\subset\{1,\cdots,m\}\\|I|+|J|=k}} \alpha_{IJ}\dd t^I\wedge\dd x^J,\,\alpha_{IJ}\in C^\infty(V\times U,\Rbb)
+\end{equation}
+
+If  $ I_0=\{1,\cdots,l\} $, define 
+\begin{align*}
+    \int_F\alpha_{I_0J}\dd t^{I_0}:&U\rightarrow \Rbb\\
+    &p\mapsto \int_{F\times \{p\}}:\alpha_{I_0J}|_{F\times\{p\}}\dd t^1\wedge\cdots\dd t^l
+\end{align*}
+
+Now define
+\begin{equation}
+    \int_F\alpha=\sum_{\substack{J\subset\{1,\cdots,m\}\\|J|=k-l}}\left(\int_F\alpha_{I_0,J}\dd t^{I_0}\right)\cdot \dd x^I\in\Omega^{k-l}(M)
+\end{equation}
+It can be generalized to all  $ \alpha  $ and easy the check it is independent with the choice of chart.
+
+Case \romannumeral2:  $ \exists  $ local chart  $ (U,x^1,\cdots,x^n) $ for  $ M  $ \st  $ \Supp(\alpha) \subset F\times U $. Take an oriented atlas  $ \mathcal{V}=\{(V_i,\varphi_i)\}_{1 \leq i \leq n} $ for  $ F $, and partition of unity  $ \rho_i:F\rightarrow [0,1] $ subordinate to  $ \mathcal{V} $. Let  $ \tilde{\rho}_i $ be composition  $ F\times M\xrightarrow{p} F\xrightarrow {\rho_i} [0,1] $. Then   $ \Supp(\tilde{\rho}_{i,\alpha})\subset V_i\times U $. We define  $ \int_F\alpha=\dps\sum_{1 \leq i \leq n}\int_F(\tilde{\rho}_i\alpha) $. Easy to check it is independent with the choice of  $ U,\mathcal{V},\{\rho_i\} $.
+
+Case \romannumeral3: For a general  $ \alpha\in\Omega^k(F\times M) $, take an atlas  $ \mathcal{U}=\{U_i,\psi_i\}_{i\in I} $ of  $ M  $ and partition of unity  $ \tau_i: M\rightarrow [0,1] $ subordinate to  $ \mathcal{U} $.  Let  $ \tilde{\tau}_i $ be composition  $ F\times M\xrightarrow{p} M\xrightarrow{\tau_i} [0,1] $. 
+
+Then  $ \Supp(\tilde{\tau}_i\alpha)\subset F\times U_i $. Define  $ \int_F\alpha=\dps\sum_{i\in I}\int_F(\tilde{\tau}_i\alpha) $. Easy to check it is independent with the choice of  $ \mathcal{U},\{\tau_i\} $.
+\begin{remark}
+     $ \pi:E\rightarrow M $ proper submersion. One theorem tells us that  $ \pi  $ is exactly a smooth fiber with compact fiber  $ F=\pi^{-1}(*) $. For instance, the \name{Hopf map} 
+     \[\pi:S^3\rightarrow S^2,(z_1,z_2)\in\Cbb^2\mapsto \frac{z_1}{z_2}\in \Cbb\cup\{\infty\}\] 
+     is a smooth fiber with compact fiber. 
+
+    Then we can generalize above constrution and define  $ \pi_1=\int_F-:\Omega^*(E)\rightarrow \Omega^{*-\dim(F)}(M) $ 
+\end{remark}
+\begin{remark}
+    If also works if  $ F  $ is not compact, 
+    \begin{equation}
+        \int_F-:\Omega_{c.F}^*(F\times M)\rightarrow \Omega^*(M)
+    \end{equation}
+    where  $ \Omega_{c.F}^*(F\times M)=\{\alpha\in\Omega^*(F\times M)|\Supp(\alpha)\xrightarrow{\text{Projection}}M \text{ is proper}\} $, viewed as the  set of forms with compact fiber.
+\end{remark}
+\begin{theorem}
+    $ F  $ is compact, then for any  $ \alpha\in\Omega^k(F\times M ) $, we have 
+    \begin{equation}
+        \dd\left(\int_F\alpha\right)+\int_{F}(\dd\alpha)=\int_{\partial F}(\alpha|_{\partial F\times M})
+    \end{equation}
+\end{theorem}
+For the special case  $ M=* $,  $ \int_F\dd\alpha=\int_{\partial F}\alpha|_{\partial F} $ is exactly the stokes theorem.
+
+For the special case  $ F=[0,1] $,  $ \dd\left(\int_F\alpha\right)+\int_F(\dd\alpha)=\int_M\alpha|_{\{1\}\times M}-\int_M\alpha|_{\{0\}\times M} $.
+
+We  prove only this.
+
+By partition of unity and linearity, we may assume  $ \Supp(\alpha)\subset[0,1]\times U $ for some chart  $ (U,x^1,\cdots,x^m) $ of  $ M $.
+\begin{equation}
+    \alpha=\sum_{\substack{J\subset\{1,\cdots,m\}\\\|J|=k}}\alpha_J \dd x^J+\sum_{\substack{J\subset\{1,\cdots,m\}\\\|J|=k-1}}\alpha_J\dd t^1\wedge\dd x^J
+\end{equation}   
+By linearity agian, we may assume  $ \alpha=\alpha_J\dd x^J $ or  $ \alpha=\alpha_J\dd t\wedge\dd J $.
+
+For  $ \alpha=\alpha_J\dd t\wedge\dd J $, we have  $ \int_F\alpha=0 $,  $ \dd\left(\int_F\alpha \right)=0 $.  $ \dd\alpha=\dps\frac{\partial \alpha_J}{\partial t}\dd t\wedge\dd \alpha^J+\sum_{1 \leq i_0\leq m}\frac{\partial \alpha_J}{\partial x^{i_0}}\dd x^{i_0}\wedge\dd x^J $.
+Then 
+\begin{equation}
+    \int_F\dd\alpha=\left(\int_0^1 \frac{\partial \alpha_J}{\partial t}\dd t\right)\cdot \dd x^J=\alpha_J|_{\{1\}\times M}\cdot \dd x^J-\alpha_J|_{\{0\}\times M}\dd x^J=\alpha|_{\{1\}\times M}-\alpha|_{\{0\}\times M}
+\end{equation}
+So  $  \dd\left(\int_F\alpha\right)+\int_F(\dd\alpha)=\int_M\alpha|_{\{1\}\times M}-\int_M\alpha|_{\{0\}\times M} $.
+
+For $ \alpha=\alpha_J\dd t\wedge\dd x^J $,  $ \int_F\alpha=\left(\int_0^1\alpha_J\dd t \right)\dd x^J $,  
+\begin{equation}
+    \dd \int_F\alpha=\dps\sum_{1 \leq i_0 \leq m}\frac{\partial}{\partial x^{i_0}}\left(\int_0^1\alpha_J\dd t\right)\dd x^{i_0}\wedge\dd x^J=\sum_{1 \leq i_0 \leq m}\left(\int_0^1\frac{\partial \alpha_J}{\partial x^{i_0}}\dd t\right)\dd x^{i_0}\wedge\dd x^J 
+\end{equation}
+\begin{equation}
+    \dd \alpha=-\sum_{1 \leq i_0 \leq m}\frac{\partial \alpha_J}{\partial x^{i_0}}\dd t\wedge\dd x^{i_0}\wedge\dd x^J
+\end{equation}
+So  $ \int_F\dd\alpha =-\dps\sum_{1 \leq i_0 \leq m}\left(\int_0^1\frac{\partial \alpha_J}{\partial x^{i_0}}\dd t\right)\dd x^{i_0}\wedge\dd x^J $. Hence  $ \dd\int_F\alpha+\int_F\dd\alpha=0=0-0 $.
+
+\begin{proof}[Proof of Theorem \ref{thm:theorem A}]
+    Let  $ H:[0,1]\times M\rightarrow N  $ be a homotopy from  $ f  $ to  $ g  $. By Whitney approximation theorem \ref{thm:Whitney Approximation Theorem}, we may assume  $ H  $ is a smooth map. Define  $ s:\Omega^*(N)\rightarrow \Omega^{*-1}(M) $,  $ s(\alpha)=\int_I H^*(\alpha) $.  $ H^*(\alpha)\in\Omega^*(I\times M) $. Then 
+    \begin{equation}
+        \begin{aligned}
+            (\dd s+s\dd)\alpha&=\dd\int_I H^*\alpha+\int_I H^*(\dd \alpha)\\
+            &=\dd\int_I H^*\alpha+\int_I \dd H^*(\alpha)\\
+            &=H^*\alpha|_{\{1\}\times M}-H^*\alpha|_{\{0\}\times M}\\
+            &=g^*(\alpha)-f^*(\alpha)
+        \end{aligned}
+    \end{equation}   
+    So  $ s  $ is a chain homotopy between  $ f^*,g^*:C_{dR}^*(N)\rightarrow C_{dR}^*(M) $. 
+\end{proof}
+\begin{corollary}
+     $ f\in C^\infty(M,N) $,  $ f  $ is a homotopy equivalence $ \Rightarrow  $  $ f^*:H_{dR}^*(N)\rightarrow H_{dR}^*(M) $ is an isomorphism.  
+\end{corollary}

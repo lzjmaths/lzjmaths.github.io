@@ -1,147 +1,151 @@
-\indexentry{smooth manifold|hyperpage}{3}
-\indexentry{regular point|hyperpage}{4}
-\indexentry{critical point|hyperpage}{4}
-\indexentry{regular value|hyperpage}{4}
-\indexentry{critical value|hyperpage}{4}
-\indexentry{Lie group|hyperpage}{6}
-\indexentry{$GL(n),O(n),SO(n),U(n),SU(n)$|hyperpage}{6}
-\indexentry{homogeneous space|hyperpage}{6}
-\indexentry{isotropy|hyperpage}{6}
-\indexentry{bump function |hyperpage}{8}
-\indexentry{locally finite|hyperpage}{8}
-\indexentry{exhaust|hyperpage}{8}
-\indexentry{refinement|hyperpage}{8}
-\indexentry{partition of unity subordinat(P.O.U)|hyperpage}{9}
-\indexentry{genus of smooth function|hyperpage}{10}
-\indexentry{partial-derivative|hyperpage}{10}
-\indexentry{tangent vector|hyperpage}{10}
-\indexentry{tangent space|hyperpage}{10}
-\indexentry{differential|hyperpage}{10}
-\indexentry{curve|hyperpage}{11}
-\indexentry{curve!velocity|hyperpage}{11}
-\indexentry{curve!tangent|hyperpage}{11}
-\indexentry{tangent bundle|hyperpage}{11}
-\indexentry{vector bundle|hyperpage}{12}
-\indexentry{fiber|hyperpage}{13}
-\indexentry{vector bundle!isomorphism|hyperpage}{13}
-\indexentry{trivialization|hyperpage}{13}
-\indexentry{smooth section|hyperpage}{14}
-\indexentry{vector field|hyperpage}{14}
-\indexentry{gradient vector field|hyperpage}{14}
-\indexentry{integral curve|hyperpage}{15}
-\indexentry{$ \mathfrak  {T}M $|hyperpage}{15}
-\indexentry{flow|hyperpage}{16}
-\indexentry{flow|hyperpage}{16}
-\indexentry{complete|hyperpage}{16}
-\indexentry{$ \mathrm  {Supp}X $|hyperpage}{16}
-\indexentry{one-parameter transformation group|hyperpage}{17}
-\indexentry{vector field!Time dependent|hyperpage}{18}
-\indexentry{integral curve|hyperpage}{18}
-\indexentry{$ \mathrm  {Supp}X $|hyperpage}{18}
-\indexentry{Lie bracket|hyperpage}{21}
-\indexentry{$ F $-related|hyperpage}{23}
-\indexentry{push forward|hyperpage}{23}
-\indexentry{Lie algebra|hyperpage}{24}
-\indexentry{left invariant|hyperpage}{24}
-\indexentry{right invariant|hyperpage}{24}
-\indexentry{$ \mathrm  {Lie}(G) $|hyperpage}{24}
-\indexentry{$ \mathrm  {gl}(n,\mathbb  {R}) $|hyperpage}{25}
-\indexentry{morphism|hyperpage}{27}
-\indexentry{morphism|hyperpage}{27}
-\indexentry{regular point|hyperpage}{28}
-\indexentry{singular point|hyperpage}{28}
-\indexentry{$ \mathcal  {L}_VW $|hyperpage}{28}
-\indexentry{Lie derivative|hyperpage}{29}
-\indexentry{commutes|hyperpage}{30}
-\indexentry{rank|hyperpage}{33}
-\indexentry{rank!constant rank|hyperpage}{33}
-\indexentry{submersion|hyperpage}{35}
-\indexentry{immersion|hyperpage}{35}
-\indexentry{embedding|hyperpage}{35}
-\indexentry{embedded submanifold|hyperpage}{35}
-\indexentry{immersed submanifold|hyperpage}{35}
-\indexentry{$ M\looparrowright N $|hyperpage}{35}
-\indexentry{$M\DOTSB \lhook \joinrel  \rightarrow N$|hyperpage}{35}
-\indexentry{proper|hyperpage}{35}
-\indexentry{regular point|hyperpage}{36}
-\indexentry{critical point|hyperpage}{36}
-\indexentry{regular value|hyperpage}{36}
-\indexentry{critical value|hyperpage}{36}
-\indexentry{singular value|hyperpage}{36}
-\indexentry{$\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$|hyperpage}{37}
-\indexentry{multi $ \mathbb  {R} $-linear|hyperpage}{38}
-\indexentry{$ \mathbb  {R}\left <S\right > $|hyperpage}{38}
-\indexentry{$ V_1\otimes \cdots  \otimes V_n $|hyperpage}{39}
-\indexentry{$ n $-tensor|hyperpage}{39}
-\indexentry{symmetric|hyperpage}{40}
-\indexentry{anti-symmetric|hyperpage}{40}
-\indexentry{$ \mathrm  {Sym}^n(V) $|hyperpage}{40}
-\indexentry{$ \bigwedge {}^n(V) $|hyperpage}{40}
-\indexentry{$ L^n(V) $|hyperpage}{41}
-\indexentry{$ \mathrm  {Alt}^k(V) $|hyperpage}{41}
-\indexentry{$ k $-form|hyperpage}{41}
-\indexentry{exterior product|hyperpage}{41}
-\indexentry{contravariant functor|hyperpage}{43}
-\indexentry{$ \mathbb  {R} $-algebra|hyperpage}{44}
-\indexentry{$ \mathbb  {R} $-algebra!unitary|hyperpage}{44}
-\indexentry{$ \mathbb  {R} $-algebra!graded|hyperpage}{44}
-\indexentry{$ \mathbb  {R} $-algebra!homogeneous elements|hyperpage}{44}
-\indexentry{$ \mathbb{R} $-algebra!graded!anticommutative|hyperpage}{44}
-\indexentry{$ \mathbb{R} $-algebra!graded!commutative|hyperpage}{44}
-\indexentry{$ \mathbb{R} $-algebra!graded!connected|hyperpage}{44}
-\indexentry{exterior algebra|hyperpage}{45}
-\indexentry{exterior algebra|hyperpage}{45}
-\indexentry{Dual bundle of a vector bundle|hyperpage}{45}
-\indexentry{dual vector bundle|hyperpage}{46}
-\indexentry{$ \Gamma (E) $|hyperpage}{46}
-\indexentry{$ \Omega ^k(M) $|hyperpage}{46}
-\indexentry{exterior differential|hyperpage}{48}
-\indexentry{pullback|hyperpage}{49}
-\indexentry{closed form|hyperpage}{50}
-\indexentry{exact form|hyperpage}{50}
-\indexentry{de Rham cohomology|hyperpage}{50}
-\indexentry{orientation form|hyperpage}{52}
-\indexentry{orientation|hyperpage}{52}
-\indexentry{orientation manifold|hyperpage}{52}
-\indexentry{oriented manifold|hyperpage}{52}
-\indexentry{$ \mathcal  {O}_{\mathrm  {std}} $|hyperpage}{53}
-\indexentry{orientation preserving|hyperpage}{53}
-\indexentry{orientation reversing|hyperpage}{53}
-\indexentry{oriented basis|hyperpage}{54}
-\indexentry{oriented chart|hyperpage}{54}
-\indexentry{oriented atlas|hyperpage}{54}
-\indexentry{positive atlas|hyperpage}{54}
-\indexentry{$ \Omega _c^n(M) $|hyperpage}{54}
-\indexentry{$ \Omega _s^n(M) $|hyperpage}{55}
-\indexentry{outward|hyperpage}{57}
-\indexentry{retract|hyperpage}{59}
-\indexentry{Riemannian metric|hyperpage}{60}
-\indexentry{Poincar{\'e} disk model|hyperpage}{61}
+\indexentry{smooth manifold|hyperpage}{4}
+\indexentry{regular point|hyperpage}{5}
+\indexentry{critical point|hyperpage}{5}
+\indexentry{regular value|hyperpage}{5}
+\indexentry{critical value|hyperpage}{5}
+\indexentry{Lie group|hyperpage}{7}
+\indexentry{$GL(n),O(n),SO(n),U(n),SU(n)$|hyperpage}{7}
+\indexentry{homogeneous space|hyperpage}{7}
+\indexentry{isotropy|hyperpage}{7}
+\indexentry{bump function |hyperpage}{9}
+\indexentry{locally finite|hyperpage}{9}
+\indexentry{exhaust|hyperpage}{9}
+\indexentry{refinement|hyperpage}{9}
+\indexentry{partition of unity subordinat(P.O.U)|hyperpage}{10}
+\indexentry{genus of smooth function|hyperpage}{11}
+\indexentry{partial-derivative|hyperpage}{11}
+\indexentry{tangent vector|hyperpage}{11}
+\indexentry{tangent space|hyperpage}{11}
+\indexentry{differential|hyperpage}{11}
+\indexentry{curve|hyperpage}{12}
+\indexentry{curve!velocity|hyperpage}{12}
+\indexentry{curve!tangent|hyperpage}{12}
+\indexentry{tangent bundle|hyperpage}{12}
+\indexentry{vector bundle|hyperpage}{13}
+\indexentry{fiber|hyperpage}{14}
+\indexentry{vector bundle!isomorphism|hyperpage}{14}
+\indexentry{trivialization|hyperpage}{14}
+\indexentry{smooth section|hyperpage}{15}
+\indexentry{vector field|hyperpage}{15}
+\indexentry{gradient vector field|hyperpage}{15}
+\indexentry{integral curve|hyperpage}{16}
+\indexentry{$ \mathfrak  {T}M $|hyperpage}{16}
+\indexentry{flow|hyperpage}{17}
+\indexentry{flow|hyperpage}{17}
+\indexentry{complete|hyperpage}{17}
+\indexentry{$ \mathrm  {Supp}X $|hyperpage}{17}
+\indexentry{one-parameter transformation group|hyperpage}{18}
+\indexentry{vector field!Time dependent|hyperpage}{19}
+\indexentry{integral curve|hyperpage}{19}
+\indexentry{$ \mathrm  {Supp}X $|hyperpage}{19}
+\indexentry{Lie bracket|hyperpage}{22}
+\indexentry{$ F $-related|hyperpage}{24}
+\indexentry{push forward|hyperpage}{24}
+\indexentry{Lie algebra|hyperpage}{25}
+\indexentry{left invariant|hyperpage}{25}
+\indexentry{right invariant|hyperpage}{25}
+\indexentry{$ \mathrm  {Lie}(G) $|hyperpage}{25}
+\indexentry{$ \mathrm  {gl}(n,\mathbb  {R}) $|hyperpage}{26}
+\indexentry{morphism|hyperpage}{28}
+\indexentry{morphism|hyperpage}{28}
+\indexentry{regular point|hyperpage}{29}
+\indexentry{singular point|hyperpage}{29}
+\indexentry{$ \mathcal  {L}_VW $|hyperpage}{29}
+\indexentry{Lie derivative|hyperpage}{30}
+\indexentry{commutes|hyperpage}{31}
+\indexentry{rank|hyperpage}{34}
+\indexentry{rank!constant rank|hyperpage}{34}
+\indexentry{submersion|hyperpage}{36}
+\indexentry{immersion|hyperpage}{36}
+\indexentry{embedding|hyperpage}{36}
+\indexentry{embedded submanifold|hyperpage}{36}
+\indexentry{immersed submanifold|hyperpage}{36}
+\indexentry{$ M\looparrowright N $|hyperpage}{36}
+\indexentry{$M\DOTSB \lhook \joinrel  \rightarrow N$|hyperpage}{36}
+\indexentry{proper|hyperpage}{36}
+\indexentry{regular point|hyperpage}{37}
+\indexentry{critical point|hyperpage}{37}
+\indexentry{regular value|hyperpage}{37}
+\indexentry{critical value|hyperpage}{37}
+\indexentry{singular value|hyperpage}{37}
+\indexentry{$\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$|hyperpage}{38}
+\indexentry{multi $ \mathbb  {R} $-linear|hyperpage}{39}
+\indexentry{$ \mathbb  {R}\left <S\right > $|hyperpage}{39}
+\indexentry{$ V_1\otimes \cdots  \otimes V_n $|hyperpage}{40}
+\indexentry{$ n $-tensor|hyperpage}{40}
+\indexentry{symmetric|hyperpage}{41}
+\indexentry{anti-symmetric|hyperpage}{41}
+\indexentry{$ \mathrm  {Sym}^n(V) $|hyperpage}{41}
+\indexentry{$ \bigwedge {}^n(V) $|hyperpage}{41}
+\indexentry{$ L^n(V) $|hyperpage}{42}
+\indexentry{$ \mathrm  {Alt}^k(V) $|hyperpage}{42}
+\indexentry{$ k $-form|hyperpage}{42}
+\indexentry{exterior product|hyperpage}{42}
+\indexentry{contravariant functor|hyperpage}{44}
+\indexentry{$ \mathbb  {R} $-algebra|hyperpage}{45}
+\indexentry{$ \mathbb  {R} $-algebra!unitary|hyperpage}{45}
+\indexentry{$ \mathbb  {R} $-algebra!graded|hyperpage}{45}
+\indexentry{$ \mathbb  {R} $-algebra!homogeneous elements|hyperpage}{45}
+\indexentry{$ \mathbb{R} $-algebra!graded!anticommutative|hyperpage}{45}
+\indexentry{$ \mathbb{R} $-algebra!graded!commutative|hyperpage}{45}
+\indexentry{$ \mathbb{R} $-algebra!graded!connected|hyperpage}{45}
+\indexentry{exterior algebra|hyperpage}{46}
+\indexentry{exterior algebra|hyperpage}{46}
+\indexentry{Dual bundle of a vector bundle|hyperpage}{46}
+\indexentry{dual vector bundle|hyperpage}{47}
+\indexentry{$ \Gamma (E) $|hyperpage}{47}
+\indexentry{$ \Omega ^k(M) $|hyperpage}{47}
+\indexentry{exterior differential|hyperpage}{49}
+\indexentry{pullback|hyperpage}{50}
+\indexentry{closed form|hyperpage}{51}
+\indexentry{exact form|hyperpage}{51}
+\indexentry{de Rham cohomology|hyperpage}{51}
+\indexentry{orientation form|hyperpage}{53}
+\indexentry{orientation|hyperpage}{53}
+\indexentry{orientation manifold|hyperpage}{53}
+\indexentry{oriented manifold|hyperpage}{53}
+\indexentry{$ \mathcal  {O}_{\mathrm  {std}} $|hyperpage}{54}
+\indexentry{orientation preserving|hyperpage}{54}
+\indexentry{orientation reversing|hyperpage}{54}
+\indexentry{oriented basis|hyperpage}{55}
+\indexentry{oriented chart|hyperpage}{55}
+\indexentry{oriented atlas|hyperpage}{55}
+\indexentry{positive atlas|hyperpage}{55}
+\indexentry{$ \Omega _c^n(M) $|hyperpage}{55}
+\indexentry{$ \Omega _s^n(M) $|hyperpage}{56}
+\indexentry{outward|hyperpage}{58}
+\indexentry{retract|hyperpage}{60}
 \indexentry{Riemannian metric|hyperpage}{61}
-\indexentry{volume form|hyperpage}{62}
-\indexentry{$ (a,b) $-tensor field|hyperpage}{66}
-\indexentry{covariant tensor field|hyperpage}{66}
-\indexentry{contravariant tensor field|hyperpage}{66}
-\indexentry{mixed tensor field|hyperpage}{66}
-\indexentry{Lie derivative|hyperpage}{67}
-\indexentry{Killing vector field|hyperpage}{68}
-\indexentry{contraction|hyperpage}{69}
-\indexentry{$ \mathrm  {Vol}(D) $|hyperpage}{72}
-\indexentry{symplectic structure|hyperpage}{72}
-\indexentry{symplectic form|hyperpage}{72}
-\indexentry{Hamiltonian vector field|hyperpage}{73}
-\indexentry{Hamiltonian flow|hyperpage}{73}
-\indexentry{tangent distribution|hyperpage}{74}
-\indexentry{integral manifold|hyperpage}{74}
-\indexentry{flat|hyperpage}{76}
-\indexentry{involutive|hyperpage}{76}
-\indexentry{integrable|hyperpage}{76}
-\indexentry{completely integrable|hyperpage}{76}
-\indexentry{foliation|hyperpage}{78}
-\indexentry{cochain complex|hyperpage}{78}
-\indexentry{differential|hyperpage}{78}
-\indexentry{boundary map|hyperpage}{78}
-\indexentry{homology|hyperpage}{78}
-\indexentry{$ k $-boundary|hyperpage}{78}
-\indexentry{$ k $-cycles|hyperpage}{78}
-\indexentry{chain map|hyperpage}{79}
+\indexentry{Poincar{\'e} disk model|hyperpage}{62}
+\indexentry{Riemannian metric|hyperpage}{62}
+\indexentry{volume form|hyperpage}{63}
+\indexentry{$ (a,b) $-tensor field|hyperpage}{67}
+\indexentry{covariant tensor field|hyperpage}{67}
+\indexentry{contravariant tensor field|hyperpage}{67}
+\indexentry{mixed tensor field|hyperpage}{67}
+\indexentry{Lie derivative|hyperpage}{68}
+\indexentry{Killing vector field|hyperpage}{69}
+\indexentry{contraction|hyperpage}{70}
+\indexentry{$ \mathrm  {Vol}(D) $|hyperpage}{73}
+\indexentry{symplectic structure|hyperpage}{73}
+\indexentry{symplectic form|hyperpage}{73}
+\indexentry{Hamiltonian vector field|hyperpage}{74}
+\indexentry{Hamiltonian flow|hyperpage}{74}
+\indexentry{tangent distribution|hyperpage}{75}
+\indexentry{integral manifold|hyperpage}{75}
+\indexentry{flat|hyperpage}{77}
+\indexentry{involutive|hyperpage}{77}
+\indexentry{integrable|hyperpage}{77}
+\indexentry{completely integrable|hyperpage}{77}
+\indexentry{foliation|hyperpage}{79}
+\indexentry{cochain complex|hyperpage}{79}
+\indexentry{differential|hyperpage}{79}
+\indexentry{boundary map|hyperpage}{79}
+\indexentry{homology|hyperpage}{79}
+\indexentry{$ k $-boundary|hyperpage}{79}
+\indexentry{$ k $-cycles|hyperpage}{79}
+\indexentry{chain map|hyperpage}{80}
+\indexentry{chain homotopy|hyperpage}{80}
+\indexentry{chain homotopy!chain homotopy inverse|hyperpage}{80}
+\indexentry{chain homotopy!chain homotopic|hyperpage}{80}
+\indexentry{Hopf map|hyperpage}{83}
