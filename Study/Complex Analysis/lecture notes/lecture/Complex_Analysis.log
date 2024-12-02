@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  2 DEC 2024 08:39
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  2 DEC 2024 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,26 +1478,26 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \tf@toc=\write6
 \openout6 = `Complex_Analysis.toc'.
 
- [3] (../1.tex
+ [3] [4] (../1.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 6.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 18.
- [4]
+ [5]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 32.
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 50.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 53.
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 64.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [5]) (../2.tex [6] [7]) (../3.tex [8]) (../4.tex [9] [10]
+) [6]) (../2.tex [7] [8]) (../3.tex [9]) (../4.tex [10] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
-[11]
+[12]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 65.
- [12]) (../5.tex [13] [14]) (../6.tex [15]
+ [13]) (../5.tex [14] [15]) (../6.tex [16]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 42.
- [16]) (../7.tex [17] [18]
+ [17]) (../7.tex [18] [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
@@ -1506,57 +1506,57 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
 
-[19] [20]) (../8.tex [21] [22] [23] [24]) (../9.tex [25] [26] [27]) (../10.tex [28] [29] [30] [31]) (../11.tex [32] [33] [34] [35]) (../12.tex [36] [37] [38]) (../13.tex [39] [40] [41]) (../14.tex [42] [43] [44]) (../15.tex [45] [46] [47] [48] [49]) (../16.tex [50]
+[20] [21]) (../8.tex [22] [23] [24] [25]) (../9.tex [26] [27] [28]) (../10.tex [29] [30] [31] [32]) (../11.tex [33] [34] [35] [36]) (../12.tex [37] [38] [39]) (../13.tex [40] [41] [42]) (../14.tex [43] [44] [45]) (../15.tex [46] [47] [48] [49] [50]) (../16.tex [51]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-[51]
+[52]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-[52] [53]
+[53] [54]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-) (../17.tex [54]
+) (../17.tex [55]
 Overfull \hbox (16.29897pt too wide) detected at line 23
 [][] [] \U/matha/m/n/12 ^^P [][] \OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 z \U/matha/m/n/12 ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi [] [][]f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi\U/matha/m/n/12 r[][]\OML/cmm/m/it/12 f \U/matha/m/n/12 ^^@ [][]\OML/cmm/m/it/12 f\U/matha/m/n/12 s ^^P []
  []
 
-[55] [56] [57] [58]) (../18.tex [59] [60] [61] [62]) (../19.tex [63]
+[56] [57] [58] [59]) (../18.tex [60] [61] [62] [63]) (../19.tex [64]
 Underfull \hbox (badness 2538) in paragraph at lines 67--72
 []\T1/ppl/m/n/12 For the sec-ond part of the the-o-rem, it is enough to prove $[]\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P
  []
 
-[64] [65]) [66]
+[65] [66]) (../20.tex [67] [68] [69] [70]) [71]
 runsystem(makeindex Complex_Analysis.idx)...executed safely (allowed).
 
- (./Complex_Analysis.ind [67
+ (./Complex_Analysis.ind [72
 
 
-] [68
+] [73
 
 ])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [69
+(./Complex_Analysis.loe [74
 
-] [70])
+] [75])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [71] (./Complex_Analysis.aux)
+ [76] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
-(rerunfilecheck)             Checksum: EBD11DBA81837ABAF2DBA55EF5A1D36F;11613.
+(rerunfilecheck)             Checksum: 18B09A9C955BA2AE1711C1B35A807C88;12312.
  ) 
 Here is how much of TeX's memory you used:
- 40309 strings out of 476683
- 819890 string characters out of 5804047
+ 40325 strings out of 476683
+ 820294 string characters out of 5804047
  1857018 words of memory out of 5000000
- 59689 multiletter control sequences out of 15000+600000
+ 59702 multiletter control sequences out of 15000+600000
  548437 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (71 pages).
+Output written on Complex_Analysis.pdf (76 pages).

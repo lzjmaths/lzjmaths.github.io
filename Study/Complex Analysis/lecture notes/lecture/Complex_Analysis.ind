@@ -1,110 +1,111 @@
 \begin{theindex}
 
-  \item algebraic order, \hyperpage{37}
-  \item Apollonius, \hyperpage{16}
-  \item arc, \hyperpage{9}
-  \item area, \hyperpage{11}
+  \item algebraic order, \hyperpage{38}
+  \item Apollonius, \hyperpage{17}
+  \item arc, \hyperpage{10}
+  \item area, \hyperpage{12}
 
   \indexspace
 
-  \item Cauchy principle value of the integral, \hyperpage{53}
-  \item Cauchy's estimate, \hyperpage{28}
-  \item Cauchy's integral formula, \hyperpage{27}
-  \item chain, \hyperpage{42}
-    \subitem identical, \hyperpage{43}
-    \subitem integral, \hyperpage{42}
-  \item change of parameter, \hyperpage{9}
-  \item circular net, \hyperpage{16}
-  \item conformal, \hyperpage{11}
-  \item conjugate differential of $ \mathrm  {d}u $, \hyperpage{56}
-  \item conjugate harmonic function of $ u $ , \hyperpage{4}
-  \item cross ratio, \hyperpage{12}
-  \item curve, \hyperpage{9}
-    \subitem closed curve, \hyperpage{9}
-    \subitem Jordan curve, \hyperpage{9}
-    \subitem simple , \hyperpage{9}
-  \item cycle, \hyperpage{43}
+  \item Cauchy principle value of the integral, \hyperpage{54}
+  \item Cauchy's estimate, \hyperpage{29}
+  \item Cauchy's integral formula, \hyperpage{28}
+  \item chain, \hyperpage{43}
+    \subitem identical, \hyperpage{44}
+    \subitem integral, \hyperpage{43}
+  \item change of parameter, \hyperpage{10}
+  \item circular net, \hyperpage{17}
+  \item conformal, \hyperpage{12}
+  \item conjugate differential of $ \mathrm  {d}u $, \hyperpage{57}
+  \item conjugate harmonic function of $ u $ , \hyperpage{5}
+  \item cross ratio, \hyperpage{13}
+  \item curve, \hyperpage{10}
+    \subitem closed curve, \hyperpage{10}
+    \subitem Jordan curve, \hyperpage{10}
+    \subitem simple , \hyperpage{10}
+  \item cycle, \hyperpage{44}
 
   \indexspace
 
-  \item essential isolated singularity, \hyperpage{37}
-  \item exponential function , \hyperpage{7}
+  \item essential isolated singularity, \hyperpage{38}
+  \item exponential function , \hyperpage{8}
 
   \indexspace
 
-  \item harmonic, \hyperpage{4}, \hyperpage{55}
-  \item homologous to zero, \hyperpage{43}
-  \item homothetic transformation, \hyperpage{12}
+  \item harmonic, \hyperpage{5}, \hyperpage{56}
+  \item homologous to zero, \hyperpage{44}
+  \item homothetic transformation, \hyperpage{13}
 
   \indexspace
 
-  \item index of the point $ z $, \hyperpage{25}
-  \item integral, \hyperpage{17}
-    \subitem $ \bar  {z} $, \hyperpage{19}
-    \subitem arc length, \hyperpage{20}
-  \item inversion, \hyperpage{12}
-  \item isolated singularity, \hyperpage{35}
+  \item index of the point $ z $, \hyperpage{26}
+  \item integral, \hyperpage{18}
+    \subitem $ \bar  {z} $, \hyperpage{20}
+    \subitem arc length, \hyperpage{21}
+  \item inversion, \hyperpage{13}
+  \item isolated singularity, \hyperpage{36}
 
   \indexspace
 
-  \item Laplace equation, \hyperpage{4}
-  \item left, \hyperpage{15}
-  \item length, \hyperpage{11}, \hyperpage{20}
-  \item linear fraction, \hyperpage{5}
-  \item logorithmic function, \hyperpage{7}
+  \item Laplace equation, \hyperpage{5}
+  \item Laurent series, \hyperpage{69}
+  \item left, \hyperpage{16}
+  \item length, \hyperpage{12}, \hyperpage{21}
+  \item linear fraction, \hyperpage{6}
+  \item logorithmic function, \hyperpage{8}
 
   \indexspace
 
-  \item meromorphic function, \hyperpage{35}
-  \item M{\"o}bius transformation, \hyperpage{5}, \hyperpage{11}
+  \item meromorphic function, \hyperpage{36}
+  \item M{\"o}bius transformation, \hyperpage{6}, \hyperpage{12}
 
   \indexspace
 
-  \item order of a pole, \hyperpage{5}
-  \item order of the pole, \hyperpage{35}
-  \item order of the rational function, \hyperpage{5}
+  \item order of a pole, \hyperpage{6}
+  \item order of the pole, \hyperpage{36}
+  \item order of the rational function, \hyperpage{6}
 
   \indexspace
 
-  \item parallel translation, \hyperpage{12}
-  \item partial fractions, \hyperpage{5}
-  \item Poisson integral , \hyperpage{61}
-  \item pole, \hyperpage{35}
-  \item poles, \hyperpage{5}
+  \item parallel translation, \hyperpage{13}
+  \item partial fractions, \hyperpage{6}
+  \item Poisson integral , \hyperpage{62}
+  \item pole, \hyperpage{36}
+  \item poles, \hyperpage{6}
 
   \indexspace
 
-  \item rectifiable, \hyperpage{20}
-  \item reflection, \hyperpage{13}
-  \item region, \hyperpage{8}
-  \item removable singularities, \hyperpage{30}
-  \item residue, \hyperpage{46}
-  \item reversible , \hyperpage{9}
-  \item right, \hyperpage{15}
-  \item rotation, \hyperpage{12}
+  \item rectifiable, \hyperpage{21}
+  \item reflection, \hyperpage{14}
+  \item region, \hyperpage{9}
+  \item removable singularities, \hyperpage{31}
+  \item residue, \hyperpage{47}
+  \item reversible , \hyperpage{10}
+  \item right, \hyperpage{16}
+  \item rotation, \hyperpage{13}
 
   \indexspace
 
-  \item Schwarz Formula, \hyperpage{61}
-  \item simply connected, \hyperpage{43}
-  \item singular part, \hyperpage{6}
-  \item singular point, \hyperpage{6}
-  \item Steiner circles, \hyperpage{16}
-  \item symmetric, \hyperpage{13}
-  \item symmetric w.r.t C through $ z_1,z_2,z_3 $, \hyperpage{13}
+  \item Schwarz Formula, \hyperpage{62}
+  \item simply connected, \hyperpage{44}
+  \item singular part, \hyperpage{7}
+  \item singular point, \hyperpage{7}
+  \item Steiner circles, \hyperpage{17}
+  \item symmetric, \hyperpage{14}
+  \item symmetric w.r.t C through $ z_1,z_2,z_3 $, \hyperpage{14}
 
   \indexspace
 
-  \item Taylor's Theorem, \hyperpage{32}
-  \item totally bounded , \hyperpage{9}
-  \item trigonometric function, \hyperpage{7}
+  \item Taylor's Theorem, \hyperpage{33}
+  \item totally bounded , \hyperpage{10}
+  \item trigonometric function, \hyperpage{8}
 
   \indexspace
 
-  \item winding number, \hyperpage{25}
+  \item winding number, \hyperpage{26}
 
   \indexspace
 
-  \item zero of order $ N $, \hyperpage{34}
+  \item zero of order $ N $, \hyperpage{35}
 
 \end{theindex}

@@ -1,0 +1,119 @@
+\subsubsection{The Taylor Series}
+\begin{theorem}\label{thm:5.1.2:Theorem of Taylor Series}
+    If  $ f  $ is analytic in the region  $ \Omega  $, and  $ z_0\in \Omega  $, then the expression 
+    \begin{equation}
+        f(z)=\sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n
+    \end{equation}
+    is valid in the largest open disk of  $ z_0 $ contained in   $ \Omega  $.
+\end{theorem}
+\begin{proof}
+    Taylor's theorem \ref{Taylor's Theorem} implies 
+    \begin{equation}
+        f(z)=f(z_0)+f'(z_0)(z-z_0)+\cdots+\frac{f^{(n)}(z_0)}{n!}(z-z_0)^n+f_{n+1}(z)(z-z_0)^{n+1},\,
+    \end{equation}
+    for  $ \forall z\in B(z_0,R)\subset \overline{B(z_0,R)}\subset \Omega $, where  
+    \begin{equation}
+        f_{n+1}(z)=\dps\frac{1}{2\pi i}\int_{\partial B(z_0,R)}\frac{f(\zeta)}{(\zeta-z)^{n+1}(\zeta-z)}\dd\zeta 
+    \end{equation}
+    Let  $ M:=\dps\max_{z\in\partial B(z_0,R)}|f(z)| $. Then  $ |f_{n+1}(z)(z-z_0)^{n+1}|<\dps\frac{M}{R^n(R-|z-z_0|)}\cdot |z-z_0|^{n+1}\rightrightarrows 0$ in every disk  $ |z-z_0| \leq \rho<R $, from which we derive this theorem.
+\end{proof}
+
+
+Some known Taylor series:
+\begin{equation}
+    \begin{aligned}\label{eq:5.1.2Taylor Series of some functions}
+        e^z&=1+z+\frac{z^2}{2!}+\cdots+\frac{z^n}{n!}+\cdots,\quad z\in \Cbb\\
+        \cos z&=1-\frac{z^2}{2!}+\frac{z^4}{4!}-\cdots+\frac{(-1)^n z^{2n}}{(2n)!}+\cdots,\quad z\in \Cbb\\
+        \sin z &= z-\frac{z^3}{3!}+\frac{z^5}{5!}-\cdots+\frac{(-1)^n z^{2n+1}}{(2n+1)!}+\cdots,\quad z\in \Cbb\\
+        \ln  (1+z)&=z-\frac{z^2}{2}+\frac{z^3}{3}-\cdots+(-1)^{n+1}\frac{z^n}{n}+\cdots,\quad \forall |z|<1\\
+        \forall \mu\in \Rbb\setminus\Zbb_{\geq 0},(1+z)^{\mu}&=1+\mu z+\binom{\mu}{2}z^2+\cdots+\binom{\mu }{n}z^n+\cdots,\quad \forall |z|<1
+    \end{aligned}
+\end{equation}
+where  $ \dps\binom{\mu }{n}=\frac{\mu (\mu -1)\cdots(\mu -n+1)}{n!} $, and pick the branch with  $ \ln 1=0 $.
+
+\subsubsection{Laurent Series}
+\begin{lemma}
+    Let  $ A:=\{z\in\Cbb:R_1<|z-a|<R_2\} $ be an annulus. For each analytic function  $ f:A\rightarrow \Cbb  $, there are analytic functions  $ f_1:\{z\in\Cbb:|z-a|<R_2\}\rightarrow \Cbb  $,  $ f_2:\{z\in \Cbb:|z-a|>R_1\}\rightarrow \Cbb $ \st  $ f(z)=f_1(z)+f_2(z),\,\forall z\in A $    
+\end{lemma}
+\begin{proof}
+    For  $ \forall z\in A  $,  $ f_1(z)=\dps\frac{1}{2\pi i}\int_{|\zeta-a|=r_1}\frac{f(\zeta)}{\zeta-z}\dd \zeta $,  $ r_1\in (|z-a|,R_2) $.  
+
+    Cauchy's theorem \ref{General form of Cauchy's theorem} implies the integral is independent of the choice of  $ r_1$. 
+
+    If we fix such  $ r  $, then  $ f_1(z)  $ is analytic for  $ \forall |z-a|<r_1 $.  $ \overset{r_1\to R_2}{\Rightarrow}  $ $ f_1(z)  $ is well-defined and   analytic on  $ B(a,R_2) $.
+
+    Let  
+    \begin{equation}
+        f_2(z)=-\dps\frac{1 }{2\pi i}\int_{|\zeta-a|=r_2}\frac{f(\zeta)}{\zeta-z}\dd\zeta,\,r_2\in(R_1,|z-a|)\label{eq:5.1.2:f_2 in lemma}
+    \end{equation}
+    Then  $ f_2  $ is well-defined and analytic in  $ \{z\in\Cbb:|z-a|>R_1\} $.  
+
+    Denote $ \gamma_1=\{z:|z-a|=r_1\} $,  $ \gamma_2=\{z:|z-a|=r_2\} $,  $ R_1<r_2<|z-a|<r_1<R_1 $.
+    
+    Cauchy's integral formula \ref{Generalized version of Cauchy's integral formula} implies  
+    \begin{equation}
+        f(z)=n(\gamma_1-\gamma_2,z)f(z)=\dps\frac{1}{2\pi i}\int_{\gamma_1-\gamma_2}\frac{f(\zeta)}{\zeta-z}\dd \zeta=f_1(z)+f_2(z),
+        \,\forall z\in A
+    \end{equation}
+\end{proof}
+\begin{theorem}[Laurent Theorem]\label{thm:5.1.3:Laurent Theorem}
+    Any analytic function  $ f  $ on  $ A=\{z\in \Cbb:R_1<|z-a|<R_2\} $ has a power series of the form 
+    \begin{equation}
+        f(z)=\sum_{n=-\infty}^\infty c_n(z-a)^n\label{eq:5.1.3:Laurent Series}
+    \end{equation} 
+    This series, called \name{Laurent series}, converges uniformly on each compact subset of  $ A  $. Moreover, 
+    \begin{equation}
+        c_n=\frac{1 }{2\pi i}\int_{|\zeta-a|=r}\frac{f(\zeta)}{(\zeta-a)^{n+1}}\dd\zeta,\,\forall n\in \Zbb,\,\forall r\in (R_1,R_2)
+    \end{equation}
+\end{theorem}
+\begin{proof}
+    The previous lemma implies  $ f(z)=f_1(z)+f_2(z),\,\forall z\in A $, where  $ f_1  $ is analytic in  $ |z-a|<R_2 $ and  $ f_2  $ is analytic in  $ |z-a|>R_1 $. Then Taylor series for  $ f_1  $ is
+    \begin{equation}
+        f_1(z)=\sum_{n=0}^\infty a_n(z-a)^n
+    \end{equation}
+    which converges uniformly on each compact subset of  $ |z-a|<R_2 $.
+    
+    Let  $ g(z)=f_2(a+\dps\frac{1}{z}) $,  $ |z|<\dps\frac{1}{R_1} $. \eqref{eq:5.1.2:f_2 in lemma} tells us  $ \dps\lim_{z\to\infty}f_2(z)=0 $. Then  $ \dps\lim_{z\to 0}g(z)=0 $ $ \Rightarrow  $  $ g $ can be viewed as an analytic function in  $ B(0,\dps\frac{1}{R_1}) $.
+
+    The Taylor's series for  $ g  $ is  $ g(z)=\dps\sum_{n=1}^\infty b_nz^n  $, which converges uniformly on each compact subset of  $ B(0,\dps\frac{1}{R_1}) $. Now let  $ \zeta=a+\frac{1}{z} $. Then 
+    \begin{equation}
+        f_2(\zeta)=g(z)=g(\frac{1}{\zeta-a})=\sum_{n=1}^\infty b_n (\zeta-a)^n
+    \end{equation} 
+    which converges uniformly on each compact subset  $ |z-a|>R_1 $.  
+    \begin{equation}
+        f(z)=\sum_{n=-\infty}^\infty c_n(z-a)^n
+    \end{equation}
+    which converges uniformly on each compact subset of  $ A $. Then
+    \begin{equation}
+        \frac{1}{2\pi i}\int_{|z-a|=r}\frac{f(z)}{(z-a)^{n+1}}\dd z =\frac{1}{2\pi i}\sum_{k=-\infty}^\infty c_k\sum_{|z-a|=r}(z-a)^{k-(m+1)}\dd z,\,\forall z\in (R_1,R_2)
+    \end{equation}
+    where  $ \dps\int_{|z-a|=r}(z-a)^{k-(n+1)}\dd z\neq 0 $ iff  $ k=n $.  So 
+    \begin{equation}
+        c_n=\frac{1 }{2\pi i}\int_{|\zeta-a|=r}\frac{f(\zeta)}{(\zeta-a)^{n+1}}\dd\zeta,\,\forall n\in \Zbb,\,\forall r\in (R_1,R_2)
+    \end{equation}
+\end{proof}
+\begin{theorem}
+    Let  $ f  $ be analytic in  $ \Omega\setminus\{a\} $, where  $ \Omega  $ is a region and  $ a  $ is an isolated singularity. Its Laurent series is given by  $ f(z)=\sum_{n=-\infty}^\infty c_n(z-a)^n $, $ \forall z\in B(a,R)\setminus\{a\}\subset \Omega\setminus\{a\} $. Then 
+    \begin{enumerate}
+        \item [(a)]  $ f  $ has a removable singularity at  $ a  $ iff  $ c_n =0 $ for  $ n<0 $   
+        \item [(b)]  $ f  $ has a pole of order  $ N $ at  $ a $ iff  $ c_n=0 $ for  $ n<-N $ and  $ c_{-N}\neq 0 $.
+        \item [(c)]  $ f  $ has an essential singularity at  $ a $ iff   $ c_n\neq 0 $ for infinitely many negative  $ n $.
+    \end{enumerate}  
+\end{theorem}
+\begin{proof}
+    (a) and (b) can be derived from the explicit expression of  $ f_1,f_2 $.
+    
+    For (c), "$ \Rightarrow $" follows from (b) and (a).
+
+    "$ \Leftarrow $" follows from the fact that isolated singularities belong to one of three categories: removable singularities, poles, and essential singularities, \ie theorem \ref{thm:4.3.2:Classification of isolated singularities}.
+\end{proof}
+\subsection{Partial Fractions and Factorization}
+\subsubsection{Partial fractions}
+\begin{theorem}[Mittag-Leffler Theorem]\label{thm:5.2.1:Mittag-Leffler Theorem}
+    Let  $ \{\zeta_k:k\in \Nbb\} $ be a sequence in  $ \Cbb  $,  $ \dps\lim_{k\to\infty}\zeta_k=\infty $, and let  $ P_k  $ be polynomials without constant term. Then there are functions which are meromorphic in  $ \Cbb  $ with poles at just the points  $ \zeta_k $ and the corresponding singular part  $ P_k\left(\dps\frac{1}{z-\zeta_k}\right) $. Moreover, the most general meromorphic function of this kind can be written as
+    \begin{equation}
+        \label{eq:5.2.1:Mittag-Leffler Theorem}
+        f(z)=\sum_{k}\left[P_{k}\left(\frac{1}{z-\zeta_k}\right)-p_k(z)\right]+g(z)
+    \end{equation}
+    where  $ p_k  $ are polynomials and  $ g $ is entire. 
+\end{theorem}
