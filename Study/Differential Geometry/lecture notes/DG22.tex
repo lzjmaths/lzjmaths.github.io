@@ -1,0 +1,180 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
+\begin{corollary}[Poinc{\'a}re Lemma]\label{Poincare Lemma}
+     $ H^k_{dR}(\Rbb^n)=\dps\begin{cases}
+        0 &k>0\\
+        \Rbb &k=0
+     \end{cases} $. \ie Any closed  $ k $-form on  $ \Rbb^n $ with  $ k>0 $  is exact. 
+\end{corollary}
+\begin{proof}
+    Take constant  $ c:\Rbb^n\xrightarrow{\simeq} *$ being a homotopy equivalence
+
+    Then  $ c^*:H^*_{dR}(\text{point})\rightarrow H_{dR}^k(\Rbb^n) $ is an isomorphism. But  $ \Omega^k(\text{point})=\begin{cases}
+        \Rbb &k=0\\
+        0 &k>0
+    \end{cases}  $. So
+    \begin{equation*}
+        H^k(\Rbb^n)=H^k_{dR}(\text{point})\cong\begin{cases}
+            \Rbb&k=0\\
+            0&k>0
+        \end{cases}
+    \end{equation*} 
+\end{proof}
+\subsection{Mayer-Vietoris sequence}
+\subsubsection{Some algebraic constructions}
+A sequence of maps between groups  $ \cdots\rightarrow G_{i-1}\xrightarrow{f_{i-1}} G_i\xrightarrow{f_i} G_{i+1}\rightarrow\cdots $ is \name{exact} at  $ G_i $  if  $ \ker(f_i)=\Imag(f_{i-1}) $. 
+We say the sequence is \name{exact} if it is exact at every  $ G_i$.
+
+A \name{short exact} is an exact sequence of the form  $ 0\rightarrow G_1\xrightarrow{f} G_2\xrightarrow{g} G_3\rightarrow 0 $. \ie  $ f  $ is injective,  $ g  $ is surjective and  $ \ker(f)=\Imag(g) $.
+
+A \name{short exact sequence} of cochain complexed is a sequence  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $ where  $ A^*,B^*,C^8 $ are cochain complexes,  $ f,g $ are cohain maps, and  $ \forall k $, the sequence  $ 0\rightarrow A^k\xrightarrow{f}B^k\xrightarrow{g}C^k\rightarrow 0 $     is exact.
+
+\begin{center}
+    \begin{tikzcd}
+        &\vdots\ar[d]&\vdots\ar[d]&\vdots\ar[d]\\
+        0\ar[r]&A^{k-1}\ar[d]\ar[r,"f"]&B^{k-1}\ar[d]\ar[r,"g"]&C^{k-1}\ar[d]\ar[r]&0\\
+        0\ar[r]&A^k\ar[r,"f"]\ar[d]&B^k\ar[r,"g"]\ar[d]&C^k\ar[r]\ar[d]&0\\
+        0\ar[r]&A^{k+1}\ar[r,"f"]\ar[d]&B^{k+1}\ar[r,"g"]\ar[d]&C^{k+1}\ar[r]\ar[d]&0\\
+        &\vdots&\vdots&\vdots\\
+
+    \end{tikzcd}
+\end{center}
+
+
+Given short exact sequence of cochain complexed  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $, we define a \name{boundary map}  $ \partial:H^k(C^*)\rightarrow H^{k+1}(A^*) $ as follows:
+
+Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is surjective so   $ \exists b_0\in B^k $ \st  $ g(b_0)=c_0 $, and  $ g(\dd b_0)=\dd c_0=0 $. So  $ \exists a_0\in A^{k+1} $ \st  $ f(a_0)=\dd b_0 $,  $ f(\dd a_0)=\dd f(a_0)=\dd^2b_0=0 $. Since  $ f  $ is injective,  $ \dd a_0=0 $. Set  $ \partial [c_0]=[a_0] $.
+
+\begin{center}
+    \begin{tikzcd}
+        &b_0\ar[r]\ar[d]&c_0\ar[d]\\
+        a_0\ar[r,"f"]\ar[d]&\dd b_0\ar[d]\ar[r,"g"]&0\\
+        \dd a_0\ar[r,"f"]&0
+    \end{tikzcd}
+\end{center}
+\begin{lemma}
+     $ \partial :H^k(C^*)\rightarrow H^{k+1}(A^*)  $ is well-defined 
+\end{lemma}
+\begin{proof}
+    If we choose another  $ b_1 $ \st  $ g(b_1)=g(b_0)=c_0 $. Then 
+    \begin{align*}
+        g(b_0-b_1)=0&\Rightarrow b_0-b_1=f(a_2)\text{ for some }a_2\in A^k\\
+        &\Rightarrow \dd b_0-\dd b_1=\dd f(a_2)=f(\dd a_2)\\
+        f(a_0)=\dd b_0,f(a_1)=\dd b_1&\Rightarrow f(a_0-a_1)=\dd b_0-\dd b_1=f(\dd a_2)\\
+        &=\Rightarrow  a_0-a_1=\dd a_2\\
+        &\Rightarrow [a_0]=[a_1]\in H^{k+1}(A^*)
+    \end{align*}  
+
+    If we choose  $ c_1 $ with  $ [c_1]=[c_0]\in H^k(C^*) $. Then  $ \exists c_2\in C^{k-1} $ \st  $ c_1=c_0+\dd c_2 $. Take any  $ b_2\in B^{k-1} $ \st  $ g(b_2)=c_2 $. Then  $ g(\dd b_2)=\dd c_2=c_1-c_0 $. Pick  $ b_0  $ \st  $ g(b_0)=c_0 $ $ \Rightarrow  $ $ g(b_0+\dd b_2)=c_1 $. So we may pick  $ b_1=b_0+\dd b_2 $. Then  $ \dd b_1=\dd b_0 $ $ \Rightarrow  $  $ a_1=a_0 $.            
+\end{proof}
+
+\begin{lemma}[Snake Lemma]\label{Snake Lemma}
+    Given short exact sequence of cochain complexed  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $, the sequence 
+\tikzset{
+        curarrowpartial/.style={
+  rounded corners=8pt,
+  execute at begin to={every node/.style={fill=red}},
+    to path={-- ([xshift=-50pt]\tikztostart.center)
+    |- (#1) node[fill=white] {$\scriptstyle \partial$}
+    -| ([xshift=50pt]\tikztotarget.center)
+    -- (\tikztotarget)}
+    }
+}
+\begin{center}
+    \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
+        H^{k+1}(C^*) &  H^{k+1}(B^*) \arrow[l,swap,"g^*"] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l,swap,"f^*"] H^{k+1}(A^*) \\
+        H^{k}(C^*) \arrow[curarrowpartial=Y]{urr}{} & H^{k}(B^*) \arrow[l,swap,"g^*"] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & \arrow[l,swap,"f^*"] H^{k}(A^*) \\
+        H^{k-1}(C^*) \arrow[curarrowpartial=Z]{urr}{} & H^{k-1}(B^*)  \arrow[draw=none]{d}[name=P,shape=coordinate]{}\arrow[l,swap,"g^*"] &  H^{k-1}(A^*)\arrow[l,swap,"f^*"]\\
+        \cdots\arrow[curarrowpartial=P]{urr}{}&\cdots\arrow[l]&\cdots\arrow[l]&0\arrow[l]
+    \end{tikzcd}
+\end{center}
+ is exact
+For simplicity, short exact sequence of cochain complexes induces long exact sequence on homotopy.
+\end{lemma}
+
+\begin{proof}
+    \textbf{Exactness at}  $ H^k(B^*) $:  $ g\circ f =0   $ $ \Rightarrow  $  $ g^*\circ f^*=0 $ $ \Rightarrow  $  $ \Imag f\subset \ker g^* $. 
+    
+    Take any  $ [b]\in \ker g^* $,  $ b\in B^* $,  $ \dd b=0 $, then   $[g(b)]=g^*([b])=0 $. So  $ g(b)\in \Imag \dd $ \ie  $ \exists  $  $ c\in C^{k-1} $ \st  $ \dd c=g(b) $.
+    
+    Pick  $ b'\in B^{k-1} $ \st  $ g(b')=c $. Then  $ [b]=[b-\dd b'] $.  $ g(b-\dd b')=0 $ $ \Rightarrow  $  $ \exists a $    \st  $ f(a)=b-\dd b' $.  $ f(\dd a)=0 $ $ \Rightarrow  $  $ \dd a=0 $. Then  $ f^*(a)=[b-\dd b']=[b] $. So  $ \ker g^*\subset \Imag f^* $.
+    
+    \textbf{Exactness at}  $ H^k(C^*) $: If  $ [c_0]\subset \ker(\partial) $. Then  $ [a_0]=0\in H^{k+1}(A^*) $ \ie  $ \exists a_2\in A^k  $ \st  $ a_0=\dd a_2 $. Set  $ b_2=b_0-f(a_2) $. Then  $ \dd b_2=\dd b_0-f(a_0)=0 $. So  $ [b_2]\in H^k(B^*) $,  $ g(b_2)=g(b_0)=c_0 $. So  $ [c_0]=g^*([b_2])\in \Imag g^* $.
+    
+    If  $ [c_0]\in \Imag (g^*) $, then  $ \exists [b]\in H^k(B^*)  $ \st  $ g^*[b]=[c_0] $. Set  $ c_1=g(b) $,  $ b_1=b $. Then  $ [c_1]=[c_0] $. Then  $ \dd b_1=0 $. So  $ a_1=0$ $ \Rightarrow  $  $ \partial [c_1]=\partial [c_0]=[a_1]=0 $. Then  $ \Imag(g^*)\subset \ker(\partial) $.
+
+    \textbf{Exactness at}  $  $ 
+\end{proof}
+
+Now we consider  $ M=U_1\cup U_2 $ for  $ U_1,U_2 $ open subsets. The inclusion maps are  $ i_1,i_2,j_1,j_2 $.
+
+\begin{center}
+    \begin{tikzcd}
+        &U_1\cap U_2\ar[dl,swap,"i_1"]\ar[dr,"i_2"]\\
+        U_1\ar[rd,swap,"j_1"]& &U_2\ar[ld,"j_2"]\\
+        &M
+    \end{tikzcd}
+\end{center}
+
+\begin{lemma}
+    The sequence  $ 0\rightarrow \Omega^*(M)\xrightarrow{(j_1^*,j_2^*)}\Omega^*(U_1)\bigoplus \Omega^*(U_2)\xrightarrow{i_1^*-i_2^*}\Omega^*(U_1\cap U_2)\rightarrow 0 $ is exact. 
+\end{lemma}
+\begin{proof}
+     $ (j_1^*,j_2^*) $ is injective.  $ \alpha\in \Omega^k(M) $. If   $ (j_1^*,j_2^*)(\alpha)=0 $, then  $ \alpha|_{U_1}=\alpha|_{U_2}=0 $. So  $ \alpha=0 $.
+     
+     Exactness at  $ \Omega^*(U_1)\bigoplus \Omega^*(U_2) $: If  $ (\alpha_1,\alpha_2)\in \ker(i_1^*-i_2^*) $, then  $ \alpha_1|_{U_1\cap U_2}=\alpha_2|_{U_1\cap U_2} $. Set  $ \alpha\in \Omega^*(M ) $ \st  $ \alpha|_{U_1}=\alpha_1,\alpha|_{U_2}=\alpha_2 $. Then  $ (\alpha_1,\alpha_2)=(j_1^*\alpha,j_2^*\alpha) $.
+     
+     If  $ (\alpha_1,\alpha_2)\in \Imag(j_1^*,j_2^*) $. Let $ \alpha_1=\alpha|_{U_1} $,  $ \alpha_2=\alpha|_{U_2} $, then  $ (i_1^*-i_2^*)(\alpha_1,\alpha_2)=\alpha|_{U_1\cap U_2}-\alpha_{U_1\cap U_2}=0 $. So  $ (\alpha_1,\alpha_2)\in \ker (i_1^*-i_2^*) $.
+     
+     $ i_1^*-i_2^* $ is surjective. Take any  $ \alpha_{12}\in \Omega^*(U_1\cap U_2) $. Take a partition of unity  $ \{\rho_i:M\rightarrow[0,1]\}_{i=1,2} $,  $ \rho_1+\rho_2\equiv 1 $,  $ \Supp(\rho_0)\subset U_i $. Then  $ \Supp(\rho_i)\cap U_2\subset U_1\cap U_2 $. So we may define  $ \alpha_i\in \Omega^*(U_i) $ by 
+     \begin{equation}
+        \alpha_{i,p}=\begin{cases}
+            (-1)^{i-1}\rho_i(p)\cdot\alpha_{12,p}&p\in U_1\cap U_2\\
+            0&p\in U_i\backslash (U_1\cap U_2)
+        \end{cases}
+     \end{equation}       
+     Then  $ \alpha_1|_{U_1\cap U_2}-\alpha_2|_{U_1\cap U_2}=\rho_1(p)\alpha_{12}+\rho_2(p)\alpha_{12}=\alpha_{12} $. 
+\end{proof}
+
+Apply the snake lemma \ref{Snake Lemma}, we obtain
+\begin{theorem}[Mayer-Vietoris sequence]
+    The sequence
+    \begin{center}
+        \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
+    	\cdots & H^{k+1}_{dR}(U) \oplus H^{k+1}_{dR}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H^{k+1}_{dR}(M) \\
+    	H^{k}_{dR}(U \cap V)\arrow[curarrow=Y]{urr}{} & H^{k}_{dR}(U) \oplus H^{k}_{dR}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H^{k}_{dR}(M)  \arrow[l] \\
+    	H^{k-1}_{dR}(U \cap V) \arrow[curarrow=Z]{urr}{} & H^{k-1}_{dR}(U) \oplus H^{k-1}_{dR}(V) \arrow[l] & \cdots \arrow[l]&0\arrow[l]
+    \end{tikzcd}
+    \end{center}
+    is exact
+\end{theorem}
+\begin{example}
+    For  $ S^n=U\cap V $ where  \[ U=S^n\setminus\{(1,0,\cdots,0)\} , V=S^n\setminus\{(-1,0,\cdots,0)\} ,  U\cap V=S^n\setminus\{(\pm1,0,\cdots,0)\} \]
+
+    $ U,V\simeq *,U\cap V\simeq S^{n-1} $. 
+    So the M.V. sequence 
+    \begin{center}
+        \begin{tikzcd}
+            0\ar[r]&H_{dR}^0(S^1)\ar[r]&H^0(*)\oplus H^0(*)\ar[r,"\delta"]&H^0_{dR}(S^0)\ar[r]&H^1_{dR}(S^1)\ar[r]&0\\
+            0\ar[r]&\Rbb\ar[r]&\Rbb\oplus \Rbb\ar[r]&\Rbb\oplus \Rbb\ar[r]&\Rbb\ar[r]&0
+        \end{tikzcd}
+    \end{center}
+
+    Then  $ H_{dR}^0(S^1)=\ker\delta=\Rbb $,  $ H_{dR}^1(S^1)=\mathrm{coker}\delta=\Rbb $.  
+
+    And for  $ k \geq 1 $, the Mayer-sequence 
+    \begin{center}
+        \begin{tikzcd}
+            0\ar[r]&H^k_{dR}(S^{n-1})\ar[r]&H^{k+1}_{dR}(S^n)\ar[r]&0
+        \end{tikzcd}
+    \end{center}
+    
+    implies $ H^k_{dR} (S^{n-1})\cong H^{k+1}_{dR}(S^n)$. Therefore, by induction, we have  
+    \begin{equation}
+        H_{dR}^k(S^n)=\begin{cases}
+            \Rbb&n=k\\
+            \Rbb&k=0\\
+            0&\text{otherwise}
+        \end{cases}
+    \end{equation}
+\end{example}

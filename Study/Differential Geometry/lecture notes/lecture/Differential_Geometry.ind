@@ -44,12 +44,12 @@
 
   \indexspace
 
-  \item boundary map, \hyperpage{79}
+  \item boundary map, \hyperpage{79}, \hyperpage{86}
   \item bump function , \hyperpage{9}
 
   \indexspace
 
-  \item chain homotopy, \hyperpage{80}
+  \item chain homotopy
     \subitem chain homotopic, \hyperpage{80}
     \subitem chain homotopy inverse, \hyperpage{80}
   \item chain map, \hyperpage{80}
@@ -79,6 +79,7 @@
 
   \item embedded submanifold, \hyperpage{36}
   \item embedding, \hyperpage{36}
+  \item exact, \hyperpage{85}
   \item exact form, \hyperpage{51}
   \item exhaust, \hyperpage{9}
   \item exterior algebra, \hyperpage{46}
@@ -103,7 +104,7 @@
   \item Hamiltonian vector field, \hyperpage{74}
   \item homogeneous space, \hyperpage{7}
   \item homology, \hyperpage{79}
-  \item Hopf map, \hyperpage{83}
+  \item Hopf map, \hyperpage{82}
 
   \indexspace
 
@@ -171,6 +172,8 @@
 
   \indexspace
 
+  \item short exact, \hyperpage{85}
+  \item short exact sequence, \hyperpage{85}
   \item singular point, \hyperpage{29}
   \item singular value, \hyperpage{37}
   \item smooth manifold, \hyperpage{4}

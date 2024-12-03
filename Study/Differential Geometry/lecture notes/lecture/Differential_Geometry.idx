@@ -145,7 +145,11 @@
 \indexentry{$ k $-boundary|hyperpage}{79}
 \indexentry{$ k $-cycles|hyperpage}{79}
 \indexentry{chain map|hyperpage}{80}
-\indexentry{chain homotopy|hyperpage}{80}
 \indexentry{chain homotopy!chain homotopy inverse|hyperpage}{80}
 \indexentry{chain homotopy!chain homotopic|hyperpage}{80}
-\indexentry{Hopf map|hyperpage}{83}
+\indexentry{Hopf map|hyperpage}{82}
+\indexentry{exact|hyperpage}{85}
+\indexentry{exact|hyperpage}{85}
+\indexentry{short exact|hyperpage}{85}
+\indexentry{short exact sequence|hyperpage}{85}
+\indexentry{boundary map|hyperpage}{86}
