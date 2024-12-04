@@ -27,7 +27,7 @@ We say the sequence is \name{exact} if it is exact at every  $ G_i$.
 
 A \name{short exact} is an exact sequence of the form  $ 0\rightarrow G_1\xrightarrow{f} G_2\xrightarrow{g} G_3\rightarrow 0 $. \ie  $ f  $ is injective,  $ g  $ is surjective and  $ \ker(f)=\Imag(g) $.
 
-A \name{short exact sequence} of cochain complexed is a sequence  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $ where  $ A^*,B^*,C^8 $ are cochain complexes,  $ f,g $ are cohain maps, and  $ \forall k $, the sequence  $ 0\rightarrow A^k\xrightarrow{f}B^k\xrightarrow{g}C^k\rightarrow 0 $     is exact.
+A \name{short exact sequence} of cochain complexed is a sequence  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $ where  $ A^*,B^*,C^* $ are cochain complexes,  $ f,g $ are cohain maps, and  $ \forall k $, the sequence  $ 0\rightarrow A^k\xrightarrow{f}B^k\xrightarrow{g}C^k\rightarrow 0 $     is exact.
 
 \begin{center}
     \begin{tikzcd}
@@ -47,9 +47,9 @@ Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is sur
 
 \begin{center}
     \begin{tikzcd}
-        &b_0\ar[r]\ar[d]&c_0\ar[d]\\
-        a_0\ar[r,"f"]\ar[d]&\dd b_0\ar[d]\ar[r,"g"]&0\\
-        \dd a_0\ar[r,"f"]&0
+        \cdots\ar[d]\ar[r,"f"]&b_0\ar[r,"g",blue]\ar[d,blue]&c_0\ar[d,blue]\\
+        a_0\ar[r,"f",blue]\ar[d,blue]&\dd b_0\ar[d,blue]\ar[r,"g",blue]&0\ar[d]\\
+        \dd a_0\ar[r,"f",blue]&0\ar[r,"g"]&\cdots
     \end{tikzcd}
 \end{center}
 \begin{lemma}
@@ -61,7 +61,7 @@ Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is sur
         g(b_0-b_1)=0&\Rightarrow b_0-b_1=f(a_2)\text{ for some }a_2\in A^k\\
         &\Rightarrow \dd b_0-\dd b_1=\dd f(a_2)=f(\dd a_2)\\
         f(a_0)=\dd b_0,f(a_1)=\dd b_1&\Rightarrow f(a_0-a_1)=\dd b_0-\dd b_1=f(\dd a_2)\\
-        &=\Rightarrow  a_0-a_1=\dd a_2\\
+        &\Rightarrow  a_0-a_1=\dd a_2\\
         &\Rightarrow [a_0]=[a_1]\in H^{k+1}(A^*)
     \end{align*}  
 
@@ -103,7 +103,9 @@ For simplicity, short exact sequence of cochain complexes induces long exact seq
     
     If  $ [c_0]\in \Imag (g^*) $, then  $ \exists [b]\in H^k(B^*)  $ \st  $ g^*[b]=[c_0] $. Set  $ c_1=g(b) $,  $ b_1=b $. Then  $ [c_1]=[c_0] $. Then  $ \dd b_1=0 $. So  $ a_1=0$ $ \Rightarrow  $  $ \partial [c_1]=\partial [c_0]=[a_1]=0 $. Then  $ \Imag(g^*)\subset \ker(\partial) $.
 
-    \textbf{Exactness at}  $  $ 
+    \textbf{Exactness at}  $ H^{k+1}(A^*) $: If  $ [a_0]\in \Imag\partial  $. Then  $ [a_0]=\partial [c_0] $. Hence,  $ f^*[a_0]=[\dd b_0]=0\in H^{k+1}(B^*) $. So  $ \Imag \partial \subset \ker f^* $.
+    
+    Take  $ [a]\in \ker (f^*) $.  $ f^*(a)=0 $  $ \Rightarrow  $  $ [f(a)]=0 $. So there exists  $ b_0\in H^{k}(B^*) $ \st  $ f(a)=\dd b_0 $. Let  $ c_0=g(b_0) $. Then  $ \dd c_0=g(\dd b_0)=g(f(a))=0 $. So  $ c_0\in H^{k}(C^*) $ and  $ \partial[c_0]=[a] $ by the definition. Hence,  $ \ker f^*\subset\Imag\partial $.  
 \end{proof}
 
 Now we consider  $ M=U_1\cup U_2 $ for  $ U_1,U_2 $ open subsets. The inclusion maps are  $ i_1,i_2,j_1,j_2 $.

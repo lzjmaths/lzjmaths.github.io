@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  3 DEC 2024 16:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  3 DEC 2024 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1630,10 +1630,10 @@ Missing character: There is no = ("3D) in font nullfont!
 Missing character: There is no r ("72) in font nullfont!
 Missing character: There is no e ("65) in font nullfont!
 Missing character: There is no d ("64) in font nullfont!
-) [89]
+[89]) [90]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [90
+ (./Differential_Geometry.ind [91
 
 
 ]
@@ -1641,26 +1641,26 @@ Underfull \hbox (badness 2495) in paragraph at lines 140--141
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[91] [92])
+[92] [93])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [93
+(./Differential_Geometry.loe [94
 
-] [94] [95])
+] [95] [96])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [96] (./Differential_Geometry.aux)
+ [97] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
 (rerunfilecheck)             Checksum: FAFF3481E86A46F6105A1EC4EF1D9F4C;6961.
  ) 
 Here is how much of TeX's memory you used:
- 48018 strings out of 476683
- 1092669 string characters out of 5804047
- 1873018 words of memory out of 5000000
- 67310 multiletter control sequences out of 15000+600000
+ 48036 strings out of 476683
+ 1093151 string characters out of 5804047
+ 1876018 words of memory out of 5000000
+ 67328 multiletter control sequences out of 15000+600000
  561457 words of font info for 163 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1336s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (96 pages).
+Output written on Differential_Geometry.pdf (97 pages).
