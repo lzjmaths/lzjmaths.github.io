@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  3 DEC 2024 16:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  9 DEC 2024 09:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1427,11 +1427,11 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 563
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./Differential_Geometry.toc [1
 
-])
+] [2])
 \tf@toc=\write7
 \openout7 = `Differential_Geometry.toc'.
 
- [2] [3] (../DG1.tex
+ [3] (../DG1.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 4.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 21.
  [4]
@@ -1630,37 +1630,37 @@ Missing character: There is no = ("3D) in font nullfont!
 Missing character: There is no r ("72) in font nullfont!
 Missing character: There is no e ("65) in font nullfont!
 Missing character: There is no d ("64) in font nullfont!
-[89]) [90]
+) (../DG23.tex [89] [90] [91] [92] [93] [94]) [95]
 runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
 
- (./Differential_Geometry.ind [91
+ (./Differential_Geometry.ind [96
 
 
 ]
-Underfull \hbox (badness 2495) in paragraph at lines 140--141
+Underfull \hbox (badness 2495) in paragraph at lines 141--142
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[92] [93])
+[97] [98])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [94
+(./Differential_Geometry.loe [99
 
-] [95] [96])
+] [100] [101])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [97] (./Differential_Geometry.aux)
+ [102] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: FAFF3481E86A46F6105A1EC4EF1D9F4C;6961.
+(rerunfilecheck)             Checksum: B9370080D534473D155F5EB62614F430;7211.
  ) 
 Here is how much of TeX's memory you used:
- 48036 strings out of 476683
- 1093151 string characters out of 5804047
- 1876018 words of memory out of 5000000
- 67328 multiletter control sequences out of 15000+600000
- 561457 words of font info for 163 fonts, out of 8000000 for 9000
+ 48028 strings out of 476683
+ 1092832 string characters out of 5804047
+ 1873018 words of memory out of 5000000
+ 67316 multiletter control sequences out of 15000+600000
+ 561766 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,101p,748b,1336s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (97 pages).
+Output written on Differential_Geometry.pdf (102 pages).

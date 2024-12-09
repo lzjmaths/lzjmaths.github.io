@@ -1,0 +1,177 @@
+\begin{example}
+    For  $ M=\Cbb\Pbb^n  $,  $ U_1=M\setminus\{[1,0,\cdots,0]\} $,  $ U_2=M\setminus\{[0,*,*,\cdots,*]\} $. Then 
+    \begin{equation*}
+        \begin{aligned}
+            U_1&=\{[x_0,\cdots,x_n]|x_1,\cdots,x_n \text{ not all zero}\}\\&\simeq\{[0,x_1,\cdots,x_n]|x_1,\cdots,x_n \text{ not all zero}\}\\&\simeq \Cbb\Pbb^{n-1}
+        \end{aligned}
+    \end{equation*}
+
+    \begin{equation*}
+        U_2=M\setminus\{[0,*,\cdots,*]\}=\{[1,*,\cdots,*]\}\cong \Cbb^n
+    \end{equation*}
+    \begin{equation*}
+        U_1\cap U_2\cong U_2\setminus\{[1,0,\cdots,0]\}\cong \Cbb^n\setminus\{0\}\simeq S^{2n-1}
+    \end{equation*}
+
+    \begin{claim}
+        $ H^k_{dR}(\Cbb\Pbb^n)\cong \begin{cases}
+            \Rbb&k \text{ even }0 \leq k \leq 2n\\
+            0&\text{ otherwise}
+        \end{cases}$.
+    \end{claim}
+    Prove the claim by induction. For  $ n=1 $,  $ \Cbb\Pbb^1\cong S^2 $ is true.
+    
+    Suppose we have proved it for  $ \Cbb\Pbb^{n-1} $. Apply Mayer-Vietoris sequence to  $ M=U_1\cup U_2 $, 
+    \begin{equation}
+        H_{dR}^{i-1}(S^{2n-1})\rightarrow H_{dR}^{i}(\Cbb\Pbb^n)\rightarrow H_{dR}^i(\Cbb\Pbb^{n-1})\oplus H_{dR}^i(\Cbb^n)\rightarrow H_{dR}^i(S^{2n-1})
+    \end{equation}
+
+    Then for  $ i\neq 2n-1,2n $,
+    \begin{equation}
+        0\rightarrow H^i_{dR}(\Cbb\Pbb^n)\xrightarrow{\cong}H^i_{dR}(\Cbb\Pbb^{n-1})\rightarrow 0
+    \end{equation} 
+    For  $ 2n-1,2n $,
+    \begin{equation}
+        0=H^{2n-1}_{dR}(\Cbb\Pbb^{n-1})\rightarrow H_{dR}^{2n-1}(S^{2n-1})\xrightarrow{ \cong} H_{dR}^{2n}(\Cbb\Pbb^n)\rightarrow H_{dR}^{2n}(\Cbb\Pbb^{n-1})=0
+    \end{equation} 
+    \begin{equation*}
+        0=H_{dR}^{2n-2}(S^{2n-1})\rightarrow H_{dR}^{2n-1}(\Cbb\Pbb^n)\rightarrow H_{dR}^{2n-1}(\Cbb\Pbb^{n-1})=0
+    \end{equation*}
+\end{example}
+\begin{remark}
+     $ H^*(M ) $ is a ring where 
+     \begin{equation}
+        [\alpha]\cdot[\beta]=[\alpha\wedge \beta]
+     \end{equation}
+    It's graded commutative since 
+    \begin{equation}
+        [\alpha]\cdot[\beta]=(-1)^{kl}[\beta]\cdot[\alpha]\text{ for  $ [\alpha]\in H^k(M) $, $ \beta\in H^{l}(M) $}
+    \end{equation}
+    
+    Any  $ f:M\rightarrow N     $ induces ring homomorphism  $ f^*:H^*_{dR}(N)\rightarrow H^*_{dR}(M) $.
+
+    Indeed,  $ H_{dR}^*(\Cbb\Pbb^n)\cong\Rbb[x]/_(x^{n+1}) $, where $ x  $ generates  $ H_{dR}^2(\Cbb\Pbb^n) $.
+\end{remark}
+
+\begin{proposition}\label{inductive prop in de-rham}
+     $ A\subsetneqq \Rbb^n $ not closed. Then 
+     \begin{equation}
+        H_{dR}^{i+1}(\Rbb^{n+1}\setminus\{0\}\times A)\cong H^i_{dR}(\Rbb^n\setminus A),\, i>0
+     \end{equation}
+     \begin{equation}
+        H^1_{dR}(\Rbb^{n+1}\setminus\{0\}\times A)\cong H_{dR}^0(\Rbb^n\setminus A)/_{\Rbb\cdot 1}
+     \end{equation}
+\end{proposition}
+\begin{proof}
+     $ \Rbb^{n+1}\setminus\{0\}\times A=U_1\cup U_2 $ where 
+     \begin{equation*}
+        \begin{aligned}
+            U_1=(\Rbb_{<0}\times \Rbb^n)\cup ([0,1)\times(\Rbb^n\setminus A))\\
+            U_2=(\Rbb_{>0}\times \Rbb^n)\cup((-1,0]\times(\Rbb^n\setminus A))\\
+            U_1\cap U_2\cong (-1,1)\times (\Rbb^n\times A)
+        \end{aligned}
+     \end{equation*} 
+     Then there exists a deformation retraction  $ [0,1]\times U_1\rightarrow U_1 $, $ (t,(x_0,x_1,\cdots,x_n))\mapsto (tx_0+(1-t)(-1),x_1,\cdots,x_n)  $. Then  $ U_1\cong\{-1\}\times \Rbb^n\simeq * $.  $ U_2\simeq * $,  $ U_1\cap U_2\simeq \Rbb^n\setminus A $. The Mayer-Vietoris sequence gives 
+ \begin{equation*}
+   H^i_{dR}(U_1)\oplus H_{dR}^i(U_2)\rightarrow H_{dR}^i(U_1\cap U_2)\xrightarrow{\partial}{\cong}H_{dR}^{i+1}(\Rbb^{n+1}\setminus\{0\}\times A)\rightarrow H_{dR}^{i+1}(U_1)\oplus H_{dR}^{i+1}(U_2)
+ \end{equation*} 
+for  $ i>0 $. 
+
+The case  $ i=0 $ is similar. 
+\end{proof}
+
+\begin{lemma}
+    $ A\subset \Rbb^n $,  $ B\subset \Rbb^n  $,  $ f:A\xrightarrow{\cong }B $. Then  $ \Rbb^{n+m}\setminus\{0\}\times B \cong\Rbb^{n+m}\setminus\{(x,f(x))|x\in A\}\cong \Rbb^{n+m}\setminus A\times \{0\}$.   
+\end{lemma}
+\begin{proof}
+    $ A\xrightarrow{ \cong}{f}B\hookrightarrow \Rbb^{n}$. By Tietz extension theorem, there exists  $ \tilde{f}:\Rbb^m\rightarrow \Rbb^n $ \st  $ \tilde{f}|_A=f $.
+    
+    Consider  $ \hat{f}:\Rbb^m\times \Rbb^n\xrightarrow{\cong}\Rbb^m\times \Rbb^n $,  $ (x,y)\mapsto (x.y+\hat{f}(x)) $. Then  $ \hat{f}(A\times\{0\})=\{(x,f(x))|x\in A\} $ $ \Rightarrow  $  $ \Rbb^{n+m}\setminus\{0\}\times B \cong\Rbb^{n+m}\setminus\{(x,f(x))|x\in A\}\cong \Rbb^{n+m}\setminus A\times \{0\}$. 
+\end{proof}
+Special case, if  $ A,B\subset \Rbb^n $ closed,  $ A\cong B $, then  $ \Rbb^{2n}\setminus A\times\{0\}\cong \Rbb^{2n}\setminus B\times \{0\} $. 
+
+It directly follows that
+\begin{theorem}
+     $ A,B\subset \Rbb^n  $ closed,  $ A\cong B  $ under homeomorphism.  $ \Rightarrow  $  $ H_{dR}^*(\Rbb^n\setminus A)\cong H_{dR}^*(\Rbb^n\setminus B) $. 
+\end{theorem}
+\begin{proof}By proposition \ref{inductive prop in de-rham}
+    \[H^*_{dR}(\Rbb^n\setminus A)\cong H_{dR}^{*+n}(\Rbb^{2n}\setminus A\times\{0\})\cong H_{dR}^{*+n}(\Rbb^{2n}\setminus B\times\{0\})\cong H^*(\Rbb^n\setminus B)\]
+\end{proof}
+\begin{example}
+    A \name{knot} is an embedded  $ S^1\hookrightarrow \Rbb^3 $. So  $ \forall  $ knot  $ K $,
+    \begin{equation}
+        H_{dR}^i(\Rbb^3\setminus K)\cong H_{dR}^i(\Rbb^3\text{circle})cong \begin{cases}
+            \Rbb&i=0,1,2\\
+            0&\text{ otherwise}
+        \end{cases}
+    \end{equation}  
+\end{example}
+\begin{corollary}
+     $ A\subset \Rbb^n $ closed,  $ A\cong S^{n-1} $ $ \Rightarrow  $  $ \Rbb^n\setminus A  $ has two components  $ U_1,U_2 $ where  $ U_1 $ is bounded and  $ U_2 $ is unbounded. Moreover,      $ \partial U_1=\partial U_2=A $.  
+\end{corollary}
+\begin{proof}
+     $ H_{dR}^0(\Rbb^n\setminus A) \cong H_{dR}^0(\Rbb^n\setminus S^{n-1})\cong \Rbb\<\pi_0(\Rbb^n\setminus S^{n-1})\>=\Rbb\oplus \Rbb$.
+
+    So  $ \Rbb^n\setminus A $ has two components  $ U_1,U_2 $.
+    
+    Take  $ L=\max\{\|x\||x\in A\}+1 $, $ V=\{x\in \Rbb^n|\|x\|>L\} $.  $ V\subset \Rbb^n\setminus A $ connected and unbounded. $ V\subset U_1  $ so  $ U_1  $ is unbounded  $ \Rightarrow  $  $ U_2\subset \Rbb^n\setminus V $ is unbounded.
+    
+    The proof of $ \partial U_1=\partial U_2=A $ is omitted. See Madsen-Trnehave.
+\end{proof}
+\begin{corollary}
+     $ A\subset \Rbb^n $,  $ A\subset D^k $ $ \Rightarrow  $  $ \Rbb^n\setminus A $ is connected.   
+\end{corollary}
+\begin{theorem}[Invariance of domain]\label{Invariance of domain}
+    Let  $ U  $ be an open subset of  $ \Rbb^n  $. Let $ f:U\rightarrow \Rbb^n  $ be continuous and injective map. Then  $ f(U) $ is also open in  $ \Rbb^n $. And  $ f  $ sends  $ U  $ homeomorphically to  $ f(U) $  
+\end{theorem}
+\begin{proof}
+    It suffices to show  $ f(U)  $ is open. Since for any  $ W\subset U  $ open,  $ f(W)  $ is open in  $ f(U) $. So  $ f|_U:U\rightarrow f(U)  $ is open.
+
+    Take any  $ x_0\in U  $, want to show  $ f(x_0) $. Take  $ D=\{x\in \Rbb^n|\|x-x_0\| \leq \delta\}\subset U $. Then  $ \Sigma =f(\partial D)\cong S^{n-1} $. So  $ \Rbb^n\setminus \Sigma $  has  $ 2  $ components  $ U_1,U_2 $, where  $ U_1 $ is bounded and  $ U_2 $ is unbounded. 
+    
+     $ \Rbb^n\setminus f(D)  $ is connected so  $ \Rbb^n\setminus f(D)\subset U_2 $. So  $ U_1\cup \Sigma=\Rbb^n \setminus U_2\subset f(D)=f(\mathrm{int}(D))\sqcup \Sigma $ $ \Rightarrow  $  $ U_1\subset f(\mathrm{int}(D)) $.
+     
+     Since  $ f(\mathrm{int}(D)) $ is connected,  $ f(\mathrm{int}(D))\subset U $ $ \Rightarrow  $ $ f(\mathrm{int}(D))=U_1 $. So  $ f(x_0)\in U_1\subset \mathrm{int}f(U) $.     
+\end{proof}
+\begin{corollary}
+    If  $ m>n  $,  $ U\subset \Rbb^m  $ open, then there is no injective continuous map  $ U\rightarrow \Rbb^n $ 
+\end{corollary}
+\begin{proof}
+    If $ f:U\rightarrow \Rbb^n\hookrightarrow \Rbb^m $. Then  $ f(U)  $  not open in  $ \Rbb^m $, which causes contradiction. 
+\end{proof}
+\begin{corollary}
+    $ U\subset \Rbb^m $,  $ V\subset \Rbb^m $ open.  $ U\cong V $ $ \Rightarrow  $ $ m=n $.     
+\end{corollary}
+
+\subsection{Compact supported de Rham cohomology}
+Define  $ H_{dR,c}^*(M)=H^*(\Omega^0(M)+\Omega^1(M)+\cdots) $, abbreviated to  $ H_c^*(M) $.
+
+If  $ M  $ is compact, then  $ H_{dR,c}^*(M)\cong H_{dR}^*(M) $. But it is not true for  $ M  $ not compact. The following is a counterexample.
+
+\begin{theorem}
+    Let  $ M  $ be connected  $ n $-dimentional manifold  without boundary. Then the map  $ H_{c}^n(M)\xrightarrow{ \cong }\Rbb ,[\alpha]\mapsto \int_M\alpha$ is a well-defined isomorphism. Moreover, if  $ M  $ is closed and connected, then  $ H_{dR}^n(M)\cong \Rbb $   
+\end{theorem}
+\begin{proof}
+    Well-defineness: If  $ [\alpha]=[\alpha'] $, then  $ \alpha-\alpha'=\dd \beta $. By Stokes theorem \ref{Stokes Theorem},  $ \int_M\alpha=\int_M\alpha' $.
+    
+    \begin{proposition}
+        If  $ \alpha\in \Omega_c^n(\Rbb^n) $,  $ \int_{\Rbb^n}\alpha=0 $ $ \Rightarrow  $  $ \exists \beta\in \Omega_c^{n-1}(\Rbb^n)  $ \st  $ \dd\beta=\alpha $.    
+    \end{proposition}
+    Note that if  $ \alpha=f\dd x_1\wedge\cdots\wedge\dd x_n $,  $ \beta=\dps\sum_{i=1}^n(-1)^{i-1}f_i\dd x_1\wedge\cdots\wedge\widehat{\dd x_i}\wedge\cdots\wedge\dd x_n $. Then  $ \alpha=\dd\beta $ iff  $ f=\dps\sum_{i=1}^n\frac{\partial f_i}{\partial x_i} $.
+    
+    So the proposition is equivalent to  $ \forall f\in C_c^\infty(\Rbb^n) $,  $ \int_{\Rbb^n}f\dd x_1\wedge\cdots\wedge\dd x_n=0 $ $ \Rightarrow  $  $ \exists f_1,\cdots,f_n\in C_c^\infty(\Rbb^n ) $ \st  $ f=\dps\sum_{i=1}^n\frac{\partial f_i}{\partial x_i} $.
+    
+    Prove it by induction. For  $ n=1 $,  $ f_1(x)=\int_{-\infty}^xf(t)\dd t $.  $ f_1\in C_c^\infty(\Rbb) $,  $ f_1'=f $.
+    
+    Suppose  $ n  $ is proved,  $ f\in C_c^\infty(\Rbb^{n+1}) $,  $ \int_{\Rbb^{n+1}}f\dd x_1\wedge\cdots\wedge\dd x_{n+1}=0 $.
+    
+    Define  $ g\in C_c^\infty(\Rbb^n)  $ by  $ g(x_1,\cdots,x_n)=\dps\int_{-\infty}^\infty f(x_1,\cdots,x_{n+1})\dd x_{n+1} $. Then  $ \int_{\Rbb^n}g\dd x_1\wedge\cdots\wedge\dd x_n=0 $.
+    
+    By induction,  $ \exists  $  $ g_1,\cdots,g_n\in C_c^\infty(\Rbb^n) $ \st  $ g=\dps\sum_{i=1}^n\frac{\partial g_i}{\partial x_i} $.
+    
+    Take  $ \rho\in C_c^\infty(\Rbb ) $ \st  $ \dps\int_{-\infty}^\infty \rho\dd x=0 $. Define  $ f_i:\Rbb^{n+1}\rightarrow \Rbb $ by  $ f_i(x_1,\cdots,x_{n+1})=g_i(x_1,\cdots,x_n)\cdot\rho(x_{n+1}) $.
+    
+    Set  $ h=f-\dps\sum_{i=1}^n\frac{\partial f_i}{\partial x_i} $. Then for  $ \forall (x_1,\cdots,x_n) $,
+    \[\int_{-\infty}^\infty h(x_1,\cdots,x_{n+1})\dd x_{n+1}=\int_{-\infty}^\infty f(x_1,\cdots,x_{n+1})-\int_{-\infty}^\infty  \rho(x_{n+1})\dd x_{n+1}\cdot\left(\dps\sum_{i=1}^n\frac{\partial g_i}{\partial x_i}\right)=0 \]
+    Set  $ f_{n+1}(x_1,\cdots,x_{n+1})=\int_{-\infty}^{x_{n+1}}h(x_1,\cdots,x_n,t)\dd t $. Then  $ \dps\frac{\partial f_{n+1}}{\partial x_{n+1}}=h $ and  $ f=\dps\sum_{i=1}^{n+1}\frac{\partial f_i}{\partial x_i} $   
+\end{proof}
