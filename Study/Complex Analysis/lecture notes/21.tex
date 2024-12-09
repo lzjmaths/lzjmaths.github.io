@@ -1,0 +1,111 @@
+% !TEX root = lecture/Complex_Analysis
+
+\begin{proof}
+    WLOG, we assume  $ \zeta_k\neq0  $ for each  $ k  $. Consider the Taylor expansion for  $ P_k(\dps\frac{1}{z-\zeta_k}) $ around  $ z=0 $:
+    \begin{equation}
+        \Psi(z)=P_k(\frac{1}{z-\zeta_k})=\Psi(0)+\Psi'(0)z+\dps\frac{\Psi''(0)}{2!}z^2+\cdots+\frac{\Psi^{(N_k)(0)}}{N_k!}z^{N_k}+\Psi_{N_k+1}z^{N_k+1}
+    \end{equation}  
+    where  $ N_k  $ is to be specified later, and 
+    \begin{equation}
+        \Psi_{N_k+1}(z)=\frac{1}{2\pi i}\int_C\frac{\Psi(\zeta)}{\zeta^{N_k+1}(\zeta-z)}\dd\zeta
+    \end{equation}
+    where  $ C  $ is the circle centered at  $ 0 $ with radius  $ \dps\frac{|\zeta_k |}{2} $. Let  $ M_k:\dps\max_{z\in C}|\Psi(z)| $. Then 
+    \begin{equation}
+        |\Psi_{N_k+1}(z)| \leq \frac{1}{2\pi }\frac{M_k}{\left(\dps\frac{|\zeta_k|}{2}   \right)^{N_k+1}\cdot\dps \frac{|\zeta_k|}{4}}\cdot 2\pi \cdot\frac{|\zeta_k|}{4}=2M_k\left(\dps\frac{2}{|\zeta_k|}\right)^{N_k+1},\,\forall z\text{ with }|z| \leq \frac{|\zeta_k|}{4}
+    \end{equation}
+
+    Let  $ p_k $ be the partial sum of  $ \Psi  $ up to   $ z^{N_k} $.\ie  $ p_k=\Psi(0)+\Psi'(0)z+\dps\frac{\Psi''(0)}{2!}z^2+\cdots+\frac{\Psi^{(N_k)(0)}}{N_k!}z^{N_k} $.  Then 
+    \begin{equation}
+        |\Psi(z)-p_k(z)|  \leq 2 M_k\left(\frac{2|z|}{|\zeta_k|}\right)^{N_k+1},\,\forall z \text{ with }|z| \leq \frac{|\zeta_k|}{4}
+    \end{equation}  
+    Pick  $ N_k  $ large enough \st  $ M_k\cdot 2^k \leq 2^{N_k } $. Then
+    \begin{equation}\label{eq2:5.2.1:Mittag-Leffler Theorem}
+        |\Psi(z)-p_k(z)| \leq 2^{-k}\Rightarrow |P_k(\dps\frac{1}{z-\zeta_k})-p_k(z)| \leq 2^{-k},\,\forall z \text{ with }|z| \leq \frac{|\zeta_k|}{4}
+    \end{equation}
+    Note that 
+    \begin{equation*}
+        \sum_k\left[P_k(\frac{1}{z-\zeta_k})-p_k(z)\right]=\sum_{|\frac{\zeta_k}{4}| \leq R}\left[P_k(\frac{1}{z-\zeta_k})-p_k(z)\right]+\sum_{|\frac{\zeta_k}{4}|>R}\left[P_k(\frac{1}{z-\zeta_k})-p_k(z)\right]
+    \end{equation*}
+    where the first part is a finite sum and has  $ \dps P_k(\frac{1}{z-\zeta_k}) $ as the singular part at the pole  $ \zeta_k $, and the second part
+    is analytic in  $ z\in \overline{B(0,R)} $ by Weierstrass's theorem \ref{Weierstrass Theorem for Essential singularity} and \eqref{eq2:5.2.1:Mittag-Leffler Theorem}  
+
+    Therefore,  $ h(z)=\dps \sum_k\left[P_k(\frac{1}{z-\zeta_k})-p_k(z)\right]$ is the desired meromorphic function.
+
+    For the second part, if  $ f  $ is meromorphic in  $ \Cbb  $ with the some poles  $ \zeta_k  $ and singular parts as  $ h  $, then 
+     $ g=f-h  $ is analytic in  $ \Cbb $. 
+\end{proof}
+\begin{remark}
+    We have given  $ p_k $ as the partial sum of  $ \dps P_k(\frac{1}{z-\zeta_k}) $ up to some  $ N_k $   
+\end{remark}
+\begin{example}
+    Prove that 
+    \begin{equation}\label{pi^2/sin^2piz}
+        \frac{\pi^2}{\sin^2(\pi z)}=\sum_{n=-\infty}^\infty\frac{1}{(z-n)^2}    
+    \end{equation}
+\end{example}
+\begin{proof}
+    The singular part of  $ \dps\frac{\pi^2}{\sin^2(\pi z)} $ at the pole  $ z=0 $ is  $ \dps\frac{1}{z^2} $ $ \Rightarrow  $ The singular part
+    of  $ \dps\frac{\pi^2}{\sin^2(\pi z)} $    at  $ z=n\in\Zbb $ is  $ \dps\frac{1}{(z-n)^2}$. We know  $ \dps\sum_{n=-\infty}^\infty\frac{1}{(z-n)^2} $
+    converges uniformly on each compact set in  $ \Cbb  $ if we omit the terms which become infinite (\ie  $ p_k =0 $ in the previous theorem)
+    
+    The Mittag-Leffler Theorem \ref{thm:5.2.1:Mittag-Leffler Theorem} implies  $ \dps\frac{\pi^2}{\sin^2(\pi z)}=\dps\sum_{-\infty}^\infty \frac{1}{(z-n)^2}+g(z) $ 
+    where  $ g  $ is analytic in  $ \Cbb $.
+    
+    It is easy to see that  $  g  $ has period  $ 1  $ and  $ \dps\lim_{|y|\to\infty}g(x+iy)=0 $ uniformly in  $ x\in \Rbb $.
+    
+    Then  $ |g(z)| $ is bounded in  $ \{z\in \Cbb:0 \leq \Re z \leq 1\} $ $ \Rightarrow  $  $ |g(z) $ is bounded in  $ \Cbb $ by its periodicty.
+    
+    Then Liouville's theorem \ref{Liouville's Theorem} implies  $ g  $ is a constant, hence of  $ 0  $ since  $ \dps\lim_{y\to\infty}g(x+iy)=0 $. 
+\end{proof}
+Similarly, one can prove 
+\begin{equation}\label{pi cotpi}
+    \pi\cot(\pi z)=\frac{1}{z}+\sum_{n\neq 0}\frac{1}{z-n}+\frac{1}{n}=\frac{1}{z}+\sum_{n=1}^\infty\frac{2z}{z^2-n^2},\,z\in \Cbb
+\end{equation}
+
+From  \eqref{pi^2/sin^2piz} and \eqref{pi cotpi}, one can derive 
+\begin{equation}
+    \frac{\pi}{\sin(\pi z)}=\lim_{m\to\infty}\sum_{n=-m}^m\frac{(-1)^n}{z-n},\,z\in\Cbb
+\end{equation}
+\subsubsection{Infinite Products}
+An \name{infinite product} of complec numbers  $ \dps\prod_{n=1}^\infty a_n $ converges if and only if at most a finite number of the factors are zero,
+and if the partial products formed by the non-vanishing factors tend to a finite limit which is different from zero. 
+
+\begin{remark}
+     $ \dps\prod_{n=1}^\infty a_n$ converges  $ \Rightarrow  $   $ a_n=\dps\frac{\dps\prod_{j=1}^n a_j}{\dps\prod_{j=1}^{n-1}a_j}\rightarrow 1 $ as 
+      $ n\rightarrow \infty  $ (if the zero factors are omitted)  
+\end{remark}
+\begin{theorem}
+    The infinite product  $ \dps\prod_{n=1}^\infty (1+a_n) $ with  $ 1+a_n\neq 0 $ converges if and only if  $ \dps\sum_{n=1}^\infty \mathrm{Ln}(1+a_n) $
+    converges, where  $ \mathrm{Ln} $ is the principal branch of the logarithm.    
+\end{theorem}
+\begin{proof}
+    "$ \Leftarrow $": Let  $ S_n =\dps\sum_{k=1}^n\mathrm{Ln}(1+a_k) $. Then  $ P_n=\dps \prod_{k=1}^n(1+a_k)=e^{S_n} $.
+    
+    So  $ s_n\rightarrow s $ as  $ n\rightarrow \infty $ $ \Rightarrow  $  $ P_n\rightarrow P=e^s\neq 0 $ as  $ n\rightarrow\infty $    
+
+    "$ \Rightarrow $" Suppose  $ P_n\rightarrow P\neq 0 $ as  $ n\rightarrow \infty $.
+    
+    There exists  $ M_n\in \Zbb $ \st  $ \dps\mathrm{Ln}(\frac{P_n}{P})=S_n-\mathrm{Ln}P+2\pi i \cdot M_n$,  $ n\in \Nbb $.
+    
+    Then  $ 2\pi (M_{n+1}-M_n)=\dps\arg(\frac{P_{n+1}}{P})-\arg(\frac{P_n}{P})-\arg(1+a_{n+1}) $. From  $ \dps\lim_{k\to\infty}\frac{P_n}{P}=1 $
+    we can derive  $ \arg(\frac{P_{n+1}}{P})-\arg(\frac{P_{n}}{P})\rightarrow 0 $ as  $ n\rightarrow \infty $.
+    
+    $ |\arg(1+a_{n+1})| \leq \pi $ $ \Rightarrow  $  $ M_{n+1}-M_n=0 $ for  $ n  $ large enough. So  $ M_n=M\in\Zbb $ for all large  $ n $.
+    
+    Then  $ \mathrm{Ln}(\dps\frac{P_n}{P})=S_n-\mathrm{Ln} P+2\pi i\cdot M $, $ n\in \Nbb $ $ \Rightarrow  $  $ S_n\rightarrow \mathrm{Ln}P-2\pi i \cdot M $
+    as  $ n\rightarrow \infty $    
+\end{proof}
+
+The infinite product  $ \dps\prod_{n=1}^\infty(1+a_n) $ is said to be \subname{absolutely convergent}{infinite product} if the infinite sum  $ \dps\sum_{n=1}^\infty \mathrm{Ln}(1+a_n) $ 
+is absolutely convergent.
+\begin{theorem}
+    The product  $ \dps\prod_{n=1}^\infty (1+a_n)  $ is absolutely convergent iff  $ \dps\sum_{n=1}^\infty |a_n| $ converges. 
+\end{theorem} 
+\begin{proof}
+    Convergence of either  $ \dps\sum_{n=1}^\infty\mathrm{Ln}(1+a_n) $ or  $ \sum_{n=1}^\infty|a_n| $ implies  $ a_n\rightarrow 0 $ as  $ n\rightarrow \infty  $ 
+    
+     $ \dps\lim_{z\to 0}\frac{\mathrm{Ln}(1+z)}{z}=0 $ $ \Rightarrow  $  $ \dps\frac{1}{2}|a_n|<|\dps\mathrm{Ln}(1+a_n)|<\frac{3}{2}|a_n| $ for all large  $ n $.   
+\end{proof}
+
+
+
