@@ -1,0 +1,124 @@
+\subsubsection{Canonical Products}
+If  $ g  $ is an entire function, then  $ f(z)=e^{g(z)} $ is entire and everywhere nonzero. Conversely, if  $ f  $ is any entire function which is never zero, then  $ g(z)=\ln f(z)  $ is well-defined. So  $ f(z)=e^{g(z)} $ where  $ g  $ is entire. 
+
+This result gives a way to construct the most general function with a finite number of zeros. Assume  $ f  $ has a zero of order  $ m  $ at the origin, and  $ N  $ zeros  $ a_1,\cdots,a_N $ away from the origin.(multiple zeros being repeated) Then 
+\begin{equation}
+    f(z)=z^me^{g(z)}\prod_{n=1}^N(1-\dps\frac{z}{a_n})\label{eq:5.2.3:function with finite zeros}
+\end{equation}
+where  $ g  $ is entire.
+
+If there are infinitely many zeros, an obvious generalization is 
+\begin{equation}
+    f(z)=z^me^{g(z)}\prod_{n=1}^\infty(1-\dps\frac{z}{a_n})\label{eq:5.2.4:function with infinite zeros}
+\end{equation}
+Theorem \ref{thm:5.2.2:equivalence of product absolutely convergence} implies  $ \dps\prod_{n=1}^\infty (1-\frac{z}{a_n}) $ converges absolutely iff  $ \dps\sum_{n=1}^\infty\frac{1}{|a_n|} $ converges. And in this   case, the convergence is also uniform in  $ \{z:|z| \leq R\} $ for  $ \forall R>0 $.
+
+\begin{theorem}[Weierstrass factorization theorem]\label{thm:5.2.3:Weierstrass factorization theorem}
+    There exists an entire function with arbitrary prescribed zeros $ (a_n)_{n\in \Nbb} $ as long as  $ a_n\rightarrow \infty $ if the number of zeros is infinite.  Moreover, every entire function with these and no other zeros can be written as 
+    \begin{equation}
+        f(z)=z^me^{g(z)}\prod_{n=1}^\infty(1-\dps\frac{z}{a_n})\exp\left[\frac{z}{a_n}+\frac{1}{2}(\frac{z}{a_n})+\cdots+\frac{1}{N_n}(\frac{z}{a_n})^{N_n}\right]
+    \end{equation}
+    where the product is taken over all  $ a_0\neq 0 $,  $ N_n \in \Nbb\cup\{0\} $, and  $ g  $ is entire. 
+\end{theorem}
+\begin{proof}
+    We already proved the case when the number of zeros is finite in   \eqref{eq:5.2.3:function with finite zeros}. So we consider a sequence of complex numbers  $ a_n\neq 0 $ with  $ \dps\lim_{n\to\infty}a_n=\infty $. We need to prove that  $ \exists  $ polynomials  $ p_n(z) $ \st   $ \dps\prod_{n=1}^\infty(1-\frac{z}{a_n}e^{p_n(z)}) $ converges to an entire function. By theorem \ref{thm:5.2.2:equivalence of convergence of products}, this is equivalent to the uniform convergence of 
+    \begin{equation}
+        \sum_{n=1}^\infty[\ln(1-\frac{z}{a_n})+p_n(z)]
+    \end{equation}  
+    where the branch of the logarithm shall be chosen \st  $\dps r_n(z)=\ln(1-\frac{z}{a_n})+p_n(z) $ has imaginary part in  $ (-\pi,\pi] $.
+    
+    For given  $ R>0  $, we only need to consider the terms with  $ |a_n|>R $.
+
+    The Taylor series gives 
+    \begin{equation}
+        \Ln(1-\frac{z}{a_n})=-\left[\frac{z}{a_n}+\frac{1}{2}(\frac{z}{a_n})^2+\cdots\right],\,|z| \leq R
+    \end{equation}
+    We define  $ \dps p_n(z)=\frac{z}{a_n}+\frac{1}{2}\left(\frac{z}{a_n}\right)^2+\cdots+\frac{1}{N_n}\left(\frac{z}{a_n}\right)^{N_n} $, where  $ N_n\in \Nbb\cup\{0\} $ is to be specified later. 
+    
+
+    Then  \[ r_n\left(z\right)=\dps-\left[\frac{1}{N_n+1}\left(\frac{z}{a_n}\right)^{N_n+1}+\frac{1}{N_n+2}\left(\frac{z}{a_n}\right)^{N_n+2}+\cdots\right]+2k_n\pi,\, |z| \leq R ,k_n\in \Zbb\]
+    
+    And thus   
+    \begin{align*}
+        \dps|r_n\left(z\right)| &\leq \frac{1}{N_n+1}\left(\frac{z}{|a_n|}\right)^{N_n+1}\cdot\left[1+\frac{R}{|a_n|}+\left(\frac{R}{|a_n|}\right)^2+\cdots\right]\\
+        &=\frac{1}{N_n+1}\left(\frac{R}{|a_n|}\right)^{N_n+1}\left(1-\frac{R}{|a_n|}\right)^{-1},\,|z| \leq R 
+    \end{align*}
+
+    If we choose  $ N_n=n $, then  $ r_n(z)\rightarrow 0 $ as  $ n\rightarrow\infty $. Then  $ \Imag (r_n(z))\in(-\pi,\pi] $ for all large  $ n $. So  $ k_n=0 $ for enough large  $ n $.  
+    Moreover,  $ \sum r_n(z) $ is absolutely and uniformly convergent for  $ |z| \leq R $.
+    
+    So  $ \dps\prod_{n=1}^\infty(1-\frac{z}{a_n})e^{p_n(z)} $ is analytic in  $ B(0,R) $ for  $ \forall R>0 $.    
+\end{proof}
+
+\begin{corollary}
+    Every function which is meromorphic in  $ \Cbb  $ is the quotient of two entire functions.
+\end{corollary}
+\begin{proof}
+    If  $ F  $ is meromorphic in  $ \Cbb  $, the theorem \ref{thm:5.2.3:Weierstrass factorization theorem} implies that we can construct an entire function  $ g  $ whose zeros are the poles of  $ F $. Then  $ f(z)=F(z)g(z) $. So  $ F(z)=\dps\frac{f(z)}{g(z)} $ 
+\end{proof}
+
+The proof of the  Weierstrass factorization theorem \ref{thm:5.2.3:Weierstrass factorization theorem} tells us  
+\begin{equation}
+    \prod_{n=1}^\infty(1-\frac{z}{a_n})\exp\left[\frac{z}{a_n}+\frac{1}{2}\left(\frac{z}{a_n}\right)^2+\cdots+\frac{1}{h}\left(\frac{z}{a_n}\right)^h\right]\label{eq:5.2.3:canonical product}
+\end{equation}
+converges and represents an entire function is  
+\begin{equation}
+    \frac{1}{n+1}\sum_{n=1}^\infty\left(\frac{R}{|a_n|}\right)^{h+1}
+\end{equation}
+converges for all  $ R>0 $ $ \Leftrightarrow $  $ \dps\sum_{n=1}^\infty\frac{1}{|a_n|^{h+1}} $ converges.
+
+Suppose  $ h  $ is the smallest integer for which  $ \dps\sum_{n=1}^\infty \frac{1}{|a_n|^{h+1}} $ converges. For this  $ h  $, \eqref{eq:5.2.3:canonical product} is called the \name{canonical product} associated with the sequence  $ \{a_n\} $, and  $ h  $ is the \name{genus} of the canonical product.
+
+If  $ f  $ has a Weierstrass factorization for which the infinite product is a canonical product, and if in this representation  $ g  $ reduces to a polynomial, then  $ f  $ is said to be of \name{finite genus}.
+The \name{genus} of  $ f $ is then defined to be  \[\dps\max\{\text{degree of  $ g $ },\text{ genus of the canonical product}\} \]
+\begin{example}
+    An entire function of genus zero is of the form 
+    \begin{equation}
+        f(z)=Cz^m\prod_{n=1}^\infty(1-\frac{z}{a_n})
+    \end{equation}
+    with  $ C\in \Cbb\setminus\{0\} $, and  $ \dps\sum_{n=1}^\infty\frac{1}{|a_n|}<\infty $. 
+\end{example}
+
+
+\begin{example}
+    The canonical representation of  an entire function of genus one is either of form 
+    \begin{equation}
+        f(z)=Cz^m e^{\alpha z}\prod_{n=1}^\infty(1-\frac{z}{a_n})\exp\left[\frac{z}{a_n}\right]
+    \end{equation}
+    with  $ C\in\Cbb\setminus\{0\},\dps\sum\frac{1}{|a_n|}=\infty,\sum_{n=1}^\infty\frac{1}{|a_n|^2}<\infty $,
+
+    or of the form 
+    \begin{equation}
+        f(z)=Cz^m e^{\alpha z}\prod_{n=1}^\infty(1-\frac{z}{a_n})
+    \end{equation}
+    with  $ C\in\Cbb\setminus\{0\} $, $ \alpha\neq 0 $,  $ \dps\sum\frac{1}{|a_n|}<\infty $.   
+\end{example}
+\begin{example}
+    Prove that  $ \sin(\pi z)=\pi z\dps\prod_{n=1}^\infty(1-\frac{z^2}{n^2}),\,\forall z\in \Cbb\setminus\Zbb $.
+\end{example}
+\begin{proof}
+    The zeros of  $ \sin(\pi z) $ are  $ z=n,\,n\in \Zbb $. The genus of the canonical product associated with  $ \{n\}_{n\in\Zbb_+} $ is one.
+    
+    So by Weierstrass factorization theorem \ref{thm:5.2.3:Weierstrass factorization theorem}, we must take  $ h=1 $, and 
+    \begin{equation}
+        \sin(\pi z)=z e^{g(z)}\prod_{n\neq 0}(1-\frac{z}{n})e^{\frac{z}{n}}
+    \end{equation} 
+
+    Taking logarithmic derivatives on both sides, we get 
+    \begin{equation}
+        \pi \cot(\pi z)=\frac{1}{z}+g'(z)+\sum_{n\neq 0}\left(\frac{1}{z-n}+\frac{1}{n}\right)
+    \end{equation}
+    uniformly converges on compact sets in  $ \Cbb\setminus\Zbb $.
+    
+    Comparing with the expression for  $ \pi \cot(\pi z) $ in \eqref{pi cotpi}, we obtain  $ g'(z)\equiv 0 $ and since
+    $ \dps\lim_{z\to0} \frac{\sin(\pi z)}{z}=\pi $, we have 
+    \begin{equation*}
+        \pi \cot(\pi z)=\pi z\prod_{n\neq 0}(1-\frac{z}{n})e^{\frac{z}{n}}=\pi z\prod_{n=1}^\infty (1-\frac{z^2}{n^2})
+    \end{equation*}
+    Here we use the absolute convergence and uniform convergence of the product.
+\end{proof}
+
+\subsection{The Gamma Function}
+\begin{equation}
+    \Gamma(z)=\int_0^\infty t^{z-1}e^{-t}\dd t,\,\Re z>0
+\end{equation}
