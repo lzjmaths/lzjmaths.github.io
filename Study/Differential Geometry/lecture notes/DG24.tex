@@ -1,0 +1,147 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
+
+
+\begin{lemma}
+     $ \forall \alpha\in \Omega_c^n(\Rbb^n ) $,  $ \forall U\subset \Rbb^n $ open,  $ \exists\beta\in \Omega_c^{n-1}(\Rbb^n) $ \st  $ \Supp(\alpha-\dd\beta)\subset U $     
+\end{lemma}
+\begin{proof}
+    Pick  $ \alpha'\in \Omega_c^n(U)\subset \Omega_c^n(\Rbb^n ) $ \st  $ \int_U\alpha'=\int_{\Rbb^n}\alpha $.
+    
+    Then  $ \exists \beta\in \Omega_c^{n-1}(\Rbb^n) $ \st  $ \alpha-\alpha'=\dd\beta  $. So  $ \Supp(\alpha-\dd\beta)=\Supp(\alpha')\subset U $.  
+\end{proof}
+This lemma tells us every  $ \alpha\in H_c^n(\Rbb) $ can be restricted to  $ H_c^n(U) $.
+
+\begin{lemma}
+     $ M  $ connected. Given charts $ U_1\xrightarrow{\varphi_1}U_2\xrightarrow{\varphi_2}\Rbb^n $,  $ \alpha_1\in \Omega_c^n(U_1) $.  $ \exists \beta\in \Omega_c^{n-1}(M) $ \st  $ \Supp(\alpha_1-\dd\beta)\subset U_2 $.    
+\end{lemma}
+
+This lemma tells us every  $ n $-form with compact support in a chart can be transformed to a $ n $-form with compact support in the next chart. 
+\begin{proof}
+    We can find charts  $ \{V_i\cong \Rbb^n\}_{1 \leq i \leq k} $ \st  $ V_1=U_1,V_k=U_2 $,  $ V_i\cap V_{i+1}\neq\emptyset $.
+
+    By previous lemma,  $ \exists \beta_i\in\Omega_c^{n-1}(V_i) $ \st  $ \Supp(\alpha_{i}-\dd\beta_i)\subset V_i\cap V_{i+1}\subset V_2 $. Define  $ \alpha_{i+1}=\alpha_{i}-\dd\beta_i\in\Omega_c^n(V_{i+1}) $.
+    
+    Then we obtain  $ \beta_1,\cdots,\beta_{n-1} $ \st  $ \Supp(\alpha_1-\dps\sum_{i=1}^{n-1}\dd\beta_i)\subset V_k=U_2 $.  
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{H^n_c=R}]
+    We have proved the well-definedness by Stokes formula and sujevectivity  straight forward.
+
+    Injevtivity: Given  $ \alpha\in \Omega_c^n(M) $,  $ \int_M\alpha=0 $. Using partition of unity, decompose  $ \alpha=\alpha_1+\cdots+\alpha_k $ \st  $ \Supp(\alpha_i) $ compact,  $ \Supp(\alpha_i)\subset U_i \cong \Rbb^n$.
+    
+    By previous lemma,  $ \forall 2 \leq i \leq k $,  $ \exists \beta_i\in \Omega_c^{n-1}(M) $ \st  $ \Supp(\alpha_i-\dd\beta_i)\subset U_1 $.   
+
+    Then  $ \alpha'=\alpha-\dps\sum_{i=2}^k\dd\beta_i\in\Omega_c^n(U_1) $. $ \dps\int_{U_1}\alpha'=\int_M\alpha=0 $. 
+    
+    So  $ \exists \beta_1\in \Omega_c^n(U_1)\subset \Omega_c^n(M) $ \st  $ \alpha'=\dd\beta_1 $. Set  $ \beta=\dps\sum_{i=1}^n\beta_i $. Then  $ \alpha=\dd\beta $.   
+\end{proof}
+
+Given  $ n $-dimensional connected, oriented, closed manifold  $ M,N $,  $ f:M\rightarrow N $. The mapping degree of  $ f  $ is defined by  
+\[\Rbb\overset{\int_N}{\cong} H^n(N)\xrightarrow{f^*}H^n(M)\overset{\int_M}{\cong}\Rbb, 1\mapsto \deg(f)\]
+Equivalently,  $ \forall \alpha\in\Omega^n(N) $, we have  $ \int_N\alpha=\deg(f)\int_Mf^*(\alpha) $.
+
+Then  $ \deg(f)  $ is invariant under homotopy.
+
+If  $ M=M_1\sqcup M_2\sqcup \cdots\sqcup M_k $, then define  $ \deg(f:M\rightarrow N):=\dps\sum_{i=1}^k\dps\sum_{i=1}^k\deg(f|_{M_i}:M_i\rightarrow N) $.
+
+There is an alternative definition. For  $ f:M\rightarrow N $, take a regular value  $ y  $ of  $ f $, \ie  $ \forall x\in f^{-1}(y),f_*:T_xM\rightarrow T_yN  $ is surjective. Then  $ \forall x\in f^{-1}(U) $,   $ \exists  $ neighbourhood  $ U_x  $ of   $ x $,  $ V_y  $ of  $ y  $ \st  $ f|_{U_x}:U_x\xrightarrow{\cong}V_y $ by inverse function theorem. In particular,  $ f^{-1}(y)  $ is discrete.  $ M  $ is compact implies that  $ f^{-1}(y)=\{x_1,\cdots,x_k\} $.
+
+Define local degree   $ \deg(f,x_i)=\begin{cases}
+    1&\text{ if  $ f_*:T_{x_i}M\xrightarrow{ \cong}T_yN $ is orientation preserving}\\
+    -1&\text{ otherwise}
+\end{cases} $ 
+
+\begin{theorem}
+     $ \forall  $ regular value  $ y  $ of  $ f $,  $ \deg(f)=\dps\sum_{x\in f^{-1}(y)}\deg(f,x)\in \Zbb $ 
+\end{theorem}
+\begin{proof}
+    For $ f^{-1}(y)=\{x_1,\cdots,x_n\} $,  $ \exists  $ neighborhood   $ U_i  $ of  $ x_i $,  $ V_i  $ of  $ y $ \st  $ f|_{U_i}:U_i\xrightarrow{\cong}V_i $. Let  $ V $ neighborhood of  $ y  $ \st  $ f^{-1}(V)\subset \dps\bigcup_{i=1}^k U_i $.
+    
+    Take  $ \alpha\in \Omega^n(N) $ \st  $ \Supp(\alpha)\subset\dps V\bigcap (\bigcap_{i=1}^k V_i) $,  $ \int_N\alpha\neq 0 $, then  $ \Supp(f^{*}\alpha)\subset f^{-1}(V)\subset \dps\bigcup_{i=1}^k U_i $.
+    
+    $ \int_{M}f^*(\alpha)=\dps\sum_{i=1}^k\int_{U_i}f^*\alpha=\dps\sum_{i=1}^k\deg(f,x_i)\cdot\int_N\alpha $ since 
+    \[\deg(f,x_i)=1\Leftrightarrow f|_{U_i}\text{ is oreientation preserving}\Leftrightarrow \int_{U_i}f^*\alpha=\int_{V_i}\alpha=\int_N\alpha\]
+    \[\deg(f,x_i)=-1\Leftrightarrow f|_{U_i}\text{ is oreientation reversing}\Leftrightarrow \int_{U_i}f^*\alpha=-\int_{V_i}\alpha=-\int_N\alpha\]
+
+    So  $ \deg(f)=\dps\sum_{i=1}^k\deg(f,x_i) $.
+\end{proof}
+
+\begin{corollary}
+    If  $ f  $  is not surjective (after homotopy) then  $ \deg(f)=0 $ 
+\end{corollary}
+
+ For $ X\in \Gamma(TM) $,  $ p\in M  $ is an isolated singular point. Then  $ \exists  $  open  $ U\xrightarrow[\cong]{ \varphi}\Rbb^n,p\mapsto \vec{0} $ of  $ p  $ \st  $ X_q\neq 0 $  $ \forall q\in U\setminus\{p\} $. Define the local index of  $ X  $ at  $ p  $ by 
+ \[(X,p)=\deg\left(\dps\frac{\varphi_*(X|_U)}{|\varphi_*(X|_U)}:S^{n-1}\rightarrow S^{n-1}\right)\in \Zbb\] 
+ where  $ \varphi_*(X|_U)\in \Gamma(\Rbb^n)=C^\infty(\Rbb^n,\Rbb^n) $ maps  $ 0  $ to  $ 0 $.
+ 
+\begin{example}
+    $ M=\Rbb^2 $,  $ X=x\partial x+y\partial y $. Then  $ (X,0)=1 $.   
+\end{example}
+
+\begin{theorem}[Poinc{\'a}re-Hopf]\label{Poincare-Hopf}
+    Let  $ M  $ be oriented closed manifold.  $ X  $ vector field with only isolated singularity. Then  $ \dps\sum_{\{p|X_p=0\}}(X,p)=\chi(M) $ is the Euler characteristic of  $ M  $, \ie  $\dps\sum_{k=0}^{\dim(M)}(-1)^kb_k,\,b_k= \dim_{\Rbb}H^k_{dR}(M) $.
+\end{theorem}
+\begin{theorem}[Poinc{\'a}re duality theorem]
+     $ M  $ is oriented  $ n $-dimensional manifold withour boundary. Then the bilinear map  $ H^k(M)\times H_c^{n-k}(M)\rightarrow \Rbb,([\alpha],[\beta])\mapsto \int_{C}\alpha\wedge\beta $ induces  $ D_M:H^k(M)\rightarrow \left(H_c^{n-k}(M)\right)^* $ which is always an isomorphism.   
+\end{theorem}
+
+\begin{proposition}
+     $ H_c^k(\Rbb^n)=\begin{cases}
+        \Rbb&k=n\\
+        0&k\neq n
+     \end{cases} $ 
+\end{proposition}
+\begin{proof}
+    We have proved for  $ k=n $. For $ k=0 $,  $ \alpha\in \Omega_c^0(\Rbb^n) $,  $ \dd\alpha=0 $ $ \Rightarrow  $ $ \alpha=0 $.
+    
+    For  $ 1<k<n $,  $ \alpha\in \Omega_c^k(\Rbb^n) $,  $ \dd\alpha=0 $. We want to find  $ \beta\in \Omega_c^{k-1}(\Rbb^n ) $ \st  $ \alpha=\dd\beta$.
+    
+    $ \Rbb^n=S^n\setminus\{\infty\} $. Regard  $ \alpha $ as  an element in $  \Omega^k(S^n) $,  $ \dd\alpha=0 $.  $ H^k(S^n)=0 $ $ \Rightarrow  $  $ \exists \beta'\in \Omega^{k-1}(S^n),\dd\beta'=\alpha $.     
+
+    Take open neighborhood  $ U \cong\Rbb^n $ of  $ \{\infty\}\in S^n $ \st  $ \alpha|_U=0 $ $ \Rightarrow  $ $ \dd(\beta'|_U)=0 $. If  $ k=1 $,  $ \beta'|_U\equiv C $. Set  $ \beta=\beta'-C $,  $ \beta|_U\equiv 0 $ so  $ \beta\in \Omega_c^{k-1}(\Rbb^n) $. If  $ k>1 $,  $ H^{k-1}(U)=0 $ $ \Rightarrow  $  $ \exists \gamma\in \Omega^{k-2}(U) $ \st  $ \beta|_U=\dd\gamma $. Extend  $ \gamma  $ to  $ \gamma'\in \Omega^{k-2}(S^n) $. Set  $ \beta=\beta'-\dd\gamma' $. Then  $ \beta|_U=\beta'|_{U}-\dd\gamma=0 $ so  $ \beta\in \Omega_c^{k-1}(\Rbb^n) $ and  $ \dd\beta=\dd\beta'-\dd^2\gamma'=\alpha $.
+\end{proof}
+
+So we prove that  $ D_M $ is an isomorphism when  $ M=\Rbb^n $.
+
+For  $ U\overset{i}{\hookrightarrow}V $,  $ U,V  $ open in  $ M  $. The map $ \Omega_c^*(U)\xrightarrow{i_*}\Omega_c^*(V),\alpha\mapsto i_*(\alpha)_p=\begin{cases}
+    \alpha_p&p\in  U\\
+    0&p\not\in U
+\end{cases} $  
+
+\begin{lemma}
+    The sequence
+    \[0\rightarrow\Omega_c^*(U_1\cap U_2)\xrightarrow{(i_{1,*},i_{2,*})}\Omega_c^*(U_1)\oplus\Omega_c^*(U_2)\xrightarrow{j_1^*-j_2^*}\Omega_c^*(U_1\cup U_2)\rightarrow 0\]
+    is exact. Moreover, by snake lemma \ref{Snake Lemma}, we have M.V. sequence for  $ H_c^*(-) $:
+
+    \[H_c^k(U_1\cap U_2)\rightarrow H_c^*(U_1)\oplus H_c^*(U_2)\rightarrow H_c^*(U_1\cup U_2)\xrightarrow{ \partial}H_c^{k+1}(U_1\cap U_2)\rightarrow \cdots\]
+
+    Take dual, we get 
+    \begin{center}
+        \scriptsize
+        \begin{tikzcd}
+            \cdots&\arrow[l]\left(H_c^k(U_1\cap U_2)\right)^*&\arrow[l]\left(H_c^k(U_1)\right)^*\oplus \left(H_c^k(U_2)\right)^*&\arrow[l]\left(H_c^k(U_1\cap U_2)\right)^*&\ar[l]\left(H_c^{k+1}(U_1\cap U_2)\right)^*&\arrow[l]\cdots\\
+            \cdots&\arrow[l]\arrow[u,"D_{U_1\cap U_2}"]H^{n-k}(U_1\cap U_2)&\ar[l]\ar[u,"D_{U_1}\oplus D_{U_2}"]H^{n-k}(U_1)\oplus H^{n-k}(U_2)&\ar[l]\ar[u,"D_{U_1\cup U_2}"] H^{n-k}(U_1\cup U_2)&\ar[l,"\partial"]\ar[u,"D_{U_1\cap U_2}"]H_c^{n-k-1}(U_1\cap U_2)&\ar[l]\cdots
+        \end{tikzcd}
+    \end{center}
+\end{lemma}
+\begin{lemma}
+    The diagram commutes.
+\end{lemma}
+\begin{lemma}[The five lemma]
+    If the diagram commutes,  $ f_1,f_2,f_4,f_5 $ are isomorphisms, then  $ f_3 $ is an isomorphism. 
+
+    \begin{center}
+        \begin{tikzcd}
+            A_1\ar[r]\ar[d,"f_1"]& A_2\ar[r]\ar[d,"f_2"]&A_3\ar[r]\ar[d,"f_3"]&A_4\ar[r]\ar[d,"f_3"]&A_5\ar[d,"f_5"]&\text{exact}\\
+            B_1\ar[r]& B_2\ar[r]&B_3\ar[r]&B_4\ar[r]&B_5&\text{exact}
+        \end{tikzcd}
+    \end{center}
+
+\end{lemma}
+\begin{lemma}
+     $ \forall M  $,  $ \exists  $ locally finite open cover  $ \mathcal{U}=\{U_i\}_{i\in  I} $ \st  $ \forall J\subset I $,  $ \dps\bigcap_{i\in J}U_i\cong\begin{cases}
+        \emptyset\\
+        \Rbb^n
+     \end{cases} $.
+\end{lemma}

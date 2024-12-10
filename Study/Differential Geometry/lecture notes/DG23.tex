@@ -1,3 +1,7 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
+
+
 \begin{example}
     For  $ M=\Cbb\Pbb^n  $,  $ U_1=M\setminus\{[1,0,\cdots,0]\} $,  $ U_2=M\setminus\{[0,*,*,\cdots,*]\} $. Then 
     \begin{equation*}
@@ -73,7 +77,7 @@
      \end{equation*} 
      Then there exists a deformation retraction  $ [0,1]\times U_1\rightarrow U_1 $, $ (t,(x_0,x_1,\cdots,x_n))\mapsto (tx_0+(1-t)(-1),x_1,\cdots,x_n)  $. Then  $ U_1\cong\{-1\}\times \Rbb^n\simeq * $.  $ U_2\simeq * $,  $ U_1\cap U_2\simeq \Rbb^n\setminus A $. The Mayer-Vietoris sequence gives 
  \begin{equation*}
-   H^i_{dR}(U_1)\oplus H_{dR}^i(U_2)\rightarrow H_{dR}^i(U_1\cap U_2)\xrightarrow{\partial}{\cong}H_{dR}^{i+1}(\Rbb^{n+1}\setminus\{0\}\times A)\rightarrow H_{dR}^{i+1}(U_1)\oplus H_{dR}^{i+1}(U_2)
+   H^i_{dR}(U_1)\oplus H_{dR}^i(U_2)\rightarrow H_{dR}^i(U_1\cap U_2)\xrightarrow[\cong]{\partial}H_{dR}^{i+1}(\Rbb^{n+1}\setminus\{0\}\times A)\rightarrow H_{dR}^{i+1}(U_1)\oplus H_{dR}^{i+1}(U_2)
  \end{equation*} 
 for  $ i>0 $. 
 
@@ -148,10 +152,10 @@ Define  $ H_{dR,c}^*(M)=H^*(\Omega^0(M)+\Omega^1(M)+\cdots) $, abbreviated to  $
 
 If  $ M  $ is compact, then  $ H_{dR,c}^*(M)\cong H_{dR}^*(M) $. But it is not true for  $ M  $ not compact. The following is a counterexample.
 
-\begin{theorem}
-    Let  $ M  $ be connected  $ n $-dimentional manifold  without boundary. Then the map  $ H_{c}^n(M)\xrightarrow{ \cong }\Rbb ,[\alpha]\mapsto \int_M\alpha$ is a well-defined isomorphism. Moreover, if  $ M  $ is closed and connected, then  $ H_{dR}^n(M)\cong \Rbb $   
+\begin{theorem}\label{H^n_c=R}
+    Let  $ M  $ be connected and oriented $ n $-dimentional manifold  without boundary. Then the map  $ H_{c}^n(M)\xrightarrow{ \cong }\Rbb ,[\alpha]\mapsto \int_M\alpha$ is a well-defined isomorphism. Moreover, if  $ M  $ is closed and connected, then  $ H_{dR}^n(M)\cong \Rbb $   
 \end{theorem}
-\begin{proof}
+\begin{remark}
     Well-defineness: If  $ [\alpha]=[\alpha'] $, then  $ \alpha-\alpha'=\dd \beta $. By Stokes theorem \ref{Stokes Theorem},  $ \int_M\alpha=\int_M\alpha' $.
     
     \begin{proposition}
@@ -173,5 +177,10 @@ If  $ M  $ is compact, then  $ H_{dR,c}^*(M)\cong H_{dR}^*(M) $. But it is not t
     
     Set  $ h=f-\dps\sum_{i=1}^n\frac{\partial f_i}{\partial x_i} $. Then for  $ \forall (x_1,\cdots,x_n) $,
     \[\int_{-\infty}^\infty h(x_1,\cdots,x_{n+1})\dd x_{n+1}=\int_{-\infty}^\infty f(x_1,\cdots,x_{n+1})-\int_{-\infty}^\infty  \rho(x_{n+1})\dd x_{n+1}\cdot\left(\dps\sum_{i=1}^n\frac{\partial g_i}{\partial x_i}\right)=0 \]
-    Set  $ f_{n+1}(x_1,\cdots,x_{n+1})=\int_{-\infty}^{x_{n+1}}h(x_1,\cdots,x_n,t)\dd t $. Then  $ \dps\frac{\partial f_{n+1}}{\partial x_{n+1}}=h $ and  $ f=\dps\sum_{i=1}^{n+1}\frac{\partial f_i}{\partial x_i} $   
-\end{proof}
+    Set  $ f_{n+1}(x_1,\cdots,x_{n+1})=\int_{-\infty}^{x_{n+1}}h(x_1,\cdots,x_n,t)\dd t $. Then  $ \dps\frac{\partial f_{n+1}}{\partial x_{n+1}}=h $ and  $ f=\dps\sum_{i=1}^{n+1}\frac{\partial f_i}{\partial x_i} $. 
+
+    \begin{corollary}
+        $ H_c^n(\Rbb^n)\xrightarrow{\cong}\Rbb, [\alpha]\mapsto \int_{\Rbb^n}\alpha $ is an isomorphism.
+    \end{corollary}
+    
+\end{remark}

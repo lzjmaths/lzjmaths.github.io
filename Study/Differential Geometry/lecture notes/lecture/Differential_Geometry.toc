@@ -41,5 +41,5 @@
 \contentsline {subsection}{\numberline {7.3}Mayer-Vietoris sequence}{85}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Some algebraic constructions}{85}{subsubsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.4}Compact supported de Rham cohomology}{93}{subsection.7.4}%
-\contentsline {section}{Index}{96}{section*.4}%
-\contentsline {section}{List of Theorems}{99}{section*.5}%
+\contentsline {section}{Index}{99}{section*.4}%
+\contentsline {section}{List of Theorems}{102}{section*.5}%
