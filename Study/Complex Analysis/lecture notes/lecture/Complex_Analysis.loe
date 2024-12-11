@@ -130,3 +130,8 @@
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.16\else \numberline {5.16}Example\fi }{78}{example.5.16}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.17\else \numberline {5.17}Example\fi }{78}{example.5.17}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.18\else \numberline {5.18}Example\fi }{78}{example.5.18}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.19\else \numberline {5.19}Proposition\fi }{80}{proposition.5.19}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{81}{Item.25}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.20\else \numberline {5.20}Theorem\fi \thmtformatoptarg {Jensen's formula}}{83}{theorem.5.20}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.21\else \numberline {5.21}Remark\fi }{83}{remark.5.21}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.22\else \numberline {5.22}Remark\fi }{84}{remark.5.22}%

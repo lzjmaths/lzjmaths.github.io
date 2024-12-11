@@ -1,0 +1,134 @@
+Let  $ f_n(z)=\dps\int_0^n t^{z-1}e^{-t}\dd t $. Then  $ f_n(z)  $ is analytic in  $ \Re z>0 $ and 
+\begin{equation}
+    |f_n(z)-\Gamma(z)|=|\int_n^\infty t^{z-1}e^{-t}\dd t| \leq \int_n^\infty t^{\Re z-1}e^{-t}\dd t
+\end{equation}  
+which converges uniformly in  $ \{z\in \Cbb:\delta \leq \Re z \leq M\} $ for  $ \forall \delta>0,M>0 $. By Weierstrass' theorem \ref{thm:5.1.1:Weierstrass's Theorem},  $ \Gamma  $  is analytic in  $ \{z:\Re z>0\} $.
+
+\begin{proposition}\label{thm:5.2.4:properties of the Gamma function}
+    Here are some properties of the Gamma function:
+    \begin{enumerate}[label=(\alph*)]
+        \item $ \Gamma(z+1)=z\Gamma(z) $,  $ \forall z\in \Cbb\setminus\{0,-1,\cdots,\} $. In particular,  $ \Gamma(n+1)=n! $,  $ \forall n\in \Nbb $.
+        
+        \item  $ \Gamma  $ extends to a meromorphic function on   $ \Cbb  $ with simple poles at  $ z=0,-1,-2,\cdots, $
+        
+        \item  $ \dps\frac{1}{\Gamma(z)}=z e^{\gamma z}\dps\prod_{n=1}^\infty (1+\frac{z}{n})e^{-\frac{z}{n}} $,  $ z\in \Cbb $, where  $ \dps\gamma=\lim_{n\to\infty}\sum_{k=1}^n\frac{1}{k}-\ln n  $ is the Euler's constant 
+        
+        \item  $ \Gamma(z)=\dps\lim_{n\to\infty}\frac{n!n^z}{z(z+1)\cdots(z+n)} $,  $ \forall z\in \Cbb\setminus\{0,-1,-2,\cdots\} $.
+        
+        \item  $ \Gamma  $  has no zeros,  $ \dps\frac{1}{\Gamma} $ is entire.
+        
+        \item  $ \Gamma(z)\Gamma(1-z)=\dps\frac{\pi}{\sin(\pi z)}  $,  $ \forall z\in \Cbb\setminus\Zbb $  
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}[label=(\alph*)]
+        \item Integration by parts  $ \Rightarrow  $  $ \Gamma(z+1)=z\Gamma(z) $,  $ \Re z>0 $.
+        \item We use  $ \Gamma(z+1)=z\Gamma(z) $ to analytically continue  $ \Gamma  $ to meromorphic function on  $ \Cbb $.
+        Then 
+        \begin{equation}
+            \Gamma_1(z)=\frac{\Gamma(z+1)}{z}
+        \end{equation}
+        is analytic on  $ \{z\in \Cbb:\Re z>-1\}\setminus\{0\} $ \st  $ \Gamma_1(z)=\Gamma(z) $ for  $ \Re z>0 $.
+        
+        $ z=0 $  is a simple pole of  $ \Gamma_1 $ with  $ \Res_{z>0}\Gamma_1(z)=\Gamma(1)=1 $.
+        
+        By induction, if we have  $ \Gamma_{n-1} $ as the analytic continuous of  $ \Gamma $ to  $ \Re z>1-n $,  $ z\neq -n+2,-n+3,\cdots,0 $, then we define 
+        \begin{equation}
+            \Gamma_n(z)=\frac{\Gamma_{n-1}(z+1)}{z}=\frac{\Gamma(z+n)}{z(z+1)\cdots(z+n-1)}
+        \end{equation}
+        which is meromorphic for  $ \Re z>-n $.with poles  $ z=-n+1,,-n+2\cdots,0 $ and  $ \dps\Res_{z=-n+1}\Re\Gamma_n(z)=\frac{(-1)^{n-1}}{(n+1)!} $. 
+
+        \item[(c,d,e)] We know that  $ \dps\lim_{n\to\infty}(1-\dps\frac{t}{n})^nt^{z-1}=e^{-t}t^{z-1} $, and   $ (1-\dps\frac{t}{n})^n \leq e^{-t} $ for  $ 1 \leq t \leq n $.
+        
+        Then dominated convergence theorem implies  \[ \dps\lim_{n\to\infty}\int_0^n(1-\dps\frac{t}{n})^n t^{z-1}\dd t=\int_0^\infty e^{-t}t^{z-1}\dd  t=\Gamma(z),\forall \Re z>0\]
+
+        \begin{claim}
+            \begin{equation}\label{eq:5.5.3:lim of equation in Gamma function}
+                \int_0^n(1-\dps\frac{t}{n})^nt^{z-1}\dd t=\frac{n!n^z}{z(z+1)\cdots(z+n)},\,\Re z>0
+            \end{equation}
+        \end{claim}
+        \begin{proof}
+            Indeed, for  $ n=1 $,  $ \dps\int_0^1(1-t)t^{z-1}\dd t=\frac{1}{z}-\frac{1}{z+1} $.  
+        \end{proof}
+
+        Suppose \eqref{eq:5.5.3:lim of equation in Gamma function} holds for  $ n-1 $. Then 
+        \begin{equation}
+            \begin{aligned}
+                \int_0^n(1-\frac{t}{n})^nt^{z-1}\dd t&\overset{s=\frac{t}{n}}{=}n^z\int_0^1(1-s)^ns^{z-1}\dd s \\
+                &=\frac{n^z}{z}\left[(1-s)^ns^z|^1_0+n\int_0^1(1-s)^{n-1}s^z\dd z\right]\\
+                &=\frac{n^{z+1}}{z}\int_0^1(1-s)^{n-1}s^z\dd s\\
+                &=\frac{n^{z+1}}{z}\cdots\frac{(n+1)!}{z(z+1)\cdots(z+n-1)}\text{ by induction hypothesis}\\
+                &=\frac{n!n^z}{z(z+1\cdots(z+n))}
+            \end{aligned}
+        \end{equation} 
+        Therefore,  $ \Gamma(z)=\dps\lim_{n\to\infty}\frac{n!n^z}{z(z+1)\cdots(z+n)} $,  $ \Re z>0 $.
+
+        For  $ \Re z>0  $,  
+        \begin{align}
+            \dps\frac{1}{\Gamma(z)}&=\lim_{n\to\infty}\frac{z(z+1)\cdots(z+n)}{n!n^z}\notag\\
+            &=z\lim_{n\to\infty}e^{-z\ln n}(1+z)(1+\dps\frac{z}{2})\cdots(1+\frac{z}{n})\notag\\
+            &=z\lim_{n\to\infty}\exp\left[z\left(\sum_{k=1}^n\frac{1}{k}-\ln n\right)\right]\prod_{k=1}^n(1+\frac{z}{k})e^{-\frac{z}{k}}\notag\\
+            &=ze^{\gamma z}\prod_{k=1}^n(1+\frac{z}{k})e^{-\frac{z}{k}}\label{eq:5.2.4:inverse of Gamma function}
+        \end{align}
+        
+        Weierstrass factorization theorems implies that \eqref{eq:5.2.4:inverse of Gamma function} represents an entire function with zeros at  $ 0,-1,-2,\cdots $.
+        
+        Then the extension of  $ \Gamma(z) $ and  $ \dps\frac{1}{\Gamma(z)} $ should have those above properties (c), (d) and (e). 
+
+        \item[(f)] For  $ \forall z\in \Cbb\setminus\Zbb $, we have 
+        
+        \begin{equation}
+            \begin{aligned}
+                \frac{1}{\Gamma(z)\Gamma(1-z)}&=-\frac{1}{z\Gamma(z)\Gamma(1-z)}\\
+                &=-\frac{1}{z}\cdot z e^{\gamma z}\prod_{k=1}^\infty (1+\frac{z}{k})e^{-\frac{z}{k}}\cdot(-z)e^{-\gamma z}\prod_{k=1}^\infty(1-\frac{z}{k})e^{\frac{z}{k}}\\
+                &=z\prod_{k=1}^\infty(1-\frac{z^2}{k^2})\\
+                &\overset{\eqref{product expression of sin pi z}}{=}\frac{\sin \pi z}{\pi}
+            \end{aligned}
+        \end{equation} 
+    \end{enumerate} 
+\end{proof}
+
+One may use (d) to prove 
+\begin{equation}
+    \sqrt{\pi}\Gamma(2z)=2^{2z-1}\Gamma(z)\Gamma(z+\frac{1}{2}),\,z\neq 0,-1,-2,\cdots,z\neq -\frac{1}{2},-\frac{3}{2},\cdots
+\end{equation}
+which is known as Legendre's duplication formula.
+
+\subsection{Entire Functions}
+\subsubsection{Jensen's formula}
+\begin{theorem}[Jensen's formula]\label{thm:5.3.1:Jensen's formula}
+    Suppose  $ f  $ is analytic in  $ |z| \leq \rho $, and all of its zeros in  $ |z|<\rho $ are  $ a_1,\cdots,a_n $ (multiple zeros being repeated) Assume  $ z=0  $ is not a zero. Then 
+    \begin{equation}
+        \ln |f(0)|=-\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi }\int_0^\infty\ln|f(\rho e^{i\theta})|\dd\theta\label{eq:5.3.1:Jensen's formula}
+    \end{equation}  
+\end{theorem}
+\begin{remark}
+    \begin{enumerate}[label=(\arabic*)]
+        \item Jensen's formula relates the modulus  $ |f(z)| $ on a circle to the modulus of the zero in the interior enclosed by the circle.
+        \item If  $ f(0)=0 $, then  $ f(z)=Cz^k+\cdots $. We apply  \eqref{eq:5.3.1:Jensen's formula} to  $ f(z)\dps\left(\frac{\rho}{z}\right)^k $ and get 
+        \begin{equation}
+            \ln |c|+k\ln \rho=\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi }\ln|f(\rho e^{i\theta})|\dd\theta
+        \end{equation}
+    \end{enumerate}
+
+\end{remark}
+\begin{proof}
+    We first assume that  $ f  $ is free of zeros in  $ |z| \leq \rho $. Then  $ \ln |f(z)|  $ is harmonic in  $ |z| \leq \rho $. Mean value property \ref{thm:5.6.2:mean-value property} implies  $ \ln|f(0)|=\dps\frac{1}{2\pi }\int_0^{2\pi} \ln |f(\rho e^{i\theta})| \dd\theta $. It remains valid if  $  f  $ has zeros on the circle  $ |z|=\rho $. We divide  $ f  $ with one factor  $ z-\rho e^{i\theta_0} $ for zeros  $ \rho e^{i\theta_0} $. It suffices to prove that 
+    \[\ln \rho=\frac{1}{2\pi}\int_0^{2\pi}\ln|\rho e^{i\theta}-\rho e^{i\theta_0}|\dd\theta\]
+    \[\Leftrightarrow\int_0^{2\pi}\ln|e^{i\theta}-e^{i\theta_0}|\dd\theta=0\Leftrightarrow\int_0^{2\pi}\ln|e^{i\theta}-1|\dd\theta=0\Leftrightarrow\int_0^{\pi}\ln\sin t\dd t=-\pi \ln 2\]
+    
+    Finally, for any  $ f  $ satisfying the assumption of the theorem, we know 
+    \begin{equation}
+        F(z)=f(z)\cdot\prod_{j=1}^n\frac{\rho^2-\bar{a}_jz}{\rho(z-a_j)}
+    \end{equation}
+    is free from zeros in the disk  $ |z|<\rho $, and  $ |F(z)|=|f(z)|  $ on  $ |z|=\rho $ $ \Rightarrow $
+    \[\ln|F(0)|=\frac{1}{2\pi}\int_0^{2\pi}\ln|f(\rho e^{i\theta})\dd\theta\]
+    \[\Rightarrow \ln|f(0)|=-\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi}\int_0^{2\pi}\ln|f(\rho e^{i\theta})|\dd\theta\]  
+\end{proof}
+\begin{remark}
+    Apply the Poisson formula \ref{thm:5.6.3:Poisson's formula} to  $ \ln|F(z)| $, we get the \name{Poisson-Jensen formula} 
+    \begin{equation}\label{eq:5.3.1:Poisson-Jensen formula}
+        \ln|f(z)|=-\sum_{j=1}^n\ln\left|\frac{\rho^2-\overline{a_j}z}{\rho(z-a)}\right|+\frac{1}{2\pi}\int_0^{2\pi}\Re\frac{\rho e^{i\theta}+z}{\rho e^{i\theta-z}}\ln|f(\rho e^{i\theta})|\dd\theta,\,\forall z\text{ with }|z|<\rho,f(z)\neq 0
+    \end{equation}
+\end{remark}

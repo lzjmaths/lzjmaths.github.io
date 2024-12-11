@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  9 DEC 2024 16:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  11 DEC 2024 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1526,35 +1526,42 @@ Underfull \hbox (badness 2538) in paragraph at lines 67--72
 []\T1/ppl/m/n/12 For the sec-ond part of the the-o-rem, it is enough to prove $[]\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P
  []
 
-[65] [66]) (../20.tex [67] [68] [69] [70]) (../21.tex [71] [72] [73] [74]) (../22.tex [75] [76] [77] [78]) [79]
+[65] [66]) (../20.tex [67] [68] [69] [70]) (../21.tex [71] [72] [73] [74]) (../22.tex [75] [76] [77] [78]) (../23.tex [79] [80]
+Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 47.
+ [81] [82] [83]
+Overfull \hbox (23.46786pt too wide) detected at line 133
+[][][][] \U/matha/m/n/12 |\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q| ^^P ^^A [] [] [] ^^@ [] [][] [][] [] |\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 ^^Ze[]\U/matha/m/n/12 q|\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 ^^R;  \U/matha/m/n/12 @\OML/cmm/m/it/12 z[]\U/matha/m/n/12 |\OML/cmm/m/it/12 z\U/matha/m/n/12 |   \OML/cmm/m/it/12 ^^Z; f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^X \OT1/cmr/m/n/12 0
+ []
+
+) [84]
 runsystem(makeindex Complex_Analysis.idx)...executed safely (allowed).
 
- (./Complex_Analysis.ind [80
+ (./Complex_Analysis.ind [85
 
 
-] [81])
+] [86])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [82
+(./Complex_Analysis.loe [87
 
-] [83])
+] [88])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [84] (./Complex_Analysis.aux)
+ [89] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
-(rerunfilecheck)             Checksum: 17C012017DAD811B1B6D232C50C2D417;12783.
+(rerunfilecheck)             Checksum: 8B63C6D88DFA4BAFC82665B422ED01FB;13085.
  ) 
 Here is how much of TeX's memory you used:
- 40362 strings out of 476683
- 820905 string characters out of 5804047
+ 40379 strings out of 476683
+ 821284 string characters out of 5804047
  1857018 words of memory out of 5000000
- 59726 multiletter control sequences out of 15000+600000
- 549310 words of font info for 133 fonts, out of 8000000 for 9000
+ 59740 multiletter control sequences out of 15000+600000
+ 550990 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (84 pages).
+Output written on Complex_Analysis.pdf (89 pages).
