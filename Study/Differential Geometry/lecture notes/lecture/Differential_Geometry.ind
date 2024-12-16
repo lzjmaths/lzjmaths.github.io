@@ -2,6 +2,7 @@
 
   \item $ (a,b) $-tensor field, \hyperpage{67}
   \item $ F $-related, \hyperpage{24}
+  \item $ K(s) $, \hyperpage{99}
   \item $ L^n(V) $, \hyperpage{42}
   \item $ M\looparrowright N $, \hyperpage{36}
   \item $ V_1\otimes \cdots  \otimes V_n $, \hyperpage{40}
@@ -44,6 +45,7 @@
 
   \indexspace
 
+  \item binormal vector, \hyperpage{99}
   \item boundary map, \hyperpage{79}, \hyperpage{86}
   \item bump function , \hyperpage{9}
 
@@ -64,6 +66,7 @@
   \item covariant tensor field, \hyperpage{67}
   \item critical point, \hyperpage{5}, \hyperpage{37}
   \item critical value, \hyperpage{5}, \hyperpage{37}
+  \item curvature, \hyperpage{99}
   \item curve, \hyperpage{12}
     \subitem tangent, \hyperpage{12}
     \subitem velocity, \hyperpage{12}
@@ -95,6 +98,7 @@
 
   \indexspace
 
+  \item Gauss map , \hyperpage{101}
   \item genus of smooth function, \hyperpage{11}
   \item gradient vector field, \hyperpage{15}
 
@@ -138,6 +142,10 @@
 
   \indexspace
 
+  \item normal vector, \hyperpage{99}
+
+  \indexspace
+
   \item one-parameter transformation group, \hyperpage{18}
   \item orientation, \hyperpage{53}
   \item orientation form, \hyperpage{53}
@@ -148,10 +156,15 @@
   \item oriented basis, \hyperpage{55}
   \item oriented chart, \hyperpage{55}
   \item oriented manifold, \hyperpage{53}
+  \item osculating plane, \hyperpage{99}
   \item outward, \hyperpage{58}
 
   \indexspace
 
+  \item parametrized curve, \hyperpage{99}
+    \subitem parametrized by its arc length, \hyperpage{99}
+    \subitem regular, \hyperpage{99}
+    \subitem tangent vector, \hyperpage{99}
   \item partial-derivative, \hyperpage{11}
   \item partition of unity subordinat(P.O.U), \hyperpage{10}
   \item Poincar{\'e} disk model, \hyperpage{62}
@@ -166,6 +179,14 @@
     \subitem constant rank, \hyperpage{34}
   \item refinement, \hyperpage{9}
   \item regular point, \hyperpage{5}, \hyperpage{29}, \hyperpage{37}
+  \item regular surface, \hyperpage{100}
+    \subitem 1st fundamental form, \hyperpage{101}
+    \subitem 2nd fundamental form, \hyperpage{102}
+    \subitem local parametrization, \hyperpage{100}
+      \subsubitem $ X_u $, \hyperpage{100}
+      \subsubitem $ X_v $, \hyperpage{100}
+    \subitem normal curvature, \hyperpage{102}
+    \subitem normal vector, \hyperpage{101}
   \item regular value, \hyperpage{5}, \hyperpage{37}
   \item retract, \hyperpage{60}
   \item Riemannian metric, \hyperpage{61, 62}
@@ -190,6 +211,7 @@
   \item tangent distribution, \hyperpage{75}
   \item tangent space, \hyperpage{11}
   \item tangent vector, \hyperpage{11}
+  \item torsion, \hyperpage{99}
   \item trivialization, \hyperpage{14}
 
   \indexspace

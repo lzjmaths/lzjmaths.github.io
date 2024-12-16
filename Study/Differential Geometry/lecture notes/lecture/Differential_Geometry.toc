@@ -41,5 +41,9 @@
 \contentsline {subsection}{\numberline {7.3}Mayer-Vietoris sequence}{85}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Some algebraic constructions}{85}{subsubsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.4}Compact supported de Rham cohomology}{93}{subsection.7.4}%
-\contentsline {section}{Index}{99}{section*.4}%
-\contentsline {section}{List of Theorems}{102}{section*.5}%
+\contentsline {section}{\numberline {8}Classical Differential Geometry}{99}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The geometry of curves and surfaces}{99}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Theory of surfaces in $ \mathbb R^3 $}{100}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Gauss map}{101}{subsection.8.3}%
+\contentsline {section}{Index}{103}{section*.4}%
+\contentsline {section}{List of Theorems}{107}{section*.5}%
