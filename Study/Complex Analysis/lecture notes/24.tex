@@ -1,0 +1,109 @@
+\subsubsection{Order of an entire function}
+The \name{order}  of the entire function  $ f  $ is defined by 
+\begin{equation}
+    \lambda:=\limsup_{r\to\infty}\frac{\ln\ln M(r)}{\ln r}\,\text{ where }\,M(r):=\max_{|z|=r}|f(z)|
+\end{equation}
+In other words,  $ \lambda  $ is the smallest number \st 
+\begin{equation}
+    M(r) \leq \exp[r^{\lambda+\epsilon}]
+\end{equation}
+for  $ \forall \epsilon>0 $ as soon as  $ r $ large enough.
+
+\begin{theorem}[Hadamard Theorem]\label{thm:5.3.2:Hadamard Theorem}
+    The genus $ h $  and the order $ \lambda $  of an entire function satisfy the double inequality  $ h \leq \lambda \leq h+1 $. 
+\end{theorem}
+The proof is omitted now.
+
+
+\section{Riemann Mapping Theorem}
+
+\subsection{Normal families}
+\subsubsection{The Arzela-Ascoli Theorem}
+Let  $ \mathscr{F} $ be a family of functions  $ f  $, defined in a fixed region  $ \Omega\subset \Cbb $, with values in a metric space  $ S $. The distance function in  $ S  $ is denoted by  $ d $.
+
+The functions in a family  $ \mathscr{F} $  are said to be \name{equicontinuous} on a set  $ E\subset \Omega $ if for  $ \forall \epsilon>0 $,  $ \exists \delta>0 $ \st  $ d(f(z),f(z_0))<\epsilon  $,  $ \forall z,z_0\in E $ with  $ |z-z_0|<\delta $ and  $ \forall f\in \mathscr{F} $.
+
+\begin{remark}
+    Each  $ f  $ in an equicontinuous family is itself uniformly continuous on  $ E $. 
+\end{remark}
+
+A family is said to be \name{normal} (or \name{relatively compact}) in  $ \Omega $ if every sequence  $ \{f_n\} $ of functions  $ f_n\in \mathscr{F} $ contains a subsequence which converges uniformly on every compact subset of  $ \Omega $.
+
+\begin{remark}
+    This definition does not require the limit functions of the convergent subsequences to be members of  $ \mathscr{F} $. 
+\end{remark}
+Let  $ E_k:=\Omega\cap \overline{B(0,k)}\cap \{z\in \Cbb:d(z,\partial \Omega) \geq \dps\frac{1}{k}\} $,  $ k\in \Nbb $.
+
+Then  $ E_k  $ is bounded and closed, and hence compact.
+
+$ \forall  $ compact set  $ E\subset \Omega  $ is bounded and has positive distance from  $ \partial \Omega $ $ \Rightarrow  $  $ E\subset E_k $. So the choice of  $ E_k  $ is representative.
+
+Define  $ \delta(a,b)=\dps\frac{d(a,b)}{1+d(a,b)} $. It is easy to check that  $ \delta  $ is a metric and has the advantage of being bounded.
+
+Define  \begin{equation}\label{eq:6.1.1:definition of delta_k in function space}
+    \delta_k(f,g)=\dps\sup_{z\in E_k}\delta(f(z),g(z)) ,\,\rho(f,g)=\dps\sum_{k=1}^\infty\delta_k(f,g)2^{-k} 
+\end{equation}
+
+It is easy to check that  $ \rho(f,g) $ is finite and is a distance between  $ f $ and  $ g $ on  $ \Omega $.  
+
+\begin{lemma}\label{thm:6.1.1:Lemma of Arzela-Ascoli Theorem}
+     $ f_n\rightrightarrows f$ on every compact subset of  $ \Omega  $ if and only if  $ \rho(f_n,f)\rightarrow 0 $ as  $ n\rightarrow \infty $.    
+\end{lemma}
+\begin{proof}
+    "$ \Leftarrow $":  $ \forall \epsilon>0 $,  $ \exists   N\in\Nbb $ \st  $ \rho(f_n,f)<\epsilon $,  $ \forall n \geq\Nbb $.
+    
+    \eqref{eq:6.1.1:definition of delta_k in function space} implies  $ \delta_k(f_n,f)<2^k\epsilon $, $ \forall n \geq N $ and  $ \forall  $ fixed  $ k\in \Nbb $. Then  $ f_n\rightrightarrows f $ on  $ E_k $ w.r.t.  $ \delta $-metric, and hence w.r.t. the  $ d $-metric. $ \Rightarrow  $  $ f_n\rightrightarrows f $ on every compact subset  $ E $ of  $ \Omega $ since  $ E \subset E_k $ for some  $ k\in \Nbb $.
+    
+    "$ \Rightarrow $":  $ E_k  $ is a compact subset of  $ \Omega  $  $ \Rightarrow  $  $ f_n\rightrightarrows f  $ on  $ E_k  $ w.r.t.  $ d $-metric, and hence w.r.t.  $ \delta $-metric $ \Rightarrow  $ $ \delta_k(f_n,f)\rightarrow 0 $ as  $ n\rightarrow \infty $ for  $ \forall $ fixed  $ k\in \Nbb $. Then 
+    \begin{equation}
+        \lim_{n\to\infty}\sum_{n=1}^\infty\delta_k(f_n,f)2^{-k}\xlongequal{DCT}\sum_{n=1}^\infty\lim_{n\to\infty}\delta_k(f_n,f)2^{-k}=0
+    \end{equation}       
+    So  $ \rho(f_n,f)\rightarrow 0$ as  $ n\rightarrow \infty $.  
+\end{proof}
+\begin{theorem}\label{thm:6.1.1:normalness equivalent to precompactness}
+    A family  $ \mathscr{F} $ is normal iff its closure  $ \overline{\mathscr{F}} $ w.r.t.  $ \rho $ is compact.   
+\end{theorem}
+\begin{proof}
+    "$ \Leftarrow $":  $ \overline{\mathscr{F}} $ is compact  $ \Leftrightarrow $  $ \forall  $ infinite sequence of  $ \overline{\mathscr{F}} $ has a limit point in  $ \overline{\mathscr{F}} $. So from the lemma \ref{thm:6.1.1:Lemma of Arzela-Ascoli Theorem} $ \overline{\mathscr{F}} $ is normal follows. Then  $ \mathscr{F} $ is normal.
+    "$ \Rightarrow $": For  $ f_n\in \overline{\mathscr{F}} $,  WLOG we assume  $ f_n\in \overline{\mathscr{F}}\setminus\mathscr{F} $ for all large  $ n $. Then  $ \forall n\in \Nbb $,  $ \exists \tilde{f}_n\in \mathscr{F} $ \st  $ \rho(f_n,\tilde{f}_n)<\dps\frac{1}{n} $. $ \mathscr{F} $ is normal  $ \Rightarrow  $   $ \{\tilde{f}_n\} $ has a convergent subsequence  $ \{\tilde{f}_{n_k}\}_{k\in\Nbb} $. \ie  $ \tilde{f}_{n_k}\rightrightarrows f\in \overline{\mathscr{F}} $ on every compact  subset of  $ \Omega $. From the lemma \ref{thm:6.1.1:Lemma of Arzela-Ascoli Theorem}  $ \rho(\tilde{f}_{n_k},f)\rightarrow 0 $ as  $ k\rightarrow \infty $ $ \Rightarrow  $ $ \rho(f_{n_k},f)\rightarrow 0 $  as  $ k\rightarrow \infty $ since 
+    \begin{equation}
+        \rho(f_{n_k},f) \leq \rho(f_{n_k},\tilde{f}_{n_k})+\rho(\tilde{f}_{n_k},f) \leq \frac{1}{n_k}+\rho(\tilde{f}_{n_k},f)
+    \end{equation}            
+\end{proof}
+
+\begin{theorem}\label{thm:6.1.1:totally bounded is the same w.r.t rho and d}
+    The family  $ \mathscr{F} $ is totally  bounded w.r.t.  $ \rho $ iff for  $ \forall  $ compact set  $ E\subset \Omega$ and  $ \forall \epsilon>0 $,  $ \exists f_1,f_2,\cdots,f_n\in \mathscr{F} $ \st every  $ f\in \mathscr{F} $ satisfies  $ d(f,f_j)<\epsilon $ on  $ E $ for some  $ j $.        
+\end{theorem}
+\begin{proof}
+    "$ \Rightarrow $":  $ \mathscr{F} $ is totally bounded $ \Rightarrow  $  $ \forall \epsilon>0 $,  $ \exists f_1,\cdots,f_n\in \mathscr{F} $ \st  $ \forall f\in \mathscr{F} $,  $ \rho(f,f_j)\epsilon $ for some  $ f_j $.  Then \eqref{eq:6.1.1:definition of delta_k in function space} implies  $ \delta_k(f,f_j)<2^k\epsilon $  for each fixed  $ k\in \Nbb $ $ \Rightarrow  $  $ \delta(f(z),f_j(z))<2^k\epsilon $,  $ \forall z\in E_k $ $ \Rightarrow  $  $ d(f(z),f_j(z))<\dps\frac{2^k\epsilon}{1-2^k\epsilon},\,\forall z\in E_k $,  $ \forall k $ fixed and  $ \epsilon  $ small enough.
+    
+    "$ \Leftarrow $" Fix  $ \epsilon>0 $, pick  $ k_0\in \Nbb $ \st  $ 2^{-k_0}<\dps\frac{\epsilon }{2} $.  $ \forall f\in \mathscr{F} $,  $ \exists j_0\in \{1,2,\cdots,n\} $ \st  $ \delta(f(z),f_{j_0}(z)) \leq d(f(z),f_{j_0}(z))<\dps\frac{\epsilon}{2k_0} $,  $ \forall z\in E_{k_0} $. Then  $ \delta_k(f,f_{j_0})<\dps\frac{\epsilon}{2k_0} $,  $ \forall k \leq k_0 $. $ \Rightarrow  $  $ \rho(f,f_{j_0})<\dps k_0\cdot\frac{\epsilon}{2k_0}+2^{-k_0}<\epsilon $    
+\end{proof}
+
+\begin{theorem}[Arzela-Ascoli Theorem]\label{thm:6.1.1:Arzela-Ascoli theorem}
+    A family of continuous functions with values in a complete metric space  $ S  $ is normal in the region  $ \Omega\subset\Cbb  $ iff (1)  $ \mathscr{F} $ is equicontinuous on every compact set  $ E\subset \Omega $. (2)  $ \forall z\in \Omega  $,  $ \{f(z):f\in \mathscr{F}\} $ lie in a compact subset of  $ S $.    
+\end{theorem}
+\begin{proof}
+    "$ \Rightarrow $":  $ \mathscr{F} $ is normal  $ \overset{\text{theorem \ref{thm:6.1.1:normalness equivalent to precompactness}}}{\Rightarrow} $ $ \overline{\mathscr{F}} $ is compact w.r.t. $ \rho $  $ \Rightarrow $ $ \overline{\mathscr{F}} $ is totally bounded w.r.t. $ \rho $  $ \Rightarrow $  $ \mathscr{F} $ is totally bounded w.r.t.  $ d $ by theorem \ref{thm:6.1.1:totally bounded is the same w.r.t rho and d}.
+    
+    Let  $ E\subset \Omega  $ be compact.  $ \forall \epsilon>0 $, determine  $ f_1,\cdots,f_n\in \mathscr{F} $ as in the previous theorem.  $ \mathscr{F}$ is equicontinuous on  $ E $ $ \Rightarrow  $ $ \exists  \delta>0$ \st 
+    \[d(f_j(z),f_j(z_0))<\epsilon,\,\forall z,z_0\in E\text{ with }|z-z_0|<\delta\]
+     $ \forall f\in \mathscr{F} $. Let  $ f_{j_0} $ be the corresponding  $ f_j  $ from the previous theorem. Then 
+     \begin{equation}
+        d(f(z),f(z_0)) \leq d(f(z),f_{j_0}(z))+d(f_{j_0}(z),f_{j_0}(z_0))+d(f_{j_0}(z_0),f(z_0))<3\epsilon
+     \end{equation}      
+    So we prove (1). To prove (2), we prove  $ \overline{\{f(z):f\in \mathscr{F}\}} $ is compact. Let  $ \{\omega_0\} $ be a sequence in  $ \overline{\{f(z):f\text{ in } \mathscr{F}\}} $. Then  $ \forall \omega_n $,  $ \exists  f_n\in \mathscr{F}  $ \st  $ d(f_n,\omega)<\dps\frac{1}{n} $. $ \mathscr{F} $ is normal $ \Rightarrow $ $ \exists  $ convergent subsequence  $ \{f_{n_k}(z)\} $ $ \Rightarrow  $ $ \{\omega_{n_k}\}  $ converges to the same value.  
+    
+    "$ \Leftarrow $" Choose any sequence  $ \{\zeta_j\} $ which is dense in  $ \Omega $. Let  $ \{f_n\} $ be any sequence in  $ \mathscr{F} $.
+    
+    $ \{f_n(\zeta_1)\}_{n\in \Nbb} $ is in a compact subset of  $ S $. $ \Rightarrow  $  $ \exists  $ a convergent subsequence  $ \{f_{n,1}(\zeta_1)\}_{n\in \Nbb} $. 
+
+    $ \{f_{n,1}(\zeta_1)\}_{n\in \Nbb} $ is in a compact subset of  $ S $. $ \Rightarrow  $  $ \exists  $ a convergent subsequence  $ \{f_{n,2}(\zeta_1)\}_{n\in \Nbb} $ $ \cdots $ 
+
+    Continue this steps and we obtain  the subsequence  $ \{f_{n,n}\} $ that converges at each  $ \zeta_j $.
+    
+    Let  $ E\subset \Omega  $ be compact  $ \Rightarrow  $  $ d(E,\partial \Omega)>0 $ $ \Rightarrow  $  $ r:=\dps\frac{d(E,\partial \Omega)}{2} $,  $ K=\dps\bigcup_{z\in E}B(z,r) $ has closure  $ \overline{K}\subset \Omega $.
+    
+     $ \mathscr{F} $ is equicontinnuous on  $ \overline{K} $ $ \Rightarrow $  $ \forall \epsilon>0 $,  $ \exists \delta<r $ \st   
+     \[d(f(z),f(z_0))<\frac{\epsilon}{3}\] 
+\end{proof}

@@ -2,3 +2,4 @@ Conformality
 piecewise
 iff
 WLOG
+equicontinuous
