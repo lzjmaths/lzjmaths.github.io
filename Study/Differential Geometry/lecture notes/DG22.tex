@@ -1,5 +1,6 @@
 % !TEX root = lecture/Differential_Geometry.tex
 
+\tikzset{external/export=true}
 \begin{corollary}[Poinc{\'a}re Lemma]\label{Poincare Lemma}
     $ H^k_{dR}(\Rbb^n)=\dps\begin{cases}
        0 &k>0\\
@@ -28,23 +29,22 @@ We say the sequence is \name{exact} if it is exact at every  $ G_i$.
 A \name{short exact} is an exact sequence of the form  $ 0\rightarrow G_1\xrightarrow{f} G_2\xrightarrow{g} G_3\rightarrow 0 $. \ie  $ f  $ is injective,  $ g  $ is surjective and  $ \ker(f)=\Imag(g) $.
 
 A \name{short exact sequence} of cochain complexed is a sequence  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $ where  $ A^*,B^*,C^8 $ are cochain complexes,  $ f,g $ are cochain maps, and  $ \forall k $, the sequence  $ 0\rightarrow A^k\xrightarrow{f}B^k\xrightarrow{g}C^k\rightarrow 0 $     is exact.
-
+\tikzset{external/export=false}
 \begin{center}
    \begin{tikzcd}
        &\vdots\ar[d]&\vdots\ar[d]&\vdots\ar[d]\\
        0\ar[r]&A^{k-1}\ar[d]\ar[r,"f"]&B^{k-1}\ar[d]\ar[r,"g"]&C^{k-1}\ar[d]\ar[r]&0\\
        0\ar[r]&A^k\ar[r,"f"]\ar[d]&B^k\ar[r,"g"]\ar[d]&C^k\ar[r]\ar[d]&0\\
        0\ar[r]&A^{k+1}\ar[r,"f"]\ar[d]&B^{k+1}\ar[r,"g"]\ar[d]&C^{k+1}\ar[r]\ar[d]&0\\
-       &\vdots&\vdots&\vdots\\
-
+       &\vdots&\vdots&\vdots
    \end{tikzcd}
 \end{center}
-
+\tikzset{external/export=true}
 
 Given short exact sequence of cochain complexed  $ 0\rightarrow A^*\xrightarrow{f}B^*\xrightarrow{g}C^*\rightarrow 0 $, we define a \name{boundary map}  $ \partial:H^k(C^*)\rightarrow H^{k+1}(A^*) $ as follows:
 
 Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is surjective so   $ \exists b_0\in B^k $ \st  $ g(b_0)=c_0 $, and  $ g(\dd b_0)=\dd c_0=0 $. So  $ \exists a_0\in A^{k+1} $ \st  $ f(a_0)=\dd b_0 $,  $ f(\dd a_0)=\dd f(a_0)=\dd^2b_0=0 $. Since  $ f  $ is injective,  $ \dd a_0=0 $. Set  $ \partial [c_0]=[a_0] $.
-
+\tikzset{external/export=false}
 \begin{center}
    \begin{tikzcd}
        &b_0\ar[r]\ar[d]&c_0\ar[d]\\
@@ -52,6 +52,7 @@ Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is sur
        \dd a_0\ar[r,"f"]&0
    \end{tikzcd}
 \end{center}
+\tikzset{external/export=true}
 \begin{lemma}
     $ \partial :H^k(C^*)\rightarrow H^{k+1}(A^*)  $ is well-defined 
 \end{lemma}
@@ -78,7 +79,8 @@ Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is sur
    |- (#1) node[fill=white] {$\scriptstyle \partial$}
    -| ([xshift=50pt]\tikztotarget.center)
    -- (\tikztotarget)}
-   }
+   },
+   external/export=false
 }
 \begin{center}
    \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
@@ -89,6 +91,7 @@ Take any  $ [c_0]\in H^k(C^*) $,  $ c_0\in C^k $,  $ \dd c_0=0 $.  $ g  $ is sur
    \end{tikzcd}
 \end{center}
 is exact
+\tikzset{external/export=true}
 For simplicity, short exact sequence of cochain complexes induces long exact sequence on homotopy.
 \end{lemma}
 
@@ -107,7 +110,7 @@ For simplicity, short exact sequence of cochain complexes induces long exact seq
 \end{proof}
 
 Now we consider  $ M=U_1\cup U_2 $ for  $ U_1,U_2 $ open subsets. The inclusion maps are  $ i_1,i_2,j_1,j_2 $.
-
+\tikzset{external/export=false}
 \begin{center}
    \begin{tikzcd}
        &U_1\cap U_2\ar[dl,swap,"i_1"]\ar[dr,"i_2"]\\
@@ -115,7 +118,7 @@ Now we consider  $ M=U_1\cup U_2 $ for  $ U_1,U_2 $ open subsets. The inclusion 
        &M
    \end{tikzcd}
 \end{center}
-
+\tikzset{external/export=true}
 \begin{lemma}
    The sequence  $ 0\rightarrow \Omega^*(M)\xrightarrow{(j_1^*,j_2^*)}\Omega^*(U_1)\bigoplus \Omega^*(U_2)\xrightarrow{i_1^*-i_2^*}\Omega^*(U_1\cap U_2)\rightarrow 0 $ is exact. 
 \end{lemma}
@@ -137,6 +140,7 @@ Now we consider  $ M=U_1\cup U_2 $ for  $ U_1,U_2 $ open subsets. The inclusion 
 \end{proof}
 
 Apply the snake lemma \ref{Snake Lemma}, we obtain
+\tikzset{external/export=false}
 \begin{theorem}[Mayer-Vietoris sequence]
    The sequence
    \begin{center}
@@ -148,6 +152,7 @@ Apply the snake lemma \ref{Snake Lemma}, we obtain
    \end{center}
    is exact
 \end{theorem}
+
 \begin{example}
    For  $ S^n=U\cap V $ where  \[ U=S^n\setminus\{(1,0,\cdots,0)\} , V=S^n\setminus\{(-1,0,\cdots,0)\} ,  U\cap V=S^n\setminus\{(\pm1,0,\cdots,0)\} \]
 

@@ -5,17 +5,21 @@
 \end{example}
 \begin{example}[Tautological bundle]
     \[B=\mathbb{CP}^n= \{\text{1-dim complex subspace of }\mathbb{C}^{n+1}\},E= \{(L,v)\in\mathbb{CP}^n\times \mathbb{C}^{n+1}\}  \]
-    
+
     And we map  $ (L,v)\mapsto L $  
 \end{example}
 Given vector bundles  $ E_1\xrightarrow{\pi_1} B_1,E_2\xrightarrow{\pi_2} B_2 $, a bundle map consists of  $ (\hat{f},f) $ \st
+\tikzset{external/export=false}
 \begin{itemize}
-   \item \begin{tikzcd}
+   \item 
+   \begin{tikzcd}
        E_1\arrow[r,"\hat{f}"]\arrow[d,"\pi"] & E_2\arrow[d,"\pi"] \\
        B_1\arrow[r,"f"] & B_2
-   \end{tikzcd} commutes.
+   \end{tikzcd} 
+   commutes.
    \item  $ \forall b\in  B  $,  $ \hat{f}:\pi_1^{-1}(b)\rightarrow \pi_2^{-1}(f(b)) $ is linear.
 \end{itemize}
+\tikzset{external/export=true}
 If  $ \hat{f},f $ are diffeomorphisms, then we call  $ (\hat{f},f) $ an \subname{isomorphism}{vector bundle} of vector bundle.
 
 An isomorphism to a product bundle is called a \name{trivialization}. An bundle is \textbf{trivial} if it has a trivialization.

@@ -11,53 +11,55 @@ Now we try to define differential of a smooth map.
  we also write  $ F_*  $ as  $ F_{*,p} $, call it the \name{differential} of  $ F $ at  $ p $. 
  
  where 
- \[F_*(\frac{\partial }{\partial x^i}|_p)=\sum\limits_{k}\frac{\partial F^k}{\partial x^i}\cdot \frac{\partial }{\partial y^k}|_{F(p)}\]
- \begin{proposition}
+\[F_*(\frac{\partial }{\partial x^i}|_p)=\sum\limits_{k}\frac{\partial F^k}{\partial x^i}\cdot \frac{\partial }{\partial y^k}|_{F(p)}\]
+\begin{proposition}
     The differential satisfies the composition law.
     \[(G\circ F)_*=G_*\circ F_*:T_pN\rightarrow T_{G\circ F(p)}W\]
- \end{proposition}
- \begin{definition}
+\end{proposition}
+\begin{definition}
     A smooth \name{curve} is a smooth map  $ \gamma:(a,b)\rightarrow M $. We say  $ \gamma  $ starts at  $ p  $ if  $ \gamma(0)=p $. We define the \subname{velocity}{curve} of  $ \gamma  $ at  $ \gamma(0) $ as  $ \gamma_*(\frac{\partial}{\partial t}|_0)\in T_{\gamma(0)}M $
     
     Take charts  $ (U,x^1,\cdots,x^n) $ about  $ p  $, let  $ \gamma^i=x^i\circ \gamma $.
     
     We say  $ \gamma, \delta $ are \subname{tangent}{curve} to each other at  $ p  $ if  $ (\gamma^i)'(0)=(\delta^i)'(0) $.       
- \end{definition}
- Now we can define 
- \[(T_pM)_{curve}:=\{\text{smooth curves  $ \gamma  $ starting at  $ p  $ }\}/_\sim\]
- where  $ \gamma\sim \delta  $ iff they are tangent to each other.
+\end{definition}
+Now we can define 
+\[(T_pM)_{curve}:=\{\text{smooth curves  $ \gamma  $ starting at  $ p  $ }\}/_\sim\]
+where  $ \gamma\sim \delta  $ iff they are tangent to each other.
  
- Then these definition is more geometric.
+Then these definition is more geometric.
  
- \begin{lemma}
+\begin{lemma}
     Given  $ F\in C^\infty(M,M) $,  $ p\in N $, the diagram commutes:
     \begin{center}
+        \tikzset{external/export=false}
         \begin{tikzcd}
             \gamma\in (T_pN)_{curve} \arrow[r,"\cong"]\arrow[d] & T_pN\arrow[d]\\
             F\circ \gamma\in (T_{F(p)}M)_{curve}\arrow[r,"\cong"] & T_{F(p)}M
         \end{tikzcd} 
+        \tikzset{external/export=true}
     \end{center}
  
- \end{lemma}
- \subsection{Tangent Bundle}
+\end{lemma}
+\subsection{Tangent Bundle}
  Let  $ (M,\mathcal{A}) $ be a smooth manifold,  $ TM=\dps\bigcup_{p\in M}T_pM $, called the \name{tangent bundle}
  
  Now we want to define a natural topology and smooth structure on  $ TM $. Take any chart  $ (U,\varphi)=(U,x^1,\cdots,x^n)\in \mathcal{A} $.
  
  We have a map 
- \begin{align}
+\begin{align*}
     \hat{\varphi}:TU&\xrightarrow{\cong}\varphi(U)\times\mathbb{R}^n\subset \mathbb{R}^n\times\mathbb{R}^n\\
     X\in T_pU&\mapsto (\varphi(p),X^1,\cdots,X^n)
- \end{align}  
+\end{align*}  
  where  $ X=\sum X^i\frac{\partial}{\partial x^i}|_p $.
  
  Then pull back standard topology on  $ \varphi(U)\times\mathbb{R}^n $ to a topology on  $ TU $.
  \[\mathcal{B}=\{\hat{\varphi}^{-1}(V)|(\varphi,U)\in \mathcal{A},  V \text{ open in  $ \varphi(U)\times\mathbb{R}^n $ }\}\]
  There is some fact in topology:
- \begin{itemize}
+\begin{itemize}
     \item  $ \mathcal{B} $ is a basis
     \item  $ \mathcal{B} $ generates a Hausdorff, second countable topology on  $ TM $. 
- \end{itemize} 
+\end{itemize} 
  So  $ TM  $ is a topological manifold covered by charts  $ \hat{\mathcal{A}}=\{(TU,\hat{\varphi})|(U,\varphi)\in\mathcal{A}\} $.
  
 Given  $ (TU,\hat{\varphi}),(TV,\hat{\psi})\in \hat{\mathcal{A}} $, the transition function is 
@@ -68,17 +70,19 @@ Given  $ (TU,\hat{\varphi}),(TV,\hat{\psi})\in \hat{\mathcal{A}} $, the transiti
 So  $ \hat{\mathcal{A}} $ is a smooth atlas on  $ TM  $, making  $ TM  $ into a smooth manifold.
 \begin{definition}[vector bundle]
     Given a continuous map  $ f:E\rightarrow B $, we say  $ f $ is a  $ n $-dimensional \name{vector bundle} if: $ \exists $ an open cover  $ \mathcal{U}=\{U_\alpha\}_{\alpha\in I} $ of  $ B $ and homeomorphisms  $ \{f^{-1}(U_\alpha)\xrightarrow[\cong ]{\rho_\alpha}U_\alpha\times \mathbb{R}\} $ \st   
+    \tikzset{external/export=false}
     \begin{itemize}
-        \item  
-        \begin{tikzcd}
+        \item \begin{tikzcd}
             f^{-1}(U_\alpha)\arrow[d,"f"]\arrow[r,"\rho_\alpha"]&U_\alpha\times \mathbb{R}^n\arrow[ld,"projection"]\\
             U_\alpha
         \end{tikzcd}
-        commutes for  $ \alpha\in I $ 
+        commutes for  $ \alpha\in I $.
+
         \item  $ \forall  $  $ p\in U_\alpha\cap U_\beta $, the map 
         \[\mathbb{R}^n=\{p\}\times\mathbb{R}^n\xrightarrow{\rho_\alpha}f^{-1}(p)\xrightarrow{\rho_\beta}\{p\}\times \mathbb{R}^n=\mathbb{R}^n\] 
         is linear.
     \end{itemize}
+    \tikzset{external/export=true}
     Call  $ f^{-1}(p)  $  the \name{fiber} over  $ p $. 
 \end{definition} 
 \begin{proposition}
