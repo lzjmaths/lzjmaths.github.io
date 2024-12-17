@@ -1,3 +1,5 @@
+% !TEX root = lecture/Differential_Geometry.tex
+
 \section{Classical Differential Geometry}
 \subsection{The geometry of curves and surfaces}
 A \name{parametrized curve} is a smooth map  $ \alpha:I=(a,b)\rightarrow \Rbb^3 $.  $ t(s)=\alpha'(s) $ is called the \subname{tangent vector}{parametrized curve}  at  $ \alpha(s) $.
@@ -80,9 +82,16 @@ Take the differential at  $ p $,  $ \dd N_p=N_{*,p}:T_pS\rightarrow T_{N(p)}S^2=
     Take local parametrization $ X :V\rightarrow S\subset \Rbb^3 $,  $ (u,v)\mapsto p $.
     By linearity, it suffices to check  $ \omega_1=X_u $ and  $ \omega_2=X_v $.
     
-     $ \<N(u,v),X_u\>=0 $  $ \Rightarrow\<\dps\frac{\partial N }{\partial v},X_u\>+\<N(u,v),X_{u}\>=0 $. So  $ \<\dd N_p(X_v),X_u\>=-\<N(u,v),X_{uv}\>=\<X_u,\dd N_p(X_u)\> $ 
+     $ \<N(u,v),X_u\>=0 $  $ \Rightarrow\<\dps\frac{\partial N }{\partial v},X_{uv}\>+\<N(u,v),X_{uv}\>=0 $. So  $ \<\dd N_p(X_v),X_u\>=-\<N(u,v),X_{uv}\>=\<X_u,\dd N_p(X_u)\> $ 
 \end{proof}
-
+\begin{remark}
+    Here we actually obtain 
+    \[-\<N_v,X_u\>=\<N,X_{u,v}\>\]
+    Similarly, one can prove
+    \[-\<N_u,X_v\>=\<N,X_{v,u}\>\]
+    \[-\<N_u,X_u\>=\<N,X_{u,u}\>\]
+    \[-\<N_v,X_v\>=\<N,X_{v,v}\>\]
+\end{remark}
 Define the quadratic form  $ \Pi_p:T_pS\rightarrow \Rbb $,  $ \omega\mapsto -\<\dd N_p(\omega),\omega\> $, called the \subname{2nd fundamental form}{regular surface}  
 
 \begin{definition}

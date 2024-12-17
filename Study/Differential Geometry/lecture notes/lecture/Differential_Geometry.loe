@@ -244,5 +244,14 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.2\else \numberline {8.2}Theorem\fi }{99}{theorem.8.2}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.3\else \numberline {8.3}Example\fi }{101}{example.8.3}%
 \contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}8.4\else \numberline {8.4}Proposition\fi }{101}{proposition.8.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.5\else \numberline {8.5}Definition\fi }{102}{definition.8.5}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.6\else \numberline {8.6}Theorem\fi \thmtformatoptarg {Meusnier}}{102}{theorem.8.6}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}8.5\else \numberline {8.5}Remark\fi }{101}{remark.8.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.6\else \numberline {8.6}Definition\fi }{102}{definition.8.6}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.7\else \numberline {8.7}Theorem\fi \thmtformatoptarg {Meusnier}}{102}{theorem.8.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.8\else \numberline {8.8}Definition\fi }{102}{definition.8.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.9\else \numberline {8.9}Definition\fi }{103}{definition.8.9}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.10\else \numberline {8.10}Example\fi }{103}{example.8.10}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.11\else \numberline {8.11}Example\fi }{103}{example.8.11}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.12\else \numberline {8.12}Definition\fi }{103}{definition.8.12}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.13\else \numberline {8.13}Example\fi }{105}{example.8.13}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.14\else \numberline {8.14}Theorem\fi \thmtformatoptarg {Gauss Theorem Egregium}}{105}{theorem.8.14}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.15\else \numberline {8.15}Theorem\fi }{108}{theorem.8.15}%

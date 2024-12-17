@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  16 DEC 2024 15:22
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  17 DEC 2024 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1272,100 +1272,100 @@ Package csquotes Info: ... none found.
  (./Differential_Geometry.aux)
 \openout1 = `Differential_Geometry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 563.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 563.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 565.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 565.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 563.
-LaTeX Font Info:    ... okay on input line 563.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 563.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 563.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 565.
+LaTeX Font Info:    ... okay on input line 565.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 565.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 565.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 563.
+LaTeX Font Info:    ... okay on input line 565.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1401,34 +1401,34 @@ LaTeX Font Info:    ... okay on input line 563.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 563.
-LaTeX Info: Command `\ddddot' is already robust on input line 563.
+LaTeX Info: Command `\dddot' is already robust on input line 565.
+LaTeX Info: Command `\ddddot' is already robust on input line 565.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 563.
+Package hyperref Info: Link coloring ON on input line 565.
 (./Differential_Geometry.out) (./Differential_Geometry.out)
 \@outlinefile=\write6
 \openout6 = `Differential_Geometry.out'.
 
 
-Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.16).
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 567.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 569.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 567.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 569.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 567.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 569.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 567.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 569.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 567.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 569.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./Differential_Geometry.toc [1
@@ -1447,4 +1447,256 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 62
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [5]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 69.
-Packa
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 76.
+) (../DG2.tex [6]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 9.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 17.
+ [7]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 48.
+ [8]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 79.
+) (../DG3.tex [9]) (../DG4.tex [10]) (../DG5.tex [11] [12] [13]) (../DG6.tex [14] [15]) (../DG7.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 3.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [16] [17] [18] [19]) (../DG8.tex [20] [21]
+Package hyperref Info: bookmark level for unknown notation defaults to 0 on input line 43.
+Package hyperref Info: bookmark level for unknown fact defaults to 0 on input line 65.
+ [22] [23]
+Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 108.
+) (../DG9.tex [24] [25] [26] [27]
+Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 117.
+) (../DG10.tex [28] [29] [30] [31] [32]) (../DG11.tex [33] [34] [35] [36] [37]) (../DG12.tex [38] [39] [40] [41] [42] [43]) (../DG13.tex [44]
+Underfull \hbox (badness 1917) in paragraph at lines 43--44
+[]\T1/ppl/m/n/12 If $\OML/cmm/m/it/12 A$ \T1/ppl/m/n/12 is graded $\U/msb/m/n/12 R$\T1/ppl/m/n/12 -algebra, we say $\OML/cmm/m/it/12 A$ \T1/ppl/m/n/12 is \T1/ppl/b/n/12 an-ti-com-mu-ta-tive[] \T1/ppl/m/n/12 if $\OML/cmm/m/it/12 ^^V\U/matha/m/n/12 p\OML/cmm/m/it/12 a; b\U/matha/m/n/12 q ^^P
+ []
+
+[45] [46]
+Overfull \hbox (14.31363pt too wide) detected at line 98
+[][]\U/matha/m/n/12 p\OML/cmm/m/it/12 M\U/matha/m/n/12 q[] ^^P t[]\OML/cmm/m/it/12 l \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 ^^B [] ^^B \OML/cmm/m/it/12 T[]M \U/matha/m/n/12 Ñ \U/msb/m/n/12 R\U/matha/m/n/12 u ^^P t[]\OML/cmm/m/it/12 T[]M\U/matha/m/n/12 u
+ []
+
+[47]) (../DG14.tex [48]
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[]\T1/ppl/m/n/12 It suf-fices to prove that [] is com-pat-i-ble for two charts
+ []
+
+
+Overfull \hbox (13.86343pt too wide) in paragraph at lines 31--33
+[][]
+ []
+
+[49]
+Overfull \hbox (21.13608pt too wide) in paragraph at lines 77--78
+[][] 
+ []
+
+[50]) (../DG15.tex [51] [52] [53]) (../DG16.tex [54] [55] [56] [57] [58] [59]) (../DG17.tex [60] [61] [62] [63] [64]) (../DG18.tex [65]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 25.
+
+[66] [67] [68]
+Overfull \hbox (18.58905pt too wide) detected at line 168
+[][][][][]
+ []
+
+[69] [70] [71]) (../DG19.tex [72] [73] [74] [75] [76]) (../DG20.tex [77] [78] [79]) (../DG21.tex [80] [81] [82] [83]) (../DG22.tex [84] [85] [86]
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no v ("76) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no / ("2F) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no v ("76) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no / ("2F) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no v ("76) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no / ("2F) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+[87] [88]
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no v ("76) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no / ("2F) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no v ("76) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no / ("2F) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no = ("3D) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+) (../DG23.tex [89] [90] [91] [92] [93] [94]) (../DG24.tex [95]
+Overfull \hbox (33.2299pt too wide) in paragraph at lines 50--54
+[]\T1/ppl/m/n/12 Define lo-cal de-gree $[]\U/matha/m/n/12 p\OML/cmm/m/it/12 f; x[]\U/matha/m/n/12 q ^^P []$ 
+ []
+
+[96] [97]
+Overfull \hbox (23.29745pt too wide) in paragraph at lines 125--126
+ [] 
+ []
+
+) (../DG25.tex [98] [99]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 45.
+
+[100] [101]
+Overfull \hbox (1.95413pt too wide) detected at line 99
+[] \U/matha/m/n/12 ^^@ [] ^^P \OT1/cmr/m/n/12 0 \U/matha/m/n/12 ñ \OML/cmm/m/it/12 K[] \U/matha/m/n/12 ^^P ^^A [] ^^P \OT1/cmr/m/n/12 ^^E[]\U/matha/m/n/12 p\OML/cmm/m/it/12 ^^K[]\U/matha/m/n/12 p\OT1/cmr/m/n/12 0\U/matha/m/n/12 qq
+ []
+
+) (../DG26.tex [102] [103] [104] [105] [106] [107]) [108]
+runsystem(makeindex Differential_Geometry.idx)...executed safely (allowed).
+
+ (./Differential_Geometry.ind [109
+
+
+] [110]
+Underfull \hbox (badness 2495) in paragraph at lines 154--155
+[]\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
+ []
+
+[111] [112
+
+])
+showing theorem
+showing proposition
+(./Differential_Geometry.loe [113
+
+] [114] [115])
+\tf@loe=\write8
+\openout8 = `Differential_Geometry.loe'.
+
+ [116] (./Differential_Geometry.aux)
+Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
+(rerunfilecheck)             Checksum: 756A952E3A86AC7E56D7F15904FA330A;7976.
+ ) 
+Here is how much of TeX's memory you used:
+ 53680 strings out of 476683
+ 1220957 string characters out of 5804047
+ 3899577 words of memory out of 5000000
+ 72953 multiletter control sequences out of 15000+600000
+ 561116 words of font info for 166 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 87i,21n,106p,748b,12262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on Differential_Geometry.pdf (116 pages).

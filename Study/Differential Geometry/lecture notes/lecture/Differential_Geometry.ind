@@ -42,6 +42,7 @@
   \indexspace
 
   \item anti-symmetric, \hyperpage{41}
+  \item average curvature, \hyperpage{103}
 
   \indexspace
 
@@ -64,6 +65,7 @@
   \item contravariant functor, \hyperpage{44}
   \item contravariant tensor field, \hyperpage{67}
   \item covariant tensor field, \hyperpage{67}
+  \item Cristopher symbol, \hyperpage{106}
   \item critical point, \hyperpage{5}, \hyperpage{37}
   \item critical value, \hyperpage{5}, \hyperpage{37}
   \item curvature, \hyperpage{99}
@@ -80,6 +82,7 @@
 
   \indexspace
 
+  \item elliptic, \hyperpage{103}
   \item embedded submanifold, \hyperpage{36}
   \item embedding, \hyperpage{36}
   \item exact, \hyperpage{85}
@@ -99,6 +102,7 @@
   \indexspace
 
   \item Gauss map , \hyperpage{101}
+  \item Gaussian curvature, \hyperpage{103}
   \item genus of smooth function, \hyperpage{11}
   \item gradient vector field, \hyperpage{15}
 
@@ -109,6 +113,7 @@
   \item homogeneous space, \hyperpage{7}
   \item homology, \hyperpage{79}
   \item Hopf map, \hyperpage{82}
+  \item hyperbolic, \hyperpage{103}
 
   \indexspace
 
@@ -161,14 +166,18 @@
 
   \indexspace
 
+  \item parabolic, \hyperpage{103}
   \item parametrized curve, \hyperpage{99}
     \subitem parametrized by its arc length, \hyperpage{99}
     \subitem regular, \hyperpage{99}
     \subitem tangent vector, \hyperpage{99}
   \item partial-derivative, \hyperpage{11}
   \item partition of unity subordinat(P.O.U), \hyperpage{10}
+  \item planar, \hyperpage{103}
   \item Poincar{\'e} disk model, \hyperpage{62}
   \item positive atlas, \hyperpage{55}
+  \item principal curvature, \hyperpage{102}
+  \item principal directions, \hyperpage{103}
   \item proper, \hyperpage{36}
   \item pullback, \hyperpage{50}
   \item push forward, \hyperpage{24}

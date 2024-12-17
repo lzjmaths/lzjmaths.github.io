@@ -1,4 +1,4 @@
- % !TeX spellcheck = en_US
+% !TeX spellcheck = en_US
 % !TEX program = pdflatex
 \documentclass[12pt,b5paper,notitlepage]{article}
 \usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
@@ -538,9 +538,11 @@
 \renewcommand{\div}{\mathrm{div}}
 %\makeindex[columns=2,title=Index, options=-s example_style.ist]
 \usepackage{pgfplots}
-\pgfplotsset{width=7cm,compat=1.16}
+\pgfplotsset{width=7cm,compat=1.18}
 
 \usepackage{chemarrow}
+
+% \usepackage{tikz-3dplot} 
 % \renewcommand{\xrightarrow}[2]{\autorightarrow{#1}{#2}}
 
 % \excludecomment{proof}
@@ -610,6 +612,8 @@
 \input{../DG24.tex}
 
 \input{../DG25.tex}
+
+\input{../DG26.tex}
 
 % \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
 % 	\cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
