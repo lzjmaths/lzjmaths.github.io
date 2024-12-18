@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  18 DEC 2024 14:05
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  18 DEC 2024 22:38
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **Complex_Analysis
@@ -1023,7 +1023,7 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ))
 \c@tcblisting=\count373
 ))
@@ -1538,35 +1538,41 @@ Overfull \hbox (25.31981pt too wide) detected at line 125
 [][]
  []
 
-) (../25.tex [88] [89] [90]) [91]
-runsystem(makeindex Complex_Analysis.idx)...executed safely (allowed).
+) (../25.tex [88] [89] [90]) (../26.tex [91]) [92]
+runsystem(makeindex Complex_Analysis.idx)...executed.
 
- (./Complex_Analysis.ind [92
+ (./Complex_Analysis.ind [93
 
 
-] [93])
+] [94])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [94
+(./Complex_Analysis.loe [95
 
-] [95])
+] [96])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [96] (./Complex_Analysis.aux)
+ [97] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
-(rerunfilecheck)             Checksum: A37C07108F0D15B37AC7A87A4DF65EEB;14096.
+
+Package rerunfilecheck Warning: File `Complex_Analysis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Complex_Analysis.out':
+(rerunfilecheck)             Before: A37C07108F0D15B37AC7A87A4DF65EEB;14096
+(rerunfilecheck)             After:  2D2B064813978F1313B14C614D04A639;14467.
  ) 
 Here is how much of TeX's memory you used:
- 40406 strings out of 476683
- 821887 string characters out of 5804047
+ 40413 strings out of 476683
+ 822010 string characters out of 5804047
  1857018 words of memory out of 5000000
- 59761 multiletter control sequences out of 15000+600000
+ 59765 multiletter control sequences out of 15000+600000
  550990 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (96 pages).
+Output written on Complex_Analysis.pdf (97 pages).

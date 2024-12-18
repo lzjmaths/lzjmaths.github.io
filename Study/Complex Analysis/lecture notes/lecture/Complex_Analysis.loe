@@ -147,3 +147,4 @@
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.9\else \numberline {6.9}Lemma\fi }{89}{lemma.6.9}%
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.10\else \numberline {6.10}Remark\fi }{90}{remark.6.10}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.11\else \numberline {6.11}Theorem\fi \thmtformatoptarg {Marty's Theorem}}{90}{theorem.6.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.12\else \numberline {6.12}Theorem\fi \thmtformatoptarg {Riemann Mapping Theorem}}{92}{theorem.6.12}%
