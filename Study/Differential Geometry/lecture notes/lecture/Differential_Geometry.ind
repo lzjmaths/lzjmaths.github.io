@@ -1,234 +1,234 @@
 \begin{theindex}
 
-  \item $ (a,b) $-tensor field, \hyperpage{65}
-  \item $ F $-related, \hyperpage{22}
-  \item $ K(s) $, \hyperpage{97}
-  \item $ L^n(V) $, \hyperpage{40}
-  \item $ M\looparrowright N $, \hyperpage{34}
-  \item $ V_1\otimes \cdots  \otimes V_n $, \hyperpage{38}
-  \item $ \Gamma (E) $, \hyperpage{45}
-  \item $ \Omega ^k(M) $, \hyperpage{45}
-  \item $ \Omega _c^n(M) $, \hyperpage{53}
-  \item $ \Omega _s^n(M) $, \hyperpage{54}
-  \item $ \bigwedge {}^n(V) $, \hyperpage{39}
-  \item $ \mathbb  {R} $-algebra, \hyperpage{43}
-    \subitem graded, \hyperpage{43}
-    \subitem homogeneous elements, \hyperpage{43}
-    \subitem unitary, \hyperpage{43}
-  \item $ \mathbb  {R}\left <S\right > $, \hyperpage{37}
+  \item $ (a,b) $-tensor field, \hyperpage{67}
+  \item $ F $-related, \hyperpage{24}
+  \item $ K(s) $, \hyperpage{99}
+  \item $ L^n(V) $, \hyperpage{42}
+  \item $ M\looparrowright N $, \hyperpage{36}
+  \item $ V_1\otimes \cdots  \otimes V_n $, \hyperpage{40}
+  \item $ \Gamma (E) $, \hyperpage{47}
+  \item $ \Omega ^k(M) $, \hyperpage{47}
+  \item $ \Omega _c^n(M) $, \hyperpage{55}
+  \item $ \Omega _s^n(M) $, \hyperpage{56}
+  \item $ \bigwedge {}^n(V) $, \hyperpage{41}
+  \item $ \mathbb  {R} $-algebra, \hyperpage{45}
+    \subitem graded, \hyperpage{45}
+    \subitem homogeneous elements, \hyperpage{45}
+    \subitem unitary, \hyperpage{45}
+  \item $ \mathbb  {R}\left <S\right > $, \hyperpage{39}
   \item $ \mathbb{R} $-algebra
     \subitem graded
-      \subsubitem anticommutative, \hyperpage{43}
-      \subsubitem commutative, \hyperpage{43}
-      \subsubitem connected, \hyperpage{43}
-  \item $ \mathcal  {L}_VW $, \hyperpage{27}
-  \item $ \mathcal  {O}_{\mathrm  {std}} $, \hyperpage{52}
-  \item $ \mathfrak  {T}M $, \hyperpage{14}
-  \item $ \mathrm  {Alt}^k(V) $, \hyperpage{40}
-  \item $ \mathrm  {Lie}(G) $, \hyperpage{23}
-  \item $ \mathrm  {Supp}X $, \hyperpage{15}, \hyperpage{17}
-  \item $ \mathrm  {Sym}^n(V) $, \hyperpage{39}
-  \item $ \mathrm  {Vol}(D) $, \hyperpage{71}
-  \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{24}
-  \item $ k $-boundary, \hyperpage{77}
-  \item $ k $-cycles, \hyperpage{77}
-  \item $ k $-form, \hyperpage{40}
-  \item $ n $-tensor, \hyperpage{38}
-  \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{5}
-  \item $M\DOTSB \lhook \joinrel  \rightarrow N$, \hyperpage{34}
+      \subsubitem anticommutative, \hyperpage{45}
+      \subsubitem commutative, \hyperpage{45}
+      \subsubitem connected, \hyperpage{45}
+  \item $ \mathcal  {L}_VW $, \hyperpage{29}
+  \item $ \mathcal  {O}_{\mathrm  {std}} $, \hyperpage{54}
+  \item $ \mathfrak  {T}M $, \hyperpage{16}
+  \item $ \mathrm  {Alt}^k(V) $, \hyperpage{42}
+  \item $ \mathrm  {Lie}(G) $, \hyperpage{25}
+  \item $ \mathrm  {Supp}X $, \hyperpage{17}, \hyperpage{19}
+  \item $ \mathrm  {Sym}^n(V) $, \hyperpage{41}
+  \item $ \mathrm  {Vol}(D) $, \hyperpage{73}
+  \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{26}
+  \item $ k $-boundary, \hyperpage{79}
+  \item $ k $-cycles, \hyperpage{79}
+  \item $ k $-form, \hyperpage{42}
+  \item $ n $-tensor, \hyperpage{40}
+  \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{7}
+  \item $M\DOTSB \lhook \joinrel  \rightarrow N$, \hyperpage{36}
   \item $\mathfrak{so}(n),\mathfrak{0}(n),\mathfrak{u}(n),\mathfrak{su}(n),\mathfrak{sl}(n)$, 
-		\hyperpage{36}
+		\hyperpage{38}
 
   \indexspace
 
-  \item anti-symmetric, \hyperpage{39}
-  \item average curvature, \hyperpage{101}
+  \item anti-symmetric, \hyperpage{41}
+  \item average curvature, \hyperpage{103}
 
   \indexspace
 
-  \item binormal vector, \hyperpage{97}
-  \item boundary map, \hyperpage{77}, \hyperpage{84}
-  \item bump function , \hyperpage{7}
+  \item binormal vector, \hyperpage{99}
+  \item boundary map, \hyperpage{79}, \hyperpage{86}
+  \item bump function , \hyperpage{9}
 
   \indexspace
 
   \item chain homotopy
-    \subitem chain homotopic, \hyperpage{78}
-    \subitem chain homotopy inverse, \hyperpage{78}
-  \item chain map, \hyperpage{78}
-  \item closed form, \hyperpage{49}
-  \item cochain complex, \hyperpage{77}
-  \item commutes, \hyperpage{29}
-  \item complete, \hyperpage{15}
-  \item completely integrable, \hyperpage{75}
-  \item contraction, \hyperpage{68}
-  \item contravariant functor, \hyperpage{42}
-  \item contravariant tensor field, \hyperpage{65}
-  \item covariant tensor field, \hyperpage{65}
-  \item Cristopher symbol, \hyperpage{104}
-  \item critical point, \hyperpage{3}, \hyperpage{35}
-  \item critical value, \hyperpage{3}, \hyperpage{35}
-  \item curvature, \hyperpage{97}
-  \item curve, \hyperpage{10}
-    \subitem tangent, \hyperpage{10}
-    \subitem velocity, \hyperpage{10}
+    \subitem chain homotopic, \hyperpage{80}
+    \subitem chain homotopy inverse, \hyperpage{80}
+  \item chain map, \hyperpage{80}
+  \item closed form, \hyperpage{51}
+  \item cochain complex, \hyperpage{79}
+  \item commutes, \hyperpage{31}
+  \item complete, \hyperpage{17}
+  \item completely integrable, \hyperpage{77}
+  \item contraction, \hyperpage{70}
+  \item contravariant functor, \hyperpage{44}
+  \item contravariant tensor field, \hyperpage{67}
+  \item covariant tensor field, \hyperpage{67}
+  \item Cristopher symbol, \hyperpage{106}
+  \item critical point, \hyperpage{5}, \hyperpage{37}
+  \item critical value, \hyperpage{5}, \hyperpage{37}
+  \item curvature, \hyperpage{99}
+  \item curve, \hyperpage{12}
+    \subitem tangent, \hyperpage{12}
+    \subitem velocity, \hyperpage{12}
 
   \indexspace
 
-  \item de Rham cohomology, \hyperpage{49}
-  \item differential, \hyperpage{9}, \hyperpage{77}
-  \item Dual bundle of a vector bundle, \hyperpage{44}
-  \item dual vector bundle, \hyperpage{45}
+  \item de Rham cohomology, \hyperpage{51}
+  \item differential, \hyperpage{11}, \hyperpage{79}
+  \item Dual bundle of a vector bundle, \hyperpage{46}
+  \item dual vector bundle, \hyperpage{47}
 
   \indexspace
 
-  \item elliptic, \hyperpage{101}
-  \item embedded submanifold, \hyperpage{34}
-  \item embedding, \hyperpage{34}
-  \item exact, \hyperpage{83}
-  \item exact form, \hyperpage{49}
-  \item exhaust, \hyperpage{7}
-  \item exterior algebra, \hyperpage{44}
-  \item exterior differential, \hyperpage{47}
-  \item exterior product, \hyperpage{40}
+  \item elliptic, \hyperpage{103}
+  \item embedded submanifold, \hyperpage{36}
+  \item embedding, \hyperpage{36}
+  \item exact, \hyperpage{85}
+  \item exact form, \hyperpage{51}
+  \item exhaust, \hyperpage{9}
+  \item exterior algebra, \hyperpage{46}
+  \item exterior differential, \hyperpage{49}
+  \item exterior product, \hyperpage{42}
 
   \indexspace
 
-  \item fiber, \hyperpage{12}
-  \item flat, \hyperpage{75}
-  \item flow, \hyperpage{15}
-  \item foliation, \hyperpage{77}
+  \item fiber, \hyperpage{14}
+  \item flat, \hyperpage{77}
+  \item flow, \hyperpage{17}
+  \item foliation, \hyperpage{79}
 
   \indexspace
 
-  \item Gauss map , \hyperpage{99}
-  \item Gaussian curvature, \hyperpage{101}
-  \item genus of smooth function, \hyperpage{9}
-  \item gradient vector field, \hyperpage{13}
+  \item Gauss map , \hyperpage{101}
+  \item Gaussian curvature, \hyperpage{103}
+  \item genus of smooth function, \hyperpage{11}
+  \item gradient vector field, \hyperpage{15}
 
   \indexspace
 
-  \item Hamiltonian flow, \hyperpage{72}
-  \item Hamiltonian vector field, \hyperpage{72}
-  \item homogeneous space, \hyperpage{5}
-  \item homology, \hyperpage{77}
-  \item Hopf map, \hyperpage{80}
-  \item hyperbolic, \hyperpage{101}
+  \item Hamiltonian flow, \hyperpage{74}
+  \item Hamiltonian vector field, \hyperpage{74}
+  \item homogeneous space, \hyperpage{7}
+  \item homology, \hyperpage{79}
+  \item Hopf map, \hyperpage{82}
+  \item hyperbolic, \hyperpage{103}
 
   \indexspace
 
-  \item immersed submanifold, \hyperpage{34}
-  \item immersion, \hyperpage{34}
-  \item integrable, \hyperpage{75}
-  \item integral curve, \hyperpage{14}, \hyperpage{17}
-  \item integral manifold, \hyperpage{73}
-  \item involutive, \hyperpage{75}
-  \item isotropy, \hyperpage{5}
+  \item immersed submanifold, \hyperpage{36}
+  \item immersion, \hyperpage{36}
+  \item integrable, \hyperpage{77}
+  \item integral curve, \hyperpage{16}, \hyperpage{19}
+  \item integral manifold, \hyperpage{75}
+  \item involutive, \hyperpage{77}
+  \item isotropy, \hyperpage{7}
 
   \indexspace
 
-  \item Killing vector field, \hyperpage{67}
-  \item knot, \hyperpage{90}
+  \item Killing vector field, \hyperpage{69}
+  \item knot, \hyperpage{92}
 
   \indexspace
 
-  \item left invariant, \hyperpage{23}
-  \item Lie algebra, \hyperpage{23}
-  \item Lie bracket, \hyperpage{20}
-  \item Lie derivative, \hyperpage{28}, \hyperpage{66}
-  \item Lie group, \hyperpage{5}
-  \item locally finite, \hyperpage{7}
+  \item left invariant, \hyperpage{25}
+  \item Lie algebra, \hyperpage{25}
+  \item Lie bracket, \hyperpage{22}
+  \item Lie derivative, \hyperpage{30}, \hyperpage{68}
+  \item Lie group, \hyperpage{7}
+  \item locally finite, \hyperpage{9}
 
   \indexspace
 
-  \item mixed tensor field, \hyperpage{65}
-  \item morphism, \hyperpage{26}
-  \item multi $ \mathbb  {R} $-linear, \hyperpage{37}
+  \item mixed tensor field, \hyperpage{67}
+  \item morphism, \hyperpage{28}
+  \item multi $ \mathbb  {R} $-linear, \hyperpage{39}
 
   \indexspace
 
-  \item normal vector, \hyperpage{97}
+  \item normal vector, \hyperpage{99}
 
   \indexspace
 
-  \item one-parameter transformation group, \hyperpage{16}
-  \item orientation, \hyperpage{51}
-  \item orientation form, \hyperpage{51}
-  \item orientation manifold, \hyperpage{51}
-  \item orientation preserving, \hyperpage{52}
-  \item orientation reversing, \hyperpage{52}
-  \item oriented atlas, \hyperpage{53}
-  \item oriented basis, \hyperpage{53}
-  \item oriented chart, \hyperpage{53}
-  \item oriented manifold, \hyperpage{51}
-  \item osculating plane, \hyperpage{97}
-  \item outward, \hyperpage{56}
+  \item one-parameter transformation group, \hyperpage{18}
+  \item orientation, \hyperpage{53}
+  \item orientation form, \hyperpage{53}
+  \item orientation manifold, \hyperpage{53}
+  \item orientation preserving, \hyperpage{54}
+  \item orientation reversing, \hyperpage{54}
+  \item oriented atlas, \hyperpage{55}
+  \item oriented basis, \hyperpage{55}
+  \item oriented chart, \hyperpage{55}
+  \item oriented manifold, \hyperpage{53}
+  \item osculating plane, \hyperpage{99}
+  \item outward, \hyperpage{58}
 
   \indexspace
 
-  \item parabolic, \hyperpage{101}
-  \item parametrized curve, \hyperpage{97}
-    \subitem parametrized by its arc length, \hyperpage{97}
-    \subitem regular, \hyperpage{97}
-    \subitem tangent vector, \hyperpage{97}
-  \item partial-derivative, \hyperpage{9}
-  \item partition of unity subordinat(P.O.U), \hyperpage{8}
-  \item planar, \hyperpage{101}
-  \item Poincar{\'e} disk model, \hyperpage{60}
-  \item positive atlas, \hyperpage{53}
-  \item principal curvature, \hyperpage{100}
-  \item principal directions, \hyperpage{101}
-  \item proper, \hyperpage{34}
-  \item pullback, \hyperpage{48}
-  \item push forward, \hyperpage{22}
+  \item parabolic, \hyperpage{103}
+  \item parametrized curve, \hyperpage{99}
+    \subitem parametrized by its arc length, \hyperpage{99}
+    \subitem regular, \hyperpage{99}
+    \subitem tangent vector, \hyperpage{99}
+  \item partial-derivative, \hyperpage{11}
+  \item partition of unity subordinat(P.O.U), \hyperpage{10}
+  \item planar, \hyperpage{103}
+  \item Poincar{\'e} disk model, \hyperpage{62}
+  \item positive atlas, \hyperpage{55}
+  \item principal curvature, \hyperpage{102}
+  \item principal directions, \hyperpage{103}
+  \item proper, \hyperpage{36}
+  \item pullback, \hyperpage{50}
+  \item push forward, \hyperpage{24}
 
   \indexspace
 
-  \item rank, \hyperpage{32}
-    \subitem constant rank, \hyperpage{32}
-  \item refinement, \hyperpage{7}
-  \item regular point, \hyperpage{3}, \hyperpage{27}, \hyperpage{35}
-  \item regular surface, \hyperpage{98}
-    \subitem 1st fundamental form, \hyperpage{99}
-    \subitem 2nd fundamental form, \hyperpage{100}
-    \subitem local parametrization, \hyperpage{98}
-      \subsubitem $ X_u $, \hyperpage{98}
-      \subsubitem $ X_v $, \hyperpage{98}
-    \subitem normal curvature, \hyperpage{100}
-    \subitem normal vector, \hyperpage{99}
-  \item regular value, \hyperpage{3}, \hyperpage{35}
-  \item retract, \hyperpage{58}
-  \item Riemannian metric, \hyperpage{59, 60}
-  \item right invariant, \hyperpage{23}
+  \item rank, \hyperpage{34}
+    \subitem constant rank, \hyperpage{34}
+  \item refinement, \hyperpage{9}
+  \item regular point, \hyperpage{5}, \hyperpage{29}, \hyperpage{37}
+  \item regular surface, \hyperpage{100}
+    \subitem 1st fundamental form, \hyperpage{101}
+    \subitem 2nd fundamental form, \hyperpage{102}
+    \subitem local parametrization, \hyperpage{100}
+      \subsubitem $ X_u $, \hyperpage{100}
+      \subsubitem $ X_v $, \hyperpage{100}
+    \subitem normal curvature, \hyperpage{102}
+    \subitem normal vector, \hyperpage{101}
+  \item regular value, \hyperpage{5}, \hyperpage{37}
+  \item retract, \hyperpage{60}
+  \item Riemannian metric, \hyperpage{61, 62}
+  \item right invariant, \hyperpage{25}
 
   \indexspace
 
-  \item short exact, \hyperpage{83}
-  \item short exact sequence, \hyperpage{83}
-  \item singular point, \hyperpage{27}
-  \item singular value, \hyperpage{35}
-  \item smooth manifold, \hyperpage{2}
-  \item smooth section, \hyperpage{13}
-  \item submersion, \hyperpage{34}
-  \item symmetric, \hyperpage{39}
-  \item symplectic form, \hyperpage{71}
-  \item symplectic structure, \hyperpage{71}
+  \item short exact, \hyperpage{85}
+  \item short exact sequence, \hyperpage{85}
+  \item singular point, \hyperpage{29}
+  \item singular value, \hyperpage{37}
+  \item smooth manifold, \hyperpage{4}
+  \item smooth section, \hyperpage{15}
+  \item submersion, \hyperpage{36}
+  \item symmetric, \hyperpage{41}
+  \item symplectic form, \hyperpage{73}
+  \item symplectic structure, \hyperpage{73}
 
   \indexspace
 
-  \item tangent bundle, \hyperpage{10}
-  \item tangent distribution, \hyperpage{73}
-  \item tangent space, \hyperpage{9}
-  \item tangent vector, \hyperpage{9}
-  \item torsion, \hyperpage{97}
-  \item trivialization, \hyperpage{12}
+  \item tangent bundle, \hyperpage{12}
+  \item tangent distribution, \hyperpage{75}
+  \item tangent space, \hyperpage{11}
+  \item tangent vector, \hyperpage{11}
+  \item torsion, \hyperpage{99}
+  \item trivialization, \hyperpage{14}
 
   \indexspace
 
-  \item vector bundle, \hyperpage{11}
-    \subitem isomorphism, \hyperpage{12}
-  \item vector field, \hyperpage{13}
-    \subitem Time dependent, \hyperpage{17}
-  \item volume form, \hyperpage{61}
+  \item vector bundle, \hyperpage{13}
+    \subitem isomorphism, \hyperpage{14}
+  \item vector field, \hyperpage{15}
+    \subitem Time dependent, \hyperpage{19}
+  \item volume form, \hyperpage{63}
 
 \end{theindex}

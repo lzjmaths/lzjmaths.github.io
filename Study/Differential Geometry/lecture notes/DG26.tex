@@ -1,8 +1,9 @@
 % !TEX root = lecture/Differential_Geometry.tex
 
+\tikzset{external/export=false}
 \begin{definition}
-     $ \dd N_p $ has eigenvector  $ e_1,e_2 $ and 
-     \[\dd N_p(e_1)=-k_1e_1,\,\dd N_p(e_2)=-k_2e_2\]
+    $ \dd N_p $ has eigenvector  $ e_1,e_2 $ and 
+    \[\dd N_p(e_1)=-k_1e_1,\,\dd N_p(e_2)=-k_2e_2\]
     Then  $ k_1,k_2 $ is called the \name{principal curvature} of  $ S $ at  $ p $,  $ e_1,e_2 $ is called the \name{principal directions} of  $ S $ at  $ p $.       
 \end{definition}
 
@@ -13,7 +14,7 @@
     For a cylinder  $ \{(x,y,z)|x^2+y^2=1\} $,  $ N(p)=(-x,-y,0) $,  $ \dd N_p=(-x'(p),-y'(p),0) $. So  $ k_1=0,k_2=1,K=0 $.    
 \end{example}
 \begin{example}
-     $ S=\{z=y^2-x^2\}\subset \Rbb^2 $.  $ \dd N=\dps\frac{1}{\sqrt{4u^2+4v^2+1}}(2u,-2v,1) $. Then  $ k_1=2,k_2=-2,K=-4<0 $.   
+    $ S=\{z=y^2-x^2\}\subset \Rbb^2 $.  $ \dd N=\dps\frac{1}{\sqrt{4u^2+4v^2+1}}(2u,-2v,1) $. Then  $ k_1=2,k_2=-2,K=-4<0 $.   
 \end{example}
 
 \begin{center}
@@ -148,7 +149,7 @@ So  $ K=\det \dd N_p=\dps\frac{eg-f^2}{EG-F^2} $,  $ H=-\tr \dd N_p=\dps\frac{1}
 \end{example}
 
 \begin{theorem}[Gauss Theorem Egregium]\label{Gauss fantanstic theorem}
-     $ K  $ is the invariant of  $ S $, only depending on  $ E,F,G $.  
+    $ K  $ is the invariant of  $ S $, only depending on  $ E,F,G $.  
 \end{theorem}
 \begin{proof}
     For  $ \{X_u,X_v,N\} $ an orthogonormal basis of  $ \Rbb^3 $, let 
@@ -225,3 +226,4 @@ Similarly, one can prove for the coefficients of  $ X_u $
 \begin{theorem}
     If  $ E,F,G,e,f,g $ satisfies \eqref{Gauss equation 1}  $ \sim $  \eqref{Gauss equation 4}, then it uniquely determines a surface.
 \end{theorem}
+% \tikzset{external/export=true}
