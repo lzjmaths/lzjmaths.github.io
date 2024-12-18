@@ -1,3 +1,5 @@
+%! TEX root = lecture/Complex_Analysis
+
 \subsubsection{Order of an entire function}
 The \name{order}  of the entire function  $ f  $ is defined by 
 \begin{equation}
@@ -104,6 +106,26 @@ It is easy to check that  $ \rho(f,g) $ is finite and is a distance between  $ f
     
     Let  $ E\subset \Omega  $ be compact  $ \Rightarrow  $  $ d(E,\partial \Omega)>0 $ $ \Rightarrow  $  $ r:=\dps\frac{d(E,\partial \Omega)}{2} $,  $ K=\dps\bigcup_{z\in E}B(z,r) $ has closure  $ \overline{K}\subset \Omega $.
     
-     $ \mathscr{F} $ is equicontinnuous on  $ \overline{K} $ $ \Rightarrow $  $ \forall \epsilon>0 $,  $ \exists \delta<r $ \st   
-     \[d(f(z),f(z_0))<\frac{\epsilon}{3}\] 
+     $ \mathscr{F} $ is equicontinuous on  $ \overline{K} $ $ \Rightarrow $  $ \forall \epsilon>0 $,  $ \exists \delta<r $ \st   
+    \begin{equation}\label{eq:6.1.1:1}
+        d(f(z),f(z_0))<\frac{\epsilon}{3},\,\forall z,z_0\in \overline{K}\text{ with  $ |z-z_0|<\delta $}
+    \end{equation}
+     $ \forall z\in E $,  $ B(z,\delta ) $ contains some  $ \zeta_j  $  $ \Rightarrow  $  $ B(\zeta_j,\delta ) $ contains  $ z $.
+     
+    $ E $ is compact  $ \Rightarrow  $  $ \exists N\in \Nbb  $ \st  $ E\subset \dps\bigcup_{j=1}^N B(\zeta_j,\delta) $ for some  $ \zeta_1,\zeta_2,\cdots,\zeta_N $. By the construction  of  $ f_{n,n} $,  $ \exists N_\epsilon\in \Nbb  $ \st   
+    \[\dd(f_{n,n}(\zeta_j),f_{m,m}(\zeta_j))<\frac{\epsilon}{3},\,\forall m,n \geq N_\epsilon,\,\forall j=1,2,\cdots,N\]
+     $ \forall z\in E $,  $ \exists \zeta_{j_0}=\zeta_{j_0}(z)$ \st  $ |z-\zeta_{j_0}|<\delta $ for some  $ j_0\in\{1,2,\cdots,N\} $.  
+     \[\eqref{eq:6.1.1:1}\Rightarrow \dd(f(z),f(\zeta_{j_0}))<\frac{\epsilon}{3},\,\forall f\in \mathscr{F}\]
+    Then
+    \begin{equation*}
+        \begin{aligned}
+            \dd(f_{n,n}(z),f_{m,m}(z)) &\leq \dd (f_{n,n}(z),f_{m,m}(\zeta_{j_0}))+\dd(f_{n,n}(\zeta_{j_0}),f_{m,m}(\zeta_{j_0}))+\dd(f_{m,m}(\zeta_{j_0}),f_{m,m}(z)) \\
+            &<\epsilon,\qquad \forall m,n \geq N_\epsilon
+        \end{aligned}
+    \end{equation*}    
+
+    So  $ \{f_{n,n}\} $ is uniformly Cauchy on  $ E $ $ \Rightarrow  $  $ \{f_{n,n}\} $ converges uniformly on  $ E $.
+    \begin{remark}
+        In the text, p.233, it is erroneously assumed that  $ \zeta_k\in E $. 
+    \end{remark}    
 \end{proof}

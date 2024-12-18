@@ -142,3 +142,8 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.4\else \numberline {6.4}Theorem\fi }{86}{theorem.6.4}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.5\else \numberline {6.5}Theorem\fi }{86}{theorem.6.5}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.6\else \numberline {6.6}Theorem\fi \thmtformatoptarg {Arzela-Ascoli Theorem}}{87}{theorem.6.6}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.7\else \numberline {6.7}Remark\fi }{88}{remark.6.7}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.8\else \numberline {6.8}Theorem\fi \thmtformatoptarg {Montel's Theorem}}{89}{theorem.6.8}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}6.9\else \numberline {6.9}Lemma\fi }{89}{lemma.6.9}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}6.10\else \numberline {6.10}Remark\fi }{90}{remark.6.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.11\else \numberline {6.11}Theorem\fi \thmtformatoptarg {Marty's Theorem}}{90}{theorem.6.11}%

@@ -1,0 +1,76 @@
+% !TEX root = lecture/Complex_Analysis.tex
+
+\subsubsection{Montel's Theorem}
+
+\begin{theorem}[Montel's Theorem]\label{thm:6.1.2:Montel's Theorem}
+    A family of analytic functions  $ \mathscr{F} $ is normal w.r.t.  $ \Cbb  $ iff the functions in  $ \mathscr{F} $ are uniformly bounded on every compact set of  $ \Omega $, where  $ \Omega  $ is a region in  $ \Cbb $ 
+\end{theorem}
+\begin{proof}
+    "$ \Rightarrow $": For  $ \forall z_0\in \Omega $,  $ \exists r>0 $ \st  $ \overline{B(z_0,r)}\subset \Omega $. The Arzela-Ascoli theorem  implies  $ \mathscr{F} $ is equicontinuous on  $ \overline{B(z_0,r)} $ and  $ |f(z_0)| \leq M $ for some  $ M>0 $ and  $ \forall f\in \mathscr{F} $. So for $ \forall \epsilon>0 $,  $ \exists \delta>0 $ \st  $ |f(z)| \leq M+\epsilon $ for  $ \forall z\in B(z_0,\delta) $.
+    
+    Any compact set can be covered by a finite number of such  $ B(z_0,\delta)  $  $ \Rightarrow  $   $ \mathscr{F} $ is uniformly bounded on every compact set.
+    
+    "$ \Leftrightarrow $" Arzela-Ascoli theorem shows that it suffices to prove equicontinuity. Let  $ E\subset \Omega $ $ \Rightarrow $  $ \exists r=\dps\frac{4}{\dd(E,\partial \Omega)}>0 $ \st  $ K=\dps\bigcup_{z\in E}B(2r) $ has closure  $ \overline{K}\subset \Omega $.
+    
+    Let  $ M=\dps\sup_{f\in \mathscr{F}}\sup_{z\in \overline{K}}|f(z)| $. Then  $ M<\infty $.
+    For  $ \forall z,z_0\in E $ satisfying  $ |z-z_0|<r $, let  $ \gamma  $ be the circle  $ |\zeta-z|=2r $ which is contained in  $ \overline{K}\subset \Omega $. We also have  $ |\zeta-z|=2r $,  $ |\zeta-z_0|>r  $ for  $ \forall \zeta\in \gamma $.
+    Cauchy's formula implies 
+
+    \[f(z)-f(z_0)=\frac{1}{2\pi i}\int_\gamma \left[\frac{f(\zeta)}{\zeta-z}-\frac{f(\zeta)}{\zeta-z_0}\right]\dd\zeta=\frac{z-z_0}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{(\zeta-z)(\zeta-z_0)}\]
+    for $ \forall f\in \mathscr{F} $. For $ \forall \epsilon>0 $, let  $ \delta=\dps\min\{\frac{\epsilon r}{M},r\} $  $ \Rightarrow $ $ |f(z)-f(z_0)| \leq \dps\frac{1}{2\pi}\cdot\frac{4\pi r}{2r^2}M|z-z_0| \leq \epsilon $, $ \forall z,z_0\in E $ with  $ |z-z_0|<\delta $, $ \forall f\in \mathscr{F} $. $ \Rightarrow  $  $ \mathscr{F} $ is equicontinuous on  $ E $.         
+\end{proof}
+\subsubsection{Marty's Theorem}
+For  $ S=\hat{\Cbb} $, we use the chordal metric  $ \dd(z_1,z_2)=\dps\frac{2|z_1-z_2|}{\sqrt{(1+|z_1|^2)(1+|z_2|^2)}} $.
+
+\begin{lemma}\label{lemma:6.1.3:1}\,
+
+
+    \begin{enumerate}[label=\arabic*]
+        \item If a sequence of meromorphic functions converges in the sense of chordal metric, uniformly on each compact subset of  $ \Omega  $, then the limit function is either meromorphic  or  $ \equiv \infty $ in  $ \Omega  $.
+        \item If a sequence of analytic functions converges in the same sense, then limit function is analytic  in  $ \Omega  $ or  $ \equiv \infty  $ in  $ \Omega $ 
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    (1) Suppose  $ f_n\rightrightarrows f $ in each compact subset of  $ \Omega  $. Then  $ f  $ is continuous in the chordal metric.  $ \forall z_0\in \Omega  $, if  $ f(z_0)\neq \infty  $, then  $ f  $ is bounded in a neighborhood of  $ z_0  $  by continuity, and thus  $ f_n\neq \infty   $ in the same NBHD of all large  $ n $. Applying Weierstrass theorem \ref{thm:5.1.1:Weierstrass's Theorem}, we get that  $ f  $ is analytic in a neighborhood of  $ z_0 $.  
+
+    For  $ f(z_0)=\infty $,  $ \dd(\dps\frac{1}{z_1},\frac{1}{z_2})=\dd(z_1,z_2) $ $ \Rightarrow  $  $ \dps\frac{1}{f_n}\rightrightarrows \frac{1}{f} $ on each compact subset. It follows that  $ \dps\frac{1}{f} $ is analytic in a neighborhood of  $ z_0 $ by Weierstrass theorem \ref{thm:5.1.1:Weierstrass's Theorem}. So  $ f  $ is either  meromorphic in this neighborhood or  $ f\equiv \infty $\ie  $ \dps\frac{1}{f}\equiv 0 $ in this neighborhood. 
+
+    The latter case shows that  $ f\equiv \infty  $ on  $ \Omega  $ since  we just proved  $ f^{-1}(\infty ) $ is open, and it is clear that  $ f^{-1}(\infty) $ is relatively closed in  $ \Omega $. 
+
+    (2) For  $ z_0\in \Omega  $, if  $ f(z_0)\neq \infty $, similarly  $ f  $ is analytic in a neighborhood of  $ z_0 $. If  $ f(z_0)=\infty $, then   $ \dps\frac{1}{f_n}\neq 0 $ for  $ \forall $  $ z$ in a neighborhood of  $ z_0 $ implies that   $ \dps\frac{1}{f}\equiv 0 $ in a neighborhood of  $ z_0 $ $ \Rightarrow $  $ f\equiv \infty $ on  $ \Omega $ by Hurwitz Theorem \ref{thm:5.1.1:Hurwitz's Theorem}.
+\end{proof}
+\begin{remark}
+    It shows that Hurwitz theorem \ref{thm:5.1.1:Hurwitz's Theorem} can restrict the codomain of  $ f $ if such codomain of  $ f_n $ are restricted to the same region. 
+\end{remark}
+
+\begin{theorem}[Marty's Theorem]\label{thm:6.1.3:Marty's Theorem}
+    A family of analytic or meromorphic functions $ \mathscr{F } $ is normal w.r.t.  $ \hat{\Cbb } $ iff 
+    \begin{equation}
+        \rho(f)(z):=\frac{2|f'(z)|}{1+|f(z)|^2}
+    \end{equation}
+    are \name{locally bounded} \ie  $ \{\rho(f):f\in \mathscr{F}\} $ is bounded in a neighborhood of each point  $ z\in \Omega  $. 
+\end{theorem}
+\begin{proof}
+    "$ \Leftarrow $" Arzela-Ascoli Theorem  \ref{thm:6.1.1:Arzela-Ascoli theorem} implies that it suffices to prove  $ \mathscr{F } $ is equicontinuous on every compact set in  $ \Omega $.
+    
+    Define the \name{sperical length} of a path  $ \gamma  $ in  $ \hat{C} $ is defined by  $ \Lambda(\gamma)=\int_\gamma\dps\frac{2|\dd z|}{1+|z|^2} $.
+    
+    The \name{sperical distance} between  $ z_1,z_2\in \hat{\Cbb} $ is  $ \dd_S(z_1,z_2)=\dps\inf_{\gamma}\Lambda(\gamma) $,
+    where infimum is taken over all paths connecting  $ z_1 $ and  $ z_2 $.
+    
+    $ d_s  $ and  $ d  $ are equivalent, \ie $ C_1\dd(z_1,z_2) \leq \dd_S(z_1,z_2) \leq C_2\dd(z_1,z_2) $ for some  $ z_1,z_2\in \hat{\Cbb} $,  $ 0<C_1<C_2<+\infty $.
+    
+    To prove the equicontinuity in a compact set  $ E\subset \Omega $, it is proved that  $ \mathscr{F} $ is equicontinuous   on disks  $ D $ w.r.t.  $ \overline{D}\subset \Omega $.  $ \forall z_1,z_2\in D $,  $ \gamma(t)=tz_1+ (1-t)z_2 $,  $ t\in [0,1] $, 
+    \[\begin{aligned}
+        \dd_S(f(z_1),f(z_2))& \leq \int_{f(\gamma)}\frac{2|\dd\omega|}{1+|\omega|^2}\\
+        &\xlongequal{\omega=f(z)}\int_{\gamma}\frac{2|f'(z)||\dd z|}{1+|f(z)|^2}\\
+        &=\int_\gamma \rho(f)(z)\cdot|\dd z| \leq M\int_\gamma |\dd z|=M|z-z_0|
+    \end{aligned}\]     
+    "$ \Rightarrow $": Suppose  $ \mathscr{F} $ is normal but  $ \{\rho(f):f\in \mathscr{F}\} $ is not bounded on a compact set  $ E $, from  which $ \exists f_n\in \mathscr{F} $ such that  $ \dps\sup_{z\in E}\rho(f_n)(z)>n $ for  $ \forall n\in \Nbb $ follows.
+    
+    We may assume  $ f_n\rightrightarrows f $ on every compact set pf  $ \Omega $. Then lemma \ref{lemma:6.1.3:1} implies  $ \forall z_0\in E $, we can find a small disk in  $ \Omega $ \st either  $ f $ or  $ \dps\frac{1}{f} $ is analytic in this disk.
+    
+    If  $ f  $ is analytic, then it is bounded in the closed disk $ \Rightarrow $  $ f_n $ has no  poles in this disk for all large  $ n  $ $ \Rightarrow $  $ \rho(f_n)\rightrightarrows \rho(f) $ on a slightly smaller disk by Weierstrass theorem \ref{thm:5.1.1:Weierstrass's Theorem} $ \Rightarrow  $  $ \rho(f)  $ is continuous in this smaller disk $ \Rightarrow  $  $ \rho(f_n ) $ is bounded on the smaller disk.
+    
+    If  $ \dps\frac{1}{f} $ is analytic, the same proof applies to  $ \rho(\dps\frac{1}{f_n}) $ which is equal to  $ \rho(f_n) $.   
+\end{proof}

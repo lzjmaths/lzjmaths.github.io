@@ -3,3 +3,4 @@ piecewise
 iff
 WLOG
 equicontinuous
+equicontinuity
