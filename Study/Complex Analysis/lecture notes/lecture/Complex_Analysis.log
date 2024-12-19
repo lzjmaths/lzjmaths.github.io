@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  18 DEC 2024 22:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  19 DEC 2024 09:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1557,20 +1557,14 @@ showing proposition
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Complex_Analysis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Complex_Analysis.out':
-(rerunfilecheck)             Before: A37C07108F0D15B37AC7A87A4DF65EEB;14096
-(rerunfilecheck)             After:  2D2B064813978F1313B14C614D04A639;14467.
+Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
+(rerunfilecheck)             Checksum: 2D2B064813978F1313B14C614D04A639;14467.
  ) 
 Here is how much of TeX's memory you used:
- 40413 strings out of 476683
- 822010 string characters out of 5804047
+ 40414 strings out of 476683
+ 822026 string characters out of 5804047
  1857018 words of memory out of 5000000
- 59765 multiletter control sequences out of 15000+600000
+ 59766 multiletter control sequences out of 15000+600000
  550990 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
