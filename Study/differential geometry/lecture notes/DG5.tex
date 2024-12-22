@@ -32,12 +32,12 @@ Then these definition is more geometric.
 \begin{lemma}
     Given  $ F\in C^\infty(M,M) $,  $ p\in N $, the diagram commutes:
     \begin{center}
-        \tikzset{external/export=false}
+        % \tikzset{external/export=false}
         \begin{tikzcd}
             \gamma\in (T_pN)_{curve} \arrow[r,"\cong"]\arrow[d] & T_pN\arrow[d]\\
             F\circ \gamma\in (T_{F(p)}M)_{curve}\arrow[r,"\cong"] & T_{F(p)}M
         \end{tikzcd} 
-        \tikzset{external/export=true}
+        % \tikzset{external/export=true}
     \end{center}
  
 \end{lemma}
@@ -70,7 +70,7 @@ Given  $ (TU,\hat{\varphi}),(TV,\hat{\psi})\in \hat{\mathcal{A}} $, the transiti
 So  $ \hat{\mathcal{A}} $ is a smooth atlas on  $ TM  $, making  $ TM  $ into a smooth manifold.
 \begin{definition}[vector bundle]
     Given a continuous map  $ f:E\rightarrow B $, we say  $ f $ is a  $ n $-dimensional \name{vector bundle} if: $ \exists $ an open cover  $ \mathcal{U}=\{U_\alpha\}_{\alpha\in I} $ of  $ B $ and homeomorphisms  $ \{f^{-1}(U_\alpha)\xrightarrow[\cong ]{\rho_\alpha}U_\alpha\times \mathbb{R}\} $ \st   
-    \tikzset{external/export=false}
+    % \tikzset{external/export=false}
     \begin{itemize}
         \item \begin{tikzcd}
             f^{-1}(U_\alpha)\arrow[d,"f"]\arrow[r,"\rho_\alpha"]&U_\alpha\times \mathbb{R}^n\arrow[ld,"projection"]\\
@@ -82,7 +82,7 @@ So  $ \hat{\mathcal{A}} $ is a smooth atlas on  $ TM  $, making  $ TM  $ into a 
         \[\mathbb{R}^n=\{p\}\times\mathbb{R}^n\xrightarrow{\rho_\alpha}f^{-1}(p)\xrightarrow{\rho_\beta}\{p\}\times \mathbb{R}^n=\mathbb{R}^n\] 
         is linear.
     \end{itemize}
-    \tikzset{external/export=true}
+    % \tikzset{external/export=true}
     Call  $ f^{-1}(p)  $  the \name{fiber} over  $ p $. 
 \end{definition} 
 \begin{proposition}

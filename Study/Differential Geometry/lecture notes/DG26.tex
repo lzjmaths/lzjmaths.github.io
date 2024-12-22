@@ -1,6 +1,6 @@
 % !TEX root = lecture/Differential_Geometry.tex
 
-\tikzset{external/export=false}
+% \tikzset{external/export=false}
 \begin{definition}
     $ \dd N_p $ has eigenvector  $ e_1,e_2 $ and 
     \[\dd N_p(e_1)=-k_1e_1,\,\dd N_p(e_2)=-k_2e_2\]
@@ -47,12 +47,13 @@
     Call it \name{parabolic} if  $ \det \dd N_p=0 $ but  $ \dd N_p\neq 0 $, or call it \name{planar} if  $ \dd N_p=0 $.   
 \end{definition}
 
-The 1st fundamental form $ I_p=E(u')^2+2F(u'v')+G(v')^2 $ where 
+The 1st fundamental form $ \Romannumer1_p=E\dd u^2+2F\dd u\dd v+G\dd v^2 $ where 
 \begin{equation}
     E=\<X_u,X_u\>,\,F=\<X_u,X_v\>,\,G=\<X_v,X_v\>
 \end{equation} 
+
 However,
-$ \Pi_p(\alpha')=e(u')^2+2f(u'v')+g(v')^2 $ where
+$ \Romannumer2(\alpha')=e\dd u^2+2f\dd u\dd v+g\dd v^2 $ where
 \begin{equation}
     e=\<N,X_{u,u}\>,\, f=\<N,X_{u,v}\>,\, g=\<N,X_{v,v}\>
 \end{equation} 
@@ -149,7 +150,7 @@ So  $ K=\det \dd N_p=\dps\frac{eg-f^2}{EG-F^2} $,  $ H=-\tr \dd N_p=\dps\frac{1}
 \end{example}
 
 \begin{theorem}[Gauss Theorem Egregium]\label{Gauss fantanstic theorem}
-    $ K  $ is the invariant of  $ S $, only depending on  $ E,F,G $.  
+    $ K  $ is the invariant of  $ S $, only depending on  $ E,F,G $.  Equivalently, Gauss curvature is invariant under local isometry.
 \end{theorem}
 \begin{proof}
     For  $ \{X_u,X_v,N\} $ an orthogonormal basis of  $ \Rbb^3 $, let 
@@ -202,27 +203,42 @@ So  $ K=\det \dd N_p=\dps\frac{eg-f^2}{EG-F^2} $,  $ H=-\tr \dd N_p=\dps\frac{1}
         \end{aligned}
     \end{equation}
     The coefficients of  $ X_v $ is 
-    \[\Gamma_{11}^1\Gamma_{12}^2+(\Gamma_{11}^2)_v+\Gamma_{11}^2\Gamma_{22}^2+ea_{22}=\Gamma_{12}^1\Gamma_{11}^2(\Gamma_{12}^2)_u+\Gamma_{12}^2\Gamma_{12}^2+fa_{21}\]
+    \[\Gamma_{11}^1\Gamma_{12}^2+(\Gamma_{11}^2)_v+\Gamma_{11}^2\Gamma_{22}^2+ea_{22}=\Gamma_{12}^1\Gamma_{11}^2+(\Gamma_{12}^2)_u+\Gamma_{12}^2\Gamma_{12}^2+fa_{21}\]
     where 
     \[ea_{22}-fa_{21}=\frac{(efF-egE)-(feF-f^2E)}{EG-F^2}=\frac{(f^2-eg)E}{EG-F^2}=-KE\]
     So we obtain
-    \begin{equation}\label{Gauss equation 1}
-        \frac{(\Gamma_{11}^1\Gamma_{12}^2+(\Gamma_{11}^2)_v+\Gamma_{11}^2\Gamma_{22}^2)-(\Gamma_{12}^1\Gamma_{11}^2(\Gamma_{12}^2)_u+\Gamma_{12}^2\Gamma_{12}^2)}{E}=K
+    \begin{equation}
+        \frac{(\Gamma_{11}^1\Gamma_{12}^2+(\Gamma_{11}^2)_v+\Gamma_{11}^2\Gamma_{22}^2)-(\Gamma_{12}^1\Gamma_{11}^2+(\Gamma_{12}^2)_u+\Gamma_{12}^2\Gamma_{12}^2)}{E}=K
     \end{equation} 
 
     Here we have proved that  $ K  $ can be represented by  $ E,F,G $.
 \end{proof}
+
+This is the \name{Gauss formula} we obtain 
+\begin{equation}\label{Gauss equation 1}
+    (\Gamma_{12}^2)_u-(\Gamma_{11}^2)_v+\Gamma_{12}^1\Gamma_{11}^2+\Gamma_{12}^2\Gamma_{12}^2-\Gamma_{11}^2\Gamma_{22}^2-\Gamma_{11}^1\Gamma_{12}^2=-EK
+\end{equation}
+
 Similarly, one can prove for the coefficients of  $ X_u $
-    \begin{equation}
+    \begin{equation}\label{Gauss equation 2}
         (\Gamma_{12}^1)_u-(\Gamma_{11}^1)_v+\Gamma_{12}^2\Gamma_{12}^1-\Gamma_{11}^2\Gamma_{22}^1=FK
     \end{equation}
+It is (when  $ F\neq 0 $) merely another form of the Gauss formula.
+
     And the coefficients of  $ N $
-    \begin{equation}
+    \begin{equation}\label{Gauss equation 3}
         e_v-f_u=e\Gamma_{12}^1-f(\Gamma_{12}^2-\Gamma_{11}^1)-g\Gamma_{11}^2
     \end{equation} 
-    \begin{equation}\label{Gauss equation 4}
-        unknown
-    \end{equation}
+
+By applying the same process  to  $ (x_{v,v})_u=(x_{u,v})_v $, we obtain the equation giving again the
+Gauss formula \eqref{Gauss equation 1}. Furthermore, we can obtain another equation 
+
+\begin{equation}\label{Gauss equation 4}
+    f_v-g_u=e\Gamma_{22}^1+f(\Gamma_{22}^2-\Gamma_{12}^1)-g\Gamma_{12}^2        
+\end{equation}
+\eqref{Gauss equation 3} and \eqref{Gauss equation 4} are called \name{Maindardi-Codazzi} equations
+
+The Gauss formula and the Mainardi-Codazzi equations are known under the name of compatibility equations of the theory of surfaces.
 \begin{theorem}
     If  $ E,F,G,e,f,g $ satisfies \eqref{Gauss equation 1}  $ \sim $  \eqref{Gauss equation 4}, then it uniquely determines a surface.
 \end{theorem}

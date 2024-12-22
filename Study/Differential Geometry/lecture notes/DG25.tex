@@ -55,7 +55,7 @@ We identify  $ S  $ with  $ \iota(s) $. Then  $ T_pS\subset T_p\Rbb^3=\Rbb^3 $, 
 
 The standard restrction on  $ \Rbb^3 $ restricts to a Riemann metrix on  $ S $ \ie  $ \forall p\in S $, we have a symmetric, positive definite bilinear form  $ \<-,-\>_p:T_pS\otimes T_pS\rightarrow\Rbb,\<\omega_1,\omega_2\>_p=\<\omega_1,\omega_2\>_{\Rbb^3} $.
 
-$ \<-,-\> $ is determined by the quadratic form  $ I_p:T_pS\rightarrow \Rbb \vec{v}\mapsto |\vec{v}|^2 $ called the \subname{1st fundamental form}{regular surface}
+$ \<-,-\> $ is determined by the quadratic form  $ \Romannumer1_p:T_pS\rightarrow \Rbb, \vec{v}\mapsto |\vec{v}|^2 $ called the \subname{1st fundamental form}{regular surface}
 
 \begin{example}
      $ S=\mathrm{graph}(f)=\{(u,v,f(u,v))\} $. Then 
@@ -64,9 +64,9 @@ $ \<-,-\> $ is determined by the quadratic form  $ I_p:T_pS\rightarrow \Rbb \vec
      \end{pmatrix},\,X_v=\begin{pmatrix}
         0\\1\\\dps\frac{\partial f}{\partial v}
      \end{pmatrix}\] 
-     So  $ \dps I_p(aX_u+b X_v)=a^2+b^2+(a\frac{\partial f}{\partial u}+b\frac{\partial f}{\partial v})^2 $ 
+     So  $ \dps \Romannumer1_p(aX_u+b X_v)=a^2+b^2+(a\frac{\partial f}{\partial u}+b\frac{\partial f}{\partial v})^2 $ 
 \end{example}
-Recall that the induced volume form on   $ \Rbb^2 $ is   $ \dd\Vol=\sqrt{\det(g)}\dd u\dd =|X_u\times X_v|\dd u\dd v  $. 
+Recall that the induced volume form on   $ \Rbb^2 $ is   $ \dd\Vol=\sqrt{\det(g)}\dd u\dd v=|X_u\times X_v|\dd u\dd v  $. 
 
 \subsection{Gauss map}
 From now on, assume  $ S  $ is oriented, pick oriented local parametrization  $ X $. Then  $ \forall p\in S $,  $ \exists N(p)\in \Rbb^3 $ \st  $ |N(p)|=1 $,  $ N(p)\perp T_pS $,  $ (X_u,X_v,N(p)) $ oriented basis of  $ \Rbb^3 $.  $ N(p)  $ is called the \subname{normal vector}{regular surface} of  $ S  $ at  $ p $. 
@@ -92,17 +92,17 @@ Take the differential at  $ p $,  $ \dd N_p=N_{*,p}:T_pS\rightarrow T_{N(p)}S^2=
     \[-\<N_u,X_u\>=\<N,X_{u,u}\>\]
     \[-\<N_v,X_v\>=\<N,X_{v,v}\>\]
 \end{remark}
-Define the quadratic form  $ \Pi_p:T_pS\rightarrow \Rbb $,  $ \omega\mapsto -\<\dd N_p(\omega),\omega\> $, called the \subname{2nd fundamental form}{regular surface}  
+Define the quadratic form  $ \Romannumer2_p:T_pS\rightarrow \Rbb $,  $ \omega\mapsto -\<\dd N_p(\omega),\omega\> $. The induced form is  called the \subname{2nd fundamental form}{regular surface}  
 
 \begin{definition}
     Given  $ p\in S $, a curve  $ \alpha:I\rightarrow S\subset \Rbb^3, 0\mapsto p $. Let  $ n_p  $ be the normal vector of  $ \alpha  $ at  $ p  $. Let  $ \theta $ be the angle between  $ n_p $ and  $ N(p) $.  $ K  $ is the curvature of  $ \alpha  $ at  $ p $.  $ K_n:=K\cdot\cos\theta $ is called the \subname{normal curvature}{regular surface}. Then if  $ \alpha $ is parametrized by arc length,  $ K_n=\<N(p),\alpha''(s)\> $. Since $ \<N(\alpha(s)),\alpha'(s)\>=0 $ $ \Rightarrow $ 
-    \[\<\dd N_p(\alpha'(0)),\alpha'(0)\>+\<N(\alpha(0)),\alpha''(0)\>=0\Rightarrow K_n=-\<\dd N_p(\alpha'(0)),\alpha'(0)\>=\Pi_p(\alpha'(0))\]
+    \[\<\dd N_p(\alpha'(0)),\alpha'(0)\>+\<N(\alpha(0)),\alpha''(0)\>=0\Rightarrow K_n=-\<\dd N_p(\alpha'(0)),\alpha'(0)\>=\Romannumer2_p(\alpha'(0))\]
 
     
 \end{definition}
 \begin{theorem}[Meusnier]\label{Meusnier theorem}
-    All curves in  $ S $ through  $ p\in S $, with same tangent vector  $ v\in T_pS $ at  $ p $,  $ |v|=1 $, have the same normal curvature  $ K_n=\Pi_p(v) $. In particular,  $ L_v=\Span\<N_p,v\> $,  $ \alpha_v=L\cap S $. Then for  $ \alpha_v $,  $ K_n=\pm K\text{ at }p=\Pi_p(v) $. 
+    All curves in  $ S $ through  $ p\in S $, with same tangent vector  $ v\in T_pS $ at  $ p $,  $ |v|=1 $, have the same normal curvature  $ K_n=\Romannumer2_p(v) $. In particular,  $ L_v=\Span\<N_p,v\> $,  $ \alpha_v=L\cap S $. Then for  $ \alpha_v $,  $ K_n=\pm K\text{ at }p=\Romannumer2_p(v) $. 
     
-    So we call  $ \Pi_p(v) $ the normal curvature of  $ S $ in the direction of  $ v\in T_pS $.  
+    So we call  $ \Romannumer2_p(v) $ the normal curvature of  $ S $ in the direction of  $ v\in T_pS $.  
 \end{theorem}
-\tikzset{external/export=true}
+% \tikzset{external/export=true}
