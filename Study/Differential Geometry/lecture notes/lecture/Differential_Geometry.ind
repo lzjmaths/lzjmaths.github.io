@@ -5,6 +5,7 @@
   \item $ K(s) $, \hyperpage{99}
   \item $ L^n(V) $, \hyperpage{42}
   \item $ M\looparrowright N $, \hyperpage{36}
+  \item $ R(X,Y,Z) $, \hyperpage{112}
   \item $ V_1\otimes \cdots  \otimes V_n $, \hyperpage{40}
   \item $ \Gamma (E) $, \hyperpage{47}
   \item $ \Omega ^k(M) $, \hyperpage{47}
@@ -56,14 +57,17 @@
     \subitem chain homotopic, \hyperpage{80}
     \subitem chain homotopy inverse, \hyperpage{80}
   \item chain map, \hyperpage{80}
+  \item Christoffel symbo, \hyperpage{111}
   \item closed form, \hyperpage{51}
   \item cochain complex, \hyperpage{79}
   \item commutes, \hyperpage{31}
   \item complete, \hyperpage{17}
   \item completely integrable, \hyperpage{77}
+  \item connection, \hyperpage{110}
   \item contraction, \hyperpage{70}
   \item contravariant functor, \hyperpage{44}
   \item contravariant tensor field, \hyperpage{67}
+  \item covariant derivative, \hyperpage{114}
   \item covariant tensor field, \hyperpage{67}
   \item Cristopher symbol, \hyperpage{106}
   \item critical point, \hyperpage{5}, \hyperpage{37}
@@ -134,6 +138,7 @@
   \indexspace
 
   \item left invariant, \hyperpage{25}
+  \item Levi-Civata connection, \hyperpage{110}
   \item Lie algebra, \hyperpage{25}
   \item Lie bracket, \hyperpage{22}
   \item Lie derivative, \hyperpage{30}, \hyperpage{68}

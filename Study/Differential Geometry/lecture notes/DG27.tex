@@ -1,0 +1,177 @@
+\subsubsection{Covariant derivative}
+For  $ S\hookrightarrow \Rbb^3  $ regular surface,  $ p\in S $,  $ X\in \Gamma(TS)=C^\infty(S,\Rbb^3) $,  $ X:q\in S\rightarrow X_q\in T_qS\subset T_q\Rbb^3=\Rbb^3 $. 
+
+ $ y\in T_p S  $ define covariant derivative of  $ X  $ in the direction of  $ y  $ \st  $ \nabla_yX=pj_{T_pS}(y(X)) $ where  $ pj_V $ is the orthogonal projection to  $ V $. So  we define a map  $ X\in \Gamma(TX)\rightarrow \nabla_yX\in T_pS $.
+ 
+Given vector fields  $ X,Y\in \Gamma(TS) $, define  $ \nabla_YX\in \Gamma(TS) $ by 
+\begin{equation}
+    (\nabla_YX)_p=\nabla_{Y_p}X\in T_pS,\,\forall p\in S
+\end{equation}  
+Then  $ \nabla:\Gamma(TS)\times \Gamma(TS)\rightarrow \Gamma(TS),(X,Y) \mapsto \nabla_YX$.
+\begin{lemma}\,
+
+
+    \begin{enumerate}
+        \item[\ding{192}]  $ \nabla  $ is bilinear.
+        \item[\ding{193}]  $ \nabla_{fY}X=f\cdot \nabla_YX $
+        \item[\ding{194}](Leibniz rule) $ \nabla_Y(fX)=f\nabla_YX+Y(f)\cdot X $.
+        \item[\ding{195}](compatibility with metric) $ Y(\<X_1,X_2\>)=\<\nabla_TX_1,X_2\>+\<X_1,\nabla_YX_2\> $     
+        \item[\ding{196}](torsion free) $ \nabla_XY-\nabla_XY=[X,Y] $. 
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    \ding{192} is straight forward.
+
+    \ding{193}
+    \begin{align*}
+        (\nabla_{fY}X)_p&=\nabla_{f(p)Y_p}X\\
+        &=pf(f(p)Y_p(X))\\
+        &=f(p)\cdot pj(Y_p(X))\\
+        &=(f\cdot \nabla_YX)_p
+    \end{align*}
+    \ding{194}   \begin{align*}
+        (\nabla_YfX )_p&=pj(Y_p(fX))\\
+        &=pj(f(p)Y_p(X)+Y_pfX_p)\\
+        &=f(p)pj(Y_p(X))+Y_p(f)X_p\\
+        &=(f\cdot \nabla_YX+Y(f)X)_p
+    \end{align*}
+    \ding{195}
+    \begin{align*}
+        (Y\<X_1,X_2\>)_p&=\<Y_p(X_1),X_{2,p}\>+\<X_{1,p},Y_p(X_2)\>\\
+        &=\<\nabla_{Y_p}X_1,X_{2,p}\>+\<X_{1,p},\nabla_{Y_p}X_2\>\\
+        &=(\<\nabla_YX_1,X_2\>+\<X_1,\nabla_YX_2\>)_p
+    \end{align*}
+    \ding{196} Define $ \mathrm{tor}(X,Y):=\nabla_XY-\nabla_YX-[X,Y] $ 
+    Then 
+    \begin{align*}
+        \mathrm{tor}(fX,Y)&=\nabla_{fX}Y-\nabla_YfX-[fX,Y]\\
+        &=f\nabla_XY-f\nabla_YX-Y(f)\cdot X-f[X,Y]+Y(f)X\\
+        &=f\mathrm{tor}(X,Y)
+    \end{align*}
+    Take local chart  $ (U,x^1,x^2) $ of  $ S $. Suffices to check  $ \mathrm{tor}(X,Y)=0 $, $ \forall X,Y\in \Gamma(TU) $.   
+    
+    For  $ X_1=\partial x^1,X_2=\partial x^2 $, if  we denote  $ X=f_1X_1+f_2X_2 $,  $ Y=g_1X_1+g_2X_2 $,
+    then it   suffices to check  $ \mathrm{tor}(X_1,X_2) $.
+
+    For the inclusion map  $ S\overset{\iota}{\hookrightarrow}\Rbb^3 $.  $ X_1=\dps\frac{\partial \iota}{\partial x^1}\in C^\infty(S,\Rbb^3) $,  $ X_2=\dps\frac{\partial \iota}{\partial x^2}\in C^\infty(S,\Rbb^3) $. Then 
+    \[\nabla_{X_1}X_2=pj(\dps\frac{\partial^2\iota}{\partial x_1\partial x_2})\nabla_{X_2}X_1\]
+    So  $ \mathrm{tor}(X_1,X_2)=0 $.    
+\end{proof}
+
+\begin{definition}
+    A bilinear map  $ \nabla:\Gamma(TS)\times \Gamma(TS)\rightarrow \Gamma(TS) $ that satisfies \ding{192} $ \sim $ \ding{194} is called  a \name{connection} on  $ TS $. A connection allows us to take covariant derivative of vector fields. A connection that satisfies \ding{195},\ding{196} is called a \name{Levi-Civata connection}, denoted as  $ \nabla^{LC} $  
+\end{definition}
+\begin{theorem}
+    $ \nabla^{LC} $ is uniquely determined by the first fundamental form. \ie  $ \nabla^{LC}$ is an intrinsic quantity. Equivalently, it is invariant under isometry.
+\end{theorem}
+
+\begin{proof}
+    Take  $ (U,x^1,x^2) $, set  $ X_i=\dps\frac{\partial }{\partial x^i}\in \Gamma(TU) $. 
+    
+    \name{Christoffel symbo}l $ \nabla_{X_i}X_j=\dps\sum_{k=1,2}\Gamma_{i,j}^kX_k $,  $ \Gamma_{i,j}^k\in C^\infty(U,\Rbb) $. Then torsion free is equivalent   to  $ \Gamma_{i,j}^k=\Gamma_{i,j}^k $.
+    
+    Let  $ g_{i,j}=\<X_i,X_j\>\in C^\infty(U,\Rbb) $  be the first fundamental form.
+    
+    Then  $ \dps\frac{\partial g_{11}}{\partial x^1}\overset{\text{\ding{195}}}{=}2\<\nabla_{X_1}X_1,X_1\> $ $ \Rightarrow $  
+    \begin{equation}\label{connection eq1}
+        \Gamma_{11}^1g_{11}+\Gamma_{11}^2g_{12}=\dps\frac{1}{2}\cdot\frac{\partial g_{11}}{\partial x^1} 
+    \end{equation}
+    
+    $ \dps\frac{\partial g_{12}}{\partial X^1}\overset{\text{\ding{195}}}{=}\<\nabla_{X_1}X_1,X_2\>+\<X_1,\nabla_{X_1}X_2\>=\<\nabla_{X_1}X_1,X_2\>+\<X_1,\nabla_{X_2}X_1\>=\<\nabla_{X_1}X_1,X_2\>+\dps\frac{1}{2}\cdot\frac{\partial g_{11}}{\partial x^2} $. So 
+    \begin{equation}
+        \<\nabla_{X_1}X_1,X_2\>=\frac{\partial g_{12}}{\partial x^1}-\frac{1}{2}\cdot\frac{\partial g_{11}}{\partial x^2}
+    \end{equation}
+    \ie 
+    \begin{equation}\label{connection eq2}
+        \Gamma_{11}^1g_{12}+\Gamma_{11}^2g_{22}=\frac{\partial g_{12}}{\partial x^1}-\frac{1}{2}\cdot\frac{\partial g_{11}}{\partial x^2}
+    \end{equation}
+    So combined with \eqref{connection eq1} and \eqref{connection eq2}
+    \begin{equation}
+        \begin{pmatrix}
+            \Gamma_{11}^1\\
+            \Gamma_{11}^1
+        \end{pmatrix}=(g^{ij})\cdot\begin{pmatrix}
+            \dps\frac{1}{2}\cdot\frac{\partial g_{11}}{\partial x^1}\\
+    
+            \\
+            \dps\frac{\partial g_{12}}{\partial x^1}-\frac{1}{2}\cdot\frac{\partial g_{11}}{\partial x^2}
+        \end{pmatrix}
+    \end{equation}where  $ (g^{ij})=(g_{ij})^{-1} $.
+    
+    So  $ \Gamma_{11}^1 $,  $ \Gamma_{12}^2 $ is uniquely determined by  $ g_{ij} $. Similar for other  $ \Gamma_{ij}^k $.
+\end{proof}
+
+A natural question is to compute  $ \nabla_{X_1}\nabla_{X_2}-\nabla_{X_2}\nabla_{X_1} $, or  $ \nabla_{X}\nabla_{Y}-\nabla_{Y}\nabla_{X}-\nabla_{[X,Y]} $ more generally.
+
+Define  \name{$ R(X,Y,Z) $}$ \in\Gamma(TS) $ by  $ \nabla_{X}\nabla_YZ-\nabla_{Y}\nabla_XZ-\nabla_{[X,Y]}Z$.
+
+\begin{proposition}
+     $ \forall f,h,\rho\in C^\infty(S,\Rbb) $,  $ R(fX,hZ,\rho Z)=fh\rho R(X,Y,Z) $.  
+\end{proposition}
+\begin{corollary}
+     $ R(X,Y,Z)_p $ only depends on  $ X_p,Y_p,Z_p $ \ie  $ R\in \Gamma(\mathrm{Hom}(TS\otimes TS\otimes TS,TS))=\Gamma(T^*S\otimes T^*S\otimes T^*S\otimes TS) $ is a tensor field. 
+\end{corollary}
+\begin{proof}[Proof of corollary]
+    Left as exercise.
+\end{proof}
+\begin{proof}[Proof of Proposition]
+    Consider the case  $ f\equiv h\equiv 1 $.
+    \begin{align*}
+        R(X,Y,\rho Z)&=\nabla_X\nabla_Y\rho Z-\nabla_Y\nabla_X\rho Z-\nabla_{[X,Y]}\rho Z\\
+        &=\nabla_X(\rho\nabla_YZ+Y(\rho)Z)-\nabla_Y(\rho\nabla_XZ+X(\rho)Z)-\rho\nabla_{[X,Y]}Z-[X,Y](\rho)Z\\
+        &=\rho\nabla_X\nabla_YZ+X(\rho)\nabla_YZ+Y(\rho)\nabla_XZ+XY(\rho)Z\\
+        &-\rho\nabla_Y\nabla_XZ-Y(\rho)\nabla_XZ-X(\rho)\nabla_YZ-YX(\rho)Z\\
+        &-\rho\nabla_{[X,Y]}Z-[X,Y](\rho)(Z)\\
+        &=\rho R(X,Y,Z)
+    \end{align*} 
+\end{proof}
+
+$ R(X,Y,Z) $ is an intrinsic  quantity. There is a relation with Gauss curvature  $ K $.
+
+\begin{theorem}
+    For any orthogonormal basis  $ V_1,V_2 $ of  $ T_p S $,  $ R(V_1,V_2,V_1)=K(p)V_2 $.   
+\end{theorem}
+\begin{corollary}[Gauss Theorem \textsc{Egregium}]
+    $ K $ is an intrinsic quantity.
+\end{corollary}
+\begin{proof}
+    Take local chart  $ (U,x^1,x^2) $ \st  $ V_1=X_{1,p} $,  $ V_2=X_{2,p} $.  $ S\overset{\rho}{\hookrightarrow} \Rbb^3$. Then  $ X_i=\dps\frac{\partial\rho}{\partial x^i}\in C^\infty(S,\Rbb^3) $. For any  $ i,j $, define  $ X_{j,k}=\dps\frac{\partial ^2\rho}{\partial x^j\partial x^k} $.
+    
+    $ \forall p\in U $,  $ (X_{1,p},X_{2,p},N_p) $ is a basis for  $ T_p\Rbb^3 $, where  $ N:S\rightarrow S^2\subset \Rbb^3 $ is the Gauss map. Then 
+    
+    \begin{align*}
+        X_{11}&=X_1(X_1)=\nabla_{X_1}X_1+L_1N\\
+        X_{12}&=X_2(X_1)=\nabla_{X_2}X_1+L_2N\\
+        X_{21}&=\nabla_{X_1}X_2+L_2N\\
+        X_{22}&=\nabla_{X_2}X_2+L_3N
+    \end{align*}
+    where  $ L_1,L_2,L_3\in C^\infty(U,\Rbb) $. The second fundamental form is given by matrix  $ \begin{pmatrix}
+        L_1&L_2\\
+        L_2&L_3
+    \end{pmatrix} $.
+
+    \begin{align*}
+        R(X_1,X_2,X_1)&=\nabla_{X_1}\nabla_{X_2}X_1-\nabla_{X_2}\nabla_{X_1}X_1\\
+        &=\nabla_{X_1}(X_{12}-L_2N)-\nabla_{X_2}(X_{11}-L_1N)\\
+        &=pj(X_{112}-X_1(L_2N)-X_{211}+X_2(L_1N))\\
+        &=pj(L_1X_2(N)-L_2X_1(N))\\
+        &=pj(L_1N_2-L_2N_1)
+    \end{align*}
+
+    As we proved before, (see Remark \ref{remark1})
+    \begin{equation}
+        \begin{cases}
+            \<X_1,N_1\>=-L_1\\
+            \<X_1,N_2\>=-L_2\\
+            \<X_2,N_1\>=-L_2\\
+            \<X_2,N_2\>=-L_3
+        \end{cases}
+    \end{equation}
+    and  $ \<N,N_1\>=0 $ since  $ \<N,N\>\equiv 1 $.  $ X_{1},X_2,N $ orthogonormal  $ \Rightarrow $  \[N_1=-L_1X_1-L_2X_2,\, N_2=-L_2X_1-L_3X_2 \]
+    Then  $ R(X_1,X_2,X_1)=pj(L_1N_2-L_2N_1)=pj(L_2^2X_2-L_1L_3X_2)=pj(KX_2)=K $.      
+\end{proof}
+\subsection{Parallel transport}
+For  $ \gamma:I\rightarrow S  $ curve on  $ S $, a vector field  $ W  $ along  $ \gamma $ is an assignment  $ t\in I\leadsto W_t\in T_{\gamma(t)}S\subset\Rbb^3 $. We can view  $ W  $ as  $ W\in C^\infty(I,\Rbb^3) $. Define \name{covariant derivative} (along  $ \gamma $)
+\[\nabla_{\gamma'(t)}(W)=pj_{T_{\gamma(t)}S}\left(\frac{\dd W}{\dd t}\right)\] 
+which is another vector field over  $ \gamma $.     
