@@ -1,0 +1,33 @@
+%! TEX root = lecture/Complex_Analysis
+
+\subsection{The Riemann Zeta Function}
+We proved in homework that the Riemann zeta function 
+\begin{equation}
+    \zeta(s)=\sum_{n=1}^\infty\frac{1}{n^s},\,s=\sigma+it
+\end{equation}
+is analytic in the half-plane  $ \Re s>1 $.
+\begin{theorem}
+    $ \zeta  $ has the following properties:
+    \begin{enumerate}[label=(\alph*)]
+        \item (Euler product formula)  $ \zeta  $ has the infinite product representation   \[\zeta(s)=\dps\prod_{p \text{ prime}}\frac{1}{1-p^{-s}},\, \Re s>1 \]
+        \item  $ \zeta  $ extends to a meromorphic function on  $ \Cbb $ whose only poly is a simple pole at  $ s=1 $  with residue  $ 1 $.
+        \item  $ \zeta  $ has no zeros in  $ \Re s \geq 1 $, all zeros of  $ \zeta $ in  $ \Re s \leq 0 $ are at  $ s=-2k $,  $ k\in \Nbb $. 
+        \item  $ \zeta(2n)=\dps\frac{(-1)^{n-1}(2\pi )^{2n}}{2\cdot(2n)!}B_{2n} $,  $ n\in \Nbb $ where  $ B_{n} $ are the Bernoulli numbers, defined by  \[\dps\frac{z}{e^z-1}=\sum_{m=0}^\infty\frac{B_m}{m!}z^m ,\,|z|<2\pi \] 
+        and  $ \zeta(-n)=-\dps\frac{B_{n+1}}{n+1},\,n\in \Nbb $.
+        \item  $ \zeta  $ satisfies the functional equation  $ \zeta^*(1-s)=\zeta^*(s) $ where  $ \zeta^*  $ is the \name{symmetrized zeta function} defined by 
+        \begin{equation}\label{eq:5.4:symmetrized zeta function}
+            \zeta^*(s)=\pi^{-\frac{-\zeta}{2}}\Gamma(\frac{s}{2})\zeta(s)
+        \end{equation}
+        \item  $ \zeta^*(s)=\dps-\frac{1}{1-s}-\frac{1}{s}+\frac{1}{2}\int_1^\infty (t^{-\frac{s+1}{2}}+t^{\frac{s-2}{2}})(\theta(t)-1)\dd t $,  $ s\in \Cbb\setminus\{0,1\} $, where  $ \theta  $ is one of the \name{Jacobi theta series}, defined as 
+        \begin{equation}\label{eq:5.4:Jacobi theta series}
+            \theta(t)=\sum_{n=-\infty}^\infty e^{-\pi n^2t}
+        \end{equation}
+        \item  $ \zeta(s)=\dps\frac{\Gamma(1-s)}{2\pi i}\int_C\frac{(-z)^s}{e^z-1}\cdot\frac{\dd z}{z} $ where  $ C  $ is the contour shown in the picture, with  $ \epsilon<2\pi $,  $ (-z)^s=\exp[s\ln (-z)] $,  $ \ln(-z) $ is chosen \st  $ -\pi <\Im \ln (-z)<\pi $.    
+        \begin{tikzpicture}
+            
+        \end{tikzpicture}
+    \end{enumerate}
+\end{theorem} 
+\begin{proof}
+    (a)  $ \dps\prod_{p\text{ prime}}\frac{1}{1-p^{-s}}=\frac{1}{\dps \prod_{p\text{ primes}}(1-p^{-s})} $,  $ \Re s>1 $ converges absolutely since  $ \dps\sum_{p\text{ prime}}|p^{-s}|=\sum_{p\text{ prime}}p^{-\Re s} $ converges for  $ \Re s>1 $. Hence,  $ F(s)=\dps\prod_{p\text{ prime}}\frac{1}{1-p^{-s}} $.     
+\end{proof}

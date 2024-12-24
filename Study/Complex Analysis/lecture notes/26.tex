@@ -1,5 +1,62 @@
+%! TEX root = lecture/Complex_Analysis
+
 \subsection{The Riemann Mapping Theorem}
 \subsubsection{Statement and proof}
 \begin{theorem}[Riemann Mapping Theorem]\label{thm:6.1.2:Riemann Mapping Theorem}
     Given any simply connected region  $ \Omega $ which is not the whole place, and a point  $ z_0\in \Omega $, there exists a unique analytic function  $ f  $ in  $ \Omega $, normalized by the condition  $ f(z_0)=0 $,  $ f'(z_0)>0 $ \st  $ f $ defines a one-to-one mapping of  $ \Omega $ onto the unit disk  $ \Dbb=\{\omega\in \Cbb:|\omega|<1\} $.        
 \end{theorem}
+\begin{proof}
+    Uniqueness: Suppose there are two such functions  $ f_1  $ and  $ f_2  $. Then  $ f_1\circ f_2^{-1}:\Dbb\rightarrow \Dbb $ is  $ 1-1  $ are onto. By Schwarz lemma \ref{Schwarz lemma},  $ f_1\circ f_2^{-1}=e^{i\varphi}\dps\frac{z-\alpha}{1-\bar{\alpha}z} $ for some  $ \alpha\in \Dbb, \varphi\in \Rbb  $.   $ f_1\circ f_2^{-1}(0)=0 $,  $ \dps(f_1\circ f_2^{-1})'(0)=f_1'(f_2^{-1}(0))(f_2^{-1})^{-1}(0)=f_1'(z_0)\frac{1}{f_2'(z_0)}>0 $ $ \Rightarrow  $   $ f_1\circ f_2^{-1}(z)=z $,  $ \forall z\in \Dbb $. $ \Rightarrow  $   $ f_1(z)=f_2(z) $, $ \forall z\in \Dbb $.
+    
+    Existence: 
+    \begin{lemma}
+        If  $ \Omega  $ is simply connected and  $ \Omega\neq \Cbb  $,  $ \exists  $ 1-1 analytic function  $ h:\Omega\rightarrow \Cbb  $ \st  $ h(\Omega ) $ does not intersect a disk  $ B(\omega_0,\delta) $ for some  $ \omega_0\in \Cbb  $ and  $ \delta>0 $.  
+    \end{lemma}
+    \begin{proof}[Proof of Lemma]
+        $ \exists a\in \Cbb\setminus \Omega $.
+        $ \Omega $ is simply connected. Corollary \ref{Cor3:4.4.3:compatible definition of log f} $ \Rightarrow  $ We can define an analytic function  $ h  $ on  $ \Omega  $ \st  $ h^2(z)=z-a $. If  $ h(z_1)=\pm h(z_2) $ for some  $ z_1,z_2\in \Omega $, then  $ z_1-a=z_2-a $ $ \Rightarrow  $ $ z_1=z_2 $. The open mapping theorem \ref{open mapping theorem}  $ \Rightarrow  $  $ h(\Omega ) $ contains a disk  $ B(h(z_0),\delta) $ $ \Rightarrow  $  $ h(\Omega)\cap B(-h(z_0),\delta)=\emptyset $ $ \Rightarrow  $  $ |h(z)+h(z_0)|>\delta $,  $ \forall z\in \Omega $. In particular,  $ 2|h(z_0)|>\delta $.
+    \end{proof}
+
+    Let  $ \mathscr{F} $ be the family of functions with the following properties:
+    
+    \begin{enumerate}
+        \item[\ding{192}]  $ g  $ is analytic and 1-1 in  $ \Omega $ 
+        \item[\ding{193}] $ |g(z)| \leq 1 $ on  $ \Omega $
+        \item[\ding{194}] $ g(z_0)=0 $ and  $ g'(z_0)>0 $.
+    \end{enumerate}
+    We first prove  $ \mathscr{F } $ is not empty. Let  
+    \[\dps g_0(z)=\frac{\delta}{4}\cdot\frac{|h'(z_0)|}{|h(z_0)|^2}\cdot\frac{h(z_0)}{h'(z_0)}\cdot\frac{h(z)-h(z_0)}{h(z)+h(z_0)} ,\,z\in \Omega \]
+    where  $ \delta  $ and  $ h  $ are defined in the previous lemma.
+
+    $ h  $ is 1-1 $ \Rightarrow  $  $ g_0  $ is 1-1.  $ g_0(z_0)=0 $ and  $ g_0'(z_0)=\dps\frac{\delta}{8}\cdot\frac{|h'(z_0)|}{|h(z_0)|^2}>0 $.  
+    \begin{align*}
+        |g_0(z)|&=\dps\frac{\delta}{4}\cdot\frac{1}{|h(z_0)|}\cdot\left|\frac{h(z)-h(z_0)}{h(z)+h(z_0)}\right|
+        \\&=\frac{\delta}{4}\left|\frac{1}{h(z_0)}-\frac{2}{h(z)+h(z_0)}\right|\\
+        & \leq \frac{\delta}{4}\left[\frac{1}{|h(z_0)|+\frac{2}{|h(z)+h(z_0|)}}\right]\\
+        & \leq 1
+    \end{align*}
+    We next prove that  $ \exists f\in \mathscr{F } $ with maximal derivative at  $ z_0 $. Cauchy's estimate implies  $ \forall r>0 $ with  $ B(z_0,r)\subset \Omega $,  $ \forall g\in \mathscr{F} $, 
+    \begin{equation}
+        |g'(z_0)|=\left|\frac{1}{2\pi i}\int_{|z-z_0|=r}\frac{g(\zeta)}{(\zeta-z_0)}\dd\zeta\right| \leq \frac{1}{2\pi }\cdot\frac{1}{r^2}\cdot 2\pi r
+    \end{equation}  
+    So  $ \{|g'(z_0)|:g\in \mathscr{F}\} $ is bounded, and has a supremum  $ B=\dps \sup_{g\in \mathscr{F}}|g'(z_0)| $.
+    
+    $ \exists $ a sequence  $ \{g_n\}_{n\in \Nbb} $ in  $ \mathscr{F} $ \st  $ g_n'(z_0)\rightarrow B  $ as  $ n\rightarrow \infty $.  $ |g_n| \leq 1 $ on  $ \Omega  $ so by Montel's theorem \ref{thm:6.1.2:Montel's Theorem}, there exists a subsequence  $ \{g_{n_k}\}_{k\in \Nbb} $ of  $ \{g_n\}_{n\in \Nbb} $ \st  $ g_{n_k} $ converges uniformly to  $ f  $ on every compact subset  of  $ \Omega $. Weierstrass theorem \ref{thm:5.1.1:Weierstrass's Theorem} implies  $ f  $ is analytic in  $ \Omega  $. And  $ f(z_0)=\dps\lim_{k\to\infty}g_{n_k}(z_0)=0 $,  $ |f'(z_0)|=\dps\lim_{k\to\infty}|g_{n_k}'(z_0)|=B>0 $ $ \Rightarrow  $  $ f  $ is not a constant since  $ |f'(z_0)|=B>0 $. 
+    
+    $ \forall z_1\in \Omega $, define  $ \tilde{g}_{n_k}(z)=g_{n_k}(z)-g_{n_k}(z_1) $,  $ \forall z\in \Omega $.  $ \tilde{g}_{n_k}(z)\neq 0 $ for  $ \forall z\in \Omega\setminus\{z_1\} $. Then by Hurwitz's theorem \ref{thm:5.1.1:Hurwitz's Theorem},  $ \tilde{f}(z)=f(z)-f(z_1)\neq 0 $ for  $ \forall z\in \Omega\setminus\{z_1\} $ since  $ f  $ is not constant. Then  $ f(z)\neq f(z_1) $ for  $ \forall z\neq z_1 $ $ \Rightarrow  $  $ f  $ is 1-1 on  $ \Omega $.
+    
+    We finally prove that  $ f\in \mathscr{F} $.
+    
+    If  $ \exists \omega_0\in \Dbb $ \st  $ \omega_0\not\in f(\Omega) $. As before, we can define an analytic function  $ F  $ on  $ \Omega  $ \st    
+    \begin{equation}
+        F^2(z)=\frac{f(z)-\omega_0}{1-\overline{\omega}_0f(z)}
+    \end{equation}   
+    It is clear that  $ F  $ is 1-1 and satisfies  $ |F(z)| \leq 1 $ for  $ \forall z\in \Omega $. $ F  $ can be normalized as follows: $ G(z)=\dps\frac{|F'(z_0)|}{F'(z_0)}\cdot\frac{F(z)-F(z_0)}{1-\overline{F(z_0)}F(z)} $. Then  $ G  $ is 1-1,  $ |G(z)| \leq 1 $,  $ \forall z\in \Omega $, and  $ G(z_0)=0 $. Moreover, 
+    \begin{equation}
+        G'(z_0)=\frac{|F'(z_0)|}{1-|F(z_0)|^2}=\frac{|f'(z_0)|[1-|\omega_0|^2]}{2\sqrt{|\omega_0|}[1-|\omega_0|]}=\frac{1+|\omega_0|}{2\sqrt{|\omega_0|}}\cdot|f'(z_0)|>|f'(z_0)|=B
+    \end{equation}      
+    which causes a contradiction.
+
+    So  $ f(\Omega)=\Dbb $ 
+    
+\end{proof}

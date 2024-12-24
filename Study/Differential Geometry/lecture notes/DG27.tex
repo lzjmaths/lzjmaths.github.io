@@ -1,7 +1,7 @@
 \subsubsection{Covariant derivative}
 For  $ S\hookrightarrow \Rbb^3  $ regular surface,  $ p\in S $,  $ X\in \Gamma(TS)=C^\infty(S,\Rbb^3) $,  $ X:q\in S\rightarrow X_q\in T_qS\subset T_q\Rbb^3=\Rbb^3 $. 
 
- $ y\in T_p S  $ define covariant derivative of  $ X  $ in the direction of  $ y  $ \st  $ \nabla_yX=pj_{T_pS}(y(X)) $ where  $ pj_V $ is the orthogonal projection to  $ V $. So  we define a map  $ X\in \Gamma(TX)\rightarrow \nabla_yX\in T_pS $.
+ $ y\in T_p S  $ define covariant derivative of  $ X  $ in the direction of  $ y  $ \st  $ \nabla_yX=Pj_{T_pS}(y(X)) $ where  $ Pj_V $ is the orthogonal projection to  $ V $. So  we define a map  $ X\in \Gamma(TX)\rightarrow \nabla_yX\in T_pS $.
  
 Given vector fields  $ X,Y\in \Gamma(TS) $, define  $ \nabla_YX\in \Gamma(TS) $ by 
 \begin{equation}
@@ -27,13 +27,13 @@ Then  $ \nabla:\Gamma(TS)\times \Gamma(TS)\rightarrow \Gamma(TS),(X,Y) \mapsto \
     \begin{align*}
         (\nabla_{fY}X)_p&=\nabla_{f(p)Y_p}X\\
         &=pf(f(p)Y_p(X))\\
-        &=f(p)\cdot pj(Y_p(X))\\
+        &=f(p)\cdot Pj(Y_p(X))\\
         &=(f\cdot \nabla_YX)_p
     \end{align*}
     \ding{194}   \begin{align*}
-        (\nabla_YfX )_p&=pj(Y_p(fX))\\
-        &=pj(f(p)Y_p(X)+Y_pfX_p)\\
-        &=f(p)pj(Y_p(X))+Y_p(f)X_p\\
+        (\nabla_YfX )_p&=Pj(Y_p(fX))\\
+        &=Pj(f(p)Y_p(X)+Y_pfX_p)\\
+        &=f(p)Pj(Y_p(X))+Y_p(f)X_p\\
         &=(f\cdot \nabla_YX+Y(f)X)_p
     \end{align*}
     \ding{195}
@@ -55,7 +55,7 @@ Then  $ \nabla:\Gamma(TS)\times \Gamma(TS)\rightarrow \Gamma(TS),(X,Y) \mapsto \
     then it   suffices to check  $ \mathrm{tor}(X_1,X_2) $.
 
     For the inclusion map  $ S\overset{\iota}{\hookrightarrow}\Rbb^3 $.  $ X_1=\dps\frac{\partial \iota}{\partial x^1}\in C^\infty(S,\Rbb^3) $,  $ X_2=\dps\frac{\partial \iota}{\partial x^2}\in C^\infty(S,\Rbb^3) $. Then 
-    \[\nabla_{X_1}X_2=pj(\dps\frac{\partial^2\iota}{\partial x_1\partial x_2})\nabla_{X_2}X_1\]
+    \[\nabla_{X_1}X_2=Pj(\dps\frac{\partial^2\iota}{\partial x_1\partial x_2})\nabla_{X_2}X_1\]
     So  $ \mathrm{tor}(X_1,X_2)=0 $.    
 \end{proof}
 
@@ -154,9 +154,9 @@ $ R(X,Y,Z) $ is an intrinsic  quantity. There is a relation with Gauss curvature
     \begin{align*}
         R(X_1,X_2,X_1)&=\nabla_{X_1}\nabla_{X_2}X_1-\nabla_{X_2}\nabla_{X_1}X_1\\
         &=\nabla_{X_1}(X_{12}-L_2N)-\nabla_{X_2}(X_{11}-L_1N)\\
-        &=pj(X_{112}-X_1(L_2N)-X_{211}+X_2(L_1N))\\
-        &=pj(L_1X_2(N)-L_2X_1(N))\\
-        &=pj(L_1N_2-L_2N_1)
+        &=Pj(X_{112}-X_1(L_2N)-X_{211}+X_2(L_1N))\\
+        &=Pj(L_1X_2(N)-L_2X_1(N))\\
+        &=Pj(L_1N_2-L_2N_1)
     \end{align*}
 
     As we proved before, (see Remark \ref{remark1})
@@ -169,9 +169,9 @@ $ R(X,Y,Z) $ is an intrinsic  quantity. There is a relation with Gauss curvature
         \end{cases}
     \end{equation}
     and  $ \<N,N_1\>=0 $ since  $ \<N,N\>\equiv 1 $.  $ X_{1},X_2,N $ orthogonormal  $ \Rightarrow $  \[N_1=-L_1X_1-L_2X_2,\, N_2=-L_2X_1-L_3X_2 \]
-    Then  $ R(X_1,X_2,X_1)=pj(L_1N_2-L_2N_1)=pj(L_2^2X_2-L_1L_3X_2)=pj(KX_2)=K $.      
+    Then  $ R(X_1,X_2,X_1)=Pj(L_1N_2-L_2N_1)=Pj(L_2^2X_2-L_1L_3X_2)=Pj(KX_2)=K $.      
 \end{proof}
 \subsection{Parallel transport}
 For  $ \gamma:I\rightarrow S  $ curve on  $ S $, a vector field  $ W  $ along  $ \gamma $ is an assignment  $ t\in I\leadsto W_t\in T_{\gamma(t)}S\subset\Rbb^3 $. We can view  $ W  $ as  $ W\in C^\infty(I,\Rbb^3) $. Define \name{covariant derivative} (along  $ \gamma $)
-\[\nabla_{\gamma'(t)}(W)=pj_{T_{\gamma(t)}S}\left(\frac{\dd W}{\dd t}\right)\] 
+\[\nabla_{\gamma'(t)}(W)=Pj_{T_{\gamma(t)}S}\left(\frac{\dd W}{\dd t}\right)\] 
 which is another vector field over  $ \gamma $.     

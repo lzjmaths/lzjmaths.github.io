@@ -32,7 +32,7 @@
 
   \indexspace
 
-  \item equicontinuous, \hyperpage{85}
+  \item equicontinuous, \hyperpage{86}
   \item essential isolated singularity, \hyperpage{38}
   \item exponential function , \hyperpage{8}
 
@@ -63,12 +63,16 @@
 
   \indexspace
 
+  \item Jacobi theta series, \hyperpage{86}
+
+  \indexspace
+
   \item Laplace equation, \hyperpage{5}
   \item Laurent series, \hyperpage{69}
   \item left, \hyperpage{16}
   \item length, \hyperpage{12}, \hyperpage{21}
   \item linear fraction, \hyperpage{6}
-  \item locally bounded, \hyperpage{90}
+  \item locally bounded, \hyperpage{92}
   \item logorithmic function, \hyperpage{8}
 
   \indexspace
@@ -78,7 +82,7 @@
 
   \indexspace
 
-  \item normal, \hyperpage{85}
+  \item normal, \hyperpage{86}
 
   \indexspace
 
@@ -101,7 +105,7 @@
   \item rectifiable, \hyperpage{21}
   \item reflection, \hyperpage{14}
   \item region, \hyperpage{9}
-  \item relatively compact, \hyperpage{85}
+  \item relatively compact, \hyperpage{86}
   \item removable singularities, \hyperpage{31}
   \item residue, \hyperpage{47}
   \item reversible , \hyperpage{10}
@@ -114,11 +118,12 @@
   \item simply connected, \hyperpage{44}
   \item singular part, \hyperpage{7}
   \item singular point, \hyperpage{7}
-  \item sperical distance, \hyperpage{91}
-  \item sperical length, \hyperpage{91}
+  \item sperical distance, \hyperpage{92}
+  \item sperical length, \hyperpage{92}
   \item Steiner circles, \hyperpage{17}
   \item symmetric, \hyperpage{14}
   \item symmetric w.r.t C through $ z_1,z_2,z_3 $, \hyperpage{14}
+  \item symmetrized zeta function, \hyperpage{85}
 
   \indexspace
 
