@@ -1,0 +1,148 @@
+
+\begin{example}
+    \,
+
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ \gamma'(t)\in \Gamma(\gamma^*(TS)) $.
+        \item  $ \gamma  $ parametrized by arc length,  $ \forall t $,  $ \exists  $ unique  $ N_{\gamma(t)}^\gamma\in T_{\gamma(t)}S $ \st  $ (\gamma'(t),N_{\gamma(t)}^\gamma) $ is an oriented orthogonormal basis for  $ T_{\gamma(t)}S $. So we can define the normal ve tor field of  $ \gamma  $ as  $ N^\gamma:t\mapsto N_{\gamma(t)}^\gamma $.
+        \item Given  $ X\in \Gamma(TS) $,  $ X|_\gamma\in \Gamma(\gamma^*TS),t\mapsto X_{\gamma(t)} $, then we have 
+        \[\nabla_{\gamma'(t)}(X|_\gamma)=\nabla_{\gamma'(t)}X\]
+        So the notation is compatible.
+    \end{enumerate}
+\end{example}
+
+Given  $ W\in \Gamma(\gamma^*(TS)) $, say  $ W  $ is \name{parallel} if  $ \nabla_{\gamma'(t)}W=0 $,  $ \forall t\in I $. 
+
+We say  $ \gamma  $ is a \name{geodesic} if  $ \gamma'(t) $ is parallel, \ie  $ \nabla_{\gamma'(t)}\gamma'(t)=0 $, which generalizes the straight line in  $ \Rbb^2 $.
+
+For  $ \gamma:I\rightarrow S\hookrightarrow \Rbb^3 $ parametrized by arc length. Then  $ |\gamma'(t)|=1 $ $ \Rightarrow  $  $ \gamma''(t)\perp \gamma'(t) $  $ \Rightarrow  $  $ \gamma''(t)=K_g\cdot N_{\gamma(t)}^\gamma+K_n+N_{\gamma(t)}^S $ where  $ K_g $ is called the \name{geodesic curvature} and  $ K_n $ is the \name{normal curvature}.
+
+ $ K(\gamma)^2=K_g^2+K_n^2 $ is called the \name{curvature} of  $ \gamma $ as curve in  $ \Rbb^3 $.
+ 
+ $ \nabla_{\gamma'(t)}\gamma'(t)=K_g N_{\gamma(t)}^\gamma $ so  $ \gamma $ is geodesic if and only if  $ K_g=0 $.
+ 
+\begin{example}
+     $ S=S^2=\{x^2+y^2+z^2=1\} $,  $ \gamma:\Rbb\rightarrow S $,  $ \gamma(t)=(\cos t,\sin t,0) $. Then  $ \gamma'(t)=(-\sin t,\cos t,0) $,  $ N_{\gamma(t)}^\gamma=(0,0,1) $,  $ N_{\gamma(t)}^S=(\cos t,\sin t,0) $. $ \gamma''(t)=(-\cos t,-\sin t,0)=-N_{\gamma(t)}^S $ $ \Rightarrow $  $ K_g=0 $,  $ K_n=-1 $ $ \Rightarrow  $ $ \gamma  $ is a geodesic.
+    
+    Indeed, there is a fact about geodesic in  $ S^2 $
+    \begin{fact}
+        $ \gamma:I\rightarrow S^2 $ is a geodesic if and only if  $ \gamma $ moves along a big circle in a constant speed.  
+    \end{fact} 
+\end{example}
+
+\begin{fact}
+     $ \gamma:I\rightarrow S $ is a geodesic if and only if  $ \forall t_0\in I $,  $ \exists \epsilon>0 $ \st  $ \forall t_1\in I,|t_1-t_0|<\epsilon $, we have  $ l(\gamma|_{[t_0,t_1]})=\dd(\gamma(t_0),\gamma(t_1)) $, where 
+     \[l(\eta)=\int_I\eta'(t)\dd t,\,\dd(p,q)=\min\{l(\eta)|\eta:[0,1]\rightarrow S\,\eta(0)=p,\eta(1)=q\}\]
+    \ie Geodesic is the shortest path between two points locally.     
+\end{fact}
+
+\subsection{Gauss-Bonnet Theorem}
+\begin{theorem}[Gauss-Bonnet Theorem]\label{Gauss-Bonnet Theorem}
+    $ S $ closed and oriented surface. Then 
+    \begin{equation}\label{eq:Gauss-Bonnet Theorem}
+        \int_SK\dd\Vol=2\pi\chi(S) 
+    \end{equation}
+\end{theorem}
+
+There is a generalization for a famous result: The sum of the outer angles of the polygon is  $ 2\pi $. 
+
+For  $ \gamma:I=[0,T]\rightarrow S $. 
+
+Say  $ \gamma  $ is \name{simple} if  $ \gamma(t_1)\neq \gamma(t_2) $ for  $ t_1\neq t_2 $ (except  $ t_10,t_2=T $)
+
+Say  $ \gamma $ is \name{closed} if  $ \gamma(0)=\gamma(T) $. 
+
+Say  $ \gamma $ is piece  $ C^1 $ if  $ \exists $ $ 0=t_0<t_1<\cdots<t_n=T $ \st  $ \gamma_i=\gamma|_{[t_i,t_{i+1}]} $ is  $ C^1 $.
+
+For each  $ i $, we have  \[ \gamma'_-(t_i):=\dps\lim_{t\to t_i^-}\frac{\gamma(t)-\gamma(t_i)}{t-t_i},  \gamma'_{+}(t_i)=\dps\lim_{t\to t_i^+}\frac{\gamma(t)-\gamma(t_i)}{t-t_i} \] 
+They are both in $ T_{\gamma(t)}S $. $ \theta_i $ is defined as the angle from  $ \gamma_-'(t_i) $ to  $ \gamma_+'(t_i) $,  $ \theta_i\in [-\pi,\pi] $.
+
+$ \gamma:I\rightarrow S\hookrightarrow\Rbb^3 $,  $ \gamma(I)\subset U\cong \Rbb^2 $,  $ U\xrightarrow[\cong]{(x^1,x^2)}\Rbb^2 $ oriented local chart. $ X_1=\dps\frac{\partial }{\partial x^1} ,X_2=\dps\frac{\partial }{\partial x^2}\in \Gamma(TU)$ $ \overset{\mathrm{GS}}{\leadsto} e_1,e_2\in \Gamma(TU)$ such that  $ \<e_i,e_j\>=\delta_{ij} $.
+
+Assume  $ \gamma $ parametrized by arc length  $ t $, \ie  $ \gamma'(t)=1 $ $ \Rightarrow $  $ \exists \varphi:I\rightarrow \Rbb $ \st  $ \gamma'(t)=\cos\varphi(t)\cdot e_{1,\gamma(t)}+\sin\varphi(t)e_{2,\gamma(t)} $.
+
+Define the rotation number of  $ \gamma $,  $ \rot(\gamma)=\varphi(t_1)-\varphi(t_0) $ for  $ I=[t_0,t_1] $.
+
+\begin{theorem}
+    Let  $ \gamma=\gamma_1\cup\gamma_2\cup\cdots\cup\gamma_n $ be a piecewise  $ C^1 $ simple closed curve whose image is contained in  $ U\subset S $,  $ \gamma:I\rightarrow U\subset S\hookrightarrow\Rbb^3 $. Then 
+    \[\sum_{i=1}^n\rot(\gamma_i)+\sum_{i=1}^n\theta_i=2\pi\]    
+\end{theorem}
+
+\begin{proof}
+    When  $ S=\Rbb^2\hookrightarrow\Rbb^3 $ is the standard embedding, see Do Garmo. Here is a simplified proof
+
+    For  $ \triangle=\{(x,y)\in \Rbb^2|0 \leq x \leq y  \leq 1\} $,  $ f:\triangle\rightarrow S^1 $ 
+    \begin{equation}
+        f(x,y)=\begin{cases}
+            \frac{\gamma(x)-\gamma(y)}{|\gamma(x)-\gamma(y)|},&x\neq y,\,(x,y)\neq (0,1)\\
+            \frac{\gamma'(x)}{|\gamma'(x)},&x=y\\
+            -\gamma'(0)&(x,y)=(0,1)
+        \end{cases}
+    \end{equation}
+    Then  $ f|_C,f|_{A\cup B} $ are loops in  $ S^1 $, where  $ C $ is the hypotenuse and  $ A,B $ are the legs of this triangle. 
+
+    Observe that  $ 2\pi\cdot \deg(f|_C)=\rot(\gamma)=2\pi\deg(f|_{A\cup B}) $,  $ f(0,y)=\dps\frac{\gamma(y)-\gamma(0)}{|\gamma(t)-\gamma(0)|}=-f(s,1) $.  
+
+    Since  $ \exists L\subset \Rbb^2 $,  $ L $ tangent to  $ \gamma $ at  $ \gamma(0) $,  $ \gamma $ fall on one side of  $ L $ $ \Rightarrow  $  $ f|_A $ is not surjective. By considering fundamental group, we can prove  $ \deg(f|_{A\cup B})=1 $. Thus,  $ \deg(f|_C)=1 $, which is what we need.        
+\end{proof}
+
+Here are some notations we use below:
+ $ (U,x^1,x^2) $ chart of  $ S $,  $ X_1,X_2,e_1,e_2 $ defined above.
+ 
+\begin{proposition}
+    $ \exists \alpha\in \Omega^1(U) $ \st  $ \nabla_Ve_1=\alpha(V)e_2,\,\nabla_Ve_2=-\alpha(V)e_1 $,  $ \forall V\in \Gamma(TU) $. Furthermore,  $ K\dd\Vol=-\dd\alpha $.   
+\end{proposition}
+\begin{proof}
+    \begin{equation*}
+        \begin{cases}
+            \<e_2,e_2\>=1\\
+            \<e_1,e_1\>=1\\
+            \<e_1,e_2\>=0
+        \end{cases}\Rightarrow\begin{cases}
+            \<\nabla_Ve_1,e_1\>=0\\
+            \<\nabla_Ve_2,e_2\>=0\\
+            \<\nabla_Ve_1,e_2\>=-\<e_1,\nabla_Ve_2\>
+        \end{cases}\Rightarrow\begin{cases}
+            \nabla_Ve_1=\tau(V)e_2\\
+            \nabla_Ve_2=-\tau(V)e_1
+        \end{cases}
+    \end{equation*}
+    for some  $ \tau:\Gamma(TU)\rightarrow C^\infty(U) $.
+
+     $ \nabla_{fV}e_1=f\nabla_Ve_1 $ $ \Rightarrow  $ $ \tau(fV)=f\tau(V) $. So  $ \tau  $ is a (0,1)-tensor, \ie  $ \tau\in \Gamma(\Hom(TU,\Rbb)) $.   $ \Rightarrow $  $ \exists $  $ \alpha\in \Omega^1(U) $ \st  $ \tau(V)=\alpha(V) $.
+     
+     Still need to prove  $ (K\dd \alpha)_p=(-\dd\alpha)_p $.  $ \forall p\in U $. We may assume  $ X_{1,p}=e_{1,p} $ and  $ X_{2,p}=e_{2,p} $ that are orthogonormal.
+     
+    By theorem \ref{R(V_1,V_2,V_1)=-KV_2},  $ R(X_{1,p},X_{2,p},e_{1,p})=-K(p)e_{2,p} $. \ie  
+    \begin{align*}
+        -K(p)e_{2,p}&=R(X_{1,p},X_{2,p},e_{1,p})\\
+        &=(\nabla_{X_1}\nabla_{X_2}e_1-\nabla_{X_2}\nabla_{X_1}e_1)_p\\
+        &=(\nabla_{X_1}\alpha(X_2)e_2-\nabla_{X_2}\alpha(X_1)e_2)_p\\
+        &=(X_1\alpha(X_2)-X_2\alpha(X_1))_p\cdot e_{2,p}\\
+        &=\dd\alpha(X_1,X_2)_pe_{2,p}
+    \end{align*}
+    So  $ (\dd\alpha)_p=-K(p)e_1^*\wedge e_2^*=-K(p)(\dd\Vol)_p $ 
+\end{proof}
+\begin{theorem}[Local Gauss-Bonnet Theorem]
+     $ \gamma:I\rightarrow U\subset S\hookrightarrow\Rbb^3 $,  $ \gamma=\gamma_1\cup\cdots\cup\gamma_n $ simple closed and piecewise  $ C^1 $ curve.  $ \gamma $ bounds a region  $ R \subset U$, oriented  $ \gamma  $ as  $ \partial R $. Then 
+    \[\sum_{i=1}^n\int_{\gamma_i}K_g\dd S+\sum_{i=1}^n\theta_i+\int_RK\dd\Vol=2\pi\]      
+\end{theorem}
+\begin{proof}
+    For  $ \gamma $  parametrized by arc length,  let
+    \[\gamma_i'(t)=\cos\varphi_i(t)e_1+\sin\varphi_i(t)e_2,\,N_{\gamma_i(t)}^{\gamma_i}=-\sin\varphi_i(t)e_1+\cos\varphi_i(t)e_2\]
+    Then 
+    \begin{align*}
+        \nabla_{\gamma'(t)}\gamma'(t)&=\cos\varphi_i(t)\nabla_{\gamma'(t)}e_1+\sin\varphi_{i}(t)\nabla_{\gamma'(t)}e_2\\
+        &=\alpha(\gamma_i'(t))N_{\gamma'(t)}^\gamma+\varphi_i'(t)\cdot N_{\gamma(t)}^\gamma\\
+        &=(\alpha(\gamma_i'(t))+\varphi_i'(t))N_{\gamma(t)}^\gamma
+    \end{align*}
+     $ K_g=\alpha(\gamma_i'(t))+\varphi_i'(t) $ $ \Rightarrow $ $ \dps\int_{\gamma_i}K_g\dd S=\int_{\gamma_i}\alpha+\rot(\gamma_i) $ $ \Rightarrow $
+     
+    \begin{align*}
+        \sum_{i=1}^n\int_{\gamma_i}K_g\dd S+\sum_{i=1}^n\theta_i&=\sum_{i=1}^n\int_{\gamma_i}\alpha+\sum_{i=1}^n\rot(\gamma_i)+\sum_{i=1}^n\theta_i\\
+        &=\int_\gamma\alpha+2\pi\\
+        &=\int_R\dd\alpha+2\pi\\
+        &=-\int_RK\dd\Vol+2\pi
+    \end{align*}
+\end{proof}
+To prove the general Gauss-Bonnet theorem, only need to use triangulation of  $ S $. 

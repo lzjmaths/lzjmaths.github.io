@@ -262,3 +262,11 @@
 \contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}8.20\else \numberline {8.20}Corollary\fi }{112}{corollary.8.20}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.21\else \numberline {8.21}Theorem\fi }{112}{theorem.8.21}%
 \contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}8.22\else \numberline {8.22}Corollary\fi \thmtformatoptarg {Gauss Theorem \textsc {Egregium}}}{112}{corollary.8.22}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.23\else \numberline {8.23}Example\fi }{114}{example.8.23}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}8.24\else \numberline {8.24}Example\fi }{115}{example.8.24}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}8.25\else \numberline {8.25}Fact\fi }{115}{fact.8.25}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}8.26\else \numberline {8.26}Fact\fi }{115}{fact.8.26}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.27\else \numberline {8.27}Theorem\fi \thmtformatoptarg {Gauss-Bonnet Theorem}}{116}{theorem.8.27}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.28\else \numberline {8.28}Theorem\fi }{116}{theorem.8.28}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}8.29\else \numberline {8.29}Proposition\fi }{117}{proposition.8.29}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}8.30\else \numberline {8.30}Theorem\fi \thmtformatoptarg {Local Gauss-Bonnet Theorem}}{118}{theorem.8.30}%

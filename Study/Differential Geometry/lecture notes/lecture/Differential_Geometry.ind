@@ -58,6 +58,7 @@
     \subitem chain homotopy inverse, \hyperpage{80}
   \item chain map, \hyperpage{80}
   \item Christoffel symbo, \hyperpage{111}
+  \item closed, \hyperpage{116}
   \item closed form, \hyperpage{51}
   \item cochain complex, \hyperpage{79}
   \item commutes, \hyperpage{31}
@@ -72,7 +73,7 @@
   \item Cristopher symbol, \hyperpage{106}
   \item critical point, \hyperpage{5}, \hyperpage{37}
   \item critical value, \hyperpage{5}, \hyperpage{37}
-  \item curvature, \hyperpage{99}
+  \item curvature, \hyperpage{99}, \hyperpage{115}
   \item curve, \hyperpage{12}
     \subitem tangent, \hyperpage{12}
     \subitem velocity, \hyperpage{12}
@@ -109,6 +110,8 @@
   \item Gauss map , \hyperpage{101}
   \item Gaussian curvature, \hyperpage{103}
   \item genus of smooth function, \hyperpage{11}
+  \item geodesic, \hyperpage{115}
+  \item geodesic curvature, \hyperpage{115}
   \item gradient vector field, \hyperpage{15}
 
   \indexspace
@@ -154,6 +157,7 @@
 
   \indexspace
 
+  \item normal curvature, \hyperpage{115}
   \item normal vector, \hyperpage{99}
 
   \indexspace
@@ -174,6 +178,7 @@
   \indexspace
 
   \item parabolic, \hyperpage{103}
+  \item parallel, \hyperpage{115}
   \item parametrized curve, \hyperpage{99}
     \subitem parametrized by its arc length, \hyperpage{99}
     \subitem regular, \hyperpage{99}
@@ -212,6 +217,7 @@
 
   \item short exact, \hyperpage{85}
   \item short exact sequence, \hyperpage{85}
+  \item simple, \hyperpage{116}
   \item singular point, \hyperpage{29}
   \item singular value, \hyperpage{37}
   \item smooth manifold, \hyperpage{4}

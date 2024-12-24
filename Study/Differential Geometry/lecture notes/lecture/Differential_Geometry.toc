@@ -47,5 +47,6 @@
 \contentsline {subsection}{\numberline {8.3}Gauss map}{101}{subsection.8.3}%
 \contentsline {subsubsection}{\numberline {8.3.1}Covariant derivative}{108}{subsubsection.8.3.1}%
 \contentsline {subsection}{\numberline {8.4}Parallel transport}{114}{subsection.8.4}%
-\contentsline {section}{Index}{115}{section*.4}%
-\contentsline {section}{List of Theorems}{119}{section*.5}%
+\contentsline {subsection}{\numberline {8.5}Gauss-Bonnet Theorem}{116}{subsection.8.5}%
+\contentsline {section}{Index}{120}{section*.4}%
+\contentsline {section}{List of Theorems}{124}{section*.5}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  23 DEC 2024 10:00
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  24 DEC 2024 15:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1670,46 +1670,46 @@ Overfull \hbox (1.94997pt too wide) detected at line 99
  []
 
 ) (../DG26.tex [102] [103] [104] [105] [106] [107]) (../DG27.tex [108] [109] [110]
-Underfull \hbox (badness 1348) in paragraph at lines 81--82
+Underfull \hbox (badness 1348) in paragraph at lines 83--84
 []$[] [] [] \U/matha/m/n/12 ^^@ [] ^^P [] ^^@ [] ^^P
  []
 
 [111]
-Overfull \hbox (12.79335pt too wide) detected at line 127
+Overfull \hbox (12.79335pt too wide) detected at line 129
 []
  []
 
-[112] [113]) [114]
+[112] [113]) (../DG28.tex [114] [115] [116] [117] [118]) [119]
 runsystem(makeindex Differential_Geometry.idx)...executed.
 
- (./Differential_Geometry.ind [115
+ (./Differential_Geometry.ind [120
 
 
-] [116]
-Underfull \hbox (badness 2495) in paragraph at lines 161--162
+] [121]
+Underfull \hbox (badness 2495) in paragraph at lines 165--166
 []\T1/ppl/m/n/12 one-parameter trans-for-ma-tion group,
  []
 
-[117] [118])
+[122] [123])
 showing theorem
 showing proposition
-(./Differential_Geometry.loe [119
+(./Differential_Geometry.loe [124
 
-] [120] [121])
+] [125] [126] [127])
 \tf@loe=\write8
 \openout8 = `Differential_Geometry.loe'.
 
- [122] (./Differential_Geometry.aux)
+ [128] (./Differential_Geometry.aux)
 Package rerunfilecheck Info: File `Differential_Geometry.out' has not changed.
-(rerunfilecheck)             Checksum: F0FEFB6DD522ED8C7E6D43C8420AAEA7;8127.
+(rerunfilecheck)             Checksum: EF12B14134C05C400F8857C2CDDF9E3F;8288.
  ) 
 Here is how much of TeX's memory you used:
- 53292 strings out of 476683
- 1214770 string characters out of 5804047
- 3884085 words of memory out of 5000000
- 72565 multiletter control sequences out of 15000+600000
+ 53303 strings out of 476683
+ 1214978 string characters out of 5804047
+ 3884227 words of memory out of 5000000
+ 72573 multiletter control sequences out of 15000+600000
  563411 words of font info for 169 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,21n,106p,748b,12262s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Differential_Geometry.pdf (122 pages).
+Output written on Differential_Geometry.pdf (128 pages).
