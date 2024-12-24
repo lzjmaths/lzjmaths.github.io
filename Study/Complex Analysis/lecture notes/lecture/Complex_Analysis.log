@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  23 DEC 2024 16:57
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  24 DEC 2024 10:01
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1538,22 +1538,22 @@ Overfull \hbox (25.31981pt too wide) detected at line 125
 [][]
  []
 
-) (../25.tex [90] [91] [92]) (../26.tex [93] [94]) [95]
+) (../25.tex [90] [91] [92]) (../26.tex [93] [94] [95]) [96]
 runsystem(makeindex Complex_Analysis.idx)...executed.
 
- (./Complex_Analysis.ind [96
+ (./Complex_Analysis.ind [97
 
 
-] [97])
+] [98])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [98
+(./Complex_Analysis.loe [99
 
-] [99])
+] [100])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [100] (./Complex_Analysis.aux)
+ [101] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1561,12 +1561,12 @@ Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
 (rerunfilecheck)             Checksum: 19F695453BD7B6E8B2FEC4DE4A5A5350;14659.
  ) 
 Here is how much of TeX's memory you used:
- 40424 strings out of 476683
- 822207 string characters out of 5804047
+ 40425 strings out of 476683
+ 822223 string characters out of 5804047
  1857018 words of memory out of 5000000
- 59773 multiletter control sequences out of 15000+600000
+ 59774 multiletter control sequences out of 15000+600000
  552784 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (100 pages).
+Output written on Complex_Analysis.pdf (101 pages).

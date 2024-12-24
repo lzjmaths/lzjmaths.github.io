@@ -75,5 +75,5 @@
 \contentsline {subsubsection}{\numberline {6.1.3}Marty's Theorem}{91}{subsubsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.2}The Riemann Mapping Theorem}{93}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Statement and proof}{93}{subsubsection.6.2.1}%
-\contentsline {section}{Index}{96}{equation.6.9}%
-\contentsline {section}{List of Theorems}{98}{equation.6.9}%
+\contentsline {section}{Index}{97}{equation.6.9}%
+\contentsline {section}{List of Theorems}{99}{equation.6.9}%

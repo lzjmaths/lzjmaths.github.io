@@ -22,10 +22,30 @@ is analytic in the half-plane  $ \Re s>1 $.
         \begin{equation}\label{eq:5.4:Jacobi theta series}
             \theta(t)=\sum_{n=-\infty}^\infty e^{-\pi n^2t}
         \end{equation}
-        \item  $ \zeta(s)=\dps\frac{\Gamma(1-s)}{2\pi i}\int_C\frac{(-z)^s}{e^z-1}\cdot\frac{\dd z}{z} $ where  $ C  $ is the contour shown in the picture, with  $ \epsilon<2\pi $,  $ (-z)^s=\exp[s\ln (-z)] $,  $ \ln(-z) $ is chosen \st  $ -\pi <\Im \ln (-z)<\pi $.    
-        \begin{tikzpicture}
-            
+        \item  $ \zeta(s)=\dps\frac{\Gamma(1-s)}{2\pi i}\int_C\frac{(-z)^s}{e^z-1}\cdot\frac{\dd z}{z} $ where  $ C  $ is the contour shown in the picture, with  $ \epsilon<2\pi $,  $ (-z)^s=\exp[s\ln (-z)] $,  $ \ln(-z) $ is chosen \st  $ -\pi <\Im \ln (-z)<\pi $.        
+        
+
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+        %Shape: Axis 2D [id:dp9785911867399795] 
+        \draw  (200,168.5) -- (482,168.5)(228.2,65) -- (228.2,180) (475,163.5) -- (482,168.5) -- (475,173.5) (223.2,72) -- (228.2,65) -- (233.2,72)  ;
+        %Shape: Arc [id:dp1302548314750347] 
+        \draw  [draw opacity=0] (277.43,178.11) .. controls (273.42,189.96) and (262.21,198.5) .. (249,198.5) .. controls (232.43,198.5) and (219,185.07) .. (219,168.5) .. controls (219,151.93) and (232.43,138.5) .. (249,138.5) .. controls (261.53,138.5) and (272.27,146.18) .. (276.76,157.1) -- (249,168.5) -- cycle ; \draw   (277.43,178.11) .. controls (273.42,189.96) and (262.21,198.5) .. (249,198.5) .. controls (232.43,198.5) and (219,185.07) .. (219,168.5) .. controls (219,151.93) and (232.43,138.5) .. (249,138.5) .. controls (261.53,138.5) and (272.27,146.18) .. (276.76,157.1) ;  
+        %Straight Lines [id:da7349516742118151] 
+        \draw    (276.76,157.1) -- (464,157) ;
+        %Straight Lines [id:da49149077320950185] 
+        \draw    (277.43,178.11) -- (461,180) ;
+        \draw   (351.53,150.65) -- (343.02,156.87) -- (352.44,161.61) ;
+
+        % Text Node
+        \draw (302,157) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \epsilon $};
+
+
         \end{tikzpicture}
+
     \end{enumerate}
 \end{theorem} 
 \begin{proof}
