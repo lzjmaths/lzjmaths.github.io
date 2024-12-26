@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  24 DEC 2024 10:01
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  26 DEC 2024 09:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1533,27 +1533,32 @@ Overfull \hbox (23.46786pt too wide) detected at line 135
 [][][][] \U/matha/m/n/12 |\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q| ^^P ^^A [] [] [] ^^@ [] [][] [][] [] |\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 ^^Ze[]\U/matha/m/n/12 q|\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 ^^R;  \U/matha/m/n/12 @\OML/cmm/m/it/12 z[]\U/matha/m/n/12 |\OML/cmm/m/it/12 z\U/matha/m/n/12 |   \OML/cmm/m/it/12 ^^Z; f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^X \OT1/cmr/m/n/12 0
  []
 
-) (../24.tex (../27.tex [84] [85]) [86] [87] [88] [89]
-Overfull \hbox (25.31981pt too wide) detected at line 125
+) (../24.tex (../27.tex [84] [85]
+Underfull \hbox (badness 1783) in paragraph at lines 59--60
+[]$[] [] \U/matha/m/n/12 ^^P []$\T1/ppl/m/n/12 , $[]\OML/cmm/m/it/12 s \U/matha/m/n/12 ¡ \OT1/cmr/m/n/12 1$ \T1/ppl/m/n/12 con-verges ab-so-lutely since
+ []
+
+[86] [87] [88]) (../28.tex) [89] [90] [91] [92]
+Overfull \hbox (25.31981pt too wide) detected at line 126
 [][]
  []
 
-) (../25.tex [90] [91] [92]) (../26.tex [93] [94] [95]) [96]
+) (../25.tex [93] [94] [95]) (../26.tex [96] [97] [98]) [99]
 runsystem(makeindex Complex_Analysis.idx)...executed.
 
- (./Complex_Analysis.ind [97
+ (./Complex_Analysis.ind [100
 
 
-] [98])
+] [101])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [99
+(./Complex_Analysis.loe [102
 
-] [100])
+] [103])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [101] (./Complex_Analysis.aux)
+ [104] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1561,12 +1566,12 @@ Package rerunfilecheck Info: File `Complex_Analysis.out' has not changed.
 (rerunfilecheck)             Checksum: 19F695453BD7B6E8B2FEC4DE4A5A5350;14659.
  ) 
 Here is how much of TeX's memory you used:
- 40425 strings out of 476683
- 822223 string characters out of 5804047
- 1857018 words of memory out of 5000000
- 59774 multiletter control sequences out of 15000+600000
+ 40433 strings out of 476683
+ 822370 string characters out of 5804047
+ 1858018 words of memory out of 5000000
+ 59779 multiletter control sequences out of 15000+600000
  552784 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (101 pages).
+Output written on Complex_Analysis.pdf (104 pages).

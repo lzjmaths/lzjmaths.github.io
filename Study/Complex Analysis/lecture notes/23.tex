@@ -102,7 +102,7 @@ which is known as Legendre's duplication formula.
 \begin{theorem}[Jensen's formula]\label{thm:5.3.1:Jensen's formula}
     Suppose  $ f  $ is analytic in  $ |z| \leq \rho $, and all of its zeros in  $ |z|<\rho $ are  $ a_1,\cdots,a_n $ (multiple zeros being repeated) Assume  $ z=0  $ is not a zero. Then 
     \begin{equation}
-        \ln |f(0)|=-\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi }\int_0^\infty\ln|f(\rho e^{i\theta})|\dd\theta\label{eq:5.3.1:Jensen's formula}
+        \ln |f(0)|=-\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi }\int_0^{2\pi}\ln|f(\rho e^{i\theta})|\dd\theta\label{eq:5.3.1:Jensen's formula}
     \end{equation}  
 \end{theorem}
 \begin{remark}
@@ -125,7 +125,7 @@ which is known as Legendre's duplication formula.
         F(z)=f(z)\cdot\prod_{j=1}^n\frac{\rho^2-\bar{a}_jz}{\rho(z-a_j)}
     \end{equation}
     is free from zeros in the disk  $ |z|<\rho $, and  $ |F(z)|=|f(z)|  $ on  $ |z|=\rho $ $ \Rightarrow $
-    \[\ln|F(0)|=\frac{1}{2\pi}\int_0^{2\pi}\ln|f(\rho e^{i\theta})\dd\theta\]
+    \[\ln|F(0)|=\frac{1}{2\pi}\int_0^{2\pi}\ln|f(\rho e^{i\theta})|\dd\theta\]
     \[\Rightarrow \ln|f(0)|=-\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi}\int_0^{2\pi}\ln|f(\rho e^{i\theta})|\dd\theta\]  
 \end{proof}
 \begin{remark}
