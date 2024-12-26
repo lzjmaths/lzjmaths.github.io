@@ -24,56 +24,56 @@
 \contentsline {subsubsection}{\numberline {3.3.3}Steiner Circles, circular net}{16}{subsubsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.4}Elementary Conformal mapping}{17}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}Elementary Riemann surfaces}{18}{subsubsection.3.4.1}%
-\contentsline {section}{\numberline {4}Complex Integration}{18}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Fundamental Theorems}{18}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Line integral and rectifiable arcs}{18}{subsubsection.4.1.1}%
+\contentsline {section}{\numberline {4}Complex Integration}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Fundamental Theorems}{19}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Line integral and rectifiable arcs}{19}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}The fundamental theorem of Calculus for integrals in $ \mathbb {C} $}{20}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Cauchy's theorem for a rectangle}{22}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3}Cauchy's theorem for a rectangle}{23}{subsubsection.4.1.3}%
 \contentsline {subsubsection}{\numberline {4.1.4}Cauchy's Theorem for a disk}{24}{subsubsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.2}Cauchy's integral formula}{25}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Index of a point with resect to a closed curve}{25}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2}Cauchy's integral formula}{26}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Index of a point with resect to a closed curve}{26}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Cauchy's integral formula}{27}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Higher derivatives}{28}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Consequences of Cauchy}{29}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}Local properties of analytic functions}{31}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Removable Singularities and Taylor's Theorem}{31}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Zeros and poles}{34}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Higher derivatives}{29}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Consequences of Cauchy}{30}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Local properties of analytic functions}{32}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Removable Singularities and Taylor's Theorem}{32}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Zeros and poles}{35}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}The Local Mappings}{39}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}The Maximum Principle}{42}{subsubsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.4}The General Form of Cauchy's Theorem}{43}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Chains and Cycles}{43}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.3.4}The Maximum Principle}{43}{subsubsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.4}The General Form of Cauchy's Theorem}{44}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Chains and Cycles}{44}{subsubsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.2}Simple connectivity and homology}{44}{subsubsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.3}The general form of Cauchy's theorem}{45}{subsubsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.5}The Calculus of Residues}{47}{subsection.4.5}%
 \contentsline {subsubsection}{\numberline {4.5.1}The Residue Theorem}{47}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}The Argument Principle}{49}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2}The Argument Principle}{50}{subsubsection.4.5.2}%
 \contentsline {subsubsection}{\numberline {4.5.3}Evaluation of Definite integrals}{52}{subsubsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.6}Harmonic Functions}{56}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Definition and basis properties}{56}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}The Mean-value Property}{58}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Poisson's Formula}{60}{subsubsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.4}Schwarz's Theorem}{62}{subsubsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6}Harmonic Functions}{57}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Definition and basis properties}{57}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}The Mean-value Property}{59}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Poisson's Formula}{61}{subsubsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.4}Schwarz's Theorem}{63}{subsubsection.4.6.4}%
 \contentsline {subsubsection}{\numberline {4.6.5}The Reflection Principle}{64}{subsubsection.4.6.5}%
-\contentsline {section}{\numberline {5}Series and Product Representations}{66}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Power Series Expansions}{66}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Weierstrass's Theorem}{66}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {5}Series and Product Representations}{67}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Power Series Expansions}{67}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Weierstrass's Theorem}{67}{subsubsection.5.1.1}%
 \contentsline {subsubsection}{\numberline {5.1.2}The Taylor Series}{68}{subsubsection.5.1.2}%
 \contentsline {subsubsection}{\numberline {5.1.3}Laurent Series}{69}{subsubsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.2}Partial Fractions and Factorization}{71}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Partial fractions}{71}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Infinite Products}{74}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Canonical Products}{75}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}The Gamma Function}{79}{subsubsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2}Partial Fractions and Factorization}{72}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Partial fractions}{72}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Infinite Products}{75}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Canonical Products}{76}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}The Gamma Function}{80}{subsubsection.5.2.4}%
 \contentsline {subsection}{\numberline {5.3}Entire Functions}{83}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Jensen's formula}{83}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Order of an entire function}{84}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2}Order of an entire function}{85}{subsubsection.5.3.2}%
 \contentsline {subsection}{\numberline {5.4}The Riemann Zeta Function}{85}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Riemann Mapping Theorem}{90}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Normal families}{90}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}The Arzela-Ascoli Theorem}{90}{subsubsection.6.1.1}%
 \contentsline {subsubsection}{\numberline {6.1.2}Montel's Theorem}{94}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Marty's Theorem}{94}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3}Marty's Theorem}{95}{subsubsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.2}The Riemann Mapping Theorem}{97}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Statement and proof}{97}{subsubsection.6.2.1}%
-\contentsline {section}{Index}{100}{equation.6.9}%
-\contentsline {section}{List of Theorems}{102}{equation.6.9}%
+\contentsline {section}{Index}{101}{equation.6.9}%
+\contentsline {section}{List of Theorems}{103}{equation.6.9}%

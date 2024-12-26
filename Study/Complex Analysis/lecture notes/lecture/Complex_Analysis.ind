@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item $ \Gamma (z) $, \hyperpage{79}
+  \item $ \Gamma (z) $, \hyperpage{80}
 
   \indexspace
 
@@ -12,16 +12,16 @@
   \indexspace
 
   \item canonical product, \hyperpage{78}
-  \item Cauchy principle value of the integral, \hyperpage{54}
-  \item Cauchy's estimate, \hyperpage{29}
+  \item Cauchy principle value of the integral, \hyperpage{55}
+  \item Cauchy's estimate, \hyperpage{30}
   \item Cauchy's integral formula, \hyperpage{28}
-  \item chain, \hyperpage{43}
+  \item chain, \hyperpage{44}
     \subitem identical, \hyperpage{44}
-    \subitem integral, \hyperpage{43}
+    \subitem integral, \hyperpage{44}
   \item change of parameter, \hyperpage{10}
   \item circular net, \hyperpage{17}
   \item conformal, \hyperpage{12}
-  \item conjugate differential of $ \mathrm  {d}u $, \hyperpage{57}
+  \item conjugate differential of $ \mathrm  {d}u $, \hyperpage{58}
   \item conjugate harmonic function of $ u $ , \hyperpage{5}
   \item cross ratio, \hyperpage{13}
   \item curve, \hyperpage{10}
@@ -46,16 +46,16 @@
 
   \indexspace
 
-  \item harmonic, \hyperpage{5}, \hyperpage{56}
-  \item homologous to zero, \hyperpage{44}
+  \item harmonic, \hyperpage{5}, \hyperpage{57}
+  \item homologous to zero, \hyperpage{45}
   \item homothetic transformation, \hyperpage{13}
 
   \indexspace
 
   \item index of the point $ z $, \hyperpage{26}
-  \item infinite product, \hyperpage{74}
+  \item infinite product, \hyperpage{75}
     \subitem absolutely convergent, \hyperpage{75}
-  \item integral, \hyperpage{18}
+  \item integral, \hyperpage{19}
     \subitem $ \bar  {z} $, \hyperpage{20}
     \subitem arc length, \hyperpage{21}
   \item inversion, \hyperpage{13}
@@ -68,25 +68,25 @@
   \indexspace
 
   \item Laplace equation, \hyperpage{5}
-  \item Laurent series, \hyperpage{69}
+  \item Laurent series, \hyperpage{70}
   \item left, \hyperpage{16}
   \item length, \hyperpage{12}, \hyperpage{21}
   \item linear fraction, \hyperpage{6}
-  \item locally bounded, \hyperpage{95}
+  \item locally bounded, \hyperpage{96}
   \item logorithmic function, \hyperpage{8}
 
   \indexspace
 
-  \item meromorphic function, \hyperpage{36}
+  \item meromorphic function, \hyperpage{37}
   \item M{\"o}bius transformation, \hyperpage{6}, \hyperpage{12}
 
   \indexspace
 
-  \item normal, \hyperpage{90}
+  \item normal, \hyperpage{91}
 
   \indexspace
 
-  \item order, \hyperpage{84}
+  \item order, \hyperpage{85}
   \item order of a pole, \hyperpage{6}
   \item order of the pole, \hyperpage{36}
   \item order of the rational function, \hyperpage{6}
@@ -95,18 +95,18 @@
 
   \item parallel translation, \hyperpage{13}
   \item partial fractions, \hyperpage{6}
-  \item Poisson integral , \hyperpage{62}
-  \item Poisson-Jensen formula, \hyperpage{84}
+  \item Poisson integral , \hyperpage{63}
+  \item Poisson-Jensen formula, \hyperpage{85}
   \item pole, \hyperpage{36}
   \item poles, \hyperpage{6}
 
   \indexspace
 
-  \item rectifiable, \hyperpage{21}
+  \item rectifiable, \hyperpage{22}
   \item reflection, \hyperpage{14}
   \item region, \hyperpage{9}
-  \item relatively compact, \hyperpage{90}
-  \item removable singularities, \hyperpage{31}
+  \item relatively compact, \hyperpage{91}
+  \item removable singularities, \hyperpage{32}
   \item residue, \hyperpage{47}
   \item reversible , \hyperpage{10}
   \item right, \hyperpage{16}
@@ -123,11 +123,11 @@
   \item Steiner circles, \hyperpage{17}
   \item symmetric, \hyperpage{14}
   \item symmetric w.r.t C through $ z_1,z_2,z_3 $, \hyperpage{14}
-  \item symmetrized zeta function, \hyperpage{85}
+  \item symmetrized zeta function, \hyperpage{86}
 
   \indexspace
 
-  \item Taylor's Theorem, \hyperpage{33}
+  \item Taylor's Theorem, \hyperpage{34}
   \item totally bounded , \hyperpage{10}
   \item trigonometric function, \hyperpage{8}
 
@@ -137,6 +137,6 @@
 
   \indexspace
 
-  \item zero of order $ N $, \hyperpage{35}
+  \item zero of order $ N $, \hyperpage{36}
 
 \end{theindex}

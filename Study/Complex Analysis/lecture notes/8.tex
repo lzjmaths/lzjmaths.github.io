@@ -63,7 +63,7 @@ $ \Delta:=\{z\in \mathbb{C}:|z-z_0|<R\} $ where  $ R>0 $.
    
    Similarly,  $ \dps\frac{\partial F}{\partial x}=f(z) $.
    
-   $ \Rightarrow \frac{\partial F}{\partial x}=-i\frac{\partial F}{\partial y} $ $ \Rightarrow  $ $ F  $   is analytic in  $ \Delta $  with derivative  $ f $.
+   $ \dps\Rightarrow \frac{\partial F}{\partial x}=-i\frac{\partial F}{\partial y} $ $ \Rightarrow  $ $ F  $   is analytic in  $ \Delta $  with derivative  $ f $.
    By Fundamental Theorem \ref{Fundamental theorem of Calculus for integrals} of Calulus $ \Rightarrow  $  $ \int_\gamma f(z)\mathrm{d}z=0 $ for  $ \forall  $ closed curve in  $ \Delta $.    
 \end{proof}
 Here is a stronger version.
@@ -83,14 +83,11 @@ Here is a stronger version.
     If the piecewise differentiable closed curve  $ \gamma $ does not pass through  $ z\in \mathbb{C} $, then the value of the integral  $ \int_\gamma \frac{\mathrm{d}\zeta}{\zeta -z}$  is a multiple of  $ 2\pi i $. 
 \end{lemma}
 \begin{proof}
-     $ \gamma:\zeta=\zeta(t),\alpha \leq t \leq \beta $.  $ h(t)=\int_\alpha^t\frac{\zeta'(s)}{\zeta(s)-z}\mathrm{d}s $.
-     
-      $ z\in \gamma $  $ \Rightarrow  $  $ h $ is defined and continuous on  $ [\alpha,\beta] $. For all  $ t $ \st  $ \zeta'(t) $ is continuous, we have 
-      \[h'(t)=\frac{\zeta'(t)}{\zeta(t)-z}\Rightarrow \frac{\mathrm{d}}{\mathrm{d}t}\left[e^{-h(t)}(\zeta(t)-z)\right]=0\]
-      So  $ \dps e^{-h(t)}(\zeta(t)-z) $ is constant on  $ [\alpha,\beta] $.
-      
-      Then  $ e^{h(t)}=\dps\frac{\zeta(t)-z}{\zeta(\alpha)-z} $ $ \Rightarrow  $ $ e^{h(\beta)}=1 $ $ \Rightarrow  $ $ h(\beta)\in \{2k\pi i:k\in \mathbb{Z}\} $.
+    $ \dps\gamma:\zeta=\zeta(t),\alpha \leq t \leq \beta $.  $ h(t)=\int_\alpha^t\frac{\zeta'(s)}{\zeta(s)-z}\mathrm{d}s $.
+    
+    $ z\in \gamma $  $ \Rightarrow  $  $ h $ is defined and continuous on  $ [\alpha,\beta] $. For all  $ t $ \st  $ \zeta'(t) $ is continuous, we have 
+    \[h'(t)=\frac{\zeta'(t)}{\zeta(t)-z}\Rightarrow \frac{\mathrm{d}}{\mathrm{d}t}\left[e^{-h(t)}(\zeta(t)-z)\right]=0\]
+    So  $ \dps e^{-h(t)}(\zeta(t)-z) $ is constant on  $ [\alpha,\beta] $.
+    
+    Then  $ e^{h(t)}=\dps\frac{\zeta(t)-z}{\zeta(\alpha)-z} $ $ \Rightarrow  $ $ e^{h(\beta)}=1 $ $ \Rightarrow  $ $ h(\beta)\in \{2k\pi i:k\in \mathbb{Z}\} $.
 \end{proof}
- 
- 
-  

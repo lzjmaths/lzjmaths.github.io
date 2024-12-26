@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  26 DEC 2024 09:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  26 DEC 2024 10:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1497,7 +1497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--50
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 65.
  [13]) (../5.tex [14] [15]) (../6.tex [16]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 42.
- [17]) (../7.tex [18] [19]
+ [17] [18]) (../7.tex [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
@@ -1506,17 +1506,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
 
-[20] [21]) (../8.tex [22] [23] [24] [25]) (../9.tex [26] [27] [28]) (../10.tex [29] [30] [31] [32]) (../11.tex [33] [34] [35] [36]) (../12.tex [37] [38] [39]) (../13.tex [40] [41] [42]) (../14.tex [43] [44] [45]) (../15.tex [46] [47] [48] [49] [50]) (../16.tex [51]
+[20] [21] [22]) (../8.tex [23] [24] [25]) (../9.tex [26] [27] [28]) (../10.tex [29] [30] [31] [32] [33]) (../11.tex [34] [35] [36] [37]) (../12.tex [38] [39] [40]) (../13.tex [41] [42] [43]) (../14.tex [44] [45] [46]) (../15.tex [47] [48] [49] [50]) (../16.tex [51] [52]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-[52]
+[53]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-[53] [54]
+[54]
 Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-) (../17.tex [55]
+[55]) (../17.tex
 Overfull \hbox (16.29897pt too wide) detected at line 23
 [][] [] \U/matha/m/n/12 ^^P [][] \OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 z \U/matha/m/n/12 ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi [] [][]f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ^^Yi\U/matha/m/n/12 r[][]\OML/cmm/m/it/12 f \U/matha/m/n/12 ^^@ [][]\OML/cmm/m/it/12 f\U/matha/m/n/12 s ^^P []
  []
@@ -1526,39 +1526,39 @@ Underfull \hbox (badness 2538) in paragraph at lines 67--72
 []\T1/ppl/m/n/12 For the sec-ond part of the the-o-rem, it is enough to prove $[]\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^P
  []
 
-[65] [66]) (../20.tex [67] [68] [69] [70]) (../21.tex [71] [72] [73] [74]) (../22.tex [75] [76] [77] [78]) (../23.tex [79] [80]
+[65] [66] [67]) (../20.tex [68] [69] [70] [71]) (../21.tex [72] [73] [74] [75]) (../22.tex [76] [77] [78] [79]) (../23.tex [80]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input line 49.
  [81] [82] [83]
 Overfull \hbox (23.46786pt too wide) detected at line 135
 [][][][] \U/matha/m/n/12 |\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q| ^^P ^^A [] [] [] ^^@ [] [][] [][] [] |\OML/cmm/m/it/12 f\U/matha/m/n/12 p\OML/cmm/m/it/12 ^^Ze[]\U/matha/m/n/12 q|\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 ^^R;  \U/matha/m/n/12 @\OML/cmm/m/it/12 z[]\U/matha/m/n/12 |\OML/cmm/m/it/12 z\U/matha/m/n/12 |   \OML/cmm/m/it/12 ^^Z; f\U/matha/m/n/12 p\OML/cmm/m/it/12 z\U/matha/m/n/12 q ^^X \OT1/cmr/m/n/12 0
  []
 
-) (../24.tex (../27.tex [84] [85]
+[84]) (../24.tex (../27.tex [85] [86]
 Underfull \hbox (badness 1783) in paragraph at lines 59--60
 []$[] [] \U/matha/m/n/12 ^^P []$\T1/ppl/m/n/12 , $[]\OML/cmm/m/it/12 s \U/matha/m/n/12 ¡ \OT1/cmr/m/n/12 1$ \T1/ppl/m/n/12 con-verges ab-so-lutely since
  []
 
-[86] [87] [88]) (../28.tex) [89] [90] [91] [92]
+[87] [88] [89]) (../28.tex) [90] [91] [92] [93]
 Overfull \hbox (25.31981pt too wide) detected at line 126
 [][]
  []
 
-) (../25.tex [93] [94] [95]) (../26.tex [96] [97] [98]) [99]
+) (../25.tex [94] [95] [96]) (../26.tex [97] [98] [99]) [100]
 runsystem(makeindex Complex_Analysis.idx)...executed.
 
- (./Complex_Analysis.ind [100
+ (./Complex_Analysis.ind [101
 
 
-] [101])
+] [102])
 showing theorem
 showing proposition
-(./Complex_Analysis.loe [102
+(./Complex_Analysis.loe [103
 
-] [103])
+] [104])
 \tf@loe=\write7
 \openout7 = `Complex_Analysis.loe'.
 
- [104] (./Complex_Analysis.aux)
+ [105] (./Complex_Analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1574,4 +1574,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  90i,16n,101p,876b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Complex_Analysis.pdf (104 pages).
+Output written on Complex_Analysis.pdf (105 pages).
