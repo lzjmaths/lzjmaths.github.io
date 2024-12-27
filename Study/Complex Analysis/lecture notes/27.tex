@@ -145,7 +145,16 @@ is analytic in the half-plane  $ \Re s>1 $.
             \zeta(-n)&\overset{\eqref{eq:5.4:another expandation of zeta function}}{=}\frac{\Gamma(1+n)}{2\pi i}\int_C\frac{(-z)^{-n}}{e^z-1}\dd z\\
             &=\frac{n!}{2\pi i}\int_C\frac{(-z)^{-n}}{z^2}\sum_{m=0}^\infty\frac{B_m}{m!}z^m\dd z\\
             &=n!(-1)^n\frac{B_{n+1}}{(n+1)!}\\
-            &=\frac{}{}
+            &=\frac{(-1)^nB_{n+1}}{n+1}\\
+            &=\frac{-B_{n+1}}{n+1}
         \end{aligned}
     \end{equation} 
+    since  $ B_{2k+1}=0 $ for  $ k\in \Nbb $. 
+    \begin{equation}
+        \begin{aligned}
+            \eqref{eq:5.4:symmetry of zeta function}\Rightarrow\zeta(2n)&=2^{2n}\pi^{2n-1}\sin(\pi n)\Gamma(1-2n)\zeta(1-2n),\,n\in Nbb\\
+            &=\frac{(2\pi)^2n(-1)^n}{2(2n-1)!}\cdot\frac{-B_{2n}}{2n}\\
+            &=\frac{(-1)^n(2\pi)^{2n}}{2(2n)!}B_{2n},\,n\in \Nbb
+        \end{aligned}
+    \end{equation}
 \end{proof}
