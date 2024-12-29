@@ -113,7 +113,7 @@ which is known as Legendre's duplication formula.
         \item Jensen's formula relates the modulus  $ |f(z)| $ on a circle to the modulus of the zero in the interior enclosed by the circle.
         \item If  $ f(0)=0 $, then  $ f(z)=Cz^k+\cdots $. We apply  \eqref{eq:5.3.1:Jensen's formula} to  $ f(z)\dps\left(\frac{\rho}{z}\right)^k $ and get 
         \begin{equation}
-            \ln |c|+k\ln \rho=\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi }\ln|f(\rho e^{i\theta})|\dd\theta
+            \ln |c|+k\ln \rho=-\sum_{j=1}^n\ln\left(\frac{\rho}{|a_j|}\right)+\frac{1}{2\pi }\int_0^{2\pi}\ln|f(\rho e^{i\theta})|\dd\theta
         \end{equation}
     \end{enumerate}
 
@@ -134,6 +134,6 @@ which is known as Legendre's duplication formula.
 \begin{remark}
     Apply the Poisson formula \ref{thm:5.6.3:Poisson's formula} to  $ \ln|F(z)| $, we get the \name{Poisson-Jensen formula} 
     \begin{equation}\label{eq:5.3.1:Poisson-Jensen formula}
-        \ln|f(z)|=-\sum_{j=1}^n\ln\left|\frac{\rho^2-\overline{a_j}z}{\rho(z-a)}\right|+\frac{1}{2\pi}\int_0^{2\pi}\Re\frac{\rho e^{i\theta}+z}{\rho e^{i\theta-z}}\ln|f(\rho e^{i\theta})|\dd\theta,\,\forall z\text{ with }|z|<\rho,f(z)\neq 0
+        \ln|f(z)|=-\sum_{j=1}^n\ln\left|\frac{\rho^2-\overline{a_j}z}{\rho(z-a_j)}\right|+\frac{1}{2\pi}\int_0^{2\pi}\Re\frac{\rho e^{i\theta}+z}{\rho e^{i\theta}-z}\ln|f(\rho e^{i\theta})|\dd\theta,\,\forall z\text{ with }|z|<\rho,f(z)\neq 0
     \end{equation}
 \end{remark}
