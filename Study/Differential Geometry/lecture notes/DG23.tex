@@ -85,10 +85,10 @@ The case  $ i=0 $ is similar.
 \end{proof}
 
 \begin{lemma}
-    $ A\subset \Rbb^n $,  $ B\subset \Rbb^m  $,  $ f:A\xrightarrow{\cong }B $. Then  $ \Rbb^{n+m}\setminus\{0\}\times B \cong\Rbb^{n+m}\setminus\{(x,f(x))|x\in A\}\cong \Rbb^{n+m}\setminus A\times \{0\}$.   
+    $ A\subset \Rbb^m $,  $ B\subset \Rbb^n  $ closed,  $ f:A\xrightarrow{\cong }B $. Then  $ \Rbb^{n+m}\setminus\{0\}\times B \cong\Rbb^{n+m}\setminus\{(x,f(x))|x\in A\}\cong \Rbb^{n+m}\setminus A\times \{0\}$.   
 \end{lemma}
 \begin{proof}
-    $ A\xrightarrow{ \cong}{f}B\hookrightarrow \Rbb^{n}$. By Tietz extension theorem, there exists  $ \tilde{f}:\Rbb^m\rightarrow \Rbb^n $ \st  $ \tilde{f}|_A=f $.
+    $ A\xrightarrow[f]{ \cong}B\hookrightarrow \Rbb^{n}$. By Tietz extension theorem, there exists  $ \tilde{f}:\Rbb^m\rightarrow \Rbb^n $ \st  $ \tilde{f}|_A=f $.
     
     Consider  $ \hat{f}:\Rbb^m\times \Rbb^n\xrightarrow{\cong}\Rbb^m\times \Rbb^n $,  $ (x,y)\mapsto (x.y+\hat{f}(x)) $. Then  $ \hat{f}(A\times\{0\})=\{(x,f(x))|x\in A\} $ $ \Rightarrow  $  $ \Rbb^{n+m}\setminus\{0\}\times B \cong\Rbb^{n+m}\setminus\{(x,f(x))|x\in A\}\cong \Rbb^{n+m}\setminus A\times \{0\}$. 
 \end{proof}
