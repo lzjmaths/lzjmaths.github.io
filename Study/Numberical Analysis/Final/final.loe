@@ -1,0 +1,24 @@
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.1\else \numberline {0.1}Theorem\fi }{2}{theorem.0.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.2\else \numberline {0.2}Theorem\fi }{2}{theorem.0.2}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.3\else \numberline {0.3}Theorem\fi }{2}{theorem.0.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.4\else \numberline {0.4}Theorem\fi }{3}{theorem.0.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.5\else \numberline {0.5}Theorem\fi }{3}{theorem.0.5}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.6\else \numberline {0.6}Theorem\fi }{3}{theorem.0.6}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.7\else \numberline {0.7}Theorem\fi }{3}{theorem.0.7}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.8\else \numberline {0.8}Theorem\fi \thmtformatoptarg {Arnoldi Elimination}}{4}{theorem.0.8}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.9\else \numberline {0.9}Theorem\fi \thmtformatoptarg {Lanczos Elimination}}{4}{theorem.0.9}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.10\else \numberline {0.10}Theorem\fi \thmtformatoptarg {Non-symmetric Lanczos Elimination}}{4}{theorem.0.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.11\else \numberline {0.11}Theorem\fi \thmtformatoptarg {Conjugate Gradient Method}}{5}{theorem.0.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.12\else \numberline {0.12}Theorem\fi \thmtformatoptarg {MINRES method}}{6}{theorem.0.12}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.13\else \numberline {0.13}Theorem\fi }{6}{theorem.0.13}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.14\else \numberline {0.14}Theorem\fi \thmtformatoptarg {Steflensen iteration method}}{6}{theorem.0.14}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.15\else \numberline {0.15}Theorem\fi }{6}{theorem.0.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.16\else \numberline {0.16}Theorem\fi \thmtformatoptarg {GeXian}}{7}{theorem.0.16}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.17\else \numberline {0.17}Theorem\fi }{7}{theorem.0.17}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.18\else \numberline {0.18}Theorem\fi }{7}{theorem.0.18}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.19\else \numberline {0.19}Theorem\fi }{7}{theorem.0.19}%
+\contentsline {lemma}{\ifthmt@listswap Lemma~0.20\else \numberline {0.20}Lemma\fi }{8}{lemma.0.20}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.21\else \numberline {0.21}Theorem\fi \thmtformatoptarg {Schur decomposition}}{8}{theorem.0.21}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.22\else \numberline {0.22}Theorem\fi \thmtformatoptarg {Real Schur decomposition}}{8}{theorem.0.22}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.23\else \numberline {0.23}Theorem\fi }{8}{theorem.0.23}%
+\contentsline {theorem}{\ifthmt@listswap Theorem~0.24\else \numberline {0.24}Theorem\fi }{8}{theorem.0.24}%

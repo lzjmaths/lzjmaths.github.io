@@ -1,0 +1,604 @@
+ % !TeX spellcheck = en_US
+% !TEX program = pdflatex
+\documentclass[12pt,b5paper,notitlepage]{article}
+\usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
+%\usepackage{fullpage}
+\usepackage{amsmath,amscd,amssymb,amsthm,mathrsfs,amsfonts,layout,indentfirst,graphicx,caption,mathabx, stmaryrd,appendix,calc,imakeidx,upgreek,amsbsy,thmtools} % mathabx for \wtidecheck
+\usepackage{mathtools}
+\let \underbrace\overbrace \relax
+
+\usepackage{ulem} %wave underline
+\usepackage[dvipsnames]{xcolor}
+\usepackage{palatino}  %template
+
+\usepackage{stmaryrd}
+
+\usepackage{slashed} % Dirac operator
+\usepackage{mathrsfs} % Enable using \mathscr
+%\usepackage{eufrak}  another template/font
+\usepackage{extarrows} % long equal sign, \xlongequal{blablabla}
+\usepackage{enumitem} % enumerate label change e.g. [label=(\alph*)]  shows (a) (b) 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{fontspec}
+%\setmainfont{Palatino Linotype}
+%\usepackage{emoji}
+
+
+% emoji, use lualatex  remove \usepackage{palatino}
+
+%%%%%%%%%%%%%
+
+
+\usepackage{CJK}   % Chinese package
+
+
+
+
+
+\usepackage{csquotes} % \begin{displayquote}   \begin{displaycquote}  for quotation
+\usepackage{epigraph}   %\epigraph{}{}  for quotation
+%\pmb  mandatory math bold 
+
+\usepackage{fancyhdr} % date in footer
+
+%\usepackage{soul}  %\ul underline break line automatically
+
+\usepackage{ulem}  % \uline  underline break line   also    \uwave
+
+\usepackage{relsize} % use \mathlarger \larger \text{\larger[2]$...$} to enlarge the size of math symbols
+
+\usepackage{verbatim}  % comment environment
+
+
+\usepackage{halloweenmath} % Interesting halloween math symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+% box around equations   \tcboxmath
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% circled colon and thick colon \hcolondel and \colondel
+
+\usepackage{pdfrender}
+
+\newcommand*{\hollowcolon}{%
+	\textpdfrender{
+		TextRenderingMode=Stroke,
+		LineWidth=.1bp,
+	}{:}%
+}
+
+\newcommand{\hcolondel}[1]{%
+	\mathopen{\hollowcolon}#1\mathclose{\hollowcolon}%
+}
+\newcommand{\colondel}[1]{%
+	\mathopen{:}#1\mathclose{:}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{setspace}  
+\setstretch{1.6}
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+\usepackage{tikz-cd}
+\usepackage[nottoc]{tocbibind}   % Add  reference to ToC
+
+
+\makeindex
+
+
+% The following set up the line spaces between items in \thebibliography
+\usepackage{lipsum}  
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+	\OLDthebibliography{#1}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{2pt} 
+}
+
+
+%\hyperref{page.10}{...}
+
+\allowdisplaybreaks  %allow aligns to break between pages
+\usepackage{latexsym}
+\usepackage{chngcntr}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue, linktocpage,
+%pagebackref
+]{hyperref}
+\hypersetup{ urlcolor=cyan,
+	citecolor=[rgb]{0,0.5,0}}
+
+
+\setcounter{tocdepth}{2}	 %hide subsections in the content
+
+
+\counterwithin{figure}{section}
+
+\counterwithin*{footnote}{section}   % Footnote numbering is recounted from the beginning of each subsection
+
+\renewcommand\theenumi{(\arabic{enumi})}
+\renewcommand\theenumii{\alph(enumii)}
+\renewcommand\theenumiii{\roman{enumii})}
+
+%Greek letters counter
+\newcounter{greek}
+\renewcommand{\thegreek}{
+  \ifcase\value{gr}
+     $ \alpha $ 
+  \or
+     $ \beta $ 
+  \or
+     $ \gamma $ 
+  \or
+    $\delta  $ 
+  \or
+    $\epsilon  $ 
+  \or
+    $\zeta  $ 
+  \or
+    $\eta  $ 
+  \or
+    $\theta  $ 
+  \or
+    $\iota  $ 
+  \or
+    $\kappa  $ 
+  \or
+    $\lambda  $ 
+  \or
+    $\mu  $ 
+  \or
+    $\nu  $ 
+  \or
+    $\xi  $ 
+  \or
+    $\omicron  $ 
+  \or
+    $\pi  $ 
+  \or
+    $\rho  $ 
+  \or
+    $\sigma  $ 
+  \or
+    $\tau  $ 
+  \or
+    $\upsilon  $ 
+  \or
+    $\phi  $ 
+  \or
+    $\chi  $ 
+  \or
+    $\psi  $ 
+  \or
+    $\omega  $ 
+  \else
+    % 超出范围时的默认输出
+    \text{None}
+  \fi
+}
+
+
+\pagestyle{plain}
+
+% \captionsetup[figure]
+% {
+% 	labelsep=none	
+% }
+% 控制图表结构
+
+
+
+
+
+
+
+
+
+
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}[definition]{Example}
+\newtheorem{exercise}[definition]{Exercise}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{convention}[definition]{Convention}
+\newtheorem{priniple}[definition]{Principle}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem*{axiom}{Axiom}
+\newtheorem{coa}[definition]{Theorem}
+\newtheorem{srem}[definition]{$\star$ Remark}
+\newtheorem{seg}[definition]{$\star$ Example}
+\newtheorem{sexe}[definition]{$\star$ Exercise}
+\newtheorem{sdf}[definition]{$\star$ Definition}
+\newtheorem{question}{Question}
+\theoremstyle{remark}
+\newtheorem*{note}{Note}
+\newtheorem*{claim}{Claim}
+
+
+\newtheorem{problem}{\color{red}Problem}[section]
+%\renewcommand*{\theprob}{{\color{red}\arabic{section}.\arabic{prob}}}
+\newtheorem{sprob}[problem]{\color{red}$\star$ Problem}
+%\renewcommand*{\thesprob}{{\color{red}\arabic{section}.\arabic{sprob}}}
+% \newtheorem{ssprob}[prob]{$\star\star$ Problem}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{Conclusion}[definition]{Conclusion}
+\newtheorem{thd}[definition]{Theorem-Definition}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{sthm}[definition]{$\star$ Theorem}
+\newtheorem{slm}[definition]{$\star$ Lemma}
+
+\newtheorem{spp}[definition]{$\star$ Proposition}
+\newtheorem{scorollary}[definition]{$\star$ Corollary}
+\newtheorem{fact}[definition]{Fact}
+
+\newcommand{\cond}{\mathrm{cond}}
+\newtheorem{Mthm}{Main Theorem}
+\renewcommand{\theMthm}{\Alph{Mthm}} % "letter-numbered" theorems
+
+
+%\substack   multiple lines under sum
+%\underset{b}{a}   b is under a
+
+
+% Remind: \overline{L_0}
+
+
+
+\usepackage{calligra}
+\DeclareMathOperator{\shom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+\DeclareMathOperator{\sext}{\mathscr{E}\text{\kern -3pt {\calligra\large xt}}\,}
+\DeclareMathOperator{\Rel}{\mathscr{R}\text{\kern -3pt {\calligra\large el}~}\,}
+\DeclareMathOperator{\sann}{\mathscr{A}\text{\kern -3pt {\calligra\large nn}}\,}
+\DeclareMathOperator{\send}{\mathscr{E}\text{\kern -3pt {\calligra\large nd}}\,}
+\DeclareMathOperator{\stor}{\mathscr{T}\text{\kern -3pt {\calligra\large or}}\,}
+%write mathscr Hom (and so on) 
+
+\usepackage{aurical}
+\DeclareMathOperator{\VVir}{\text{\Fontlukas V}\text{\kern -0pt {\Fontlukas\large ir}}\,}
+
+\newcommand{\vol}{\text{\Fontlukas V}}
+\newcommand{\dvol}{d~\text{\Fontlukas V}}
+% perfect Vol symbol
+
+\usepackage{aurical}
+\usepackage[T1]{fontenc}
+
+
+
+
+
+
+
+
+\newcommand{\fk}{\mathfrak}
+\newcommand{\mc}{\mathcal}
+\newcommand{\wtd}{\widetilde}
+\newcommand{\wht}{\widehat}
+\newcommand{\wch}{\widecheck}
+\newcommand{\ovl}{\overline}
+\newcommand{\udl}{\underline}
+\newcommand{\tr}{\mathrm{t}} %transpose
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\End}{\mathrm{End}} %endomorphism
+\newcommand{\idt}{\mathbf{1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Conf}{\mathrm{Conf}}
+\newcommand{\Res}{\mathrm{Res}}
+\newcommand{\res}{\mathrm{res}}
+\newcommand{\KZ}{\mathrm{KZ}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\coev}{\mathrm{coev}}
+\newcommand{\opp}{\mathrm{opp}}
+\newcommand{\Rep}{\mathrm{Rep}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\Dom}{\mathrm{Dom}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\con}{\mathrm{c}}
+\newcommand{\uni}{\mathrm{u}}
+\newcommand{\ssp}{\mathrm{ss}}
+\newcommand{\di}{\slashed d}
+\newcommand{\Diffp}{\mathrm{Diff}^+}
+\newcommand{\Diff}{\mathrm{Diff}}
+\newcommand{\PSU}{\mathrm{PSU}(1,1)}
+\newcommand{\Vir}{\mathrm{Vir}}
+\newcommand{\Witt}{\mathscr W}
+\newcommand{\Span}{\mathrm{Span}}
+\newcommand{\pri}{\mathrm{p}}
+\newcommand{\ER}{E^1(V)_{\mathbb R}}
+\newcommand{\prth}[1]{( {#1})}
+\newcommand{\bk}[1]{\langle {#1}\rangle}
+\newcommand{\bigbk}[1]{\big\langle {#1}\big\rangle}
+\newcommand{\Bigbk}[1]{\Big\langle {#1}\Big\rangle}
+\newcommand{\biggbk}[1]{\bigg\langle {#1}\bigg\rangle}
+\newcommand{\Biggbk}[1]{\Bigg\langle {#1}\Bigg\rangle}
+\newcommand{\GA}{\mathscr G_{\mathcal A}}
+\newcommand{\vs}{\varsigma}
+\newcommand{\Vect}{\mathrm{Vec}}
+\newcommand{\Vectc}{\mathrm{Vec}^{\mathbb C}}
+\newcommand{\scr}{\mathscr}
+\newcommand{\sjs}{\subset\joinrel\subset}
+\newcommand{\Jtd}{\widetilde{\mathcal J}}
+\newcommand{\gk}{\mathfrak g}
+\newcommand{\hk}{\mathfrak h}
+\newcommand{\xk}{\mathfrak x}
+\newcommand{\yk}{\mathfrak y}
+\newcommand{\zk}{\mathfrak z}
+\newcommand{\pk}{\mathfrak p}
+\newcommand{\hr}{\mathfrak h_{\mathbb R}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\DHR}{\mathrm{DHR}_{I_0}}
+\newcommand{\Repi}{\mathrm{Rep}_{\wtd I_0}}
+\newcommand{\im}{\mathbf{i}}
+\newcommand{\Co}{\complement}
+%\newcommand{\Cu}{\mathcal C^{\mathrm u}}
+\newcommand{\RepV}{\mathrm{Rep}^\uni(V)}
+\newcommand{\RepA}{\mathrm{Rep}(\mathcal A)}
+\newcommand{\RepN}{\mathrm{Rep}(\mathcal N)}
+\newcommand{\RepfA}{\mathrm{Rep}^{\mathrm f}(\mathcal A)}
+\newcommand{\RepAU}{\mathrm{Rep}^\uni(A_U)}
+\newcommand{\RepU}{\mathrm{Rep}^\uni(U)}
+\newcommand{\RepL}{\mathrm{Rep}^{\mathrm{L}}}
+\newcommand{\HomL}{\mathrm{Hom}^{\mathrm{L}}}
+\newcommand{\EndL}{\mathrm{End}^{\mathrm{L}}}
+\newcommand{\Bim}{\mathrm{Bim}}
+\newcommand{\BimA}{\mathrm{Bim}^\uni(A)}
+%\newcommand{\shom}{\scr Hom}
+\newcommand{\divi}{\mathrm{div}}
+\newcommand{\sgm}{\varsigma}
+\newcommand{\SX}{{S_{\fk X}}}
+\newcommand{\DX}{D_{\fk X}}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\bsb}{\boldsymbol}
+\newcommand{\blt}{\bullet}
+\newcommand{\Vbb}{\mathbb V}
+\newcommand{\Ubb}{\mathbb U}
+\newcommand{\Xbb}{\mathbb X}
+\newcommand{\Kbb}{\mathbb K}
+\newcommand{\Abb}{\mathbb A}
+\newcommand{\Wbb}{\mathbb W}
+\newcommand{\Mbb}{\mathbb M}
+\newcommand{\Gbb}{\mathbb G}
+\newcommand{\Cbb}{\mathbb C}
+\newcommand{\Nbb}{\mathbb N}
+\newcommand{\Zbb}{\mathbb Z}
+\newcommand{\Qbb}{\mathbb Q}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\Rbb}{\mathbb R}
+\newcommand{\Ebb}{\mathbb E}
+\newcommand{\Dbb}{\mathbb D}
+\newcommand{\Hbb}{\mathbb H}
+\newcommand{\cbf}{\mathbf c}
+\newcommand{\Rbf}{\mathbf R}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\btl}{\blacktriangleleft}
+\newcommand{\btr}{\blacktriangleright}
+\newcommand{\svir}{\mathcal V\!\mathit{ir}}
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Cok}{\mathrm{Coker}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\low}{\mathrm{low}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Rng}{\mathrm{Rng}}
+\newcommand{\vN}{\mathrm{vN}}
+\newcommand{\Ebf}{\mathbf E}
+\newcommand{\Nbf}{\mathbf N}
+\newcommand{\Stb}{\mathrm {Stb}}
+\newcommand{\SXb}{{S_{\fk X_b}}}
+\newcommand{\pr}{\mathrm {pr}}
+\newcommand{\SXtd}{S_{\wtd{\fk X}}}
+\newcommand{\univ}{\mathrm {univ}}
+\newcommand{\vbf}{\mathbf v}
+\newcommand{\ubf}{\mathbf u}
+\newcommand{\wbf}{\mathbf w}
+\newcommand{\CB}{\mathrm{CB}}
+\newcommand{\Perm}{\mathrm{Perm}}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\Lss}{{L_{0,\mathrm{s}}}}
+\newcommand{\Lni}{{L_{0,\mathrm{n}}}}
+\newcommand{\UPSU}{\widetilde{\mathrm{PSU}}(1,1)}
+\newcommand{\Sbb}{{\mathbb S}}
+\newcommand{\Gc}{\mathscr G_c}
+\newcommand{\Obj}{\mathrm{Obj}}
+\newcommand{\bpr}{{}^\backprime}
+\newcommand{\fin}{\mathrm{fin}}
+\newcommand{\Ann}{\mathrm{Ann}}
+\newcommand{\Real}{\mathrm{Re}}
+\newcommand{\Imag}{\mathrm{Im}}
+%\newcommand{\cl}{\mathrm{cl}}
+\newcommand{\Ind}{\mathrm{Ind}}
+\newcommand{\Supp}{\mathrm{Supp}}
+\newcommand{\Specan}{\mathrm{Specan}}
+\newcommand{\red}{\mathrm{red}}
+\newcommand{\uph}{\upharpoonright}
+\newcommand{\Mor}{\mathrm{Mor}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\Jac}{\mathrm{Jac}}
+\newcommand{\emb}{\mathrm{emb}}
+\newcommand{\Sg}{\mathrm{Sg}}
+\newcommand{\Nzd}{\mathrm{Nzd}}
+\newcommand{\Owht}{\widehat{\scr O}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Tor}{\mathrm{Tor}}
+\newcommand{\Com}{\mathrm{Com}}
+\newcommand{\Mod}{\mathrm{Mod}}
+\newcommand{\nk}{\mathfrak n}
+\newcommand{\mk}{\mathfrak m}
+\newcommand{\Ass}{\mathrm{Ass}}
+\newcommand{\depth}{\mathrm{depth}}
+\newcommand{\Coh}{\mathrm{Coh}}
+\newcommand{\Gode}{\mathrm{Gode}}
+\newcommand{\Fbb}{\mathbb F}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Modf}{\mathrm{Mod}^{\mathrm f}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Nbh}{\mathrm{Nbh}}
+\newcommand{\Pnbh}{\mathrm{PNbh}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\LSC}{\mathrm{LSC}}
+\newcommand{\USC}{\mathrm{USC}}
+\newcommand{\Ess}{\mathrm{Rng}^{\mathrm{ess}}}
+\newcommand{\Jbf}{\mathbf{J}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Lin}{\mathrm{Lin}}
+\newcommand{\ALin}{\mathrm{ALin}}
+\newcommand{\bwn}{\bigwedge\nolimits}
+\newcommand{\nbf}{\mathbf n}
+\newcommand{\dive}{\mathrm{div}}
+\newcommand{\Alt}{\mathrm{Alt}}
+\newcommand{\Sym}{\mathrm{Sym}}
+
+
+\renewcommand{\epsilon}{\varepsilon}
+
+
+
+
+
+
+\usepackage{tipa} % wierd symboles e.g. \textturnh
+\newcommand{\tipar}{\text{\textrtailr}}
+\newcommand{\tipaz}{\text{\textctyogh}}
+\newcommand{\tipaomega}{\text{\textcloseomega}}
+\newcommand{\tipae}{\text{\textrhookschwa}}
+\newcommand{\tipaee}{\text{\textreve}}
+\newcommand{\tipak}{\text{\texthtk}}
+\newcommand{\mol}{\upmu}
+\newcommand{\dmol}{d\upmu}
+
+
+
+
+\usepackage{tipx}
+\newcommand{\tipxgamma}{\text{\textfrtailgamma}}
+\newcommand{\tipxcc}{\text{\textctstretchc}}
+\newcommand{\tipxphi}{\text{\textqplig}}
+
+
+
+% make some new environment such that we can put line_in math mode in the center.
+
+\newenvironment{Then}
+{Then%
+\hspace{\stretch{1}}}
+{\hspace{\stretch{1}}%
+\phantom{Then}}
+
+
+
+
+
+
+
+
+
+\numberwithin{equation}{section}
+% count the eqation by section countation
+
+
+
+\title{*******}
+\author{{\sc Lin150117}
+	\\
+	{\small \sc Tsinghua University.}\\
+	{\small linzj23@mails.tsinghua.edu.cn}
+}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\img}{Im}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ie}{ \textit{ i.e. } }
+\newcommand{\st}{ \textit{ s.t. }}
+\newcommand{\name}[1]{\textbf{#1}\index{#1}}
+\newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
+
+
+
+
+
+
+\begin{document}
+\sloppy
+\pagenumbering{arabic}
+\maketitle
+\tableofcontents
+\newpage
+
+ $ \mathscr{L}=E-V $.  $ p_i=\dps\frac{\partial \mathscr{L}}{\partial \dot{q}_i} $ 
+ 
+  $ \mathscr{H}=\dps\sum_{i=1}^np_i\dot{q}_i-\mathcal{L} $.
+  
+  Hamilton's equation:
+  \[ \begin{cases}
+    \dps\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i}=\{q_i,\mathscr{H}\}\\
+    \dps \dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i}=\{p_i,\mathscr{H}\}
+  \end{cases}\]
+  Action  \[S=\dps\int_{t_0}^{t_1}\left(\sum_{i}p_i\dot{q}_i-\mathscr{H}\right)\dd t=\int_{t_0}^{t_1}\left(\sum_{i}p_i\dd q_i-\mathscr{H}\dd t\right) \]
+  Poisson bracket:
+  \[\{f,g\}=\sum_i\left(\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}-\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}\right)\]
+
+  \[\frac{\dd}{\dd t}f=\{f,\mathscr{H}\}+\frac{\partial f}{\partial t}\]
+
+  If  $ (q,p,t)\mapsto (Q,P,t) $ canonical transformation, with Hamiltonian  $ \mathscr{H},\mathscr{K} $ respectively. Then 
+  \[
+  \sum_{i}p_i\dd q_i-\mathscr{H}\dd t-\sum_{i}P_i\dd Q_i+\mathscr{K}\dd t=\dd F\]
+  Type-1 generating function  $ F=F_1(q,Q,t) $. Type-2 generating function  $ F=F_2(q,P,t) $.
+  
+   $\dps\frac{\partial W}{\partial q}=p $. 
+  \begin{theorem}
+    Let  $ W(q,t) $ be the value of the action on the extrmal curve with fixed initial point and endpoint  $ (t,q) $. Then  $ W(q,t) $ satisfies Hamilton-Jacobi equation 
+    \[\frac{\partial W}{\partial t}+\mathscr{H}(q,\frac{\partial W}{\partial q},t)\] 
+  \end{theorem}
+  If  $ W=W_0(q_1,\cdots,q_n,\alpha_1,\cdots,\alpha_n)-Et $,  $ \alpha_i $ constant of motions, then  $ \beta_i=\dps\frac{\partial W}{\partial \alpha_i} $.  $ (q,p)\mapsto(\alpha,\beta) $ canonical transformation with Hamiltonian $ \mathscr{K}=0 $. And  $ (q,p) $ can be represented by  $ (\alpha,\beta) $      
+  Action-variation  $ I_i=\dps\int_{\gamma_i}\sum p_i\dd q_i $
+  
+  Generating function  $ S=\dps\int^q\sum p_k(\tilde{q},I)\dd\tilde{q} $.
+  
+  Action-angle  $ \theta(I,q)=\dps\frac{\partial S}{\partial I} $ 
+  
+
+\printindex
+\newpage
+\end{document}

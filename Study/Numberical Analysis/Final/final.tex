@@ -1,0 +1,788 @@
+ % !TeX spellcheck = en_US
+% !TEX program = pdflatex
+\documentclass[12pt,b5paper,notitlepage]{article}
+\usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
+%\usepackage{fullpage}
+\usepackage{amsmath,amscd,amssymb,amsthm,mathrsfs,amsfonts,layout,indentfirst,graphicx,caption,mathabx, stmaryrd,appendix,calc,imakeidx,upgreek,amsbsy,thmtools} % mathabx for \wtidecheck
+\usepackage{mathtools}
+\let \underbrace\overbrace \relax
+
+\usepackage{ulem} %wave underline
+\usepackage[dvipsnames]{xcolor}
+\usepackage{palatino}  %template
+
+\usepackage{stmaryrd}
+
+\usepackage{slashed} % Dirac operator
+\usepackage{mathrsfs} % Enable using \mathscr
+%\usepackage{eufrak}  another template/font
+\usepackage{extarrows} % long equal sign, \xlongequal{blablabla}
+\usepackage{enumitem} % enumerate label change e.g. [label=(\alph*)]  shows (a) (b) 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{fontspec}
+%\setmainfont{Palatino Linotype}
+%\usepackage{emoji}
+
+
+% emoji, use lualatex  remove \usepackage{palatino}
+
+%%%%%%%%%%%%%
+
+
+\usepackage{CJK}   % Chinese package
+
+
+
+
+
+\usepackage{csquotes} % \begin{displayquote}   \begin{displaycquote}  for quotation
+\usepackage{epigraph}   %\epigraph{}{}  for quotation
+%\pmb  mandatory math bold 
+
+\usepackage{fancyhdr} % date in footer
+
+%\usepackage{soul}  %\ul underline break line automatically
+
+\usepackage{ulem}  % \uline  underline break line   also    \uwave
+
+\usepackage{relsize} % use \mathlarger \larger \text{\larger[2]$...$} to enlarge the size of math symbols
+
+\usepackage{verbatim}  % comment environment
+
+
+\usepackage{halloweenmath} % Interesting halloween math symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+% box around equations   \tcboxmath
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% circled colon and thick colon \hcolondel and \colondel
+
+\usepackage{pdfrender}
+
+\newcommand*{\hollowcolon}{%
+	\textpdfrender{
+		TextRenderingMode=Stroke,
+		LineWidth=.1bp,
+	}{:}%
+}
+
+\newcommand{\hcolondel}[1]{%
+	\mathopen{\hollowcolon}#1\mathclose{\hollowcolon}%
+}
+\newcommand{\colondel}[1]{%
+	\mathopen{:}#1\mathclose{:}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{setspace}  
+\setstretch{1.6}
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+\usepackage{tikz-cd}
+\usepackage[nottoc]{tocbibind}   % Add  reference to ToC
+
+
+\makeindex
+
+
+% The following set up the line spaces between items in \thebibliography
+\usepackage{lipsum}  
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+	\OLDthebibliography{#1}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{2pt} 
+}
+
+
+%\hyperref{page.10}{...}
+
+\allowdisplaybreaks  %allow aligns to break between pages
+\usepackage{latexsym}
+\usepackage{chngcntr}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue, linktocpage,
+%pagebackref
+]{hyperref}
+\hypersetup{ urlcolor=cyan,
+	citecolor=[rgb]{0,0.5,0}}
+
+
+\setcounter{tocdepth}{2}	 %hide subsections in the content
+
+
+\counterwithin{figure}{section}
+
+\counterwithin*{footnote}{section}   % Footnote numbering is recounted from the beginning of each subsection
+
+\renewcommand\theenumi{(\arabic{enumi})}
+\renewcommand\theenumii{\alph(enumii)}
+\renewcommand\theenumiii{\roman{enumii})}
+
+%Greek letters counter
+\newcounter{greek}
+\renewcommand{\thegreek}{
+  \ifcase\value{gr}
+     $ \alpha $ 
+  \or
+     $ \beta $ 
+  \or
+     $ \gamma $ 
+  \or
+    $\delta  $ 
+  \or
+    $\epsilon  $ 
+  \or
+    $\zeta  $ 
+  \or
+    $\eta  $ 
+  \or
+    $\theta  $ 
+  \or
+    $\iota  $ 
+  \or
+    $\kappa  $ 
+  \or
+    $\lambda  $ 
+  \or
+    $\mu  $ 
+  \or
+    $\nu  $ 
+  \or
+    $\xi  $ 
+  \or
+    $\omicron  $ 
+  \or
+    $\pi  $ 
+  \or
+    $\rho  $ 
+  \or
+    $\sigma  $ 
+  \or
+    $\tau  $ 
+  \or
+    $\upsilon  $ 
+  \or
+    $\phi  $ 
+  \or
+    $\chi  $ 
+  \or
+    $\psi  $ 
+  \or
+    $\omega  $ 
+  \else
+    % 超出范围时的默认输出
+    \text{None}
+  \fi
+}
+
+
+\pagestyle{plain}
+
+% \captionsetup[figure]
+% {
+% 	labelsep=none	
+% }
+% 控制图表结构
+
+
+
+
+
+
+
+
+
+
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}[definition]{Example}
+\newtheorem{exercise}[definition]{Exercise}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{convention}[definition]{Convention}
+\newtheorem{priniple}[definition]{Principle}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem*{axiom}{Axiom}
+\newtheorem{coa}[definition]{Theorem}
+\newtheorem{srem}[definition]{$\star$ Remark}
+\newtheorem{seg}[definition]{$\star$ Example}
+\newtheorem{sexe}[definition]{$\star$ Exercise}
+\newtheorem{sdf}[definition]{$\star$ Definition}
+\newtheorem{question}{Question}
+\theoremstyle{remark}
+\newtheorem*{note}{Note}
+\newtheorem*{claim}{Claim}
+
+
+\newtheorem{problem}{\color{red}Problem}[section]
+%\renewcommand*{\theprob}{{\color{red}\arabic{section}.\arabic{prob}}}
+\newtheorem{sprob}[problem]{\color{red}$\star$ Problem}
+%\renewcommand*{\thesprob}{{\color{red}\arabic{section}.\arabic{sprob}}}
+% \newtheorem{ssprob}[prob]{$\star\star$ Problem}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{Conclusion}[definition]{Conclusion}
+\newtheorem{thd}[definition]{Theorem-Definition}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{sthm}[definition]{$\star$ Theorem}
+\newtheorem{slm}[definition]{$\star$ Lemma}
+
+\newtheorem{spp}[definition]{$\star$ Proposition}
+\newtheorem{scorollary}[definition]{$\star$ Corollary}
+\newtheorem{fact}[definition]{Fact}
+
+\newcommand{\cond}{\mathrm{cond}}
+\newtheorem{Mthm}{Main Theorem}
+\renewcommand{\theMthm}{\Alph{Mthm}} % "letter-numbered" theorems
+
+
+%\substack   multiple lines under sum
+%\underset{b}{a}   b is under a
+
+
+% Remind: \overline{L_0}
+
+
+
+\usepackage{calligra}
+\DeclareMathOperator{\shom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+\DeclareMathOperator{\sext}{\mathscr{E}\text{\kern -3pt {\calligra\large xt}}\,}
+\DeclareMathOperator{\Rel}{\mathscr{R}\text{\kern -3pt {\calligra\large el}~}\,}
+\DeclareMathOperator{\sann}{\mathscr{A}\text{\kern -3pt {\calligra\large nn}}\,}
+\DeclareMathOperator{\send}{\mathscr{E}\text{\kern -3pt {\calligra\large nd}}\,}
+\DeclareMathOperator{\stor}{\mathscr{T}\text{\kern -3pt {\calligra\large or}}\,}
+%write mathscr Hom (and so on) 
+
+\usepackage{aurical}
+\DeclareMathOperator{\VVir}{\text{\Fontlukas V}\text{\kern -0pt {\Fontlukas\large ir}}\,}
+
+\newcommand{\vol}{\text{\Fontlukas V}}
+\newcommand{\dvol}{d~\text{\Fontlukas V}}
+% perfect Vol symbol
+
+\usepackage{aurical}
+\usepackage[T1]{fontenc}
+
+
+
+
+
+
+
+
+\newcommand{\fk}{\mathfrak}
+\newcommand{\mc}{\mathcal}
+\newcommand{\wtd}{\widetilde}
+\newcommand{\wht}{\widehat}
+\newcommand{\wch}{\widecheck}
+\newcommand{\ovl}{\overline}
+\newcommand{\udl}{\underline}
+\newcommand{\tr}{\mathrm{t}} %transpose
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\End}{\mathrm{End}} %endomorphism
+\newcommand{\idt}{\mathbf{1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Conf}{\mathrm{Conf}}
+\newcommand{\Res}{\mathrm{Res}}
+\newcommand{\res}{\mathrm{res}}
+\newcommand{\KZ}{\mathrm{KZ}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\coev}{\mathrm{coev}}
+\newcommand{\opp}{\mathrm{opp}}
+\newcommand{\Rep}{\mathrm{Rep}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\Dom}{\mathrm{Dom}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\con}{\mathrm{c}}
+\newcommand{\uni}{\mathrm{u}}
+\newcommand{\ssp}{\mathrm{ss}}
+\newcommand{\di}{\slashed d}
+\newcommand{\Diffp}{\mathrm{Diff}^+}
+\newcommand{\Diff}{\mathrm{Diff}}
+\newcommand{\PSU}{\mathrm{PSU}(1,1)}
+\newcommand{\Vir}{\mathrm{Vir}}
+\newcommand{\Witt}{\mathscr W}
+\newcommand{\Span}{\mathrm{Span}}
+\newcommand{\pri}{\mathrm{p}}
+\newcommand{\ER}{E^1(V)_{\mathbb R}}
+\newcommand{\prth}[1]{( {#1})}
+\newcommand{\bk}[1]{\langle {#1}\rangle}
+\newcommand{\bigbk}[1]{\big\langle {#1}\big\rangle}
+\newcommand{\Bigbk}[1]{\Big\langle {#1}\Big\rangle}
+\newcommand{\biggbk}[1]{\bigg\langle {#1}\bigg\rangle}
+\newcommand{\Biggbk}[1]{\Bigg\langle {#1}\Bigg\rangle}
+\newcommand{\GA}{\mathscr G_{\mathcal A}}
+\newcommand{\vs}{\varsigma}
+\newcommand{\Vect}{\mathrm{Vec}}
+\newcommand{\Vectc}{\mathrm{Vec}^{\mathbb C}}
+\newcommand{\scr}{\mathscr}
+\newcommand{\sjs}{\subset\joinrel\subset}
+\newcommand{\Jtd}{\widetilde{\mathcal J}}
+\newcommand{\gk}{\mathfrak g}
+\newcommand{\hk}{\mathfrak h}
+\newcommand{\xk}{\mathfrak x}
+\newcommand{\yk}{\mathfrak y}
+\newcommand{\zk}{\mathfrak z}
+\newcommand{\pk}{\mathfrak p}
+\newcommand{\hr}{\mathfrak h_{\mathbb R}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\DHR}{\mathrm{DHR}_{I_0}}
+\newcommand{\Repi}{\mathrm{Rep}_{\wtd I_0}}
+\newcommand{\im}{\mathbf{i}}
+\newcommand{\Co}{\complement}
+%\newcommand{\Cu}{\mathcal C^{\mathrm u}}
+\newcommand{\RepV}{\mathrm{Rep}^\uni(V)}
+\newcommand{\RepA}{\mathrm{Rep}(\mathcal A)}
+\newcommand{\RepN}{\mathrm{Rep}(\mathcal N)}
+\newcommand{\RepfA}{\mathrm{Rep}^{\mathrm f}(\mathcal A)}
+\newcommand{\RepAU}{\mathrm{Rep}^\uni(A_U)}
+\newcommand{\RepU}{\mathrm{Rep}^\uni(U)}
+\newcommand{\RepL}{\mathrm{Rep}^{\mathrm{L}}}
+\newcommand{\HomL}{\mathrm{Hom}^{\mathrm{L}}}
+\newcommand{\EndL}{\mathrm{End}^{\mathrm{L}}}
+\newcommand{\Bim}{\mathrm{Bim}}
+\newcommand{\BimA}{\mathrm{Bim}^\uni(A)}
+%\newcommand{\shom}{\scr Hom}
+\newcommand{\divi}{\mathrm{div}}
+\newcommand{\sgm}{\varsigma}
+\newcommand{\SX}{{S_{\fk X}}}
+\newcommand{\DX}{D_{\fk X}}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\bsb}{\boldsymbol}
+\newcommand{\blt}{\bullet}
+\newcommand{\Vbb}{\mathbb V}
+\newcommand{\Ubb}{\mathbb U}
+\newcommand{\Xbb}{\mathbb X}
+\newcommand{\Kbb}{\mathbb K}
+\newcommand{\Abb}{\mathbb A}
+\newcommand{\Wbb}{\mathbb W}
+\newcommand{\Mbb}{\mathbb M}
+\newcommand{\Gbb}{\mathbb G}
+\newcommand{\Cbb}{\mathbb C}
+\newcommand{\Nbb}{\mathbb N}
+\newcommand{\Zbb}{\mathbb Z}
+\newcommand{\Qbb}{\mathbb Q}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\Rbb}{\mathbb R}
+\newcommand{\Ebb}{\mathbb E}
+\newcommand{\Dbb}{\mathbb D}
+\newcommand{\Hbb}{\mathbb H}
+\newcommand{\cbf}{\mathbf c}
+\newcommand{\Rbf}{\mathbf R}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\btl}{\blacktriangleleft}
+\newcommand{\btr}{\blacktriangleright}
+\newcommand{\svir}{\mathcal V\!\mathit{ir}}
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Cok}{\mathrm{Coker}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\low}{\mathrm{low}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Rng}{\mathrm{Rng}}
+\newcommand{\vN}{\mathrm{vN}}
+\newcommand{\Ebf}{\mathbf E}
+\newcommand{\Nbf}{\mathbf N}
+\newcommand{\Stb}{\mathrm {Stb}}
+\newcommand{\SXb}{{S_{\fk X_b}}}
+\newcommand{\pr}{\mathrm {pr}}
+\newcommand{\SXtd}{S_{\wtd{\fk X}}}
+\newcommand{\univ}{\mathrm {univ}}
+\newcommand{\vbf}{\mathbf v}
+\newcommand{\ubf}{\mathbf u}
+\newcommand{\wbf}{\mathbf w}
+\newcommand{\CB}{\mathrm{CB}}
+\newcommand{\Perm}{\mathrm{Perm}}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\Lss}{{L_{0,\mathrm{s}}}}
+\newcommand{\Lni}{{L_{0,\mathrm{n}}}}
+\newcommand{\UPSU}{\widetilde{\mathrm{PSU}}(1,1)}
+\newcommand{\Sbb}{{\mathbb S}}
+\newcommand{\Gc}{\mathscr G_c}
+\newcommand{\Obj}{\mathrm{Obj}}
+\newcommand{\bpr}{{}^\backprime}
+\newcommand{\fin}{\mathrm{fin}}
+\newcommand{\Ann}{\mathrm{Ann}}
+\newcommand{\Real}{\mathrm{Re}}
+\newcommand{\Imag}{\mathrm{Im}}
+%\newcommand{\cl}{\mathrm{cl}}
+\newcommand{\Ind}{\mathrm{Ind}}
+\newcommand{\Supp}{\mathrm{Supp}}
+\newcommand{\Specan}{\mathrm{Specan}}
+\newcommand{\red}{\mathrm{red}}
+\newcommand{\uph}{\upharpoonright}
+\newcommand{\Mor}{\mathrm{Mor}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\Jac}{\mathrm{Jac}}
+\newcommand{\emb}{\mathrm{emb}}
+\newcommand{\Sg}{\mathrm{Sg}}
+\newcommand{\Nzd}{\mathrm{Nzd}}
+\newcommand{\Owht}{\widehat{\scr O}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Tor}{\mathrm{Tor}}
+\newcommand{\Com}{\mathrm{Com}}
+\newcommand{\Mod}{\mathrm{Mod}}
+\newcommand{\nk}{\mathfrak n}
+\newcommand{\mk}{\mathfrak m}
+\newcommand{\Ass}{\mathrm{Ass}}
+\newcommand{\depth}{\mathrm{depth}}
+\newcommand{\Coh}{\mathrm{Coh}}
+\newcommand{\Gode}{\mathrm{Gode}}
+\newcommand{\Fbb}{\mathbb F}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Modf}{\mathrm{Mod}^{\mathrm f}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Nbh}{\mathrm{Nbh}}
+\newcommand{\Pnbh}{\mathrm{PNbh}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\LSC}{\mathrm{LSC}}
+\newcommand{\USC}{\mathrm{USC}}
+\newcommand{\Ess}{\mathrm{Rng}^{\mathrm{ess}}}
+\newcommand{\Jbf}{\mathbf{J}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Lin}{\mathrm{Lin}}
+\newcommand{\ALin}{\mathrm{ALin}}
+\newcommand{\bwn}{\bigwedge\nolimits}
+\newcommand{\nbf}{\mathbf n}
+\newcommand{\dive}{\mathrm{div}}
+\newcommand{\Alt}{\mathrm{Alt}}
+\newcommand{\Sym}{\mathrm{Sym}}
+
+
+\renewcommand{\epsilon}{\varepsilon}
+
+
+
+
+
+
+\usepackage{tipa} % wierd symboles e.g. \textturnh
+\newcommand{\tipar}{\text{\textrtailr}}
+\newcommand{\tipaz}{\text{\textctyogh}}
+\newcommand{\tipaomega}{\text{\textcloseomega}}
+\newcommand{\tipae}{\text{\textrhookschwa}}
+\newcommand{\tipaee}{\text{\textreve}}
+\newcommand{\tipak}{\text{\texthtk}}
+\newcommand{\mol}{\upmu}
+\newcommand{\dmol}{d\upmu}
+
+
+
+
+\usepackage{tipx}
+\newcommand{\tipxgamma}{\text{\textfrtailgamma}}
+\newcommand{\tipxcc}{\text{\textctstretchc}}
+\newcommand{\tipxphi}{\text{\textqplig}}
+
+
+
+% make some new environment such that we can put line_in math mode in the center.
+
+\newenvironment{Then}
+{Then%
+\hspace{\stretch{1}}}
+{\hspace{\stretch{1}}%
+\phantom{Then}}
+
+
+
+
+
+
+
+
+
+\numberwithin{equation}{section}
+% count the eqation by section countation
+
+
+
+\title{*******}
+\author{{\sc Lin150117}
+	\\
+	{\small \sc Tsinghua University.}\\
+	{\small linzj23@mails.tsinghua.edu.cn}
+}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\img}{Im}
+\DeclareMathOperator{\dd}{d\!}
+\newcommand{\ie}{ \textit{ i.e. } }
+\newcommand{\st}{ \textit{ s.t. }}
+\newcommand{\name}[1]{\textbf{#1}\index{#1}}
+\newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
+
+
+\renewcommand{\|}{\Vert}
+
+
+
+\begin{document}
+\sloppy
+\pagenumbering{arabic}
+\maketitle
+\tableofcontents
+\newpage
+
+\begin{theorem}
+    If  $ B\in\mathbb{R}^{n\times n} $ satisfying  $ ||B||<1 $, then  $ I+B  $ invertible and 
+    \[||(I+B)^{-1}||_2 \leq \frac{1}{1-||B||}\]   
+\end{theorem}
+Cholesky transformation
+
+Doolottle Decomposition
+
+Condition number
+
+\[\mathcal{K}_2(A)^2=\cond(A^TA)\text{ if }A\text{ full of column rank}\]
+\[\cond(A) \geq \frac{|\lambda_1|}{|\lambda_n|}\text{ equality holds if  $ A $ is symmetric matrix}\]
+\[||A||_2^2=\rho(A^TA)=||A^TA||_2\]
+\begin{theorem}
+    If  $ \det A\not=0 $, then 
+    \[\min_{|A+\delta A|=0}\frac{||\delta A||_2}{||A||_2}=\frac{1}{\cond(A)_2}\] 
+\end{theorem}
+Moore-Penrose pseudoinverse
+
+\begin{theorem}
+    For the least squrare equation of  $ Ax=b $, 
+    \[\frac{||\delta x||_2}{||x||_2} \leq \mathcal{K}_x(A)\cdot\frac{||A\delta x||_2}{||Ax||_2}\] 
+\end{theorem}
+Hauseholder transiformation
+
+Givens transoformation
+
+\[R_k(B)=-\ln ||B^k||^{\frac{1}{k}}\]
+\[R(B)=-\ln \rho(B)\]
+Jacobian iteration
+
+Gauss-Seidel iteration
+
+\begin{theorem}
+    
+\end{theorem}
+\begin{theorem}
+    By Steepest Descent Algorithm, 
+    \[||x^k-x^*||_A \leq \left(\frac{\lambda_n-\lambda_1}{\lambda_n+\lambda_1}\right)^k||x^0-x^*||_A\]
+\end{theorem}
+\begin{theorem}
+    In conjugated gradient method,
+    \[P^{(k)}=r^{(k)}+\beta_{k-1}P^{(k-1)}\]
+    with 
+    \[\beta_{k-1}=-\frac{(r^{(k)},AP^{(k-1)})}{(P^{(k-1)},AP^{(k-1)})},r^{(k)}=b-Ax^{(k)}\]
+    And the iteration
+    \[x^{(k+1)}=x^{(k)}+\alpha_kP^{(k)}\]
+    where 
+    \[\alpha_k=\arg\min_{\alpha\in\mathbb R}\varphi(x^{(k)}+\alpha P^{(k)})=\frac{(r^{(k)},P^{(k)})}{(P^{(k)},AP^{(k)})}\]
+    This iteration satsifies
+    \[x^{(k)}=\arg\min_{x-x^{(0)}\in\Span\{P^{(0)},\cdots,P^{(k-1)}\}}\varphi(x)\]
+\end{theorem}
+\begin{theorem}
+     $ (r^{(i)},r^{(j)})=0,i\not=j $
+     
+      $ (AP^{(i)},P^{(j)})=0 ,i\not=j$ 
+
+       $ (r^{(j)},P^{(i)})=0,i<j $ 
+
+        $ \Span\{r^{0},\cdots,r^{(k)}\}=\Span\{P^{(0)},\cdots,P^{(k)}\}=\Span\{r^{(0)},Ar^{(0)},\cdots,A^kr^{(0)}\} $ 
+\end{theorem}
+\begin{theorem}[Arnoldi Elimination]
+    \begin{align*}
+        Aq_k&=Q_kh_k+\beta_kq_{k+1}\\
+        h_k&=Q_k^TAq_k\\
+        \beta_k&=\|Aq_k-Q_kh_k\|\\
+        q_{k+1}&=\frac{Aq_k-Q_kh_k}{\beta_k}
+    \end{align*}
+
+    Then 
+    \[AQ_k=Q_kH_k+h_{k+1,k}q_{k+1}e_k^T\]
+    and 
+    \[AQ_n=Q_nH_n,\,Q_n^TAQ_n=H_n\]
+\end{theorem}
+\begin{theorem}[Lanczos Elimination]
+    For  $ A  $ symmetric, 
+    \[AQ_k=Q_kT_k+\beta_kq_{k+1}e_k^T\]
+    where  $ T_k $ symmetric three triangular matrix. 
+\end{theorem}
+\begin{theorem}[Non-symmetric Lanczos Elimination]
+     $ \omega_iv_j=\begin{cases}
+        0,&i\neq j\\
+        1,&i=j
+     \end{cases} $.
+    \begin{align*}
+        \beta_jv_{j+1}&=Av_j-\alpha_jv_j-\gamma_{j-1}v_{j-1}\\
+        \gamma_{j}\omega_{j+!}&=A^T\omega_j-\alpha_j\omega_j-\beta_{j-1}\omega_{j-1}
+    \end{align*} 
+    Take inner product we obain  $ \alpha_j=\omega_j^TAv_j $.
+    And  $ \beta_j=\sqrt{|\eta_j|} $ for  $ \eta_j=\tilde{v}_{j+1}^T\tilde{\omega}_{j+1} $.   
+
+    It can be derived from 
+    \begin{align*}
+        AV_k&=V_kT_k+\beta_kv_{k+1}e_k^T\\
+        A^TW_k&=W_kT_k^T+\gamma_k\omega_{k+1}e_k^T\\
+        V_k^TW_k=T_k,v_{k+1}^TW_k=0&,\omega_{k+1}^TV_k=0,\omega_{k+1}^Tv_{k+1}=1\\
+        \mathcal{K}_k(A,v_1)&=\Span\{v_1,\cdots,v_k\}\\
+        \mathcal{K}_k(A^T,\omega_1)&=\Span\{\omega_1,\cdots,\omega_k\}
+    \end{align*}
+\end{theorem}
+\begin{theorem}[Conjugate Gradient Method]
+    It follows from the fact that  $ (b-Ax_k)\perp \mathcal{K}_k(A,b) $ if and only if  $ x_k=\arg \min\{\|x-x_*\|_A:x\in \mathcal{K}_k(A,b)\} $.
+    
+    Take  $ q_1=\dps\frac{b}{\|b\|_2} $. Then Lanzos method implies 
+    \[AQ_k=Q_kT_k+\beta_kq_{k+1}e_k^T\] 
+    For  $ x_k=Q_ky_k $, it is equivalent to calculate
+    \[T_ky_k=\beta_1\]
+     $ T_k $ symmetric positive definite, then 
+     \[T_k=L_kD_kL_k^T\]
+     where 
+     \[L_k=\begin{pmatrix}
+        1&0&\cdots&0\\
+        \gamma_1&1&\cdots&0\\
+        \vdots&\vdots&\ddots&\vdots\\
+        0&\cdots&\gamma_{k-1}&1
+     \end{pmatrix},\,D_k=\diag\{\delta_1,\cdots,\delta_k\}\] 
+     Then  $ x_{k+1}=\tilde{P}_{k+1}z_{k+1}=x_k+\zeta_{k+1}\tilde{p}_{k+1} $ where  $ \tilde{P}_k=Q_kL_k^{-T} $.   
+\end{theorem}
+\begin{theorem}[MINRES method]
+     $ A\in \Rbb^{n\times n} $ symmetric, by Lanzos elimination, 
+     \[AQ_k=Q_{k+1}\hat{T}_k\]
+     where  
+    \[T_k=\begin{pmatrix}
+        \alpha_1&\beta_1\\
+        \beta_1&\alpha_2&\ddots\\
+        &\ddots&\ddots&\beta_{k-1}\\
+        &&\beta_{k-1}&\alpha_k\\
+        &&&\beta_k
+    \end{pmatrix}\] 
+     For Givens transformation  $ G_kG_{k-1}\cdots G_1\hat{T}_k=\begin{pmatrix}
+        R_k\\
+        0
+     \end{pmatrix} $.
+     
+     Then suffices to find  $ y $ \st  
+     \[y=\arg\min\|R_ky-t_k\|\]
+\end{theorem}
+\begin{theorem}
+    If  $ \varphi\in C^p $,  $ \varphi(x^*)=\varphi'(x^*)=\varphi''(x^*)=\cdots=\varphi^{(p-1)}(x^*)=0 $, then 
+    \[\dps\lim_{k\to\infty}\frac{e_{k+1}}{e_k^p}=\frac{\varphi^{(p)}(x^*)}{p!}\]  
+\end{theorem}
+\begin{theorem}[Steflensen iteration method]
+     $ \psi(x)=x-\dps\frac{(\varphi(x)-x)^2}{\varphi(\varphi(x))-2\varphi(x)+x} $. 
+     Then fixed points of $ \psi(x) $ are that of  $ \varphi $. If  $ \varphi $ converges of order 1, then  $ \psi $ converges for order 2. If $ \varphi $ converges of order  $ p>1 $, then  $ \psi $ converges of order  $ 2p-1 $. All under the condition that  $ \varphi\in C^{p+1} $.       
+\end{theorem}
+\begin{theorem}
+     $ f(x^*)=0,f'(x^*)\neq 0 $.  $ f\in C^2 $ locally. Then Newton's iteration  $ \varphi(x)=x-\dps\frac{f(x)}{f'(x)} $
+     converges of order 2 locally. And 
+     \[\lim_{k\to\infty}\frac{x_{k+1}-x^*}{(x_k-x^*)^2}=\frac{f''(x^*)}{2f'(x^*)}\]   
+
+     For  $ f(x)=(x-x^*)^mg(x) $, 
+     \[\varphi(x)=x-\frac{f(x)}{f'(x)}=x-\frac{(x-x^*)g(x)}{mg(x)+(x-x^*)g'(x)}\]
+     \[\varphi'(x)=1-\frac{1}{m}\] 
+     So Newton's method converges linearly.
+
+     For  $ \varphi(x)=x-\dps\frac{mf(x)}{f'(x)} $,  $ \varphi'(x^*)=0 $. It converges of at least two.
+     
+     Or  $ \mu(x)=\dps\frac{f(x)}{f'(x)} $. It ha simple root  $ x^* $. Use Newton's method.  
+\end{theorem}
+\begin{theorem}[GeXian]
+     $ f'(x_k)\simeq \dps\frac{f(x_k)-f(x_{k-1})}{x_k-x_{k-1}} $. 
+    
+     If on interval  $ \triangle=[x^*-\delta,x^*+\delta] $  $ f'(x)\neq 0 $ and  $ f\in C^2(\triangle) $.
+     
+      $ M\delta<1 $ where  $ M=\dps\frac{\max_{x\in\triangle}|f''(x)|}{2\min_{x\in \triangle}|f'(x)|} $.
+      
+      Then if  $ x_0,x_1\in \triangle $, it converges of order  $ \dps\frac{1}{2}(1+\sqrt{5}) $.  
+\end{theorem}
+\begin{theorem}
+    Iteration converges locally if  $ \rho(\Psi'(x^*))=\sigma<1 $. 
+\end{theorem}
+\begin{theorem}
+  Newton's method  $ x^{k+1}=x^k-(F'(x^k))^{-1}F(x^k) $ converges of order  $ >1 $  if  $ F'(x) $ invertible and continuous. If  $ \|F'(x)-F'(x^*)\| \leq \gamma\|x-x^*\| $,  $ \forall x\in S $, then  $ \{x^k\} $ converges of at least order 2.   
+\end{theorem}
+\begin{theorem}
+   $ x^{k+1}=x^k-A_k^{-1}F(x^k) $ where 
+   \[\triangle A_k=\arg \min_{A\in Q}\|A\|_F\]
+   under the Frobenius norm and  $ Q=\{A\in \Rbb^{n\times n}:L(A_k+A)p^k=q^k,p^k=x^{k+1}-x^k,q^k=F(x^{k+1})-F(x^k)\} $.
+\end{theorem}
+\begin{lemma}
+   $ A\in \Cbb^{n\times n},B\in \Cbb^{p\times p} $,  $ X\in \Cbb^{n\times p} $ satisfies 
+   \[AX=XB,\,\rank(X)=p\]
+   Then there exists unitary matrix  $ Q\in \Cbb^{n\times n} $ 
+   \[Q^HAQ=T=\begin{pmatrix}
+   T_{11} & T_{12} \\
+   0&T_{22}
+   \end{pmatrix}\]
+   and  $ \sigma(T_{11})=\sigma(A)\cap \sigma(B) $.    
+\end{lemma}
+\begin{theorem}[Schur decomposition]
+     $ A\in \Cbb^{n\times n} $, then there exists unitary matrix  $ Q\in Cbb^{n\times n} $ \st   $ Q^HAQ=U $.  
+\end{theorem}
+\begin{theorem}[Real Schur decomposition]
+   $ A\in \Rbb^{n\times n} $. Then there exists  $ Q\in \Rbb^{n\times n} $ \st 
+   \[Q^TAQ=\begin{pmatrix}
+    R_{11}&R_{12}&\cdots&R_{1m}\\
+    &R_{22}&\cdots&R_{2m}\\
+    &&\ddots&\vdots\\
+    & & &R_{mm}
+   \end{pmatrix}\]  
+\end{theorem}
+\begin{theorem}
+   $ \mu  $ is an eigenvalue of  $ A+E\in \Cbb^{n\times n} $. If  $ X^{-1}AX $ diagonal, then 
+   \[\min_{\lambda\in \sigma(A)}|\lambda-\mu| \leq \|X^{-1}\|_p\cdot\|X\|_p\cdot\|E\|_p\] 
+\end{theorem}
+Condition number w.r.t.  $\lambda $ of  $ A $: $ \dps\frac{1}{|y^Hx|} $  
+\begin{theorem}
+  If  $ A,E $ symmetric in  $ \Rbb^{n\times n} $. Eigenvalues of  $ A,E,A+E $ are 
+  \begin{align*}
+    \lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n\\
+    \nu_1 \geq \nu_2 \geq \cdots \geq \nu_n\\
+    \mu_1 \geq \mu_2 \geq \cdots \geq \mu_n
+  \end{align*}   
+  Then  $  \lambda_i+\nu_n\leq \mu_i \leq \lambda_i+\nu_1 $.
+\end{theorem} 
+Proof use Rayeligh quotient.
+\printindex
+\newpage
+\listoftheorems[ignoreall, show={theorem,proposition}]
+\end{document}
