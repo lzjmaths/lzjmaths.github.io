@@ -1,0 +1,111 @@
+\section{Introduction}
+Discrete (combinatorial) optimization is a subfield of mathematical optimization that consists of finding an optimal object from a finite set of objects, where the set of feasible solution is discrete or can be reduced to a discrete set.
+
+However, usually this feasible solution set is very large (due to combinatorial explosion) and it is computationally infeasible to go through all feasible solutions and find the  one with opimal objective function value.
+
+\begin{example}[Task Assignment]
+    There are  $ n  $ tasks and  $ n $ workers. Each task has an importance score  $ a_i $ and each worker has a skill level  $ b_i $. We need to assign each task to a worker such that the sum of  $ \dps\sum_{i=1}^n a_ib_{\sigma(i)}$  is maximized.  
+\end{example}
+\subsection{Models of Computation: Turing Machines}
+\begin{definition}[A Deterministic Turing Machine(DTM)]
+    It consists of an infinitely-long tape (memory) and a deterministic finite automata that controls the head to move along the tape and read/write symbols from/to the tape cells.
+\end{definition}
+\begin{definition}[Complexity measure]
+    Running time is the number of steps of Turing machine.
+
+    Memory is the number of tape cells used.
+\end{definition}
+
+\begin{definition}[Caveat]
+    No random access of memory 
+    \begin{itemize}
+        \item Single-tape DTM requires  $ \geq n^2 $ steps to detect  $ n $ bit palindromes.
+        \item EAsy to detect palindromes within  $ c_n $ steps on a real computer.  
+    \end{itemize}
+\end{definition}
+\subsection{Models of Computation: word RAM}
+\begin{definition}
+    Each memory location and input/output cell stores a  $ w $-bit integer (assume  $ w \geq \log_2\omega $).
+
+    Primitive Operations:
+\end{definition}
+\subsection{Polynomial Running Time}
+\begin{definition}
+    We say that an algorithm is \textbf{efficient} if its running time is polynomial of input size  $ n $. 
+\end{definition}
+\begin{example}[Task machine]
+    Polynomial-time algorithm: selection sort/inserting sort/quick sort/merge sort.
+
+    Non-polynomial-time algorithm: try all possible matching and output the one with the highest score.
+\end{example}
+\begin{itemize}
+    \item Definition is relatively insensitive to model of computation.
+    \item The poly-times algorithm that people develop have both small constants and small exponents
+    \item Breaking through the exponential barrier is a major challenge.
+\end{itemize}
+\subsection{Notation}
+\begin{definition}
+    $ f(n) $ is  $ O(g(n)) $ if there exist constants  $ c>0 $ and  $ n_0 \geq 1 $ such that  $ 0 \leq f(n) \leq c\cdot g(n) $ for all  $ n \geq n_0 $. 
+    
+     $ f(n) $ is  $ \Omega(g(n)) $ is  $ g(n)\in O(f(n)) $.
+     
+     $ f(n)  $ is  $ \Theta(g(n)) $ is both  $ f(n)\in O(g(n)) $ and  $ g(n)\in O(f(n)) $.   
+\end{definition}
+\subsection{Tentative Syllabus}
+We will introduce three exact discrete optimization algorithms(6 weeks):
+\begin{itemize}
+    \item Greedy algorithms
+    \item Dynamic programming
+    \item Network flows
+\end{itemize}
+And some approximation algorithms for intractable discrete optimization problems(9 weeks)
+\begin{itemize}
+    \item Definition of approximation algorithms
+    \begin{itemize}
+        \item Algorithm techniques: greedy, linear programming relaxation, semidefinite programming relaxation.
+    \end{itemize}
+    \item Hardness of approximation 
+    \begin{itemize}
+        \item Techniques: hardness reductions, Fourier analysis of Boolean functions.
+    \end{itemize}
+    \item Problems studied: Set-Cover, facility location, K-center, Multi-Cut, Max-Cut, $  \cdots $ 
+\end{itemize}
+\section{Greedy Algorithms}
+\begin{example}[Interval Scheduling]
+    Input:  $ n  $ jobs,  $\{ (s_i,f_i)\}_{i=1}^n $. Goal: How to choose jobs with maximized number such that each pair of  intervals do not intersect. 
+\end{example}
+\paragraph{Greedy Framework}
+Consider jobs in order  $ \pi(1),\pi(2),\cdots,\pi(n) $. For each  $ \pi(i) $,  $ i=1,2,\cdots,n $, if  $ \pi(i) $ compatible with all selected jobs, then select  $ \pi(i) $.
+
+The choice of $ \pi $: Earliest-start-time-first, Earliest-finish-time-first, Longest-job-first, Shortest-job-first, etc.
+\begin{theorem}
+    Earliest-finish-time-first greedy returns an optimal solution.
+\end{theorem}
+\begin{proof}
+    Suppose algorithm selects  $ i_1,i_2,\cdots,i_k $, opt selects  $ k'>k $ jobs.
+    
+    Choose an optimal solution agrees with algorithm in first  $ r $ jobs so that  $ r  $ maxmized,  $ j_1,j_2,\cdots,j_{k'} $.
+
+    Obviously,  $ r<k $. Then  $ f_{i_{r+1}}<f_{j_{r+1}} $. Therefore, we can replace  $ i_{r+1} $ with  $ j_{r+1} $ to get another optimal solution, which contradicts to the fact that  $ r $ maxmized.
+\end{proof}
+
+\begin{example}[Interval Partitioning]
+    Input:  $ n $  lectures,  $ \{(s_i,f_i)\}_{i=1}^n $.
+    
+    Goal: Position lectures into minimum number of  classrooms so that in each classroom lectures are compatible.
+\end{example}
+\paragraph{Greedy Framework} Lectures in order  $ \pi(1),\cdots,\pi(n) $, the number of  opening classrooms is zero in the beginning. For each  $ \pi(i) $,
+
+If  $ \exists $ opening classroom  $ j $ \st lecture  $ \pi(i) $ compatible with lectures in  $ j $, then  $ \pi(i) $ $ \rightarrow $ classroom  $ j $.
+
+Else, open a new classroom for  $ \pi(i) $. 
+
+\begin{proof}
+    Introduce a concept \textbf{Depth}:  $ d(t)=  $ Number of lectures active at time  $ t $, and  $ d=\dps\max_{t}\{d(t)\} $.
+    \begin{claim}
+        opt $ \geq  $  $ d $.  
+    \end{claim}   
+    \begin{lemma}
+        alg  $ \leq  $ $ d $  
+    \end{lemma}
+\end{proof}

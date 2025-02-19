@@ -1,0 +1,92 @@
+\section{函数逼近}
+\begin{theorem}[Weierstrass]\label{Weierstrass}
+     $ f(x)\in C([a,b]) $， 则对于 $ \forall \epsilon>0 $，存在一个 $ n $ 次多项式 $ P_n (x)  $ 使得 $ \|f(x)-P_n(x)\|_{\infty}<\epsilon $.    
+\end{theorem}
+\begin{proof}
+    令
+    \begin{equation}
+        B_n^f(x)=\sum_{k=0}^nf(\frac{k}{n})C_n^kx^k(1-x)^{n-k}
+    \end{equation}
+    不妨设 $ f(x)\in C([0,1]) $。
+    注意到 
+    \[\sum_{k=0}^nC_n^kx^k(1-x)^{n-k}=1\]
+    \[\sum_{k=0}^n(nx-k)^2C_n^kx^k(1-x)^{n-k}=nx(1-x)\] 
+    由于 $ f  $ 在 $ [0,1] $ 上一致连续，容易验证成立。 
+\end{proof}
+\begin{theorem}[Weierstrass第二定理]\label{Second Weierstrass}
+    设 $ f\in C_{2\pi} $， $ \forall \epsilon>0  $，存在三角多项式 $ T(x)  $ 使得 $ \forall x\in \Rbb $
+    \[|T(x)-f(x)|<\epsilon,\,\forall x\in [0,2\pi]\]   
+\end{theorem}
+\begin{lemma}
+    设 $ f\in C[0,\pi] $， $ \forall \epsilon>0  $，存在偶的三角多项式 $ T(x)  $ 使得 $ \forall x\in \Rbb $
+    \[|T(x)-f(x)|<\epsilon,\,\forall x\in [0,\pi]\]   
+\end{lemma}
+\begin{proof}
+    考虑 $ f(\arccos x)\in C[-1,1] $，则由Theorem \ref{Weierstrass} 即得。
+\end{proof}
+因此由Theorem \ref{Weierstrass}和引理很容易得到Theorem \ref{Second Weierstrass}是正确的。
+
+第二定理推第一定理：设 $ f(x)\in C([-\pi,\pi]) $，令 
+\[g(x)=f(x)+\dps\frac{f(-\pi)-f(\pi)}{2\pi}x,\,x\in [-\pi ,\pi]\]
+可延拓至 $ \Rbb  $ 上的周期函数。
+
+设 $ X  $ 为紧距离空间， $ A\subset C(X) $。称 $ A  $ \name{分离} $ X  $ 中的点，如果 $ \forall x,y\in X $， $ x\neq y $， 存在 $ f\in A  $ 使得
+\[f(x)\neq f(y)\]    
+\begin{theorem}[Stone]
+    设 $ X  $ 是紧距离空间，  $ A  $ 是 $ C(X)  $ 的子代数。若 $ 1\in A $，且 $ A  $ 分离 $ X  $ 中的点，则 $ A  $ 在 $ C(X)  $ 中稠密
+\end{theorem}
+
+设 $ p\in\Pbb_n=\{\text{小于等于 $ n $ 次多项式全体}\} $。令 
+\[\Delta(p)=\max_{x\in [a,b]}|f(x)-p(x)|\]
+\[E_n=\inf_{p\in \Pbb_n}\Delta(p)\]
+\begin{theorem}[Borel]
+    对于 $ \forall f(x)\in C[a,b]$，存在 $ p^*\in \Pbb_n $ 使得
+    \[\Delta(p^*)=E_n\]  
+\end{theorem}
+记 $ \epsilon(x)=p(x)-f(x) $，若
+\[|\epsilon(x_0)|=\Delta(p)\]
+则称 $ x_0 $ 为\name{偏离点}。
+
+若 $ \epsilon(x_0)>0 $，则称为正偏离点，反之为负偏离点。
+
+\begin{lemma}
+    若 $ p(x)  $ 为 $ f(x) $ 的最佳逼近多项式，则正负偏离点必都存在 
+\end{lemma}
+只需作一定的微调。
+
+\begin{theorem}[Vall{\'e}e-Poussin]
+    设 $ p(x)\in \Pbb_n $， $ \epsilon(x) $ 在 $ x_1<x_2<\cdots<x_N $ 上取值为非零的正负相间值 $ \lambda_1,-\lambda_2,\cdots,(-1)^{N-1}\lambda_N $， $ \lambda_j>0 $， $ j=1,\cdots,N $ 且 $ N \geq n+2 $。则 $ \forall  $  $ Q(x)\in \Pbb_n $
+    \[\Delta(Q) \geq \min_{1 \leq i \leq N}\lambda_i\]        
+\end{theorem}
+证明考虑 $ P(x)-Q(x) $ 的正负性和零点的关系.
+\begin{theorem}[Chebyshev]
+    对于任意 $ f(x)\in C[a,b]  $， $ \Pbb_n  $ 中的最佳逼近多项式存在且唯一，且 $ p(x)  $ 为最佳逼近多项式当且仅当存在 $ a \leq x_1<x_2<\cdots<x_N \leq b $，  $ N \geq n+2 $ 使得
+    \[|\epsilon(x_j)|=\Delta(p),\,\epsilon(x_j)=(-1)^{j-1}\epsilon(x_1),\,j=1,\cdots,N\]   
+\end{theorem}
+\begin{definition}[连续模]
+    设 $ f(x)  $ 定义于 $ [a,b] $ 上，则 
+    \[\omega(t)=\omega(t,f)=\sup_{|x-y| \leq t}|f(x)-f(y)|\] 
+    称为 $ f(x) $ 在 $ [a,b] $ 上的\name{连续模}  
+\end{definition}
+\begin{proposition}
+    \,\\
+    \begin{enumerate}
+        \item 若 $ f(x) \in C[a,b] $，则 $ \omega(t) $ 是 $ t $ 的连续非减函数且 $ \dps\lim_{t\to0}\omega(t)=0 $.
+        \item （半可加性） $ \forall t_1,t_2 \geq 0 $， $ \omega(t_1+t_2) \leq \omega(t_1)+\omega(t_2) $。
+        \item 若 $ \omega(t)=o(t) $， $ t\rightarrow 0 $，则 $ f(x)\equiv  $ constant.         
+    \end{enumerate}
+\end{proposition}
+\begin{definition}
+    若 $ \omega(t,f) \leq Mt^\alpha $， $ 0<\alpha \leq 1 $，则称 $ f(x) $ 在 $ [a,b] $ 上满足 $ \alpha $ 阶Lipschitz条件，记作 $ f(x)\in \mathrm{Lip}\alpha $     
+\end{definition}
+\begin{theorem}[Jackson]
+    设 $ f(x)\in C_{2\pi} $，则
+    \[E_n(f) \leq 12\omega(\frac{1}{n},f)\] 
+\end{theorem}
+\begin{proof}
+    证明考虑 $ \dps\Phi_n(t)=\frac{1}{A_n}\left(\frac{\sin\frac{nt}{2}}{\sin\frac{t}{2}}\right)^4 $，其在弱的意义下逼近 $ \Delta $ 函数 
+\end{proof}
+\begin{corollary}
+     $ f\in C_{2\pi} $ 且 $ f'\in C_{2\pi} $，则 
+    \[E_n(f) \leq \dps\frac{12}{n}\|f'\|_{\infty}\]  
+\end{corollary}

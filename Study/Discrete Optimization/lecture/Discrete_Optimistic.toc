@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Models of Computation: Turing Machines}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Models of Computation: word RAM}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Polynomial Running Time}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Notation}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Tentative Syllabus}{4}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Greedy Algorithms}{4}{section.2}%
+\contentsline {paragraph}{Greedy Framework}{5}{section*.2}%
+\contentsline {paragraph}{Greedy Framework}{5}{section*.3}%
+\contentsline {section}{List of Theorems}{6}{section*.4}%
