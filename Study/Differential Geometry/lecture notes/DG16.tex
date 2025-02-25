@@ -27,7 +27,7 @@ Given  $ (M,\mc O) $,  $ p\in M $, a basis  $ e_1,\cdots,e_n $ of  $ T_pM $ is c
 
 A chart  $ U\xrightarrow{\varphi}V\overset{\text{open}}{\subset}\mathbb{R}^n $ is \textbf{oriented}\index{oriented chart} if  $ \varphi^*(\stdO)=\mathcal{O}|_U $.
 
-A smooth atlas  $ \left\{U_\alpha\xrightarrow{\varphi_\alpha}V_\alpha\right\}_{\alpha\in\mathcal{A}} $ is \textbf{oriented}\index{oriented atlas} if each chart  $ U_\alpha\xrightarrow{V_\alpha} $ is oriented.
+A smooth atlas  $ \left\{U_\alpha\xrightarrow{\varphi_\alpha}V_\alpha\right\}_{\alpha\in\mathcal{A}} $ is \textbf{oriented}\index{oriented atlas} if each chart  $ U_\alpha\xrightarrow{\varphi_\alpha}V_\alpha $ is oriented.
 
 A smooth atlas  $ \left\{U_\alpha\xrightarrow{\varphi_\alpha}V_\alpha\right\}_{\alpha\in\mathcal{A}}  $ is called \textbf{positive}\index{positive atlas} if  $ \forall \alpha,\beta\in\mathcal{A} $,
 \[\varphi_{\alpha\beta}=\varphi_\beta\circ\varphi_\alpha':\varphi_\alpha(U_\alpha\cap U_\beta)\rightarrow\varphi_\beta(U_\alpha\cap U_\beta)\text{ is orientation preserving}\] 
@@ -58,7 +58,7 @@ Define  $ \int_M\omega=\int_M f\dd \mu $ where  $ \mu $ is the standard Lebesgue
 \end{proof}
 So we can define the integral over special  $ \omega $ and  general  $ M $.
 \begin{definition}
-   If  $ \omega\in  $\name{$ \Omega_s^n(M) $} $ =\{\text{$ n $-forms with "small" support}\} $ \\ $  = \{\omega\in\Omega_c^n(M)|\exists\text{oriented chart  $ \varphi:U\xrightarrow{ \cong} $ \st }\Supp(\omega)\subset U\} $.
+   If  $ \omega\in  $\name{$ \Omega_s^n(M) $} $ =\{\text{$ n $-forms with "small" support}\} $ \\ $  = \{\omega\in\Omega_c^n(M)|\exists\text{oriented chart  $ \varphi:U\xrightarrow{ \cong}V $ \st }\Supp(\omega)\subset U\} $.
    
    We define  $ \int_M\omega:=\int_V\varphi^{-1,*}(\omega) $ 
 \end{definition} 
@@ -177,7 +177,7 @@ Recall that if  $ M $ is  $ n $ dimensional manifold with boundary, then  $ N=\p
     
     \begin{equation*}
         \begin{aligned}
-            \int_{\Rbb_{ \leq 0}\times \Rbb^{n-1}}\dd \omega'&=\int_{\Rbb^{n-1}}\left(\int_{\Rbb_{\leq 0}}\frac{\partial f^1}{\partial x^1}\dd x^1\right)\dd x^2\wedge\cdots\wedge x^n\\
+            \int_{\Rbb_{ \leq 0}\times \Rbb^{n-1}}\dd \omega'&=\int_{\Rbb^{n-1}}\left(\int_{\Rbb_{\leq 0}}\frac{\partial f^1}{\partial x^1}\dd x^1\right)\dd x^2\wedge\cdots\wedge\dd x^n\\
             &=\int_{\Rbb^{n-1}}\left(f^1(0,x_2,\cdots,x_n)-\dps\lim_{x_1\to\infty}f^1(x_1,x_2,\cdots,x_n)\right)\dd x^2\cdots\wedge \dd x^n\\
             &=\int_{\Rbb^{n-1}}f^1(0,x^2,\cdots,x^n)\dd x^2\wedge\dd x^3\wedge\cdots\wedge\dd x^n\\
             &=\int_{\Rbb^{n-1}}\iota^*(\omega')

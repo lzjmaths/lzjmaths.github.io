@@ -31,8 +31,8 @@
   \item $ \mathrm  {Sym}^n(V) $, \hyperpage{41}
   \item $ \mathrm  {Vol}(D) $, \hyperpage{73}
   \item $ \mathrm  {gl}(n,\mathbb  {R}) $, \hyperpage{26}
-  \item $ k $-boundary, \hyperpage{79}
-  \item $ k $-cycles, \hyperpage{79}
+  \item $ k $-boundary, \hyperpage{80}
+  \item $ k $-cycles, \hyperpage{80}
   \item $ k $-form, \hyperpage{42}
   \item $ n $-tensor, \hyperpage{40}
   \item $GL(n),O(n),SO(n),U(n),SU(n)$, \hyperpage{7}
@@ -120,7 +120,7 @@
   \item Hamiltonian vector field, \hyperpage{74}
   \item homogeneous space, \hyperpage{7}
   \item homology, \hyperpage{79}
-  \item Hopf map, \hyperpage{82}
+  \item Hopf map, \hyperpage{83}
   \item hyperbolic, \hyperpage{103}
 
   \indexspace
