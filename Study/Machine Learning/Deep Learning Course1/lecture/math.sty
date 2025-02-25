@@ -1,0 +1,565 @@
+% !TeX spellcheck = en_US
+% !TEX program = pdflatex
+\usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
+%\usepackage{fullpage}
+\usepackage{mathtools} % perfect math mode, but seems not well for underbrace. It is recommended to use \begingroup in the file.
+\let\underbrace\overbrace\relax
+\usepackage{amsmath,amscd,amssymb,amsthm,mathrsfs,amsfonts,layout,indentfirst,graphicx,caption,mathabx, stmaryrd,appendix,calc,imakeidx,upgreek,amsbsy,thmtools} % mathabx for \wtidecheck
+%\usepackage{ulem} %wave underline
+\usepackage[dvipsnames]{xcolor}
+\usepackage{palatino}  %template
+
+\usepackage{stmaryrd}
+
+
+\usepackage{slashed} % Dirac operator
+\usepackage{mathrsfs} % Enable using \mathscr
+%\usepackage{eufrak}  another template/font
+\usepackage{extarrows} % long equal sign, \xlongequal{blablabla}
+% \usepackage{pdfMsym}
+\usepackage{enumitem} % enumerate label change e.g. [label=(\alph*)]  shows (a) (b) 
+
+\usepackage{comment} % hide something
+
+
+% \usepackage{titlesec}
+% \usepackage{etoolbox}
+% \pretocmd{\section}{\refstepcounter{section}\label{sec:\thesection}}{}{}
+% \AtBeginEnvironment{theorem}{%
+% 	\refstepcounter{theorem}%
+% 	\edef\theoremname{\theoremname}% 获取定理的名字（如果有的话）
+% 	\@ifundefined{theoremname}
+%     {% 如果没有名字，只使用编号
+%      \label{thm:\thesection.\thetheorem}%
+%     }
+%     {% 如果有名字，标签包含编号和名字
+%      \label{thm:\thesection.\thetheorem.\theoremname}%
+%     }
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{fontspec}
+%\setmainfont{Palatino Linotype}
+%\usepackage{emoji}
+
+
+% emoji, use lualatex  remove \usepackage{palatino}
+
+%%%%%%%%%%%%%
+
+
+\usepackage{CJK}   % Chinese package
+\usepackage{pifont}
+
+
+
+
+\usepackage{csquotes} % \begin{displayquote}   \begin{displaycquote}  for quotation
+\usepackage{epigraph}   %\epigraph{}{}  for quotation
+%\pmb  mandatory math bold 
+
+\usepackage{fancyhdr} % date in footer
+
+
+
+% 设置章节标题格式
+% \titleformat{\section}[hang]{\normalfont\huge\bfseries}{\thesection}{2pc}{}
+
+% \pagestyle{fancy}
+% \fancyhead[L]{\rightmark}  % 左侧显示章节名
+% \fancyhead[C]{}           % 中间清空
+% \fancyhead[R]{}           % 右侧清空
+\pagestyle{plain}
+
+%\usepackage{soul}  %\ul underline break line automatically
+
+\usepackage{ulem}  % \uline  underline break line   also    \uwave
+
+\usepackage{relsize} % use \mathlarger \larger \text{\larger[2]$...$} to enlarge the size of math symbols
+
+\usepackage{verbatim}  % comment environment
+
+
+\usepackage{halloweenmath} % Interesting halloween math symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+% box around equations   \tcboxmath
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% circled colon and thick colon \hcolondel and \colondel
+
+\usepackage{pdfrender}
+
+\newcommand*{\hollowcolon}{%
+	\textpdfrender{
+		TextRenderingMode=Stroke,
+		LineWidth=.1bp,
+	}{:}%
+}
+
+\newcommand{\hcolondel}[1]{%
+	\mathopen{\hollowcolon}#1\mathclose{\hollowcolon}%
+}
+\newcommand{\colondel}[1]{%
+	\mathopen{:}#1\mathclose{:}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{setspace}  
+\setstretch{1.6}
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+\usepackage{tikz-cd}
+\usepackage[nottoc]{tocbibind}   % Add  reference to ToC
+
+
+\makeindex
+
+
+% The following set up the line spaces between items in \thebibliography
+\usepackage{lipsum}  
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+	\OLDthebibliography{#1}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{2pt} 
+}
+
+
+%\hyperref{page.10}{...}
+
+\allowdisplaybreaks  %allow aligns to break between pages
+\usepackage{latexsym}
+\usepackage{chngcntr}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue, linktocpage,
+%pagebackref
+]{hyperref}
+\hypersetup{ urlcolor=cyan,
+	citecolor=[rgb]{0,0.5,0}}
+
+
+\setcounter{tocdepth}{2}	 %hide subsections in the content
+
+
+\counterwithin{figure}{section}
+
+\counterwithin*{footnote}{section}   % Footnote numbering is recounted from the beginning of each subsection
+
+
+
+
+% \pagestyle{plain}
+
+% \captionsetup[figure]
+% {
+% 	labelsep=none	
+% }
+% 控制图表结构
+
+
+
+
+
+
+
+
+
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}[definition]{Example}
+\newtheorem{exercise}[definition]{Exercise}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{convention}[definition]{Convention}
+\newtheorem{priniple}[definition]{Principle}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem*{axiom}{Axiom}
+\newtheorem{coa}[definition]{Theorem}
+\newtheorem{srem}[definition]{$\star$ Remark}
+\newtheorem{seg}[definition]{$\star$ Example}
+\newtheorem{sexe}[definition]{$\star$ Exercise}
+\newtheorem{sdf}[definition]{$\star$ Definition}
+\newtheorem{question}{Question}
+\theoremstyle{remark}
+\newtheorem{note}{Note}
+\newtheorem*{claim}{Claim}
+
+
+\newtheorem{problem}{\color{red}Problem}[section]
+%\renewcommand*{\theprob}{{\color{red}\arabic{section}.\arabic{prob}}}
+\newtheorem{sprob}[problem]{\color{red}$\star$ Problem}
+%\renewcommand*{\thesprob}{{\color{red}\arabic{section}.\arabic{sprob}}}
+% \newtheorem{ssprob}[prob]{$\star\star$ Problem}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{Conclusion}[definition]{Conclusion}
+\newtheorem{thd}[definition]{Theorem-Definition}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{sthm}[definition]{$\star$ Theorem}
+\newtheorem{slm}[definition]{$\star$ Lemma}
+
+\newtheorem{spp}[definition]{$\star$ Proposition}
+\newtheorem{scorollary}[definition]{$\star$ Corollary}
+\newtheorem{fact}[definition]{Fact}
+
+\newtheorem{cond}{Condition}
+\newtheorem{Mthm}{Main Theorem}
+\renewcommand{\thecond}{\Alph{cond}} % "letter-numbered" theorems
+\renewcommand{\theMthm}{\Alph{Mthm}} % "letter-numbered" theorems
+
+
+%\substack   multiple lines under sum
+%\underset{b}{a}   b is under a
+
+
+% Remind: \overline{L_0}
+
+
+
+\usepackage{calligra}
+\DeclareMathOperator{\shom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+\DeclareMathOperator{\sext}{\mathscr{E}\text{\kern -3pt {\calligra\large xt}}\,}
+\DeclareMathOperator{\Rel}{\mathscr{R}\text{\kern -3pt {\calligra\large el}~}\,}
+\DeclareMathOperator{\sann}{\mathscr{A}\text{\kern -3pt {\calligra\large nn}}\,}
+\DeclareMathOperator{\send}{\mathscr{E}\text{\kern -3pt {\calligra\large nd}}\,}
+\DeclareMathOperator{\stor}{\mathscr{T}\text{\kern -3pt {\calligra\large or}}\,}
+%write mathscr Hom (and so on) 
+
+\usepackage{aurical}
+\DeclareMathOperator{\VVir}{\text{\Fontlukas V}\text{\kern -0pt {\Fontlukas\large ir}}\,}
+
+\newcommand{\vol}{\text{\Fontlukas V}}
+\newcommand{\dvol}{d~\text{\Fontlukas V}}
+% perfect Vol symbol
+
+\usepackage{aurical}
+\usepackage[T1]{fontenc}
+
+
+
+
+
+
+
+
+\newcommand{\fk}{\mathfrak}
+\newcommand{\mc}{\mathcal}
+\newcommand{\wtd}{\widetilde}
+\newcommand{\wht}{\widehat}
+\newcommand{\wch}{\widecheck}
+\newcommand{\ovl}{\overline}
+\newcommand{\udl}{\underline}
+\newcommand{\tr}{\mathrm{tr}} %transpose
+\newcommand{\Tr}{\mathrm{T}}
+\newcommand{\End}{\mathrm{End}} %endomorphism
+\newcommand{\idt}{\mathbf{1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Conf}{\mathrm{Conf}}
+\newcommand{\Res}{\mathrm{Res}}
+\newcommand{\res}{\mathrm{res}}
+\newcommand{\KZ}{\mathrm{KZ}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\coev}{\mathrm{coev}}
+\newcommand{\opp}{\mathrm{opp}}
+\newcommand{\Rep}{\mathrm{Rep}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\Dom}{\mathrm{Dom}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\con}{\mathrm{c}}
+\newcommand{\uni}{\mathrm{u}}
+\newcommand{\ssp}{\mathrm{ss}}
+\newcommand{\di}{\slashed d}
+\newcommand{\Diffp}{\mathrm{Diff}^+}
+\newcommand{\Diff}{\mathrm{Diff}}
+\newcommand{\PSU}{\mathrm{PSU}(1,1)}
+\newcommand{\Vir}{\mathrm{Vir}}
+\newcommand{\Witt}{\mathscr W}
+\newcommand{\Span}{\mathrm{Span}}
+\newcommand{\pri}{\mathrm{p}}
+\newcommand{\ER}{E^1(V)_{\mathbb R}}
+\newcommand{\prth}[1]{( {#1})}
+\newcommand{\bk}[1]{\langle {#1}\rangle}
+\newcommand{\bigbk}[1]{\big\langle {#1}\big\rangle}
+\newcommand{\Bigbk}[1]{\Big\langle {#1}\Big\rangle}
+\newcommand{\biggbk}[1]{\bigg\langle {#1}\bigg\rangle}
+\newcommand{\Biggbk}[1]{\Bigg\langle {#1}\Bigg\rangle}
+\newcommand{\GA}{\mathscr G_{\mathcal A}}
+\newcommand{\vs}{\varsigma}
+\newcommand{\Vect}{\mathrm{Vec}}
+\newcommand{\Vectc}{\mathrm{Vec}^{\mathbb C}}
+\newcommand{\scr}{\mathscr}
+\newcommand{\sjs}{\subset\joinrel\subset}
+\newcommand{\Jtd}{\widetilde{\mathcal J}}
+\newcommand{\gk}{\mathfrak g}
+\newcommand{\hk}{\mathfrak h}
+\newcommand{\xk}{\mathfrak x}
+\newcommand{\yk}{\mathfrak y}
+\newcommand{\zk}{\mathfrak z}
+\newcommand{\pk}{\mathfrak p}
+\newcommand{\hr}{\mathfrak h_{\mathbb R}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\DHR}{\mathrm{DHR}_{I_0}}
+\newcommand{\Repi}{\mathrm{Rep}_{\wtd I_0}}
+\newcommand{\im}{\mathbf{i}}
+\newcommand{\Co}{\complement}
+%\newcommand{\Cu}{\mathcal C^{\mathrm u}}
+\newcommand{\RepV}{\mathrm{Rep}^\uni(V)}
+\newcommand{\RepA}{\mathrm{Rep}(\mathcal A)}
+\newcommand{\RepN}{\mathrm{Rep}(\mathcal N)}
+\newcommand{\RepfA}{\mathrm{Rep}^{\mathrm f}(\mathcal A)}
+\newcommand{\RepAU}{\mathrm{Rep}^\uni(A_U)}
+\newcommand{\RepU}{\mathrm{Rep}^\uni(U)}
+\newcommand{\RepL}{\mathrm{Rep}^{\mathrm{L}}}
+\newcommand{\HomL}{\mathrm{Hom}^{\mathrm{L}}}
+\newcommand{\EndL}{\mathrm{End}^{\mathrm{L}}}
+\newcommand{\Bim}{\mathrm{Bim}}
+\newcommand{\BimA}{\mathrm{Bim}^\uni(A)}
+%\newcommand{\shom}{\scr Hom}
+\newcommand{\divi}{\mathrm{div}}
+\newcommand{\sgm}{\varsigma}
+\newcommand{\SX}{{S_{\fk X}}}
+\newcommand{\DX}{D_{\fk X}}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\bsb}{\boldsymbol}
+\newcommand{\blt}{\bullet}
+\newcommand{\Vbb}{\mathbb V}
+\newcommand{\Ubb}{\mathbb U}
+\newcommand{\Xbb}{\mathbb X}
+\newcommand{\Kbb}{\mathbb K}
+\newcommand{\Abb}{\mathbb A}
+\newcommand{\Wbb}{\mathbb W}
+\newcommand{\Mbb}{\mathbb M}
+\newcommand{\Gbb}{\mathbb G}
+\newcommand{\Cbb}{\mathbb C}
+\newcommand{\Nbb}{\mathbb N}
+\newcommand{\Zbb}{\mathbb Z}
+\newcommand{\Qbb}{\mathbb Q}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\Rbb}{\mathbb R}
+\newcommand{\Ebb}{\mathbb E}
+\newcommand{\Dbb}{\mathbb D}
+\newcommand{\Hbb}{\mathbb H}
+\newcommand{\cbf}{\mathbf c}
+\newcommand{\Rbf}{\mathbf R}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\btl}{\blacktriangleleft}
+\newcommand{\btr}{\blacktriangleright}
+\newcommand{\svir}{\mathcal V\!\mathit{ir}}
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Cok}{\mathrm{Coker}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\low}{\mathrm{low}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Rng}{\mathrm{Rng}}
+\newcommand{\vN}{\mathrm{vN}}
+\newcommand{\Ebf}{\mathbf E}
+\newcommand{\Nbf}{\mathbf N}
+\newcommand{\Stb}{\mathrm {Stb}}
+\newcommand{\SXb}{{S_{\fk X_b}}}
+\newcommand{\pr}{\mathrm {pr}}
+\newcommand{\SXtd}{S_{\wtd{\fk X}}}
+\newcommand{\univ}{\mathrm {univ}}
+\newcommand{\vbf}{\mathbf v}
+\newcommand{\ubf}{\mathbf u}
+\newcommand{\wbf}{\mathbf w}
+\newcommand{\CB}{\mathrm{CB}}
+\newcommand{\Perm}{\mathrm{Perm}}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\Lss}{{L_{0,\mathrm{s}}}}
+\newcommand{\Lni}{{L_{0,\mathrm{n}}}}
+\newcommand{\UPSU}{\widetilde{\mathrm{PSU}}(1,1)}
+\newcommand{\Sbb}{{\mathbb S}}
+\newcommand{\Gc}{\mathscr G_c}
+\newcommand{\Obj}{\mathrm{Obj}}
+\newcommand{\bpr}{{}^\backprime}
+\newcommand{\fin}{\mathrm{fin}}
+\newcommand{\Ann}{\mathrm{Ann}}
+\newcommand{\Real}{\mathrm{Re}}
+\newcommand{\Imag}{\mathrm{Im}}
+%\newcommand{\cl}{\mathrm{cl}}
+\newcommand{\Ind}{\mathrm{Ind}}
+\newcommand{\Supp}{\mathrm{Supp}}
+\newcommand{\Specan}{\mathrm{Specan}}
+\newcommand{\red}{\mathrm{red}}
+\newcommand{\uph}{\upharpoonright}
+\newcommand{\Mor}{\mathrm{Mor}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\Jac}{\mathrm{Jac}}
+\newcommand{\emb}{\mathrm{emb}}
+\newcommand{\Sg}{\mathrm{Sg}}
+\newcommand{\Nzd}{\mathrm{Nzd}}
+\newcommand{\Owht}{\widehat{\scr O}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Tor}{\mathrm{Tor}}
+\newcommand{\Com}{\mathrm{Com}}
+\newcommand{\Mod}{\mathrm{Mod}}
+\newcommand{\nk}{\mathfrak n}
+\newcommand{\mk}{\mathfrak m}
+\newcommand{\Ass}{\mathrm{Ass}}
+\newcommand{\depth}{\mathrm{depth}}
+\newcommand{\Coh}{\mathrm{Coh}}
+\newcommand{\Gode}{\mathrm{Gode}}
+\newcommand{\Fbb}{\mathbb F}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Modf}{\mathrm{Mod}^{\mathrm f}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Nbh}{\mathrm{Nbh}}
+\newcommand{\Pnbh}{\mathrm{PNbh}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\LSC}{\mathrm{LSC}}
+\newcommand{\USC}{\mathrm{USC}}
+\newcommand{\Ess}{\mathrm{Rng}^{\mathrm{ess}}}
+\newcommand{\Jbf}{\mathbf{J}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Lin}{\mathrm{Lin}}
+\newcommand{\ALin}{\mathrm{ALin}}
+\newcommand{\bwn}{\bigwedge\nolimits}
+\newcommand{\nbf}{\mathbf n}
+\newcommand{\dive}{\mathrm{div}}
+\newcommand{\Alt}{\mathrm{Alt}}
+\newcommand{\Sym}{\mathrm{Sym}}
+
+
+
+\renewcommand{\epsilon}{\varepsilon}
+% \renewcommand{\phi}{\varphi}
+
+
+
+
+
+\usepackage{tipa} % wierd symboles e.g. \textturnh
+\newcommand{\tipar}{\text{\textrtailr}}
+\newcommand{\tipaz}{\text{\textctyogh}}
+\newcommand{\tipaomega}{\text{\textcloseomega}}
+\newcommand{\tipae}{\text{\textrhookschwa}}
+\newcommand{\tipaee}{\text{\textreve}}
+\newcommand{\tipak}{\text{\texthtk}}
+\newcommand{\mol}{\upmu}
+\newcommand{\dmol}{d\upmu}
+
+
+
+
+\usepackage{tipx}
+\newcommand{\tipxgamma}{\text{\textfrtailgamma}}
+\newcommand{\tipxcc}{\text{\textctstretchc}}
+\newcommand{\tipxphi}{\text{\textqplig}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\numberwithin{equation}{section}
+% count the eqation by section countation
+
+
+
+\title{Differential Geometry}
+\author{
+	{{\bf Instructor:} Jianfeng Lin}\\
+	{{\bf Notes Taker:} Zejin Lin}\\
+	{\small \sc Tsinghua University.}\\
+	{\small linzj23@mails.tsinghua.edu.cn}\\
+	{\small \href{lzjmaths.github.io}{lzjmaths.github.io}}
+}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\img}{Im}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ie}{ \textit{ i.e. } }
+\newcommand{\st}{ \textit{ s.t. }}
+\newcommand{\name}[1]{\textbf{#1}\index{#1}}
+\newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
+\newcommand{\stdO}{\mathcal{O}_{\mathrm{std}}}
+\newcommand{\stdwedge}[1]{\dd {#1}^1\wedge\cdots\wedge\dd {#1}^n}
+\newcommand{\stddownwedge}[1]{\dd {#1}_1\wedge\cdots\wedge\dd {#1}_n}
+
+\newcommand{\opensub}{\overset{\text{open}}{\subset}}
+\newcommand{\chart}[2]{({#1}_\alpha,{#2}^1,\cdots,{#2}^n)}
+\newcommand{\<}{\left<}
+\renewcommand{\>}{\right>}
+\renewcommand{\|}{\Vert}
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\newcommand{\Romannumer}[1]{\mathrm{\uppercase\expandafter{\romannumeral#1}}}
+\newcommand{\rot}{\mathrm{rot}}
+
+\renewcommand{\div}{\mathrm{div}}
+%\makeindex[columns=2,title=Index, options=-s example_style.ist]
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.18}
+% \usetikzlibrary{external}
+% \tikzexternalize[prefix=figs/]
+
+
+\usepackage{chemarrow}
+
+% \usepackage{tikz-3dplot} 
+% \renewcommand{\xrightarrow}[2]{\autorightarrow{#1}{#2}}
+
+% \excludecomment{proof}
+% \excludecomment{remark}
+% \excludecomment{definition}
+% \excludecomment{example}
+% \excludecomment{exercise}
+
+\tikzset{
+  curarrow/.style={
+  rounded corners=8pt,
+  execute at begin to={every node/.style={fill=red}},
+    to path={-- ([xshift=-50pt]\tikztostart.center)
+    |- (#1) node[fill=white] {$\scriptstyle d$}
+    -| ([xshift=50pt]\tikztotarget.center)
+    -- (\tikztotarget)}
+    }
+}

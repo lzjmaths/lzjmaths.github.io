@@ -1,4 +1,6 @@
 This is makeindex, version 2.17 [TeX Live 2023] (kpathsea + Thai support).
-Scanning input file Discrete_Optimistic.idx...done (0 entries accepted, 0 rejected).
-Nothing written in Discrete_Optimistic.ind.
+Scanning input file Discrete_Optimistic.idx....done (5 entries accepted, 0 rejected).
+Sorting entries....done (14 comparisons).
+Generating output file Discrete_Optimistic.ind....done (15 lines written, 0 warnings).
+Output written in Discrete_Optimistic.ind.
 Transcript written in Discrete_Optimistic.ilg.

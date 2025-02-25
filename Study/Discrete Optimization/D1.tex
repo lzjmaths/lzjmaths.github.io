@@ -71,6 +71,7 @@ And some approximation algorithms for intractable discrete optimization problems
     \item Problems studied: Set-Cover, facility location, K-center, Multi-Cut, Max-Cut, $  \cdots $ 
 \end{itemize}
 \section{Greedy Algorithms}
+\subsection{Interval Scheduling}
 \begin{example}[Interval Scheduling]
     Input:  $ n  $ jobs,  $\{ (s_i,f_i)\}_{i=1}^n $. Goal: How to choose jobs with maximized number such that each pair of  intervals do not intersect. 
 \end{example}
@@ -89,6 +90,7 @@ The choice of $ \pi $: Earliest-start-time-first, Earliest-finish-time-first, Lo
     Obviously,  $ r<k $. Then  $ f_{i_{r+1}}<f_{j_{r+1}} $. Therefore, we can replace  $ i_{r+1} $ with  $ j_{r+1} $ to get another optimal solution, which contradicts to the fact that  $ r $ maxmized.
 \end{proof}
 
+\subsection{Interval Partitioning}
 \begin{example}[Interval Partitioning]
     Input:  $ n $  lectures,  $ \{(s_i,f_i)\}_{i=1}^n $.
     
@@ -103,9 +105,18 @@ Else, open a new classroom for  $ \pi(i) $.
 \begin{proof}
     Introduce a concept \textbf{Depth}:  $ d(t)=  $ Number of lectures active at time  $ t $, and  $ d=\dps\max_{t}\{d(t)\} $.
     \begin{claim}
-        opt $ \geq  $  $ d $.  
+        OPT $ \geq  $  $ d $.  
     \end{claim}   
     \begin{lemma}
-        alg  $ \leq  $ $ d $  
+        Alg  $ \leq  $ $ d $  
     \end{lemma}
+    \begin{proof}
+        Assume for contradiction.
+
+        At some point, Alg opens  $ d+1  $ classroom.
+
+        Denote the lecture being considered by  $ i $. Then it is not compatible with other  $ d $ lectures. Hence, there should be a time when  $ d+1 $ lectures are active, which causes contradiction.  
+    \end{proof}
 \end{proof}
+
+

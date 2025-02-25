@@ -1,0 +1,4 @@
+\contentsline {section}{\numberline {1}Basic Concepts}{2}{section.1}%
+\contentsline {paragraph}{Ways to chart quantitative data}{2}{section*.2}%
+\contentsline {section}{Index}{3}{section*.3}%
+\contentsline {section}{List of Theorems}{4}{section*.4}%

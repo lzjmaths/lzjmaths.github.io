@@ -1,0 +1,126 @@
+\begin{claim}
+    Any cycle  $ C $ and cutset $ D $ has intersection  $ |C\cap D| $ even.   
+\end{claim}
+
+\textbf{Fundamental Cycle}: Given  $ G $ and spanning tree  $ T\subset E $, for each  $ e\in E\setminus T $, the unique cycle in  $ T\cup\{e\} $ is called \name{Fundamental cycle}.
+
+\begin{claim}
+    For a fundamental cycle  $ C $ related with  $ e $, $ \forall f\in C\cap T $,  $ (T\cup \{e\})\setminus\{f\} $ is  also a spanning tree.
+\end{claim}
+If  $ T  $ is  $ MST $, then  $ \omega(e) \geq \omega(f) $.  
+
+
+\textbf{Fundamental Cut}: Spanning tree  $ T\subset E $. For each  $ f\in T $,  $ T\setminus\{f\} $   has two connected components, whose cutset is called \name{fundamental cut}.
+
+\begin{claim}
+    $ \forall e\in D\setminus T $,  $ (T\cup\{e\})\setminus\{f\} $ is  a spanning tree. 
+\end{claim}
+If  $ T  $ is MST, then  $ \omega(e) \geq \omega(f) $.
+
+\paragraph{MST Algorithm}
+There are some rules.
+\textbf{Red rule}:Let  $ C  $ a cycle without red edges. Select an uncolored edge in  $ C   $ with max weight and color it red.
+
+\textbf{Blue rule}: Let  $ D  $ be a cutset without blue edges. Select an un  colored edge in  $ D $ with min weight and color it blue.
+
+\textbf{Greedy Algorithm}:Apply red or blue rules in any order iteratively until all edges colored.
+
+\begin{theorem}
+    Greedy algorithm terminates and  blue edges from MST.
+\end{theorem}
+\begin{proof}
+    Observed that during the algorithm, blue edges always from a forest.
+\end{proof}
+
+\paragraph{Invariant}  $ \exists  $ MST  $ T^*  $ \st  $ T^* $ contains all  blue edges and no red edges.   
+\begin{proof}
+    Proof by induction. If there is a MST  $ T^* $ contains all blue edges no red edges now. If we apply blue rule, with cutset  $ D $ and  $ f\in D $ but  $ f\not\in T^* $, then for fundamental cycle  $ C $ of  $ f $,  $ \forall e\in C\cap T $,  $ \omega(e) \geq \omega(f) $. Since  $ C $ has even edges in the cutset by the claim,  $ \exists e\in C\cap T $ \st  $ e\in D $, which contradicts the fact that  $ f $ is the edge in cutset  $ D $        with min weight.
+
+    The case that we  apply red rule is similar.
+\end{proof}
+
+\begin{algorithm}
+    \caption{Prim's Algorithm}
+    \label{alg:Prim}
+    \begin{algorithmic}[1]
+    \STATE Initialize  $ S\leftarrow \{s\} $.
+    \WHILE{$ n-1 $ times}
+        \STATE Choose   $ e  $ be the min weight edge in the cutset $ (S,V\setminus S) $  
+        \STATE add  $ e $ to  $ T $, another endpoint of  $ e $ to  $ S $. 
+    \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{remark}
+    It is compatible with the simple idea: Each time chooses the min weight edge. However, it is more powerful since we only need to do this process in the cutset.
+
+    It is similar to Dijkstra's Algorithm. So its time complexity is  $ O(|E|+|V|\log |V|) $ 
+\end{remark}
+
+
+
+\begin{algorithm}
+    \caption{Kruskal's Algorithm}
+    \label{alg:Kruskal}
+    \begin{algorithmic}[1]
+        \STATE Consider edges in weight increasing order.
+        \STATE Add each edge to  $ T $ if not introducing a cycle. 
+    \end{algorithmic}
+\end{algorithm}
+\begin{remark}
+    The first step need time complexity  $ O(|E|\log |E|) $.
+
+    The second step need time complexity  $ O(|E|\cdot \alpha(|V|)) $ using \textbf{Union-Find} data structure. 
+\end{remark}
+
+WLOG we can assume edge weights are distinct.
+\begin{algorithm}
+    \caption{Boruvka's Algorithm}
+    \label{alg:Boruvka}
+    \begin{algorithmic}[1]
+        \WHILE{ $ <(n-1) $ blue edges}
+            \STATE Simultaneously apply blue rule to each blue compunent.
+        \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{claim}
+    WHILE loop iterates  $  \leq O(\log|V|) $.
+    
+    So time complexity is  $ O(|E|\log|V|) $. 
+\end{claim}
+
+\begin{remark}
+    There is a "contraction View". For each step, we can view each component as a single point with edges to other components.
+
+    If the graph is \textbf{Planar Graph}, then  $ |E| \leq O(V) $. At the  $ i $-th WHILE iteration,   $ |V_i| \leq \dps\frac{|V|}{2^{i-1}} $,  $ |E_i| \leq O(|V_i|) $. 
+    
+    So the time complexity is  $ \dps\sum_{i}O(|E_i|) \leq \sum_i O\left(\dps\frac{|V|}{2^{i-1}}\right) \leq O(|V|) $ which is linear! 
+\end{remark}
+Using the contraction view, we can get another algorithm:
+
+\paragraph{Prim+Boruvka} 
+\begin{itemize}
+    \item Run Boruvka for  $ k $ iterates.
+    \item Run Prim on the contracted graph.
+\end{itemize}
+
+\begin{remark}
+    \,
+
+    For step 1, time  complexity is  $ k\cdot|E| $.
+
+    For step 2, time complexity is   $ |E|+\dps\frac{|V|}{2^k}\cdot\log\frac{|V|}{2^k} $.
+
+    So the total time complexity is  $ k|E|+\dps\frac{|V|}{2^k}\cdot\log\frac{|V|}{2^k} $.
+
+    Choose  $ k=\log_2\log_2|V| $, it  comes to  $ (\log\log|V|)\cdot |E|+\dps\frac{|V|}{\log_2|V|}\cdot\log_2|V| \leq O(|E|\log\log|V|+|V|) $.
+\end{remark}
+
+\subsection{Minimum Arborescence}
+\begin{example}[Minimum Arborescence]
+    Input: Directed  $ G=(V,E) $, source  $ s\in V $ and weight  $ \omega:E\rightarrow\Rbb $. 
+    
+    We want to find a directed tree  $ T=(V,E) $ with root  $ s $ of  minimum total weight.
+
+\end{example}

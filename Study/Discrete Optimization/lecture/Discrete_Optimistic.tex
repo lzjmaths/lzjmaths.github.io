@@ -125,6 +125,9 @@
 \usetikzlibrary{patterns}
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
+% \usetikzlibrary{graphs,graphdrawing,circular}
+
+% \usetikzlibrary{graphs, graphdrawing, shapes.geometric, arrows}
 
 \usepackage{tikz-cd}
 \usepackage[nottoc]{tocbibind}   % Add  reference to ToC
@@ -539,9 +542,8 @@
 %\makeindex[columns=2,title=Index, options=-s example_style.ist]
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.18}
-% \usetikzlibrary{external}
-% \tikzexternalize[prefix=figs/]
-
+\usepackage{algorithm}
+\usepackage{algorithmic}
 
 \usepackage{chemarrow}
 
@@ -573,80 +575,13 @@
 \newpage
 
 \input{../D1.tex}
+\input{../D2.tex}
+
+\input{../D3.tex}
 
 
 
-% \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
-% 	\cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
-% 	H_{k}(M) \arrow[curarrow=Y]{urr}{} & H_{k}(U) \oplus H_{k}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H_{k}(U \cap V) \arrow[l] \\
-% 	H_{k+1}(M) \arrow[curarrow=Z]{urr}{} & H_{k+1}(U) \oplus H_{k+1}(V) \arrow[l] & \cdots \arrow[l]
-% \end{tikzcd}
-
-
-
-% \begin{tikzpicture}
-% 	\begin{axis}[view={0}{90},domain=-4:4,axis lines=middle,xlabel={$ x $},ylabel={$ y $}]
-% 	\addplot3 [blue,-stealth,samples=16,
-% 			quiver={
-% 				u={-y},
-% 				v={x},
-% 				scale arrows=0.2,
-% 			},
-% 		] { 1}; % use pow(x^2 + y^2,1/2) if you choose to have a real 3D plot
-% 	\end{axis}
-% 	\end{tikzpicture}
 \printindex
 \newpage
 \listoftheorems[ignoreall, show={theorem,proposition}]
 \end{document}
-
-%%%%%%%%%%%
-% 
-% \documentclass[x11names, border=5pt]{standalone}
-
-% \usepackage{pst-plot}
-% \usepackage{auto-pst-pdf}
-
-% \begin{document}
-% %
-% %%%%%%%%%%% v(x, y) = =x² + y² - 1
-% \psset{unit=4cm, arrowinset=0.12}
-% \begin{pspicture}(-1.2,-1.2)(1.1,1.1)
-%     \psaxes[ticksize=0 4pt,axesstyle=frame,tickstyle=inner,subticks=20,
-%     Ox=-1,Oy=-1](-1,-1)(1,1)
-%     \psset{arrows=->,algebraic}
-%     \psVectorfield[linecolor=DarkOliveGreen3](-0.9,-0.9)(0.9,0.9){ x²+y²-1 }
-% \end{pspicture}
-
-% \end{document} 
-
-
-%%%%%%%%
-
-
-%%%%%%%%
-% An example to draw Mayer-Vietoris sequence 
-% \documentclass{article}
-% \usepackage{tikz-cd}
-
-
-
-% \begin{document}
-
-%     \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
-%        \cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
-%        H_{k}(M) \arrow[curarrow=Y]{urr}{} & H_{k}(U) \oplus H_{k}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H_{k}(U \cap V) \arrow[l] \\
-%        H_{k+1}(M) \arrow[curarrow=Z]{urr}{} & H_{k+1}(U) \oplus H_{k+1}(V) \arrow[l] & \cdots \arrow[l]
-%    \end{tikzcd}
-
-% \end{document}
-
-
-
-
-
-
-
-
-
-%%%%%%%%

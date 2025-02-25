@@ -1,0 +1,84 @@
+\subsection{Single-Source Shortest Path}
+\begin{example}[Single-Source Shortest Path(SSSP)]
+    Input: Graph $ G=(V,E,w) $,  $ V $ is the set of point and  $ E $ is the set of edge with direction  and  $ \omega:E\rightarrow \Rbb_{ \geq 0} $.
+    
+    We want to find a path from  $ s $ to  $ t $ with minimum total cost.
+\end{example}
+\paragraph{Dijkstra's Algorithm}
+Choose  $ s  $ as a source.  $ d[s]=0,d[u]=\begin{cases}
+    \omega(s,u)&\text{if  $ (s,u)\in E $}\\
+    +\infty &\text{otherwise}
+\end{cases} $, $ S=\{s\} $ first. To record the path, we can use  $ \mathrm{Pred}[u]\leftarrow s $.  
+
+\begin{algorithm}
+    \caption{Dijkstra's Algorithm}
+    \label{alg:dijkstra}
+    \begin{algorithmic}[1]
+    \WHILE{$ S\neq V $}
+        \STATE Choose  $ u\in \dps\arg\min_{\not\in S}\{d[x]\} $.\label{Choose u min}
+        \STATE Update  $ S\leftarrow S\cup\{u\} $.
+        \FOR{each $ x\in V-S $,$ (u,x)\in E $}
+            \STATE$ d[x]\leftarrow\min\{d[x],d[u]+\omega(u,x)\} $.
+            \IF{ $ d[u]+\omega(u,x)<d[x] $ }
+                \STATE  $ d[x]\leftarrow d[u]+\omega(u,x) $  
+                \STATE  $ \mathrm{Pred}[x]\leftarrow u $  
+            \ENDIF
+        \ENDFOR 
+    \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{theorem}[Invariant]
+    $ \forall u\in S $, $ d[u] $ is the shortest path distance  $ s\leadsto u $   
+\end{theorem}
+\begin{proof}
+    Induction on  $ |S| $.
+    
+    For  $ |S|=1 $ true.
+
+    \textbf{Induction Step: } Every time executing \ref{Choose u min} in Algorithm \ref{alg:dijkstra}, we need to prove  $ d[u] $ is the shortest distance  $ s\leadsto u $.
+
+    If  $ v=\mathrm{Pred}[u]\in S $, then  $ d[u]=d[v]+\omega(v,u) $.
+    
+    For any path from  $ s $  to  $ u $, there exists  $ (\alpha,\beta)\in E $ such that  $ \alpha\in S,\beta\not\in S $. Then 
+    \begin{align*}
+        \mathrm{length}(P)& \geq \mathrm{length}(P[s\rightarrow\beta])\\
+        & =\mathrm{length}(P[s\rightarrow\alpha])+\omega(\alpha,\beta)\\
+        & \geq d[\alpha]+\omega(\alpha,\beta)\\
+        & \geq d[\beta] \geq d[u]
+    \end{align*}   
+\end{proof}
+
+\begin{remark}
+    The straightforward implementation of Dijkstra's Algorithm is of  $ O(|v|^2) $.
+    
+    If we use priority queue: $ Q $ with priority  $ Q.\pi() $. It has some methods:
+    \begin{itemize}
+        \item ExtractMin: Return  $ \dps\arg\min_{x\in Q}\{Q.\pi(x)\} $ and remove  $ x  $ from  $ Q $.
+        \item DecreaseKey: Update  $ Q.\pi(v) $ with newkey. 
+    \end{itemize}  
+    The time complexity is  $ |V|\times $ ExtractMin  $ + $ $ |E|\times  $  DecreaseKey    
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            Runtime & ExtractMin & DecreaseKey & Dijkstra\\ \hline
+            Simple Array   &  $ O(|V|) $   &  $ O(1) $ & $ O(|v|^2) $    \\ \hline
+            Binary Heap   &  $ O(\log|V|) $    &  $ O(\log |V|) $ & $ O(|E|\cdot \log|V|) $   \\ \hline
+            Fibonacci Heap & $ O(\log|V|) $ &  $ O(1) $ (amorized)&   $ O(|E|+|V|\log|V|) $ \\ \hline
+        \end{tabular}
+    \end{center}
+\end{remark}
+\subsection{Minimum Spanning Tree}
+\begin{example}[Minimum Spanning Tree (MST)]
+    Input: Connected, undirected graph $ G=(V,E,\omega) $.
+    
+    \begin{definition}[Spanning Tree]
+        $ T\subset E $ is a \name{spanning tree}  if  $ |T|=|V|-1 $,  $ G'=(V,T) $ is connected.
+        
+        \textbf{Goal of MST } Find spanning tree  $ T $ so that  $ \dps\omega(T)=\sum_{e\in T}\omega(e) $ minimized.  
+    \end{definition}
+    \begin{theorem}[Cayley Theorem]
+        The number of spanning trees of  $ n $-vertex complete graph is  $ n^{n-2} $  
+    \end{theorem}
+    A \name{cut}  $ (S,V-S) $ has a \name{cutset} of  $ S $ $ =\{e=(u,v):u\in S,v\not\in S\} $.  
+\end{example}
