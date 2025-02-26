@@ -416,9 +416,37 @@
 \end{problem}
 \begin{problem}
   \begin{enumerate}[label=(\alph*)]
-    \item Since all edge costs are distinct, applying blue rule or red rule is the unique operation at any time. Therefore, the final graph with a blue tree is unique. Since MST contains all blue edges as we prove in the lecture, MST has to be the unique blue tree.
-    \item Yes, here is the proof.
+    \item Since all edge costs are distinct, applying blue rule or red rule is the unique operation at any time. Therefore, the final graph with a blue tree is unique. If MST is not unique, there exists a MST that is not the blue tree. WLOG we assume  $ T $ is not the blue tree completely. Choose a blue edge  $ e\not\in T $. Then for  its corresponding fundamental cycle   $ C $, since any cutset contains at least two edges in  $ C $,  $ \exists e'\in C\cap T $ \st  $ e' $ and  $ e $ are in the same cutset where  we color  $ e $ blue by applying blue rule $ \Rightarrow $      $ \omega(e') \geq \omega(e) $. However, by the result in lecture,  $ \omega(e') \leq \omega(e) $ $ \Rightarrow  $  $ \omega(e')=\omega(e) $ $ \Rightarrow  $ contradiction!      So  MST can only be the blue tree.
+    \item Yes, the proof is below:
+    \begin{proof}
+      For each MST  $ T $ in  $ G $, choose  $ \epsilon>0 $ small enough such that  $\forall e\in E, [\omega(e)-\epsilon,\omega(e))\cup(\omega(e),\omega(e)+\epsilon] $ will not contains any of  $ \omega(e),e\in E $.
+      
+      Take some changes whose rule set is:
+      \begin{enumerate}[label=(\arabic*)]
+        \item If  $ T=\{e_1,e_2,\cdots,e_t\} $ where  $ \omega(e_1)  \geq  \omega(e_2)  \geq  \cdots  \geq  \omega(e_t) $, replace  $ \omega(e_i) $ with  $ \omega(e_i)-\frac{i}{t}\epsilon $. Then after the changes,  $ \omega(e_1)>\omega(e_2)>\cdot>\omega(e_t) $.  
+        \item   After (1), if  $ \exists \omega(e_1)=\omega(e_2)=\cdots=\omega(e_k) $, where  $ e_i\in E $ distinct and  $ k $ is the largest number, then we replace  $ \omega(e_i) $ with  $ \omega(e_i)+\frac{i}{k}\epsilon $.     
+      \end{enumerate}
+      Step (1)(2) makes sure that after the change, there are no edges that have the same cost. So in this case the MST is unique. Now we prove this unique MST is exactly the original one,  $ T $.
+      
+      First, after (1),  $ \omega(e),e\in T $ will not be same as the cost of other edges, so they will never change after (2). Therefore, the cost of  $ T $  decreases  $ \dps\sum_{i=1}^t\frac{i}{t}$. Moerover, the cost of  any tree in  $ G $ has less decreased or even increased. So  $ T $ is still the MST.    
+
+      Finally, we prove that apply Kruskal's Algorithm to the changed graph produces a same valid execution of Kruskal's Algorithm on the original $ G $.
+
+      That's because, the change will not change the ordinal relationship between edges with distinct cost. So the effect of the change on the order is only to rearrange the edges with the same weight. So the effect of the change on the order is only to rearrange the edges with the same weight. Equivalently, the order of edges in Kruskal's Algorithm on the changed graph is still a valid order in Kruskal's Algorithm on  the original graph. Since Kruskal's Algorithm returns the same result if the order and the edges are determined, they produces the same MST,  $ T $. 
+    \end{proof}
+
+    \item The output graph  $ H $ have no cycle of 3 or 4 edges. Or equivalenty, it has no triangles and squares. That's because, 
+    if it has a cycle of  $ k $ edges,  $ k \leq 4 $, then assume  $ e  $ is the last edge we put into the graph. Then  $ e $ is the longest edge so  $ l<kl_e<4l_e $ .  Let  $ l $ be the length of the cycle. Then     $ 3l_e <l-l_e  $. But  $ l<4l_e $ $ \Rightarrow  $ contradiction!
+
+    Since  $ H $  has no triangles, it has to be a bipartite graph $ (V_1,V_2) $ where all edges connect points in  $ V_1 $ and  $ V_2 $. Let  $ c_v,v\in V_1 $ be the degree of  $ v $ and  $ S_v $ be the set of  $ v'\in V_2 $  connected to  $ v $. Since there is no squares in  $ H $,  $ |S_{v_1}\cap S_{v_2}| \leq 1,\,\forall v_1,v_2\in V_1,v_1\neq v_2 $.
+    
+    Therefore, each pair  $ \{u_1,u_2\}\subset V_2 $ is contained by one  $ S_v $ at most. $ S_v $ contains  $ \dps\frac{c_v(c_v-1)}{2} $ such a pair   So we have 
+    \[\sum_{v\in V_1}\frac{c_v(c_v-1)}{2} \leq \frac{|V_2|(|V_2|-1)}{2}\]
+    Then by Cauchy's inequallity, 
+    \[\sum_{v\in V_1}c_v \leq |V_1|+\sqrt{|V_1|\cdot\sum_{v\in V_1}(c_v-1)^2} \leq n+\sqrt{|V_1|\cdot |V_2|(|V_2|-1)} \leq n+\sqrt{\frac{n^2}{4}(|V_2|-1)} \leq 2025n^{\frac{3}{2}} \]
+    So the number of edges  $ f(n) \dps\sum_{v\in V_1}c_v \leq 2025n^{\frac{3}{2}} $. Hence  $ \dps\lim_{n\to\infty}\frac{f(n)}{n^2}=0 $   
   \end{enumerate}
 \end{problem}
+
 
 \end{document}
