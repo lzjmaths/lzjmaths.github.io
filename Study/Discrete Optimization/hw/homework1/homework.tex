@@ -297,8 +297,8 @@
 
 
 
-
-
+\usepackage{algorithm}
+\usepackage{algorithmic}
 
 
 
@@ -409,10 +409,54 @@
   We can enumerate each job. Take the first job, and remove other jobs that are not compatible with the first job. Here we remove the interval of the first job, and hence get a line of jobs. Apply the original algorithm of interval scheduling to the rest of jobs and we get a number that maximize the numbers of compatible jobs in the case that the first job is taken. Compare such  $ n $  numbers we can obtain the answer. 
 \end{problem}
 \begin{problem}
+  Use a algorithm similar to Dijkstra's algorithm.
+
+  Denote  $ s $  as the place they start.
+  \begin{algorithm}
+    \caption{Algorithm}
+    \label{alg:dijkstra}
+    \begin{algorithmic}[1]
+      \STATE   
+      $ \begin{cases}
+        d[x]\leftarrow f_{(s,x)}(0),\mathrm{Pred}[x]=s,&(s,x)\in E\\
+        d[x]\leftarrow+\infty,&\text{otherwise}
+      \end{cases}  $ 
+      \STATE  $ S\leftarrow\{s\} $ 
+      \STATE  $ d[s]\leftarrow 0 $ 
+    \WHILE{$ S\neq V $}
+        \STATE Choose  $ u\in \dps\arg\min_{x\not\in S}\{d[x]\} $.\label{Choose u min}
+        \STATE Update  $ S\leftarrow S\cup\{u\} $.\label{1}
+        \FOR{each $ x\in V-S $,$ (u,x)\in E $}\label{2}
+            \IF{ $ d[u]+f_{(u,x)}(d[u])<d[x] $ }
+                \STATE  $ d[x]\leftarrow d[u]+f_{(u,x)}(d[u]) $  
+                \STATE  $ \mathrm{Pred}[x]\leftarrow u $  
+            \ENDIF
+        \ENDFOR 
+    \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+We prove by induction to  $ |S| $   that every  $ d[u] $ is the minimal cost time from  $ s $ to  $ u $.   
+\begin{proof}
+  For  $ |S|=1 $, trivial.
+  At each step in \ref{1},  let  $ v=\mathrm{Pred}[u] $. Then  $ d[u]=d[v]+f_{(v,u)}(d[v]) $.
+
+  By the algorithm step \ref{2},  $ d[u] $ is the minimal cost time from  $ s $ to  $ u $ as we restrict the graph to  $ S $.   
   
+  If there is a path $ P $  that cost less than  $ d[u] $, then the path pass through points outside  $ S $. Let  $ \alpha\to \beta $ in this path that  $ \alpha\in S $,  $ \beta\not\in S $. Then  $ \alpha\neq u $ and  
+  \begin{align*}
+    \mathrm{length}(P)& \geq \mathrm{length}(P[s\rightarrow\beta])\\
+    & =\mathrm{length}(P[s\rightarrow\alpha])+f_{\alpha\to \beta}(d[\alpha])\
+    & \geq d[\alpha]+f_{\alpha\to \beta}(d[\alpha])\qquad(\text{by inductive hypothesis})\\
+    & \geq d[\beta] \geq d[u]\qquad(\text{by step \ref{Choose u min}})
+  \end{align*}
+
+  So  $ d[u] $ is the minimal cost time from  $ s $ to  $ u $ in  $ G $.    
+\end{proof}
 \end{problem}
 \begin{problem}
+  Use Boruvka's Algorithm. After  $ i $-th  WHILE iterations, with the contraction view, $  |V_i| \leq \dps\frac{|V|}{2^{i-1}}  $,  $ |E_i| \leq |V_i|+8 \in O(|V_i|)$.
   
+  Then the time complexity  $ \dps\sum|E_i| \leq \dps\sum O(\frac{|V|}{2^{i-1}}) \leq O(|V|) $ 
 \end{problem}
 \begin{problem}
   \begin{enumerate}[label=(\alph*)]
