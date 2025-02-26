@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  20 FEB 2025 19:19
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  25 FEB 2025 15:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1269,7 +1269,8 @@ File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (./lecture.aux)
+
+No file lecture.aux.
 \openout1 = `lecture.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 568.
@@ -1282,7 +1283,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 568.
 LaTeX Font Info:    ... okay on input line 568.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 568.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 568.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 568.
@@ -1407,10 +1408,11 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 568.
-(./lecture.out) (./lecture.out)
 \@outlinefile=\write6
 \openout6 = `lecture.out'.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
@@ -1431,11 +1433,12 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 57
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 572.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (./lecture.toc)
+)
+No file lecture.toc.
 \tf@toc=\write7
 \openout7 = `lecture.toc'.
 
- [1
+[1
 
 ] (../S2.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 2.
@@ -1461,7 +1464,7 @@ Missing character: There is no ） ("FF09) in font pplr8t!
 Missing character: There is no 奇 ("5947) in font pplr8t!
 Missing character: There is no 异 ("5F02) in font pplr8t!
 Missing character: There is no 点 ("70B9) in font pplr8t!
-) [2]
+) (../S3.tex) [2]
 runsystem(makeindex lecture.idx)...executed.
 
  (./lecture.ind [3
@@ -1478,14 +1481,20 @@ showing proposition
  [4
 
 ] (./lecture.aux)
-Package rerunfilecheck Info: File `lecture.out' has not changed.
-(rerunfilecheck)             Checksum: 19E994618198C13A65F178906138EAF6;185.
+
+Package rerunfilecheck Warning: File `lecture.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `lecture.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  19E994618198C13A65F178906138EAF6;185.
  ) 
 Here is how much of TeX's memory you used:
- 45747 strings out of 476683
- 1040266 string characters out of 5804047
+ 45743 strings out of 476683
+ 1040218 string characters out of 5804047
  1848018 words of memory out of 5000000
- 65133 multiletter control sequences out of 15000+600000
+ 65134 multiletter control sequences out of 15000+600000
  534124 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,7n,101p,734b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s

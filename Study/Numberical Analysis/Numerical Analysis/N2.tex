@@ -1,0 +1,30 @@
+\begin{definition}
+    \[B_n(f)=\dps\sum_{k=0}^\infty f(\frac{k}{n})\binom{n}{k}x^k(1-x)^{n-k}\]
+    is called  \name{Berstein polynomial} of  $ f $. 
+\end{definition}
+\begin{theorem}
+    若 $ f(x)\in C[0,1] $， 则
+    \[|B_n(f)-f| \leq \omega(\dps\frac{1}{\sqrt{n}})\] 
+\end{theorem}
+\begin{corollary}
+    $ f\in \mathrm{Lip}\alpha $, $ 0<\alpha \leq 1 $，则
+    \[|B_n(f)-f| \leq \dps\frac{3M}{2n^{\frac{\alpha}{2}}}\] 
+\end{corollary}
+
+另一方面，令 $ f(x)=x^2 $，则有
+\[B_n(f)=x^2+\frac{1}{n}x(1-x)\]
+该例子表明 $ b_n(f) $  的逼近阶不能高于 $ \dps\frac{1}{n} $ 
+
+\subsection{Lagrange插值}
+\[l_i(x)=\prod_{j=0,j\neq i}\frac{(x-x_j)}{x_i-x_j}\]
+则有 $ l_i(x)\in P_n $ 且
+
+\[l_i(x_j)=\begin{cases}
+    1,&j=i\\
+    0,&j\neq i
+\end{cases}\]
+让
+\[L_n(x)=\sum_{i=0}^nf(x_i)l_i(x)\]
+\subsection{均差与Newton插值多项式}
+定义 $ j $ 阶均差为
+\[f[x_k,x_{k+1},\cdots,x_{k+j}]=\frac{f[x_{k+1},\cdots,x_{k+j}]-f[x_k,\cdots,x_{k+j-1}]}{x_{k+j}-x_k}\]

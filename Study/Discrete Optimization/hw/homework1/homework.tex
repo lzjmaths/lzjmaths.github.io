@@ -1,180 +1,22 @@
-% !TeX spellcheck = en_US
-% !TEX program = pdflatex
-\documentclass[12pt,b5paper,notitlepage]{article}
-\usepackage[b5paper, margin={0.5in,0.65in}]{geometry}
-%\usepackage{fullpage}
-\usepackage{mathtools} % perfect math mode, but seems not well for underbrace. It is recommended to use \begingroup in the file.
-\let\underbrace\overbrace\relax
-\usepackage{amsmath,amscd,amssymb,amsthm,mathrsfs,amsfonts,layout,indentfirst,graphicx,caption,mathabx, stmaryrd,appendix,calc,imakeidx,upgreek,amsbsy,thmtools} % mathabx for \wtidecheck
-%\usepackage{ulem} %wave underline
-\usepackage[dvipsnames]{xcolor}
-\usepackage{palatino}  %template
-
-\usepackage{stmaryrd}
-
-
-\usepackage{slashed} % Dirac operator
-\usepackage{mathrsfs} % Enable using \mathscr
-%\usepackage{eufrak}  another template/font
-\usepackage{extarrows} % long equal sign, \xlongequal{blablabla}
-% \usepackage{pdfMsym}
-\usepackage{enumitem} % enumerate label change e.g. [label=(\alph*)]  shows (a) (b) 
-
-\usepackage{comment} % hide something
-
-
-% \usepackage{titlesec}
-% \usepackage{etoolbox}
-% \pretocmd{\section}{\refstepcounter{section}\label{sec:\thesection}}{}{}
-% \AtBeginEnvironment{theorem}{%
-% 	\refstepcounter{theorem}%
-% 	\edef\theoremname{\theoremname}% 获取定理的名字（如果有的话）
-% 	\@ifundefined{theoremname}
-%     {% 如果没有名字，只使用编号
-%      \label{thm:\thesection.\thetheorem}%
-%     }
-%     {% 如果有名字，标签包含编号和名字
-%      \label{thm:\thesection.\thetheorem.\theoremname}%
-%     }
-% }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\usepackage{fontspec}
-%\setmainfont{Palatino Linotype}
-%\usepackage{emoji}
-
-
-% emoji, use lualatex  remove \usepackage{palatino}
-
-%%%%%%%%%%%%%
-
-
-\usepackage{CJK}   % Chinese package
-\usepackage{pifont}
-\usepackage{ctex}
-
-
-
-\usepackage{csquotes} % \begin{displayquote}   \begin{displaycquote}  for quotation
-\usepackage{epigraph}   %\epigraph{}{}  for quotation
-%\pmb  mandatory math bold 
-
-\usepackage{fancyhdr} % date in footer
-
-
-
-% 设置章节标题格式
-% \titleformat{\section}[hang]{\normalfont\huge\bfseries}{\thesection}{2pc}{}
-
-% \pagestyle{fancy}
-% \fancyhead[L]{\rightmark}  % 左侧显示章节名
-% \fancyhead[C]{}           % 中间清空
-% \fancyhead[R]{}           % 右侧清空
-\pagestyle{plain}
-
-%\usepackage{soul}  %\ul underline break line automatically
-
-\usepackage{ulem}  % \uline  underline break line   also    \uwave
-
-\usepackage{relsize} % use \mathlarger \larger \text{\larger[2]$...$} to enlarge the size of math symbols
-
-\usepackage{verbatim}  % comment environment
-
-
-\usepackage{halloweenmath} % Interesting halloween math symbols
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{tcolorbox}
-\tcbuselibrary{theorems}
-% box around equations   \tcboxmath
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% circled colon and thick colon \hcolondel and \colondel
-
-\usepackage{pdfrender}
-
-\newcommand*{\hollowcolon}{%
-	\textpdfrender{
-		TextRenderingMode=Stroke,
-		LineWidth=.1bp,
-	}{:}%
-}
-
-\newcommand{\hcolondel}[1]{%
-	\mathopen{\hollowcolon}#1\mathclose{\hollowcolon}%
-}
-\newcommand{\colondel}[1]{%
-	\mathopen{:}#1\mathclose{:}%
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Sample tex file for usage of iidef.sty
+% Homework template for Inference and Information
+% UPDATE: October 12, 2017 by Xiangxiang
+% UPDATE: 22/03/2018 by zhaofeng-shu33
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+% amsmath: equation*, amssymb: mathbb, amsthm: proof
+\usepackage{moreenum}
+\usepackage{mathtools}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs} % toprule
+\usepackage[mathcal]{eucal}
+\usepackage{dsfont}
 
 \usepackage{setspace}  
 \setstretch{1.6}
-
-
-
-\usepackage{tikz}
-\usetikzlibrary{fadings}
-\usetikzlibrary{patterns}
-\usetikzlibrary{shadows.blur}
-\usetikzlibrary{shapes}
-
-\usepackage{tikz-cd}
-\usepackage[nottoc]{tocbibind}   % Add  reference to ToC
-
-
-\makeindex
-
-
-% The following set up the line spaces between items in \thebibliography
-\usepackage{lipsum}  
-\let\OLDthebibliography\thebibliography
-\renewcommand\thebibliography[1]{
-	\OLDthebibliography{#1}
-	\setlength{\parskip}{0pt}
-	\setlength{\itemsep}{2pt} 
-}
-
-
-%\hyperref{page.10}{...}
-
-\allowdisplaybreaks  %allow aligns to break between pages
-\usepackage{latexsym}
-\usepackage{chngcntr}
-\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue, linktocpage,
-%pagebackref
-]{hyperref}
-\hypersetup{ urlcolor=cyan,
-	citecolor=[rgb]{0,0.5,0}}
-
-
-\setcounter{tocdepth}{2}	 %hide subsections in the content
-
-
-\counterwithin{figure}{section}
-
-\counterwithin*{footnote}{section}   % Footnote numbering is recounted from the beginning of each subsection
-
-
-
-
-% \pagestyle{plain}
-
-% \captionsetup[figure]
-% {
-% 	labelsep=none	
-% }
-% 控制图表结构
-
-
-
 
 
 
@@ -200,14 +42,13 @@
 \newtheorem{sexe}[definition]{$\star$ Exercise}
 \newtheorem{sdf}[definition]{$\star$ Definition}
 \newtheorem{question}{Question}
-\theoremstyle{remark}
-\newtheorem{note}{Note}
-\newtheorem*{claim}{Claim}
 
 
-\newtheorem{problem}{\color{red}Problem}[section]
+
+
+\newtheorem{problem}{Problem}
 %\renewcommand*{\theprob}{{\color{red}\arabic{section}.\arabic{prob}}}
-\newtheorem{sprob}[problem]{\color{red}$\star$ Problem}
+\newtheorem{rprob}[problem]{\color{red} Problem}
 %\renewcommand*{\thesprob}{{\color{red}\arabic{section}.\arabic{sprob}}}
 % \newtheorem{ssprob}[prob]{$\star\star$ Problem}
 
@@ -222,14 +63,14 @@
 \newtheorem{lemma}[definition]{Lemma}
 \newtheorem{sthm}[definition]{$\star$ Theorem}
 \newtheorem{slm}[definition]{$\star$ Lemma}
-
+\newtheorem{claim}[definition]{Claim}
 \newtheorem{spp}[definition]{$\star$ Proposition}
 \newtheorem{scorollary}[definition]{$\star$ Corollary}
-\newtheorem{fact}[definition]{Fact}
 
-\newtheorem{cond}{Condition}
+
+\newtheorem{condition}{Condition}
 \newtheorem{Mthm}{Main Theorem}
-\renewcommand{\thecond}{\Alph{cond}} % "letter-numbered" theorems
+\renewcommand{\thecondition}{\Alph{condition}} % "letter-numbered" theorems
 \renewcommand{\theMthm}{\Alph{Mthm}} % "letter-numbered" theorems
 
 
@@ -258,7 +99,6 @@
 % perfect Vol symbol
 
 \usepackage{aurical}
-\usepackage[T1]{fontenc}
 
 
 
@@ -274,12 +114,13 @@
 \newcommand{\wch}{\widecheck}
 \newcommand{\ovl}{\overline}
 \newcommand{\udl}{\underline}
-\newcommand{\tr}{\mathrm{tr}} %transpose
-\newcommand{\Tr}{\mathrm{T}}
+\newcommand{\tr}{\mathrm{t}} %transpose
+\newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\End}{\mathrm{End}} %endomorphism
 \newcommand{\idt}{\mathbf{1}}
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\cond}[1]{\mathrm{cond}_{#1}}
 \newcommand{\Conf}{\mathrm{Conf}}
 \newcommand{\Res}{\mathrm{Res}}
 \newcommand{\res}{\mathrm{res}}
@@ -288,7 +129,6 @@
 \newcommand{\coev}{\mathrm{coev}}
 \newcommand{\opp}{\mathrm{opp}}
 \newcommand{\Rep}{\mathrm{Rep}}
-\newcommand{\diag}{\mathrm{diag}}
 \newcommand{\Dom}{\mathrm{Dom}}
 \newcommand{\loc}{\mathrm{loc}}
 \newcommand{\con}{\mathrm{c}}
@@ -453,35 +293,6 @@
 \newcommand{\bwn}{\bigwedge\nolimits}
 \newcommand{\nbf}{\mathbf n}
 \newcommand{\dive}{\mathrm{div}}
-\newcommand{\Alt}{\mathrm{Alt}}
-\newcommand{\Sym}{\mathrm{Sym}}
-
-
-
-\renewcommand{\epsilon}{\varepsilon}
-% \renewcommand{\phi}{\varphi}
-
-
-
-
-
-\usepackage{tipa} % wierd symboles e.g. \textturnh
-\newcommand{\tipar}{\text{\textrtailr}}
-\newcommand{\tipaz}{\text{\textctyogh}}
-\newcommand{\tipaomega}{\text{\textcloseomega}}
-\newcommand{\tipae}{\text{\textrhookschwa}}
-\newcommand{\tipaee}{\text{\textreve}}
-\newcommand{\tipak}{\text{\texthtk}}
-\newcommand{\mol}{\upmu}
-\newcommand{\dmol}{d\upmu}
-
-
-
-
-\usepackage{tipx}
-\newcommand{\tipxgamma}{\text{\textfrtailgamma}}
-\newcommand{\tipxcc}{\text{\textctstretchc}}
-\newcommand{\tipxphi}{\text{\textqplig}}
 
 
 
@@ -494,140 +305,120 @@
 
 
 
-
-
-
-\numberwithin{equation}{section}
+\numberwithin{equation}{problem}
 % count the eqation by section countation
 
-
-
-\title{Numerical Analysis}
-\author{
-	{{\bf Instructor:} Zuoqiang Shi}\\
-	{{\bf Notes Taker:} Zejin Lin}\\
-	{\small \sc Tsinghua University.}\\
-	{\small linzj23@mails.tsinghua.edu.cn}\\
-	{\small \href{lzjmaths.github.io}{lzjmaths.github.io}}
-}
 
 \DeclareMathOperator{\sign}{sign}
 \DeclareMathOperator{\dom}{dom}
 \DeclareMathOperator{\ran}{ran}
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\img}{Im}
-\newcommand{\dd}{\mathrm{d}}
+\DeclareMathOperator{\dd}{d\!}
 \newcommand{\ie}{ \textit{ i.e. } }
 \newcommand{\st}{ \textit{ s.t. }}
-\newcommand{\name}[1]{\textbf{#1}\index{#1}}
-\newcommand{\subname}[2]{\textbf{#1}\index{#2!#1}}
-\newcommand{\stdO}{\mathcal{O}_{\mathrm{std}}}
-\newcommand{\stdwedge}[1]{\dd {#1}^1\wedge\cdots\wedge\dd {#1}^n}
-\newcommand{\stddownwedge}[1]{\dd {#1}_1\wedge\cdots\wedge\dd {#1}_n}
-\newcommand{\Lip}{\mathrm{Lip}}
-\newcommand{\opensub}{\overset{\text{open}}{\subset}}
-\newcommand{\chart}[2]{({#1}_\alpha,{#2}^1,\cdots,{#2}^n)}
-\newcommand{\<}{\left<}
-\renewcommand{\>}{\right>}
-\renewcommand{\|}{\Vert}
-\renewcommand{\hat}[1]{\widehat{#1}}
-\renewcommand{\tilde}[1]{\widetilde{#1}}
-\newcommand{\Romannumer}[1]{\mathrm{\uppercase\expandafter{\romannumeral#1}}}
-\newcommand{\rot}{\mathrm{rot}}
-
-\renewcommand{\div}{\mathrm{div}}
-%\makeindex[columns=2,title=Index, options=-s example_style.ist]
-\usepackage{pgfplots}
-\pgfplotsset{width=7cm,compat=1.18}
-% \usetikzlibrary{external}
-% \tikzexternalize[prefix=figs/]
 
 
-\usepackage{chemarrow}
-
-% \usepackage{tikz-3dplot} 
-% \renewcommand{\xrightarrow}[2]{\autorightarrow{#1}{#2}}
-
-% \excludecomment{proof}
-% \excludecomment{remark}
-% \excludecomment{definition}
-% \excludecomment{example}
-% \excludecomment{exercise}
-
-\tikzset{
-  curarrow/.style={
-  rounded corners=8pt,
-  execute at begin to={every node/.style={fill=red}},
-    to path={-- ([xshift=-50pt]\tikztostart.center)
-    |- (#1) node[fill=white] {$\scriptstyle d$}
-    -| ([xshift=50pt]\tikztotarget.center)
-    -- (\tikztotarget)}
-    }
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{
+  style              = Matlab-editor,
+  captionpos         =b,
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
 }
 
+\usepackage[thehwcnt = 1]{iidef}
+\thecourseinstitute{Tsinghua University}
+\thecoursename{Discrete Optimistic}
+\theterm{Fall 2024}
+\hwname{Homework}
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
 \begin{document}
+\courseheader
+\name{Lin Zejin}
+\rule{\textwidth}{1pt}
+\begin{itemize}
+\item {\bf Collaborators: \/}
+  I finish this homework by myself. 
+%   If you finish your homework all by yourself, make a similar statement. If you get help from others in finishing your homework, state like this:
+%   \begin{itemize}
+%   \item 1.2 (b) was solved with the help from \underline{\hspace{3em}}.
+%   \item Discussion with \underline{\hspace{3em}} helped me finishing 1.3.
+%   \end{itemize}
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+\vspace{2em}
+ 
 \sloppy
 \pagenumbering{arabic}
-\maketitle
-\tableofcontents
-\newpage
 
-\input{../N1.tex}
-\input{../N2.tex}
+% put your code here
+\begin{problem}
+  By using contraction view, it suffices to show that the first step can  actually be viewed as using blue rules sequentially.
+
+  For each node  $ n_i $, assume that  $ v_i $ is the edge connected to  $ n_i $ of minimal weight.
+  
+  WLOG, we assume  $ \omega(n_i),1 \leq i \geq |V| $  is increasing.
+  
+  Then we prove that coloring  $ v_i $ blue  simultaneously is equivalent to applying blue rule to the cut  $ (\{n_1,\cdots,n_k\},\{n_{k+1},\cdots,n_{|V|}\}) $ successively.
+
+  By induction. For applying blue rule to the cut  $ (\{n_1\},\{n_2,\cdots,n_{|V|}\}) $,  $ v_1 $ turns blue since  $ v_1 $ is of the minimal weight in all  edges.
+  
+  If we have colored  $ v_1,\cdots,v_{k-1} $, then for applying blue rule to the cut  $ (\{n_1,\cdots,n_k\},\{n_{k+1},\cdots,n_{|V|}\}) $,  $ v_k $ turns blue. Otherwise, if  $ v_k'=(a,b) $ turns blue,  $ a\in \{n_1,\cdots,n_k\} $ and  $ b=n_t\in \{n_{k+1},\cdots,n_{|V|}\} $, then  $ \omega(v_k') \geq \omega(v_{t}) $ by the primitive rule. Thus  $ \omega(v_k') \geq \omega(v_t)  \geq \omega(v_k) $ as  $ t \geq k $, which causes contradiction.
+
+  So actually we can apply blue rule one by one. Therefore,  $ Bor\overset{\circ    }{u}vka $ algorithm is indeed applying blue rule constantly, and it terminates until there is only one blue component, \ie forming a blue tree. As we proved in class, this tree is MST.
+\end{problem}
+
+\begin{problem}
+  WLOG, we assume that  $ J_1,\cdots,J_n $  is exactly a possible schedule of minimal time cost.
+
+  If  $ f_i  \leq  f_{i+1} $, then swap  $ J_i,J_{i+1} $. It will not affect other jobs. However, the time when job $ J_i,J_{i+1} $ finished both will be changed. It is   $ \max\{t+p_{i+1}+p_{i}+f_i,t+p_{i+1}+f_{i+1}\} $, which is not longer than  $ \max\{t+p_i+p_{i+1}+f_{i+1},t+p_i+f_i\}=t+p_i+p_{i+1}+f_{i+1} $ at first. So it is still  a possible schedule of minimal completion  time cost.
+  
+  Using bumbling sort algorithm, we can  rearrange  $ J_1,\cdots,J_n $ such that  $ f_i $ is decreasing, and it is still a possible schedule of minimal completion time cost.
+
+  Since the schedule of minimal time cost must exist, it suffices to sort  $ f_i $ to get a possible schedule of minimal completion time cost. 
+\end{problem}
 
 
-\printindex
-\newpage
-\listoftheorems[ignoreall, show={theorem,proposition}]
+\begin{problem}
+  \begin{equation}\label{p3}
+    \sum_{i=1}^n\omega_iC_i=\sum_{i=1}^n\omega_i\left(\sum_{j=1}^it_j\right)=(\sum_{i=1}^nt_i)(\sum_{i=1}^n\omega_i)-\sum_{i=1}^n\omega_i\left(\sum_{j=i+1}^nt_j\right)
+  \end{equation}
+  So it suffices to maximize  $ \dps\sum_{i=1}^n\omega_i\left(\sum_{j=i+1}^nt_j\right) $.
+
+  WLOG, we assume that  $ (t_i,\omega_i),1 \leq i \leq n $ has been a possible solution.
+  
+  If  $ \dps\omega_i\left(\sum_{j=i+1}^nt_j\right) < \omega_{k}\left(t_i-t_k+\sum_{j=i+2}^nt_j\right) $, $ i<k $ 
+  then swap  $ (\omega_i,t_i) $ and  $ (\omega_{k},t_{k}) $.   It only affects  $ i\sim k $-th terms  in the RHS of  \eqref{p3}. Noticed that the difference
+  \begin{align*}
+    &\sum_{t=i}^k\omega_t\left(\sum_{j=t+1}^nt_j\right)-\left[\sum_{t=i+1}^{k-1}\omega_t\left(\sum_{j=t+1}^nt_j-t_k+t_i\right)+\omega_k\left(\sum_{j=i+1}^nt_j-t_k+t_i\right)+\omega_i\left(\sum_{j=k+1}^nt_j\right)\right]\\
+    &=\sum_{t={i+1}}^{k-1}\omega_t(t_k-t_i)+\omega_i\sum_{j=i+1}^kt_j-\omega_k\sum_{j=i}^{k-1}t_j\\
+    &=\omega_i\left(\sum_{j=i+1}^nt_j\right)-\omega_{i+1}\left(t_i+\sum_{j=i+2}^nt_j\right)\\
+    & > 0
+  \end{align*}
+  So \eqref{p3} will be smaller as they swap, which contradicts that  \eqref{p3} has already taken the minimal value. 
+
+  So a possible solution of minimal value must satisfy that  $ \omega_i $ 
+\end{problem}
+\begin{problem}
+  The problem can be reduced to the original case.
+  
+  We can enumerate each job. Take the first job, and remove other jobs that are not compatible with the first job. Here we remove the interval of the first job, and hence get a line of jobs. Apply the original algorithm of interval scheduling to the rest of jobs and we get a number that maximize the numbers of compatible jobs in the case that the first job is taken. Compare such  $ n $  numbers we can obtain the answer. 
+\end{problem}
+\begin{problem}
+  
+\end{problem}
+\begin{problem}
+  
+\end{problem}
+\begin{problem}
+  \begin{enumerate}[label=(\alph*)]
+    \item Since all edge costs are distinct, applying blue rule or red rule is the unique operation at any time. Therefore, the final graph with a blue tree is unique. Since MST contains all blue edges as we prove in the lecture, MST has to be the unique blue tree.
+    \item Yes, here is the proof.
+  \end{enumerate}
+\end{problem}
+
 \end{document}
-
-%%%%%%%%%%%
-% 
-% \documentclass[x11names, border=5pt]{standalone}
-
-% \usepackage{pst-plot}
-% \usepackage{auto-pst-pdf}
-
-% \begin{document}
-% %
-% %%%%%%%%%%% v(x, y) = =x² + y² - 1
-% \psset{unit=4cm, arrowinset=0.12}
-% \begin{pspicture}(-1.2,-1.2)(1.1,1.1)
-%     \psaxes[ticksize=0 4pt,axesstyle=frame,tickstyle=inner,subticks=20,
-%     Ox=-1,Oy=-1](-1,-1)(1,1)
-%     \psset{arrows=->,algebraic}
-%     \psVectorfield[linecolor=DarkOliveGreen3](-0.9,-0.9)(0.9,0.9){ x²+y²-1 }
-% \end{pspicture}
-
-% \end{document} 
-
-
-%%%%%%%%
-
-
-%%%%%%%%
-% An example to draw Mayer-Vietoris sequence 
-% \documentclass{article}
-% \usepackage{tikz-cd}
-
-
-
-% \begin{document}
-
-%     \begin{tikzcd}[arrow style=math font,cells={nodes={text height=2ex,text depth=0.75ex}}]
-%        \cdots & H_{k-1}(U) \oplus H_{k-1}(V) \arrow[l] \arrow[draw=none]{d}[name=Y, shape=coordinate]{} & \arrow[l] H_{k-1}(U \cap V) \\
-%        H_{k}(M) \arrow[curarrow=Y]{urr}{} & H_{k}(U) \oplus H_{k}(V) \arrow[l] \arrow[draw=none]{d}[name=Z,shape=coordinate]{} & H_{k}(U \cap V) \arrow[l] \\
-%        H_{k+1}(M) \arrow[curarrow=Z]{urr}{} & H_{k+1}(U) \oplus H_{k+1}(V) \arrow[l] & \cdots \arrow[l]
-%    \end{tikzcd}
-
-% \end{document}
-
-
-
-
-
-
-
-
-
-%%%%%%%%
