@@ -1,0 +1,35 @@
+\section{Regression}
+\begin{equation}\label{Lasso}
+    \min_{\omega\in \Rbb^m}\frac{1}{2N}\|\Phi\omega-y\|^2+\lambda C(\omega)
+\end{equation}
+
+\name{Lasso}:  $ C=\|\omega\|_1 $. \name{Ridge regression}: $ C=\|\omega\|_2 $.
+
+\name{subgradient} of  $ f $:
+\[\partial f(x_0)=\{g|f(x) \geq f(x_0)+g^T(x-x_0)\}\] 
+In particular, 
+\[\partial |x|=\begin{cases}
+    1, & x>0\\
+    -1, & x<0\\
+    [-1,1], & x=0
+\end{cases}\]
+
+\subsection{Binary classification problem}
+\name{one-hot encoding} for the output  $ \{\binom{1}{0},\binom{0}{1} \} $. It can be understood as the probability for each class  and can take continuous values.
+
+A \name{linear hypothesis space} is  $ \{u(x):u=\omega^Tx,x\in \Rbb^n,\omega\in \Rbb^n\} $.
+
+\name{Softmax}:Map the extracted feature  $ u $ to the space of one-hot codes 
+\[\mu=\frac{1}{1+e^{-u}},\quad 1-\mu=\frac{e^{-u}}{1+e^{-u}}=\frac{1}{1+e^{u}}\] 
+
+\begin{equation}\label{KL distance}
+    KL(p,q)=\int p(\log p - \log q)
+\end{equation}
+For  $ p $ real probability, to minimize \eqref{KL distance}, suffices to minimize 
+\[-\int p\log q_\theta\dd x=-\sum_{x_i}\log q_\theta(x_i)\] 
+which is called \name{Maximum likelihood} (\name{cross entropy})
+\[-\sum \log p(y_i|x_i,\omega)=\sum -y_i\log \mu_i-(1-y_i)\log (1-\mu_i)\]
+We reduce to minimize the thing above.
+
+\subsection{Gradient Descent}
+\[J(\theta)=\sum_{i=1}^N L(f_\theta(x_i),y_i),\quad \theta^{t+1}=\theta^t-\eta_t\frac{\partial J(\theta)}{\partial \theta}|_{\theta=\theta^t}\]
