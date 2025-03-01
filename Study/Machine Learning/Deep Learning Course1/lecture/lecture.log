@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 FEB 2025 10:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  28 FEB 2025 11:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1437,29 +1437,33 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
  [1
 
-] (../D1.tex)
+] (../D1.tex [2]) [3]
 runsystem(makeindex lecture.idx)...executed.
 
- (./lecture.ind)
+ (./lecture.ind [4
+
+
+
+])
 showing theorem
 showing proposition
 (./lecture.loe)
 \tf@loe=\write8
 \openout8 = `lecture.loe'.
 
- [2
+ [5
 
 ] (./lecture.aux)
 Package rerunfilecheck Info: File `lecture.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: EE19AB1DFD111899C0E2523EDED997BE;510.
  ) 
 Here is how much of TeX's memory you used:
- 45750 strings out of 476683
- 1040333 string characters out of 5804047
- 1848018 words of memory out of 5000000
- 65130 multiletter control sequences out of 15000+600000
- 535751 words of font info for 87 fonts, out of 8000000 for 9000
+ 45797 strings out of 476683
+ 1040812 string characters out of 5804047
+ 1851018 words of memory out of 5000000
+ 65163 multiletter control sequences out of 15000+600000
+ 542862 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,7n,115p,751b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,8n,115p,751b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecture.pdf (2 pages).
+Output written on lecture.pdf (5 pages).

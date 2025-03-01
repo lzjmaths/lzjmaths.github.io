@@ -27,3 +27,8 @@
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.14\else \numberline {2.14}Remark\fi }{11}{remark.2.14}%
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.15\else \numberline {2.15}Remark\fi }{11}{remark.2.15}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.16\else \numberline {2.16}Example\fi \thmtformatoptarg {Minimum Arborescence}}{12}{example.2.16}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.17\else \numberline {2.17}Definition\fi }{12}{definition.2.17}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{12}{thmt@dummyctr.dummy.31}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.18\else \numberline {2.18}Theorem\fi }{13}{theorem.2.18}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.19\else \numberline {2.19}Lemma\fi }{13}{lemma.2.19}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.1\else \numberline {3.1}Example\fi \thmtformatoptarg {Weighted Interval Scheduling}}{13}{example.3.1}%

@@ -1,0 +1,84 @@
+\begin{definition}
+    Given directed  $ G=(V,E)  $ and  $ r\in V  $,  $ n=|V|,m=|E| $,  $ F\subset E $ is an \name{arborescence} if 
+    \begin{itemize}
+        \item  $ F $ is a spanning tree if ignoring directions
+        \item   $ \forall v\in V $,  $ \exists $ unique  path  $ r\rightarrow v $ in  $ F $.    
+    \end{itemize}  
+    Or equivalently,  $ F $ has no directed cycles and every node  $ v\neg r $ has a unique incoming edge.  
+\end{definition}
+
+For this problem, WLOG we can assuem that the root  $ r $  has no in-degree and assume  $ \omega \geq 0 $.  
+
+\newcommand{\cheap}{\mathrm{cheap}}
+For each  $ n\neq r $, let 
+\[\mathrm{cheap}(v)=\argmin_{e=(u,v)\in E}\{\omega(e)\}\] 
+\begin{claim}
+    Let  $ F=\{\cheap(v)|v\neq r\} $.  $ F $ is arborescense $ \Rightarrow  $  $ F $ is min-cost.   
+\end{claim}
+
+Define  $ \omega_r(u,v)=\omega(u,v)-\omega(\cheap(v)) $. Suffices to find the min-cost arborescence under  $ \omega_r $. 
+
+If  $ F $ is not an arborescense, then  $ \exists $ a directed cycle  $ C $ with all edges of weight  $ 0 $.    
+
+
+Using the contraction view, if we contract "$ 0 $-cycle" and keep this process recursively. By taking degrees carefully we can easily confirm the legallity of the contraction view. Then suffices to prove it is indeed the min-cost arborescence when we expand after.
+
+\begin{theorem}
+    The min-cost arborescence  $ \tilde{F} $ when we apply contraction to  $ 0- $cycle is exactly the min-cost arborescence in the original graph after expanding.  
+\end{theorem}
+\begin{lemma}
+    $ \exists $ min-cost  $ F^* $ \st only 1 edge in  $ F^* $ entering  $ C $.   
+\end{lemma}
+\begin{proof}
+    Our goal is to prove  $ \omega_r(F) \leq \omega_r(F^*) $. 
+
+    Let  $ F^*_C=F^*\cap (C\times C) $. Then  $ |F^*_C|=|C|-1 $.
+    
+    Apply  $ C $-contraction to  $ F^*\setminus F^*_C $ we obtain an arborescence of  $ \tilde{G} $. (Easy to check) So 
+    \[\sum_{e\in F^*\setminus F^*_C}\omega_r(e) \geq \sum_{e\in \tilde{F}}\omega_r(e)\]
+    So  $ \omega_r(F^*) \geq \omega_r(F) $ 
+\end{proof}
+\begin{proof}[Proof of Lemma]
+    Choose any  $ v\in C $.
+    
+    Let  $ (x,y)\in r\rightarrow v $ be the first edge entering  $ C $.
+    
+    Delete the edge entering  $ C\setminus\{y\} $ and add the edge of circle  except the edge entering  $ y $.
+    
+    Then it is  an arborescence of less cost.
+\end{proof}
+\section{Dynamic Programming}
+\subsection{Weighted Interval Scheduling}
+\begin{example}[Weighted Interval Scheduling]
+    Input: $ n $ jobs,  $ \{(s_i,f_i),\omega_i\}_{i=1}^n $. Want to find  $ \sum\omega_{i_k} $ maximum.  
+\end{example}
+
+To make the structure simpler, we WLOG assume  $ s_1 \leq s_2 \leq \cdots \leq s_n $. 
+\begin{algorithm}
+    \caption{ $ \mathrm{Search}(i) $ }
+    \begin{algorithmic}[1]
+        \STATE  $ j\leftarrow \min \id >i,s_j \geq f_i $. 
+        \STATE Return  $ \max\{\mathrm{Search}(j)+\omega_i,\mathrm{Search}(i+1)\} $.
+    \end{algorithmic}
+\end{algorithm} 
+We may find that there is a lot of repetitive computation. We can record each  $ \mathrm{Search}(i) $
+
+
+\begin{algorithm}
+    \caption{ $ \mathrm{Search-Memorization}(i) $}
+    \begin{algorithmic}[1]
+        \STATE If  $ i>n $, RETURN 0
+        \STATE If  $ i\neq $  bottom, RETURN  $ F[i] $.
+        \STATE  $ j(i)\leftarrow \min\{j|s_j \geq f_i\} $.
+        \STATE  $ F[i]\leftarrow \max\{\mathrm{Search-M}(j(i))+\omega_i,\mathrm{Search-M}(i+1)\}  $ 
+        \STATE RETURN  $ F[i] $
+    \end{algorithmic}
+\end{algorithm}
+
+It can be written as 
+\[\begin{cases}
+    F[i]=\max\{F[j(i)]+\omega_i,F[i+1]\}\\
+    F[n+1]=0
+\end{cases}\]
+
+Such an equation is called \name{Bellman Equation}. So Dynamic Programming is a method to solve the problem by finding the optimal solution of each subproblem. We sometimes need to record the optimal solution of each subproblem to avoid repetition.
