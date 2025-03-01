@@ -379,6 +379,8 @@
   
   Using bumbling sort algorithm, we can  rearrange  $ J_1,\cdots,J_n $ such that  $ f_i $ is decreasing, and it is still a possible schedule of minimal completion time cost.
 
+  If  $ f_i=f_{i+1} $, the order will not affect the result obviously. 
+
   Since the schedule of minimal time cost must exist, it suffices to sort  $ f_i $ to get a possible schedule of minimal completion time cost. 
 \end{problem}
 
@@ -391,17 +393,25 @@
 
   WLOG, we assume that  $ (t_i,\omega_i),1 \leq i \leq n $ has been a possible solution.
   
-  If  $ \dps\omega_i\left(\sum_{j=i+1}^nt_j\right) < \omega_{k}\left(t_i-t_k+\sum_{j=i+2}^nt_j\right) $, $ i<k $ 
+  If  $ \dps\frac{\omega_i}{t_i}<\frac{\omega_{i+1}}{t_{i+1}}$, $ i<k $ 
   then swap  $ (\omega_i,t_i) $ and  $ (\omega_{k},t_{k}) $.   It only affects  $ i\sim k $-th terms  in the RHS of  \eqref{p3}. Noticed that the difference
+  % \begin{align*}
+  %   &\sum_{t=i}^k\omega_t\left(\sum_{j=t+1}^nt_j\right)-\left[\sum_{t=i+1}^{k-1}\omega_t\left(\sum_{j=t+1}^nt_j-t_k+t_i\right)+\omega_k\left(\sum_{j=i+1}^nt_j-t_k+t_i\right)+\omega_i\left(\sum_{j=k+1}^nt_j\right)\right]\\
+  %   &=\sum_{t={i+1}}^{k-1}\omega_t(t_k-t_i)+\omega_i\sum_{j=i+1}^kt_j-\omega_k\sum_{j=i}^{k-1}t_j\\
+  %   &=\omega_i\left(\sum_{j=i+1}^nt_j\right)-\omega_{i+1}\left(t_i+\sum_{j=i+2}^nt_j\right)\\
+  %   & > 0
+  % \end{align*}
   \begin{align*}
-    &\sum_{t=i}^k\omega_t\left(\sum_{j=t+1}^nt_j\right)-\left[\sum_{t=i+1}^{k-1}\omega_t\left(\sum_{j=t+1}^nt_j-t_k+t_i\right)+\omega_k\left(\sum_{j=i+1}^nt_j-t_k+t_i\right)+\omega_i\left(\sum_{j=k+1}^nt_j\right)\right]\\
-    &=\sum_{t={i+1}}^{k-1}\omega_t(t_k-t_i)+\omega_i\sum_{j=i+1}^kt_j-\omega_k\sum_{j=i}^{k-1}t_j\\
-    &=\omega_i\left(\sum_{j=i+1}^nt_j\right)-\omega_{i+1}\left(t_i+\sum_{j=i+2}^nt_j\right)\\
-    & > 0
+    \left[\omega_i\left(\sum_{j=i+1}^nt_j\right)+\omega_{i+1}\left(\sum_{j=i+2}^nt_j\right)\right]-\left[\omega_{i+1}\left(t_i+\sum_{j=i+2}^nt_j\right)+\omega_i\left(\sum_{j=i+2}^nt_j\right)\right]&=\omega_it_{i+1}-\omega_{i+1}t_i\\
+    &=t_it_{i+1}(\frac{\omega_i}{t_i}-\frac{\omega_{i+1}}{t_{i+1}})<0
   \end{align*}
   So \eqref{p3} will be smaller as they swap, which contradicts that  \eqref{p3} has already taken the minimal value. 
 
-  So a possible solution of minimal value must satisfy that  $ \omega_i $ 
+  So a possible solution of minimal value must satisfy that  $ \dps\frac{\omega_i}{t_i} $ is decreasing.
+  
+  If  $ \dps\frac{\omega_i}{t_i}=\frac{\omega_{i+1}}{t_{i+1}} $, \eqref{p3} remains the same as they swap. So a possible solution of minimal value  is a rearrangement that satisfy   $ \dps\frac{\omega_i}{t_i} $ is decreasing.
+
+  So it suffices to sort  $ \dps\frac{\omega_i}{t_i} $ decreasingly.
 \end{problem}
 \begin{problem}
   The problem can be reduced to the original case.
@@ -492,5 +502,11 @@ We prove by induction to  $ |S| $   that every  $ d[u] $ is the minimal cost tim
   \end{enumerate}
 \end{problem}
 
+\begin{problem}
+  Since it contains no cycles, we can determine the root at first.
 
+  Also because it contains no cycle, each edge in  minimum-cost arborescence is some cheap edges, otherwise one can replace  it with the cheap edge, it stil has no directed cycles and each node  $ v\neq r$ has exactly one incoming edge, hence remains a arborescence.
+
+  So this arborescence $ A $ contains all cheap edges, so it should be minimum-cost arborescence as we proved in the lecture. 
+\end{problem}
 \end{document}
