@@ -22,7 +22,7 @@ I write some lecture notes in the courses of Qiuzhen College. You can view the p
 Differential Geometry is an undergraduate course taught by Lin Jianfeng([linjian5477@mail.tsinghua.edu.cn](linjian5477@mail.tsinghua.edu.cn)) at Qiuzhen College of Tsinghua University.
 - **[<u>Complex Analysis</u>](Study/Complex Analysis/lecture notes/lecture/Complex_Analysis.pdf)**<br>
 Complex Analysis is an undergraduated course taught by Jiang Jianping([jianpingjiang@tsinghua.edu.cn](jianpingjiang@tsinghua.edu.cn)) at Qiuzhen College of Tsinghua University.
-- **[<u>Discrete Optimistic</u>](Study/Discrete Optimistic/lecture/Discrete_Optimistic.pdf)**<br>
+- **[<u>Discrete Optimisation</u>](Study/Discrete Optimisation/lecture/Discrete_Optimistic.pdf)**<br>
 Discrete Optimistic is an undergraduate course taught by Zhou Yuan([yuan-zhou@tsinghua.edu.cn](yuan-zhou@tsinghua.edu.cn)) at Yau Mathematical Sciences Center & Department of Mathematical Sciences of Tsinghua University.
 - **[<u>Latex Template</u>](https://github.com/lzjmaths/lzjmaths.github.io/blob/f0f0374dc5bb23bb9dc5f4ac37eab12040e3301d/Study/LaTex%20mod/Bingui_fixed_mod.tex)**<br>
 This is the latex template to complete these notes, offered by Bin Gui([binguimath@gmail.com](binguimath@gmail.com)).
