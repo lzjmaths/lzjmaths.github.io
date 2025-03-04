@@ -1,0 +1,21 @@
+\subsection{Hermite插值}
+ $ x_0,x_1,\cdots,x_n\in [a,b] $ 互异，求 $ 2n+1 $ 次多项式 $ H_{2n+1} $ 使得
+\[H_{2n+1}(x_j)=f(x_k),\,H_{2n+1}'(X_j)=f'(x_j),\,j=0,1,\cdots,n\] 
+
+构造 $ \alpha_j,\beta_j\in P_{2n+1} $, $ j=0,1,\cdots,n $ 分别满足
+\begin{align*}
+    &\alpha_j(x_k)=\delta_{jk}&\alpha_j'(x_k)=0\\
+    &\beta_j(x_k)=0&\beta_j'(x_k)=\delta_{jk}
+\end{align*} 
+则
+\[H_{2n+1}(x)=\sum_{j=0}^nf(x_k)\alpha_j(x)+f'(x_k)\beta_j(x)\]
+\begin{theorem}
+    $ f\in C^{2n+2}[a,b] $,  $ x_0,x_1,\cdots,x_n\in [a,b] $ 互异， $ H_{2n+1} $ 为 $ 2n+1 $ 次Hermite插值多项式，则 $ \forall x\in [a,b] $，存在 $ \zeta=\zeta(x)\in [a,b] $  使得
+    \[R_{2n+1}(x)=f(x)-H_{2n+1}(x)=\frac{f^{(2n+2)}(\zeta)}{(2n+2)!}\omega_{n+1}^2(x)\]     
+\end{theorem}
+\begin{theorem}[Kharshiladze-Lozinski]
+    $ \forall n\in \Nbb $ 
+\end{theorem}
+\begin{theorem}
+    $ X,Y $ 为Banach空间， $ \{L_\alpha\} $ 为 $ X\rightarrow Y $  的一族有界线性算子。若 $ \forall f\in X $,  $ \sup_{\alpha}\|L_\alpha f\|<\infty $, 则 $ \sup_\alpha\|L_\alpha\|<\infty $ 
+\end{theorem}

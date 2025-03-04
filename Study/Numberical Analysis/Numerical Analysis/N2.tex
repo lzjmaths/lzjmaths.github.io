@@ -25,6 +25,10 @@
 \end{cases}\]
 让
 \[L_n(x)=\sum_{i=0}^nf(x_i)l_i(x)\]
+\begin{theorem}
+    $ x_0,x_1,\cdots,x_n $ 为 $ [a,b]  $ 上不同的节点， $ f\in C^{n+1}[a,b] $， $ L_n $ 为 $ n $ 次Lagrange插值多项式，则 $ \forall x\in [a,b] $,  $ \exists \zeta=\zeta(x)\in [a,b] $ 使得 
+    \[R_n(x)=f(x)-L_n(x)=\frac{f^{(n+1)}(\zeta)}{(n+1)!}\omega_{n+1}(x)\]
+\end{theorem}
 \subsection{均差与Newton插值多项式}
 定义 $ j $ 阶均差为
 \[f[x_k,x_{k+1},\cdots,x_{k+j}]=\frac{f[x_{k+1},\cdots,x_{k+j}]-f[x_k,\cdots,x_{k+j-1}]}{x_{k+j}-x_k}\]

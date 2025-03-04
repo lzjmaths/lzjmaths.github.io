@@ -1,0 +1,94 @@
+\subsection{Segmented Least Square}
+
+\begin{example}[Lest Square]
+    We have  $ n  $ points  $ \{(x_i,y_i)\}_{i=1}^n $. We want to find a line  $ y=ax+b $ to minimize 
+    \begin{equation}
+        \mathrm{SSE}=\sum_{i=1}^n[y_i-(ax_i+b)]^2
+    \end{equation}  
+    Actually, \[ \begin{cases}
+        a=\dps\frac{n\sum_ix_iy_i-\left(\sum_ix_i\right)\left(\sum_iy_i\right)}{n\sum_ix_i^2-\left(\sum_ix_i\right)^2}\\
+        \\
+        b=\dps\frac{\sum_iy_i-a \sum_ix_i}{n}
+    \end{cases} \]
+\end{example}
+
+\begin{example}[Segmented Least Square]
+    Input:  $ \{(x_i,y_i)\}_{i=1}^n $,  $ c>0 $.
+    
+    Goal: Minimize  $ l=E+cL $ for piecewise line, where  $ c $ is the \name{hyperparameter},  $ L  $ is the number of the segments.
+\end{example}
+
+WLOG, assume  $ x_1<x_2<\cdots<x_n $. 
+
+We can define its subproblem as 
+\[\mathrm{OPT}[i]:\text{min loss}\]
+when in put is  $ (x_1,y_1),\cdots,(x_i,y_i) $.
+
+Find solution  $ \mathrm{OPT}[n] $. The boundary condition is  $ \mathrm{OPT}[1]=\mathrm{OPT}[2]=c $ and the \textbf{Bellman Equation} is 
+\[\OPT[i]=\min_{1 \leq j \geq i}\{\OPT[j-1]+l_{ji}+c\}\] 
+
+\begin{example}[Knaosack Problem]
+    Input:  $ n $ items,  $ w_i,v_i $ for its weight and value. The capacity of knapsack is  $ w $. 
+
+    If assume integral weight, then denote  $ \OPT[i,w] $ as the optimal total value when in put is first knapsack capacity is  $ w $. 
+
+    The \textbf{Bellman Equation} is 
+    \[\OPT[i,w]=\begin{cases}
+        \OPT[i-1,w]&w<w_i\\
+        \max\{\OPT[i-1,w],v_i+\OPT[i-1,w-w_i]\},w \geq w_i
+    \end{cases}\]
+
+    It has time complexity  $ O(nw) $, which is not a polynomial algorithm.
+
+    We can find another Value-Based DP: (Also assume integral values)
+    \begin{center}
+        $ \OPT[i,v] $: choose min weight items. 
+    \end{center}
+    from item  $ 1,2,\cdots,i $ so that total value  $  \geq v $.
+    
+    The final solution for maxmial $ v $ \st  $ \OPT[n,v] \leq w $.  
+
+    \[OPT[i,v]=\min\begin{cases}
+        \OPT[i-1,v]\\
+        w_i+\OPT[i-1,(v-v_i)^+]
+    \end{cases}\]
+     $ \OPT[0,v]=\begin{cases}
+        0&v=0\\
+        +\infty&v>0
+    \end{cases} $ 
+    The time complexity is  $ O(n^2v) $.
+    
+    Now we consider a \textbf{ $ \alpha $-approximation algorithm} that   $ \mathrm{ALG} \geq \alpha\cdot \OPT $ for  $ \alpha\in (0,1] $.
+
+    Let  $ \epsilon=1-\alpha $. 
+
+    \begin{algorithm}
+        \caption{Knapsack Problem}
+        \begin{algorithmic}[1]
+            \STATE Assume WLOG  $ w_i \leq W $ so that  $ V \geq \OPT $.
+            \STATE Set  $ K=\dps\frac{\epsilon V}{n} $. Let  $ v_i'=\left[\dps\frac{v_i}{K}\right] $
+            \STATE Run value-based DP to find optimal solution  $ T $ for  $ I' $ 
+            \STATE Return  $ T $ as a solution to  $ I $.       
+        \end{algorithmic}
+    \end{algorithm}
+    It is a feasible solution and 
+    \begin{align*}
+        \sum_{i\in T}v_i'&=\OPT(I')\\
+        & \geq v(S;I'),\,\forall \text{feasible} S\\
+        & \geq v(T^*,I')\\
+        &=\sum_{i\in T^*}v_i'\\
+        &=\sum_{i\in T^*}\left[\frac{v_i}{K}\right]\\
+        & \geq \sum_{i\in T^*}\left(\frac{v_i}{K}-1\right)\\
+        & \geq \frac{1}{k}\sum_{i\in T^*}\sum_{i\in T^*}v_i-n\\
+        &=\frac{1}{K}\OPT(I)-n
+    \end{align*}
+    So  $ \mathrm{ALG} \geq \dps\sum_{i\in T}K\cdot v_i' \geq \OPT(I)-nK \geq (1-\epsilon)\OPT(I) $. 
+
+    \paragraph{Fully Polynomial-Time Approximation Scheme(FPTAS)}
+     $ \forall \epsilon $,  $ \exists  $ $ (1-\epsilon) $-approximation algorithm with time complexity  $ f(n,\epsilon)=\mathrm{poly}(n,\frac{1}{\epsilon}) $.
+    
+    \paragraph{PTAS}:  $ \forall \epsilon $,  $ \exists $   $ (1-\epsilon) $-approximation in time  $ f_\epsilon(n)=\mathrm{poly}(n) $. For this algorithm, it is   $ (n\cdot 2^{\frac{1}{\epsilon}},n^{\frac{1}{\epsilon}})$.
+
+\end{example}
+
+

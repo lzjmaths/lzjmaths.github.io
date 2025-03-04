@@ -32,3 +32,6 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.18\else \numberline {2.18}Theorem\fi }{13}{theorem.2.18}%
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.19\else \numberline {2.19}Lemma\fi }{13}{lemma.2.19}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.1\else \numberline {3.1}Example\fi \thmtformatoptarg {Weighted Interval Scheduling}}{13}{example.3.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.2\else \numberline {3.2}Example\fi \thmtformatoptarg {Lest Square}}{14}{example.3.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.3\else \numberline {3.3}Example\fi \thmtformatoptarg {Segmented Least Square}}{15}{example.3.3}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.4\else \numberline {3.4}Example\fi \thmtformatoptarg {Knaosack Problem}}{15}{example.3.4}%

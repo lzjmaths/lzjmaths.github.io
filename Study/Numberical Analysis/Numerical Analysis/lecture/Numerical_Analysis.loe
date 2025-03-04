@@ -14,3 +14,7 @@
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.14\else \numberline {1.14}Definition\fi }{5}{definition.1.14}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.15\else \numberline {1.15}Theorem\fi }{5}{theorem.1.15}%
 \contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}1.16\else \numberline {1.16}Corollary\fi }{5}{corollary.1.16}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.17\else \numberline {1.17}Theorem\fi }{6}{theorem.1.17}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.18\else \numberline {1.18}Theorem\fi }{7}{theorem.1.18}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.19\else \numberline {1.19}Theorem\fi \thmtformatoptarg {Kharshiladze-Lozinski}}{7}{theorem.1.19}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.20\else \numberline {1.20}Theorem\fi }{7}{theorem.1.20}%
