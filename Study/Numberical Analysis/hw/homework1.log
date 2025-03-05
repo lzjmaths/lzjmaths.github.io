@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  4 MAR 2025 20:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  5 MAR 2025 11:54
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -462,14 +462,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 339.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] (./homework1.aux) ) 
+] [2] [3] [4] (./homework1.aux) ) 
 Here is how much of TeX's memory you used:
- 10196 strings out of 476683
- 164136 string characters out of 5804047
- 1851018 words of memory out of 5000000
- 30284 multiletter control sequences out of 15000+600000
- 527402 words of font info for 46 fonts, out of 8000000 for 9000
+ 10203 strings out of 476683
+ 164203 string characters out of 5804047
+ 1854018 words of memory out of 5000000
+ 30290 multiletter control sequences out of 15000+600000
+ 533194 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,8n,131p,528b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,13n,131p,528b,361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on homework1.pdf (1 page).
+Output written on homework1.pdf (4 pages).

@@ -330,7 +330,7 @@
 
 \usepackage[thehwcnt = 1]{iidef}
 \thecourseinstitute{Tsinghua University}
-\thecoursename{Discrete Optimistic}
+\thecoursename{Numerical Analysis}
 \theterm{Fall 2024}
 \hwname{Homework}
 \usepackage{geometry}
@@ -384,14 +384,101 @@
         \vdots\\
         e^{ix_n}
     \end{pmatrix}\]
-    which is impossible since we know that the vandermonde determinant is invertible. (In this equation,  $ a_{2n+2}=0 $)
+    which is impossible since we know that the Vandermonde determinant is invertible. (In this equation,  $ a_{2n+2}=0 $)
 
 \end{problem}
 
 \begin{problem}
-    s
+    Assume  $ \exists a=x_1<x_2<\cdots<x_N \leq b $ such that  $ |\epsilon(x_i)|=\Delta(P),\epsilon(x_j)=(-1)^{j-1}\epsilon (x_1) $,  $ j=0,1,\cdots, $.n Then  $ \forall Q\in \Span\{g_1,\cdots,g_N\} $, if  $ \Delta(Q)<\Delta(P) $, 
+    let 
+    \[\eta(x)=P(x)-Q(x)=(P(x)-f(x))-(Q(x)-f(x))\]
+    Then 
+    \[\sgn(\eta(x_j))=\eta(P(x_j)-f(x_j))=\eta(\epsilon(x_j))=(-1)^{j-1},j=0,1,\cdots,n\]
+    So  $ Q $  has    at least  $ n $ roots on  $ [a,b] $. Since  $ \{g_1,\cdots,g_n\} $ satisfies the Haar condition,  $ Q\equiv 0 $.
+    
+    So  $ P $ is the best approximation of  $ f $.
+    
+    Conversely, if  $ P $  is the best approximation. If the result is not true, then we can divide  $ [a,b] $  into 
+    \[[a,\zeta_1],[\zeta_1,\zeta_2],\cdots,[\zeta_{N},b]\]
+    such that on each interval  $ \Delta(P) $ satisfies  $ N \leq n-1 $ and  
+    \[-\Delta(P) \leq \epsilon(x)<\Delta(P)-\alpha\]
+    or 
+    \[-\Delta(P)+\alpha \leq \epsilon(x)<\Delta(P)\] 
+    Denote  $ \Phi(x) $ as an element with roots  $ \zeta_1,\cdots,\zeta_N $. (The existence because of Haar condition)
+    
+    Then  $ Q(x):=P(x)+\omega \Phi(x) $ with difference 
+    \[Q(x)-f(x)=P(x)-f(x)+\omega\Phi(x)\]
+    On  $ [a,b] $,  $ \Phi(x) $ is bounded. Take  $ |\omega| $ sufficiently small, and choose the signature of  $ \omega $     properly, we have 
+    \[\Delta(Q)<\Delta(P)\]
+    which causes contradiction.
+
+    Here we end the proof.
 \end{problem}
 
+\begin{problem}
+    Replace  $ f $ with  $ f-p_n $. WLOG we assume the best approximation polynomial is 0.
+    
+    If  $ \exists q_n $ such that 
+    \[\|f-q_n\|<\|f\|+\lambda\|q_n\|\]
+    where  $ \lambda<\frac{1}{2} $.
+    
+    For  $\omega>1$,  if  $ |f(x)|<|q_n(x)| $, then  $ q_n(x) $,  $ f(x) $ have different signature or  $ q_n(x)-f(x),f(x),q_n(x) $ have the same signature. Therefore,
+    \begin{equation}\label{p3}
+        \begin{aligned}
+            |f(x)-\omega q_n(x)|& =\begin{cases}
+                \omega |q_n(x)|-|f(x)|,&\sgn(f(x))= \sgn(q_n(x))\\
+                \omega |q_n(x)|+|f(x)|,&\sgn(f(x))\neq \sgn(q_n(x))
+            \end{cases}\\
+            & =\begin{cases}
+                \omega|f(x)-q_n(x)|+(\omega-1)|f(x)|,&\sgn(f(x))= \sgn(q_n(x))\\
+                \omega|f(x)-q_n(x)|-(\omega-1)|f(x)|,&\sgn(f(x))\neq \sgn(q_n(x))
+            \end{cases}
+        \end{aligned}
+    \end{equation}
+    
+    Now if  $ \forall \lambda_m=\frac{1}{m},m \geq 2 $,   $ \exists  $ $ q_m $ such that 
+    \[\|f-q_m\|<\|f\|+\lambda_m\|q_m\|\]
+    Since  $ \|f-q_m\| \geq \|q_m\|-\|f\| $, we have  $ \|q_m\|<\frac{2}{1-\lambda_m}\|f\|<4\|f\| $.
+    
+    So  $ \|q_m\| $ are uniformly bounded. Hence,  $ \{q_m\} $ is precompact in the polynomial space, or equivalently, there exists  $ q\in \Pbb_n $ such that some subsequence  $ \{q_{m_i}\} $ converges to  $ q $.
+    
+    As  $ m\rightarrow0,\,\lambda_m\rightarrow0 $, then 
+    \[\|f-q\| \leq \|f\|\]
+    So  $ q\equiv 0 $. 
+    
+    So  $ \exists N>0 $ such that  $ \forall i \geq N $,  $ \|q_{m_i}\|<\|f\| $.
+    
+    Now for  $ x^i=\arg\max|f(x)-q_{m_i}(x)| $, since  $ |f(x^i)-q_{m_i}(x^i)| \geq \|f\| $,  $ q_{m_i}(x^i) $ and  $ f(x^i) $  have  different signature. So  $ |f(x^i)| \geq \|f\|-|q_{m_i}(x^i)| $ 
+    
+    By \eqref{p3}, we have for  $ \omega>1 $,
+    \begin{align*}
+        |f(x^i)-\omega q_n(x^i)|&=\omega|f(x^i)-q_n(x^i)|-(\omega-1)|f(x^i)|\\
+        &<\omega(\|f\|+\lambda_{m_i}\|q_n\|)-(\omega-1)(\|f\|-|q_{m_i}(x^i)|)\\
+        &=\|f\|+\lambda_{m_i}\|\omega q_n\|+(\omega-1)|q_{m_i}(x^i)|
+    \end{align*}
+    
+\end{problem}
+
+\begin{problem}
+    For  $ x\in [a,b], $ WLOG assume  $ x\neq x_i $. ($ x=x_i $ is trivial)
+    Define 
+    \[G(t)=R_{2n+1}(t)-\frac{\omega_{n+1}^2(t)}{\omega^2_{n+1}(x)}R_{2n+1}(x)\]
+    Then 
+    \[G(x_i)=0,G(x)=0\]
+    So there are   $ n+2 $ roots on  $ [a,b] $.
+    
+    By Rolle's theorem, there are  $ n+1 $ roots on  $ [a,b]\setminus\{x_0,\cdots,x_n,x\} $.
+    
+    Since  $ G'(t)=R_{2n+1}'(t)-\frac{\omega_{n+1}(t)\omega'_{n+1}(t)}{\omega^2_{n+1}}R_{2n+1}(x) $,  $ G'(x_i)=0 $.
+    
+    So there are at least $ 2n+2 $ roots on $ [a,b] $ of  $ G' $.
+    
+    Apply  $ 2n+1 $ times of Rolle's theorem to  $ G' $, we obtain there is at least one root on  $ [a,b] $  of  $ G^{(2n+2)} $.
+
+    So  $ \exists \zeta\in [a,b] $,  $ 0=G^{(2n+2)}(\zeta)=f^{(2n+2)}(\zeta)-\frac{(2n+2)!}{\omega_{n+1}^2(x)}R_{2n+1}(x) $.
+    
+    So  $ \exists \zeta\in [a,b] $,   $ R_{2n+1}(x)=\dps\frac{f^{(2n+2)}(zeta)}{(2n+2)!}\omega_{n+1}(x) $ 
+\end{problem}
 
 
 \end{document}
