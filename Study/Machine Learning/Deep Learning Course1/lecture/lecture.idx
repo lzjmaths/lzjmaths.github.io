@@ -6,3 +6,13 @@
 \indexentry{Softmax|hyperpage}{2}
 \indexentry{Maximum likelihood|hyperpage}{2}
 \indexentry{cross entropy|hyperpage}{2}
+\indexentry{Stochastic Gradient Descent|hyperpage}{3}
+\indexentry{mini batch|hyperpage}{3}
+\indexentry{momentum|hyperpage}{3}
+\indexentry{Exponential Moving Averaging(EMA)|hyperpage}{4}
+\indexentry{Adaptive Moment Estimation(Adam)|hyperpage}{4}
+\indexentry{Sigmoid|hyperpage}{4}
+\indexentry{Tanh|hyperpage}{4}
+\indexentry{ReLU|hyperpage}{4}
+\indexentry{LeakyReLU|hyperpage}{4}
+\indexentry{Batch Normalization|hyperpage}{5}

@@ -19,7 +19,11 @@
 \contentsline {section}{\numberline {3}Dynamic Programming}{13}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Weighted Interval Scheduling}{13}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Segmented Least Square}{14}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Knaosack Problem}{15}{subsection.3.3}%
 \contentsline {paragraph}{Fully Polynomial-Time Approximation Scheme(FPTAS)}{17}{section*.8}%
 \contentsline {paragraph}{PTAS}{17}{section*.9}%
-\contentsline {section}{Index}{18}{section*.10}%
-\contentsline {section}{List of Theorems}{19}{section*.11}%
+\contentsline {subsection}{\numberline {3.4}RNA Secondary Structure}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Sequence Alignment(Edit Distance)}{18}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Matrix Multiplication}{19}{subsection.3.6}%
+\contentsline {section}{Index}{20}{section*.10}%
+\contentsline {section}{List of Theorems}{21}{section*.11}%

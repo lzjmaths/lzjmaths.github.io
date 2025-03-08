@@ -1,0 +1,87 @@
+For \textbf{empirical loss} 
+\[J(\theta)=\frac{1}{N}\sum_{i=1}^N J_i(\theta),J_i(\theta)L(f_\theta(y_i),x_i)\]
+\name{Stochastic Gradient Descent}:only compute gradients over a mini batch for each epoch
+\[\theta_{k+1}=\theta_k-\eta\frac{1}{B}\sum_{i\in I_B} \nabla  J_i(\theta_k)\]
+$ I_B $, called \name{mini batch} are randomly sampled from the training data indexes.
+
+The motivation to sample is that for distribution  $ x $,  $ \dps\frac{x_1+\cdots+x_N}{N} $ has the same mean  $ \mu  $ but less variance  $ \frac{1}{N}\sigma^2 $, so in order to have more randomness and greatly reduce the computational cost, we choose less ammount of data.
+
+Randomness can help avoid getting stuck in  local minimum.
+
+SGD: $ x_{t+1}=x_t-\alpha \nabla f(x_t) $.
+
+SGD+\name{momentum}:
+\[v_{t+1}=\rho v_t+\nabla f(X_t)\]
+\[x_{t+1}=x_t-\alpha v_{t+1}\]
+$ v_t $ is the momentum which helps accelerate convergence by accumulating the gradients of past steps and smoothing out the oscillations, where  $ \rho=0.9  $ or  $ 0.99 $.  
+
+\subsection{Adaptive learning rate}
+
+\[r_t=r_{t-1}+\nabla f(x_t)\bigodot  \nabla f(x_t)\]
+\[x_{t+1}=x_t-\frac{\alpha}{\sqrt{r_t+\epsilon}}\bigodot  \nabla f(x_t)\]
+For frequent features, the  updates will be smaller, and for rare features, the updates will be larger.
+
+\paragraph{Notation}  $ \odot $ is  the multiplication for each component, which means:
+
+
+\[\begin{pmatrix}
+    a_1\\
+    \vdots\\
+    a_n
+\end{pmatrix}\odot\begin{pmatrix}
+    b_1\\
+    \vdots\\
+    b_n
+\end{pmatrix}=\begin{pmatrix}
+    a_1b_1\\
+    \vdots\\
+    a_nb_n
+\end{pmatrix}\]
+
+
+\name{Exponential Moving Averaging(EMA)}
+\[r_t=\beta r_{t-1}+(1-\beta)\nabla f(x_t)\odot \nabla f(x_t)\]
+\[x_{t+1}=x_t-\frac{\alpha}{\sqrt{r_t+\epsilon}}\bigodot  \nabla f(x_t)\]
+
+RMSProp uses a moving average, avoiding overly aggresive decay complared with AdaGrad.
+
+\name{Adaptive Moment Estimation(Adam)}:RMAProp+Momentum 
+\[g_t=\nabla f(x_t)\]
+\[v_t=\beta_1^t v_{t-1}+(1-\beta_1^t)g_t, r_t=\beta_2^t r_{t-1}+(1-\beta_2^t)g_t\odot g_t\]
+\[v_t=\frac{v_t}{1-\beta_1^t},E_t=\frac{E_t}{1-\beta_2^t}\]
+\[x_{t+1}=x_t-\frac{\alpha}{\sqrt{r_t+\epsilon}}\odot v_t\]
+
+\section{Vanishing or Exploding Gradient}
+The gradient of the Sigmoid function is very small most of the time, leading to vanishing gradients
+
+We want to avoid exploding or vanishment in gradient.
+
+\name{Sigmoid}: $ \dps\sigma(z)=\frac{1}{1+e^{-z}} $.
+
+\name{Tanh}: $ \dps\sigma(z)=\frac{e^{z}-e^{-z}}{e^z+e^{-z}} $.
+
+\name{ReLU}:  $ \dps\mathrm{ReLU}(z)=\begin{cases}
+    z,&z>0\\
+    0,&\text{otherwise}
+\end{cases} $.
+
+\name{LeakyReLU}: $ \dps \mathrm{LeakyReLU}(z)=\begin{cases}
+    z,&z>0\\
+    az,&\text{otherwise}
+\end{cases} $.
+The gradient neither vanishes nor explodes; it is computationally fast, but some neurons may not be activated.
+
+LeakyReLU solves the issue with ReLU and is the most commonly used.
+
+Consider the back propagation  $ \dps\frac{\partial J}{\partial x}=\frac{\partial J}{\partial y}\frac{\partial y}{\partial x}=\frac{\partial J}{\partial x}W$. Cumulate after multi-layers
+\[\mathrm{Var}(\frac{\partial J}{\partial x})=\prod_i n_l \mathrm{Var}(W_l)\mathrm{Var}(\frac{\partial J}{\partial x_l})\]
+We want   $ n_l\mathrm{Val}(W_l)\sim 1 $. 
+
+After normalizing their variances, the updating becomes more steady and efficient.
+
+To avoid variance becoming too small or too large in deep layers, normalize features in the network 
+\[\hat{x}_i=\frac{x_i-\Ebb x_i}{\sqrt{\mathrm{var}(x_i)}}\]
+\name{Batch Normalization}: normalize features across samples within each batch.
+
+
+

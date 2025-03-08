@@ -1,6 +1,6 @@
 \subsection{Segmented Least Square}
 
-\begin{example}[Lest Square]
+\begin{example}[Least Square]
     We have  $ n  $ points  $ \{(x_i,y_i)\}_{i=1}^n $. We want to find a line  $ y=ax+b $ to minimize 
     \begin{equation}
         \mathrm{SSE}=\sum_{i=1}^n[y_i-(ax_i+b)]^2
@@ -27,6 +27,7 @@ when in put is  $ (x_1,y_1),\cdots,(x_i,y_i) $.
 Find solution  $ \mathrm{OPT}[n] $. The boundary condition is  $ \mathrm{OPT}[1]=\mathrm{OPT}[2]=c $ and the \textbf{Bellman Equation} is 
 \[\OPT[i]=\min_{1 \leq j \geq i}\{\OPT[j-1]+l_{ji}+c\}\] 
 
+\subsection{Knaosack Problem}
 \begin{example}[Knaosack Problem]
     Input:  $ n $ items,  $ w_i,v_i $ for its weight and value. The capacity of knapsack is  $ w $. 
 

@@ -1,0 +1,83 @@
+\subsection{RNA Secondary Structure}
+\begin{example}[RNA Secondary Structure]
+    RNA is a string  $ b_1b_2\cdots b_n $  where  $ b_i\in \{A,C,G,U\} $.
+    
+    The secondary structure is what fold to form "base pairs" including:
+    \[U\cdots A,A\cdots U,C\cdots G,G\cdots C\]
+    Mathematically, second structure represented by set of base pairs  $ S=\{(i,j)\} $, 
+    \begin{enumerate}[label=*)]
+        \item  $ \forall (i,x)\in S,(b_i,b_j)\in \{U\cdots A,A\cdots U,C\cdots G,G\cdots C\} $
+        \item no sharp turns:  $ \forall (i,j)\in S $,  $ i<j-4 $,
+        \item non-crossing:  $ \forall (i,j),(k,l)\in S $, cannot have  $ i<k<j<l $.     
+    \end{enumerate} 
+    Goal: Maximize  $ |S| $. 
+\end{example}
+
+A direct idea is to construct those subproblems:
+
+\[\OPT[i,j]=\max_{i \leq k<j-4}\begin{cases}
+    \OPT[i,j-1] &b_j \text{ not matched}\\
+    1+\OPT[i,k-1]+\OPT[k+1,j-1] &b_j\text{ matched with }b_k
+\end{cases}\]
+\[\OPT[i,j]=0\text{ when }i \leq j<i+4\]
+
+
+\subsection{Sequence Alignment(Edit Distance)}
+
+\begin{example}
+    For a wrong-spelled word, what cost do we need to make it right, using the gap and mismatch.
+
+    Or what is its edit distance to the correct word.
+
+    Mathematically, for string  $ (a_1\cdots a_n),(b_1\cdots b_m) $, a matching  $ M=\{(i,j)\}$ such that there is no  $ (i_1,j_1),(i_2,j_2)\in M $ \st  $ i_1<i_2 $ but  $ j_2<j_1 $.     Define its cost 
+    \[\mathrm{cost}(M)=\sum_{(i,j)\in M}\alpha_{a_i b_j}+\sum_{i\in [n],i\text{ not in  $ M $}}+\sum_{\begin{aligned}
+        j\in [m]\\
+        j\text{ not in  $ M $}
+    \end{aligned}}\delta\] 
+
+    $ \dps \sum_{(i,j)\in M}\alpha_{a_i b_j}$ is the mismatch cost and  $ \sum_{i\in [n],i\text{ not in  $ M $}}+\sum_{j\in [m],j\text{ not in  $ M $}}\delta $ is the gap cost 
+\end{example}
+
+Define  $ \OPT[i,j] $ is the edit distance between  $ a_1a_2\cdots a_i $ and  $ b_1b_2\cdots b_j $.
+
+
+
+\[\OPT[i,j]=\min_{1 \leq k \leq j}=\begin{cases}
+    \delta+\OPT[i-1,j]&a_i\text{ not matched}\\
+    \alpha_{a_ib_k}+\delta\cdot (j-k)+\OPT[i-1,k-1]&a_i\text{matched with  $ b_k $ }
+\end{cases}\]
+
+However, for each case it can be divided into three cases:
+\[\OPT[i,j]=\min\begin{cases}
+    \OPT[i-1,j-1]+\alpha_{a_ib_j}\\
+    \OPT[i-1,j]+\delta\\
+    \OPT[i,j-1]+\delta
+\end{cases}\]
+
+The question is, if we need to trace the matching process, the space complexity is  $ O(nm) $, too large.
+
+Here we use binary search.
+\begin{algorithm}
+    \caption{Binary Search}
+    \begin{algorithmic}[1]
+        \STATE Compute  $ A[j]=d[(0,0)\rightarrow(\frac{n}{2},j)] $ and  $B[j]= d[(\frac{n}{2},j)\rightarrow(n,m)] $,
+        \STATE find  $ j^*=\argmin_j A[j]+B[j] $.
+        \STATE Run the sub-process  $ (0,0)\rightarrow(\frac{n}{2},j^*) $ and  $ (\frac{n}{2},j^*)\rightarrow(n,m) $ 
+    \end{algorithmic}
+\end{algorithm}
+
+The complexity is still  $ O(nm)+\frac{1}{2}O(nm)+\cdots+\frac{1}{2^k}O(nm)=O(nm) $.
+
+\subsection{Matrix Multiplication}
+
+\begin{example}[Matrix Multiplication]
+    Consider  $ M_1\cdot M_2\cdots M_k $ where  $ M_i $ is a  $ n_{i-1}\times n_i $ matrix. 
+
+    We want to find the optimal multiplicative order such that the time cost is minimal.
+\end{example}
+
+Denote  $ \OPT[i,j] $ is the min from  $ M_i $ to  $ M_j $.
+
+Using the binary tree, consider the last multiplication
+
+\[\OPT[i,j]=\min_{i \leq l<j}\{\OPT[i,l]+\OPT[l+1,j]+n_{i-1}n_ln_j\}\]
