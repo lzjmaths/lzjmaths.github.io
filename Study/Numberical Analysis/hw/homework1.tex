@@ -300,9 +300,8 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 
-
-
-
+\newcommand{\<}{\left<}
+\renewcommand{\>}{\right>}
 
 
 \numberwithin{equation}{problem}
@@ -422,20 +421,6 @@
     \[\|f-q_n\|<\|f\|+\lambda\|q_n\|\]
     where  $ \lambda<\frac{1}{2} $.
     
-    For  $\omega>1$,  if  $ |f(x)|<|q_n(x)| $, then  $ q_n(x) $,  $ f(x) $ have different signature or  $ q_n(x)-f(x),f(x),q_n(x) $ have the same signature. Therefore,
-    \begin{equation}\label{p3}
-        \begin{aligned}
-            |f(x)-\omega q_n(x)|& =\begin{cases}
-                \omega |q_n(x)|-|f(x)|,&\sgn(f(x))= \sgn(q_n(x))\\
-                \omega |q_n(x)|+|f(x)|,&\sgn(f(x))\neq \sgn(q_n(x))
-            \end{cases}\\
-            & =\begin{cases}
-                \omega|f(x)-q_n(x)|+(\omega-1)|f(x)|,&\sgn(f(x))= \sgn(q_n(x))\\
-                \omega|f(x)-q_n(x)|-(\omega-1)|f(x)|,&\sgn(f(x))\neq \sgn(q_n(x))
-            \end{cases}
-        \end{aligned}
-    \end{equation}
-    
     Now if  $ \forall \lambda_m=\frac{1}{m},m \geq 2 $,   $ \exists  $ $ q_m $ such that 
     \[\|f-q_m\|<\|f\|+\lambda_m\|q_m\|\]
     Since  $ \|f-q_m\| \geq \|q_m\|-\|f\| $, we have  $ \|q_m\|<\frac{2}{1-\lambda_m}\|f\|<4\|f\| $.
@@ -446,16 +431,16 @@
     \[\|f-q\| \leq \|f\|\]
     So  $ q\equiv 0 $. 
     
-    So  $ \exists N>0 $ such that  $ \forall i \geq N $,  $ \|q_{m_i}\|<\|f\| $.
+    So  $ \exists N>0 $ such that  $ \forall i \geq N $,  $ \|q_{m_i}\|<\|f\| $. Choose  $ q $ be some  $ q_{m_i} $,  $ i \geq N $.   
     
     Now for  $ x^i=\arg\max|f(x)-q_{m_i}(x)| $, since  $ |f(x^i)-q_{m_i}(x^i)| \geq \|f\| $,  $ q_{m_i}(x^i) $ and  $ f(x^i) $  have  different signature. So  $ |f(x^i)| \geq \|f\|-|q_{m_i}(x^i)| $ 
     
-    By \eqref{p3}, we have for  $ \omega>1 $,
-    \begin{align*}
-        |f(x^i)-\omega q_n(x^i)|&=\omega|f(x^i)-q_n(x^i)|-(\omega-1)|f(x^i)|\\
-        &<\omega(\|f\|+\lambda_{m_i}\|q_n\|)-(\omega-1)(\|f\|-|q_{m_i}(x^i)|)\\
-        &=\|f\|+\lambda_{m_i}\|\omega q_n\|+(\omega-1)|q_{m_i}(x^i)|
-    \end{align*}
+    Since there exists  $ a \leq x_0<x_1<\cdots<x_{n+1} \leq b $  such that  $ f(x_i)=\delta(-1)^i\|f\| $ where  $ \delta=\pm 1 $, in the finite dimentional polynomial space, the norm is all equivalent. Therefore  $ \exists \lambda>0 $ \st 
+    \[\max_{0 \leq i \leq n+1}|q(x_i)|>\lambda\|q\|\]
+    But if   $ q(x_i)f(x_i)>0 $, then  $ q $ has root on each interval  $ (x_i,x_{i+1}) $,  $ i=0,1,\cdots,n $, which contradicts with the fact that  $ q  $ has degree of  $ n $.
+    
+    So  $ \exists i $ \st  $ q(x_i)f(x_i) \leq 0 $. Then  $ |f(x_i)-q(x_i)|=|f(x_i)|+|q(x_i)| \geq \|f\|+\lambda\|q\| $.
+
     
 \end{problem}
 
@@ -481,10 +466,27 @@
 \end{problem}
 
 \begin{problem}
-    
+    By partition of unity, we could find  $ \|f\|=1 $ such that  $ f(t)\cdot D_n(t)=|D_n(t)| $ except for a small enough set  $ E $ with  $ m(E)<\epsilon $.
+    Then   
+    \[\|s_n\| \geq |\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)D_n(t)\dd t| \geq \frac{1}{\pi}\int_{-\pi}^\pi |D_n(t)|\dd t -\epsilon\cdot \|D_n\| =\lambda_n-\epsilon \cdot \|D_n\|\]
+    Hence if let  $ \epsilon\rightarrow 0 $,  $ \|s_n\| \geq \lambda_n $. Therefore,  $ \|s_n\|=\lambda_n $.   
 \end{problem}
 \begin{problem}
-    1
+    Define the inner product in  $ C^2[a,b] $  as 
+    \[\<f,g\>=\int_a^b\<f'',g''\>\dd x\]
+    Easy to check that it is  a inner product.
+
+    Let  $ g=f-s $.
+    
+    Then  $ \dps\int_a^b g''(x)\dd x=\left.(f'(x)-s'(x))\right|_a^b=0 $.
+    
+     $ \dps\int_a^b xg''(x)\dd x=\left.(xg'(x))\right|_a^b-\int_a^b g'(x)\dd x=0 $.
+     
+     Therefore  $ \dps\int_a^b p(x) g''(x)\dd x=0$ for all  $ p $ polynomial of degree 1.
+     
+     Since  $ s''\in \Pbb_1 $,  $ \<s,g\>=0 $. Therefore, 
+     \[\|f\|=\|s\|+\|f-s\| \geq \|s\|\]
+     It is what we need.  
 \end{problem}
 
 \begin{problem}
