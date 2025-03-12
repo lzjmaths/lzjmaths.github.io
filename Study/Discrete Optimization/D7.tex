@@ -1,0 +1,109 @@
+\section{Flow Network}
+\subsection{Definition}
+\newcommand{\val}{\mathrm{val}}
+\begin{example}
+    For directed graph  $ G=(V,E,s,t,c) $ where  $ s  $ is the source and  $ t  $ is the sink. $ c:E\rightarrow \Rbb_{ \geq 0}  $ is the capacity function.
+    
+    The \name{st-flow} is   $ f:E\rightarrow \Rbb_{ \geq 0} $ \st 
+    \begin{enumerate}[label=\arabic*)]
+        \item  $ \forall e\in E $, $ f(e) \leq c(e) $.
+        \item  $ \forall v\in V\setminus\{s,t\} $,  $ \dps\sum_{(u,v)\in E}f(u,v)=\sum_{(v,u)\in E}f(v,u) $, \ie flow conservation.
+    \end{enumerate} 
+    \[\val(f)=\sum_{(s,u)\in E}f(s,u)-\sum_{(u,s)\in E}f(u,s)\]
+    Our goal is to maximize  $ \val(f) $ 
+\end{example}
+An \textbf{st-cut} is a partition  $ (A,B) $ of  $ V $ such that  $ s\in A,t\in B $, the capacity 
+\[c(A,B)=\sum_{\substack{(u,v)\in E\\u\in A,v\in B}}c(u,v)\]   
+\begin{claim}
+    $ \forall  $ feasible flow  $ f $ and st-cut  $ (A,B) $, 
+    \[\val(f) \leq c(A,B)\]  
+\end{claim}
+\paragraph{Residual Network} Given flow network  $ G $, feasible flow  $ f $, the residual network $ G_f(v,E_f,s,t,c_f) $ is for each  $ e\in E $ 
+\[c_f(e)=c(e)-f(e)+f(e^{\mathrm{reverse}})\]
+where  $ u\to v $ is on the flow.
+\begin{claim}[Weak Duality]
+    $ f' $ is a feasible flow in  $ G_f $ if and only if  $ f\oplus f' $ is feasible in  $ G $, where 
+    \[(f\oplus f')(e)=f(e)+f'(e)-f'(e^{\mathrm{reverse}})\]    
+\end{claim}     
+
+An \textbf{augmenting path}  $ P $ is an unsaturated  $ s\to t $ path in  $ G_f $.
+
+\begin{algorithm}
+    \caption{Augment $ (f,P) $}
+    \begin{algorithmic}[1]
+        \STATE Let  $ \delta=\dps\min_{e\in P}c_f(e) $.
+        \FOR{$ e=(u,v)\in P $}
+            \IF{ $ e\in E $ }\STATE$ f(e)\leftarrow f(e)+\delta $
+            \ELSE \STATE $ f(v,u)\leftarrow f(v,u)-\delta $
+            \ENDIF
+        \ENDFOR
+    \end{algorithmic}
+\end{algorithm}
+
+
+Now we give the Ford-Fulkerson Algorithm.
+\begin{algorithm}
+    \caption{Ford-Fulkerson Algorithm}
+    \begin{algorithmic}[1]
+        \STATE $ f\leftarrow 0 $
+        \WHILE{ $ \exists $ augmenting path $ P $ in  $ G_f $}
+            \STATE Augment$ (f,P) $
+        \ENDWHILE
+        \RETURN $ f $
+    \end{algorithmic}
+\end{algorithm}
+\begin{theorem}\label{max flow algorithm thm}
+    If F-F algorithm terminates, it finds a max flow.
+\end{theorem}
+
+\begin{claim}
+    $ \forall $ st-cut  $ (A,B) $, st-flow  $ f $, we have 
+    \[\val(f)=\sum_{\substack{u\in A,v\in B\\(u,v)\in E}}f(u,v)-\sum_{\substack{u\in E,v\in A\\(u,v)\in E}}f(u,v)\]   
+\end{claim}
+It proves the previous claim weak duality.
+\begin{proof}
+    \begin{align*}
+        \val(f)&=\sum_{(s,v)\in E}f(s,v)-\sum_{(u,s)\in E}f(u,s)\\
+        &+\sum_{\omega\in A-\{s\}}\left(\sum_{(u,w)\in W}f(u,w)-\sum_{(w,v)\in E}f(w,v)\right)
+    \end{align*}
+\end{proof}
+\begin{proof}[Proof of the Theorem \ref{max flow algorithm thm}]
+    Consider the residue graph  $ G $.
+    
+    Denote  $ A $ to be the set of nodes reachable from  $ s $.
+    $ B=V\setminus A $.  $ t\in B $ since there is no path from  $ s $ to  $ t $.   
+    
+    Then st-cut  $ (A,B) $ has capacity  $ c_f(A,B)=0 $. So for  $ u\in B,v\in A $, since  $ f(u,v)\neq 0 $  $ \Rightarrow  $ $ c_f(v,u)>0 $, we have  $ c_f(v,u)=0 $    $ \Rightarrow  $ $ f(u,v)=0 $.   
+    
+    \begin{align*}
+        \val(f)&=\sum_{\substack{u\in A,v\in B\\(u,v)\in E}}f(u,v)-\sum_{\substack{u\in B,v\in A\\(u,v)\in E}}f(u,v)\\
+        &=\sum_{\substack{u\in A,v\in B\\(u,v)\in E}}c(u,v)-0\\
+        &=c(A,B)
+    \end{align*}
+\end{proof}
+
+Now suffices to proof that the algorithm terminates.
+
+\begin{lemma}
+    If capacities are integral and less than  $ c $, then F-F terminates in  $ O(nmC) $ time and returns an integral max flow.  
+\end{lemma}
+
+The lemma implies we should choose some proper path so that it will terminate fast.
+
+Assume the integral capacities  $  \leq C $ and  $ G_f(\delta) $ denoted as  $ G_f $ with edges of capacites  $  \geq \delta $.    
+\begin{algorithm}
+    \caption{Capacity-Scaling Algotihm}
+    \begin{algorithmic}[1]
+        \STATE Initiate  $ f\equiv 0 $,  $ \delta\leftarrow  $ largest  $ 2^k \leq c $.  
+        \WHILE{$ \delta \geq 1 $}\label{CS algorithm loop}
+            \WHILE{ $ \exists $ augmenting path $ P $ in  $ G_f(\delta) $}
+                \STATE Augment$ (f,P) $
+            \ENDWHILE
+            \STATE $ \delta\leftarrow \delta/2 $ 
+        \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{theorem}
+    The C-S runs in time  $ O(m^2\log c) $ since the step \ref{CS algorithm loop} runs for  $ O(m) $ iterations. 
+\end{theorem}

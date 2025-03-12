@@ -30,10 +30,9 @@ A direct idea is to construct those subproblems:
     Or what is its edit distance to the correct word.
 
     Mathematically, for string  $ (a_1\cdots a_n),(b_1\cdots b_m) $, a matching  $ M=\{(i,j)\}$ such that there is no  $ (i_1,j_1),(i_2,j_2)\in M $ \st  $ i_1<i_2 $ but  $ j_2<j_1 $.     Define its cost 
-    \[\mathrm{cost}(M)=\sum_{(i,j)\in M}\alpha_{a_i b_j}+\sum_{i\in [n],i\text{ not in  $ M $}}+\sum_{\begin{aligned}
+    \[\mathrm{cost}(M)=\sum_{(i,j)\in M}\alpha_{a_i b_j}+\sum_{i\in [n],i\text{ not in  $ M $}}+\sum_{\substack{
         j\in [m]\\
-        j\text{ not in  $ M $}
-    \end{aligned}}\delta\] 
+        j\text{ not in  $ M $}}}\delta\] 
 
     $ \dps \sum_{(i,j)\in M}\alpha_{a_i b_j}$ is the mismatch cost and  $ \sum_{i\in [n],i\text{ not in  $ M $}}+\sum_{j\in [m],j\text{ not in  $ M $}}\delta $ is the gap cost 
 \end{example}
@@ -81,3 +80,5 @@ Denote  $ \OPT[i,j] $ is the min from  $ M_i $ to  $ M_j $.
 Using the binary tree, consider the last multiplication
 
 \[\OPT[i,j]=\min_{i \leq l<j}\{\OPT[i,l]+\OPT[l+1,j]+n_{i-1}n_ln_j\}\]
+
+

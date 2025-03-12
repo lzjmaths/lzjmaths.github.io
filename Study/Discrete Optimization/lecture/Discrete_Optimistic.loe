@@ -38,3 +38,10 @@
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.5\else \numberline {3.5}Example\fi \thmtformatoptarg {RNA Secondary Structure}}{17}{example.3.5}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.6\else \numberline {3.6}Example\fi }{18}{example.3.6}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.7\else \numberline {3.7}Example\fi \thmtformatoptarg {Matrix Multiplication}}{19}{example.3.7}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.1\else \numberline {4.1}Example\fi }{20}{example.4.1}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{20}{thmt@dummyctr.dummy.42}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim\thmtformatoptarg {Weak Duality}}{21}{thmt@dummyctr.dummy.43}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.2\else \numberline {4.2}Theorem\fi }{21}{theorem.4.2}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{21}{thmt@dummyctr.dummy.45}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.3\else \numberline {4.3}Lemma\fi }{22}{lemma.4.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.4\else \numberline {4.4}Theorem\fi }{23}{theorem.4.4}%
