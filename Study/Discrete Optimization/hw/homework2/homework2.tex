@@ -485,6 +485,59 @@
     Its time complexity is  $ O(nD) $ 
 \end{problem}
 \begin{problem}
-    f
+    
 \end{problem}
+\begin{problem}
+    \newcommand{\Is}{\mathrm{IsInter}}
+    Denote  $ \Is[k][i][j] $ as the possibility if the first  $ k $ characters of  $ s $  can be partitioned into  two subsequences  $ s_1 $ and  $ s_2 $  so that  $ s_1 $ is a repetition  of  $ x $ and  $ s_2 $ is a repetition of  $ y $, moreover  \[\mathrm{len}(s_1)\equiv i \mod \mathrm{len}(x),\qquad\mathrm{len}(s_2)\equiv j\mod \mathrm{len}(y) \]
+
+    For example,  $ \Is[1][i][j]=\begin{cases}
+        1&(i,j)=(1,j)\text{ and }s[1]=x[1]\\
+        1&(i,j)=(i,1)\text{ and }s[1]=y[1]\\
+        0&\text{otherwise}
+    \end{cases} $.
+
+    The Bellman equation is 
+    \begin{equation}\label{eq1}
+        \Is[k][i][j]=\begin{cases}
+            \max\left\{\Is[k-1][i-1][j],\Is[k-1][i][j-1]\right\}&\text{if  $ s[k]=x[i] $ and $ s[k]=y[j] $}\\
+            \Is[k-1][i-1][j]&\text{else if  $ s[k]=x[i] $}\\
+            \Is[k-1][i][j-1]&\text{else if  $ s[k]=y[j] $}\\
+            0&\text{otherwise}
+        \end{cases}
+    \end{equation}
+    because the  $ k $-th character have two choice. In \eqref{eq1},  $ i-1 $,  $ j-1 $ is chosen to be the one in $ \{1,2,\cdots,\mathrm{len}(x)\},\{1,2,\cdots,\mathrm{len}(y)\} $ under the module meaning respectively.
+    
+    So the algorithm can be implemented as follows
+    \begin{algorithm}
+        \begin{algorithmic}[1]
+            \STATE  $ l_x=\mathrm{len}(x),l_y=\mathrm{len}(y),n=\mathrm{len}(s) $.
+            \STATE  $ \Is[0][i][j]\leftarrow
+            \begin{cases}
+                1&(i,j)=(l_x,l_y)\\
+                0&\text{otherwise}
+            \end{cases} $ 
+            \FOR{ $ k $ from  $ 2 $ to  $ n $, $ i $ from  $ 1 $ to  $ l_x $,  $ j $ from  $ 1 $ to  $ l_y $    }
+                \IF{ $ i=1 $}\STATE  $ i'=l_x $   \ELSE  \STATE$ i'=i-1 $ \ENDIF
+                \IF{ $ j=1 $}\STATE  $ j'=l_y $   \ELSE  \STATE$ j'=j-1 $ \ENDIF
+                \STATE  $ \Is[k][i][j]\leftarrow0 $ 
+                \IF{ $ s[k]=x[i] $ and  $ \Is[k-1][i'][j]=1 $}
+                    \STATE  $ \Is[k][i][j]\leftarrow1 $.
+                \ENDIF 
+                \IF{ $ s[k]=y[j] $ and  $ \Is[k-1][i][j']=1 $}
+                    \STATE  $ \Is[k][i][j]\leftarrow1 $.
+                \ENDIF
+            \ENDFOR
+        \end{algorithmic}
+    \end{algorithm}
+    The answer is  $ \max_{i,j} \Is[n][i][j] $. 
+
+    Since we can delete all data after two iterations, the space complexity is  $ O(l_xl_y) $, and the time complexity is  $ O(nl_xl_y) $  which is a polynomial algorithm. 
+\end{problem}
+
+\begin{problem}
+    \[\frac{x+rt}{y+t}>\frac{x}{y}\Leftrightarrow x(y+t)<y(x+rt)\Leftrightarrow  \frac{x}{y}<r  \]
+    \[\frac{x-rt}{y-t}>\frac{x}{y}\Leftrightarrow x(y-t)<y(x-rt)\Leftrightarrow  \frac{x}{y}>r  \]
+\end{problem}
+
 \end{document}
