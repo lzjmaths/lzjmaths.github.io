@@ -1,0 +1,65 @@
+\section{Convolution}
+\subsection{Filtering for Image Processing}
+\name{Mean filtering}: replacing each pixel value in an image with the mean value of its neighbors
+
+\name{Median filtering}: replacing each pixel value in an image with the median value of its neighbors.
+
+\name{Convolution} of two functions  $ f $ and  $ h $
+
+\[g(x)=f(x)*h(x)=\int f(\tau)h(x-\tau)d\tau\]  
+
+In some sense, convolution is a way to do weight average to for  $ f $ locally.
+
+Discrete 1D convolution is a matrix convolution 
+\[g[i]=\sum_{n=1}^N f[n]h[i-n]\]
+where the corresponding matrix is a multi-diagonal matrix.
+
+Continuous 2D convolution 
+\[g(x)=\iint  f(\tau)h(x-\tau)\dd\tau\]
+
+Discrete 2D convolution
+\[g[i,j]=\sum_{n=1}^N \sum_{m=1}^N f[n,m]h[i-n,j-m]\]
+
+If the input shape  $ n_h\times n_w $, the convolution kernel shape  $ k_h\times k_w $ and the output shape will be  $ (n_h-k_h+1)\times (n_w-k_w+1) $.
+
+Different Filter can extract different features.
+
+\[\begin{pmatrix}
+    1&2&1\\
+    0&0&0\\
+    -1&-2&-1
+\end{pmatrix}\]
+
+is a high-pass filter, which extract the edge in the image.
+
+\[\begin{pmatrix}
+    0&1&0\\
+    1&2&1\\
+    0&1&0
+\end{pmatrix}\]
+
+is a low-pass filter, which makes the image more smooth, \ie fuzzy, describing a global feature.
+
+
+
+
+\subsection{Convolution neural network}
+
+In practice, we can use  $ C_{out} $ filters of  $ C_{in}\times H\times M $  to obtain a feature of  $ C_{out}\times H\times M $ size, with input  $ C_{in} $ extracted features of  $ H\times M $  size. 
+
+Receptive field of CNN expands along with the depth of NN.
+
+We use the \name{stride} to expand receptive field in one layer.
+
+\name{Pooling Layer}: 
+
+Max pooling:
+\[y[i]=\max_{j\in N(i)}x[j]\]
+Average Pooling 
+\[y[i]=\frac{1}{N(i)}\sum_{j\in N(i)}x[j]\]
+Similar as convolution: local connection and shift invariance, but non-linear. usually set stride  $ >2 $.
+
+\[
+\frac{\partial \mathcal{L}}{\partial W^l} = \text{input} , _{\text{valid}} , \frac{\partial \mathcal{L}}{\partial \text{output}}
+\]
+

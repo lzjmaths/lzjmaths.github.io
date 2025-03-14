@@ -14,5 +14,10 @@
 \indexentry{Sigmoid|hyperpage}{4}
 \indexentry{Tanh|hyperpage}{4}
 \indexentry{ReLU|hyperpage}{4}
-\indexentry{LeakyReLU|hyperpage}{4}
+\indexentry{LeakyReLU|hyperpage}{5}
 \indexentry{Batch Normalization|hyperpage}{5}
+\indexentry{Mean filtering|hyperpage}{5}
+\indexentry{Median filtering|hyperpage}{5}
+\indexentry{Convolution|hyperpage}{5}
+\indexentry{stride|hyperpage}{6}
+\indexentry{Pooling Layer|hyperpage}{6}
