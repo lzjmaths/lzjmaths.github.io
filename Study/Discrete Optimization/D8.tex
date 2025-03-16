@@ -1,0 +1,101 @@
+\begin{lemma}
+    Every time inner WHILE terminates, max-flow value is less than  $ \mathrm{val}(f)+m\Delta $. 
+\end{lemma}
+
+\begin{corollary}
+    Each inner WHILE iterates  $  \leq 2m $. The times complexity is  $ O(m^2\log C) $  
+\end{corollary}
+\begin{proof}[Proof of Lemma]
+    \begin{align*}
+        \val(f)&=\sum_{e\in E\text{ from $ A $ to  $ B $ }}f(e)-\sum_{e\in E\text{ from  $ B $ to  $ A $ }}f(e)\\
+        &>\sum_{e\in E\text{ from $ A $ to  $ B $ }}(c(e)-\Delta)-\sum_{e\in E\text{ from  $ B $ to  $ A $ }}(\Delta)\\
+        &=c(A,B)-\sum_{e\in E\text{ between  $ A,B $ }}\Delta\\
+        & \geq c(A,B)-m\Delta\\
+        & \geq \mathrm{MaxFlow}-m\Delta
+    \end{align*}
+\end{proof}
+
+
+\begin{algorithm}
+    \caption{Shortest Augment Path}
+    \begin{algorithmic}
+        \STATE Initiate $ f\leftarrow 0 $.
+        \WHILE{ $ \exists s\rightarrow t $ path in  $ G_f $}
+            \STATE Find  $ P:s\rightarrow t $ in  $ G_f $ using least number of edges.
+            \STATE Augment  $ (f,P) $.   
+        \ENDWHILE 
+    \end{algorithmic}
+\end{algorithm}
+\begin{lemma}
+    Length of the shortest augmenting path never decreases.
+\end{lemma}
+\begin{lemma}\label{shortest augment path lemma -strongest version}
+    After  $   \leq  m$ iterations, length of the shortest augmenting path strictly increases. Time complexity is  $ O(nm^2) $ 
+\end{lemma}
+
+\begin{proof}
+    Assume $ f\xrightarrow{\mathrm{augment(f,P)}}f' $ 
+    Denote  $ l(u), l'(u) $ as the length of the shortest  $ s\to u $ path in  $ G_f,G_{f'} $ respectively.
+    
+    Our goal is to  prove  $ l(u) \leq l'(u) $.
+
+    $ l(u) $ determines "distance" to  $ s $. 
+    
+    Define the level graph as the set of  all  $ (u,v)\in E(G_f) $ such that  $ l(u)+1=l(v) $. 
+    
+    Call edges not belong to level graph as \textit{back edge}.
+
+    \paragraph{Observation} Consider any  $ e\in E(G_{f'})\setminus E(G_f) $,  $ e $ must be a back edge in  $ G_f $.   
+
+    Choose   $ u $ such that  $ l'(u)<l(u) $ and  $ l'(u) $ minimized.
+    
+    If  $ (v,u) $ is the edge in the shortest path of  $ G_{f'} $
+    \[l(v) \leq l'(v)=l'(u)-1<l(u)-1 \leq l(u)-2\]
+    so  $ (u,v) $ is not a back edge in  $ G_f $, hence  $ (v,u)\not\in E(G_{f'}) $, which causes contradiction.
+\end{proof}
+
+\begin{lemma}
+    After  $  \leq m $ augmentation,  $ \exists u $,  $ l(u) $ strictly increases. It goes on no more $    n^2$     times, so the time complexity is  $ O(n^2m^2) $. 
+\end{lemma}
+\begin{proof}
+    This lemma is much easier than the previous lemma. 
+
+    Noticed that each augmentation adds back edges and removes at least one edges in level graph.
+\end{proof}
+\begin{proof}[Proof of Lemma \ref{shortest augment path lemma -strongest version}]
+    \begin{claim}
+        During the period when  $ l(t)  $ doesn't increase, the added edges in residual graph does not appear in shortest augmenting path.
+    \end{claim}
+    
+    Suppose for contradiction:  $ \exists j<i $,  $ l_j(t)=l_i(t) $,  $ \exists  $  $ (v,u)  $ appears in the shortest augmenting path  $ P $ in  $ G_{f_i} $ and  $ l_j(v)=l_j(u)+1 $.
+    
+    Choose the edge  $ (v,u)  $ with smallest  $ i $ and then with largest  $ l_i(u) $.
+    
+    Then  $ l_i(u) \geq l_j(u)+2 $.
+    So 
+
+    \begin{align*}
+        l_j(t)& \leq l_j(u)+|P[u\rightarrow t]|\\
+        & \leq l_i(u)+|P[u\to t]|-2\\
+        &\leq l_i(t)-2
+    \end{align*}
+    
+\end{proof}
+
+\paragraph{Recent work} [Chen et at al. '2022]
+we can do in  $ O(m^{1+o(1)}) $.
+
+\subsection{Appllication}
+\begin{example}[Bipartite Matching]
+    For Bipartite graph $ G=(U,V,E) $, a matching  $ M\subset E $, we want to find  $ M $ to maximize  $ |M| $.    
+\end{example}
+
+We can construct two virtual nodes $ s,t  $ such that  $ s\to  $ all nodes in  $ U $ and  $ t\to  $ all nodes in  $ V $, with capacity  $ 1 $.
+
+Then the maximum capacity of flow in the augmented graph is what we need.
+
+\textbf{So the meaning of capacity can be generalized as the number of one node who can accommonded}
+
+Now consider so-called "perfect matching", \ie  $ |M|=|U|=|V| $.
+
+Note that  $ \exists $  perfect matching \st  $ \forall S\subset U $,  $ |\Gamma(S)| \geq |S| $.  

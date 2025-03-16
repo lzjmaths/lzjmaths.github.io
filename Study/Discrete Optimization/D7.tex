@@ -90,16 +90,16 @@ Now suffices to proof that the algorithm terminates.
 
 The lemma implies we should choose some proper path so that it will terminate fast.
 
-Assume the integral capacities  $  \leq C $ and  $ G_f(\delta) $ denoted as  $ G_f $ with edges of capacites  $  \geq \delta $.    
+Assume the integral capacities  $  \leq C $ and  $ G_f(\Delta) $ denoted as  $ G_f $ with edges of capacites  $  \geq \Delta $.    
 \begin{algorithm}
     \caption{Capacity-Scaling Algotihm}
     \begin{algorithmic}[1]
-        \STATE Initiate  $ f\equiv 0 $,  $ \delta\leftarrow  $ largest  $ 2^k \leq c $.  
-        \WHILE{$ \delta \geq 1 $}\label{CS algorithm loop}
-            \WHILE{ $ \exists $ augmenting path $ P $ in  $ G_f(\delta) $}
+        \STATE Initiate  $ f\equiv 0 $,  $ \Delta\leftarrow  $ largest  $ 2^k \leq c $.  
+        \WHILE{$ \Delta \geq 1 $}\label{CS algorithm loop}
+            \WHILE{ $ \exists $ augmenting path $ P $ in  $ G_f(\Delta) $}
                 \STATE Augment$ (f,P) $
             \ENDWHILE
-            \STATE $ \delta\leftarrow \delta/2 $ 
+            \STATE $ \Delta\leftarrow \Delta/2 $ 
         \ENDWHILE
     \end{algorithmic}
 \end{algorithm}

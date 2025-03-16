@@ -45,3 +45,10 @@
 \contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{21}{thmt@dummyctr.dummy.45}%
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.3\else \numberline {4.3}Lemma\fi }{22}{lemma.4.3}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.4\else \numberline {4.4}Theorem\fi }{23}{theorem.4.4}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.5\else \numberline {4.5}Lemma\fi }{23}{lemma.4.5}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}4.6\else \numberline {4.6}Corollary\fi }{23}{corollary.4.6}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.7\else \numberline {4.7}Lemma\fi }{23}{lemma.4.7}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.8\else \numberline {4.8}Lemma\fi }{24}{lemma.4.8}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.9\else \numberline {4.9}Lemma\fi }{24}{lemma.4.9}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{25}{thmt@dummyctr.dummy.53}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.10\else \numberline {4.10}Example\fi \thmtformatoptarg {Bipartite Matching}}{25}{example.4.10}%
