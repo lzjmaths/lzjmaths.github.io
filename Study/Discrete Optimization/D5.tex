@@ -27,8 +27,8 @@ when in put is  $ (x_1,y_1),\cdots,(x_i,y_i) $.
 Find solution  $ \mathrm{OPT}[n] $. The boundary condition is  $ \mathrm{OPT}[1]=\mathrm{OPT}[2]=c $ and the \textbf{Bellman Equation} is 
 \[\OPT[i]=\min_{1 \leq j \geq i}\{\OPT[j-1]+l_{ji}+c\}\] 
 
-\subsection{Knaosack Problem}
-\begin{example}[Knaosack Problem]
+\subsection{Knapsack Problem}
+\begin{example}[Knapsack Problem]
     Input:  $ n $ items,  $ w_i,v_i $ for its weight and value. The capacity of knapsack is  $ w $. 
 
     If assume integral weight, then denote  $ \OPT[i,w] $ as the optimal total value when in put is first knapsack capacity is  $ w $. 
@@ -84,6 +84,14 @@ Find solution  $ \mathrm{OPT}[n] $. The boundary condition is  $ \mathrm{OPT}[1]
         &=\frac{1}{K}\OPT(I)-n
     \end{align*}
     So  $ \mathrm{ALG} \geq \dps\sum_{i\in T}K\cdot v_i' \geq \OPT(I)-nK \geq (1-\epsilon)\OPT(I) $. 
+
+    The time complextity is  $ O(n^2V')=O(n^2\frac{V}{K})=O(n^3\epsilon^{-1}) $.
+    
+    \begin{remark}
+        The time complextity depends on the accuracy  $ \epsilon $ instead of the maximum value  $ V $ since the accuracy is based on scale.
+        
+        In other words,  $ \epsilon^{-1} $ in time complexity represents not only accuracy but also the "size" of scale. 
+    \end{remark}
 
     \paragraph{Fully Polynomial-Time Approximation Scheme(FPTAS)}
      $ \forall \epsilon $,  $ \exists  $ $ (1-\epsilon) $-approximation algorithm with time complexity  $ f(n,\epsilon)=\mathrm{poly}(n,\frac{1}{\epsilon}) $.

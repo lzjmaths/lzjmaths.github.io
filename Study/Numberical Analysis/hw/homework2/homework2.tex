@@ -1,0 +1,610 @@
+% Sample tex file for usage of iidef.sty
+% Homework template for Inference and Information
+% UPDATE: October 12, 2017 by Xiangxiang
+% UPDATE: 22/03/2018 by zhaofeng-shu33
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+% amsmath: equation*, amssymb: mathbb, amsthm: proof
+\usepackage{moreenum}
+\usepackage{mathtools}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs} % toprule
+\usepackage[mathcal]{eucal}
+\usepackage{dsfont}
+
+\usepackage{setspace}  
+\setstretch{1.6}
+
+
+
+
+
+
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}[definition]{Example}
+\newtheorem{exercise}[definition]{Exercise}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{convention}[definition]{Convention}
+\newtheorem{priniple}[definition]{Principle}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem*{axiom}{Axiom}
+\newtheorem{coa}[definition]{Theorem}
+\newtheorem{srem}[definition]{$\star$ Remark}
+\newtheorem{seg}[definition]{$\star$ Example}
+\newtheorem{sexe}[definition]{$\star$ Exercise}
+\newtheorem{sdf}[definition]{$\star$ Definition}
+\newtheorem{question}{Question}
+
+
+
+
+\newtheorem{problem}{Problem}
+%\renewcommand*{\theprob}{{\color{red}\arabic{section}.\arabic{prob}}}
+\newtheorem{rprob}[problem]{\color{red} Problem}
+%\renewcommand*{\thesprob}{{\color{red}\arabic{section}.\arabic{sprob}}}
+% \newtheorem{ssprob}[prob]{$\star\star$ Problem}
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{Conclusion}[definition]{Conclusion}
+\newtheorem{thd}[definition]{Theorem-Definition}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{sthm}[definition]{$\star$ Theorem}
+\newtheorem{slm}[definition]{$\star$ Lemma}
+\newtheorem{claim}[definition]{Claim}
+\newtheorem{spp}[definition]{$\star$ Proposition}
+\newtheorem{scorollary}[definition]{$\star$ Corollary}
+
+
+\newtheorem{condition}{Condition}
+\newtheorem{Mthm}{Main Theorem}
+\renewcommand{\thecondition}{\Alph{condition}} % "letter-numbered" theorems
+\renewcommand{\theMthm}{\Alph{Mthm}} % "letter-numbered" theorems
+
+
+%\substack   multiple lines under sum
+%\underset{b}{a}   b is under a
+
+
+% Remind: \overline{L_0}
+
+
+
+\usepackage{calligra}
+\DeclareMathOperator{\shom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,}
+\DeclareMathOperator{\sext}{\mathscr{E}\text{\kern -3pt {\calligra\large xt}}\,}
+\DeclareMathOperator{\Rel}{\mathscr{R}\text{\kern -3pt {\calligra\large el}~}\,}
+\DeclareMathOperator{\sann}{\mathscr{A}\text{\kern -3pt {\calligra\large nn}}\,}
+\DeclareMathOperator{\send}{\mathscr{E}\text{\kern -3pt {\calligra\large nd}}\,}
+\DeclareMathOperator{\stor}{\mathscr{T}\text{\kern -3pt {\calligra\large or}}\,}
+%write mathscr Hom (and so on) 
+
+\usepackage{aurical}
+\DeclareMathOperator{\VVir}{\text{\Fontlukas V}\text{\kern -0pt {\Fontlukas\large ir}}\,}
+
+\newcommand{\vol}{\text{\Fontlukas V}}
+\newcommand{\dvol}{d~\text{\Fontlukas V}}
+% perfect Vol symbol
+
+\usepackage{aurical}
+
+
+
+
+
+
+
+
+\newcommand{\fk}{\mathfrak}
+\newcommand{\mc}{\mathcal}
+\newcommand{\wtd}{\widetilde}
+\newcommand{\wht}{\widehat}
+\newcommand{\wch}{\widecheck}
+\newcommand{\ovl}{\overline}
+\newcommand{\udl}{\underline}
+\newcommand{\tr}{\mathrm{t}} %transpose
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\End}{\mathrm{End}} %endomorphism
+\newcommand{\idt}{\mathbf{1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\cond}[1]{\mathrm{cond}_{#1}}
+\newcommand{\Conf}{\mathrm{Conf}}
+\newcommand{\Res}{\mathrm{Res}}
+\newcommand{\res}{\mathrm{res}}
+\newcommand{\KZ}{\mathrm{KZ}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\coev}{\mathrm{coev}}
+\newcommand{\opp}{\mathrm{opp}}
+\newcommand{\Rep}{\mathrm{Rep}}
+\newcommand{\Dom}{\mathrm{Dom}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\con}{\mathrm{c}}
+\newcommand{\uni}{\mathrm{u}}
+\newcommand{\ssp}{\mathrm{ss}}
+\newcommand{\di}{\slashed d}
+\newcommand{\Diffp}{\mathrm{Diff}^+}
+\newcommand{\Diff}{\mathrm{Diff}}
+\newcommand{\PSU}{\mathrm{PSU}(1,1)}
+\newcommand{\Vir}{\mathrm{Vir}}
+\newcommand{\Witt}{\mathscr W}
+\newcommand{\Span}{\mathrm{Span}}
+\newcommand{\pri}{\mathrm{p}}
+\newcommand{\ER}{E^1(V)_{\mathbb R}}
+\newcommand{\prth}[1]{( {#1})}
+\newcommand{\bk}[1]{\langle {#1}\rangle}
+\newcommand{\bigbk}[1]{\big\langle {#1}\big\rangle}
+\newcommand{\Bigbk}[1]{\Big\langle {#1}\Big\rangle}
+\newcommand{\biggbk}[1]{\bigg\langle {#1}\bigg\rangle}
+\newcommand{\Biggbk}[1]{\Bigg\langle {#1}\Bigg\rangle}
+\newcommand{\GA}{\mathscr G_{\mathcal A}}
+\newcommand{\vs}{\varsigma}
+\newcommand{\Vect}{\mathrm{Vec}}
+\newcommand{\Vectc}{\mathrm{Vec}^{\mathbb C}}
+\newcommand{\scr}{\mathscr}
+\newcommand{\sjs}{\subset\joinrel\subset}
+\newcommand{\Jtd}{\widetilde{\mathcal J}}
+\newcommand{\gk}{\mathfrak g}
+\newcommand{\hk}{\mathfrak h}
+\newcommand{\xk}{\mathfrak x}
+\newcommand{\yk}{\mathfrak y}
+\newcommand{\zk}{\mathfrak z}
+\newcommand{\pk}{\mathfrak p}
+\newcommand{\hr}{\mathfrak h_{\mathbb R}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\DHR}{\mathrm{DHR}_{I_0}}
+\newcommand{\Repi}{\mathrm{Rep}_{\wtd I_0}}
+\newcommand{\im}{\mathbf{i}}
+\newcommand{\Co}{\complement}
+%\newcommand{\Cu}{\mathcal C^{\mathrm u}}
+\newcommand{\RepV}{\mathrm{Rep}^\uni(V)}
+\newcommand{\RepA}{\mathrm{Rep}(\mathcal A)}
+\newcommand{\RepN}{\mathrm{Rep}(\mathcal N)}
+\newcommand{\RepfA}{\mathrm{Rep}^{\mathrm f}(\mathcal A)}
+\newcommand{\RepAU}{\mathrm{Rep}^\uni(A_U)}
+\newcommand{\RepU}{\mathrm{Rep}^\uni(U)}
+\newcommand{\RepL}{\mathrm{Rep}^{\mathrm{L}}}
+\newcommand{\HomL}{\mathrm{Hom}^{\mathrm{L}}}
+\newcommand{\EndL}{\mathrm{End}^{\mathrm{L}}}
+\newcommand{\Bim}{\mathrm{Bim}}
+\newcommand{\BimA}{\mathrm{Bim}^\uni(A)}
+%\newcommand{\shom}{\scr Hom}
+\newcommand{\divi}{\mathrm{div}}
+\newcommand{\sgm}{\varsigma}
+\newcommand{\SX}{{S_{\fk X}}}
+\newcommand{\DX}{D_{\fk X}}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\bsb}{\boldsymbol}
+\newcommand{\blt}{\bullet}
+\newcommand{\Vbb}{\mathbb V}
+\newcommand{\Ubb}{\mathbb U}
+\newcommand{\Xbb}{\mathbb X}
+\newcommand{\Kbb}{\mathbb K}
+\newcommand{\Abb}{\mathbb A}
+\newcommand{\Wbb}{\mathbb W}
+\newcommand{\Mbb}{\mathbb M}
+\newcommand{\Gbb}{\mathbb G}
+\newcommand{\Cbb}{\mathbb C}
+\newcommand{\Nbb}{\mathbb N}
+\newcommand{\Zbb}{\mathbb Z}
+\newcommand{\Qbb}{\mathbb Q}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\Rbb}{\mathbb R}
+\newcommand{\Ebb}{\mathbb E}
+\newcommand{\Dbb}{\mathbb D}
+\newcommand{\Hbb}{\mathbb H}
+\newcommand{\cbf}{\mathbf c}
+\newcommand{\Rbf}{\mathbf R}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\btl}{\blacktriangleleft}
+\newcommand{\btr}{\blacktriangleright}
+\newcommand{\svir}{\mathcal V\!\mathit{ir}}
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Cok}{\mathrm{Coker}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\low}{\mathrm{low}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Rng}{\mathrm{Rng}}
+\newcommand{\vN}{\mathrm{vN}}
+\newcommand{\Ebf}{\mathbf E}
+\newcommand{\Nbf}{\mathbf N}
+\newcommand{\Stb}{\mathrm {Stb}}
+\newcommand{\SXb}{{S_{\fk X_b}}}
+\newcommand{\pr}{\mathrm {pr}}
+\newcommand{\SXtd}{S_{\wtd{\fk X}}}
+\newcommand{\univ}{\mathrm {univ}}
+\newcommand{\vbf}{\mathbf v}
+\newcommand{\ubf}{\mathbf u}
+\newcommand{\wbf}{\mathbf w}
+\newcommand{\CB}{\mathrm{CB}}
+\newcommand{\Perm}{\mathrm{Perm}}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\Lss}{{L_{0,\mathrm{s}}}}
+\newcommand{\Lni}{{L_{0,\mathrm{n}}}}
+\newcommand{\UPSU}{\widetilde{\mathrm{PSU}}(1,1)}
+\newcommand{\Sbb}{{\mathbb S}}
+\newcommand{\Gc}{\mathscr G_c}
+\newcommand{\Obj}{\mathrm{Obj}}
+\newcommand{\bpr}{{}^\backprime}
+\newcommand{\fin}{\mathrm{fin}}
+\newcommand{\Ann}{\mathrm{Ann}}
+\newcommand{\Real}{\mathrm{Re}}
+\newcommand{\Imag}{\mathrm{Im}}
+%\newcommand{\cl}{\mathrm{cl}}
+\newcommand{\Ind}{\mathrm{Ind}}
+\newcommand{\Supp}{\mathrm{Supp}}
+\newcommand{\Specan}{\mathrm{Specan}}
+\newcommand{\red}{\mathrm{red}}
+\newcommand{\uph}{\upharpoonright}
+\newcommand{\Mor}{\mathrm{Mor}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\Jac}{\mathrm{Jac}}
+\newcommand{\emb}{\mathrm{emb}}
+\newcommand{\Sg}{\mathrm{Sg}}
+\newcommand{\Nzd}{\mathrm{Nzd}}
+\newcommand{\Owht}{\widehat{\scr O}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Tor}{\mathrm{Tor}}
+\newcommand{\Com}{\mathrm{Com}}
+\newcommand{\Mod}{\mathrm{Mod}}
+\newcommand{\nk}{\mathfrak n}
+\newcommand{\mk}{\mathfrak m}
+\newcommand{\Ass}{\mathrm{Ass}}
+\newcommand{\depth}{\mathrm{depth}}
+\newcommand{\Coh}{\mathrm{Coh}}
+\newcommand{\Gode}{\mathrm{Gode}}
+\newcommand{\Fbb}{\mathbb F}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Modf}{\mathrm{Mod}^{\mathrm f}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\Nbh}{\mathrm{Nbh}}
+\newcommand{\Pnbh}{\mathrm{PNbh}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\LSC}{\mathrm{LSC}}
+\newcommand{\USC}{\mathrm{USC}}
+\newcommand{\Ess}{\mathrm{Rng}^{\mathrm{ess}}}
+\newcommand{\Jbf}{\mathbf{J}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Lin}{\mathrm{Lin}}
+\newcommand{\ALin}{\mathrm{ALin}}
+\newcommand{\bwn}{\bigwedge\nolimits}
+\newcommand{\nbf}{\mathbf n}
+\newcommand{\dive}{\mathrm{div}}
+
+
+
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\newcommand{\<}{\left<}
+\renewcommand{\>}{\right>}
+
+
+\numberwithin{equation}{problem}
+% count the eqation by section countation
+
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\img}{Im}
+\DeclareMathOperator{\dd}{d\!}
+\newcommand{\ie}{ \textit{ i.e. } }
+\newcommand{\st}{ \textit{ s.t. }}
+
+
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{
+  style              = Matlab-editor,
+  captionpos         =b,
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
+}
+
+\usepackage[thehwcnt = 1]{iidef}
+\thecourseinstitute{Tsinghua University}
+\thecoursename{Numerical Analysis}
+\theterm{Fall 2024}
+\hwname{Homework}
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+\courseheader
+\name{Lin Zejin}
+\rule{\textwidth}{1pt}
+\begin{itemize}
+\item {\bf Collaborators: \/}
+  I finish this homework by myself. 
+%   If you finish your homework all by yourself, make a similar statement. If you get help from others in finishing your homework, state like this:
+%   \begin{itemize}
+%   \item 1.2 (b) was solved with the help from \underline{\hspace{3em}}.
+%   \item Discussion with \underline{\hspace{3em}} helped me finishing 1.3.
+%   \end{itemize}
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+\vspace{2em}
+
+\sloppy
+\pagenumbering{arabic}
+
+\begin{problem}
+    \begin{proof}[Proof of Lemma 2.5.3]
+         $ B_1=\begin{cases}
+            1&x \leq 0\\
+            0&x \geq 1\\
+            1-x&0<x<1
+         \end{cases} $.
+         
+         Then  $ B_2=\begin{cases}
+            1&x \leq -\frac{1}{2}\\
+            0&x \geq \frac{3}{2}\\
+            -\frac{x^2}{2}-\frac{1}{2}x+\frac{7}{8}&-\frac{1}{2}<x<\frac{1}{2}\\
+            \frac{1}{2}(\frac{3}{2}-x)^2&\frac{1}{2}<x<\frac{3}{2}
+         \end{cases} $ 
+
+         So  $  B_3=\begin{cases}
+            0&x \leq -1\\
+            -\dfrac{{t}^{3}+3\,{t}^{2}-3\,t-5}{6}&-1<x<0\\
+            \dfrac{t^3}{3}-\dfrac{1}{2}t^2-\dfrac{1}{2}t+\dfrac{5}{6}&0<x<1\\
+            \dfrac{\left({2-t}\right)^{3}}{6}&1<x<2\\
+            1&x \geq 2\\
+            3&-1<x<2
+         \end{cases} $ with  $ B_2 $ 
+        
+        So  $ B_3(x),B_3(x-1),B_3(x-2) $ linearly independent.
+    \end{proof}
+    \begin{proof}[Proof of Lemma 2.5.4]
+        If 
+        \[\sum_{k=-1}^{n+1}\lambda_kB_3(\frac{x-a-kh}{h})=0\]
+        Noticed that 
+        \[B_3(\frac{x-a-kh}{h})=B_3(\frac{x-a}{h}-k)\]
+        So on each interval  $ (a+jh,a+(j+1)h) $, it will be 
+        \[\sum_{k=-1}^{n+1}\lambda_kB_3(j-k+\frac{x-jh-a}{h})=\lambda_{j-1}B_3(-1+\frac{x-jh-a}{h})+\lambda_{j}B_3(0+\frac{x-jh-a}{h})+\lambda_{j+1}B_3(1+\frac{x-jh-a}{h})=0\]
+        where  $ \dps\frac{x-jh-a}{h}\in (0,1) $ 
+
+
+        So we have matrix equation 
+        \[\begin{pmatrix}
+            B_3(-1+t)&B_3(t)&B_3(1+t)\cdots&\cdots&\cdots&0\\
+            0&B_3(-1+t)&B_3(t)&B_3(1+t)\cdots&\cdots&0\\
+            0&0&B_3(-1+t)&B_3(t)&B_3(1+t)&\cdots&0\\
+            \vdots&\vdots&\vdots&\ddots&\ddots&\vdots\\
+            0&0&0&\cdots&B_3(-1+t)&B_3(t)&B_3(1+t)\\
+            0&0&0&0&\cdots&B_3(-1+t)&B_3(t)\\
+            0&0&0&0&\cdots&0&B_3(-1+t)
+        \end{pmatrix}\begin{pmatrix}
+            \lambda_{-1}\\
+            \lambda_{0}\\
+            \lambda_{1}\\
+            \vdots\\
+            \lambda_{n-1}\\
+            \lambda_{n}\\
+        \end{pmatrix}=0\]
+        on  $ (0,1) $ 
+        By lemma 2.5.3, we have  $ \lambda_{-1}=\lambda_0=\lambda_1=\lambda_2=\cdots=\lambda_n=0 $.
+        So they are linearly independent.
+    \end{proof}
+    \begin{proof}[Proof of lemma 2.6.2]
+        We have proved in lemma 2.6.1 that 
+        \[\sum{|c_i|} \leq \frac{\|P\|_Y}{\theta-\Omega(\delta)}\]
+        Then 
+        \begin{align*}
+            \|f-P\|_X &\leq \max_{y\in Y,x\in X}|f(x)-f(y)|+|f(y)-P(y)|+|P(y)-P(x)|\\
+            & \leq \omega(\delta,f)+\|f-P\|_Y+\sum|c_i|\Omega(\delta)\\
+            & \leq \omega(\delta,f)+\|f-P\|_Y+\frac{\|P\|_Y\Omega(\delta)}{\theta-\Omega(\delta)}\\
+        \end{align*}
+        As  $ \Omega(\delta)\rightarrow 0 $,  $ \dps\frac{2}{\theta} $ is what we need.  $ \theta>0 $ since  $ g_i $ linearly independent.    
+    \end{proof}
+
+
+\end{problem}
+
+\begin{problem}
+    Use straight line to connect 
+    \[(x_0,1),(x_1,2),\cdots,(x_n,n+1)\]
+    It forms  $ L(x) $.
+    
+    Then  $ B_3(L_3(x)-k) $,  $ k=0,1,2,\cdots,n+2 $  linearly independent in  $ S_3^n $ and whose discontinuities are among  $ x_0,x_1,\cdots,x_n $.  
+
+    It is B-spline for  $ x_0<x_1<\cdots<x_n $. 
+\end{problem}
+
+\begin{problem}
+    For  $ f $ odd.
+
+    Consider the optimal approximation polynomial  $ p $ on  $ [-1,1] $. Since  $ f(x)=-f(-x) $, so  $ -p(-x) $ is also  the optimal approximation polynomial of  $ -f(-x)=f(x) $ on  $ [-1,0] $ $ \Rightarrow $  By the uniqueness,  $ p(x)=-p(-x) $ \ie  $ p(x) $ is odd.
+    
+    For  $ f $ is even 
+    
+    Consider the optimal approximation polynomial  $ p $ on  $ [-1,1] $. Since  $ f(x)=f(-x) $, so  $ p(-x) $ is also  the optimal approximation polynomial of  $ f(-x)=f(x) $ on  $ [-1,0] $ $ \Rightarrow $  By the uniqueness,  $ p(x)=p(-x) $ \ie  $ p(x) $ is even.
+\end{problem}
+\begin{problem}
+    For  $ s(x_j)=m_j $, 
+     $ s(x) $ can be expressed as 
+     \[s(x)=m_j\alpha_j(x)+m_{j+1}\alpha_{j+1}(x)+y_j\beta_j(x)+y_{j+1}\beta_{j+1}(x)\]
+     on  $ (x_j,x_{j+1}) $, where  $ \alpha_i,\beta_j $ is the Hermite polynomial of degree 3.
+     
+     Use  $ s''(x_j^+)=s''(x_j^-) $ and we have 
+     \[\frac{\mu_j}{h_j}m_{j+1}+(\frac{\lambda_j}{h_{j-1}}-\frac{\mu_j}{h_j})m_j-\frac{\lambda_j}{h_{j-1}}m_{j-1}=d_j\]
+     where 
+     \[d_j=\frac{1}{3}\left(\lambda_jy_{j-1}+2y_j+\mu_jy_{j+1}\right)\,,\lambda_j=\frac{h_j}{h_{j-1}+h_j}\,,\mu_j=\frac{h_{j-1}}{h_{j-1}+h_j}\,,h_j=x_{j+1}-x_j\]
+
+     The boundary condition  $ s(x_0)=m_0=a,s(x_n)=m_{n}=b $ contributes to 
+     \[\begin{pmatrix}
+        \frac{\lambda_1}{h_0}-\frac{\mu_1}{h_1}&\frac{\mu_1}{h_1}&0&\cdots&0&0\\
+        -\frac{\lambda_2}{h_1}&\frac{\lambda_2}{h_1}-\frac{\mu_2}{h_2}&\frac{\mu_2}{h_2}&\cdots&0&0\\
+        0&-\frac{\lambda_3}{h2}&\frac{\lambda_3}{h_2}-\frac{\mu_3}{h_3}&\frac{\mu_3}{h_3}&\cdots&0\\
+        \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+        0&0&\cdots&0&-\frac{\lambda_{n-1}}{h_{n-2}}&\frac{\lambda_{n-1}}{h_{n-2}}-\frac{\mu_{n-1}}{h_{n-1}}
+     \end{pmatrix}\cdot\begin{pmatrix}
+        m_1\\
+        m_2\\
+        \vdots\\
+        m_{n-1}
+     \end{pmatrix}=\begin{pmatrix}
+        d_1+\frac{\lambda_1}{h_0}a\\
+        d_2\\
+        \vdots\\
+        d_{n-1}-\frac{\mu_{n-1}}{h_{n-1}}b
+     \end{pmatrix}\]
+
+     The boundary condition  $ s''(x_0)=y_0',s''(x_n)=y_n' $ contributes to 
+     \[-2y_0-y_1+\frac{3}{h_0}m_1-\frac{3}{h_0}m_0=\frac{1}{2}y_0'h_0\]
+     So we have 
+     \[
+        \begin{pmatrix}
+            -\frac{3}{h_0}&\frac{3}{h_0}&0&\cdots&0&0&0\\
+            -\frac{\lambda_1}{h_0}&\frac{\lambda_1}{h_0}-\frac{\mu_1}{h_1}&\frac{\mu_1}{h_1}&0&\cdots&0&0\\
+            0&-\frac{\lambda_2}{h_1}&\frac{\lambda_2}{h_1}-\frac{\mu_2}{h_2}&\frac{\mu_2}{h_2}&\cdots&0&0\\
+            0&0&-\frac{\lambda_3}{h_2}&\frac{\lambda_3}{h_2}-\frac{\mu_3}{h_2}&\frac{\mu_3}{h_3}&\cdots&0\\
+            \vdots&\vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+            0&0&\cdots&0&0&-\frac{\lambda_{n-1}}{h_{n-2}}&\frac{\lambda_{n-1}}{h_{n-2}}-\frac{\mu_{n-1}}{h_{n-1}}\\
+            0&0&\cdots&0&0&-\frac{3}{h_{n-1}}&\frac{3}{h_{n-1}}
+         \end{pmatrix}\cdot\begin{pmatrix}
+            m_0\\
+            m_1\\
+            m_2\\
+            \vdots\\
+            m_{n-1}\\
+            m_n
+         \end{pmatrix}=\begin{pmatrix}
+            2y_0+y_1+\frac{1}{2}y_0'h_0\\
+            d_1\\
+            d_2\\
+            \vdots\\
+            d_{n-1}\\
+            2y_n+y_{n-1}+\frac{1}{2}y_n'h_{n-1}
+         \end{pmatrix}
+     \] 
+
+     And the period boudary condtion  $ s(x_0)=s(x_n),s'(x_0)=s'(x_n),s''(x_0)=s''(x_n) $ contributes to
+     \[m_0=m_n,\frac{\mu_j}{h_j}m_{j+1}+(\frac{\lambda_j}{h_{j-1}}-\frac{\mu_j}{h_j})m_j-\frac{\lambda_j}{h_{j-1}}m_{j-1}=d_j\] 
+     for  $ j=0 $,  $ \mu_{-1}=\mu_n $.
+     
+     So 
+     \[\begin{pmatrix}
+        \frac{\lambda_1}{h_0}-\frac{\mu_1}{h_1}&\frac{\mu_1}{h_1}&0&\cdots&0&-\frac{\lambda_1}{h_0}\\
+        -\frac{\lambda_2}{h_1}&\frac{\lambda_2}{h_1}-\frac{\mu_2}{h_2}&\frac{\mu_2}{h_2}&\cdots&0&0\\
+        0&-\frac{\lambda_3}{h2}&\frac{\lambda_3}{h_2}-\frac{\mu_3}{h_3}&\frac{\mu_3}{h_3}&\cdots&0\\
+        \vdots&\vdots&\vdots&\vdots&\vdots&\vdots\\
+        \frac{\mu_{n-1}}{h_{n-1}}&0&\cdots&0&-\frac{\lambda_{n-1}}{h_{n-2}}&\frac{\lambda_{n-1}}{h_{n-2}}-\frac{\mu_{n-1}}{h_{n-1}}
+     \end{pmatrix}\cdot\begin{pmatrix}
+        m_1\\
+        m_2\\
+        \vdots\\
+        m_{n-1}
+     \end{pmatrix}=\begin{pmatrix}
+        d_1\\
+        d_2\\
+        \vdots\\
+        d_{n-1}
+     \end{pmatrix}\]
+
+     In short, we discuss about three different boundary condition in this problem.
+
+
+\end{problem}
+
+\begin{problem}
+    The boundary condition is 
+    \[2m_0+m_1=3f[x_0,x_1]-\frac{1}{2}f''(x_0)h\]
+    So combined with the equation in Lemma 2.5.2, we have 
+    \[Am=d\]
+    where 
+    \[A=\begin{pmatrix}
+        2&1\\
+        \lambda_1&2&\mu_1\\
+        0&\lambda_2&2&\mu_2\\
+        \vdots&\vdots&\vdots&\vdots\\
+        0&0&0&\lambda_{n-1}&2&\mu_{n-1}\\
+        0&0&0&0&1&2
+    \end{pmatrix}\]
+    \[d=\begin{pmatrix}
+        d_0\\
+        d_1\\
+        \vdots\\
+        d_{n}
+    \end{pmatrix}\]
+     $ d_j=3\lambda_jf[x_{j-1},x_j]+3\mu_jf[x_j,x_{j+1}] $,  $ 1 \leq j \leq n-1 $.  $ d_0=3f[x_0,x_1]-\frac{1}{2}f''(x_0)h $,  $ d_n=3f[x_{n-1},x_n]-\frac{1}{2}f''(x_n)h $.
+     
+    Let  $ q=[m_0-f_0',m_1-f_1',\cdots,m_{n-1}-f'_{n-1}]^T $, then 
+    \[Aq=c\]
+    where  $ c=[c_j]^T $, 
+    \[c_j=d_j-\lambda_{j}f'(x_{j-1})-2f'(x_j)-\mu_jf'(x_{j+1}),1 \leq j \leq n-1\]
+    \[c_0=d_0-2f'(x_0)-f'(x_1),c_n=d_n-f'(x_{n-1})-2f'(x_n)\]
+    Similar to Lemma 2.5.2, we can prove that 
+    \[\|q\|_\infty \leq \|A^{-1}\|\cdot\|c\| \leq \|c\|_\infty\]
+    And we have proved in Lemma 2.5.2 that 
+    \[|c_j| \leq \frac{1}{24}h^3\|f^{(4)}\|_\infty,1 \leq j \leq n-1\]
+    Now suffices to prove it for  $ c_0,c_n $.
+
+    By Talor's equation 
+    \begin{align*}
+        c_0&=3\cdot\frac{f(x_1)-f(x_0)}{h_0}-2f'(x_0)-f'(x_1)-\frac{1}{2}f''(x_0)h_0\\
+        &=3\left(f'(x_0)+\frac{1}{2}f''(x_0)h_0+\frac{1}{6}f'''(x_0)h_0^2+\frac{1}{6h_0}\int_{x_0}^{x_1}(x_1-v)^3f^{(4)}(v)\dd v\right)\\
+        &-2f'(x_0)-\left(f'(x_0)+f''(x_0)h_0+\frac{1}{2}f'''(x_0)h_0^2+\frac{1}{2}\int_{x_0}^{x_1}(x_1-v)^2f^{(4)}(v)\dd v\right)-\frac{1}{2}f''(x_0)h_0\\
+        &=\frac{1}{2}\int_{x_0}^{x_1}\left[\frac{1}{h_0}(x_1-v)^3-(x_1-v)^2\right]f^{(4)}(v)\dd v\\
+        & \leq \frac{1}{2}\|f^{(4)}(v)\|_\infty\cdot \frac{1}{h_0}|\int_{0}^{h_0}\tau^3-h_0\tau^2\dd\tau|\\
+        & =\frac{1}{24}\|f^{(4)}(v)\|_\infty
+    \end{align*}
+
+    By symmetry,  $ c_n $ also satisfy the same bound.
+
+    So Lemma 2.5.2 still holds. Hence Theorem 2.5.1 still holds. \ie 
+    \[\|s-f\|_\infty \leq \frac{5}{384}h^4\|f^{(4)}\|_\infty\] 
+\end{problem}
+
+\begin{problem}
+    
+    Let  $ \varphi(x) $ be the Hermite polynomial of degree 3 w.r.t  $ f $, \ie 
+    \[\varphi(x)=f(x_j)\alpha_j(x)+f(x_{j+1})\alpha_{j+1}(x)+f'(x_j)\beta_j(x)+f'(x_{j+1})\beta_{j+1}(x)\]
+    Then we have  $ \varphi(x)-f(x)=\dps\frac{f^{(4)}(\xi )}{24}\omega^2(x) $, where   $ \omega(x)=(x-x_j)(x-x_{j+1}) $.
+
+    Note that Lemma 2.5.2 tells us  $ |m_j-f'_j| \leq \dps\frac{1}{24}h^3\|f^{(4)}\|_\infty $ 
+    Since 
+    \[s(x)-\varphi(x)=(m_j-f_j')\beta_j(x)+(m_{j+1}-f'_{j+1})\beta_{j+1}(x)\]
+    we have 
+    \begin{align*}
+        |s'(x)-f'(x)|& \leq |s'(x)-\varphi'(x)|+|\varphi'(x)-f'(x)|\\
+        & \leq \frac{1}{24}h^3\|f^{(4)}\|_\infty A+\frac{1}{24}\|f^{(4)}\|_\infty B\\
+        & \leq \frac{1}{6}h^3\|f^{(4)}\|_\infty
+    \end{align*}
+    \begin{align*}
+        |s''(x)-f''(x)|& \leq |s''(x)-\varphi''(x)|+|\varphi''(x)-f''(x)|\\
+        & \leq \frac{1}{24}h^3\|f^{(4)}\|_\infty A'+\frac{1}{24}\|f^{(4)}\|_\infty B'\\
+        & \leq \frac{2}{3}h^3\|f^{(4)}\|_\infty
+    \end{align*}
+    where \[A=\max|\beta_j'(x)|+|\beta_{j+1}'(x)| \leq 1,\, B=\max|\omega(x)\omega'(x)| \leq 3h^3\]
+    \[A'=\max|\beta_j''(x)|+|\beta_{j+1}''(x)| \leq \frac{4}{h}\, B'=\max|(\omega^2(x))''| \leq 12h^2\]
+
+    So  $ \|s'-f'\| \leq \frac{1}{6}h^3\|f^{(4)}\|_\infty $,  $ \|s''-f''\| \leq \frac{2}{3}h^3\|f^{(4)}\|_\infty $ 
+
+\end{problem}
+\end{document}

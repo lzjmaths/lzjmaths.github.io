@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  16 MAR 2025 15:39
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  17 MAR 2025 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**homework
-(./homework.tex
+**homework2
+(./homework2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -388,29 +388,29 @@ File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count322
 \g__pdf_backend_annotation_int=\count323
 \g__pdf_backend_link_int=\count324
-) (./homework.aux)
-\openout1 = `homework.aux'.
+) (./homework2.aux)
+\openout1 = `homework2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 338.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 338.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 337.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 337.
  (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 338.
-LaTeX Font Info:    ... okay on input line 338.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 337.
+LaTeX Font Info:    ... okay on input line 337.
  (c:/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
@@ -456,28 +456,28 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 339.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 338.
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 339.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 338.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] [3] [4] (./homework.aux)
+] [2] [3] [4] [5] [6] (./homework2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10165 strings out of 474773
- 159228 string characters out of 5761289
- 1933842 words of memory out of 5000000
- 32155 multiletter control sequences out of 15000+600000
- 587941 words of font info for 55 fonts, out of 8000000 for 9000
+ 10096 strings out of 474773
+ 158202 string characters out of 5761289
+ 1947842 words of memory out of 5000000
+ 32089 multiletter control sequences out of 15000+600000
+ 578976 words of font info for 52 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,13n,131p,823b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,13n,131p,528b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on homework.pdf (4 pages).
+Output written on homework2.pdf (6 pages).

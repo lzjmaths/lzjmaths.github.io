@@ -336,6 +336,7 @@
 \usepackage{geometry}
 \geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
 \begin{document}
+
 \courseheader
 \name{Lin Zejin}
 \rule{\textwidth}{1pt}
@@ -354,9 +355,6 @@
  
 \sloppy
 \pagenumbering{arabic}
-
-% put your code here
-
 
 \begin{problem}
     If  $ d_j $ is the sequence  $ -1,1,2,3,4,4 $, then all of this are legal. However, first if  we choose   $ d_1=-1 $, now none of  $ d_2\sim d_5 $ is available, which is what the algorithm will find, \ie   $ S=\{1,6\} $. However,  $ S=\{2,3,4,5\} $ is a larger viewable set. So the algorithm is not correct.
@@ -480,12 +478,31 @@
     \end{algorithm}
 
 
-    Then  $ \OPT[n,D] $ is the optimal solution and  $ \mathrm{REC}[k,t] $ marks the choice in the state  $ (k,t) $ which can be traced to form a avaible schedule.
+    Then  $ \OPT[n,D] $ is the optimal solution and  $ \mathrm{REC}[k,t] $ marks the choice in the state  $ (k,t) $ which can be traced to form a available schedule.
     
     Its time complexity is  $ O(nD) $ 
 \end{problem}
 \begin{problem}
-    
+    In the lecture we find its Bellman equation 
+    \[\OPT[i,j]=\min\begin{cases}
+    \OPT[i-1,j-1]+\alpha_{a_ib_j}\\
+    \OPT[i-1,j]+\delta\\
+    \OPT[i,j-1]+\delta
+\end{cases}\]
+It involves all possible cases, so it suffices to mark all possible choices in the state  $ (i,j) $.
+
+We define a function  $ mark[i,j]  $ with 
+\[mark[i,j]=\begin{cases}
+    1&\text{ if }\begin{cases}
+        \OPT[i-1,j-1]+\alpha_{a_ib_j}\\
+        \OPT[i-1,j]+\delta\\
+        \OPT[i,j-1]+\delta
+    \end{cases} \text{has two possible choices of minimum}\\
+    0&\text{otherwise}
+\end{cases}\]
+which can be traced in the process of DP.
+
+So after DP in  $ O(nm) $,  we obtain a possible minimum-cost alignment. Compared with the proposed alignment, we know whether it is optimal or not. And trace all the choices in this alignment and check whether  $ marh[i,j] $ is 1 or not in each state, we can find whether it is unique or not. 
 \end{problem}
 \begin{problem}
     \newcommand{\Is}{\mathrm{IsInter}}
@@ -536,8 +553,88 @@
 \end{problem}
 
 \begin{problem}
-    \[\frac{x+rt}{y+t}>\frac{x}{y}\Leftrightarrow x(y+t)<y(x+rt)\Leftrightarrow  \frac{x}{y}<r  \]
-    \[\frac{x-rt}{y-t}>\frac{x}{y}\Leftrightarrow x(y-t)<y(x-rt)\Leftrightarrow  \frac{x}{y}>r  \]
+    WLOG we can normalize  $ r_i $ such that  $ r_{min}=1 $.
+
+    (a) Noticed that 
+    \[R(S)=\frac{\sum_{i\in S}r_iv_i}{1+\sum_{i\in S}v_i}=\frac{\sum_{i\in S}(r_i\cdot\frac{v_i}{v_i+\frac{1}{|S|}})(v_i+\frac{1}{|S|})}{\sum_{i\in S}v_i+\frac{1}{|S|}} \in\left( \min_{i\in S,|S| \leq K}\left\{r_i\cdot\frac{v_i}{v_i+\frac{1}{|S|}}\right\}, \max_{i\in S,|S| \leq K}\left\{r_i\cdot\frac{v_i}{v_i+\frac{1}{|S|}}\right\}\right)\overset{\triangle }{=}(a,b)\]
+    with  $ 0<a<b \leq r_{max}=\frac{r_{max}}{r_{min}} $. 
+
+    It suffices to find the maximal possible value of  $ R(S) $ in  $ (a,b) $.  
+
+    For each  $ r\in (a,b) $, 
+    \begin{align}
+        \exists S,|S| \leq K,R(S) \geq r&\Leftrightarrow\sum_{i\in S}(r_i-r)v_i \geq r\notag\\
+        &\Leftrightarrow \text{  $ \exists(r_{i_1}-r)v_{i_2} \geq (r_{i_2}-r)v_{i_2} \geq \cdots \geq (r_{i_t}-r)v_{i_t} \geq 0 $ such that  $ \dps\sum_{k=1}^t (r_{i_k}-r)v_{i_k} \geq r $ and  $ t \leq K $} \label{eq2}
+    \end{align}
+
+
+    The last circumstance only needs to sort  $ (r_i-r)v_i $ and calculate the first  $ K $-th  sum, (or the sum of  all positive value $ (r_i-r)v_i $) which costs time complexity  $ O(N\log N) $. The function is 
+    \begin{algorithm}
+        \caption{IsLargeThanOPT($r$)}
+        \label{alg1}
+        \begin{algorithmic}
+            \STATE sort  $ (r_i-r)v_i $.
+            \STATE  $ \mathrm{sum}\leftarrow0 , S\leftarrow\emptyset$ 
+            \FOR{ $ i $  from  $ 1 $ to  $ K $}
+                \IF{ $ (r_i-r)v_i>0 $ }
+                    \STATE  $ \mathrm{sum}\leftarrow\mathrm{sum}+(r_i-r)v_i $.
+                    \STATE  $ S\leftarrow S\cup\{i\} $
+                \ENDIF
+            \ENDFOR
+            \IF{ $ \mathrm{sum}\geq r $} 
+                \RETURN FALSE and the set  $ S $
+            \ELSE \RETURN TRUE
+            \ENDIF 
+        \end{algorithmic}
+    \end{algorithm}
+    
+    To determine  $ R(S^*) $, we can use bisection method:
+    
+    \begin{algorithm}
+        \caption{General algorithm}
+        \label{alg2}
+        \begin{algorithmic}[1]
+            \STATE Determines  $ a_0\leftarrow a,b_0\leftarrow b,i\leftarrow 1 $.
+            \WHILE{}\label{1}
+                \STATE  $ r_i\leftarrow \frac{a_{i-1}+b_{i-1}}{2} $
+                \IF{IsLargeThanOPT($r$)=FALSE}
+                    \STATE RETURN a possible  $ S $ with  $ |S| \leq K $ such that  $ R(S) \geq r $.
+                    \STATE  $ a_i\leftarrow r_i,b_i\leftarrow b_{i-1} $.
+                \ELSIF{ $ r_i \geq R(S^*) $ }
+                    \STATE  $ a_i\leftarrow a_{i-1},b_i\leftarrow r_i $.
+                \ENDIF
+            \ENDWHILE 
+        \end{algorithmic}
+    \end{algorithm}
+    After  $ t $ times of  WHILE iterations \ref{1}, we can find a  $ r $ such that  $\dps r-R(S^*) \leq \frac{b-a}{2^t} $.
+    
+    So after iterations in  $ O(\log \frac{b-a}{\epsilon}) $, we can find a  $ r_i\in (a_i,b_i) $ within  $ (1\pm \epsilon) $-factor of  $ R(S^*) $ (as  $ \epsilon\rightarrow 0 $) 
+
+    Then  $ a_i \leq S(R^*) $ satisfies that  $ \exists S, |S| \leq K $,  $ R(S) \geq (1-\epsilon)R(S^*) $, given by the process of Algorithm \ref{alg1}
+    
+    Since each iteration cost  $ O(N\log N) $, the total time complexity will be 
+    \[O(N\log N)\cdot O(\log\frac{b-a}{\epsilon})=O(N\log N\log\frac{r_{max}}{r_{min}}+N\log N\log\epsilon^{-1})\] 
+
+    (b,c) We still use  algorithm \ref{alg2} to find  $ r $. It suffices to determine the function  $ IsLargeThanOPT(r)   $.
+      
+    It is equivalent to solve \eqref{eq2}, which  is a knapsack problem. 
+    
+    (b) However, under the condition of (b), we can use  a Weight-Based DP such that the time  complexity of  $ IsLargeThanOPT(r) $ is  $ O(nW) $. Then  the total time complexity will be  $ O(NW)\cdot O(\log\frac{b-a}{\epsilon})=O(NW\log\frac{r_{max}}{r_{min}}+NW\log\epsilon^{-1}) $.  
+
+    (c) In the lecture we find an algorithm in time complexity of  $ O(N^3\epsilon^{-1}) $ to find the solution  $ S $ such that  $ R(S) \geq (1-\frac{\epsilon}{2})R(S^*) $. So in  $ O(N^3\epsilon^{-1}) $, we can define a function  $ IsLargeThanOPT(r) $ to determine whether  $ r \geq (1-\frac{\epsilon}{2})R(S^*) $ or not.   
+    
+    After iterations in  $ O(\log \frac{b-a}{\epsilon}) $, we can find a  $ r_i\in (a_i,b_i) $ within  $ (1\pm \frac{\frac{\epsilon}{2}}{1-\frac{\epsilon}{2}}) $-factor of  $ (1-\frac{\epsilon}{2})R(S^*) $ (as  $ \epsilon\rightarrow 0 $)  
+
+    Then  $ a_i \leq S(R^*) $ satisfies that  $ \exists S, |S| \leq K $,  $ R(S) \geq (1-\epsilon)R(S^*) $, given by the process of the knapsack valued-based FPTAS
+
+    The time complexity will be 
+    \[O(N^3\epsilon^{-1})\cdot O(\log\frac{b-a}{\epsilon})=O(N^3\epsilon^{-1}\log\frac{r_{max}}{r_{min}}+N^3\epsilon^{-1}\log\epsilon^{-1})\]
+    which is a FPTAS.
+
+    
 \end{problem}
+
+
+
 
 \end{document}
