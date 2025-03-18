@@ -1,0 +1,125 @@
+%!TEX root = /lecture/Discrete_Optimistic.tex
+
+\begin{theorem}[Hall's Theorem]\label{Hall's Theorem}
+    The inverse still holds. \ie  If  $ \forall S\subset U $,  $ |T(S)| \geq |S| $, then  $ \exists M $ is perfect matching if  $ |M|=n $.    
+\end{theorem}
+\begin{proof}
+    It suffices to prove max-flow$ =n $. Or equivalently, to prove min-cut$  \geq n $.
+    
+    \ie  $ \forall  $ s-t cut  $ (A,B)  $,  $ c(A,B) \geq n $.
+    
+    $ c(A,B)<+\infty $ $ \xRightarrow{1}  $ if  $ u\in A $ then  $ \Gamma(u)\in A $ $ \Rightarrow  $  $ \Gamma(A\cap U)\subset A\cap V $.
+    
+    \begin{align*}
+        c(A,B) &\geq|B\cap U|+|A\cap V|\\
+        & \geq n-|A\cap U|+|\Gamma(A\cap U)|\\
+        & \geq n
+    \end{align*}
+\end{proof}
+
+\begin{remark}
+    Here we mark the weight between  $ U  $ and  $ V  $ to be  $ \infty $ such that  the fact 1 holds.
+
+    The duality of max-flow and min-cut is very useful in this problem.
+\end{remark}
+
+\subsubsection{Network Connectivity}
+\begin{example}[Network Connectivity]
+    Directed  $ G=(V,E) $, source  $ s $, sink  $ t $. Then Max-flow = the maximum numbered of edge-disjoint  $ s\to t $ path. Two paths are called \textit{edge-disjoint} if they have no edge in common.
+    
+    Connectivity of the graph is defined as the  $ \dps\min_{E'\subset E}|E'| $ such that  $ s\to t $ disconnected in  $ (V,E\setminus E') $   
+\end{example}
+\begin{theorem}[Menger's Theorem]
+    Connectivity=min-cut=max-flow=maximum number of edge-disjoint  $ s\to t $ path.
+\end{theorem}
+
+\subsubsection{Circulation}
+
+\begin{example}
+    Directed graph  $ G=(V,E) $ with capacity  $ c:E\to \mathbb{R}_{ \geq 0} $ and node demand  $ d:V\rightarrow \Rbb $. ($ d(u)<0 $ means the supply node)  
+
+    We have the flow conservation 
+    \[\sum_{e\text{ into }u}f(e)0-\sum_{e\text{ out of }u}f(e)=d(u),\,\forall u\]
+
+    Our task is to decide whether there exists a feasible flow  $ f $ satisfies the flow conservation. 
+\end{example}
+
+Indeed, we can consrtuct two vitual nodes  $ s,t $ such that  $ s $ to all nodes with demand  $ d<0 $, equipped with capacity $ d $ and $ t $ has edges from  all nodes with demand  $ d>0 $, equipped with capacity $ d $.    
+
+Then the task is equivalent to check whether the max-flow saturates all edges out of  $ s $ and in of  $ t $.
+
+Moreover, we can use the cut to discuss.
+
+We have:
+\begin{center}
+    $ \not\exists  $ feasible circulation  $ \Leftrightarrow $  $ \exists  $ cut   $ (A,B) $ \st  $ c(A,B)<\dps\sum_{v\in B}\dd(v) $.  
+\end{center}
+\begin{remark}
+    This crieterion, similar as Hall's Theorem \ref{Hall's Theorem}, is so-called "\textit{polynomial proof}", under the meaning that for a specific case, we can give a proof in polynomial time to check.
+\end{remark}
+
+
+
+\paragraph{Flow Lower Bounds}
+    If we have a capacity constraint such that 
+    \[l(e) \leq f(e) \leq c(e),\,\forall e\in E\] 
+
+    Then it suffices to add the lower flow at first. For example, for two nodes with demand  $ 0 $ and edge with amount in  $ [4,6] $, we can replace it with 
+    \[4\xrightarrow{[0,6]}-4\]
+    
+
+\subsubsection{Survey Design}
+\begin{example}[Survey Design]
+    We ask  $ n_1 $ customers about  $ n_2  $ products. Ask customer  $ i $  the number between $ [c_i,c_i'] $ products and ask the  number  between $ [p_j,p_j'] $ customers   questions  about product  $ j $.
+    
+    We want to find if there is a feasible survey design.
+\end{example}
+
+It is equivalent to give each edge a weight interval, where  $ s\to i $ with  $ [c_i,c_i'] $,  $ i\to j $ with  $ [0,1] $ and  $ j\to t $ with  $ [p_j,p_j'] $.
+
+\subsubsection{Airline Scheduling}
+
+\begin{example}[Airline Scheduling]
+    Flight $ i $ from the origin  $ o_i $  at time  $ s_i $ to the destination  $ d_i $ at  time  $ f_i $.
+    
+    We want to know what is the minimum number of crews in flights that can be scheduled. A feasible schedule for one crew is a set of flights  $ \{i_1,i_2,\cdots\} $ such that  $ f_{i_k} \leq s_{i_{k+1}} $,  $ d_k=o_{k+1} $.   
+\end{example}
+
+We can construct a graph with nodes  $ o_i\to d_i $. The edges   $ o_i\to d_i $ with weight  $ [1,1] $. If the schedule from flight  $ i $ to flight  $ j $ is feasible \ie  $ f_i \leq s_j $, we let edge $ i\to j $ with weight interval  $ [0,1] $.
+
+Then a feasible flow gives a feasible schedule. To limit the total amount, we can determine the minimum number.
+
+\begin{remark}
+    The weight interval have a broader meaning in this problem. With different view of nodes and edges, we can transform it into different limitations.
+\end{remark}
+
+\subsubsection{Image Segmentation}
+
+\begin{example}[Image Segmentation]
+    For an   image,  $ p_{ij} \geq 0 $ is the separation penalty if neighbors $ i,j $ belongs to different partitions. 
+    
+    $ a_i \geq 0 $ is the likelihood that  $ i\in A $ (foreground)
+    $ b_i \geq 0 $ is the likelihood that $ i\in B $ (background)
+    
+    Our goal is to partition pixels into  $ A,B $, to maximize 
+    \[\sum_{i\in A}a_i+\sum_{j\in B}-\sum_{\substack{i,j\text{ neighbors}\\|\{i,j\}\cap A|=1}}\] 
+\end{example}
+
+It is equivalent to 
+\begin{align*}
+    &\,\quad\text{minimize }-\sum_{i\in A}a_i-\sum_{j\in B}b_j+\sum_{\substack{i,j\text{ neighbors}\\|\{i,j\}\cap A|=1}} p_{ij}\\
+    &\Leftrightarrow \text{minimize }\sum_{i\in B}a_i\sum_{j\in A}b_j+\sum_{\substack{i,j\text{ neighbors}\\|\{i,j\}\cap A|=1}} p_{ij}
+\end{align*}
+Then we can construct a visual source with edges to all pixels with weight   $ a_i $ and a visual sink with edges from all pixels with weight   $ b_i $. All neighbors of pixel have edges of weight  $ p_{ij} $ from each other
+
+
+\begin{remark}
+    This example focuses on the optimal sum of net flow. To construct visual source, sink and proper edges, we can optimize some sum of structure with related constraints.
+\end{remark}
+
+
+\subsubsection{Project Selection}
+\begin{example}[Project Selection]
+    $ v\to w $,  $ v $ depends on  $ w $. Our goal is to  find a feasible set  $ S $ of projects(if  $ v\in S $, then all prequisites of  $ v\in S $) to maximize 
+    \[\sum_{v\in S}p(v)\]    
+\end{example}
