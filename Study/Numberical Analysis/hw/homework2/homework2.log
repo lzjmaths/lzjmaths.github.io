@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  17 MAR 2025 12:57
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.1)  18 MAR 2025 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -472,12 +472,12 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10096 strings out of 474773
- 158202 string characters out of 5761289
+ 10100 strings out of 474773
+ 158240 string characters out of 5761289
  1947842 words of memory out of 5000000
- 32089 multiletter control sequences out of 15000+600000
- 578976 words of font info for 52 fonts, out of 8000000 for 9000
+ 32091 multiletter control sequences out of 15000+600000
+ 584949 words of font info for 54 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,13n,131p,528b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,19n,131p,528b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on homework2.pdf (6 pages).

@@ -355,13 +355,19 @@
 \pagenumbering{arabic}
 
 \begin{problem}
-    By Theorem 3.3.6, since Chebyshev polynomial is normal w.r.t. the kernal  $ \omega=\frac{1}{\square1-x^2} $ 
-    \[\lim_{n\to\infty}\|L_nf-f\|_\omega=0\]
-    Noticed that 
-    \[\begin{aligned}
-        \|L_nf-f\|_\omega&=\int_{-1}^1\omega(x)|L_nf(x)-f(x)|^2\dd x\\
-        &
-    \end{aligned}\]
+    It is exactly Theorem 2.4.7
+
+    Let  $ T_n(x)=\cos(n\arccos(X)) $ be the Chebyshev polynomial of degree  $ n $.
+    
+    Then 
+    \[L_nf(x)=\frac{1}{n^2}T^2_n(x)\sum_{i=1}^nf(x_i)\frac{1-xx_i}{(x-x_i)^2}\]
+    which impilies that  $ L_nf $ is a monotone linear operator. 
+    
+    By the monotone linear operator theorem, it suffices to prove it for  $ f=1,\varphi_t $.
+    
+    Since  $ L_n 1=1 $,
+    \[|L_n\varphi_t(t)|=\left|\frac{1}{n^2}T^2_n(t)\sum_{i=1}^n(t-x_i)^2\frac{1-tx_i}{(t-x_i)^2}\right| \leq \frac{1}{n^2}\cdot 2n=\frac{2}{n}\rightarrow 0\]
+
 \end{problem}
 
 \begin{problem}
@@ -376,6 +382,36 @@
 \begin{problem}
     If  $ \dps\lim_{n\to\infty}\|L_nf-f\|_\infty=0 $, obviously it holds for  $ f=1,\sin x, \cos x $.
     
-    Conversely, if it holds for  $ f=1,\sin x, \cos x $, then for any  $ f\in \Span\{1,\sin x,\cos x\} $,  $ \dps\lim_{n\to\infty}\|L_nf-f\|_\infty=0 $   
+    Conversely, if it holds for  $ f=1,\sin x, \cos x $, then for any  $ f\in \Span\{1,\sin x,\cos x\} $,  $ \dps\lim_{n\to\infty}\|L_nf-f\|_\infty=0 $. Then let  $ \varphi_t(x)=1-\cos(x-t)=1-\cos x\cos t-\sin t\sin x $ 
+
+    \begin{align*}
+      |(L_n\varphi_t)(t)|&=|(L_n\cdot 1)(t)-\sin t(L_n\sin x)(t)-\cos t(L_n\cos x)(t)-(1-\cos(t-t))|\\
+      & \leq \|(L_n\cdot 1)-1\|_\infty+|\sin t|\cdot \|(L_n\sin x)-\sin x\|_\infty+|cos t|\cdot\|(L_n\cos x)-\cos x\|_\infty\\
+      &\rightrightarrows 0
+    \end{align*}
+    uniformly converges.
+
+    Now  $ \forall \epsilon>0 $ ,  $ \exists \delta>0  $ such that  $ \forall |x-y| \leq \arcsin\delta $,  $ |f(x)-f(y)|<\epsilon $.
+    
+    Then if  $ |x-t|<\arccos\delta $,  $ |f(x)-f(t)|<\delta $.
+    
+    If  $ |x-t| \geq \arccos \delta $, then  $ |f(x)-f(t)| \leq 2\|f\|_\infty \leq 2\|f\|_\infty\cdot\frac{\varphi_t(x)}{1-\delta} \leq \alpha\varphi_t(x) $ with  $ \alpha=\dps\frac{2\|f\|_\infty}{1-\delta} $.
+    
+    Then  $ \forall x\in [-\pi,\pi] $, 
+    \[-(\epsilon\cdot 1+\alpha\varphi_t(x)) \leq f(x)-f(t) \leq \epsilon\cdot 1+\alpha\varphi_t(x)\] 
+    By monotonity, 
+    \[-(\epsilon\cdot (L_n1)+\alpha(L_n\varphi_t)(t)) \leq (L_nf)(t)-f(t)(L_n\cdot 1)(t) \leq \epsilon\cdot (L_n1)+\alpha(L_n\varphi_t)(t)\]
+    Therefore\[\|L_nf-(L_n\cdot 1)f\|_\infty \leq \epsilon\|L_n1\|+\alpha\|L_n\varphi_t(t)\|\]
+    Since  $ L_n\varphi_t(t)\rightrightarrows 0 $ for all  $ t $, letting  $ n\rightarrow \infty, \epsilon\rightarrow 0 $, we have 
+    \[\lim_{x\to\infty}\|L_nf-(L_n\cdot 1)f\|_\infty=0\]
+    Noticed that  $ \dps\lim_{n\to\infty}\|L_n1-1\|_\infty=0 $, this causes 
+    \[\lim_{n\to\infty}\|L_nf-f\|_\infty=0\]    
+
+    
+\end{problem}
+
+\begin{problem}
+   $ s_n\sin x =\sin x, s_n\cos x =\cos x $. So  $ G_n\sin x=\sin x,G_n\cos x =\cos x, G_n\cdot 1=1$ remains. By problem 4, 
+   \[\lim_{n\to\infty}\|G_nf-f\|_\infty=0\]  
 \end{problem}
 \end{document}
