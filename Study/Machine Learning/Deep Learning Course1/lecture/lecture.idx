@@ -1,23 +1,26 @@
-\indexentry{Lasso|hyperpage}{2}
-\indexentry{Ridge regression|hyperpage}{2}
-\indexentry{subgradient|hyperpage}{2}
-\indexentry{one-hot encoding|hyperpage}{2}
-\indexentry{linear hypothesis space|hyperpage}{2}
-\indexentry{Softmax|hyperpage}{2}
-\indexentry{Maximum likelihood|hyperpage}{2}
-\indexentry{cross entropy|hyperpage}{2}
-\indexentry{Stochastic Gradient Descent|hyperpage}{3}
-\indexentry{mini batch|hyperpage}{3}
-\indexentry{momentum|hyperpage}{3}
-\indexentry{Exponential Moving Averaging(EMA)|hyperpage}{4}
-\indexentry{Adaptive Moment Estimation(Adam)|hyperpage}{4}
-\indexentry{Sigmoid|hyperpage}{4}
-\indexentry{Tanh|hyperpage}{4}
-\indexentry{ReLU|hyperpage}{4}
-\indexentry{LeakyReLU|hyperpage}{5}
-\indexentry{Batch Normalization|hyperpage}{5}
-\indexentry{Mean filtering|hyperpage}{5}
-\indexentry{Median filtering|hyperpage}{5}
-\indexentry{Convolution|hyperpage}{5}
-\indexentry{stride|hyperpage}{6}
-\indexentry{Pooling Layer|hyperpage}{6}
+\indexentry{Lasso|hyperpage}{3}
+\indexentry{Ridge regression|hyperpage}{3}
+\indexentry{subgradient|hyperpage}{3}
+\indexentry{one-hot encoding|hyperpage}{3}
+\indexentry{linear hypothesis space|hyperpage}{3}
+\indexentry{Softmax|hyperpage}{3}
+\indexentry{Maximum likelihood|hyperpage}{3}
+\indexentry{cross entropy|hyperpage}{3}
+\indexentry{Stochastic Gradient Descent|hyperpage}{4}
+\indexentry{mini batch|hyperpage}{4}
+\indexentry{momentum|hyperpage}{4}
+\indexentry{Exponential Moving Averaging(EMA)|hyperpage}{5}
+\indexentry{Adaptive Moment Estimation(Adam)|hyperpage}{5}
+\indexentry{Sigmoid|hyperpage}{5}
+\indexentry{Tanh|hyperpage}{5}
+\indexentry{ReLU|hyperpage}{5}
+\indexentry{LeakyReLU|hyperpage}{6}
+\indexentry{Batch Normalization|hyperpage}{6}
+\indexentry{Mean filtering|hyperpage}{6}
+\indexentry{Median filtering|hyperpage}{6}
+\indexentry{Convolution|hyperpage}{6}
+\indexentry{stride|hyperpage}{7}
+\indexentry{Pooling Layer|hyperpage}{7}
+\indexentry{Cell state|hyperpage}{9}
+\indexentry{Gates|hyperpage}{9}
+\indexentry{Attention|hyperpage}{10}

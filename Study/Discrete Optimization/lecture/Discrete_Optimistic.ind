@@ -1,5 +1,10 @@
 \begin{theindex}
 
+  \item $ \alpha $-approximation algorithm, \hyperpage{33}
+  \item 3-CNF, \hyperpage{32}
+
+  \indexspace
+
   \item arborescence, \hyperpage{12}
 
   \indexspace
@@ -8,6 +13,7 @@
 
   \indexspace
 
+  \item CNF, \hyperpage{32}
   \item cut, \hyperpage{9}
   \item cutset, \hyperpage{9}
 

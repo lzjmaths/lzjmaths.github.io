@@ -65,3 +65,8 @@
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.20\else \numberline {4.20}Example\fi \thmtformatoptarg {Image Segmentation}}{29}{example.4.20}%
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.21\else \numberline {4.21}Remark\fi }{29}{remark.4.21}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.22\else \numberline {4.22}Example\fi \thmtformatoptarg {Project Selection}}{30}{example.4.22}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.23\else \numberline {4.23}Remark\fi }{30}{remark.4.23}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.24\else \numberline {4.24}Example\fi }{31}{example.4.24}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.25\else \numberline {4.25}Theorem\fi }{31}{theorem.4.25}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.26\else \numberline {4.26}Remark\fi }{32}{remark.4.26}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.1\else \numberline {5.1}Example\fi \thmtformatoptarg {3-CNF}}{32}{example.5.1}%

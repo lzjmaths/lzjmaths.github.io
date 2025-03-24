@@ -1,0 +1,144 @@
+
+    \begin{itemize}
+        \item Introduce the virtual source node  $ s $ and the virtual sink node  $ t $.
+        \item Assign a capacity of  $ \infty $ to each prerequisite edge.
+        \item Add edge  $ (s,v) $ with capacity  $ p(v) $ if  $ p(v)>0 $.
+        \item Add edge  $ (v,t) $ with capacity  $ -p(v) $ if  $ p(v)<0 $ 
+    \end{itemize}
+
+    Then the min-cut $ (A,B)  $ satisfies:
+    \begin{enumerate}[label=\arabic*)]
+        \item  $ \forall (u,w)\in E  $,  $ u\in S\Rightarrow w\in A $ 
+        \item \begin{align*}
+            c(A,B)&=\sum_{\substack{v\in B\\p(v)>0}}p(v)+\sum_{\substack{v\in A\\p(v)<0}}(-p(v))\\
+            &=\sum_{v:p(v)>0}p(v)-\sum_{\substack{v\in A\\p(v)>0}}p(v)-\sum_{\substack{v\in A\\p(v)<0}}p(v)\\
+            &=\sum_{v:p(v)>0}p(v)-\sum_{v\in A}p(v)
+        \end{align*}
+    \end{enumerate}
+
+    So it suffices to compute  $ c(A,B) $!
+
+    \begin{remark}
+        Use edges of capacity $ \infty $, we can reduces some situation we do not want.
+    \end{remark}
+
+    \subsection{Baseball Elimination}
+    \begin{example}
+        Given set of team  $ S $, distinguished team  $ z\in S $. Team  $ x  $ has won  $ w_x  $ games already. Team  $ x  $ and  $ y  $ play each other  $ r_{xy} $  additional games.
+
+        Given the current standings, is there any outcome of the remaining games in which team  $ z $ finishes with the most (or tied for the most) wins?
+    \end{example}
+    Assume team  $ z  $ wins all remaining games.  $ M=w_z+\dps\sum_{x}r_{zx} $.
+
+    We want to arrange the remaining games that do not involve team  $ z $ so that all other teams have  $  \leq M $ wins.
+
+    \begin{itemize}
+        \item Construct two virtual nodes  $ s $ and  $ t $.
+        \item Assign a capacity of  $ \infty $ to the edge from  the match  $ i-j $ to team $ i $ and  $ j $.     
+        \item Assign a capacity of  $ M-w_i $ to the edge from team  $ i $ to  $ t $.
+        \item Assign a capacity of  $ r_{ij} $ to the edge from team  $ s $ to the match  $ i-j $.
+    \end{itemize}
+    Then  $ z $ can possibly win the most games iff the max-flow saturates for all edges from  $ s $.  
+
+
+
+    \paragraph{Certificate of Elimination}
+    $ T\subset\{2,3,\cdots,n\} $,  $ \omega(T)=\dps\sum_{i\in T}\omega_i,r(T)=\sum_{i<j\in T}r_{ij} $,  $ \dps\frac{\omega(T)+r(T)}{|T|}>M $.
+
+    Noticed that if the following equation holds, then team  $ z $ is theoretically eliminated.
+    \begin{equation}
+        \frac{\omega(T)+r(T)}{|T|}>M\label{eq:baseball elimination}
+    \end{equation}
+
+    \begin{theorem}
+        Team  $ q $  is theoretically eliminated iff  $ \exists T\subset\{2,3,\cdots, n\} $ \st \eqref{eq:baseball elimination} holds 
+    \end{theorem}
+    \begin{proof}
+        If  $ \forall T\subset \{2,3,\cdots, n\} $,  $ \dps\frac{\omega(T)+r(T)}{|T|}<M $, then 
+        \[\mathrm{min-cut} \geq \sum_{1<i<i \leq n}r_{ij}=r(\{2,3,\cdots, n\})\] 
+        That's because, if we consider any  $ s-t $ cut  $ (A,B)  $ such that  $ c(A,B)<+\infty $.
+        \begin{enumerate}[label=\arabic*)]
+            \item  $ i\in B $ $ \Rightarrow  $ match $ i-j\in B $,  $ \forall j $.    
+            \begin{align*}
+                c(A,B)& \geq \sum_{i\in A}(M-w_i)+\sum_{\substack{i\in B\text{ or }j\in B\\1<i<j \leq n}}r_{ij}\\
+                &=r(\{2,3,\cdots,n\})+|A\setminus\{s\}|\cdot M-\omega(A\setminus\{s\})-r(A\setminus\{s\})\\
+                & \geq r(\{2,3,\cdots,n\})
+            \end{align*}
+        \end{enumerate}  
+        The inverse is trivial.
+    \end{proof}
+
+    \begin{remark}
+        Note that we use the duality of max-flow and min-cut in this problem.
+    \end{remark}
+
+    \section{Introduction to Approximation Algorithm}
+    There are plenty of NP-hard optimization problems.
+
+    \begin{example}[3-CNF]
+        For  $ n  $ Boolean variables  $ \{x_1,x_2,\cdots,x_n\} $.
+
+        A \textit{literal} is either a value  $ x_i $ or negative value  $ \bar{x_i} $.
+
+        A \textit{clause} is a disjunction of literals. \textit{e.g.}  $ (x_1\vee x_2\vee \bar{x_3}) $.
+
+        A \name{CNF} is the conjunction of clauses. \textit{e.g.}  $ (x_1\vee x_2\vee \bar{x_3})\wedge (x_1\vee \bar{x_2}\vee x_3) $.
+
+        A \name{3-CNF} is a CNF with at most  $ 3 $ literals in each clause.
+    \end{example}
+
+    \paragraph{Decision problems}
+    Check whether we can choose  $ x_1,\cdots,x_n $
+\paragraph{}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|p{5cm}|p{7cm}|}
+        \hline
+        \textbf{Decision Problems} & \textbf{Natural Optimization Problems} \\ \hline
+        Is there a truth assignment that satisfies the 3-CNF formula? & Maximize the number of clauses satisfied by a truth assignment. \\ \hline
+        3-coloring (NP-complete)& \begin{itemize}
+            \item Min-coloring
+            \item Max-3-cut: Max number of bichromatic edges using 3 colors.
+            \item Min-3-Uncut: Min number of monochromatic edges using 3 colors.
+        \end{itemize} \\ \hline
+        2-colorin (P complete)&\begin{itemize}
+            \item Max-cut
+            \item Min-Uncut
+        \end{itemize}\\ \hline
+        Vertex Cover: Given  $ G=(V,E),k $. Decide whether  $ \exists  $ Vertex-Cover using  $  \leq  $ vertices.   &Min-vertex-Cover: Given  $ G=(V,E) $. Find  $ S\subset V $ \st  $ \forall e=(u,v)\in E $,  $ |\{u,v\}\cap S| \geq 1 $,  $ |S| $ is minimized.\\ \hline
+
+    \end{tabular}
+    \caption{Comparison of Decision Problems and Natural Optimization Problems}
+    \label{tab:decision_vs_optimization}
+\end{table}
+
+For maximization problems,  $ A  $ is an  \name{$ \alpha  $-approximation algorithm}  if 
+\[\mathrm{Val}(A(I),I) \geq \alpha \cdot\mathrm{OPT}(I),\,\alpha\in (0,1]\]
+For minimization problem, it will be 
+\[\mathrm{Val}(A(I),I) \leq \alpha \cdot\mathrm{OPT}(I),\,\alpha\in [1,\infty)\]
+
+Max-cut problem: Find the maximal   number of bichromatic edges using 2 colors.
+\begin{algorithm}
+    \caption{Greedy}
+    \begin{algorithmic}
+        \STATE initiate  $ A,B\leftarrow\emptyset $ 
+        \FOR{ $ i $ from  $ 1 $ to  $ n $}
+            \STATE Let  $ a_i\leftarrow $ number of edges between  $ A $ and  $ i $.
+            \STATE Let  $ b_i\leftarrow $ number of edges between  $ B $ and  $ i $.
+            \IF{ $ a_i<b_i $ }
+            \STATE  $ A\leftarrow A\cup\{i\} $.
+            \ELSE \STATE $ B\leftarrow B\cup\{i\} $ 
+            \ENDIF   
+        \ENDFOR
+    \end{algorithmic}
+\end{algorithm} 
+We have 
+\[|\mathrm{edge}(A,B)|=\sum_{i=1}^n\max\{a_i,b_i\} \geq \sum_{i=1}^n\frac{a_i+b_i}{2}=\frac{1}{2}|E| \geq \frac{1}{2}\mathrm{OPT}\]
+
+So this is a   $ \frac{1}{2} $-approximation algorithm for max-cut problem.
+
+However, if we consider it as a minimization problem, the value can be  $ 0 $, so the scale can be  $ +\infty $. Hence, it is different if we consider the approximation algorithm of min-uncut or max-cut  problems.
+
+
+

@@ -1,57 +1,63 @@
 \begin{theindex}
 
-  \item Adaptive Moment Estimation(Adam), \hyperpage{4}
+  \item Adaptive Moment Estimation(Adam), \hyperpage{5}
+  \item Attention, \hyperpage{10}
 
   \indexspace
 
-  \item Batch Normalization, \hyperpage{5}
+  \item Batch Normalization, \hyperpage{6}
 
   \indexspace
 
-  \item Convolution, \hyperpage{5}
-  \item cross entropy, \hyperpage{2}
+  \item Cell state, \hyperpage{9}
+  \item Convolution, \hyperpage{6}
+  \item cross entropy, \hyperpage{3}
 
   \indexspace
 
-  \item Exponential Moving Averaging(EMA), \hyperpage{4}
+  \item Exponential Moving Averaging(EMA), \hyperpage{5}
 
   \indexspace
 
-  \item Lasso, \hyperpage{2}
-  \item LeakyReLU, \hyperpage{5}
-  \item linear hypothesis space, \hyperpage{2}
+  \item Gates, \hyperpage{9}
 
   \indexspace
 
-  \item Maximum likelihood, \hyperpage{2}
-  \item Mean filtering, \hyperpage{5}
-  \item Median filtering, \hyperpage{5}
-  \item mini batch, \hyperpage{3}
-  \item momentum, \hyperpage{3}
+  \item Lasso, \hyperpage{3}
+  \item LeakyReLU, \hyperpage{6}
+  \item linear hypothesis space, \hyperpage{3}
 
   \indexspace
 
-  \item one-hot encoding, \hyperpage{2}
+  \item Maximum likelihood, \hyperpage{3}
+  \item Mean filtering, \hyperpage{6}
+  \item Median filtering, \hyperpage{6}
+  \item mini batch, \hyperpage{4}
+  \item momentum, \hyperpage{4}
 
   \indexspace
 
-  \item Pooling Layer, \hyperpage{6}
+  \item one-hot encoding, \hyperpage{3}
 
   \indexspace
 
-  \item ReLU, \hyperpage{4}
-  \item Ridge regression, \hyperpage{2}
+  \item Pooling Layer, \hyperpage{7}
 
   \indexspace
 
-  \item Sigmoid, \hyperpage{4}
-  \item Softmax, \hyperpage{2}
-  \item Stochastic Gradient Descent, \hyperpage{3}
-  \item stride, \hyperpage{6}
-  \item subgradient, \hyperpage{2}
+  \item ReLU, \hyperpage{5}
+  \item Ridge regression, \hyperpage{3}
 
   \indexspace
 
-  \item Tanh, \hyperpage{4}
+  \item Sigmoid, \hyperpage{5}
+  \item Softmax, \hyperpage{3}
+  \item Stochastic Gradient Descent, \hyperpage{4}
+  \item stride, \hyperpage{7}
+  \item subgradient, \hyperpage{3}
+
+  \indexspace
+
+  \item Tanh, \hyperpage{5}
 
 \end{theindex}

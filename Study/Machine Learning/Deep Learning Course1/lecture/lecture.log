@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  14 MAR 2025 12:10
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 MAR 2025 11:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1431,16 +1431,16 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 7.
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 7.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (./lecture.toc)
+) (./lecture.toc [1
+
+])
 \tf@toc=\write7
 \openout7 = `lecture.toc'.
 
- [1
-
-] (../D1.tex [2]) (../D3.tex [3] [4]) (../D4.tex [5] [6]) [7]
+ [2] (../D1.tex [3]) (../D3.tex [4] [5]) (../D4.tex [6] [7]) (../D5.tex [8] [9] [10]) [11]
 runsystem(makeindex lecture.idx)...executed.
 
- (./lecture.ind [8
+ (./lecture.ind [12
 
 
 
@@ -1451,19 +1451,19 @@ showing proposition
 \tf@loe=\write8
 \openout8 = `lecture.loe'.
 
- [9
+ [13
 
 ] (./lecture.aux)
 Package rerunfilecheck Info: File `lecture.out' has not changed.
-(rerunfilecheck)             Checksum: 652CEFABEAF0B30CA2B385602E4E418B;1456.
+(rerunfilecheck)             Checksum: DA7118A0CE57D9AC784DF7FA1733D1BF;2509.
  ) 
 Here is how much of TeX's memory you used:
- 45811 strings out of 476683
- 1040969 string characters out of 5804047
- 1852018 words of memory out of 5000000
- 65171 multiletter control sequences out of 15000+600000
+ 46132 strings out of 476683
+ 1047258 string characters out of 5804047
+ 1865018 words of memory out of 5000000
+ 65489 multiletter control sequences out of 15000+600000
  544724 words of font info for 118 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,10n,115p,767b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,115p,767b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecture.pdf (9 pages).
+Output written on lecture.pdf (13 pages).

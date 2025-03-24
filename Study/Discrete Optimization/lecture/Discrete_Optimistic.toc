@@ -39,5 +39,10 @@
 \contentsline {subsubsection}{\numberline {4.2.5}Airline Scheduling}{28}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Image Segmentation}{29}{subsubsection.4.2.6}%
 \contentsline {subsubsection}{\numberline {4.2.7}Project Selection}{30}{subsubsection.4.2.7}%
-\contentsline {section}{Index}{31}{section*.14}%
-\contentsline {section}{List of Theorems}{32}{section*.15}%
+\contentsline {subsection}{\numberline {4.3}Baseball Elimination}{31}{subsection.4.3}%
+\contentsline {paragraph}{Certificate of Elimination}{31}{section*.14}%
+\contentsline {section}{\numberline {5}Introduction to Approximation Algorithm}{32}{section.5}%
+\contentsline {paragraph}{Decision problems}{32}{section*.15}%
+\contentsline {paragraph}{}{33}{table.caption.17}%
+\contentsline {section}{Index}{35}{section*.18}%
+\contentsline {section}{List of Theorems}{36}{section*.19}%
