@@ -70,3 +70,12 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.25\else \numberline {4.25}Theorem\fi }{31}{theorem.4.25}%
 \contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.26\else \numberline {4.26}Remark\fi }{32}{remark.4.26}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.1\else \numberline {5.1}Example\fi \thmtformatoptarg {3-CNF}}{32}{example.5.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.2\else \numberline {5.2}Theorem\fi }{34}{theorem.5.2}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.3\else \numberline {5.3}Fact\fi }{35}{fact.5.3}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.4\else \numberline {5.4}Remark\fi }{35}{remark.5.4}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.5\else \numberline {5.5}Example\fi \thmtformatoptarg {Set-Cover}}{35}{example.5.5}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.6\else \numberline {5.6}Fact\fi }{36}{fact.5.6}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.7\else \numberline {5.7}Corollary\fi }{36}{corollary.5.7}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.8\else \numberline {5.8}Corollary\fi }{36}{corollary.5.8}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.9\else \numberline {5.9}Fact\fi }{36}{fact.5.9}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.10\else \numberline {5.10}Example\fi \thmtformatoptarg {Weighted Min Set-cover}}{37}{example.5.10}%

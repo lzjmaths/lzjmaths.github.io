@@ -371,7 +371,16 @@
 \end{problem}
 
 \begin{problem}
-    
+  By the result in lecture last term, it suffices to prove 
+  \[\min_{p_k\in P_k}\max_{\lambda_1 \leq \lambda \leq \lambda_n} \leq 2\left(\frac{\sqrt{\lambda_n}-\sqrt{\lambda_1}}{\sqrt{\lambda_n}+\sqrt{\lambda_1}}\right)^k\]
+  For  $ p_0(x)=\dps\frac{T_k(\frac{\lambda_n+\lambda_1-2x}{\lambda_n-\lambda_1})}{T_k(\frac{\lambda_n+\lambda_1}{\lambda_n-\lambda_1})} $, note that  $ x_k=\dps\frac{\lambda_n(1-\cos\frac{n\pi}{k})+\lambda_1(1+\cos\frac{n\pi}{k})}{2} $ takes its optimal value. By Chebyshev theorem,  $ p_0(x)  $ is the unique solution of the optimal solution, with the minimal value, 
+  \[\frac{1}{T_k(\frac{\lambda_n+\lambda_1}{\lambda_n-\lambda_1})}\]
+  Moreover,  $ T_k(x)=\frac{1}{2}((x+\sqrt{x^1-1})^n+(x-\sqrt{x^2-1})^n) $, hence
+  \[\begin{aligned}
+    T_k(\frac{\lambda_n+\lambda_1}{\lambda_n-\lambda_1})&=\frac{1}{2}((\frac{\sqrt{\lambda_n}-\sqrt{\lambda_1}}{\sqrt{\lambda_n}+\sqrt{\lambda_1}})^k+(\frac{\sqrt{\lambda_n}+\sqrt{\lambda_1}}{\sqrt{\lambda_n}-\sqrt{\lambda_1}})^k)\\
+    & \geq \frac{1}{2}(\frac{\sqrt{\lambda_n}+\sqrt{\lambda_1}}{\sqrt{\lambda_n}-\sqrt{\lambda_1}})^k
+  \end{aligned}\] 
+  Here we end the proof.
 \end{problem}
 
 \begin{problem}
@@ -411,7 +420,7 @@
 \end{problem}
 
 \begin{problem}
-   $ s_n\sin x =\sin x, s_n\cos x =\cos x $. So  $ G_n\sin x=\sin x,G_n\cos x =\cos x, G_n\cdot 1=1$ remains. By problem 4, 
-   \[\lim_{n\to\infty}\|G_nf-f\|_\infty=0\]  
+  $ s_n\sin x =\sin x, s_n\cos x =\cos x $. So  $ G_n\sin x=\sin x,G_n\cos x =\cos x, G_n\cdot 1=1$ remains. By problem 4, 
+  \[\lim_{n\to\infty}\|G_nf-f\|_\infty=0\]  
 \end{problem}
 \end{document}

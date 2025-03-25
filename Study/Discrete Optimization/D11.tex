@@ -1,0 +1,114 @@
+\name{c vs. s Decision Problem}
+Decide whether  $ \dps\OPT(I) \geq c $ or  $ \OPT(I)<s $. If  $ \OPT(I) \geq c $, return YES, else if $ \OPT(I)<s $, return NO.
+
+\name{c vs. s Decision Problem}
+Given  $ I  $ \st  $ \OPT(I) \geq c $, find a solution  $ x $  \st  $ \mathrm{Val}(x;I) \geq s $.
+
+\begin{theorem}
+    Suppose  $ A  $ solves  c vs. s Search problem in poly-time, then  $ \exists  $ poly-time  $ A' $ that solves c vs. s decision problem.   
+\end{theorem}
+The algorithm is as follows:
+\begin{algorithm}[H]
+    \caption{c vs. s Search}
+    \begin{algorithmic}[1]
+        \STATE $ x\leftarrow A(I) $
+        \IF{ $ \mathrm{Val}(x;I) \geq s $ }
+        \STATE return YES
+        \ELSE
+        \STATE return NO
+        \ENDIF
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{fact}
+    \,
+    \begin{enumerate}[label=(\arabic*)]
+        \item  $ A  $ is  $ \alpha $-approximation algorithm  $ \Rightarrow  $  $ A  $ is  $ c $ vs.  $ \alpha c $ search algorithm  $ \forall c $.
+        \item  $ \exists  $  $ c $ vs.  $ s(c)  $ search algorithm  $ \Rightarrow   $ $ \exists  $ $ \alpha $-approximation algorithm where  $ \alpha=\dps\inf_c\{\frac{s(c)}{c}\} $
+        \item (contrapositive of  $ A $ )  $ c $ vs.  $ s $ decision problem "hard"  $ \Rightarrow  $  $ \frac{s}{c} $-approximation algorithm "hard".           
+    \end{enumerate}
+\end{fact}
+\begin{remark}
+    The same  $ c $ vs.  $ s $ algorithm in max-cut and min-uncut problems might correspond to quite different approximation ratios.  
+\end{remark}
+\subsection{Set-Cover}
+\begin{example}[Set-Cover]
+    Universe  $ U=\{1,2,\cdots,n\} $.  $ S_1,S_2,\cdots,S_M\subset U $.
+    
+    Our goal is to find  $ T\subset\{S_1,\cdots, S_M\} $ such that  $ \dps\cup_{S\in T }S=U $ and  $ |T| $ minimized.  
+\end{example}
+
+Of course, it can be represented as \textbf{Max-Coverage} problem: Given additional input  $ k $. Find  $ T\subset\{S_1,\cdots, S_M\} $ \st  $ |T|=k $ and  $ |\dps\cup_{S\in T }S| $ maximized.
+
+It has a greedy algorithm:
+\begin{algorithm}[H]
+    \caption{Greedy}
+    \begin{algorithmic}[1]
+        \STATE $ T\leftarrow\emptyset $ 
+        \REPEAT
+            \STATE Let  $ S_i $ be the set that covers the most uncovered elements.
+            \STATE  $ T\leftarrow T\cup\{S_i\} $.
+            \STATE  $ U\leftarrow U\setminus S_i $.
+        \UNTIL  $ \begin{cases}
+            \text{All elements covered}&\text{set cover}\\
+            |T|=k&\text{max-coverage}
+        \end{cases} $    
+    \end{algorithmic}
+\end{algorithm}
+\begin{fact}
+    Suppose  $ \exists  $  $ m $ sets covering  $ U $. After  $ t $ choices,  $ T $ covers    $ \dps 1-\left(1-\frac{1}{m}\right)^t $ fraction of elements.
+\end{fact}
+\begin{corollary}
+    The greedy algorithm is  $ \lceil \ln n\rceil  $ approximation for set-cover 
+\end{corollary}
+\begin{proof}
+    Let  $ m=\OPT $. After  $ t=\lceil \ln n\rceil \cdot m$ choices, number of uncovered elements 
+    \[\left(1-\frac{1}{m}\right)^{\lceil \ln n\rceil \cdot m}\cdot n \geq \frac{1}{n}=1\]
+\end{proof}
+\begin{corollary}
+    Greedy is  $ 1 $ vs.  $ 1-\frac{1}{e} $ approximation for Max-coverage.  
+\end{corollary}
+\begin{proof}
+    Set  $ m=k $. After  $ t=k $ choices, coverage of  $ T $: 
+    \[1-(1-\frac{1}{k})^k \geq 1-\frac{1}{e}\]   
+\end{proof}
+\begin{fact}
+    1 vs. 1- $ \gamma $ approximation for ma-coverage  $ \Rightarrow  $  $ \lceil \log_{1-\gamma}\frac{1}{n}\rceil $-approximation for set-cover. 
+\end{fact}
+\begin{proof}
+    "Guess"  $ k=\OPT^{\mathrm{set-cover}} $.
+    
+    Repeatly invoke  $ A(k)\cdot\lceil \log_{1-\gamma}\frac{1}{n}\rceil $ times. Then number of uncovered elements 
+    \[n\cdot(1-\gamma)^{\lceil \log_{1-\gamma}\frac{1}{n}\rceil} \geq n\cdot \frac{1}{n}=1\]
+\end{proof}
+In fact, we can construct  an extreme case for greedy algorithm:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{D11-set_cover_extreme_case.png}
+    \caption{Extreme case for greedy algorithm}
+\end{figure}
+\subsection{Weighted Min Set-cover}
+\begin{example}[Weighted Min Set-cover]
+    Given  $ n $ elements,  $ M $ sets,  $ S_1,\cdots,S_M\subset U $. Each set  $ S_i $ has a weight  $ w(S_i)>0 $.
+
+    Now select  $ T\subset\{S_1,\cdots, S_M\} $ such that  $ \dps\sum_{S\in T}w(S) $ minimized. 
+\end{example}
+Integer Program: Minimize  $ \dps\sum_{i=1}^M w(S_i)x_i $. Subject to   $ \dps\sum_{i:j\in S_i} x_i \geq 1$,  $ \forall j\in U $, where  $ x_i\in \{0,1\} $,  $ \forall i\in [M] $.
+
+If we relax the integer constraint, we have an LP relaxation:  $ x_i\in[0,1] $, which can be solved in poly-time since it is a linear program.
+
+We need "rounding" to transform fractional solution to the integer solution.
+
+\subsubsection{Randomized Rounding}
+If  $ \{x_i^*\} $ is the optimal LP solution.  For each  $ s_i $, select  $ s_i\in T $ independently with probability   $ \min\{\alpha x_i^*,1\} $. Then 
+\[\Ebb[w(T)] \leq \alpha\sum_{i=1}^M w(s_i),\,x_i^*=\alpha\cdot \mathrm{LP} \leq \alpha\cdot \mathrm{OPT}\] 
+Then 
+\[\begin{aligned}
+    \mathrm{Pr}[T\text{ covers }U]&=1-\mathrm{Pr}[ \exists j\in U , j\not\in T ]\\
+    & \geq 1-\sum_{j\in U}\mathrm{Pr}[j\not\in T]\\
+    &=1-\sum_{j\in U}\prod_{i: j\in S_i}(1-\min\{\alpha x_i^*,1\})\\
+    & \geq 1-\sum_{j\in U}\prod_{i: j\in S_i}\exp(-\alpha x_i^*)\\
+    &=1-\sum_{j\in U}\exp(-\sum_{j\in S_i}\min\{\alpha x_i^*,1\})\\
+    &=1-\sum_{j\in U}\exp(-\alpha)
+\end{aligned}\]
