@@ -79,3 +79,8 @@
 \contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.8\else \numberline {5.8}Corollary\fi }{36}{corollary.5.8}%
 \contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.9\else \numberline {5.9}Fact\fi }{36}{fact.5.9}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.10\else \numberline {5.10}Example\fi \thmtformatoptarg {Weighted Min Set-cover}}{37}{example.5.10}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{38}{thmt@dummyctr.dummy.82}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.11\else \numberline {5.11}Theorem\fi \thmtformatoptarg {Markov Inequality}}{39}{theorem.5.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.12\else \numberline {5.12}Theorem\fi }{40}{theorem.5.12}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{42}{thmt@dummyctr.dummy.85}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{42}{thmt@dummyctr.dummy.86}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  25 MAR 2025 09:46
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  28 MAR 2025 16:59
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1520,10 +1520,15 @@ Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
  [35] [36]
 File: D11-set_cover_extreme_case.png Graphic file (type bmp)
 <D11-set_cover_extreme_case.png>
- [37]) [38]
+ [37]
+Overfull \hbox (22.87813pt too wide) detected at line 118
+[][]
+ []
+
+[38] [39] [40] [41]) (../D12.tex) [42]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [39
+ (./Discrete_Optimistic.ind [43
 
 
 
@@ -1534,19 +1539,19 @@ showing proposition
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [40
+ [44
 
 ] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
 (rerunfilecheck)             Checksum: 1D268EE287D4BCB5F9938BE54E46891E;4322.
  ) 
 Here is how much of TeX's memory you used:
- 46295 strings out of 476683
- 1049330 string characters out of 5804047
+ 46301 strings out of 476683
+ 1049417 string characters out of 5804047
  1854018 words of memory out of 5000000
- 65612 multiletter control sequences out of 15000+600000
+ 65615 multiletter control sequences out of 15000+600000
  549318 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (40 pages).
+Output written on Discrete_Optimistic.pdf (44 pages).

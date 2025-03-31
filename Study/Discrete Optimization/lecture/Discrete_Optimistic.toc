@@ -47,5 +47,6 @@
 \contentsline {subsection}{\numberline {5.1}Set-Cover}{35}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Weighted Min Set-cover}{37}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Randomized Rounding}{38}{subsubsection.5.2.1}%
-\contentsline {section}{Index}{39}{section*.19}%
-\contentsline {section}{List of Theorems}{40}{section*.20}%
+\contentsline {subsubsection}{\numberline {5.2.2}Integrality Gap}{41}{subsubsection.5.2.2}%
+\contentsline {section}{Index}{43}{section*.19}%
+\contentsline {section}{List of Theorems}{44}{section*.20}%
