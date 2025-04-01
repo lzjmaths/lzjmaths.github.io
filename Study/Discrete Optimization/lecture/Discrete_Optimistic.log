@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  28 MAR 2025 16:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  1 APR 2025 09:47
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1189,9 +1189,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \c@definition=\count382
 \c@question=\count383
 \c@note=\count384
-\c@problem=\count385
-\c@cond=\count386
-\c@Mthm=\count387
+\c@claim=\count385
+\c@problem=\count386
+\c@cond=\count387
+\c@Mthm=\count388
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fundus-calligra/calligra.sty
 Package: calligra 2012/04/10 v1.9 LaTeX package calligra
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/aurical/aurical.sty
@@ -1221,35 +1222,35 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \t@pgfplots@tokb=\toks54
 \t@pgfplots@tokc=\toks55
 \pgfplots@tmpa=\dimen317
-\c@pgfplots@coordindex=\count388
-\c@pgfplots@scanlineindex=\count389
+\c@pgfplots@coordindex=\count389
+\c@pgfplots@scanlineindex=\count390
  (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@toka=\toks56
 \t@pgf@tokb=\toks57
 \t@pgf@tokc=\toks58
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count390
+\c@pgfplotsarray@tmp=\count391
 ) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count391
+\c@pgfplotstable@counta=\count392
 \t@pgfplotstable@a=\toks59
 ) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count392
+\c@pgfplotslibrarysurf@no=\count393
  (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count393
+\c@pgfplotslibrarysurf@streamlen=\count394
 )))) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen318
 \pgfdecoratedremainingdistance=\dimen319
 \pgfdecoratedinputsegmentcompleteddistance=\dimen320
 \pgfdecoratedinputsegmentremainingdistance=\dimen321
 \pgf@decorate@distancetomove=\dimen322
-\pgf@decorate@repeatstate=\count394
+\pgf@decorate@repeatstate=\count395
 \pgfdecorationsegmentamplitude=\dimen323
 \pgfdecorationsegmentlength=\dimen324
 )
 \tikz@lib@dec@box=\box145
 ) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count395
+\pgfplots@numplots=\count396
 \pgfplots@xmin@reg=\dimen325
 \pgfplots@xmax@reg=\dimen326
 \pgfplots@ymin@reg=\dimen327
@@ -1265,7 +1266,7 @@ Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count396
+\c@float@type=\count397
 \float@exts=\toks60
 \float@box=\box146
 \@float@everytoks=\toks61
@@ -1274,14 +1275,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks62
-\c@algorithm=\count397
+\c@algorithm=\count398
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count398
-\c@ALC@line=\count399
-\c@ALC@rem=\count400
-\c@ALC@depth=\count401
+\c@ALC@unique=\count399
+\c@ALC@line=\count400
+\c@ALC@rem=\count401
+\c@ALC@depth=\count402
 \ALC@tlm=\skip79
 \algorithmicindent=\skip80
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/chemarrow/chemarrow.sty
@@ -1296,100 +1297,100 @@ Package csquotes Info: ... none found.
  (./Discrete_Optimistic.aux)
 \openout1 = `Discrete_Optimistic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 573.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 573.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 574.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 574.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 573.
-LaTeX Font Info:    ... okay on input line 573.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 573.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 573.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 574.
+LaTeX Font Info:    ... okay on input line 574.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 574.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 574.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 573.
+LaTeX Font Info:    ... okay on input line 574.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1425,13 +1426,13 @@ LaTeX Font Info:    ... okay on input line 573.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 573.
-LaTeX Info: Command `\ddddot' is already robust on input line 573.
+LaTeX Info: Command `\dddot' is already robust on input line 574.
+LaTeX Info: Command `\ddddot' is already robust on input line 574.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 573.
+Package hyperref Info: Link coloring ON on input line 574.
 (./Discrete_Optimistic.out) (./Discrete_Optimistic.out)
 \@outlinefile=\write6
 \openout6 = `Discrete_Optimistic.out'.
@@ -1439,21 +1440,21 @@ Package hyperref Info: Link coloring ON on input line 573.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 577.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 578.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 577.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 578.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 577.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 578.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 577.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 578.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 577.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 578.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./Discrete_Optimistic.toc [1
@@ -1495,14 +1496,14 @@ Underfull \hbox (badness 5203) in paragraph at lines 99--100
  []\T1/ppl/b/n/12 Fully Polynomial-Time Ap-prox-i-ma-tion Scheme(FPTAS)[] $\U/matha/m/n/12 @\OML/cmm/m/it/12 "$\T1/ppl/m/n/12 , $\U/matha/m/n/12 D$ $p\OT1/cmr/m/n/12 1 \U/matha/m/n/12 ^^A \OML/cmm/m/it/12 "\U/matha/m/n/12 q$\T1/ppl/m/n/12 -
  []
 
-) (../D6.tex [17] [18]) (../D7.tex [19] [20] [21] [22]) (../D8.tex
+) (../D6.tex [17] [18] [19]) (../D7.tex [20] [21] [22]) (../D8.tex
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 8.
- [23] [24] [25]) (../D9.tex
+ [23] [24] [25]) (../D9.tex [26]
 Underfull \hbox (badness 1859) in paragraph at lines 33--34
 [][]\T1/ppl/b/n/12 Theorem 4.14 \T1/ppl/m/n/12 (Menger's The-o-rem)\T1/ppl/b/n/12 . []\T1/ppl/m/it/12 Connectivity=min-cut=max-flow=maximum
  []
 
-[26] [27] [28] [29]) (../D10.tex [30] [31]
+[27] [28] [29]) (../D10.tex [30] [31] [32]
 Underfull \hbox (badness 3792) in paragraph at lines 98--98
 []\T1/ppl/m/n/12 Is there a truth as-sign-
  []
@@ -1515,7 +1516,7 @@ Underfull \hbox (badness 4927) in paragraph at lines 101--102
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32] [33]) (../D11.tex [34]
+) (../D11.tex [33] [34]
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input line 24.
  [35] [36]
 File: D11-set_cover_extreme_case.png Graphic file (type bmp)
@@ -1525,10 +1526,10 @@ Overfull \hbox (22.87813pt too wide) detected at line 118
 [][]
  []
 
-[38] [39] [40] [41]) (../D12.tex) [42]
+) (../D12.tex [38] [39] [40] [41] [42]) (../D13.tex [43] [44] [45]) [46]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [43
+ (./Discrete_Optimistic.ind [47
 
 
 
@@ -1539,19 +1540,19 @@ showing proposition
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [44
+ [48
 
 ] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: 1D268EE287D4BCB5F9938BE54E46891E;4322.
+(rerunfilecheck)             Checksum: C38EBE008EAFF61847482A5F243EEF8A;4640.
  ) 
 Here is how much of TeX's memory you used:
- 46301 strings out of 476683
- 1049417 string characters out of 5804047
- 1854018 words of memory out of 5000000
- 65615 multiletter control sequences out of 15000+600000
- 549318 words of font info for 133 fonts, out of 8000000 for 9000
+ 46317 strings out of 476683
+ 1049591 string characters out of 5804047
+ 1855018 words of memory out of 5000000
+ 65625 multiletter control sequences out of 15000+600000
+ 550246 words of font info for 136 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (44 pages).
+Output written on Discrete_Optimistic.pdf (48 pages).

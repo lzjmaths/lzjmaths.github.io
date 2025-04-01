@@ -16,37 +16,39 @@
 \contentsline {paragraph}{Invariant}{10}{section*.6}%
 \contentsline {paragraph}{Prim+Boruvka}{11}{section*.7}%
 \contentsline {subsection}{\numberline {2.5}Minimum Arborescence}{12}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Dynamic Programming}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Weighted Interval Scheduling}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Segmented Least Square}{14}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Dynamic Programming}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Weighted Interval Scheduling}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Segmented Least Square}{15}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Knapsack Problem}{15}{subsection.3.3}%
 \contentsline {paragraph}{Fully Polynomial-Time Approximation Scheme(FPTAS)}{17}{section*.8}%
 \contentsline {paragraph}{PTAS}{17}{section*.9}%
-\contentsline {subsection}{\numberline {3.4}RNA Secondary Structure}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}RNA Secondary Structure}{18}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Sequence Alignment(Edit Distance)}{18}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Matrix Multiplication}{19}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.6}Matrix Multiplication}{20}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Flow Network}{20}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Definition}{20}{subsection.4.1}%
-\contentsline {paragraph}{Residual Network}{20}{section*.10}%
-\contentsline {paragraph}{Observation}{24}{section*.11}%
-\contentsline {paragraph}{Recent work}{25}{section*.12}%
-\contentsline {subsection}{\numberline {4.2}Appllication}{25}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Bipartite Matching}{25}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Network Connectivity}{26}{subsubsection.4.2.2}%
+\contentsline {paragraph}{Residual Network}{21}{section*.10}%
+\contentsline {paragraph}{Observation}{25}{section*.11}%
+\contentsline {paragraph}{Recent work}{26}{section*.12}%
+\contentsline {subsection}{\numberline {4.2}Appllication}{26}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Bipartite Matching}{26}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Network Connectivity}{27}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Circulation}{27}{subsubsection.4.2.3}%
-\contentsline {paragraph}{Flow Lower Bounds}{27}{section*.13}%
+\contentsline {paragraph}{Flow Lower Bounds}{28}{section*.13}%
 \contentsline {subsubsection}{\numberline {4.2.4}Survey Design}{28}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Airline Scheduling}{28}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.5}Airline Scheduling}{29}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Image Segmentation}{29}{subsubsection.4.2.6}%
 \contentsline {subsubsection}{\numberline {4.2.7}Project Selection}{30}{subsubsection.4.2.7}%
 \contentsline {subsection}{\numberline {4.3}Baseball Elimination}{31}{subsection.4.3}%
-\contentsline {paragraph}{Certificate of Elimination}{31}{section*.14}%
-\contentsline {section}{\numberline {5}Introduction to Approximation Algorithm}{32}{section.5}%
-\contentsline {paragraph}{Decision problems}{32}{section*.15}%
+\contentsline {paragraph}{Certificate of Elimination}{32}{section*.14}%
+\contentsline {section}{\numberline {5}Introduction to Approximation Algorithm}{33}{section.5}%
+\contentsline {paragraph}{Decision problems}{33}{section*.15}%
 \contentsline {paragraph}{}{33}{table.caption.17}%
 \contentsline {subsection}{\numberline {5.1}Set-Cover}{35}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Weighted Min Set-cover}{37}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Weighted Min Set-cover and Randomized Rounding}{37}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Randomized Rounding}{38}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}Integrality Gap}{41}{subsubsection.5.2.2}%
-\contentsline {section}{Index}{43}{section*.19}%
-\contentsline {section}{List of Theorems}{44}{section*.20}%
+\contentsline {subsection}{\numberline {5.3}Hardness of Approximation}{45}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1} P,NP classes}{45}{subsubsection.5.3.1}%
+\contentsline {section}{Index}{47}{section*.19}%
+\contentsline {section}{List of Theorems}{48}{section*.20}%

@@ -1,7 +1,7 @@
 \begin{theindex}
 
   \item $ \alpha $-approximation algorithm, \hyperpage{33}
-  \item 3-CNF, \hyperpage{32}
+  \item 3-CNF, \hyperpage{33}
 
   \indexspace
 
@@ -14,7 +14,7 @@
   \indexspace
 
   \item c vs. s Decision Problem, \hyperpage{34}
-  \item CNF, \hyperpage{32}
+  \item CNF, \hyperpage{33}
   \item cut, \hyperpage{9}
   \item cutset, \hyperpage{9}
 
@@ -38,6 +38,11 @@
   \indexspace
 
   \item Markov Inquality, \hyperpage{39}
+
+  \indexspace
+
+  \item NP-complete, \hyperpage{46}
+  \item NP-hard, \hyperpage{46}
 
   \indexspace
 

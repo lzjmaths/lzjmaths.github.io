@@ -1,0 +1,98 @@
+%!TEX root = /lecture/Discrete_Optimistic.tex
+
+Take  $ U=\{1,2,\cdots,n\} $.  $ M  $ are  $ C\cdot  k\ln n $  sets, each of which  $ s_i $ includes each  $ j\in U $ independently with probability  $ \dps\frac{1}{k} $   
+
+\begin{claim}
+    When  $ C \geq \frac{4}{\epsilon^2} $, the probability 
+    \[\mathrm{Pr}[\mathrm{LP}  \leq \frac{k}{1-\epsilon}]1-\frac{1}{n}\]
+\end{claim}
+\begin{proof}
+    Consider  $ x_i=\dps\frac{k}{<(1-\epsilon)} $.
+    
+    Fix  $ j\in [n] $.
+    \begin{align*}
+        \mathrm{Pr}[\sum_{j\in S_i}x_i \geq 1]&=\mathrm{Pr}\left[\sum_{i=1}^M\mathbf{1}[j\in S_i] \geq \frac{(1-\epsilon)M}{k}\right]\\
+        & \geq 1-\left[\frac{e^{-\epsilon}}{(1-\epsilon)^{1-\epsilon}}\right]^{\frac{M}{k}}\\
+        &=1-\exp\left((-\epsilon-(1-\epsilon)\ln (1-\epsilon))\cdot\frac{M}{k}\right)\\
+        & \geq 1-\exp(-\frac{\epsilon^2}{2}\cdot\frac{M}{k})\\
+        & \geq 1-\exp(-2\ln n)
+    \end{align*} 
+    Here we use the Chernoff bound with a high relation of central limit theorem.
+    \begin{theorem}[Chernoff Bound]
+        $ X_1,X_2,\cdots,X_n\in [0,1] $ a.s. and  $ \Ebb X_i=p_i $. Let  $ X=X_1+\cdots+X_n $,  $ \Ebb X=\mu $. For any  $ \delta>0 $
+        \[\begin{cases}
+            \mathrm{Pr}[X \geq (1+\delta)\mu] \leq \left[\frac{e^\delta}{(1+\delta)^{1+\delta}}\right]^\mu\\
+            \mathrm{Pr}[X \leq (1-\delta)\mu] \leq \left[\frac{e^{-\delta}}{(1-\delta)^{1-\delta}}\right]^\mu
+        \end{cases}\]    
+    \end{theorem}
+\end{proof}
+
+\begin{claim}
+    For  $ k \geq \frac{2}{\epsilon} $ and  $ n=n(k,\epsilon,C) $ large enough, we have 
+    \[\mathrm{Pr}[\OPT \geq (1-\epsilon)k\ln n] \geq 0.99\]  
+\end{claim}
+
+\begin{proof}
+    Let  $ z=(1-\epsilon)k\ln n $.
+    
+    $ \OPT>z $ $ \Leftarrow $  $ \forall \mathcal{S}\in\binom{[M]}{z} $,  $ \mathcal{S}  $ doesn't cover  $ U $. We consider probability of the latter case.
+
+    Now fix  $ \mathcal{S}\in \binom{[M ]}{z} $,  $ \mathrm{Pr}[\mathcal{S}\text{ cover }U] $ is actually 
+    \begin{align*}
+        \mathrm{Pr}[\mathcal{S}\text{ cover }U]&=\mathrm{Pr}[\forall j\in U,\exists S_i\in \mathcal{S},j\in S_i]\\
+        &=\mathrm{Pr}[\exists S_i\in \mathcal{S},1\in S_i]^n\\
+        &=\left(1-(1-\frac{1}{k})^z\right)^n\\
+        & \leq \exp(-n(1-\frac{1}{k})^z)\\
+        & \overset{k \geq 2}{ \leq } \exp(-n\exp(-(1-\epsilon)(1+\frac{1}{k})\ln n))\\
+        & \overset{k \geq \frac{2}{\epsilon }}{ \leq } \exp(-n\exp(-(1-\frac{\epsilon}{2})\ln n))\\
+        &=\exp(-n\cdot n^{-(1-\frac{\epsilon}{2})})\\
+        &=\exp(-n^{\frac{\epsilon}{2}})
+    \end{align*}
+    So 
+    \begin{align*}
+        \mathrm{Pr}[\exists \mathcal{S}\in\binom{[M]}{z},\mathcal{S}\text{ cover }U]& \leq \binom{M}{z}\cdot\exp(-n^{\frac{\epsilon}{2}})\\
+        & \leq \left(\frac{C\cdot e}{1-\epsilon}\right)^{(1-\epsilon)k\ln n}\cdot \exp(-n^{\frac{\epsilon}{2}})\\
+        &<\exp(-n^{\frac{\epsilon}{4}})\\
+        &<0.01
+    \end{align*}
+    as  $ n  $ large enough.
+    Here we end the proof
+\end{proof}
+
+
+So using Randomized construction,  $ \alpha $ can approach  $ (1-\epsilon)\ln n $ for any  $ \epsilon $.
+
+\subsection{Hardness of  Approximation}
+\subsubsection{ P,NP classes}
+For  $ \mathcal{L }\in \{0,1\}^\ast       $ is  the  $ 0-1 $ encoding, a problem is the set of some  $ 0-1 $ encoding and a decision problem is to decide whether  $ \mathcal{L} $ belongs to it. 
+
+For instance, $ \mathcal{L}_k $  is the set of all ($ 0-1 $ encoding) of set cover instances where  $ U  $ can be covered by  $ k  $ sets. We define 
+\begin{center}
+    $ \dps P=\{\mathcal{L}:\mathcal{L}\text{ can be poly-time decided by a (deterministic) Turing machine}\} $ 
+\end{center}
+\begin{center}
+    $ \dps NP=\{\mathcal{L}:\mathcal{L}\text{ can be poly-time decided by a non-deterministic Turing machine}\} $
+\end{center}
+
+NP problems are all problems that can be "verified" in poly-time. Explicitly,
+
+for input instance  $ x\in \{0,1\}^\ast $, the prover is based on  $ x $, providing a "proof"  $ y\in \{0,1\}^\ast $ that  $ |y| \leq \mathrm{poly}(|x|) $, however, the verifier is a poly-time algorithm that accepts   $ x,y  $ and outputs YES/NO.
+
+In other words,  $ \mathcal{L}\in  $ NP  $ \Leftrightarrow $   $ \exists $ a prover-verifier system such that 
+\begin{itemize}
+    \item Completeness:  $ \forall x\in \mathcal{L} $,  $ \exists $ proof $ y $ \st verifier returns YES in poly-time.
+    \item Soundness: $ \forall x\not\in \mathcal{L} $, $ \forall  $  proof  $ y $, verifier returns  NO in poly-time.     
+\end{itemize} 
+The equivalence is because we actually can "guess" the proof  $ y  $ in a non-deterministic TM.
+
+If P=NP, then if we can verify  proof in poly-time, we can also construct it in poly-time. There isn't innovation anymore!
+
+\name{NP-complete}:  $ \mathcal{L} $ is NPC if 
+\begin{enumerate}[label=\arabic*)]
+    \item  $ \mathcal{L}\in  $ NP 
+    \item  $ \forall  $  $ \mathcal{L}'\in  $ NP,  $ \mathcal{L}' \geq p\mathcal{L} $ \ie  $ \mathcal{L}' $ can be reduced to  $ \mathcal{L} $ in poly-time.      
+\end{enumerate} 
+
+Equivalently, if some NPC problems can be solved in poly-time, then P=NP.
+
+If only 2) in the definition of NPC holds, then it is a \name{NP-hard} problem.

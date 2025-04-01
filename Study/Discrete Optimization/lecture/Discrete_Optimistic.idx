@@ -7,11 +7,13 @@
 \indexentry{Bellman Equation|hyperpage}{14}
 \indexentry{hyperparameter|hyperpage}{15}
 \indexentry{st-flow|hyperpage}{20}
-\indexentry{CNF|hyperpage}{32}
-\indexentry{3-CNF|hyperpage}{32}
+\indexentry{CNF|hyperpage}{33}
+\indexentry{3-CNF|hyperpage}{33}
 \indexentry{$ \alpha $-approximation algorithm|hyperpage}{33}
 \indexentry{c vs. s Decision Problem|hyperpage}{34}
 \indexentry{c vs. s Decision Problem|hyperpage}{34}
 \indexentry{Markov Inquality|hyperpage}{39}
 \indexentry{Integrality Gap (IG) instance|hyperpage}{41}
 \indexentry{gap ratio|hyperpage}{41}
+\indexentry{NP-complete|hyperpage}{46}
+\indexentry{NP-hard|hyperpage}{46}
