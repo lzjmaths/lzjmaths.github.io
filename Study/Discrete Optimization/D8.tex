@@ -8,6 +8,7 @@
     Each inner WHILE iterates  $  \leq 2m $. The times complexity is  $ O(m^2\log C) $  
 \end{corollary}
 \begin{proof}[Proof of Lemma]
+    We let  $ A $ be all nodes reachable from  $ s $ and  $ B=S\setminus A $.  
     \begin{align*}
         \val(f)&=\sum_{e\in E\text{ from $ A $ to  $ B $ }}f(e)-\sum_{e\in E\text{ from  $ B $ to  $ A $ }}f(e)\\
         &>\sum_{e\in E\text{ from $ A $ to  $ B $ }}(c(e)-\Delta)-\sum_{e\in E\text{ from  $ B $ to  $ A $ }}(\Delta)\\
