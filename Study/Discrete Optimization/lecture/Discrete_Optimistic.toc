@@ -50,5 +50,6 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Integrality Gap}{41}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}Hardness of Approximation}{45}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1} P,NP classes}{45}{subsubsection.5.3.1}%
-\contentsline {section}{Index}{47}{section*.19}%
-\contentsline {section}{List of Theorems}{48}{section*.20}%
+\contentsline {paragraph}{Observation}{48}{section*.19}%
+\contentsline {section}{Index}{49}{section*.20}%
+\contentsline {section}{List of Theorems}{50}{section*.21}%

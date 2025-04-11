@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  1 APR 2025 09:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  8 APR 2025 09:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1526,10 +1526,20 @@ Overfull \hbox (22.87813pt too wide) detected at line 118
 [][]
  []
 
-) (../D12.tex [38] [39] [40] [41] [42]) (../D13.tex [43] [44] [45]) [46]
+) (../D12.tex [38] [39] [40] [41] [42]) (../D13.tex [43] [44] [45]) (../D14.tex [46]
+Underfull \hbox (badness 1205) in paragraph at lines 38--39
+[][]\T1/ppl/b/n/12 Theorem 5.15 \T1/ppl/m/n/12 (Max--Cov-er-age)\T1/ppl/b/n/12 . []\T1/ppl/m/it/12 De-cid-ing whether Max-Coverage=100% is NP-
+ []
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 53--57
+[]\T1/ppl/m/n/12 Completeness: If $\OML/cmm/m/it/12 I$ \T1/ppl/m/n/12 sat-is-fi-able, then $\U/matha/m/n/12 D\OML/cmm/m/it/12 ^^[ \OT1/cmr/m/n/12 : \U/matha/m/n/12 t\OML/cmm/m/it/12 x[]\U/matha/m/n/12 u Ñ t\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\U/matha/m/n/12 u$\T1/ppl/m/n/12 , choose
+ []
+
+[47]) [48]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [47
+ (./Discrete_Optimistic.ind [49
 
 
 
@@ -1540,19 +1550,19 @@ showing proposition
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [48
+ [50
 
 ] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: C38EBE008EAFF61847482A5F243EEF8A;4640.
+(rerunfilecheck)             Checksum: 12B41A8EC0B0028C494FEA61F392718F;4640.
  ) 
 Here is how much of TeX's memory you used:
- 46317 strings out of 476683
- 1049591 string characters out of 5804047
+ 46328 strings out of 476683
+ 1049786 string characters out of 5804047
  1855018 words of memory out of 5000000
- 65625 multiletter control sequences out of 15000+600000
- 550246 words of font info for 136 fonts, out of 8000000 for 9000
+ 65632 multiletter control sequences out of 15000+600000
+ 550555 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (48 pages).
+Output written on Discrete_Optimistic.pdf (50 pages).
