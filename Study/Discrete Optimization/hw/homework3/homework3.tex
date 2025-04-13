@@ -358,7 +358,22 @@
 \pagenumbering{arabic}
 
 \begin{problem}
-    Construct a network whose edge  $ e $  has capacity  $ A-l(e) $, where  $ A=\dps\max_{e\in E}\{l(e)\}+1  $. Then we actually transform the question into a circulation network min-flow problem. In detail, to 
+    (a) Since if flow $ f $  with value  $ v $ is feasible in this network, then  $ \lambda f $ with value  $ \lambda v $,  $ \lambda>1 $ is feasible in the network. So if the min-flow exists, there exists a feasible flow with large enough value.  
+
+
+    Choose  $ C=\dps\sum_{e\in E}l(e) $. Then  $ C $ can be a possible value of a feasible flow. Find a feasible flow in this circulation network, where the demand of source and sink is  $ C $, by using max-flow algorithm.
+    
+    Then we find a feasible flow $ f $  in this network.
+
+    Let  $ c(e)=f(e)-l(e),e\in E $. Then for each feasible flow  $g $,  $ g(e) \geq l(e) $  $ \Rightarrow  $  $ f(e)-g(e) \leq c(e) $. And the flow conversation remains:
+    \[\sum_{e=(x,v)}(f(e)-g(e))-\sum_{e=(v,x)}(f(e)-g(e))=0\]   
+
+    Then to find a min-flow  $ g $, suffices to find a max-flow  $ f-g $  with capacity  $ c(e) $.
+    
+    It is a polynoimial algorithm in  $ O(|V|,|E|,\log C) $.
+    
+    (b)
+    There is no analogue for this problem. Note that if there exists a circulation, then the min-flow value is 0. However, max-cut value cannot reach  $ 0 $ even if we change the definition. 
 \end{problem}
 
 \begin{problem}
@@ -509,5 +524,96 @@
 \end{problem}
 
 
+\begin{problem}
+    Let  $ L=\infty $. First, we have a network combined with all subnetwork for each pixel $ i\in V $ of the same virtual  $ s,t $.
+    
+    
+    For any  $ k=1,2,\cdots, M $, neighborhood pair $ (i,j) $, we set the edge  $ (v_{i,k},v_{j,k}) $ and  $ (v_{j,k},v_{i,k}) $ with capacity  $ p_{ij} $.
+    
+    If for min-cut of the network, there are two lowcapacity edges  $ a_{i,k_1} $,  $ a_{i,k_2} $. Assume  $ k_1<k_2 $. Then the path from  $ v_{i,k_2} $ to  $ v_{i,k_1+1} $ crosses  $ A $ to  $ B $ so there exists a highcapacity edge that leaves  $ A $        
+
+
+    Then for any min-cut of the graph, it contains exactly one lowcapacity edge  $ a_{i,d_i} $ that leaves  $ A $  for each  $ i $, and moreover, if neighborhood  $ (i,j) $ satisfies  $ d_i>d_j $, then all of edges from  $ v_{i,t} $ to  $ v_{j,t} $,  $ d_j+1 \leq t \leq d_i $ will be calculated in the calculation of min-cut value.
+    
+    Therefore, the value will be 
+    \[\sum_{k=0}^M\sum_{d_i=k}a_{i,k}+\sum_{k<l}\sum_{(i,j)\in E,d_i=k,d_j=l}(l-k)p_{ij}\]
+
+    So each min-cut corresponds to a labeling $ A_k=\{i:d_i=k\} $.
+    
+    Since for each labeling we  can construct a corresponding cut with the same value, the min-cut value is what we need.
+
+    So  minimum-cost labeling can be efficiently computed from a minimum s-t cut in this network. 
+\end{problem}
+
+\begin{problem}
+    If  $ (u,v),(v,u)\in E $, it is a linear problem for minimizing  $ a(u,v)f(u,v)+a(v,u)f(v,u) $, which can be reduced to the case of one edge. For simplicity, we assume that if  $ e\in E $, then  $ e_{reverse}\not\in E $.
+
+
+    (a) If there is a circle  $ C $  with negative cost in the residual network of  $ f $, let  $ f'(e)=\begin{cases}
+        f(e)&e,e_{reverse}\not\in C\\
+        f(e)+\delta&e\in C\cap E\\
+        f(e)-\delta&e_{reverse}\in C
+    \end{cases} $ where  $ \delta=\min\{f(e):e\in C\} $.
+    Then 
+    \[\sum_{e\in E}a(e)f'(e)=\sum_{e\in E}a(e)f(e)+\sum_{e\in C\cap E}a(e)\delta+\sum_{e\in C\setminus E}a(e)(-\delta)=\sum_{e\in E}a(e)f(e)+\delta\sum_{e\in C}a(e)<\sum_{e\in E}a(e)f(e)\]
+
+    So  $ f $ cannot be the minimum cost flow.
+    
+    If  there is no circle  $ C $ with negative cost, \ie  each circle has postitive cost in the residual network.
+    
+    Assume  $ g $ is the min-cost flow,  $ g\not=f $ . 
+
+    Consider the flow $ t $  obtained by  $ g-f $.
+    
+    For  $ e\in E $,  $ t(e)=g(e)-f(e) $ if  $ g(e)-f(e)>0 $, otherwise  $ t(e_{reverse})=-(g(e)-f(e)) $.
+    
+    Noticed that the cost remains the same:
+    \[\sum_{e}a(e)t(e)=\sum_{e\in E}a(e)(g(e)-f(e))+\sum_{e\not\in E}(-a(e))(f(e)-g(e))=\sum_{e\in E}a(e)(g(e)-f(e))\]
+
+    If there is a circle with positive cost sum, let  $ g'(e)=\begin{cases}
+        g(e)&e,e_{reverse}\not\in C\\
+        g(e)-\delta&e\in C\cap E\\
+        g(e)+\delta&e_{reverse}\in C
+    \end{cases} $ with  $ \delta $ small enough. Then  $ g' $ has less cost, which causes contradiction!
+
+    (It is better to set a lemma that the cost remains for the transition)
+
+
+    Since all edges in   $ t $ positive, but noticed that  $ \sum_{(s,u)}t(s)-\sum_{(u,s)}t(s)=0 $, it is circular. So there has to be some circle in the flow $ \Rightarrow  $ there is a circle of non-zero value with negative cost sum.
+
+    So this circle can't be in the graph  $ G_f $ $ \Rightarrow  $  $ \exists e $ in the circle,  $ e $ has  $ 0 $ capacity in graph  $ G_f $, which impies  $ f(e)=c(e) $.
+    
+    If  $ e\in E $, then  $ g(e) \geq f(e)=c(e) $ $ \Rightarrow  $  $ g(e)=c(e) $    $ \Rightarrow  $  $ t(e)=0 $ contradiction! 
+
+    If  $ e\not \in E $, then  $ g(e) \leq f(e)=c(e)=0 $ $ \Rightarrow  $  $ t(e)=0 $ contradiction!
+    
+    So  $ f $ has to be the min-cost flow.
+    
+    (b) We prove that each  $ f $ in the loop satisfies  $ G_f $ has no circles with negative cost sum.
+    
+    If not,  $ \exists $ status  $ f $ \st  $ G_f $ has no circles with negative cost sum but after one iterations it has.
+
+    Assume after one iteration,  $ f  $ becomes  $ g $ and  $ G_g $ has a negative circle  $ C $.  $ P_f $ is the path with minimum cost in  $ G_f $  
+    
+    Then  $ C $ doesn't belong to  $ G_f $. 
+    
+    However, since  the direction of  $ C $ is only affected by  $ P_f $,  $ P_f $ intersects with  $ C $ if we ignore the direction.
+    
+     $ P_f $ changes some edges  $ e_1,e_2,\cdots,e_n $ of  $ C $, but not whole of  $ C $. So there is another path if we remove   $ e_1,\cdots,e_n $ and add  other edges of  $ C $. Its cost is less than  $ P_f $ since the sum of  $ C $ is negative, which means exactly $ \dps\sum_{i=1}^nc(e_i) \geq \sum_{e\in C\setminus\{e_1,\cdots,e_n\}}c(e) $.      
+
+     So this is the contradiction. Therefore it gives a min-cost flow.
+
+
+    (c) 
+    Algorithm in (b) actually returns a feasible max-flow which has no circle with negative cost sum in its residual network. Thus it is also a min-cost flow. The time compleixty is  $ O(|v|\cdot|E|\cdot C)\cdot O(|V|^2) $ when we use the Dijstra algorithm to find the min-cost path.
+    
+    (d) By the result of P5, max-cost matching is also the matching with maximum edges. (Otherwise, it can be expanded to a maximum matching, whose cost will not be less than it)
+
+    So it suffices to find the min-cost max-flow in the network constructed in the lecture.
+
+    Explicitly,  $ s $ points to nodes in  $ A $ with capacity  $ 1 $ and cost  $ 0 $. Edges in  $ E $ have capacity of  $ \infty $ and its cost and  $ t $ is pointed by nodes in  $ B $ with capacity  $ 1 $  and cost  $ 0 $.
+    
+    The answer equals to the result.
+\end{problem}
 
 \end{document}
