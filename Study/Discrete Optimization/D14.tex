@@ -1,0 +1,95 @@
+We define the \name{polynomial reduction}  $ M \leq _p L $ if 
+
+$ \exists  $ poly-time algorithm  $ A $ such that  $ \forall x\in \{0,1\}^* $,
+\begin{itemize}
+    \item (completeness)  $ x\in M\Rightarrow A(x)\in L $.
+\item (soundness)  $ x\not\in M $ $ \Rightarrow  $  $ A(x)\not\in L $   
+\end{itemize} 
+
+Observed that if  $ M  $ is NP-Complete and  $ M \leq_p\mathcal L  $, then  $ L $ is NP-Hard.
+
+
+\begin{theorem}[Cock-Levin]
+    3-SAT is NP-Complete.
+\end{theorem}
+\begin{proof}
+    $ \forall L\in NP $, need to show  $ L \leq_p  $ 3-SAT.
+    
+    Let  $ A  $ be the poly-time verifier (DTM) for  $ L $.
+
+    Now we consider the original DFA, which needs start, process and after, denoted as  $ (s,p,\alpha) $ 
+
+    For time  $ t $, the tape can be 
+    \[t_{-M}^{(t)},\cdots,t_M^{(t)},\alpha^{(t)},S^{(t)},p^{(t)}\]
+
+    where the transition function is 
+    \begin{align*}
+        t_i^{(\tau)}&=g_i(t_i^{(\tau-1)},\alpha^{(\tau-1)},s^{(\tau-1)},p^{(\tau-1)})\\
+        s^{(\tau)}&=h_(\alpha^{(\tau-1)},s^{(\tau-1)},p^{(\tau-1)})\\
+        p^{(\tau)}&=\cdots\\
+        \alpha^{(\tau)}&=\cdots
+    \end{align*}
+
+    which is a compose of bool function. So any DFA process can be converted to a 3-SAT instance.
+    
+\end{proof}
+
+\begin{theorem}[Max-Coverage]
+    Deciding whether Max-Coverage=100\% is NP-Complete.
+\end{theorem}
+\begin{proof}
+    We divide it into two parts:
+    \begin{enumerate}[label=\arabic*.]
+        \item Max-coverage=1 is NP.
+        \item 3-SAT  $  \leq _p $ Max-coverage=1. 
+    \end{enumerate}
+    Consider any  $ 3 $-SAT instance  $ I $. We have variables  $ x_1,\cdots,x_n $ and clauses  $ c_1,\cdots,c_m $.  
+
+    Denote  $ U=\{x_1,\cdots,x_n,c_1,\cdots,c_m\} $ and sets $ S_1,S_2,\cdots,S_n,S_{n+1},\cdots,S_{2n} $. For  $ i=1,2,\cdots,n $, 
+    \[S_i=\{x_i\}\cup\{c_j:c_j\text{ contains }x_i\}\]
+    \[S_{n+i}=\{x_i\}\cup\{c_j:c_j\text{contains}\bar{x}_i\}\]
+    Let  $ k=n $.   
+
+    Completeness: If  $ I $ satisfiable, then $ \exists \sigma:\{x_i\}\rightarrow \{0,1\} $, choose  $ \begin{cases}
+        S_i&\text{if  $ \sigma(x_i)=1 $ }\\
+        S_{n+i}&\text{if  $ \sigma(x_i)=0 $ }\\
+    \end{cases} $   
+    
+    Soundness: If  $ J $ is YES, for  $ I $, let  $ \sigma(x_i)=\begin{cases}
+        1&\text{if  $ S_i $ chosen}\\
+        0&\text{if  $ S_{i+n} $ chosen}\\
+    \end{cases} $.
+\end{proof}
+
+Now we want to consider the approximation problem.
+
+1 vs. 1 Max-Coverage is NP-H but what if decide  the gap-version  $ s $ vs.  $ c $.
+
+\paragraph{Observation} If we could prove  $ c $ vs.  $ s $ M-C is NP-H for  $ c >s $. Then  $ \frac{s}{c} $ approximation M-C problem is NP-H.  
+
+\begin{theorem}[PCP theorem]
+    $ \exists \epsilon $ \st  $ \mathrm{Max-3-SAT}_{1,1-\epsilon} $ is NP-Hard.
+\end{theorem}
+
+We give an introduction for PCPs.
+
+\begin{definition}[Probability Checkable Proofs]
+    Verifier: input instance  $ x $ and proof  $ y $.
+    
+    Reads  $ x $, compute a (joint) distribution $ D $  over the locations in  $ y $, and a Boolean function.
+    
+    Sample  $ i,j,k,f \sim D $.
+
+    output YES iff  $ f(y_i,y_j,y_k)=1 $.
+
+    \begin{itemize}
+        \item (completeness) If  $ x  $ is YES, then  $ \exists  $  $ y $ \st  $ \mathrm{Pr}[\text{Verifier accepts}] \geq c $.
+        \item (soundness) If  $ x $ is NO, then  $ \forall y $, 4
+        $ \mathrm{Pr}[\text{Verifier accepts}]  \leq s$.    
+    \end{itemize}
+\end{definition}
+
+Then PCP theorem is equivalent to 
+\begin{theorem}[PCP theorem]
+    $ \exists \epsilon>0 $ \st every NP problem has a PCP system with  $ c=1 $,  $ s=1-\epsilon $.   
+\end{theorem}
