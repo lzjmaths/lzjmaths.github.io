@@ -39,7 +39,7 @@
 \contentsline {subsubsection}{\numberline {4.2.5}Airline Scheduling}{29}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Image Segmentation}{29}{subsubsection.4.2.6}%
 \contentsline {subsubsection}{\numberline {4.2.7}Project Selection}{30}{subsubsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.3}Baseball Elimination}{31}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.2.8}Baseball Elimination}{31}{subsubsection.4.2.8}%
 \contentsline {paragraph}{Certificate of Elimination}{32}{section*.14}%
 \contentsline {section}{\numberline {5}Introduction to Approximation Algorithm}{33}{section.5}%
 \contentsline {paragraph}{Decision problems}{33}{section*.15}%

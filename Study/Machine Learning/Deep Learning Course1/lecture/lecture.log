@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 MAR 2025 11:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  11 APR 2025 09:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1437,7 +1437,11 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \tf@toc=\write7
 \openout7 = `lecture.toc'.
 
- [2] (../D1.tex [3]) (../D3.tex [4] [5]) (../D4.tex [6] [7]) (../D5.tex [8] [9] [10]) [11]
+ [2] (../D1.tex [3]) (../D3.tex [4] [5]) (../D4.tex [6] [7]) (../D5.tex [8] [9] [10]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 260.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)) (../D6.tex) [11]
 runsystem(makeindex lecture.idx)...executed.
 
  (./lecture.ind [12
@@ -1458,11 +1462,11 @@ Package rerunfilecheck Info: File `lecture.out' has not changed.
 (rerunfilecheck)             Checksum: DA7118A0CE57D9AC784DF7FA1733D1BF;2509.
  ) 
 Here is how much of TeX's memory you used:
- 46132 strings out of 476683
- 1047258 string characters out of 5804047
- 1865018 words of memory out of 5000000
- 65489 multiletter control sequences out of 15000+600000
- 544724 words of font info for 118 fonts, out of 8000000 for 9000
+ 46166 strings out of 476683
+ 1047749 string characters out of 5804047
+ 1864018 words of memory out of 5000000
+ 65516 multiletter control sequences out of 15000+600000
+ 545037 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,15n,115p,767b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
