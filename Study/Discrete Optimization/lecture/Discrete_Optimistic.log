@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  8 APR 2025 09:35
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  11 APR 2025 09:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1554,7 +1554,7 @@ showing proposition
 
 ] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: 12B41A8EC0B0028C494FEA61F392718F;4640.
+(rerunfilecheck)             Checksum: 52BAED4417A0C4DC8DD8E8C1E6D12875;4479.
  ) 
 Here is how much of TeX's memory you used:
  46328 strings out of 476683
