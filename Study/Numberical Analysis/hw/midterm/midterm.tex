@@ -355,8 +355,64 @@
 \sloppy
 \pagenumbering{arabic}
 \paragraph{Problem 2} 
-\paragraph{Problem 3} 
+(1) 由 $ (1) $ 得，在 $ [x_i,x_{i+1}] $ 上
+\[s(x)=A_i(x-x_i)(x-x_{i+1})+f(b)\frac{x-a}{b-a}+f(a)\frac{x-b}{a-b}\]
+其中
+\[A_i=s'(x_i)-\frac{f(x_i)-f(x_{i+1})}{x_i-x_{i+1}}\]
 
+(2)在 $ [x_i,x_{i+1}] $ 上，  令  $ s_i(x)=A_i'(x-x_i)(x-x_{i+1})+f(b)\frac{x-a}{b-a}+f(a)\frac{x-b}{a-b} $，其中 $ A_i'=f'(x_i)-\frac{f(x_i)-f(x_{i+1})}{x_i-x_{i+1}} $。则 $ s_i(x_i)=f(x_i),s_i(x_{i+1})=f(x_{i+1}),s_{i}'(x_i)=f'(x_i) $.
+
+\[\|f(x)-s(x)\| \leq \|f(x)-s_i(x)\|+\|s_i(x)-s(x)\| \leq o(h^3)+\|s_i(x)-s(x)\]
+ $ o(f^{(3)}h^3) $ 为第一题的估计，但是记不清了， $ h=\frac{1}{n} $ 
+ 
+而
+\[\|s_i(x)-s(x)\|=\|(A_i-A_i')(x-x_i)(x-x_{i+1})\| \leq |f'(x_i)-s'(x_i)|\cdot\frac{h^2}{4}\]
+
+只需估计 $ |f'(x_i)-s'(x_i)| $。
+
+由 $ s^+(x_{i+1})=s^-(x_{i+1}) $ 可得，
+\[m_i+m_{i+1}=2\delta_i\]
+其中 $ \delta_i=\frac{f(x_{i+1})-f(x_i)}{x_{i+1}-x_i}, m_i=s'(x_i),m_{i+1}=s'(x_{i+1}) $.  
+
+令  $ r_i=m_i-f'(x_i) $，则
+\[r_i+r_{i+1}=2\delta_i-f'(x_i)-f'(x_{i+1})\]
+而
+\[\begin{aligned}
+  2\delta_i-f'(x_i)-f'(x_{i+1})&=2\frac{hf'(x_i)+\int_{x_i}^{x_{i+1}}f''(t)(x_{i+1}-t)\dd t}{h}-2f'(x_i)-\int_{x_i}^{x_{i+1}}f''(t)\dd t\\
+  &=\int_{x_i}^{x_{i+1}}\frac{x_i-t}{h}f''(x_i)\dd t
+\end{aligned}\] 
+故 $ |2\delta_i-f'(x_i)-f'(x_{i+1})| \leq \frac{h}{2}\cdot\|f''\| $.
+
+由 $ |r_{i+1}| \geq |r_i|+|2\delta_i-f'(x_i)-f'(x_{i+1})| \leq \frac{h}{2}\cdot\|f''\| $ 可得
+\[|r_i| \geq n\frac{h}{2}\cdot\|f''\|=\frac{1}{2}\|f''\|\]
+
+于是
+\[\|f-s\| \leq o(\|f^{(3)}\|h^3)+\frac{h^2}{8}\|f''\|\]
+
+\paragraph{Problem 3} 
+(1) 
+
+\[\left|\binom{\frac{1}{2}}{k}\right|=\left|\binom{\frac{1}{2}}{k-1}\right|\cdot\left|\frac{\frac{1}{2}-k+1}{k}\right|<\left|\binom{\frac{1}{2}}{k-1}\right|\]
+
+因为 $ (x^2-1)^n $ 一致有界且单调，而
+\[\sum_{k=0}^\infty\binom{\frac{1}{2}}{k}\]
+对上述等式用莱布尼茨判别法知收敛（$ \binom{\frac{1}{2}}{k} $ 正负性交错）。于是由Abel判别法，级数在 $ [-1,1]$ 上一致收敛.
+
+同时由泰勒展开,
+\[\sqrt{1+x}=\sum_{k=0}^\infty\binom{\frac{1}{2}}{k}x^k,|x|<1\]
+
+则等式在 $ [-1,1]\setminus\{0\} $ 上成立。由连续性知等式在整个 $ [-1,1] $ 上连续  
+
+(2) 
+考虑 $ [a,b] $ 上剖分 $ a=x_0<x_1<x_2<\cdots<x_n=b $,  $ x_i=a+\frac{i(b-a)}{n} $.
+则对于 $ [a,b] $ 上的连续函数 $ f $, 以 $ x_0,x_1,\cdots,x_n $ 为点构造 $ f $ 上的折线 $ s_n $,  $ s_n(x_i)=f(x_i) $, 则
+\[|f(x)-s_n(x)| \leq \omega(f,\frac{1}{n})\]
+
+故 $ s_n $ 收敛到 $ f $。
+
+又对每一条折线，其可以写为
+\[s_n(x)=\sum_{i=0}^{n}a_i|x-x_i|\]
+满足线性方程 $ s_n(x_i)=f(x_i) $. 每一个 $ |x-x_i| $ 由（1）知道可以被多项式函数逼近，故 $ s_n $ 可以被多项式函数逼近。进而 $ f $ 可以被多项式函数逼近。   
 \paragraph{Problem 5} $ e^x  $ 的Taylor展开式为
 \[e^x=\sum_{j=0}^\infty \frac{1}{j!}x^j\]
 若  $ \frac{P(x)}{Q(x)} $ 是Pade逼近，则
