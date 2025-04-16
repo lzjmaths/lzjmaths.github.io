@@ -346,7 +346,7 @@
 First,  $ V  $ has dimension  $ 2N+3 $.
 
 Actualy, for  $ u\in V  $,  it should satisfy
-\[u(x_i)=u(x_{i+1}),u'(x_i)=u'(x_{i+1},u''(x_i)=u''(x_{i+1}))\]There are already  $ 3N-3 $ linear equations.
+\[u(x_i)=u(x_{i+1}),u'(x_i)=u'(x_{i+1}),u''(x_i)=u''(x_{i+1})\]There are already  $ 3N-3 $ linear equations.
 
  $ u  $ is composed by  $ N  $ polynoimal, so it is in the polynoimal space with free elements  $ 5N $.
  
@@ -354,17 +354,39 @@ Actualy, for  $ u\in V  $,  it should satisfy
  
  Now for  $ f_i\in V $, denote  $ f_{i,j} $ to be   $ f_i|_{[x_j,x_{j+1}]} $.
  
- We construct basis $ V $ such that the length of  $ \mathrm{supp}(f_{i,j}) \leq \frac{3}{N} $.
+ We construct basis $ V $ such that the length of  $ \mathrm{supp}(f_{i}) \leq \frac{3}{N} $.
  
  
-First, take 5 funtion  $ f_i(x) $ with support in  $ [x_1,x_4] $   such that 
+First, take a funtion  $ f_0^j(x) $ with support in  $ [x_0,x_3] $   such that 
 \[f_{i,0}(x_1)=f_{i,1}(x_1),f_{i,0}'(x_1)=f_{i,1}'(x_1),f_{i,0}''(x_1)=f_{i,1}''(x_1)\]
 \[f_{i,1}(x_2)=f_{i,2}(x_2),f_{i,1}'(x_2)=f_{i,2}'(x_2),f_{i,1}''(x_2)=f_{i,2}''(x_2)\]
-\[f_{i,2}(x_3)=f_{i,3}(x_3),f_{i,2}'(x_3)=f_{i,3}'(x_3),f_{i,2}''(x_3)=f_{i,3}''(x_3)\]
-\[f_{i,3}(x_4)=0,f_{i,3}'(x_4)=0,f_{i,3}''(x_4)=0\]
-Noticed that There are  $ 12 $ linear equations but the free coeffients have number of  $ 25 $, so it can be founded with  $ f_{i} $ linearly independent. 
+\[f_{i,2}(x_3)=0,f_{i,2}'(x_3)=0,f_{i,2}''(x_3)=0\]
+Noticed that There are  $ 9 $ linear equations but the free degree is  $ 15 $, so we can  find    $ 5 $ linearly independent functions, which are linearly independent in  $ [x_0,x_1] $.
 
-Keep this process, similarly we can find functions with support in  $ [x_j,x_{j+3}] $ linearly independt.
+Similarly, we find a function  $ f_i^(x) $ with support in  $ [x_j,x_{j+3}] $, $ 1 \leq j \leq N-4 $ ,  such that 
+\[f_{i,j}(x_j)=0,f_{i,j}'(x_j)=0,f_{i,j}''(x_j)=0\]
+\[f_{i,j}(x_{j+1})=f_{i,j+1}(x_{j+1}),f_{i,j}'(x_{j+1})=f_{i,j+1}'(x_{j+1}),f_{i,j}''(x_{j+1})=f_{i,j+1}''(x_{j+1})\]
+\[f_{i,j+1}(x_{j+2})=f_{i,j+2}(x_{j+2}),f_{i,j+1}'(x_{j+2})=f_{i,j+2}'(x_{j+2}),f_{i,j+1}''(x_{j+2})=f_{i,j+2}''(x_{j+2})\]
+\[f_{i,j+2}(x_{j+3})=0,f_{i,j+2}'(x_{j+3})=0,f_{i,j+2}''(x_{j+3})=0\] 
 
-There are actually  $ 3N-3 $ funcions. So we have found those $ 3N-3 $ linearly independent functions. 
+There are  $ 12 $ linear equations but the free degree is  $ 15 $. So we can find $ 2 $ functions which are linearly independent in  $ [x_j,x_{j+1}] $.
+
+Finally, for functions with support in  $ [x_{N-3},x_N] $,
+\[f_{i,N-3}(x_{N-3})=0,f_{i,N-3}'(x_{N-3})=0,f_{i,N-3}''(x_{N-3})=0\]
+\[f_{i,N-3}(x_{N-2})=f_{i,N-2}(x_{N-2}),f_{i,N-3}'(x_{N-2})=f_{i,N-2}'(x_{N-2}),f_{i,N-3}''(x_{N-2})=f_{i,N-2}''(x_{N-2})\]
+\[f_{i,N-2}(x_{N-1})=f_{i,N-1}(x_{N-1}),f_{i,N-2}'(x_{N-1})=f_{i,N-1}'(x_{N-1}),f_{i,N-2}''(x_{N-1})=f_{i,N-1}''(x_{N-1})\]
+
+There are  $ 9 $ linear equations but the free degree is  $ 15 $. So we can find  $ 6 $ linearly independent functions.
+
+We obtain  $ 5+2(N-4)+6=2N+3 $ functions. Now we suffice to prove they are linearly independent.
+
+Actually, if there is some linear combination such that 
+\[\sum_{i=1}^{2N-3}a_if_i=0\]
+Then since there are only  $ 5 $ functions with support on  $ [x_0,x_1] $, which is linearly independent $ \Rightarrow  $  $ a_i=0 $ for those functions.
+
+Similarly, by induction, there are  only  $ 2 $ functions with support on  $ [x_j,x_{j+1}] $, which is linearly independent $ \Rightarrow  $  $ a_i=0 $ for those functions. 
+
+Therefore, the linear combination is actually the linear combination of those functions with support on  $ [x_{N-3},x_{N}] $. But they are linearly independent. So  $ a_i=0,\forall i $.
+
+So we have found those $ 2N-3 $ linearly independent functions, which forms a basis. 
 \end{document}
