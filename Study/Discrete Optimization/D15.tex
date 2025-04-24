@@ -1,0 +1,55 @@
+\begin{definition}
+    $ \mathrm{PCP}_{c,s}[r,q] $ denotes set of languarges that admits a PCP system with  $ c,s,r,q  $ parameters. Explicitly,
+    \begin{itemize}
+        \item Prover reads input, outputs poly-length proof with unbounded computational prover.
+        \item Verifier in poly-time reads input and  $ r $ random bits, (deterministically by input and random bits) computes  $ q $ locations in the proof, reads the  $ q $ bits in the proof and decides YES/NO.
+        \item The systems satisfies  completeness and soundness:
+        \begin{itemize}
+            \item (Completeness) Input is YES instance  $ \Rightarrow  $  $ \exists\,\text{ prover}\mathrm{Pr}[\text{Verifier accepts}] \geq c $.
+            \item (Soundness) Input is NO instance  $ \Rightarrow  $  $ \forall\,\text{ prover}\mathrm{Pr}[\text{Verifier accepts}] \leq s $. 
+        \end{itemize}
+    \end{itemize}
+\end{definition}
+\begin{observation}
+    \,
+    \begin{itemize}
+        \item  $ \mathrm{PCP}_{1,\frac{1}{2}}[0,0]=P $.
+        \item  $ \mathrm{PCP}_{1,\frac{1}{2}}[0,\mathrm{poly(n)}]=NP $.
+        \item  $ \mathrm{PCP}_{1,\frac{1}{2}}[O(\log(n)),O(1)] \leq NP $   
+    \end{itemize}
+\end{observation}
+For the final observation, we actually can construct a Verifier to enumerate all possible random bits in $ \{0,1\}^r $ to return YES if there is some possibility larger than  $ c $.
+
+Indeed, PCP theorem is actually,
+\begin{theorem}[PCP theorem]
+    \[\mathrm{PCP}_{1,\epsilon}[O(\log n),O(1)]\mathrm{PCP}_{1,\frac{1}{2}}[O(\log n),O(1)]=NP \]
+\end{theorem}
+
+\begin{proposition}
+    PCP theorem  $ \Leftrightarrow $   $ \exists s<1,\mathrm{Gap-3MAXSAT}_{1,s} $ is NP-Hard.
+\end{proposition}
+\begin{proof}
+    " $ \Rightarrow $ ": Our goal is to prove  $ \mathrm{3SAT} \leq_p \mathrm{Gap-3MAXSAT}_{1,s} $,\ie given a 3-SAT instance  $ \phi $, we can construct an instance $ \Phi $ in poly-time  such that  $ \mathrm{OPT}(\phi)=1 $ $ \Rightarrow  $  $ \OPT(\Phi)=1 $.
+    
+    $ \mathrm{3SAT}=\mathrm{GAP-3MAXSAT}_{1,\frac{1}{m}}$ is NP-hard. By PCP theorem,  $ \exists  $ a prover-verifier system for 3-SAT that with  $ c=1,s=\frac{1}{2},r=O(\log n),q=O(1) $ 
+    
+    Prover provides proof  $ \vec{x}\in \{0,1\}^N $.
+
+    Given  $ \phi $,  $ \forall \vec{\tau}\in \{0,1\}^r $, verifier computes 
+    \[l_1,\cdots,l_q\in \{1,2,\cdots,N\}\]
+    \[f:\{0,1\}^q\rightarrow \{0,1\}\]
+    find  $ 3-CNF $  $ g $ over  $ q+q\cdot 2^q $ variables $ \{z_{\vec{\tau}}\} $  and  $ q\cdot 2^q $ clauses $ c_{\vec{\tau}} $  such that  $ f(\vec{y})=1 $ iff  $ \exists \vec{z}\in \{0,1\}^{q\cdot 2^q},g(\vec{y},\vec{z})=1 $.       
+    
+    Construct  $ \Phi $ with variables  $ \{x_1,x_2,\cdots,x_N\}\cup \bigcup_\tau z_{\tau} $ and clauses  $\bigwedge_\tau c_{\tau} $.
+
+    Completeness: If  $ \exists \vec{x} $  such that  $ \mathrm{Pr}_{\vec{\tau}}[\text{Verifier accepts}]=1 $. Then  $ \forall \vec{\tau}$,  $ \exists z_{\vec{\tau}} $ such that  $ c_{\vec{\tau}}=1 $.    
+
+    Soundness:  $ \forall \vec{x},\mathrm{Pr}_{\vec{\tau}}[\text{Verifier accepts}] \leq \frac{1}{2} $. Consider a solution $ \sigma $  to  $ \Phi $.  Let  $ T=\{\vec{\tau}:\text{ Verifier rejects  $ \sigma(X) $ under  $ \vec{\tau} $}\} $. Then  $ T \geq \frac{1}{2}\cdot 2^r $.
+    
+    $ \forall \vec{\tau} $,  $ \sigma  $ doesn't satisfy all clauses in  $ C_{\vec{\tau}} $ so the number of unsatisfied clauses  $  \geq |T|=\frac{1}{2}\cdot 2^r $.
+    
+    \[\val(\sigma:\Phi) \leq 1-\frac{|T|}{2^r\cdot q\cdot 2^q}=1-\frac{\frac{1}{2}\cdot 2^r}{2^r\cdot q\cdot 2^q}=1-\frac{1}{2q\cdot 2^q}\]
+
+    " $ \Leftarrow $ ":  $ \forall  $ NP language  $ \mathcal{L} \leq_p \mathrm{GAP-3SAT}_{1,s}$. Then 
+    \[\mathcal{L}\in \mathrm{PCP}_{1,s}[O(\log n),3] \leq \mathrm{PCP}_{1,\frac{1}{2}}[O(\log (n),O(1))]\] 
+\end{proof}
