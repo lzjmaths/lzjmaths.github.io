@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 APR 2025 19:22
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  22 APR 2025 09:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1539,10 +1539,10 @@ Underfull \hbox (badness 4024) in paragraph at lines 53--57
 [47]) (../D15.tex [48]
 Package hyperref Info: bookmark level for unknown observation defaults to 0 on input line 14.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 29.
- [49] [50]) [51]
+ [49] [50]) (../D16.tex [51] [52]) [53]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [52
+ (./Discrete_Optimistic.ind [54
 
 
 
@@ -1553,19 +1553,19 @@ showing proposition
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [53
+ [55
 
 ] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: 52BAED4417A0C4DC8DD8E8C1E6D12875;4479.
+(rerunfilecheck)             Checksum: 1E64DDB365D5C31320BA7E4489777928;4625.
  ) 
 Here is how much of TeX's memory you used:
- 46335 strings out of 476683
- 1049881 string characters out of 5804047
+ 46425 strings out of 476683
+ 1051530 string characters out of 5804047
  1855018 words of memory out of 5000000
- 65636 multiletter control sequences out of 15000+600000
+ 65723 multiletter control sequences out of 15000+600000
  550555 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (53 pages).
+Output written on Discrete_Optimistic.pdf (55 pages).
