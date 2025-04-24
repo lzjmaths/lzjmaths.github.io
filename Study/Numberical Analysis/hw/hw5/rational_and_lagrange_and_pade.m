@@ -1,4 +1,5 @@
-function rational_and_lagrange_and_pade(N,n,m)
+function rational_and_lagrange_and_pade(n,m)
+    N = n+m;
     f = @(x) exp(x);
     syms x;
 
@@ -14,6 +15,7 @@ function rational_and_lagrange_and_pade(N,n,m)
     p_poly = poly2sym(p, x);
     q_poly = poly2sym(q, x);
     disp(vpa(p_poly / q_poly,6));
+    error(p_poly,q_poly);
     xdata = x_cheb;
     ydata = y_cheb;
     [p, q] = rational_interp(xdata, ydata, n, m);
@@ -21,22 +23,23 @@ function rational_and_lagrange_and_pade(N,n,m)
     p_poly = poly2sym(p, x);
     q_poly = poly2sym(q, x);
     disp(vpa(p_poly / q_poly,6));
+    error(p_poly,q_poly);
 
     % Lagarange 插值
     L_uniform = lagrange_poly(x_uniform, y_uniform);
     L_cheb = lagrange_poly(x_cheb,y_cheb);
     fprintf('\n拉格朗日插值 - 均匀节点:\n');
     disp(vpa(L_uniform,6));
+    error(L_uniform,1);
     fprintf('\n拉格朗日插值 - Chebyshev 节点:\n');
     disp(vpa(L_cheb,6));
+    error(L_cheb,1);
 
     % Pade 逼近 (n,m)
-    [numPade, denPade] = pade_approx_exp(n, m);
+    [p,q] = pade_approx_exp(n, m);
     fprintf('\nPade 逼近 (n=%d, m=%d):\n', n, m);
-    disp('分子：');
-    disp(numPade);
-    disp('分母：');
-    disp(denPade);
+    disp(vpa(p/q,6));
+    error(p,q)
 end
 
 %% Rational interpolation: R(x) = P(x)/Q(x)
@@ -102,4 +105,15 @@ function [P, Q] = pade_approx_exp(n, m)
         num_coef(k+1) = s;
     end
     P = poly2sym(flip(num_coef'), x);
+end
+
+function error(p,q)
+    syms x
+    f = @(x) exp(x);
+    R_sym = p/q;
+    R = matlabFunction(R_sym, 'Vars', x);
+    x_test = linspace(-1, 1, 1000);
+    err_vec = abs(f(x_test) - R(x_test));
+    inf_norm_error = max(err_vec);
+    fprintf('无穷范数误差：%.5e\n\n', inf_norm_error);
 end
