@@ -1,0 +1,104 @@
+
+
+    Recall max-coverage problem is:  $ U=\{1,2,\cdots,n\} $,  $ S_1,S_2,\cdots,S_m\subset U,k \leq m $. Our goal is to select  $ k  $ sets to maximize  $ \dps\frac{1}{|U|}|\text{unon of selected sets}| $.
+    
+    We have proved that  $ (1-\frac{1}{e}) $-approximation is NP-hard.
+    
+\begin{theorem}
+    $ \forall \epsilon>0 $,  $ \mathrm{Gap-MC}_{1,\frac{3}{4}+\epsilon} $ is NP-Hard.
+\end{theorem}
+\begin{proof}
+    Suffices to reduce  $ LC $ case to  $ MC $ case.
+    
+    Let  $ W=\bigcup_{(u,v)\in E}T_{uv}\times\{(u,v)\} $,  $ |W|=2^k\cdot|E| $, where  $ T_{uv}=\{0,1\}^k $.
+    
+    Denotes 
+    \[T_{uv,\alpha,0}=\{\vec{x}:x_\alpha=0\}\]
+    \[T_{uv,\pi_{uv}(\beta),1}=\{\vec{x}:x_{\pi_{uv}(\beta)}=1\}\]
+
+
+    Let  \[S_{u,\alpha}=\bigcup_{(u,v)\in E} T_{uv,\alpha,0}\times\{(u,v)\},\forall u\in U,\alpha\in [K] \]
+    \[S_{v,\beta}=\bigcup_{(u,v)\in E}T_{uv,\pi_{uv}(\beta),1}\times\{(u,v)\},\forall v\in V,\beta\in [L]\]
+    Take  $ k=|U|+|V| $.
+
+    Completeness: $ \exists\sigma $ satisfies all constraints in  $ \mathrm{LC} $. Then select  $ \{S_{u,\sigma(u)},S_{v,\sigma(v)}\} $ to achieve 100\% coverage.
+    
+    Soundness: If  $ \OPT(LC)<\delta $,  $ \Rightarrow $  $ \OPT(MC)<\frac{3}{4}+\epsilon $.
+    
+    Otherwise, if  $ \exists $ set selection achieving  $ \frac{3}{4}+\epsilon $ coverage, then one can "decode" a  $ \sigma  $ such that   $ \mathrm{Val}(\sigma;\mathrm{LC}) \geq \delta $.
+
+    Let 
+    \[\mathrm{Sugg}(u)=\{\alpha,S_{u,\alpha}\text{ selected}\},\mathrm{Sugg}(v)=\{\beta:S_{v,\beta}\text{ selected}\}\]
+
+    \begin{claim}
+        \[\mathbb{E}_{(u,v)\sim E}\left[|\mathrm{Sugg}(u)|+|\mathrm{Sugg}(v)|\right]=2\]
+    \end{claim}
+    \begin{proof}[Proof of Claim]
+        \begin{align*}
+            \mathbb{E}_{(u,v)\sim E}\left[|\mathrm{Sugg}(u)|+|\mathrm{Sugg}(v)|\right] &= \sum_{(u,v)\in E}\frac{1}{|E|}\left(|\mathrm{Sugg}(u)|+|\mathrm{Sugg}(v)|\right)\\
+            &= \Ebb_{u\sim U}|\mathrm{Sugg}(u)|+\Ebb_{v\sim V}|\mathrm{Sugg}(v)|\\
+            &=\frac{1}{|U|}\left(\sum_u|\mathrm{Sugg}(u)|+\sum_v|\mathrm{Sugg}(v)|\right)\\
+            &=2
+        \end{align*}
+    \end{proof}
+    Here we use Corollary \ref{LC large theorem} with the stronger version that the graph is regular.
+
+    \underline{Decoding Scheme}:  $ \forall u\in U $, choose  $ \sigma(u) $ uniformly from  $ \mathrm{Sugg}(u) $,  $ \forall v\in V $, choose  $ \sigma(v) $ uniformly from  $ \mathrm{Sugg(v)} $.
+
+    \begin{definition}
+        Edge  $ (u,v)\in E $ is \textit{consistently suggested} if  $ \exists \alpha\in \mathrm{Sugg}(u),\beta\in \mathrm{sugg}(v) $ such that  $ \pi_{uv}(\beta)=\alpha $.
+        
+        \begin{fact}
+            If  $ (u,v)  $ is consistently suggested, then 
+            \[\mathrm{Pr}_\sigma[(u,v)\text{ satisfied}] \geq \frac{1}{|\mathrm{Sugg}(u)|\cdot|\mathrm{Sugg}(v)|}\]
+        \end{fact}
+    \end{definition}
+    Now consider 
+    \[E_1=\{(u,v)\in E|(u,v)\text{ consisntently suggested}\}\]
+    \[E_0=E\setminus E_1,\qquad \gamma=\frac{|E_1|}{|E|}\]
+    \begin{lemma}
+        If  $ (u,v)\in E_0 $, then 
+        \[\text{coverage of }T_{uv} \leq 1-2^{-\left(|\mathrm{Sugg}(u)|+|\mathrm{Sugg}(v)|\right)}\]
+    \end{lemma}
+    \begin{proof}
+        Note that if  $ |\mathrm{Sugg}(u)|=|\mathrm{Sugg}(v)|=1 $, then coverage of  $ T_{uv} \leq \frac{3}{4} $,
+        
+        \begin{align*}
+            &\quad\,\text{non-coverage of  $ T_{u,v} $ }\\
+            &=\mathrm{Pr}_{\vec{x}\sim\{0,1\}^k}\left[\forall \alpha\in \mathrm{Sugg}(u):x_\alpha=1\vee \forall \beta\in \mathrm{Sugg}(v):x_{\pi(\beta)}=0\right]\\
+            &=\mathrm{Pr}_{\vec{x}\sim\{0,1\}^k}\left[\forall \alpha\in \mathrm{Sugg}(u):x_\alpha=1\right]\cdot\mathrm{Pr}_{\vec{x}\sim\{0,1\}^k}\left[\forall \beta\in \mathrm{Sugg}(v):x_{\pi(\beta)}=0\right]\\
+            &=2^{-|\mathrm{Sugg}(u)|}\cdot2^{-|\pi(\mathrm{Sugg}(v))|}\\
+            &   \geq 2^{-\left(|\mathrm{Sugg}(u)|+|\mathrm{Sugg}(v)|\right)}
+        \end{align*}
+    \end{proof}
+
+    \begin{definition}
+        Edge  $ (u,v) $ is  \textit{$ \tau $-good} if  $ \min\{|\mathrm{Sugg}(u)|,|\mathrm{Sugg}(v)|\} \leq \tau $. Then if  $ (u,v)\in E_1 $ and  $ \tau $-good, then  $ \mathrm{Pr}_\sigma[(u,v)\text{ satisfied by }\sigma] \geq \frac{1}{\tau^2} $     
+    \end{definition}
+    Let 
+    \[\Ebb_{(u,v)\sim E_1}\left[|\mathrm{Sugg}(u)|+|\mathrm{Sugg}(v)|\right]=\tau\]
+
+    Then at least  $ \frac{1}{2} $ edges in  $ E_1 $ are  $ (2\tau ) $-good.
+    
+    Then 
+    \[\begin{aligned}
+        \mathbb{E}_\sigma\left[\mathrm{Val}(\sigma;LC)\right]& \geq \gamma\cdot\frac{1}{2}\cdot\frac{1}{(2\tau)^2}
+    \end{aligned}\]
+    For the original Max-coverage problem, it subjects to 
+    \[\begin{aligned}
+        \frac{3}{4}+\epsilon& \leq \gamma\cdot 1+(1-\gamma)\left[1-\Ebb_{(u,v)\sim E_0}2^{-|\mathrm{Sugg}(u,v)|}\right]\\
+        & \leq \gamma+(1-\gamma)\left[1-2^{-\Ebb_{(u,v)\sim E_0}|\mathrm{Sugg}(u,v)|}\right]\\
+        &=\gamma+(1-\gamma)\left[1-2^{-\frac{2-\gamma\tau}{1-\gamma}}\right]
+    \end{aligned}\]
+    Suffices to prove a claim that 
+    \begin{claim}
+        If  $ \gamma+(1-\gamma)\left[1-2^{-\frac{2-\gamma\tau}{1-\gamma}}\right] \geq \frac{3}{4}+\epsilon $, then 
+        \[\gamma \geq \frac{4}{1+\ln 4}\epsilon>\epsilon\]
+        and 
+        \[\tau \leq \frac{2}{\epsilon}\]
+        So 
+        \[\gamma\cdot\frac{1}{8\tau^2} \geq \epsilon\cdot\frac{\epsilon^2}{32}=\frac{\epsilon^3}{32}>\delta\]
+    \end{claim}
+    Here we prove that 
+    \[\mathrm{Gap-MC}_{1,\frac{3}{4}+\epsilon}\xleftarrow{\delta=\epsilon^3/32}\mathrm{Gap-LC}(K,L)_{1,\delta}\]
+\end{proof}

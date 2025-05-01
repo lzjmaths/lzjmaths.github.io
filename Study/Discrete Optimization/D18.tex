@@ -1,0 +1,118 @@
+\subsection{Multicut}
+\begin{example}[Multicut]
+    Input: undirected graph  $ G=(V,E) $, weights  $ \omega:E\rightarrow\Rbb_{ \geq 0} $ and terminal pairs  $ \{(s_i,t_i)\}_{i=1}^k $.
+    
+    Our goal is to find  $ E'\subset E $ to  minimize  $ \omega(E')=\sum_{e\in E'}\omega(e) $ such that  $ s_i,t_i $ disconnected in  $ (V,E-E') $,  $ \forall i\in [k] $.     
+\end{example}
+
+Clearly,  $ k=1 $ is the min-cut problem.
+
+\begin{theorem}
+    $ k=2 $ can be solved in polynomial time. 
+\end{theorem}
+\begin{fact}
+    $ k \geq 3 $, then  $ k $-approximation problem is easy. Actually, we can consider the union of all  min $ (s_i,t_i) $-cut.  
+\end{fact}
+
+\begin{example}[Vertex Cover]
+    Input  $ G=(V,E) $.
+
+    Our goal is to select  $ V'\subset V  $ to minimize  $ |V'| $ such that  $ \forall e\in E $,  $ e  $ has  $  \geq 1 $ endpoints in  $ V $.    
+\end{example}
+
+Those two problems are equivalent. Acutally,  $ \OPT(I)=\OPT(J) $ for two corresponding instances.
+
+
+\begin{theorem}
+    1.414-approximation for VC is NPH. Assuming UG-Conjecture,  $ (2-\epsilon) $-approximation is hard.
+
+    As a result, 1.414-approximation for multicut is NPH. Assuming UGC, no poly-time constant approximation for multi-cut.
+\end{theorem}
+
+The goal in this lecture is to give a  $ O(\log n) $-approximation approximation. 
+
+\subsubsection{Multicut on Trees}
+Consider LP relaxation:
+\[\min \sum_{e\in E }\omega(e)\cdot\chi_e\]
+\[\st \sum_{e\in P(s_i,t_i)}\chi_e \geq 1\]
+\[\chi_e \geq 0,\forall e\in E\]
+where  $ P(s_i,t_i) $  is the unique path on tree.
+
+\paragraph{Rounding} Let  $ d(v)=\dps\sum_{e\in P(r,v)}\chi_e,\forall v\in V $.
+
+Sample  $ \theta\in [0,\frac{1}{2}) $ uniformly.
+
+Say  $ \theta $ cuts  $ e=(u,v)  $ if  $ [d(u),d(v))\cap\{\theta,\theta+\frac{1}{2},\theta+1,\theta+\frac{3}{2},\cdots\}\neq \emptyset $.
+
+Let   $ E'=\{e\in E\text{ cut by  $ \theta $}\} $.
+
+\underline{Feasiblity}: Consider any  $ (s_i,t_i) $. Let  $ u_i $ be the least common ancestor of  $ s_i,t_i $.  Then 
+\[d(s_i)-d(u_i)+d(t_i)-d(u_i) \geq 1\]
+Assume WLOG  $ d(s_i)-d(u_i) \geq \frac{1}{2} $. Then  $ P(s_i,u_i)\cap E'\neq \emptyset $.
+
+\underline{Quality}: Consider  $ e=(u,v) $,
+\[\mathrm{Pr}[e\text{ cut by }\theta]=\begin{cases}
+    1&\chi_e \geq \frac{1}{2}\\
+    2\chi_e&\chi_e<\frac{1}{2}
+\end{cases}\]
+
+\[\Ebb_\theta \omega(E')=\sum_e\mathrm{Pr}[e\text{ cut by }\theta]\cdot \omega(e) \leq \sum_e2\chi_e\omega(e)=2\mathrm{LP}\]
+
+
+\subsubsection{Multicut on General Graphs}
+LP relaxation:
+\[\min \sum_{e\in E }\omega(e)\cdot\chi_e\]
+\[\st \sum_{e\in P(s_i,t_i)}\chi_e \geq 1,\forall P \text{ connect }s_i,t_i\]
+\[\chi_e \geq 0,\forall e\in E\]
+\begin{theorem}
+    LP poly-time solvable if  $ \exists  $ poly-time "separation oracle"
+\end{theorem}
+\begin{definition}
+    Given  $ \{\chi_e\} $, if  $ \{\chi_e\} $ is feasible, then oracle returns "YES". Otherwise, oracle returns "NO" and any one of the violated constraint. 
+\end{definition}
+
+\begin{theorem}[Low-Diameter Decomposition, LDD]\label{thm:LDD} 
+    Given  $ G=(V,E,\omega) $, metric space  $ (V,d) $,  $ D>0 $.  $ \exists  $ partition of  $ V=S_1\cup S_2\cup\cdots\sup S_t $ such that     
+    \begin{itemize}
+        \item Low Diameter:  $ \forall i\in [t] $, diameter of  $ s_i \leq D $.
+        \item Low cutting cost:
+        \[\sum_{e\in E\text{ cut by the partition}}\omega(e) \leq \frac{O(\log n)}{D}\sum_{e=(u,v)\in E}\omega(e)\cdot d(u,v)\]
+    \end{itemize}
+\end{theorem}
+
+If the theorem holds, we can let  $ d(u,v) $ be the shortest path distance w.r.t.  $ \{\chi_e\} $,  $ D=0.99 $,  $ E' $ be the set of edges cut by the partition. Here we construct an  $ O(\log n) $-approximation algorithm. 
+
+Then 
+\[\omega(E') \leq \frac{O(\log n)}{D}\sum_{e=(u,v)\in E}\omega(e)\chi_e=\frac{O(\log n)}{D}\mathrm{LP}\]
+
+\begin{proof}[Proof of Theorem \ref{thm:LDD}]
+    Construct partition  $ \{S_v\}_{v\in V} $. Let  $ r=\frac{D}{2} $ be the radius.
+    
+    \paragraph{Algorithm}
+    \begin{enumerate}[label=\arabic*.]
+        \item Sample  $ X\sim \mathrm{Unif}[\frac{r}{2},r] $.
+        \item Uniformly randomly  order vertices in  $ V $.
+        \item For each vertex  $ v $ in the order: assign all unassigned  $ u:d(v,u) \leq x $ to  $ S_v $.    
+    \end{enumerate}
+    \begin{claim}
+        For each  $ (u,v)\in E $, we have 
+        \[\mathrm{Pr}[(u,v)\text{ cut by partition}] \leq \frac{O(\log n)}{r}\cdot d(u,v)\] 
+    \end{claim}
+    \begin{proof}
+        For  $ e=(u,v) $, denote  $ d(z,e)=\min\{d(u,z),d(v,z)\} $,  $ z\in V $.
+        
+        Order vertices in  $ V $ such that  $ d(z_1,e) \leq d(z_2,e) \leq \cdots \leq d(z_n,e) $.
+        
+        First time one of  $ u.v  $ is assigned to some  $ S_{z_i} $, say  $ z_i  $ settles  $ e=(u,v) $. Furthermore, if exactly one of  $ u,v  $ assigned to  $ S_{z_i} $, say  $ z_i $ cuts  $ e $.
+        
+        \[\mathrm{Pr}[e\text{ cut by partition}]=\sum_{i=1}^n\mathrm{Pr}[e\text{ cut by }z_i]\]
+        Define  $ a_i=d(z_i,e),b_i=\max\{d(u,z_i),d(v,z_i)\} $. Then  
+        \[\begin{aligned}
+            \mathrm{Pr}[e\text{ cut by }z_i]& \leq \mathrm{Pr}[X\in [a_i,b_i) \text{ and }z_i\text{ comes before }z_1,\cdots,z_{i-1} \text{ in the order}]\\
+            &=\mathrm{Pr}[X\in [a_i,b_i)]\cdot\mathrm{Pr}[z_i\text{ comes before }z_1,\cdots,z_{i-1} \text{ in the order}]\\
+            & \leq \frac{b_i-a_i}{r/2}\cdot \frac{1}{i}
+        \end{aligned}\]
+        Therefore, 
+        \[\mathrm{Pr}[(u,v)\text{ cut by partition}] \leq \sum_{i=1}^n \frac{b_i-a_i}{r/2}\cdot\frac{1}{i} \leq \frac{d(u,v)}{r/2}O(\log n)\]
+    \end{proof}
+\end{proof}

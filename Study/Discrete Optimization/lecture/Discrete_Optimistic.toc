@@ -53,5 +53,11 @@
 \contentsline {paragraph}{Observation}{48}{section*.19}%
 \contentsline {subsection}{\numberline {5.4}Label-Cover Games}{51}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Paralled Repetition}{52}{subsubsection.5.4.1}%
-\contentsline {section}{Index}{54}{section*.20}%
-\contentsline {section}{List of Theorems}{55}{section*.21}%
+\contentsline {subsection}{\numberline {5.5}Multicut}{56}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Multicut on Trees}{57}{subsubsection.5.5.1}%
+\contentsline {paragraph}{Rounding}{58}{section*.20}%
+\contentsline {subsubsection}{\numberline {5.5.2}Multicut on General Graphs}{58}{subsubsection.5.5.2}%
+\contentsline {paragraph}{Algorithm}{59}{section*.21}%
+\contentsline {section}{Index}{61}{section*.22}%
+\contentsline {section}{Important Theorems}{62}{section*.23}%
+\contentsline {section}{Important Examples}{63}{section*.24}%

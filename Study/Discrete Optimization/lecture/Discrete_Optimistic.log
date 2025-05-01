@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  22 APR 2025 09:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  29 APR 2025 16:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1539,33 +1539,35 @@ Underfull \hbox (badness 4024) in paragraph at lines 53--57
 [47]) (../D15.tex [48]
 Package hyperref Info: bookmark level for unknown observation defaults to 0 on input line 14.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 29.
- [49] [50]) (../D16.tex [51] [52]) [53]
+ [49] [50]) (../D16.tex [51] [52]) (../D17.tex [53] [54] [55]) (../D18.tex [56] [57] [58] [59]) [60]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [54
+ (./Discrete_Optimistic.ind [61
 
 
 
 ])
 showing theorem
 showing proposition
-(./Discrete_Optimistic.loe)
+(./Discrete_Optimistic.loe [62
+
+])
+showing example
+(./Discrete_Optimistic.loe [63])
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [55
-
-] (./Discrete_Optimistic.aux)
+ [64] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: 1E64DDB365D5C31320BA7E4489777928;4625.
+(rerunfilecheck)             Checksum: 3DEBE80D15F16BEBD92E7051C3E93B29;4723.
  ) 
 Here is how much of TeX's memory you used:
- 46425 strings out of 476683
- 1051530 string characters out of 5804047
+ 46445 strings out of 476683
+ 1051850 string characters out of 5804047
  1855018 words of memory out of 5000000
- 65723 multiletter control sequences out of 15000+600000
- 550555 words of font info for 137 fonts, out of 8000000 for 9000
+ 65735 multiletter control sequences out of 15000+600000
+ 552349 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (55 pages).
+Output written on Discrete_Optimistic.pdf (64 pages).
