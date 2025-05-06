@@ -119,3 +119,8 @@
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.40\else \numberline {5.40}Definition\fi }{58}{definition.5.40}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.41\else \numberline {5.41}Theorem\fi \thmtformatoptarg {Low-Diameter Decomposition, LDD}}{59}{theorem.5.41}%
 \contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.1\else \numberline {5.5.1}Claim\fi }{59}{claim.5.5.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.42\else \numberline {5.42}Example\fi \thmtformatoptarg {Max-cut}}{60}{example.5.42}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.43\else \numberline {5.43}Theorem\fi }{61}{theorem.5.43}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.44\else \numberline {5.44}Theorem\fi }{61}{theorem.5.44}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.45\else \numberline {5.45}Fact\fi }{62}{fact.5.45}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.46\else \numberline {5.46}Definition\fi \thmtformatoptarg {SDP Statndard Form}}{62}{definition.5.46}%

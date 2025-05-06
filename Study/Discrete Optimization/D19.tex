@@ -1,0 +1,77 @@
+\subsubsection{Max-cut}
+\begin{example}[Max-cut]
+    Input: undirected graph  $ G=(V,E) $, edge weight  $ \omega:E\rightarrow\Rbb_{ \geq 0} $.
+    
+    Our goal is to partition  $ V  $ into  $ (A,B)  $ to maximize  $ \dps\sum_{(i,j)\in E}\omega(i,j)\idt[(i,j)\text{ cut by }(A,B)] $ 
+\end{example}
+\paragraph{IP} maximize  $ \dps\sum_{(i,j)\in E}\omega(i,j)y_{ij} $.\
+
+Subject to  \[x_i\in \{0,1\}, \forall i\in V \]
+\[y_{ij} \leq x_i+x_j\]
+\[y_{ij} \leq 2-x_i-x_j\]
+
+We can relax to  $ x_i\in [0,1] $ to get an LP relaxation. However, LP=1 if  $ x_i\equiv \frac{1}{2},y_{ij}\equiv 1 $. 
+
+\paragraph{Strengthened LP} Add  $ y_{ij}+y_{jk}+y_{ki} \leq 2 $.
+
+\paragraph{Sherali-Adams} It is a way to construct LP relaxation, which try to  describe the joint distribution of  $ k $ variables. 
+
+For variables  $ x_{I,\sigma} $,  $ I\subset [n],|I| \leq k,\sigma:I\rightarrow\{0,1\} $.
+
+Then in this problem, objective is 
+\[\sum_{(i,j)\in E}\mathrm{Pr}[(i,j)\text{ is cut}]\sum_{(i,j)\in E}x_{\{i,j\},(0,1)}+x_{\{i,j\},(1,0)}\]
+
+where  $ x_{I,\sigma} \geq 0,\dps\sum_{\sigma}x_{I,\sigma}=1 $.
+
+Consistency: 
+\[\sum_{\sigma':J\setminus I\rightarrow \{0,1\}}x_{J,\sigma\cup \sigma'}=x_{I,\sigma},\forall I\subset J,\sigma:I\rightarrow \{0,1\}\]
+
+\begin{theorem}
+    On dense graph (e.g. uniformly weighted,  $ |E| \geq \frac{1}{100}|V|^2 $)
+
+    SA$ (\frac{1}{\epsilon}) $ + rounding achieves  $ (1-\epsilon) $-approximation. 
+\end{theorem}
+
+\begin{theorem}
+    $ \forall \epsilon>0 $,  $ \exists  $  $ (\frac{1}{2}+\epsilon) $-Integrality Gap instance for even  $ \mathrm{SA}(n/100) $.
+\end{theorem}
+
+So SA process is not good for max-cut.
+
+\paragraph{IP'}  $ \max \dps\sum_{(i,j)\in E}\omega_{ij}\frac{1-x_ix_j}{2} $ subject to  $ x_i\in\{\pm 1\},\forall i\in V $ 
+
+\paragraph{Relaxation}  $ x_i\leadsto \vec{v}_i\in \Rbb^n $.
+
+\paragraph{Semi-definite Programming relaxation}
+\[\max \sum_{(i,j)\in E}\omega_{ij}\frac{1-\<\vec{v}_i,\vec{v}_j\>}{2}\]
+subject to  $ \|\vec{v}_i\|^2=1 $,  $ \forall i\in V $.
+
+\begin{fact}
+    $ \mathrm{SDP} \geq \OPT $. 
+\end{fact}
+
+\begin{definition}[SDP Statndard Form]
+    $ X\in \Rbb^{n\times n} $. Maximize  $ \<C,X\>=\mathrm{Tr}(C^TX) $,  $ X\in \Rbb^{n\times n} $, subject to  $ \<A_i,X\>=b_i $,  $ \forall i\in\{1,2,\cdots, m\} $ and  $ X \geq 0 $ positive semi-definite.    
+\end{definition}
+
+\paragraph{Max-Cut SDP in matrix form}
+Maximize  $ \<\frac{1}{2}(D-A),X\> $ where  $ D $ is degree matrix with  $ D_{ii}=\sum_{j}a_ij $ and  $ A $ adjacency matrix  $ a_{ij}=\omega(i,j)/2 $, subject to  $ \<e_ie_i^T,X\>=1,\forall i\in V $.
+
+\paragraph{Separation Oracle} Use it to find solution and check it whether it is positive semi-definite by finding its min eigenvalue.
+
+\paragraph{Goemams-Williamson Rounding}[1995]
+Also called "hyperplane rounding".
+
+\begin{enumerate}
+    \item Uniformly sample  $ \vec{r}\sim S^{n-1} $
+    \item  $ x_i=\sgn\left(\<\vec{r},\vec{v}_i\>\right) $  
+\end{enumerate}
+
+\paragraph{Analysis}
+\[\begin{aligned}
+    \Ebb[\text{cut value}]&=\sum_{(i,j)\in E}\omega(i,j)\cdot\mathrm{Pr}[(i,j)\text{ cut}]\\
+    &=\sum_{(i,j)\in E}\omega_{ij}\cdot\frac{\arccos\<v_i,v_j\>}{\pi}\\
+    & \geq \alpha_{GW}\sum_{(i,j)\in E}\omega_{ij}\cdot\frac{1-\<v_i,v_j\>}{2}
+\end{aligned}\]
+where 
+\[\alpha_{GW}=\inf_{\rho\in[-1,1]}\frac{\frac{1}{\pi}\arccos\rho}{\frac{1}{2}(1-\rho)}\]

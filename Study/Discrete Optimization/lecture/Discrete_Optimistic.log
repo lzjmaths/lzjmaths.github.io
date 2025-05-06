@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  29 APR 2025 16:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  6 MAY 2025 09:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1539,35 +1539,40 @@ Underfull \hbox (badness 4024) in paragraph at lines 53--57
 [47]) (../D15.tex [48]
 Package hyperref Info: bookmark level for unknown observation defaults to 0 on input line 14.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 29.
- [49] [50]) (../D16.tex [51] [52]) (../D17.tex [53] [54] [55]) (../D18.tex [56] [57] [58] [59]) [60]
+ [49] [50]) (../D16.tex [51] [52]) (../D17.tex [53] [54] [55]) (../D18.tex [56] [57] [58] [59]) (../D19.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+[]\T1/ppl/m/n/12 Our goal is to par-ti-tion $\OML/cmm/m/it/12 V$ \T1/ppl/m/n/12 into $\U/matha/m/n/12 p\OML/cmm/m/it/12 A; B\U/matha/m/n/12 q$ \T1/ppl/m/n/12 to max-i-mize
+ []
+
+[60] [61] [62]) [63]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [61
+ (./Discrete_Optimistic.ind [64
 
 
 
 ])
 showing theorem
 showing proposition
-(./Discrete_Optimistic.loe [62
+(./Discrete_Optimistic.loe [65
 
 ])
 showing example
-(./Discrete_Optimistic.loe [63])
+(./Discrete_Optimistic.loe [66])
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [64] (./Discrete_Optimistic.aux)
+ [67] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: 3DEBE80D15F16BEBD92E7051C3E93B29;4723.
+(rerunfilecheck)             Checksum: 83B1868224359E4A8470AF25DEB0B226;4723.
  ) 
 Here is how much of TeX's memory you used:
- 46445 strings out of 476683
- 1051850 string characters out of 5804047
+ 46452 strings out of 476683
+ 1051960 string characters out of 5804047
  1855018 words of memory out of 5000000
- 65735 multiletter control sequences out of 15000+600000
+ 65739 multiletter control sequences out of 15000+600000
  552349 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (64 pages).
+Output written on Discrete_Optimistic.pdf (67 pages).

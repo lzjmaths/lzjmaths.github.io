@@ -58,6 +58,17 @@
 \contentsline {paragraph}{Rounding}{58}{section*.20}%
 \contentsline {subsubsection}{\numberline {5.5.2}Multicut on General Graphs}{58}{subsubsection.5.5.2}%
 \contentsline {paragraph}{Algorithm}{59}{section*.21}%
-\contentsline {section}{Index}{61}{section*.22}%
-\contentsline {section}{Important Theorems}{62}{section*.23}%
-\contentsline {section}{Important Examples}{63}{section*.24}%
+\contentsline {subsubsection}{\numberline {5.5.3}Max-cut}{60}{subsubsection.5.5.3}%
+\contentsline {paragraph}{IP}{60}{section*.22}%
+\contentsline {paragraph}{Strengthened LP}{61}{section*.23}%
+\contentsline {paragraph}{Sherali-Adams}{61}{section*.24}%
+\contentsline {paragraph}{IP'}{62}{section*.25}%
+\contentsline {paragraph}{Relaxation}{62}{section*.26}%
+\contentsline {paragraph}{Semi-definite Programming relaxation}{62}{section*.27}%
+\contentsline {paragraph}{Max-Cut SDP in matrix form}{62}{section*.28}%
+\contentsline {paragraph}{Separation Oracle}{62}{section*.29}%
+\contentsline {paragraph}{Goemams-Williamson Rounding}{62}{section*.30}%
+\contentsline {paragraph}{Analysis}{63}{section*.31}%
+\contentsline {section}{Index}{64}{section*.32}%
+\contentsline {section}{Important Theorems}{65}{section*.33}%
+\contentsline {section}{Important Examples}{66}{section*.34}%
