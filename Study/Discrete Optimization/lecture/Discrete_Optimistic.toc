@@ -69,6 +69,12 @@
 \contentsline {paragraph}{Separation Oracle}{62}{section*.29}%
 \contentsline {paragraph}{Goemams-Williamson Rounding}{62}{section*.30}%
 \contentsline {paragraph}{Analysis}{63}{section*.31}%
-\contentsline {section}{Index}{64}{section*.32}%
-\contentsline {section}{Important Theorems}{65}{section*.33}%
-\contentsline {section}{Important Examples}{66}{section*.34}%
+\contentsline {paragraph}{Integrality Gap}{63}{section*.32}%
+\contentsline {paragraph}{Embedded graph}{63}{section*.33}%
+\contentsline {paragraph}{Gap Instance}{64}{section*.34}%
+\contentsline {paragraph}{Algorithmic Gap}{64}{thmt@dummyctr.dummy.131}%
+\contentsline {paragraph}{Fourier Analysis of Boolean Function}{65}{section*.36}%
+\contentsline {paragraph}{Noise Stability}{66}{section*.37}%
+\contentsline {section}{Index}{67}{section*.38}%
+\contentsline {section}{Important Theorems}{68}{section*.39}%
+\contentsline {section}{Important Examples}{69}{section*.40}%

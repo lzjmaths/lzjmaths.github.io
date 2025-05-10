@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  6 MAY 2025 09:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  9 MAY 2025 16:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1544,35 +1544,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 []\T1/ppl/m/n/12 Our goal is to par-ti-tion $\OML/cmm/m/it/12 V$ \T1/ppl/m/n/12 into $\U/matha/m/n/12 p\OML/cmm/m/it/12 A; B\U/matha/m/n/12 q$ \T1/ppl/m/n/12 to max-i-mize
  []
 
-[60] [61] [62]) [63]
+[60] [61] [62] [63] [64] [65]) (../D20.tex) [66]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
- (./Discrete_Optimistic.ind [64
+ (./Discrete_Optimistic.ind [67
 
 
 
 ])
 showing theorem
 showing proposition
-(./Discrete_Optimistic.loe [65
+(./Discrete_Optimistic.loe [68
 
 ])
 showing example
-(./Discrete_Optimistic.loe [66])
+(./Discrete_Optimistic.loe [69])
 \tf@loe=\write8
 \openout8 = `Discrete_Optimistic.loe'.
 
- [67] (./Discrete_Optimistic.aux)
+ [70] (./Discrete_Optimistic.aux)
 Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
-(rerunfilecheck)             Checksum: 83B1868224359E4A8470AF25DEB0B226;4723.
+(rerunfilecheck)             Checksum: 69A599F038A7850EA3A3C4300C801A1B;4723.
  ) 
 Here is how much of TeX's memory you used:
- 46452 strings out of 476683
- 1051960 string characters out of 5804047
+ 46467 strings out of 476683
+ 1052212 string characters out of 5804047
  1855018 words of memory out of 5000000
- 65739 multiletter control sequences out of 15000+600000
+ 65751 multiletter control sequences out of 15000+600000
  552349 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Discrete_Optimistic.pdf (67 pages).
+Output written on Discrete_Optimistic.pdf (70 pages).
