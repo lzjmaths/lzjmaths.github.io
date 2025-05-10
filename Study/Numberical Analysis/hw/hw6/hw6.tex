@@ -300,9 +300,8 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 
-
-\newcommand{\OPT}{\mathrm{OPT}}
-
+\newcommand{\<}{\left<}
+\renewcommand{\>}{\right>}
 
 
 \numberwithin{equation}{problem}
@@ -327,92 +326,86 @@
   escapechar         = ",
   mlshowsectionrules = true,
 }
+\usepackage{ctex}
 
-\usepackage[thehwcnt = 1]{iidef}
-\usepackage{tikz} % Required for tikzpicture environment
+\usepackage[thehwcnt = 7]{iidef}
 \thecourseinstitute{Tsinghua University}
-\thecoursename{Discrete Optimistic}
+\thecoursename{Numerical Analysis}
 \theterm{Fall 2024}
 \hwname{Homework}
 \usepackage{geometry}
 \geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
 \begin{document}
-
 \courseheader
 \name{Lin Zejin}
-\rule{\textwidth}{1pt}
-\begin{itemize}
-\item {\bf Collaborators: \/}
-  I finish this homework by myself. 
-%   If you finish your homework all by yourself, make a similar statement. If you get help from others in finishing your homework, state like this:
-%   \begin{itemize}
-%   \item 1.2 (b) was solved with the help from \underline{\hspace{3em}}.
-%   \item Discussion with \underline{\hspace{3em}} helped me finishing 1.3.
-%   \end{itemize}
-\end{itemize}
-\rule{\textwidth}{1pt}
 
 \vspace{2em}
 
-
 \sloppy
 \pagenumbering{arabic}
-
 \begin{problem}
-    (a) When  $ \OPT \geq c $, assume with  $ \frac{1}{T} $ algorithm  $ A $  outputs a solution of value at least  $ s $.  $ T\in O(poly(n)) $  Run algorithm  $ A $ for  $ T\cdot n $ iterations. Then with  $ (1-\frac{1}{T})^{Tn}<e^{-n} $ probability, the algorithm  $ A $  outputs a solution of value less than  $ s $.
+    1、注意到 
+    \[E(1)=E(x^1)=E(x^2)=0,E(x^3)=\frac{2}{9}\neq 0\]
+    所以代数精度是2
 
-    So with at least  $ 1-e^{-n} $ probability, the algorithm  $ A $  outputs a solution of value at least  $ s $.
-
-    (b)
+    2、
+    \[E(1)=E(x^1)=E(x^2)=0,E(x^3)\neq 0\]
+    所以代数精度是2
+\end{problem}
+\begin{problem}
+    1、解如下方程组
     \[\begin{aligned}
-        s=\Ebb[outputs]& \leq \mathrm{Pr}[outputs \geq s-\frac{1}{n^a}]\cdot poly(n)+(1-\mathrm{Pr}[outputs \geq s-\frac{1}{n^a}])\cdot (s-\frac{1}{n^a})
+        2&=C_0+C_1+C_2\\
+        2&=C_1+2C_2\\
+        \frac{8}{3}&=C_1+4C_2
     \end{aligned}\]
-    Then
-    \[\mathrm{Pr}[outputs \geq s-\frac{1}{n^a}]  \geq \frac{\frac{1}{n^a}}{poly(n)-s+\frac{1}{n^a}}=\frac{1}{n^a (poly(n)-s)+1}\]
-    Here we end the proof.
+    则
+    \[C_0=\frac{1}{3},C_1=\frac{4}{3},C_2=\frac{1}{3}\]
+    有代数精度2
+
+    2、解如下方程组
+    \[\begin{aligned}
+        1&=\frac{1}{2}+C_1\\
+        \frac{1}{2}&=\frac{1}{2}x_0+C_1x_1\\
+        \frac{1}{3}&=\frac{1}{2}x_0^2+C_1x_1^2
+    \end{aligned}\]
+    解得 
+    \[C_1=\frac{1}{2},x_0=\frac{1+\frac{\sqrt{3}}{3}}{2},x_1=\frac{1-\frac{\sqrt{3}}{3}}{2}\]
 \end{problem}
 \begin{problem}
-  
+    \[f[0,0,1,x](x-1)x^2=f(x)-f(1)+x(x-1)f'(0)-(x^2-1)(f(1)-f(0))\]
+    故
+    \[\int_0^1 f(x)-x^2f(1)+x(x-1)f'(0)+(x^2-1)f(0)\dd x=\int_0^1f[0,1,1,x](x-1)^2x\dd x=f'''(\zeta)\int_0^1(x-1)^2\dd x=\frac{1}{3}f'''(\zeta)\]
+    从而可设
+    \[C_0=\frac{2}{3},C_1=\frac{1}{3},B_0=\frac{1}{6},k=\frac{1}{3}\]
 \end{problem}
-
 \begin{problem}
-  (a) Let  $ k=c $,  $ U=\{1,2,\cdots,c\}^q $ where  $ q $ large enough. Introduce 
-  \[S_{i,b}=\{e\in U:e_i=b\}, \,i\in [q],b\in [c]\]
-  Choose  $ S_{i,t},1 \leq t \leq c $ and the coverage is  $ 1 $.
-  
-   $ x_{i,b}^*=\frac{1}{q} $ will also achieves coverage  $ 1 $.  
-
-  Then we cover each  $ j\in U $    with probability 
-  \[1-(1-\frac{1}{c})^c\]
-  So the expected coverage of rounding is 
-  \[1-(1-\frac{1}{c})^c\]
-  AS  $ c $ large enough, the expected  coverage of rounding is  $ 1-\frac{1}{e} $.
-  
-  
-  (b) With instance  $ k=c $,  $ U=\{0,1\}^q $,  $ n=2^q $ and 
-  \[S_{i,b}=\{e\in U:e_i=b\}, \,i\in [q],b=0,1\]
-  
-  The LP solution  $ x_{i,b}^*=\frac{1}{q} $. 
-
-   $ \alpha x_{i,b}^*=\frac{(1-\epsilon)\ln n}{q}=(1-\epsilon)\ln 2<\ln 2 $.
-   
-  Then 
-  \[\mathrm{Pr}[j \text{ is covered}]=1-(1-\alpha x_{i,b}^*)^q<1-(1-\ln 2)^q<1-(2^{-1.5})^{\log_2 n}=1-n^{-3/2}\]
-
-  So 
-  \[\mathrm{Pr}[U\text{ is all covered}]<(1-n^{-3/2})^n<1-n^{-\frac{1}{2}+\epsilon}\]
-  as  $ n $ large enough. So the randomized rounding algorithm may not be able to find a feasible solutionwith probability at least $ n^{-\frac{1}{2}+\epsilon} $. 
-
+    考虑partition  $ a,a+\frac{h}{2},a+\frac{3}{2}h,\cdots,a+\frac{1}{2}h+(n-1)h $， 则由于 $ f  $ Riemann可积，
+    \[\lim_{h\to 0}\sum_{k=1}^{n-1}h\cdot f(a+kh)+\frac{h}{2}f(a)+\frac{h}{2}f(b)=\int_a^b f\] 
 \end{problem}
-
 \begin{problem}
-  (a)
-  
-
-  (b) No, since the rounding algorithm gives a solution with expected value large than  $ (1-\frac{1}{e})\mathrm{LP} $. So 
-  \[\OPT \geq (1-\frac{1}{e})\mathrm{LP}\]
-  always holds. 
+    \[\begin{aligned}
+        &\int_a^b\left[\int_c^df(x,y)\dd y\right]\dd x\\
+        &\thickapprox \int_a^b\frac{d-c}{6}\left[f(x,c)+f(x,d)+4f(x,\frac{c+d}{2})\right]\dd x\\
+        &\thickapprox \frac{b-a}{6}\cdot\frac{d-c}{6}\\
+        &\cdot \left[f(a,c)+f(b,c)+4f(\frac{a+b}{2},c)+f(a,d)+f(b,d)+4f(\frac{a+b}{2},d)+4f(a,\frac{c+d}{2})+4f(b,\frac{c+d}{2})+16f(\frac{a+b}{2},\frac{c+d}{2})\right]\\
+    \end{aligned}\]
+    余项
+    \[R(x,y)=-\frac{d-c}{6}\cdot\frac{(b-a)^5}{2880}[f^{(4)}(\eta_1,c)+f^{(4)}(\eta_2,d)+f^{(4)}(\eta_3,\frac{d+c}{2})]\]
 \end{problem}
-
-
+\begin{problem}
+    关于权函数 $ \rho(x)=\frac{1}{\sqrt{1-x^2}} $ 的正交序列多项式为Chebyshev多项式。由Gauss-Chebyshev求积公式可得
+    \[\int_{-1}^1\rho(x)x^2\dd x=A_0x_0^2+A_1x_1^2\]
+    其中，  $ x_0,x_1 $  为2次Chebyshev多项式的根 $ \pm\frac{\sqrt{2}}{2} $ 
+    \[A_0=-\frac{\sqrt{2}}{2}\int_{-1}^1\rho(x)(x-\frac{\sqrt{2}}{2})\dd x,A_1=\frac{\sqrt{2}}{2}\int_{-1}^1\rho(x)(x+\frac{\sqrt{2}}{2})\]
+    故
+    \[\frac{1}{2}(A_0+A_1)=\frac{1}{2}\int_{-1}^1\frac{1}{\sqrt{1-x^2}}\dd x=\frac{\pi}{2}\]
+\end{problem}
+\begin{problem}
+    由Vandermonde行列式的可逆性，线性方程
+    \[\sum_{i=0}^nr_i x_i^k=\int_a^b x^k\dd x,\,0 \leq k \leq n\]
+    有唯一解，且由于 $ 1,x,\cdots,x^n $ 为 $ P_n $ 的一组基，故
+    \[\sum_{i=0}^n r_ip(x_i)=\int_a^b p(x)\dd x,\forall p\in P_n(x)\]  
+    成立
+\end{problem}
 \end{document}
