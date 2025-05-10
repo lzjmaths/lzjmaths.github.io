@@ -90,7 +90,7 @@ If P=NP, then if we can verify  proof in poly-time, we can also construct it in 
 \name{NP-complete}:  $ \mathcal{L} $ is NPC if 
 \begin{enumerate}[label=\arabic*)]
     \item  $ \mathcal{L}\in  $ NP 
-    \item  $ \forall  $  $ \mathcal{L}'\in  $ NP,  $ \mathcal{L}' \geq_p\mathcal{L} $ \ie  $ \mathcal{L}' $ can be reduced to  $ \mathcal{L} $ in poly-time.      
+    \item  $ \forall  $  $ \mathcal{L}'\in  $ NP,  $ \mathcal{L}' \leq_p\mathcal{L} $ \ie  $ \mathcal{L}' $ can be reduced to  $ \mathcal{L} $ in poly-time.      
 \end{enumerate} 
 
 Equivalently, if some NPC problems can be solved in poly-time, then P=NP.

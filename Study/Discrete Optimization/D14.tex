@@ -1,9 +1,11 @@
+%!TEX root = /lecture/Discrete_Optimistic.tex
+
 We define the \name{polynomial reduction}  $ M \leq _p L $ if 
 
 $ \exists  $ poly-time algorithm  $ A $ such that  $ \forall x\in \{0,1\}^* $,
 \begin{itemize}
-    \item (completeness)  $ x\in M\Rightarrow A(x)\in L $.
-\item (soundness)  $ x\not\in M $ $ \Rightarrow  $  $ A(x)\not\in L $   
+    \item (completeness)  $ x\in M $ returns YES $ \Rightarrow A(x)\in L $ returns YES.
+\item (soundness)  $ x\in M $ returns NO $ \Rightarrow  $  $ A(x)\in L $  returns NO.  
 \end{itemize} 
 
 Observed that if  $ M  $ is NP-Complete and  $ M \leq_p\mathcal L  $, then  $ L $ is NP-Hard.
