@@ -124,3 +124,12 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.44\else \numberline {5.44}Theorem\fi }{61}{theorem.5.44}%
 \contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.45\else \numberline {5.45}Fact\fi }{62}{fact.5.45}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.46\else \numberline {5.46}Definition\fi \thmtformatoptarg {SDP Statndard Form}}{62}{definition.5.46}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.47\else \numberline {5.47}Fact\fi }{63}{fact.5.47}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.48\else \numberline {5.48}Theorem\fi }{64}{theorem.5.48}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.49\else \numberline {5.49}Corollary\fi }{64}{corollary.5.49}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.2\else \numberline {5.5.2}Claim\fi }{64}{claim.5.5.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.50\else \numberline {5.50}Example\fi \thmtformatoptarg {Instance}}{64}{example.5.50}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.51\else \numberline {5.51}Fact\fi }{65}{fact.5.51}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.3\else \numberline {5.5.3}Claim\fi }{65}{claim.5.5.3}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.52\else \numberline {5.52}Proposition\fi \thmtformatoptarg {Fourier expansion}}{65}{proposition.5.52}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.53\else \numberline {5.53}Theorem\fi \thmtformatoptarg {Parseval's}}{65}{theorem.5.53}%
