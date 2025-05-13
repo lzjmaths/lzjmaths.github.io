@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  9 MAY 2025 16:55
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  13 MAY 2025 08:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1527,24 +1527,24 @@ Overfull \hbox (22.87813pt too wide) detected at line 118
  []
 
 ) (../D12.tex [38] [39] [40] [41] [42]) (../D13.tex [43] [44] [45]) (../D14.tex [46]
-Underfull \hbox (badness 1205) in paragraph at lines 38--39
+Underfull \hbox (badness 1205) in paragraph at lines 40--41
 [][]\T1/ppl/b/n/12 Theorem 5.15 \T1/ppl/m/n/12 (Max--Cov-er-age)\T1/ppl/b/n/12 . []\T1/ppl/m/it/12 De-cid-ing whether Max-Coverage=100% is NP-
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 53--57
+Underfull \hbox (badness 4024) in paragraph at lines 55--59
 []\T1/ppl/m/n/12 Completeness: If $\OML/cmm/m/it/12 I$ \T1/ppl/m/n/12 sat-is-fi-able, then $\U/matha/m/n/12 D\OML/cmm/m/it/12 ^^[ \OT1/cmr/m/n/12 : \U/matha/m/n/12 t\OML/cmm/m/it/12 x[]\U/matha/m/n/12 u Ñ t\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\U/matha/m/n/12 u$\T1/ppl/m/n/12 , choose
  []
 
 [47]) (../D15.tex [48]
-Package hyperref Info: bookmark level for unknown observation defaults to 0 on input line 14.
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 29.
+Package hyperref Info: bookmark level for unknown observation defaults to 0 on input line 16.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 31.
  [49] [50]) (../D16.tex [51] [52]) (../D17.tex [53] [54] [55]) (../D18.tex [56] [57] [58] [59]) (../D19.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 []\T1/ppl/m/n/12 Our goal is to par-ti-tion $\OML/cmm/m/it/12 V$ \T1/ppl/m/n/12 into $\U/matha/m/n/12 p\OML/cmm/m/it/12 A; B\U/matha/m/n/12 q$ \T1/ppl/m/n/12 to max-i-mize
  []
 
-[60] [61] [62] [63] [64] [65]) (../D20.tex) [66]
+[60] [61]) (../D20.tex [62] [63] [64] [65]) (../D21.tex) [66]
 runsystem(makeindex Discrete_Optimistic.idx)...executed.
 
  (./Discrete_Optimistic.ind [67
@@ -1567,10 +1567,10 @@ Package rerunfilecheck Info: File `Discrete_Optimistic.out' has not changed.
 (rerunfilecheck)             Checksum: 69A599F038A7850EA3A3C4300C801A1B;4723.
  ) 
 Here is how much of TeX's memory you used:
- 46467 strings out of 476683
- 1052212 string characters out of 5804047
+ 46472 strings out of 476683
+ 1052267 string characters out of 5804047
  1855018 words of memory out of 5000000
- 65751 multiletter control sequences out of 15000+600000
+ 65753 multiletter control sequences out of 15000+600000
  552349 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,16n,101p,746b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -1,0 +1,89 @@
+\begin{claim}
+    When  $ \rho\in [-1,0] $, 
+    \[\begin{aligned}
+        S_\rho(f)&=\sum_{s}\hat{f}(s)^2\cdot \rho^{|s|}\\
+        &=\rho\cdot\sum_{s}\hat{f}(s)^2\\
+        &=\rho \cdot \Ebb_{\vec{x}}[f(x)^2]
+    \end{aligned}\] 
+\end{claim}
+
+\begin{proof}[Proof of Claim \ref{claim: sdp_gap}]
+    Consider any  SDP solution 
+    \[\vec{f}:V\rightarrow \Rbb^{m-1}\]
+    \[\begin{aligned}
+        \mathrm{val}(\vec{f})&=\Ebb_{\vec{x},\vec{y}\sim \omega}\frac{1-\<\vec{f}(\vec{x}),\vec{f}(\vec{y})\>}{2}\\
+        &=\Ebb_{\vec{x},\vec{y}\sim \omega}\left[\frac{1}{2}-\frac{1}{2}\sum_{i=1}^m\f_i(\vec{x})f_i(\vec{y})\right]\\
+        &=\frac{1}{2}-\frac{1}{2}\sum_{i=1}^m\Ebb_{\vec{x},\vec{y}\sim \omega}[f_i(\vec{x})f_i(\vec{y})]\\
+        &=\frac{1}{2}-\frac{1}{2}\sum_{i=1}^mS_{\rho^*}(f_i)\\
+        & \leq \frac{1}{2}-\frac{\rho^*}{2}\sum_{i=1}^m\Ebb_{\vec{x}\sim V}[f_i(\vec{x})^2]\\
+        &=\frac{1}{2}-\frac{\rho^*}{2}\Ebb_{\vec{x}\sim V}\sum_{i=1}^m[f_i(\vec{x})^2]\\
+        &=\frac{1}{2}-\frac{1}{2}\rho^*
+    \end{aligned}\] 
+\end{proof}
+
+\subsection{3-Coloring}
+\begin{example}[3-Coloring]
+    Input:  $ G=(V,E) $, color  $ v\in V $ with  $ 3 $ colors so that there are no monochromatic edges.
+\end{example}
+\begin{example}[Min-3-Coloring]
+    For  $ 3 $-colorable graph, find a coloring with min number of colors. 
+\end{example}
+
+\begin{lemma}
+    Let  $ \delta $ be the degree of  $ G  $, then coloring  $ G  $ with  $ (\delta+1) $ colors is easy.  
+\end{lemma}
+\begin{claim}
+    Coloring  $ G  $ with  $ n  $ colors is easy.
+\end{claim}
+
+\paragraph{Widgerson's 3 vs.  $ O(\sqrt{n}) $ coloring algorithm}
+
+\paragraph{Case 1}  $ \exists v\in V $,  $ \deg(v)>\theta $. Then its neighbors  $ G(N(v)) $ are  $ 2 $-colorable.
+
+So color  $ \{v\}\cup N(v) $ with  $ 3 $ new colors.
+
+\paragraph{Case 2}  $ \delta \leq \theta $: color  $ G $ with  $ (\theta+1) $ colors.
+
+Then total number of colors used 
+\[3\cdot\frac{n}{\theta+1}+\theta+1\overset{\theta=\sqrt{n }}{=}O(\sqrt{n})\]
+
+\begin{lemma}
+    Let  $ G $ be  $ 3 $-colorable with degree  $ \delta $, then can efficiently color  $ G $ with   $ \delta^{\frac{1}{3}}\cdot \mathrm{poly}(\log n) $ colors.  
+\end{lemma}
+
+If the lemma is true, use the method in case 1, then the cost will be 
+\[O(\frac{n}{\theta})+O(\theta^{\frac{1}{3}})\overset{\theta=n^{3/4}}{=}O(b^{1/4})\]
+\paragraph{3-coloring SDP}  $ \<v_i,v_j\>=-\frac{1}{2},\,\forall (i,j)\in E $,  $ \|v_i\|^2=1 $,  $ \forall i\in V $.
+
+\paragraph{Extract a large independent set}
+
+One can efficiently find  $ S\subset V $ such that  $ S $ is an  $ IS $ and 
+\[\mathrm{Pr}[|S| \geq \frac{n}{\delta^{1/3}}\cdot \mathrm{poly}(\log n)] \geq \frac{1}{2}\] 
+
+\textbf{Alg}
+
+1. Sample  $ \vec{r}=(r_1,\cdots,r_n)\sim N(0,1)^m$.
+
+2. Let  $ S=\{i\in V:\<v_i,r\> \geq t\wedge \<v_j,r\><t,\forall (i,j)\in E\} $.
+
+Let \[ \alpha(t)=\dps\mathrm{Pr}_{\vec{r}}[\<v_i,\vec{r}\> \geq t] \]
+
+\[\beta(t)=\mathrm{Pr}_{\vec{r}}[\<\vec{r},\vec{v}_j\> \geq t\left|\<\vec{r},\vec{v}_i\> \geq t\right. \]
+where  $ (i,j)\in E $.
+
+\[E|S|=\sum_{i\in V}\alpah(t)\cdot \mathrm{Pr}[\<\vec{r},\vec{v}_j\><t,\forall (i,j)\in E\left|\<\vec{r},\vec{v}_i\> \geq t\right.] \geq \sum_{i\in V}\alpha(t)(1-\delta\cdot \beta(t))\]
+
+where 
+\[\alpha(t)=\mathrm{Pr}[r_1 \geq t]=Phi(t)\]
+\[\beta(t)=\mathrm{Pr}[-\frac{1}{2}r_1+\frac{\sqrt{3}}{2}r_2 \geq t|r_1 \geq t] \leq \mathrm{Pr}[\frac{\sqrt{3}}{2}r_2 \geq \frac{3}{2}t]=\Phi(\sqrt{3}t)\]
+
+\begin{claim}
+    For  $ t \geq 1 $,  $ \Phi(t)=\Theta(\frac{1}{t}\cdot e^{-t^2/2}) $.
+    
+\end{claim}
+
+Therefore,
+    \[\alpha(t) \geq \frac{c}{t}e^{-t^2/2}\]
+    \[\beta(t) \leq \frac{c'}{t}e^{-3t^2/2} \leq t^2O(\alpha(t)^3)\]
+    \[\Ebb|S|=n\cdot \frac{c}{t}e^{-t^2/2}(1-\delta t^2\cdot O(\alpha(t)^3)\]
+
