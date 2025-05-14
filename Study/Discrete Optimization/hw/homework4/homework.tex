@@ -372,7 +372,59 @@
     Here we end the proof.
 \end{problem}
 \begin{problem}
+  (a) Use the original greedy algorithm  $ \lceil \ln(n/\OPT)\rceil \cdot \OPT $ times, there are at most 
+  \[(1-1/\OPT)^{\lceil \ln(n/\OPT)\rceil \cdot \OPT}\cdot n \leq e^{-\ln(n/\OPT)}\cdot n=\OPT\]
+  elements that do not cover.
+
+  So suffices to find at most $ \OPT $  sets to cover those elements in polynomial time.
+
+  Here we obtain a  $ \lceil \ln(n/\OPT)\rceil+1 $-factor approximation algorithm.
   
+  (b) If  the optimum solution covers  $ c\times 100\% $ elements, denote  $ S $ as the set of elements that optimum solution covers.
+  
+  For  $ t $-step, there exists a set in optimum solution that covers  $ (1-\frac{1}{k})\cdot \text{ elements in  $ S $ uncovered} $.
+  
+  By induction, we can prove greedy algorithm covers  $(1-(1- \frac{1}{k})^t)\cdot c $ elements in  $ t $-step.
+  
+  Therefore, greedy algorithm returns a value larger than 
+  \[(1-(1-\frac{1}{k})^k)c  \geq (1-\frac{1}{e})c\]
+
+  So greedy algorithm is a  $ (1-\frac{1}{e}) $-factor approximation algorithm.
+  
+  (c) If  $ e_i $ is covered by  $ S_i $ in the solution, denote 
+  \[p(e_i)=\frac{\omega(S_i)}{\text{number of uncovered elements that  $ S_i $ would cover}}\]
+  Then 
+  \[\sum \omega(S_i)=\sum_{i=1}^n p(e_i)\]
+
+  We prove that if  $ e_i $ is covered in  $ k $-step, then  $ p(e_i) \leq \frac{\OPT}{n-k+1} $.
+  
+  If the optimal sets are  $ O_1,O_2,\cdots,O_{p} $,  then  $ \OPT=\dps\sum_{i=1}^p\omega( O_i) $.
+  
+  For any  $ O_i=\{x_k,x_{k-1},\cdots, x_1\} $, wlog, we assume the algorithm covers  $ x_k,x_{k-1},\cdots,x_1 $ in order.
+  
+  Then  at the start of the iteration in which the algorithm covers element  $ x_j $  of  $ O_i $, at least  $ i $ elements that do not covered in  $ O_i $. Since  $ p(x_i) $ takes  minimum in the equation, 
+  \[p(x_i) \leq \frac{\omega(O_i)}{i}\]
+  
+  Therefore,  $ \dps\sum_{i=1}^k p(x_i) \leq H_D\omega(O_i) $ 
+  % Now, assume the greedy algorithm has covered elements in  $ C $ so far. Then we know the uncovered elements  $ U\setminus C $,
+  % \[|U\setminus C| \leq \sum_{i=1}^p |O_i\cap (U\setminus C)\]  
+
+  % Since  $ p(e_i) $ takes minimum in its definition, \ie 
+  % \[p(e_i) \leq \frac{\omega(O_i)}{|O_i\cap (U\setminus C)|}\]
+  % Therefore,
+  % \[p(e_i)\cdot|O_i\cap (U\setminus C)| \leq \omega(O_i)\]
+  % So
+  % \[p(e_i)|U\setminus C| \leq p(e_i)\cdot\sum_{i=1}^p |O_i\cap (U\setminus C)| \leq \sum_{i=1}^p\omega(O_i)\]
+  % Hence, 
+  % \[p(e_i) \leq \frac{\OPT}{|U\setminus C|} \leq \frac{\OPT}{n-k+1}\]
+  
+  Then 
+  \[\mathrm{Val}=\sum_{i=1}^D p(e_i) \leq (1+\frac{1}{2}+\cdots+\frac{1}{D})\OPT\]
+
+  (d) Consider the set  $ [D] $ and  $ S_i=\{i\},S_{D+1}=[D] $. Equipped with 
+  \[\omega(S_i)=\frac{1}{i},i=1,2,\cdots, D,\omega(S_{D+1})=1+\epsilon\]
+
+  Then in  $ t $-step,  $ \dps\frac{1}{D-t+1}<\frac{1+\epsilon}{D-t+1} $, so algorithm chooses  $ S_{D-t+1} $. Therefore, the value of algorithm is  $ H_D $ but  $ \OPT=1+\epsilon $.     
 \end{problem}
 
 \begin{problem}
@@ -489,6 +541,36 @@
 \end{problem}
 
 \begin{problem}
+  Consider the verifier reads one of  $ 3-CNF $ uniformly and returns the result of this 3-CNF under the value given by prover. 
+
+  If there exists a GAP-3SAT  solution with value  $ 1 $, then  verifier always accepts.
+
+  If there is  a GAP-3SAT solution with value less than  $ s $, then  verifier accepts with probability less than  $ s $.
   
+  So  $ \mathrm{GAP-3SAT}_{1,s} $  $ \in \mathrm{PCP}_{1,s}[O(\log n),3] $.
+  
+  Therefore, for any  $ NP $ problem  $ \mathcal{L} $,  $ \mathrm{GAP-3SAT}_{1,s} $ NP-Hard  $ \Rightarrow  $  $ \mathcal{L} \leq _p \mathrm{GAP-3SAT}_{1,s} $.
+  
+  So 
+  \[\mathcal{L}\in \mathrm{PCP}_{1,s}[O(\log n),3] \leq _p\mathrm{PCP}_{1,\frac{1}{2}}[O(\log n),O(1)]\]
+
+  In the lecture we prove that  $ NP \geq _p\mathrm{PCP}_{1,\frac{1}{2}}[O(\log n),O(1)]  $.
+
+  So  $ NP=\mathrm{PCP}_{1,\frac{1}{2}}[O(\log n),O(1)] $. \ie PCP theorem holds. 
+\end{problem} 
+
+\begin{problem}
+  There is a counter-example for  $ U=\{u_1,u_2\},V=\{v_1,v_2\},K=L=4 $ and  $ G $ is fully connected. 
+$ [K],[L]\leftrightarrow \{u,v\}\times\{1,2\} $ 
+
+$ \pi_{(u_i,v_j)}=\{((u,i),(u,i)),((u,i'),(u,i)),((v,j),(v,j)),((v,j'),(v,j))\} $ where  $ \{i,i'\}=\{j,j'\}=\{1,2\} $  
+
+Clearly,  $ \OPT(H)=\frac{1}{2} $ since two edges from vertices in  $ V $ cannot be satisfied both.
+
+However,  $ \OPT(H^{\otimes 2})=\frac{1}{2} $.
+
+Let  $ \sigma((u_{i_1},u_{i_2}))=(((u,i_1),(v,i_1))) $,  $ \sigma((v_{j_2},v_{j_2}))=((u,j_1),(v,j_2)) $.  
+
+So verifier accepts if  $ i_1=j_2 $.
 \end{problem}
 \end{document}
