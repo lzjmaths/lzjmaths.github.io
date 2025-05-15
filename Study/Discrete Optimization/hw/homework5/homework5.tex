@@ -412,12 +412,81 @@
 \end{problem}
 
 \begin{problem}
+    (a) For a regular Label-Cover problem  $ G=(U,V,E) $ that every veritce in  $ U $ matches  $ k $ vertices in  $ V $,  $ |U|=|V|=n $ , consider the  $ k $-uniform hypergraph  $ H=(V',E') $ where  $ V'=E $ and  $ k $-tuples are all  $ [(u,v_1),(u,v_2),\cdots,(u,v_k)] $ for  $  (u,v_i)\in E   $.  $ [L'] $ now represents the value of $ (u,v_i) $, \ie    $ [L']=[L]\times [K] $.  $ [K]=[k+1] $. 
     
+    The maps are defined as: For the labeling  $ \sigma:[V]\rightarrow[L]\times [K] $,  $ \sigma(u,v_i)=(l,k) $. If  $ \pi_{(u,v_i)}(k)=l $ is matching in Labek-Cover problem, then we let  $ \pi_e^i(\sigma(u,v_i))=k+1 $. Otherwise, if  $ (l,k) $ does not satisfy the constraint, then we let  $ \pi_e^i(\sigma(l,k))=i $.
+    
+    So the constraint is weakly satisfied iff at least two edges in the  $ k $-tuples are satisfied in the constraint before. Also, the constraint is strongly satisfied iff all edges in the  $ k $-tuples are satisfied.
+    
+    Completeness is trivial since if there is some label in the Label-Cover Game satisfy all constraint, then it can be naturally induced in the hypergraph.
+
+    Soundness is because: Assume  $ \OPT \geq \epsilon $ in  $ k $-ary-Consistent-Labeling problem. Then we choose all edges  $ (u_i,v_j) $ that are satisfied in  the Label-Cover Game, denoted as  $ S $. There are at least  $ 2\epsilon n $ edges. Now we label each  $ u_i,v_j $ one by one.
+
+    Since the graph  $ G $ is regular, at most  $ 2k-1 $   edges in  $ S $ have common vertice with an edge in  $ S $.
+    
+    So each time we choose an arbitrary  $ e=(u,v)\in S $, label it with the label in  $ k $-ary-Consistent-Labeling and then we remove those edges in  $ S $ who intersects with  $ e $.
+    
+    In the end, for those vertices that have not been labeled yet, label it randomly.
+
+    Then at least  $ \frac{2\epsilon n}{2k}=\frac{\epsilon }{k}n $ edges are satisfied in Label-Cover-Game.
+    
+    Therefore  $ \OPT \geq \frac{\epsilon}{k} $ for Label-Cover Game.
+    
+    As a result, if  $ \OPT \leq \eta $ in Label-Cover Game, then  $ \OPT \leq k\eta $ in  $ k $-ary-Consistent-Labeling problem.
+    
+    Since  $ \mathrm{MAX-LC}_{1,\eta} $ is NP-Hard, to distingish instance with strong value $ 1 $ and weak value less than  $ k\eta $  $ k $-ary-Consistent-Labeling problem is NP-Hard  $ \forall \eta>0 $.
+    
+    Here we end the proof.
+
+    (b)
+
+
+
 \end{problem}
+\begin{problem}
+  Consider all values  $ d(r,v)\pmod {\frac{1}{2}} $. They divide  $ [0,\frac{1}{2}) $ into  $ |V|+1 $ pieces of interval.(including the interval  $ [v,v] $ if exists) If we choose  $ \theta $ in each interval, edges that will be removed are the same, so the cost is the same.
+  
+  As a result, we can try  $ \theta $ in each interval and find the minimum cost. This will be less than  $ 2\OPT $.  
+\end{problem}
+\begin{problem}
+  (a) If a connected component has diameter at most  $ k $ in the  $ (10,0.1,1,1) $-expandar  $ G $, we prove that it has at most  $ 10^k $ vertices.
+  
+  By induction,  $ k=1 $ is trivial. Assume  $ k-1 $ holds for it. Assume subgraph  $ G' $ has the maxmimum number of vertices. There isn't any vertex in  $ G' $ that has distance less than  $ k-1 $ with each vertex  in $ G' $ and also connects with other vertex $ u $  outside. Otherwise,  $ u $ can be added to  $ g' $, which causes contradiction with the maximum property.
+  
+  Then for  $ k $, any vertex in the graph with diameter  $ k-1 $ has degree  $ 10 $ so at most  $ 10^k $ vertices are connected to the graph. Since  any vertex beyond  $ G' $ has distance larger than  $ k $ with   some vertices in  $ G' $  as we proved before, the expanded graph has at most  $ 10^k $ vertices.
+  
+  So each connected component has at most  $ 10^{1/2\log_{10}n}=n^{1/2} $ vertices in this problem.
+  As  $ n $ large enough,  $ n^{1/2}<0.1n $. For those connected components  $ S_1,\cdots,S_k $, removed edges are 
+  \[|\partial S_1\cup \partial S_2\cup\cdots\partial S_k|=\frac{1}{2}\sum_{t=1}^k|\partial S_t| \geq \frac{1.01}{2}\sum_{t=1}^k|S_t|>0.5 n\]
+  So we must have deleted  $ \Omega(n) $ edges.     
+\end{problem}
+\begin{problem}
+  
+\end{problem}
+\begin{problem}
+  
+\end{problem}
+\begin{problem}
+  
+\end{problem}
+\begin{problem}
+   $ f:\{\pm 1\}^n\rightarrow \Rbb $ is a linear combination of function  $ f:\{\pm 1\}^n\rightarrow \{\pm 1\} $, which can be written in the form of linear combination of Fourier base functions:
+   \[f(x)=\sum_{S\subset [n]}\hat{f}(S)\chi_S(x)\]
+   where  $ \dps\chi_S(x)=\prod_{i\in S}x_i $ is a multilinear polynomial.
+   
+   So it is expressible as a multilinear polynomial.
 
-
+   The uniqueness is because, if there is some multilinear polynoimal  $ g $ such that  $ g(x)=f(x),\forall x\in\{\pm 1\} $. Then using Parserval's Theorem we obtain that 
+   \[\sum_{S\subset [n]}\hat{(f-g)}(S)^2=\Ebb_{\vec{x}\sim\{\pm 1\}^n}(f(\vec{x})-g(\vec{x}))^2=0\]
+   So  $ f-g=\dps\sum_{S\subset [n]}\hat{(f-g)}(S)\chi_S=0 $.   
+\end{problem}
 \begin{problem}
     \[\<f,g\>=\<\sum_{S\subset [n]}\hat{f}(S)\chi_S,\sum_{S\subset [n]}\hat{f}(S)\chi_S\>=\sum_{S_1,S_2\subset [n]}\hat{f}(S_1)\hat{g}(S_2)\<\chi_{S_1},\chi_{S_2}\>=\sum_{S\subset [n]}\hat{f}(S)\hat{g}(S)\]
 
+    However, if we let  $ f=\chi_{\{x\}},g=\chi_{\{y\}},h=\chi_{\{x,y\}} $, then 
+    \[\Ebb_{\vec{t}}\chi_{\{x\}}(t)\chi_{\{y\}}(t)\chi_{\{x,y\}}(t)=\Ebb_{\vec{t}}t_x^2t_y^2\]
+    But 
+    \[\hat{f}(S)\hat{g}(S)\hat{h}(S)\equiv 0,\,\forall S\subset [n]\]
+    due to they are Fourier basis.
 \end{problem}
 \end{document}

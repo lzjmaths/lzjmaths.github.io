@@ -357,31 +357,61 @@
         &=hy'(x)-h(f(x,y)+h\frac{\partial f}{\partial x}+h\frac{\partial f}{\partial y})+O(h^2)\\
         &=O(h^2)
     \end{align*}
-    所以一阶收敛
+    所以一阶相容
+
+    \[y_{n+1}=y_n+f(x_{n+1},y_{n+1})h\]
+    \[y(x_{n+1})=y(x_n)+f(x_{n+1},y(x_{n+1}))h+O(h^2)\]
+    则
+    \[\begin{aligned}
+        e_{n+1}-e_n&=f(x_{n+1},y_{n+1})h-f(x_{n+1},y(x_{n+1}))h+O(h^2)\\
+        & \leq hL|e_n|+hO(h)
+    \end{aligned}\]
+    由引理知
+    \[E(h) \leq O(h)\]
+    故他1阶收敛
+
 \end{problem}
 \begin{problem}
     \[k_1=h\frac{\dd y}{\dd x}\]
     \begin{align*}
         k_2&=hf(x+\alpha h,y+\alpha k_1)\\
         &=h\left[f(x,y)+h\alpha\frac{\partial f}{\partial x}+k_1\alpha\frac{\partial f}{\partial y}+\frac{h^2\alpha^2}{2}\left(\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tilde{k}_1^2+2\frac{\partial^2 f}{\partial x\partial y}\tilde{k}_1\right)\right]+O(h^4)\\
-        &=hy'(x)+h^2\alpha y''(x)+\frac{1}{2}h^3\alpha^2y'''(x)+O(h^4)
+        &=hy'(x)+h^2\alpha y''(x)+\frac{1}{2}h^3\alpha^2\left(\frac{\partial ^2 f}{\partial x^2}+2y'\frac{\partial ^2 f}{\partial x\partial y}+(y')^2\frac{\partial ^2 f}{\partial y^2}\right)+O(h^4)
     \end{align*}
     where  $ \tilde{k}_1=k_1/h $ 
     \begin{align*}
         k_3&=hf(x+(1-\alpha) h,y+(1-\alpha) k_2)\\
         &=h\left[f(x,y)+h(1-\alpha)\frac{\partial f}{\partial x}+k_2(1-\alpha)\frac{\partial f}{\partial y}+\frac{h^2(1-\alpha)^2}{2}\left(\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tilde{k}_2^2+2\frac{\partial^2 f}{\partial x\partial y}\tilde{k}_2\right)\right]+O(h^4)\\
-        &=hy'(x)+h^2(1-\alpha) y''(x)+\frac{1}{2}h^3(1-\alpha)^2y'''(x)\\
+        &=hy'(x)+h^2(1-\alpha) y''(x)+\frac{1}{2}h^3(1-\alpha)^2\left(\frac{\partial ^2 f}{\partial x^2}+2y'\frac{\partial ^2 f}{\partial x\partial y}+(y')^2\frac{\partial ^2 f}{\partial y^2}\right)\\
         &+h^3(1-\alpha)\alpha y''(x)\frac{\partial f}{\partial y}\\
         &+O(h^4)
     \end{align*}
 
     where  $ \tilde{k}_2=k_2/h $ 
 
+    注意到
+    \[y'''(x)=\left(\frac{\partial f}{\partial x}+y'(x)\frac{\partial f}{\partial y}\right)'=\frac{\partial ^2 f}{\partial x^2}+2y'\frac{\partial ^2 f}{\partial x\partial y}+(y')^2\frac{\partial ^2 f}{\partial y^2}+y''\frac{\partial f}{\partial y}\]
+
     所以
     \[\begin{aligned}
         T(x,y;h)&=y(x+h)-y(x)-\frac{1}{2}(k_2+k_3)\\
         &=y'(x)h+y''(x)\frac{h^2}{2}+y'''(x)\frac{h^3}{6}-\frac{1}{2}(k_2+k_3)+O(h^4)\\
-        &=
+        &=\frac{h^3}{6}y'''(x)+O(h^4)-O(h^3)
     \end{aligned}\]
+    故他是2阶相容
+\end{problem}
+\begin{problem}
+    \[\begin{aligned}
+        T(x,y;h)&=y(x+h)-y(x)-\frac{h^2}{2}g(x+\frac{1}{3}h,y+\frac{1}{3}hf(x,y))-hf(x,y)\\
+        &=hy'(x)+\frac{h^2}{2}y''(x)+\frac{h^3}{6}y'''(x)-\frac{h^2}{2}\left[g(x,y)+\frac{1}{3}h\left(\frac{\partial ^2 f}{\partial x^2}+2y'\frac{\partial ^2 f}{\partial x\partial y}+(y')^2\frac{\partial ^2 f}{\partial y^2}+y''\frac{\partial f}{\partial y}\right)\right]-hy'+O(h^4)\\
+        &=O(h^4)
+    \end{aligned}\]
+    故他是3阶相容。
+
+    类似问题2的操作，我们很容易将定理8.3.2扩展到3阶相容。即由
+    \[|e_{n+1}| \leq (1+hL)|e_n|+h\alpha(h)\]
+    结合引理知
+    \[|e_n| \leq \frac{\alpha(h)}{L}(e^{L(b-a)}-1)=O(h^3)\]
+    故他是3阶收敛
 \end{problem}
 \end{document}
