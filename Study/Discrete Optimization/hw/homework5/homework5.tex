@@ -453,12 +453,41 @@
   
   By induction,  $ k=1 $ is trivial. Assume  $ k-1 $ holds for it. Assume subgraph  $ G' $ has the maxmimum number of vertices. There isn't any vertex in  $ G' $ that has distance less than  $ k-1 $ with each vertex  in $ G' $ and also connects with other vertex $ u $  outside. Otherwise,  $ u $ can be added to  $ g' $, which causes contradiction with the maximum property.
   
-  Then for  $ k $, any vertex in the graph with diameter  $ k-1 $ has degree  $ 10 $ so at most  $ 10^k $ vertices are connected to the graph. Since  any vertex beyond  $ G' $ has distance larger than  $ k $ with   some vertices in  $ G' $  as we proved before, the expanded graph has at most  $ 10^k $ vertices.
-  
-  So each connected component has at most  $ 10^{1/2\log_{10}n}=n^{1/2} $ vertices in this problem.
-  As  $ n $ large enough,  $ n^{1/2}<0.1n $. For those connected components  $ S_1,\cdots,S_k $, removed edges are 
-  \[|\partial S_1\cup \partial S_2\cup\cdots\partial S_k|=\frac{1}{2}\sum_{t=1}^k|\partial S_t| \geq \frac{1.01}{2}\sum_{t=1}^k|S_t|>0.5 n\]
-  So we must have deleted  $ \Omega(n) $ edges.     
+Then for  $ k $, any vertex in the graph with diameter  $ k-1 $ has degree  $ 10 $ so at most  $ 10^k $ vertices are connected to the graph. Since  any vertex beyond  $ G' $ has distance larger than  $ k $ with   some vertices in  $ G' $  as we proved before, the expanded graph has at most  $ 10^k $ vertices.
+
+So each connected component has at most  $ 10^{1/2\log_{10}n}=n^{1/2} $ vertices in this problem.
+As  $ n $ large enough,  $ n^{1/2}<0.1n $. For those connected components  $ S_1,\cdots,S_k $, removed edges are 
+\[|\partial S_1\cup \partial S_2\cup\cdots\partial S_k|=\frac{1}{2}\sum_{t=1}^k|\partial S_t| \geq \frac{1.01}{2}\sum_{t=1}^k|S_t|>0.5 n\]
+So we must have deleted  $ \Omega(n) $ edges.   
+
+% (b) For any  graph  $ G $, we prove that we can choose a subgraph  $ H $ satisfying:
+% \begin{enumerate}
+%     \item  $ \forall v,u\in H $, distance between  $ v  $ and  $ u $ is larger than  $ k $  
+%     \item For any vertex  $ x $ not in  $ H $, there exists  $ v\in H $ such that distance between  $ x $ and  $ v $  $  \leq k $  
+% \end{enumerate}
+
+% By induction, for small graph, it is trivial.
+
+% For the graph  $ G $, and a vertex  $ t $ in  $ G $. Choose a subgraph  $ H $ in  $ G\setminus \{t\} $ satisfying 1. and 2. 
+
+% Certainly,  $ H $ satisfies 1. in  $ G $.
+
+% If  $ H  $ doesn't satisfies  2. in  $ G $, then for any  $ v\in H $, distance between  $ t $ and  $ v $ is larger than  $ k $. Add  $ t $ into  $ H $. Then  $ H'=H\cup\{t\} $ satisfies 2 and 
+% for any  $ v\in H $,  distance between  $ t $ and  $ v $ is larger than  $ k $, hence satisfies 1.
+
+% As a result, for a  $ (10,0.1,1.1) $-expandar graph, there exists a subgraph  $ H $ satisfying 1. and 2.
+
+Now we set the pair  $ (s_i,t_i) $ to be all   $ (u,v) $ where  $ u,v\in G $ and distance between  $ u $ and  $ v $ is  $ k $.
+
+Then for any possible connected component in  multicut, vertices  $ u,v $ in it have  distance  is less than  $ k $.
+
+For a  $ (10,0.1,1.1) $-expandar graph, by (a)  we removed at least  $ \frac{1}{2}n $ if  $ k=\frac{1}{2}\log_{10}n $.
+
+However, in LP case, we can set   $ x_e=\frac{1}{k} $ for any edge  $ e $. Then the cost will be 
+\[\frac{1}{k}\cdot |E|=\frac{5}{k}|V|=\frac{5n}{k}\]
+
+So the integral gap is  $ \Omega(\log n) $. 
+
 \end{problem}
 \begin{problem}
   
