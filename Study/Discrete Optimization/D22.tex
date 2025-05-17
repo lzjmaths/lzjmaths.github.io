@@ -1,0 +1,123 @@
+\subsection{Sparsest Cut}
+\begin{example}[Sparsest Cut]
+    Input: undirected  $ G=(V,E,c),c:E\rightarrow \Rbb_{ \geq 0} $. 
+
+    Undirected demand  $ G_D=(V,E,D) $,  $ D:F\rightarrow \Rbb_{ \geq 0} $. 
+    
+    Goal: minimize sparsity   $ \Phi(S)=\dps\frac{c(S,\bar{S})}{D(S,\bar{S})}, \, S\subset V $. 
+\end{example}
+
+\paragraph{Uniform Sparsest cut}  $ G_D $ complete graph,  $ D\equiv 1 $.
+
+\[\Phi_U(S)=\dps\frac{c(S,\bar{S})}{|S|\cdot |\bar{S}|} \]
+
+\paragraph{Graphic expansion}
+
+Define  $ \phi(S)=\dps\frac{c(S,\bar{S})}{|S|} $, when  $ |S| \leq \frac{n}2 $ 
+
+we have
+\[\frac{1}{n}\phi(S)=\frac{c(S,\bar{S})}{|S|\cdot n} \leq \Phi_U(S) \leq \frac{c(S,\bar{S})}{|S|\cdot \frac{n}{2}}=\frac{2}{n}\phi(S)\]
+\[\phi(S)=\min_{|S|\cdot |\bar{S}| \leq \frac{n}{2}}\{\phi(S)\}\]
+
+So those problems are related.
+
+\subsubsection{$ O(\log n) $-approximation for sparsest cut}
+Nowadays, SDP-based algorithm can achieve  $ O(\sqrt{\log n}) $ 
+
+\paragraph{cut metric} Fix  $ (S,\bar{S}) $. Let 
+\[\begin{aligned}
+    \tilde{x}_{ij}&=1[(i,j)\text{ cut by }(S,\bar{S})]\\
+    &=|1[i\in S]-1[j\in S]|
+\end{aligned}\] 
+$ \{\tilde{x}_{ij}\} $ is a metric. 
+
+Let  $ x_{ij}=\dps\frac{\tilde{x}_{ij}}{D(S,\bar{S})} $, then 
+\begin{enumerate}[label=\arabic*)]
+    \item  $ \{\tilde{x}_{ij}\} $ is also a metric.
+    \item  $ \dps\sum_{(i,j)\in F}D(i,j)x_{ij}=1 $.  
+\end{enumerate} 
+
+
+Therefore, 
+\[\sum_{(i,j)\in E}c(i,j)\cdot x_{ij}=\Phi(S)\]
+
+\paragraph{LP relaxation}
+
+Minimize  $ \dps\sum_{(i,j)\in E}c(i,j)x_{ij} $.
+
+Subject to  $ \dps\sum_{(i,j)\in F}D(i,j)x_{ij}=1 $. 
+
+where  $ x_{ij} \geq 0 $,  $ x_{ij}+x_{jk} \geq x_{ik} $,  $ \forall i,j,k\in V $.
+
+\begin{definition}[Metric Embedding]
+    $ (V,d) $ embeds into  $ l_p(p \geq 1) $ with distortion  $ \alpha \geq 1 $. If  $ \exists \vec{f}:V\rightarrow \Rbb^K $ such that 
+\[\forall i,j\in V,\|\vec{f}(i)-\vec{f}(j)\|_p \leq d(i,j) \leq \alpha\|\vec{f}(i)-\vec{f}(j)\|_p\]
+\end{definition}
+\begin{lemma}
+    If we can embed  $ (V,\{x_{i,j}\}) $ into  $ l_1 $ with distortion  $ \alpha $, then  
+    $ \exists (S,\bar{S}) $, \st  $ \Phi(S) \leq \alpha \mathrm{LP}  $    
+\end{lemma}   
+\begin{proof}
+    Assume  $ \vec{f} \geq \vec{0} $ WLOG.
+    
+    Let  $ M=\dps\max_{i,k\in [K]}\{f_k(i)\} $.
+    
+    "Threshold cut":  $ S_{k,\theta}=\{i\in V:f_k(i) \geq \theta\} $. 
+
+    Consider  $ k\sim [K] $,  $ \theta\sim \mathrm{Uniform} $  
+
+    
+    \begin{align*}
+        \mathrm{Pr}[(i,j)\text{ cut }]&=\frac{1}{K}\sum_{k=1}^K\mathrm{Pr}[\theta\in [f_k(i),f_k(j)]]\\
+        &=\frac{1}{k}\sum_{k=1}^K|f_k(i)-f_k(j)| 
+    \end{align*}
+
+    \begin{align*}
+        \Ebb[c(S_{k,\theta}),\bar{S}_{k,\theta}]&=\sum_{(i,j\in E)}c(i,j)\cdot \mathrm{Pr}[(i,j)\text{ cut}]\\
+        &=\frac{1}{KM}\sum_{(i,j)\in E}\sum_{k=1}^K|f_k(i)-f_k(j)|\cdot c(i,j)\\
+        &=\frac{1}{KM}\sum_{(i,j)\in E}\|\vec{f}(i)-\vec{f}(j)\|_1\cdot c(i,j)\\
+        & \leq \frac{1}{KM}\sum_{(i,j)\in E}x_{ij}c(i,j)
+    \end{align*}
+    \begin{align*}
+        \Ebb[D(S_{k,\theta},\bar{S}_{k,\theta})]&=\frac{1}{KM}\sum_{(i,j)\in F}\|\vec{f}(i)-\vec{f}(j)\|_1D(i,j)\\
+        & \geq \frac{1}{\alpha\cdot KM}\sum_{(i,j)\in F}x_{ij}D(i,j)
+    \end{align*}
+    Then 
+    \[\frac{\Ebb[c(S_{k,\theta},\bar{S}_{k,\theta})]}{\Ebb(D(S_{k,\theta},\bar{S}_{k,\theta}))} \leq \alpha\frac{\sum_{(i,j)}x_{ij}c(i,j)}{\sum_{(i,j)}x_{ij}D(i,j)}=\alpha \mathrm{LP}\]
+\end{proof}
+
+\begin{theorem}[Bourgain' 1985]
+    Any  $ n $-point metric embeds into  $ l_1 $ with distortion  $ \alpha=O(\log n) $.   
+\end{theorem}
+\begin{theorem}[LLR 1995]
+    Any  $ n $-point metric embeds into  $ l_p $,  $ p\in [1,+\infty] $ with  $ \alpha=O(\log n) $ and  $ O(\log ^2 n) $ dimensions     
+\end{theorem}
+\paragraph{Embed tree into  $ l_1 $} Any tree  $ T=(V,E,d) $ isometrically embeds into  $ l_1 $.
+
+By induction,  $ n=2 $, let  $ f(v_1)=0,f(v_2)=d(v_1,v_2) $.
+
+Induction step: If  $ T=T'\cup\{z\} $,  $ \vec{f}' $ embeds  $ T' $  into  $ l_1 $ for all  $ v $ in  $ T' $, where $ \omega=d(u,v) $,  $ (u,v)\in E $.  
+
+\[\vec{f}(v)=(\vec{f}'(v),0),\vec{f}(z)=(\vec{f}'(u),\omega)\] 
+
+To prove this theorem, we want to reduce to the case of trees.
+For metric  $ (V,d) $, our goal:  $ \exists $  distribution of trees  $ \mathcal{D} $  such that 
+\[\Ebb_{T\sim \mathcal{D}}[d_T(u,v)] \leq d(u,v) \leq \alpha\Ebb_{T\sim \mathcal{D}}[d_T(u,v)]\]
+
+\begin{theorem}
+    For any  $ (V,d) $,  $ \exists  $ distribution  $ \mathcal{D} $ over trees, such that  $ \alpha=O(\log n) $, and 
+    \begin{enumerate}[label=\arabic*)]
+        \item  $ \dps\frac{1}{\alpha} \leq \Ebb_{T\sim \mathcal{D}}[d_T(u,v)] \leq d(u,v) $,  $ \forall u,v\in V $.
+        \item  $ d(u,v) \leq d_T(u,v) $,  $ \forall u,v $,  $ T\in \Supp(\mathcal D) $     
+    \end{enumerate}   
+\end{theorem}
+
+\begin{theorem}[Low-Diameter Decomposition]
+    For  $ (V,d) $, radius  $ r $,  $ \exists  $ random partition  $ \{S_v\}_{v\in V} $ such that 
+    \begin{enumerate}[label=\arabic*)]
+        \item  $ \forall v\in V $,  $ u\in S_v $,  $ d(u,v) \leq r $
+        \item For each  $ (u,v) $ such that  $ d(u,v) \leq r/4 $, 
+        \[\mathrm{Pr}[(u,v)\text{ cut}] \leq \frac{d(u,v)}{r}\cdot O\left(\log \frac{|B(u,2r)|}{|B(u,r/4)|}\right)\]
+    \end{enumerate}    
+    
+\end{theorem}

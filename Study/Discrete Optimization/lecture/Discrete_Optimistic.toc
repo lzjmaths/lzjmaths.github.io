@@ -53,13 +53,13 @@
 \contentsline {paragraph}{Observation}{48}{section*.19}%
 \contentsline {subsection}{\numberline {5.4}Label-Cover Games}{51}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Paralled Repetition}{52}{subsubsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.5}Multicut}{56}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.5}Multicut}{57}{subsection.5.5}%
 \contentsline {subsubsection}{\numberline {5.5.1}Multicut on Trees}{57}{subsubsection.5.5.1}%
 \contentsline {paragraph}{Rounding}{58}{section*.20}%
 \contentsline {subsubsection}{\numberline {5.5.2}Multicut on General Graphs}{58}{subsubsection.5.5.2}%
 \contentsline {paragraph}{Algorithm}{59}{section*.21}%
 \contentsline {subsubsection}{\numberline {5.5.3}Max-cut}{60}{subsubsection.5.5.3}%
-\contentsline {paragraph}{IP}{60}{section*.22}%
+\contentsline {paragraph}{IP}{61}{section*.22}%
 \contentsline {paragraph}{Strengthened LP}{61}{section*.23}%
 \contentsline {paragraph}{Sherali-Adams}{61}{section*.24}%
 \contentsline {paragraph}{IP'}{62}{section*.25}%
@@ -67,7 +67,7 @@
 \contentsline {paragraph}{Semi-definite Programming relaxation}{62}{section*.27}%
 \contentsline {paragraph}{Max-Cut SDP in matrix form}{62}{section*.28}%
 \contentsline {paragraph}{Separation Oracle}{62}{section*.29}%
-\contentsline {paragraph}{Goemams-Williamson Rounding}{62}{section*.30}%
+\contentsline {paragraph}{Goemams-Williamson Rounding}{63}{section*.30}%
 \contentsline {paragraph}{Analysis}{63}{section*.31}%
 \contentsline {paragraph}{Integrality Gap}{63}{section*.32}%
 \contentsline {paragraph}{Embedded graph}{63}{section*.33}%
@@ -75,6 +75,19 @@
 \contentsline {paragraph}{Algorithmic Gap}{64}{thmt@dummyctr.dummy.131}%
 \contentsline {paragraph}{Fourier Analysis of Boolean Function}{65}{section*.36}%
 \contentsline {paragraph}{Noise Stability}{66}{section*.37}%
-\contentsline {section}{Index}{67}{section*.38}%
-\contentsline {section}{Important Theorems}{68}{section*.39}%
-\contentsline {section}{Important Examples}{69}{section*.40}%
+\contentsline {subsection}{\numberline {5.6}3-Coloring}{68}{subsection.5.6}%
+\contentsline {paragraph}{Widgerson's 3 vs. $ O(\sqrt {n}) $ coloring algorithm}{68}{section*.38}%
+\contentsline {paragraph}{Case 1}{68}{section*.39}%
+\contentsline {paragraph}{Case 2}{68}{section*.40}%
+\contentsline {paragraph}{3-coloring SDP}{68}{section*.41}%
+\contentsline {paragraph}{Extract a large independent set}{69}{section*.42}%
+\contentsline {subsection}{\numberline {5.7}Sparsest Cut}{70}{subsection.5.7}%
+\contentsline {paragraph}{Uniform Sparsest cut}{70}{section*.43}%
+\contentsline {paragraph}{Graphic expansion}{70}{section*.44}%
+\contentsline {subsubsection}{\numberline {5.7.1}$ O(\log n) $-approximation for sparsest cut}{70}{subsubsection.5.7.1}%
+\contentsline {paragraph}{cut metric}{70}{section*.45}%
+\contentsline {paragraph}{LP relaxation}{71}{section*.46}%
+\contentsline {paragraph}{Embed tree into $ l_1 $}{72}{section*.47}%
+\contentsline {section}{Index}{74}{section*.48}%
+\contentsline {section}{Important Theorems}{75}{section*.49}%
+\contentsline {section}{Important Examples}{76}{section*.50}%
