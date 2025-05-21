@@ -490,13 +490,87 @@ So the integral gap is  $ \Omega(\log n) $.
 
 \end{problem}
 \begin{problem}
+  (a) 
+  \[\begin{aligned}
+    \Ebb(\text{cut value})&=\sum_{(i,j)\in E}\omega_{ij}\cdot\frac{\arccos \<v_i,v_j\>}{\pi}\\
+    &=\sum_{(i,j)\in E}\omega_{ij}-\sum_{(i,j)\in E}\frac{\frac{\pi}{2}+\arcsin \<v_i,v_j\>}{\pi}\\
+    & \geq \sum_{(i,j)\in E}\omega_{ij}-\beta\cdot\sum_{(i,j)\in E}\omega_{ij}\sqrt{\frac{1+\<v_i,v_j\>}{2}}\\ 
+    & \geq \sum_{(i,j)\in E}\omega_{ij}-\beta\left(\sum_{(i,j)\in E}\omega_{ij}\frac{1+\<v_i,v_j\>}{2}\right)^{1/2}\left(\sum_{(i,j)\in E}\omega_{ij}\right)^{1/2}\\
+    &=1-\beta (1-\mathrm{SDP})^{1/2}\\
+    & \geq 1-\beta(1-\OPT)^{1/2}
+  \end{aligned}\]
+
+  where  $ \beta=\sup_{\alpha\in(-1,1)}\frac{\frac{\pi}{2}+\arcsin \alpha}{\sqrt{1+\alpha}}<+\infty $ by L'hospital rule.
+
+  Therefore, it is a  $ 1-\epsilon $ vs.  $ 1-\beta\sqrt{\epsilon} $ search algorithm.
   
+  (b)
+
+  Similar to max-cut. If we set  $ \mathbb{F}_{2}=\{\pm 1\} $,  then 
+  \[\frac{1-bx_ix_j}{2}=\begin{cases}
+    1&x_i\oplus x_j=b\\
+    0&x_i\oplus x_j\neq b
+  \end{cases}\]
+  where  $ 1\oplus 1=-1\oplus -1=-1,1\oplus -1=1\oplus 1=1  $.
+  
+  So the problem is to maximize the objective 
+  \[\sum_{(i,j)\in E}\omega_{ij}\frac{1-b_{ij}x_ix_j}{2}\]
+
+  Similarly, we set the SDP relaxation:
+  \[\min\sum_{(i,j)\in E}\omega_{ij}\frac{1-b_{ij}\<v_i,v_j\>}{2}\]
+  conditioned on  $ \|v_i\|=1 $.
+  
+  After finding a minimum, we design a randomize algorithm as follows:
+
+  Uniformly sample  $ \vec{r}\sim S^{n-1} $.
+  
+  Set  $ x_i=\sgn\<\vec{r},\vec{v}_i\> $.
+  
+  Then 
+  \[\begin{aligned}
+    \Ebb(\text{cut value})&=\sum_{(i,j)\in E}\omega_{ij}\cdot\frac{\arccos b_{ij}\<v_i,v_j\>}{\pi}\\
+    &=\sum_{(i,j)\in E}\omega_{ij}-\sum_{(i,j)\in E}\frac{\frac{\pi}{2}+\arcsin b_{ij}\<v_i,v_j\>}{\pi}\\
+    & \geq \sum_{(i,j)\in E}\omega_{ij}-\beta\cdot\sum_{(i,j)\in E}\omega_{ij}\sqrt{\frac{1+b_{ij}\<v_i,v_j\>}{2}}\\ 
+    & \geq \sum_{(i,j)\in E}\omega_{ij}-\beta\left(\sum_{(i,j)\in E}\omega_{ij}\frac{1+b_{ij}\<v_i,v_j\>}{2}\right)^{1/2}\left(\sum_{(i,j)\in E}\omega_{ij}\right)^{1/2}\\
+    &=1-\beta (1-\mathrm{SDP})^{1/2}\\
+    & \geq 1-\beta(1-\OPT)^{1/2}
+  \end{aligned}\]
+
+  where  $ \beta=\sup_{\alpha\in(-1,1)}\frac{\frac{\pi}{2}+\arcsin \alpha}{\sqrt{1+\alpha}}<+\infty $ by L'hospital rule.
+
+  Therefore, it is a  $ 1-\epsilon $ vs.  $ 1-\beta\sqrt{\epsilon} $ search algorithm.
+
+  % If  $ \dps\frac{\arccos \alpha}{\pi} \geq 1-\epsilon $, then  $ \alpha \leq \cos(1-\epsilon )\pi $.  We prove that 
+  % \[\frac{\arccos\alpha}{\pi} \geq (1-\sqrt{\epsilon})\frac{1-\alpha}{2}\] 
+  % \[\Leftrightarrow \frac{\arccos\alpha}{\pi}+\frac{1-\sqrt{\epsilon}}{2}\alpha \geq \frac{1-\sqrt{\epsilon}}{2}\]
+  % The derivative on the right hand side is 
+  % \[\begin{aligned}
+  %   \quad\frac{-\frac{1}{\sqrt{1-\alpha^2}}}{\pi}+\frac{1-\sqrt{\epsilon}}{2}  &\leq  0\\
+  %   \Leftrightarrow 1-\alpha^2 \geq \frac{1}{\left(\frac{1-\sqrt{\epsilon}}{2}\right)^2\pi^2}
+  % \end{aligned}\]
+  % Suffices to prove 
+  % \[1-\cos^2(1-\epsilon)\pi \geq \frac{1}{\left(\frac{1-\sqrt{\epsilon}}{2}\right)^2\pi^2}\]
+  % \[\Leftrightarrow \sin^2(1-\epsilon)\pi\cdot\left(\frac{1-\sqrt{\epsilon}}{2}\right)^2\pi^2\]
+  % Noticed that 
+  % \[\sin^2(1-\epsilon)\pi\cdot\left(\frac{1-\sqrt{\epsilon}}{2}\right)^2\pi^2\leq \epsilon^2\pi^2\cdot \left(\frac{1-\sqrt{\epsilon}}{2}\right)^2\pi^2 \leq (\frac{2}{27})^2\cdot \pi^4<1\]
+
+  % So 
+  % \[\frac{\arccos\alpha}{\pi}+\frac{1-\sqrt{\epsilon}}{2}\alpha \geq 1-\epsilon+\frac{1-\sqrt{\epsilon}}{2}\cos(1-\epsilon)\pi \geq 1-\sqrt{\epsilon}+\frac{1-\sqrt{\epsilon}}{2}\cos(1-\epsilon)\pi\geq 1-\sqrt{\epsilon} \geq \frac{1-\sqrt{\epsilon}}{2}\]
+
+  % Therefore, 
+  % \[\Ebb(\text{cut value})=\sum_{(i,j)\in E}\omega_{ij}\cdot\frac{\arccos \<v_i,v_j\>}{\pi} \geq \sum_{(i,j)\in E}\]
+
 \end{problem}
 \begin{problem}
   
 \end{problem}
 \begin{problem}
+  hyperplane cuts  $ \frac{\alpha}{\pi} $ edges in  $ G_d $ with angle  $ \alpha $.
   
+  Then totally, hyperplane cuts 
+  \[\frac{\int_{\arccos\rho^*}^\pi \sin^{d-2}\alpha\frac{\alpha}{\pi}\dd \alpha}{\int_{\arccos\rho^*}^\pi\sin^{d-2}\alpha\dd \alpha}<\frac{\int_{\arccos\rho^*}^\pi(\pi-\alpha)^{(d-2)/2}\frac{\alpha}{\pi}\dd\alpha}{\int_{\arccos\rho^*}^\pi(\pi-\alpha)^{(d-2)/2}\dd \alpha}=\frac{\arccos\rho^*}{\pi}+O(\frac{1}{d})\]
+  The first inequality is because  $ \dps\frac{\sin \alpha}{\sin \beta}>\frac{\sqrt{\pi-\alpha}}{\sqrt{\pi-\beta}} $ if  $ \alpha<\beta $. Thus the probability of  $ \alpha $ in the left is less than the probability of  $ \beta $ in the right if  $ \alpha<\beta $.
+
 \end{problem}
 \begin{problem}
    $ f:\{\pm 1\}^n\rightarrow \Rbb $ is a linear combination of function  $ f:\{\pm 1\}^n\rightarrow \{\pm 1\} $, which can be written in the form of linear combination of Fourier base functions:
