@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 MAY 2025 09:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.10)  21 MAY 2025 09:36
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**hw7
-(./hw7.tex
+**hw8
+(./hw8.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -557,8 +557,8 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen284
 \Gm@layoutvoffset=\dimen285
 \Gm@dimlist=\toks36
-) (./hw7.aux)
-\openout1 = `hw7.aux'.
+) (./hw8.aux)
+\openout1 = `hw8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 338.
 LaTeX Font Info:    ... okay on input line 338.
@@ -686,19 +686,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 339.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-]
-Overfull \hbox (20.74779pt too wide) detected at line 408
-[][]
- []
-
-[2] (./hw7.aux) ) 
+] [2] (./hw8.aux) ) 
 Here is how much of TeX's memory you used:
- 15694 strings out of 476683
- 343322 string characters out of 5804047
+ 15670 strings out of 476683
+ 341554 string characters out of 5804047
  1861018 words of memory out of 5000000
- 35679 multiletter control sequences out of 15000+600000
+ 35655 multiletter control sequences out of 15000+600000
  519902 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,12n,131p,522b,329s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hw7.pdf (2 pages).
+Output written on hw8.pdf (2 pages).
