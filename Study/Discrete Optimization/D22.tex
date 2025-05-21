@@ -121,3 +121,64 @@ For metric  $ (V,d) $, our goal:  $ \exists $  distribution of trees  $ \mathcal
     \end{enumerate}    
     
 \end{theorem}
+\begin{proof}
+    \textbf{Generating the Partition}
+    \begin{enumerate}[label=\arabic*)]
+        \item Sample  $ X\sim \mathrm{Unif}[r/2,r] $
+        \item Randomly order $ \pi $  vertices in  $ V $
+        \item For each  $ v\in V $ in the order $ \pi $: let  $ S_v=\{u:d(u,v) \leq X\text{ and }u \text{ not yet assigned}\} $.    
+    \end{enumerate}
+    \begin{definition}
+         $ d(z,(u,v))=\min(d(z,u),d(z,v)) $ 
+    \end{definition}
+    Fix  $ (u,v) $, order vertices in  $ V $,  $ (z_1,\cdots,z_n) $ such that 
+    \[d(z_1,(u,v)) \leq d(z_2,(u,v)) \leq \cdots \leq d(z_n,(u,v))\]
+    $ z_i $ settles  $ (u,v)  $ if  $ z_i $ is the first partition in  $ \pi $ \st   $ u\in S_{z_i} $ or  $ v\in S_{z_i} $.
+    
+    $ z_i $ cuts  $ (u,v)  $ if  $ z_i $ settles  $ (u,v) $ and exactly one of  $ u,v  $ in  $ S_{z_i} $.   
+
+    \[\mathrm{Pr}[(u,v)\text{ cut}]=\sum_{i=1}^n\mathrm{Pr}[z_i\text{ cuts }(u,v)]\]
+    \begin{align}
+        \mathrm{Pr}[z_i\text{ cuts }(u,v)]& \leq \mathrm{Pr}[z_i\text{ comes before }z_1,\cdots,z_{i-1} \text{ in }\pi\text{ and }X\in[d(z_i,(u,v)),\max(d(z_i,u),d(z_i,v))]]\notag\\
+        &=\frac{1}{i}\mathrm{Pr}[X\in [a_i,b_i)]\label{eq: pr of  z_i cuts (u,v)}
+    \end{align}
+    \begin{enumerate}
+        \item  $ a_i \leq \frac{r}{4} $: we have   $ b_i \leq \frac{r}{4}+\frac{r}{4}=\frac{r}{2} $. So \eqref{eq: pr of z_i cuts (u,v)} =0
+        \item  $ a_i>r $. Then \eqref{eq: pr of z_i cuts (u,v)}=0
+        \item  $ a_i\in (r/4,r] $. Then \eqref{eq: pr of z_i cuts (u,v)} $  \leq \frac{d(u,v)}{r/2} $   
+    \end{enumerate}
+    So 
+    \[\mathrm{Pr}[z_i\text{ cuts }(u,v)] \leq \frac{2d(u,v)}{r}\cdot\frac{1}{i}\cdot 1[a_i\in (\frac{r}{4},r]]\]
+    \[\mathrm{Pr}[(u,v)\text{ cuts}] \leq \frac{2d(u,v)}{r}\cdot\sum_{i=1}^n\frac{1}{i}1[a_i\in (\frac{r}{4},r]] \leq O(\frac{d(u,v)}{r})\cdot\ln \frac{\beta}{\alpha}\]
+\end{proof}
+
+TreeEmbed$ (U,\beta) $ where  $ 2^\beta \geq \max_{u,v\in U}d(u,v) $.
+\begin{enumerate}
+    \item IF  $ |U|=1 $ THEN return the single node in  $ U $
+    \item INVOKE LDD with  $ r=2^{\beta-2} $, obtained  $ \{S_u\}_{u\in U} $.
+    \item FOR each nonemplty  $ S_u $, invoke  $ \mathrm{TreeEmbed}(S_u,\beta-1) $ 
+    \item RETURN a tree that  $ U $ connects to  $ T_{u_i} $ for each  $ u_i $   
+\end{enumerate}  
+\begin{claim}
+     $ \forall u,v\in U $,  $ d(u,v) \leq d_T(u,v) $ 
+\end{claim}
+\paragraph{Expansion} If  $ G=(V,E) $  $ d$-regular.
+\[\phi(S)=\mathop\mathrm{Pr}_{v\in S,u\in N(G)}[u\not\in S]=\frac{|\text{edges}(S,\bar{S})|}{d\cdot|S|}\]
+\[\phi(G)=\min_{S:1 \leq |S| \leq \frac{n}{2}}\{\phi(S)\}\]
+\paragraph{Cheager's Inequality}
+\[\frac{1}{2}\lambda_2(L_G) \leq \phi(G) \leq \sqrt{2\lambda_2(L_G)}\]
+where \name{Laplacian} $ L_G=I-\frac 1 d A $.
+\paragraph{Spetral Graph}
+ $ \vec{x\in \Rbb^v} $,
+ \[\begin{aligned}
+    \vec{x}^TL_G\vec{x}=\frac{1}{d}\sum_{(u,v)\in E}(x_u-x_v)^2
+ \end{aligned}\]    
+\begin{claim}
+    \,\\
+    \begin{enumerate}
+        \item  $ L_G\succcurlyeq 0 $
+        \item  $ \lambda_{min}(L_G)=0 $  
+        \item Consider  $ G $ disconnected, then  $ \lambda_2(L_G)=0 $.
+        \item \[\lambda_2(L_G)=\min_{\vec{x}\perp \vec{1}}\frac{\vec{x}^TL_G\vec{x}}{\vec{x}^T\vec{x}}\]  
+    \end{enumerate}
+\end{claim}

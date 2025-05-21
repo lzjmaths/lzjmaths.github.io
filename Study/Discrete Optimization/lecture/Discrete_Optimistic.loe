@@ -147,3 +147,6 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.62\else \numberline {5.62}Theorem\fi \thmtformatoptarg {LLR 1995}}{72}{theorem.5.62}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.63\else \numberline {5.63}Theorem\fi }{73}{theorem.5.63}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.64\else \numberline {5.64}Theorem\fi \thmtformatoptarg {Low-Diameter Decomposition}}{73}{theorem.5.64}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.65\else \numberline {5.65}Definition\fi }{73}{definition.5.65}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.1\else \numberline {5.7.1}Claim\fi }{75}{claim.5.7.1}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.2\else \numberline {5.7.2}Claim\fi }{75}{claim.5.7.2}%

@@ -88,6 +88,9 @@
 \contentsline {paragraph}{cut metric}{70}{section*.45}%
 \contentsline {paragraph}{LP relaxation}{71}{section*.46}%
 \contentsline {paragraph}{Embed tree into $ l_1 $}{72}{section*.47}%
-\contentsline {section}{Index}{74}{section*.48}%
-\contentsline {section}{Important Theorems}{75}{section*.49}%
-\contentsline {section}{Important Examples}{76}{section*.50}%
+\contentsline {paragraph}{Expansion}{75}{section*.48}%
+\contentsline {paragraph}{Cheager's Inequality}{75}{section*.49}%
+\contentsline {paragraph}{Spetral Graph}{75}{section*.50}%
+\contentsline {section}{Index}{77}{section*.51}%
+\contentsline {section}{Important Theorems}{78}{section*.52}%
+\contentsline {section}{Important Examples}{79}{section*.53}%
