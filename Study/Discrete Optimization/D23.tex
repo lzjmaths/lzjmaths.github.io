@@ -1,0 +1,105 @@
+\begin{proof}[Proof of  $\frac 1 \lambda_2 \leq \phi(G) $ ]
+    \,
+
+
+    Consider  $ |S^*| \leq \frac{n}{2} $,  $ \phi(S^*)=\phi(G) $.
+    
+    Our goal is to construct  $ \vec{x}:\vec{x}\perp \vec{1} $ and  $ \dps\frac{\vec{x}^TL_G\vec{x}}{\vec{x}^T\vec{x}} \leq 2\phi(S^*) $.
+    
+    $ \forall i\in V $, let
+    \[x_i=\begin{cases}
+        \alpha&i\in S^*\\
+        \beta&i\not\in S^*
+    \end{cases}\] 
+    where  $ \alpha\cdot |S^*|+\beta\cdot (n-|S^*|) =0 $.
+
+    So we let  $ \alpha=-\dps\frac{1}{|S^*|},\beta=\frac{1}{n-|S^*|} $.
+    
+    
+    \[\vec{x}^T\vec{x}=|S^*|\cdot\frac{1}{|S^*|^2}+(n-|S^*|)\cdot\frac{1}{(n-|S^*|)^2}=\frac{n}{|S^*|(n-|S^*|)}\]
+    \[\begin{aligned}
+        \vec{x}^TL_G\vec{x}&=\sum_{(i,j)\in E}(x_i-x_j)^2\\
+        &=\left|\mathrm{edge}(S^*,\bar{S}^*)\right|\cdot\left(\frac{1}{|S^*|}+\frac{1}{n-|S^*|}\right)^2
+    \end{aligned}\]
+    Then 
+    \[\frac{\vec{x}^TL_G\vec{x}}{\vec{x}^T\vec{x}}=|\mathrm{edge}(S^*,\bar{S}^*)|\cdot\frac{n}{|S^*|(n-|S^*|)}  \leq \phi(S^*)\]
+
+\end{proof}
+
+\begin{proof}[Proof of  $\phi(G) \leq \sqrt{2\lambda_2(L_G)} $]
+    \,
+
+    Let  $ \vec{x}\perp \vec{1} $ such that  $\dps\frac{\vec{x}^TL_G\vec{x}}{\vec{x}^T\vec{x}}=\lambda_2 $  
+    
+    Our goal is to construct  $ S:|S| \leq \dps\frac{n}{2} $ such that  $ \phi(S) \leq \sqrt{2\lambda_2} $.
+    
+    Consider  $ \vec{x}^+ $ where  $ (\vec{x}^+)_i=\max\{x_i,0\} $.
+    
+    Assume WLOG,  $ |\mathrm{Supp}(\vec{x}^+)| \leq n/2 $.
+    
+    \begin{claim}
+        \[\frac{(\vec{x}^+)^TL_G\vec{x}^+}{(\vec{x}^T\vec{x})} \leq \lambda_2\]
+    \end{claim}
+    \begin{proof}
+        For each  $ i\in \Supp(\vec{x}^+) $.
+        
+        \[\begin{aligned}
+            \left(L_G\vec{x}^+\right)_i&=(\vec{x}^+)_i-\frac{1}{d}\sum_{j\sim i}(\vec{x}^+)_j\\
+            & \leq x_i-\frac{1}{d}\sum_{j\sim i}x_j\\
+            &=(L_G\vec{x})_j=\lambda_2x_j=\lambda(\vec{x}^+)_j
+        \end{aligned}\]
+        \[\begin{aligned}
+            (\vec{x}^+)^TL_G(\vec{x}^+)&=\sum_{i\in \mathrm{Supp}(\vec{x}^+)}(\vec{x}^+)_i(L_G\vec{x}^+)_i\\
+            & \leq \sum_{i\in \Supp(\vec{x}^+)}(\vec{x}^+)_i\lambda_2(\vec{x}^+)_i\\
+            &=\lambda_2(\vec{x}^+)^T(\vec{x}^+)
+        \end{aligned}\]
+    \end{proof}
+    Let  $ \vec{y}=\vec{x}^+ $. Assume WLOG,  $ \max_i y_i=1 $.
+    
+    We already have 
+    \[\frac{\vec{y}^TL_G\vec{y}}{\vec{y}^T\vec{y}} \leq \lambda_2\text{ and }\Supp(\vec{y}) \leq \frac{n}{2}\]
+    Let  $ S_t=\{i:y_i^2 \geq t\} $.
+    \begin{claim}
+        $ \exists t\in (0,1]:\phi(S_t) \leq \sqrt{2\lambda_2} $
+    \end{claim} 
+    \begin{proof}
+        Choose  $ t  $ uniformly from  $ (0,1) $.
+        \[\begin{aligned}
+            \Ebb|\mathrm{edges}(S_t,\bar{S}_t)|&=\sum_{(i,j)\in E}\mathrm{Pr}[i,j\text{ cut }]\\
+            &=\sum_{(i,j)\in E}|y_i^2-y_j^2|=\sum_{(i,j)\in E}(y_i+y_j)\cdot|y_i-y_j|\\
+            & \leq \sqrt{\sum_{(i,j)\in E}(y_i+y_j)^2}\cdot\sqrt{\sum_{(i,j)\in E}(y_i-y_j)^2}\\
+            & \leq \sqrt{2d}\sum_{i\in V}y_i^2\cdot\sqrt{d\cdot\vec{y}^TL_G\vec{y}}
+        \end{aligned}\] 
+        \[\Ebb[d|S_t|]=d\sum_{i\in V}\mathrm{Pr}[i\in S_t]=d\sum_{i\in V}y_i^2\]
+        \[\dps\frac{\Ebb|\mathrm{edges}(S_t,\bar{S}_t)|}{\Ebb[d|S_t|]} \leq \sqrt{\frac{2\vec{y}^TL_G\vec{y}}{\sum_{i\in V}y_i^2}} \leq \sqrt{2\lambda_2}\]
+    \end{proof}
+\end{proof}
+\subsection{Hardness of Approximating MAXE3LIN}
+\begin{theorem}
+    $ \forall \delta>0 $,  $ \mathrm{MAXE3LIN}_{1-\delta,\frac{1}{2}+\delta} $ is NP-Hard.  
+\end{theorem}
+
+We will use "long code" to encode instances of Label-Cover problem.
+
+\[f_u:\{\pm 1\}^K\rightarrow\{\pm 1\},\,f_u(\vec{x})=x_{\sigma(u)}\]
+
+\textbf{Linear Test}: A function  $ f:\{\pm 1\}^n\rightarrow \{\pm 1\} $ is linear if  $ f(\vec{x})\cdot f(\vec{y})=f(\vec{x}\vec{y}),\forall \vec{x},\vec{y}\in \{\pm 1\}^n $.
+
+\textbf{BLR Test}: Uniformly Randomly sample  $ \vec{x},\vec{y}\sim \{\pm 1\}^n $. Pass if  $ f(\vec{x})f(\vec{y})f(\vec{x}\vec{y})=1 $.
+
+Completeness is trivial.
+
+Soundness: If $  f  $ is  $ \delta $-far from all linear functions, then  $ \mathrm{Pr}[\text{Pass}] \leq 1-\delta $.
+\begin{proof}
+    \[\begin{aligned}
+        \mathrm{Pr}[\text{pass}]&=\frac{1}{2}+\frac{1}{2}\Ebb_{\vec{x},\vec{y}}[f(\vec{x})f(\vec{y})f(\vec{x}\vec{y})]\\
+        &=\frac{1}{2}+\frac{1}{2}\Ebb_{\vec{x},\vec{y}}\left[\left(\sum_{S}\hat{f}(S)\chi_S(\vec{x})\right)\left(\sum_T\hat{f}(T)\chi_T(y)\right)\left(\sum_U\hat{f}(U)\chi_U(xy)\right)\right]\\
+        &=\frac{1}{2}+\frac{1}{2}\sum_{S,T,U}\hat{f}(S)\hat{f}(T)\hat{f}(U)\left(\Ebb_{\vec{x}}\chi_S(\vec{x})\chi_U(\vec{x})\right)\left(\Ebb_{\vec{y}}\chi_T(\vec{y})\chi_U(\vec{y})\right)\\
+        &=\frac{1}{2}+\frac{1}{2}\sum_S\hat{f}(S)^3
+    \end{aligned}\]
+    So  $ \mathrm{Pr}[\text{pass}]=\frac{1}{2}+\frac{1}{2}\sum_S\hat{f}(S)^3 \leq \dps\frac{1}2{}+\frac{1}{2}\left(\sum_S\hat{f}(S)^2\right)\max\hat{f}(S)=\frac{1}{2}+\frac{1}{2}\max_S\hat{f}(S) $.
+
+    Then in all  $ 1-\delta<\frac{1}{2}+\frac{1}{2}\max_{S}\{\hat{f}(S)\} $ \ie  $ \exists S^*,\hat{f}(S^*)>1-2\delta $.
+    
+    \[\mathrm{Pr}_{\vec{x}}[f(\vec{x})\neq \chi_{S^*}(\vec{x})]=\frac{1}{2}-\frac{1}{2}\Ebb_{\vec{x}}[f(\vec{x})\chi_{S^*}(\vec{x})]=\frac{1}{2}-\frac{1}{2}\hat{f}(S^*)<\delta\]
+\end{proof}  

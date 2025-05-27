@@ -91,6 +91,7 @@
 \contentsline {paragraph}{Expansion}{75}{section*.48}%
 \contentsline {paragraph}{Cheager's Inequality}{75}{section*.49}%
 \contentsline {paragraph}{Spetral Graph}{75}{section*.50}%
-\contentsline {section}{Index}{77}{section*.51}%
-\contentsline {section}{Important Theorems}{78}{section*.52}%
-\contentsline {section}{Important Examples}{79}{section*.53}%
+\contentsline {subsection}{\numberline {5.8}Hardness of Approximating MAXE3LIN}{78}{subsection.5.8}%
+\contentsline {section}{Index}{80}{section*.51}%
+\contentsline {section}{Important Theorems}{81}{section*.52}%
+\contentsline {section}{Important Examples}{82}{section*.53}%
