@@ -320,16 +320,9 @@
 \newcommand{\st}{ \textit{ s.t. }}
 
 
-\usepackage[numbered,framed]{matlab-prettifier}
-\lstset{
-  style              = Matlab-editor,
-  captionpos         =b,
-  basicstyle         = \mlttfamily,
-  escapechar         = ",
-  mlshowsectionrules = true,
-}
 
-\usepackage[thehwcnt = 1]{iidef}
+
+\usepackage[thehwcnt = 5]{iidef}
 \usepackage{tikz} % Required for tikzpicture environment
 \thecourseinstitute{Tsinghua University}
 \thecoursename{Discrete Optimistic}
@@ -337,6 +330,7 @@
 \hwname{Homework}
 \usepackage{geometry}
 \geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
+
 \begin{document}
 
 \courseheader
@@ -566,34 +560,40 @@ So the integral gap is  $ \Omega(\log n) $.
   
   Add another  $ |V'|^2-|V'| $ vertices to the graph  $ G' $ and we can use the algorithm to find an  $ \alpha $-approximating solution for  $ G' $ in  $ f(|V'|^2,\dps\frac{|E'|}{|V'|^2})=\mathrm poly(|V'|^2)=\mathrm poly(|V'|) $.
 
-  Use an algorithm to strengthen this solution:
-
-  \begin{algorithm}
-    \begin{algorithmic}[H]
-      \FOR{$ \exists (i,t) $ \st  $ \dps\sum_{j\in [|V|]}\epsilon \cdot \mathbf{1}[((i,t),(j,t))\in E',x_{i,t}x_{j,t}<0]<\dps\dps\sum_{j\in [|V'|]}\epsilon \cdot \mathbf{1}[((i,t),(j,t))\in E',x_{i,t}x_{j,t}>0] $}
-      \STATE  $ x_i\leftarrow-x_i $
-      \ENDFOR  
-    \end{algorithmic}
-  \end{algorithm}
-
-  Since each time in the loop will be larger than the previous result of at least  $ \epsilon $, the algorithm will eventually terminate in  $ O(|E'|/\epsilon) $.
-
-  Now for each  $ j,t,t \geq 2 $, we have 
-  \[\sum_{i\in [|V|],\omega(i,j) \geq t}\frac{1-x_{j,t}x_{i,1}}{2} \geq \sum_{i\in [|V|],\omega(i,j) \geq t}\frac{1+x_{j,t}x_{i,1}}{2}\Rightarrow x_{j,t}\sum_{i\in [|V|],\omega(i,j) \geq t}x_{i,1} \leq0 \] 
+  Rounding: Let  $ x_i\sim \mathrm{Uniform}\{x_{i,1},\cdots,x_{i,d_i}\} $. Then  $ \dps\Ebb[x_i]=\dps\frac{\sum_{t=1}^{d_i}x_i}{d_i} $.
   
-  Now we use another algorithm to find a feasible solution in  $ G $ as follows:
-  set  $ x_i=x_{i,1} $ for each vertex  $ v_i $, \ie we let  $ v_i $ be in the same set of  $ v_{i,1} $.
   
-  This result will not be less than the previous result. That's because, suffices to prove that 
-  \[\sum_{((i,t),(j,k))\in E'}\frac{1-x_{i,1}x_{j,1}}{2} \geq \sum_{((i,t),(j,k))\in E'}\frac{1-x_{i,t}x_{j,k}}{2}\] 
-  which is equivalent to
-  \[\begin{aligned}
-    \sum_{((i,t),(j,k))\in E'}x_{i,t}x_{j,k} \geq \sum_{((i,t),(j,k))\in E'}x_{i,1}x_{j,1}
-  \end{aligned}\]
-  \[\begin{aligned}
-    &\Leftrightarrow \sum_{(i,j)\in E}x_{i,1}\sum_{t=1}^{\omega(i,j)}x_{j,t} \geq \sum_{i,j}x_{i,1}\sum_{t=1}^{\omega(i,j)}x_{j,1}\\
-    &\Leftrightarrow \sum_{(j,t)}(x_{j,t}-x_{j,1})\sum_{i:\omega(i,j) \geq t}x_{i,1} \geq 0
-  \end{aligned}\] 
+  Therefore, 
+  \[\Ebb[\text{value}]=\sum_{(i,j)\in E}\omega(i,j)\frac{1-\frac{(\sum_{t=1}^{d_i}x_{i,t})(\sum_{t=1}^{d_j}x_{j,t})}{d_id_j}}{2} \geq \sum_{(i,j)\in E}\omega(i,j)\cdot\frac{\sum}{d_id_j}\]
+
+  % Use an algorithm to strengthen this solution:
+
+  % \begin{algorithm}
+  %   \begin{algorithmic}[H]
+  %     \FOR{$ \exists (i,t) $ \st  $ \dps\sum_{j\in [|V|]}\epsilon \cdot \mathbf{1}[((i,t),(j,t))\in E',x_{i,t}x_{j,t}<0]<\dps\dps\sum_{j\in [|V'|]}\epsilon \cdot \mathbf{1}[((i,t),(j,t))\in E',x_{i,t}x_{j,t}>0] $}
+  %     \STATE  $ x_i\leftarrow-x_i $
+  %     \ENDFOR  
+  %   \end{algorithmic}
+  % \end{algorithm}
+
+  % Since each time in the loop will be larger than the previous result of at least  $ \epsilon $, the algorithm will eventually terminate in  $ O(|E'|/\epsilon) $.
+
+  % Now for each  $ j,t,t \geq 2 $, we have 
+  % \[\sum_{i\in [|V|],\omega(i,j) \geq t}\frac{1-x_{j,t}x_{i,1}}{2} \geq \sum_{i\in [|V|],\omega(i,j) \geq t}\frac{1+x_{j,t}x_{i,1}}{2}\Rightarrow x_{j,t}\sum_{i\in [|V|],\omega(i,j) \geq t}x_{i,1} \leq0 \] 
+  
+  % Now we use another algorithm to find a feasible solution in  $ G $ as follows:
+  % set  $ x_i=x_{i,1} $ for each vertex  $ v_i $, \ie we let  $ v_i $ be in the same set of  $ v_{i,1} $.
+  
+  % This result will not be less than the previous result. That's because, suffices to prove that 
+  % \[\sum_{((i,t),(j,k))\in E'}\frac{1-x_{i,1}x_{j,1}}{2} \geq \sum_{((i,t),(j,k))\in E'}\frac{1-x_{i,t}x_{j,k}}{2}\] 
+  % which is equivalent to
+  % \[\begin{aligned}
+  %   \sum_{((i,t),(j,k))\in E'}x_{i,t}x_{j,k} \geq \sum_{((i,t),(j,k))\in E'}x_{i,1}x_{j,1}
+  % \end{aligned}\]
+  % \[\begin{aligned}
+  %   &\Leftrightarrow \sum_{(i,j)\in E}x_{i,1}\sum_{t=1}^{\omega(i,j)}x_{j,t} \geq \sum_{i,j}x_{i,1}\sum_{t=1}^{\omega(i,j)}x_{j,1}\\
+  %   &\Leftrightarrow \sum_{(j,t)}(x_{j,t}-x_{j,1})\sum_{i:\omega(i,j) \geq t}x_{i,1} \geq 0
+  % \end{aligned}\] 
 \end{problem}
 \begin{problem}
   hyperplane cuts  $ \frac{\alpha}{\pi} $ edges in  $ G_d $ with angle  $ \alpha $.
@@ -604,15 +604,15 @@ So the integral gap is  $ \Omega(\log n) $.
 
 \end{problem}
 \begin{problem}
-   $ f:\{\pm 1\}^n\rightarrow \Rbb $ is a linear combination of function  $ f:\{\pm 1\}^n\rightarrow \{\pm 1\} $, which can be written in the form of linear combination of Fourier base functions:
-   \[f(x)=\sum_{S\subset [n]}\hat{f}(S)\chi_S(x)\]
-   where  $ \dps\chi_S(x)=\prod_{i\in S}x_i $ is a multilinear polynomial.
-   
-   So it is expressible as a multilinear polynomial.
+  $ f:\{\pm 1\}^n\rightarrow \Rbb $ is a linear combination of function  $ f:\{\pm 1\}^n\rightarrow \{\pm 1\} $, which can be written in the form of linear combination of Fourier base functions:
+  \[f(x)=\sum_{S\subset [n]}\hat{f}(S)\chi_S(x)\]
+  where  $ \dps\chi_S(x)=\prod_{i\in S}x_i $ is a multilinear polynomial.
+  
+  So it is expressible as a multilinear polynomial.
 
-   The uniqueness is because, if there is some multilinear polynoimal  $ g $ such that  $ g(x)=f(x),\forall x\in\{\pm 1\} $. Then using Parserval's Theorem we obtain that 
-   \[\sum_{S\subset [n]}\hat{(f-g)}(S)^2=\Ebb_{\vec{x}\sim\{\pm 1\}^n}(f(\vec{x})-g(\vec{x}))^2=0\]
-   So  $ f-g=\dps\sum_{S\subset [n]}\hat{(f-g)}(S)\chi_S=0 $.   
+  The uniqueness is because, if there is some multilinear polynoimal  $ g $ such that  $ g(x)=f(x),\forall x\in\{\pm 1\} $. Then using Parserval's Theorem we obtain that 
+  \[\sum_{S\subset [n]}\hat{(f-g)}(S)^2=\Ebb_{\vec{x}\sim\{\pm 1\}^n}(f(\vec{x})-g(\vec{x}))^2=0\]
+  So  $ f-g=\dps\sum_{S\subset [n]}\hat{(f-g)}(S)\chi_S=0 $.   
 \end{problem}
 \begin{problem}
     \[\<f,g\>=\<\sum_{S\subset [n]}\hat{f}(S)\chi_S,\sum_{S\subset [n]}\hat{f}(S)\chi_S\>=\sum_{S_1,S_2\subset [n]}\hat{f}(S_1)\hat{g}(S_2)\<\chi_{S_1},\chi_{S_2}\>=\sum_{S\subset [n]}\hat{f}(S)\hat{g}(S)\]
