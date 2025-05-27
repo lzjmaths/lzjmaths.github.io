@@ -383,7 +383,500 @@
 \begin{problem}
     \[\begin{aligned}
         T_{n+3}&=y(x_{n+3})+\alpha(y(x_{n+2})-y(x_{n+1}))-y(x_n)-\frac{1}{2}(3+\alpha)h[f(x_{n+2},y(x_{n+2}))+f(x_{n+1},y(x_{n+1}))]\\
-        &=
+        &=\left[3hy'(x_{n+1})+\frac{3}{2}h^2y^{(2)}(x_{n+1})+\frac{3}{2}h^3y^{(3)}(x_{n+1})+\frac{15}{24}y^{(4)}(X_{n+1})\right]\\
+        &+\alpha\left[hy'(x_{n+1})+\frac{1}{2}h^2y^{(2)}(x_{n+1})+\frac{1}{6}h^3y^{(3)}(x_{n+1})+\frac{1}{24}y^{(4)}(X_{n+1})\right]\\
+        &-\frac{3+\alpha}{h}\left[2y'(x_{n+1})+hy^{(2)}(X_{n+1})+\frac{h^2}{2}y^{(3)}(x_{n+1})+\frac{h^3}{6}y^{(4)}(x_{n+1})\right]+O(h^5)\\
+        &=\frac{9-\alpha}{12}h^3y^{(3)}(x_{n+1})+\frac{9-\alpha}{24}h^4y^{(4)}(x_{n+1})+O(h^5)
     \end{aligned}\]
+    So take  $ \alpha=9 $ it is a convergent method of order  $ 4 $.
+    
+\end{problem}
+\begin{problem}
+    考虑常微分方程 
+\[
+y' = f(x,y), \quad x \in [x_n,\,x_{n+1}], \quad h = x_{n+1} - x_n.
+\]
+为了导出四步显式 Adams–Bashforth 方法，我们在区间 $[x_n,\,x_{n+1}]$ 上引入配点
+\[
+x = x_n + s\,h,\qquad s \in [0,1].
+\]
+令
+\[
+F(s) \;=\; f\bigl(x_n + s\,h,\;y(x_n + s\,h)\bigr).
+\]
+我们希望用 $F(s)$ 在 $s = 0,\,-1,\,-2,\,-3$ 处的值来做三次 Lagrange 插值，然后对插值多项式在 $s\in[0,1]$ 上积分，得到
+\[
+\int_{0}^{1} F(s)\,ds
+\;\approx\;
+\sum_{j=0}^{3} b_j\,F(-\,j),
+\]
+从而公式
+\[
+y_{n+1} \;=\; y_n \;+\; h \int_{0}^{1} F(s)\,ds
+\;\approx\;
+y_n \;+\; h \sum_{j=0}^{3} b_j\,f\bigl(x_{n-j},\,y_{n-j}\bigr).
+\]
+下面计算各系数 $b_j = \displaystyle\int_{0}^{1} \ell_j(s)\,ds$，其中 $\{\ell_j(s)\}$ 是通过配点 $s=0,-1,-2,-3$ 构造的 Lagrange 基函数。
+
+\medskip
+
+\noindent\textbf{(1) 构造插值节点与基函数}  
+
+配点为
+\[
+s_0 = 0,\quad s_1 = -1,\quad s_2 = -2,\quad s_3 = -3.
+\]
+对应的 Lagrange 基函数 $\ell_j(s)$ 满足 $\ell_j(s_i) = \delta_{ij}$。具体地：
+\[
+\ell_0(s)
+= \frac{(s - s_1)(s - s_2)(s - s_3)}{(s_0 - s_1)(s_0 - s_2)(s_0 - s_3)}
+= \frac{(s + 1)(s + 2)(s + 3)}{(0 + 1)(0 + 2)(0 + 3)}
+= \frac{(s + 1)(s + 2)(s + 3)}{6},
+\]
+\[
+\ell_1(s)
+= \frac{(s - s_0)(s - s_2)(s - s_3)}{(s_1 - s_0)(s_1 - s_2)(s_1 - s_3)}
+= \frac{s\,(s + 2)(s + 3)}{(-1 - 0)\,(-1 + 2)\,(-1 + 3)}
+= \frac{s\,(s + 2)(s + 3)}{(-1)\,(1)\,(2)}
+= -\,\frac{s\,(s + 2)(s + 3)}{2},
+\]
+\[
+\ell_2(s)
+= \frac{(s - s_0)(s - s_1)(s - s_3)}{(s_2 - s_0)(s_2 - s_1)(s_2 - s_3)}
+= \frac{s\,(s + 1)\,(s + 3)}{(-2 - 0)\,(-2 + 1)\,(-2 + 3)}
+= \frac{s\,(s + 1)\,(s + 3)}{(-2)\,(-1)\,(1)}
+= \frac{s\,(s + 1)\,(s + 3)}{2},
+\]
+\[
+\ell_3(s)
+= \frac{(s - s_0)(s - s_1)(s - s_2)}{(s_3 - s_0)(s_3 - s_1)(s_3 - s_2)}
+= \frac{s\,(s + 1)\,(s + 2)}{(-3 - 0)\,(-3 + 1)\,(-3 + 2)}
+= \frac{s\,(s + 1)\,(s + 2)}{(-3)\,(-2)\,(-1)}
+= -\,\frac{s\,(s + 1)\,(s + 2)}{6}.
+\]
+
+\medskip
+
+\noindent\textbf{(2) 计算各基函数在 $[0,1]$ 上的面积}  
+
+\begin{itemize}
+  \item \textbf{系数 $b_0 = \displaystyle\int_{0}^{1} \ell_0(s)\,ds$.}  
+    \[
+    \ell_0(s) = \frac{(s + 1)(s + 2)(s + 3)}{6}
+    = \frac{1}{6}\bigl(s^3 + 6\,s^2 + 11\,s + 6\bigr).
+    \]
+    因此
+    \[
+    b_0 
+    = \int_{0}^{1} \ell_0(s)\,ds
+    = \frac{1}{6} \int_{0}^{1} \bigl(s^3 + 6\,s^2 + 11\,s + 6\bigr)\,ds
+    = \frac{1}{6} \Bigl[
+       \frac{s^4}{4} + 6\,\frac{s^3}{3} + 11\,\frac{s^2}{2} + 6\,s
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.6\,\frac{s^3}{3}\right|_{0}^{1} = 2,\quad
+    \left.11\,\frac{s^2}{2}\right|_{0}^{1} = \frac{11}{2},\quad
+    \left.6\,s\right|_{0}^{1} = 6.
+    \]
+    所以
+    \[
+    b_0 
+    = \frac{1}{6} \Bigl( \frac{1}{4} + 2 + \frac{11}{2} + 6 \Bigr)
+    = \frac{1}{6} \Bigl( \frac{1 + 8 + 22 + 24}{4} \Bigr)
+    = \frac{1}{6} \cdot \frac{55}{4}
+    = \frac{55}{24}.
+    \]
+  
+  \item \textbf{系数 $b_1 = \displaystyle\int_{0}^{1} \ell_1(s)\,ds$.}  
+    \[
+    \ell_1(s) \;=\; -\,\frac{s\,\bigl(s + 2\bigr)\,\bigl(s + 3\bigr)}{2}
+    = -\,\frac{1}{2}\bigl(s^3 + 5\,s^2 + 6\,s\bigr).
+    \]
+    因此
+    \[
+    b_1 
+    = \int_{0}^{1} \ell_1(s)\,ds
+    = -\,\frac{1}{2} \int_{0}^{1} \bigl(s^3 + 5\,s^2 + 6\,s\bigr)\,ds
+    = -\,\frac{1}{2} \Bigl[
+      \frac{s^4}{4} + 5\,\frac{s^3}{3} + 6\,\frac{s^2}{2}
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.5\,\frac{s^3}{3}\right|_{0}^{1} = \frac{5}{3},\quad
+    \left.6\,\frac{s^2}{2}\right|_{0}^{1} = 3.
+    \]
+    因此
+    \[
+    \int_{0}^{1} \bigl(s^3 + 5\,s^2 + 6\,s\bigr)\,ds 
+    = \frac{1}{4} + \frac{5}{3} + 3 
+    = \frac{3}{12} + \frac{20}{12} + \frac{36}{12} 
+    = \frac{59}{12}.
+    \]
+    于是
+    \[
+    b_1 = -\,\frac{1}{2} \cdot \frac{59}{12} 
+    = -\,\frac{59}{24}.
+    \]
+
+  \item \textbf{系数 $b_2 = \displaystyle\int_{0}^{1} \ell_2(s)\,ds$.}  
+    \[
+    \ell_2(s) 
+    = \frac{s\,(s + 1)\,(s + 3)}{2} 
+    = \frac{1}{2}\bigl(s^3 + 4\,s^2 + 3\,s\bigr).
+    \]
+    因此
+    \[
+    b_2 
+    = \int_{0}^{1} \ell_2(s)\,ds
+    = \frac{1}{2} \int_{0}^{1} \bigl(s^3 + 4\,s^2 + 3\,s\bigr)\,ds
+    = \frac{1}{2} \Bigl[
+      \frac{s^4}{4} + 4\,\frac{s^3}{3} + 3\,\frac{s^2}{2}
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.4\,\frac{s^3}{3}\right|_{0}^{1} = \frac{4}{3},\quad
+    \left.3\,\frac{s^2}{2}\right|_{0}^{1} = \frac{3}{2}.
+    \]
+    因此
+    \[
+    \int_{0}^{1} \bigl(s^3 + 4\,s^2 + 3\,s\bigr)\,ds 
+    = \frac{1}{4} + \frac{4}{3} + \frac{3}{2} 
+    = \frac{3}{12} + \frac{16}{12} + \frac{18}{12} 
+    = \frac{37}{12}.
+    \]
+    于是
+    \[
+    b_2 = \frac{1}{2} \cdot \frac{37}{12} 
+    = \frac{37}{24}.
+    \]
+
+  \item \textbf{系数 $b_3 = \displaystyle\int_{0}^{1} \ell_3(s)\,ds$.}  
+    \[
+    \ell_3(s) 
+    = -\,\frac{s\,(s + 1)\,(s + 2)}{6} 
+    = -\,\frac{1}{6}\bigl(s^3 + 3\,s^2 + 2\,s\bigr).
+    \]
+    因此
+    \[
+    b_3 
+    = \int_{0}^{1} \ell_3(s)\,ds
+    = -\,\frac{1}{6} \int_{0}^{1} \bigl(s^3 + 3\,s^2 + 2\,s\bigr)\,ds
+    = -\,\frac{1}{6} \Bigl[
+      \frac{s^4}{4} + 3\,\frac{s^3}{3} + 2\,\frac{s^2}{2}
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.3\,\frac{s^3}{3}\right|_{0}^{1} = 1,\quad
+    \left.2\,\frac{s^2}{2}\right|_{0}^{1} = 1.
+    \]
+    因此
+    \[
+    \int_{0}^{1} \bigl(s^3 + 3\,s^2 + 2\,s\bigr)\,ds 
+    = \frac{1}{4} + 1 + 1 
+    = \frac{1 + 4 + 4}{4} 
+    = \frac{9}{4}.
+    \]
+    于是
+    \[
+    b_3 = -\,\frac{1}{6} \cdot \frac{9}{4} 
+    = -\,\frac{9}{24}.
+    \]
+\end{itemize}
+
+综上可得四步显式 Adams–Bashforth 方法（AB4）为
+\[
+\boxed{
+y_{n+1} \;=\; y_n 
+\;+\; h \Bigl(
+   \frac{55}{24}\,f(x_n,y_n)
+ - \frac{59}{24}\,f(x_{n-1},y_{n-1})
+ + \frac{37}{24}\,f(x_{n-2},y_{n-2})
+ - \frac{9}{24}\,f(x_{n-3},y_{n-3})
+\Bigr).
+}
+\]
+
+\bigskip
+\section*{三步隐式 Adams–Moulton 方法 (AM3) 系数推导}
+
+考虑隐式 Adams–Moulton 的三步（k=3）情形，公式形式为
+\[
+y_{n+1} \;=\; y_n \;+\; h \sum_{j=-1}^{2} a_j \, f\bigl(x_{n-j},\,y_{n-j}\bigr),
+\]
+其中 $a_{-1}$ 对应 $f(x_{n+1},y_{n+1})$（隐式项），其余 $a_0,a_1,a_2$ 对应前面三个点 $x_n,x_{n-1},x_{n-2}$。  
+
+同样在区间 $[x_n,\;x_{n+1}]$ 上引入参数
+\[
+x = x_n + s\,h,\qquad s \in [0,1],
+\qquad 
+G(s) \;=\; f\bigl(x_n + s\,h,\;y(x_n + s\,h)\bigr).
+\]
+我们用 $G(s)$ 在 $s = 1,\,0,\,-1,\,-2$ 处的值做三次 Lagrange 插值，然后对插值多项式在 $s\in[0,1]$ 上积分：
+\[
+\int_{0}^{1} G(s)\,ds
+\;\approx\;
+\sum_{j = -1}^{2} a_j \, G\bigl(s_j\bigr),
+\]
+其中配点为
+\[
+s_{-1} = 1,\quad s_0 = 0,\quad s_1 = -1,\quad s_2 = -2.
+\]
+于是
+\[
+y_{n+1} 
+= y_n 
++ h \int_{0}^{1} G(s)\,ds
+\approx
+y_n 
++ h \Bigl(
+  a_{-1} f(x_{n+1},y_{n+1})
++ a_{0} f(x_{n},y_{n})
++ a_{1} f(x_{n-1},y_{n-1})
++ a_{2} f(x_{n-2},y_{n-2})
+\Bigr).
+\]
+下面利用 Lagrange 基函数计算 $a_{-1},\,a_0,\,a_1,\,a_2$。
+
+\medskip
+
+\noindent\textbf{(1) 构造插值节点与基函数}  
+
+配点：
+\[
+s_{-1} = 1,\quad s_{0} = 0,\quad s_{1} = -1,\quad s_{2} = -2.
+\]
+对应的 Lagrange 基函数 $\ell_j(s)$（为了标号方便，令下标与 $s_j$ 同名）满足 $\ell_j(s_i) = \delta_{ij}$。  
+
+\begin{itemize}
+  \item 当 $j = -1$（节点 $s = 1$）时，
+    \[
+    \ell_{-1}(s)
+    = \frac{(s - s_0)(s - s_1)(s - s_2)}
+           {(s_{-1} - s_0)(s_{-1} - s_1)(s_{-1} - s_2)}
+    = \frac{(s - 0)\,(s + 1)\,(s + 2)}
+           {(1 - 0)\,(1 + 1)\,(1 + 2)}
+    = \frac{s\,(s + 1)\,(s + 2)}{1 \cdot 2 \cdot 3}
+    = \frac{s\,(s + 1)\,(s + 2)}{6}.
+    \]
+  
+  \item 当 $j = 0$（节点 $s = 0$）时，
+    \[
+    \ell_{0}(s)
+    = \frac{(s - s_{-1})(s - s_{1})(s - s_{2})}
+           {(s_{0} - s_{-1})(s_{0} - s_{1})(s_{0} - s_{2})}
+    = \frac{(s - 1)\,(s + 1)\,(s + 2)}
+           {(0 - 1)\,(0 + 1)\,(0 + 2)}
+    = \frac{(s - 1)\,(s + 1)\,(s + 2)}{(-1)\,(1)\,(2)}
+    = -\,\frac{(s - 1)\,(s + 1)\,(s + 2)}{2}.
+    \]
+  
+  \item 当 $j = 1$（节点 $s = -1$）时，
+    \[
+    \ell_{1}(s)
+    = \frac{(s - s_{-1})(s - s_{0})(s - s_{2})}
+           {(s_{1} - s_{-1})(s_{1} - s_{0})(s_{1} - s_{2})}
+    = \frac{(s - 1)\,(s - 0)\,(s + 2)}
+           {(-1 - 1)\,(-1 - 0)\,(-1 + 2)}
+    = \frac{(s - 1)\,s\,(s + 2)}{(-2)\,(-1)\,(1)}
+    = \frac{(s - 1)\,s\,(s + 2)}{2}.
+    \]
+  
+  \item 当 $j = 2$（节点 $s = -2$）时，
+    \[
+    \ell_{2}(s)
+    = \frac{(s - s_{-1})(s - s_{0})(s - s_{1})}
+           {(s_{2} - s_{-1})(s_{2} - s_{0})(s_{2} - s_{1})}
+    = \frac{(s - 1)\,(s - 0)\,(s + 1)}
+           {(-2 - 1)\,(-2 - 0)\,(-2 + 1)}
+    = \frac{(s - 1)\,s\,(s + 1)}{(-3)\,(-2)\,(-1)}
+    = -\,\frac{(s - 1)\,s\,(s + 1)}{6}.
+    \]
+\end{itemize}
+
+\medskip
+
+\noindent\textbf{(2) 计算各基函数在 $[0,1]$ 上的面积}  
+
+\begin{itemize}
+  \item \textbf{系数 $a_{-1} = \displaystyle\int_{0}^{1} \ell_{-1}(s)\,ds$.}  
+    \[
+    \ell_{-1}(s)
+    = \frac{s\,(s + 1)\,(s + 2)}{6}
+    = \frac{1}{6}\bigl(s^3 + 3\,s^2 + 2\,s\bigr).
+    \]
+    因此
+    \[
+    a_{-1}
+    = \int_{0}^{1} \ell_{-1}(s)\,ds
+    = \frac{1}{6} \int_{0}^{1} \bigl(s^3 + 3\,s^2 + 2\,s\bigr)\,ds
+    = \frac{1}{6} \Bigl[
+      \frac{s^4}{4} + 3\,\frac{s^3}{3} + 2\,\frac{s^2}{2}
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.3\,\frac{s^3}{3}\right|_{0}^{1} = 1,\quad
+    \left.2\,\frac{s^2}{2}\right|_{0}^{1} = 1.
+    \]
+    所以
+    \[
+    \int_{0}^{1} \bigl(s^3 + 3\,s^2 + 2\,s\bigr)\,ds 
+    = \frac{1}{4} + 1 + 1 
+    = \frac{9}{4},
+    \quad
+    a_{-1} = \frac{1}{6} \cdot \frac{9}{4} = \frac{9}{24}.
+    \]
+  
+  \item \textbf{系数 $a_{0} = \displaystyle\int_{0}^{1} \ell_{0}(s)\,ds$.}  
+    \[
+    \ell_{0}(s)
+    = -\,\frac{(s - 1)\,(s + 1)\,(s + 2)}{2}
+    = -\,\frac{1}{2}\bigl(s^3 + 2\,s^2 - s - 2\bigr).
+    \]
+    因此
+    \[
+    a_{0}
+    = \int_{0}^{1} \ell_{0}(s)\,ds
+    = -\,\frac{1}{2} \int_{0}^{1} \bigl(s^3 + 2\,s^2 - s - 2\bigr)\,ds
+    = -\,\frac{1}{2} \Bigl[
+      \frac{s^4}{4} + 2\,\frac{s^3}{3} - \frac{s^2}{2} - 2\,s
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.2\,\frac{s^3}{3}\right|_{0}^{1} = \frac{2}{3},\quad
+    \left.-\,\frac{s^2}{2}\right|_{0}^{1} = -\,\frac{1}{2},\quad
+    \left.-\,2\,s\right|_{0}^{1} = -\,2.
+    \]
+    所以
+    \[
+    \int_{0}^{1} \bigl(s^3 + 2\,s^2 - s - 2\bigr)\,ds
+    = \frac{1}{4} + \frac{2}{3} - \frac{1}{2} - 2
+    = \frac{3}{12} + \frac{8}{12} - \frac{6}{12} - \frac{24}{12}
+    = -\,\frac{19}{12},
+    \]
+    \[
+    a_{0} = -\,\frac{1}{2} \cdot \Bigl(-\,\frac{19}{12}\Bigr)
+    = \frac{19}{24}.
+    \]
+  
+  \item \textbf{系数 $a_{1} = \displaystyle\int_{0}^{1} \ell_{1}(s)\,ds$.}  
+    \[
+    \ell_{1}(s)
+    = \frac{(s - 1)\,s\,(s + 2)}{2}
+    = \frac{1}{2}\bigl(s^3 + s^2 - 2\,s\bigr).
+    \]
+    因此
+    \[
+    a_{1} 
+    = \int_{0}^{1} \ell_{1}(s)\,ds
+    = \frac{1}{2} \int_{0}^{1} \bigl(s^3 + s^2 - 2\,s\bigr)\,ds
+    = \frac{1}{2} \Bigl[
+      \frac{s^4}{4} + \frac{s^3}{3} - s^2
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.\frac{s^3}{3}\right|_{0}^{1} = \frac{1}{3},\quad
+    \left.-\,s^2\right|_{0}^{1} = -1.
+    \]
+    所以
+    \[
+    \int_{0}^{1} \bigl(s^3 + s^2 - 2\,s\bigr)\,ds
+    = \frac{1}{4} + \frac{1}{3} - 1
+    = \frac{3}{12} + \frac{4}{12} - \frac{12}{12}
+    = -\,\frac{5}{12},
+    \]
+    \[
+    a_{1} = \frac{1}{2} \cdot \Bigl(-\,\frac{5}{12}\Bigr)
+    = -\,\frac{5}{24}.
+    \]
+  
+  \item \textbf{系数 $a_{2} = \displaystyle\int_{0}^{1} \ell_{2}(s)\,ds$.}  
+    \[
+    \ell_{2}(s)
+    = -\,\frac{(s - 1)\,s\,(s + 1)}{6}
+    = -\,\frac{1}{6}\bigl(s^3 - s\bigr).
+    \]
+    因此
+    \[
+    a_{2} 
+    = \int_{0}^{1} \ell_{2}(s)\,ds
+    = -\,\frac{1}{6} \int_{0}^{1} \bigl(s^3 - s\bigr)\,ds
+    = -\,\frac{1}{6} \Bigl[
+      \frac{s^4}{4} - \frac{s^2}{2}
+    \Bigr]_{0}^{1}.
+    \]
+    计算括号内：
+    \[
+    \left.\frac{s^4}{4}\right|_{0}^{1} = \frac{1}{4},\quad
+    \left.-\,\frac{s^2}{2}\right|_{0}^{1} = -\,\frac{1}{2}.
+    \]
+    所以
+    \[
+    \int_{0}^{1} \bigl(s^3 - s\bigr)\,ds
+    = \frac{1}{4} - \frac{1}{2} 
+    = -\,\frac{1}{4},
+    \quad
+    a_{2} = -\,\frac{1}{6} \cdot \Bigl(-\,\frac{1}{4}\Bigr)
+    = \frac{1}{24}.
+    \]
+\end{itemize}
+
+综上可得三步隐式 Adams–Moulton 方法（AM3）为
+\[
+\boxed{
+y_{n+1} 
+= y_n 
++ h \Bigl(
+  \frac{9}{24}\,f(x_{n+1},y_{n+1})
++ \frac{19}{24}\,f(x_{n},\,y_{n})
+- \frac{5}{24}\,f(x_{n-1},\,y_{n-1})
++ \frac{1}{24}\,f(x_{n-2},\,y_{n-2})
+\Bigr).
+}
+\]
+
+注意到若 $f(x,y)$ 关于 $y$ 是线性的（例如 $f(x,y)=y - x^2 +1$），则上述公式隐式项
+\[
+\frac{9}{24}\,f(x_{n+1},\,y_{n+1})
+\]
+可以展开成 $\frac{9}{24}\bigl(y_{n+1} - x_{n+1}^2 +1\bigr)$，从而将 $y_{n+1}$ 的系数收集后可显式解出 $y_{n+1}$。
+
+根据integral.m的代码生成结果如下
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{步长 $h$} & \textbf{AB4 最大误差} & \textbf{AM3 最大误差} \\
+\hline
+$h = 0.1250$ & $4.1240 \times 10^{-4}$ & $4.3885 \times 10^{-5}$ \\
+$h = 0.0625$ & $3.2025 \times 10^{-5}$ & $2.8674 \times 10^{-6}$ \\
+$h = 0.0312$ & $2.2203 \times 10^{-6}$ & $1.8273 \times 10^{-7}$ \\
+\hline
+\end{tabular}
+
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{估计收敛阶} & \textbf{AB4} & \textbf{AM3} \\
+\hline
+$h=0.1250\to 0.0625$ & $3.6868$ & $3.9359$ \\
+$h=0.0625\to 0.0312$ & $3.8503$ & $3.9719$ \\
+\hline
+\end{tabular}
+
+可见两者的收敛阶都在 $4$ 附近，说明两者都是四阶方法。
 \end{problem}
 \end{document}

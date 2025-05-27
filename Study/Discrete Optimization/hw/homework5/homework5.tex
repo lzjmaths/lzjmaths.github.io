@@ -562,7 +562,38 @@ So the integral gap is  $ \Omega(\log n) $.
 
 \end{problem}
 \begin{problem}
+  For an arbitrary graph $ G=(V,E) $,  $ \epsilon>0 $, WLOG we assme  $ \dps\sum_{(i,j)\in E}\omega(i,j)=1 $.  Let  $\dps d_i=\max_{(i,j)\in E}\left\lceil \frac{\omega(v_i,v_j)}{\epsilon} \right\rceil  $. We can construct a graph  $ G'=(V',E') $ with  $ |V'| \leq \lceil\frac{1}{\epsilon}\rceil|V| $ by split each  $ v_i $ into  $ v_{i,1},v_{i,2},\cdots,v_{i,d_i} $ and if  $ (i,j)\in E $, connects  $ v_{i,t} $   and  $ v_{j,t} $ equipped with weight  $ \epsilon $.
   
+  Add another  $ |V'|^2-|V'| $ vertices to the graph  $ G' $ and we can use the algorithm to find an  $ \alpha $-approximating solution for  $ G' $ in  $ f(|V'|^2,\dps\frac{|E'|}{|V'|^2})=\mathrm poly(|V'|^2)=\mathrm poly(|V'|) $.
+
+  Use an algorithm to strengthen this solution:
+
+  \begin{algorithm}
+    \begin{algorithmic}[H]
+      \FOR{$ \exists (i,t) $ \st  $ \dps\sum_{j\in [|V|]}\epsilon \cdot \mathbf{1}[((i,t),(j,t))\in E',x_{i,t}x_{j,t}<0]<\dps\dps\sum_{j\in [|V'|]}\epsilon \cdot \mathbf{1}[((i,t),(j,t))\in E',x_{i,t}x_{j,t}>0] $}
+      \STATE  $ x_i\leftarrow-x_i $
+      \ENDFOR  
+    \end{algorithmic}
+  \end{algorithm}
+
+  Since each time in the loop will be larger than the previous result of at least  $ \epsilon $, the algorithm will eventually terminate in  $ O(|E'|/\epsilon) $.
+
+  Now for each  $ j,t,t \geq 2 $, we have 
+  \[\sum_{i\in [|V|],\omega(i,j) \geq t}\frac{1-x_{j,t}x_{i,1}}{2} \geq \sum_{i\in [|V|],\omega(i,j) \geq t}\frac{1+x_{j,t}x_{i,1}}{2}\Rightarrow x_{j,t}\sum_{i\in [|V|],\omega(i,j) \geq t}x_{i,1} \leq0 \] 
+  
+  Now we use another algorithm to find a feasible solution in  $ G $ as follows:
+  set  $ x_i=x_{i,1} $ for each vertex  $ v_i $, \ie we let  $ v_i $ be in the same set of  $ v_{i,1} $.
+  
+  This result will not be less than the previous result. That's because, suffices to prove that 
+  \[\sum_{((i,t),(j,k))\in E'}\frac{1-x_{i,1}x_{j,1}}{2} \geq \sum_{((i,t),(j,k))\in E'}\frac{1-x_{i,t}x_{j,k}}{2}\] 
+  which is equivalent to
+  \[\begin{aligned}
+    \sum_{((i,t),(j,k))\in E'}x_{i,t}x_{j,k} \geq \sum_{((i,t),(j,k))\in E'}x_{i,1}x_{j,1}
+  \end{aligned}\]
+  \[\begin{aligned}
+    &\Leftrightarrow \sum_{(i,j)\in E}x_{i,1}\sum_{t=1}^{\omega(i,j)}x_{j,t} \geq \sum_{i,j}x_{i,1}\sum_{t=1}^{\omega(i,j)}x_{j,1}\\
+    &\Leftrightarrow \sum_{(j,t)}(x_{j,t}-x_{j,1})\sum_{i:\omega(i,j) \geq t}x_{i,1} \geq 0
+  \end{aligned}\] 
 \end{problem}
 \begin{problem}
   hyperplane cuts  $ \frac{\alpha}{\pi} $ edges in  $ G_d $ with angle  $ \alpha $.
