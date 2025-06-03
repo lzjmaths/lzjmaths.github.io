@@ -1,60 +1,64 @@
 \begin{theindex}
 
-  \item $ \alpha $-approximation algorithm, \hyperpage{33}
-  \item 3-CNF, \hyperpage{33}
+  \item $ \alpha $-approximation algorithm, \hyperpage{34}
+  \item 3-CNF, \hyperpage{34}
 
   \indexspace
 
-  \item arborescence, \hyperpage{12}
+  \item arborescence, \hyperpage{13}
 
   \indexspace
 
-  \item Bellman Equation, \hyperpage{14}
+  \item Bellman Equation, \hyperpage{15}
 
   \indexspace
 
-  \item c vs. s Decision Problem, \hyperpage{34}
-  \item CNF, \hyperpage{33}
-  \item cut, \hyperpage{9}
-  \item cutset, \hyperpage{9}
+  \item c vs. s Decision Problem, \hyperpage{35}
+  \item CNF, \hyperpage{34}
+  \item cut, \hyperpage{10}
+  \item cutset, \hyperpage{10}
 
   \indexspace
 
-  \item fundamental cut, \hyperpage{9}
-  \item Fundamental cycle, \hyperpage{9}
+  \item fundamental cut, \hyperpage{10}
+  \item Fundamental cycle, \hyperpage{10}
 
   \indexspace
 
-  \item gap ratio, \hyperpage{41}
+  \item gap ratio, \hyperpage{42}
 
   \indexspace
 
-  \item hyperparameter, \hyperpage{15}
+  \item hyperparameter, \hyperpage{16}
 
   \indexspace
 
-  \item Integrality Gap (IG) instance, \hyperpage{41}
+  \item Integrality Gap (IG) instance, \hyperpage{42}
 
   \indexspace
 
-  \item Laplacian, \hyperpage{75}
+  \item Laplacian, \hyperpage{76}
 
   \indexspace
 
-  \item Markov Inquality, \hyperpage{39}
+  \item Markov Inquality, \hyperpage{40}
 
   \indexspace
 
-  \item NP-complete, \hyperpage{46}
-  \item NP-hard, \hyperpage{46}
+  \item NP-complete, \hyperpage{47}
+  \item NP-hard, \hyperpage{47}
 
   \indexspace
 
-  \item polynomial reduction, \hyperpage{46}
+  \item polynomial reduction, \hyperpage{47}
 
   \indexspace
 
-  \item spanning tree, \hyperpage{9}
-  \item st-flow, \hyperpage{20}
+  \item spanning tree, \hyperpage{10}
+  \item st-flow, \hyperpage{21}
+
+  \indexspace
+
+  \item Unique Label Cover Game, \hyperpage{85}
 
 \end{theindex}
