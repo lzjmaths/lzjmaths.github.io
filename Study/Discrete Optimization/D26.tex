@@ -1,0 +1,21 @@
+\begin{theorem}
+    Let  $ \rho\in (-1,0) $,  $ \epsilon>0  $. There exists  $ \tau=\tau(\rho,\epsilon)>0,C=C(\rho,\epsilon)>0 $ such that   $ f:\{\pm 1\}^n\rightarrow[-1,1] $ with  $ \dps\max_i\{\mathrm{Inf}_i^{ \leq C} C(f)\} \leq \tau $, we have 
+    \[\Sbb_\rho(f) \geq 1-\frac{2\arccos\rho}{\pi}-\epsilon\]  
+\end{theorem}
+\begin{definition}
+    $ \mathrm{Inf}_i{ \leq C}(F)=\dps\sum_{S\ni i,|S| \leq C}\hat{f}(S)^2 $ 
+\end{definition}
+\newcommand{\Inf}{\mathrm{Inf}^{\leq C}_i}
+\begin{claim}
+    \[\dps\sum_{i\in [n]}\mathrm{Inf}_i^{ \leq C}f=\dps\sum_{S,|S| \leq C}\hat{f}(S)^2\cdot|S| \leq C\cdot\sum_S\hat{f}(S)^2 \leq C\]
+    Therefore,  $ \dps\left|\{i:\Inf(f)>\tau\}\right|<\frac{C}{\tau} $. 
+    
+    \ie If  $\dps \mathrm{Pr}[\text{f pass dict test}]>\frac{\arccos\rho}{\pi}+\frac{\epsilon}{2} $  then  $ \dps1 \leq |\{i:\Inf(f)>\tau\}|<\frac{C}{\tau} $.  
+
+\end{claim}
+\subsubsection{The Entire Proof}
+\underline{Unique Label Cover Game}: Constraint graph  $ G=(U,V,E) $ left-regular. Alpha bet  $ \Sigma=[K] $. Constraints  $ \forall e=(u,v)\in E,\pi_e:[K]\leftrightarrow [K] $. Prover: provide  $ \sigma:U\cup V\rightarrow [K] $. Verifier: Sample  $ (u,v)\sim E $, test  $ \pi_{uv}(\sigma(v))=\sigma(u) $.
+
+\underline{Unique Games Conjecture} states that  $ \forall \delta>0 $,  $ \exists K=K(\delta) $ \st  $ \mathrm{Gap-ULC}(K)_{1-\delta,\delta}\not\in P $.
+
+\underline{Reduction to MaxCut}: 
