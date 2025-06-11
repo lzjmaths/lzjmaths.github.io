@@ -93,7 +93,8 @@
 \contentsline {paragraph}{Spetral Graph}{76}{section*.50}%
 \contentsline {subsection}{\numberline {5.8}Hardness of Approximating MAXE3LIN}{79}{subsection.5.8}%
 \contentsline {subsection}{\numberline {5.9}Hardness of Max-Cut}{85}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}The Entire Proof}{89}{subsection.5.10}%
-\contentsline {section}{Index}{90}{section*.51}%
-\contentsline {section}{Important Theorems}{91}{section*.52}%
-\contentsline {section}{Important Examples}{92}{section*.53}%
+\contentsline {subsubsection}{\numberline {5.9.1}The Entire Proof}{89}{subsubsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.10}Investigation on ULC}{91}{subsection.5.10}%
+\contentsline {section}{Index}{92}{section*.53}%
+\contentsline {section}{Important Theorems}{93}{section*.54}%
+\contentsline {section}{Important Examples}{94}{section*.55}%

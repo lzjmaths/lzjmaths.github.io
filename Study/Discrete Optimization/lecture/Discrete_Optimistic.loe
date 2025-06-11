@@ -168,3 +168,5 @@
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.79\else \numberline {5.79}Theorem\fi }{88}{theorem.5.79}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.80\else \numberline {5.80}Definition\fi }{89}{definition.5.80}%
 \contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.9.1\else \numberline {5.9.1}Claim\fi }{89}{claim.5.9.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.81\else \numberline {5.81}Definition\fi }{90}{definition.5.81}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.82\else \numberline {5.82}Definition\fi \thmtformatoptarg {Constraint Satisfaction Problem(CSP)}}{91}{definition.5.82}%
