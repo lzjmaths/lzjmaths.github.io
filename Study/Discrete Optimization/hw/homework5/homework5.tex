@@ -203,7 +203,7 @@
 \newcommand{\Qbb}{\mathbb Q}
 \newcommand{\Pbb}{\mathbb P}
 \newcommand{\Rbb}{\mathbb R}
-\newcommand{\Ebb}{\mathbb E}
+\newcommand{\Ebb}{\mathop\mathbb E}
 \newcommand{\Dbb}{\mathbb D}
 \newcommand{\Hbb}{\mathbb H}
 \newcommand{\cbf}{\mathbf c}
@@ -434,6 +434,73 @@
 
     (b)
 
+    In  $ (a) $, we actually prove the $ l $-regular case: \ie each vertex  $ u $ appears in  $ l $  edges in the hypergraph.  
+
+    For any hyperedge  $ e=(u_1,\cdots,u_k) $, let  $ T_e=\{1,2,\cdots,k\}^K $.
+    
+    The unverse is  $ W=\cup_{e\in E}T_e\times\{e\} $, and set 
+    \[S_{u,\alpha}=\bigcup_{u\in e,e\in E}\{x\in T_e:x_{\pi_{i}(\alpha)}=i\text{ where }e_i=u\}\]
+    Now we choose  $ |V| $ sets to cover this universe. 
+
+    Completeness: If there is a instance with strong value  $ 1 $, of course the max-coverage is  $ 1 $.   
+
+    Soundness: To prove if the instance has weak value less than  $ \delta $, then the max-coverage is less than  $ \epsilon+1-(1-\frac{1}{k})^k $. Suffices to prove that for each  $ \epsilon>0 $,  $ \exists \delta>0 $,   if the max-coverage value is larger than  $ \epsilon+1-(1-\frac{1}{k})^k $, then one can decode  $ \sigma $ such that  $ \mathrm{Val} \geq \delta $.
+
+    \newcommand{\Sugg }{\mathrm{Sugg}}
+    Let  $ \Sugg(u)=\{\alpha:S_{u,\alpha}\text{ is chosen}\} $.
+    
+    \begin{claim}
+      \[\Ebb_{e\in E}\sum_{u\in e}|\mathrm{Sugg}(u)|=\frac{1}{|E|}\sum_{e\in E}\sum_{u\in e}|\mathrm{Sugg}(u)|=\frac{l}{|E|}\sum_{u}|\mathrm{Sugg}(u)|=k\]
+      Here we use the  $ l $-regularity of the hypergraph, and  $ l|V|=k|E| $. 
+    \end{claim}
+
+    Denote 
+    \[E_0=\{e\in E:\exists u,v\in e,u\neq v,\pi_{i(u)}(\Sugg(u))\cap \pi_{i(v)}(\Sugg(v))\neq \emptyset,\text{ where  $ i(u),i(v) $ is the position of  $ u,v $ in  $ e $}\}\]
+
+    \[\tau=\Ebb_{e\in E_0}\sum_{u\in e}|\mathrm{Sugg}(u)|,\gamma=\frac{|E_0|}{|E|}\]
+
+    For each  $ u $, if  $ \Sugg (u)\neq \emptyset $, then uniformly choose  $ \sigma(u)\sim \Sugg(u)  $, else if  $ \Sugg(u)=\emptyset $, choose  $ \sigma(u) $ arbitary.     
+    \begin{claim}\label{claim}
+      At least  $ \frac{k-1}{k} $ of edges in  $ |E_0| $ has the property that 
+      \[\mathrm{Pr}[\text{weakly satisfied}] \geq \frac{1}{k^2\tau^2}\]  
+    \end{claim}
+    \begin{proof}
+      First, at least  $ \frac{k-1}{k} $ of edges in  $ |E_0| $ has the property that 
+      \[\max_{u\in e}|\Sugg(u)|  \leq  k\tau\]  
+
+      For  $ e\in E_0 $ ,  $ \exists u,v $ such that  $ u,v\in e,u\neq v,\pi_{i(u)}(\Sugg(u))\cap \pi_{i(v)}(\Sugg(v))\neq \emptyset,\text{ where  $ i(u),i(v) $ is the position of  $ u,v $ in  $ e $}   $. Then 
+      \[\mathrm{Pr}[\pi_{i(u)}(\sigma(u))=\pi_{i(v)}(\sigma(v))] \geq \frac{1}{|\mathrm{Sugg}(u)|\cdot|\mathrm{Sugg}(v)|} \geq \frac{1}{k^2\tau^2}\]
+      the last inequality holds if  $ \dps \max_{u\in e}|\Sugg(u)|  \leq  k\tau $.
+      
+      Therefore, at least  $ \frac{k-1}{k} $ of edges in  $ |E_0| $ has the property that
+      \[\mathrm{Pr}[\text{weakly satisfied}] \geq \mathrm{Pr}[\pi_{i(u)}(\sigma(u))=\pi_{i(v)}(\sigma(v))] \geq \frac{1}{k^2\tau^2}\]
+    
+    \end{proof}
+    \begin{claim}
+      For  $ e\not\in E_0 $, coverage of  $ T_e\times\{e\} $ will less than  $ 1-\dps(1-\frac{1}{k})^{\sum_{u\in e}|\Sugg(u)|} $.
+      
+      Moreover, the total coverage of  $ \dps\bigcup_{e\in E\setminus E_0}T_e\times\{e\} $ is less than 
+      \[1-\Ebb_{e\in E\setminus E_0}(1-\frac{1}{k})^{\sum_{u\in e}|\Sugg(u)|} \leq 1-(1-\frac{1}{k})^{\Ebb_{e\in E\setminus E_0}\sum_{u\in e}|\Sugg(u)|}=1-(1-\frac{1}{k})^{\frac{k-\gamma\tau}{1-\gamma}}\] 
+    \end{claim}
+    \begin{proof}
+      \[\text{non-coverage}=(1-\frac{1}{k})^{\sum_{i=1}^k|\pi_i(\Sugg(e_i))|} \geq (1-\frac{1}{k})^{\sum_{u\in e}|\Sugg(u)|}\]
+    \end{proof}
+    Then by this claim, we have 
+    \[1-(1-\frac{1}{k})^k+\epsilon<\gamma+(1-\gamma)(1-(1-\frac{1}{k})^{\frac{k-\gamma\tau}{1-\gamma}})=1-(1-\gamma)(1-\frac{1}{k})^{\frac{k-\gamma\tau}{1-\gamma}}<1-(1-\gamma)(1-\frac{1}{k})^{\frac{k}{1-\gamma}}\]
+    Then  $ \gamma>\epsilon $.
+    
+    And by 
+    \[(1-\gamma)(1-\frac{1}{k})^{\frac{k-\gamma\tau}{1-\gamma}}<(1-\frac{1}{k})^k-\epsilon\]
+    we have 
+    \[\tau<\frac{1}{\gamma}\left[k-(1-\gamma)\log_{1-\frac{1}{k}}\frac{(1-\frac1k)^k-\epsilon}{1-\gamma}\right]<\frac{2k}{\gamma}<\frac{2k}{\epsilon}\]
+
+    Then by claim \ref{claim}, the expected value of weakly satisfied edges is at least
+    \[\gamma\cdot \frac{k-1}{k}\cdot\frac{1}{k^2\tau^2}>\frac{\epsilon ^3}{4k^5}\]
+
+    Take  $ \delta=\frac{\epsilon ^3}{4k^5} $, then  we can decode $ \sigma $ such that  $ \mathrm{Val}(\sigma)\geq \delta $.
+    
+    Here we end the proof
+
 
 
 \end{problem}
@@ -556,15 +623,62 @@ So the integral gap is  $ \Omega(\log n) $.
 
 \end{problem}
 \begin{problem}
-  For an arbitrary graph $ G=(V,E) $,  $ \epsilon>0 $, WLOG we assme  $ \dps\sum_{(i,j)\in E}\omega(i,j)=1 $.  Let  $\dps d_i=\max_{(i,j)\in E}\left\lceil \frac{\omega(v_i,v_j)}{\epsilon} \right\rceil  $. We can construct a graph  $ G'=(V',E') $ with  $ |V'| \leq \lceil\frac{1}{\epsilon}\rceil|V| $ by split each  $ v_i $ into  $ v_{i,1},v_{i,2},\cdots,v_{i,d_i} $ and if  $ (i,j)\in E $, connects  $ v_{i,t} $   and  $ v_{j,t} $ equipped with weight  $ \epsilon $.
-  
-  Add another  $ |V'|^2-|V'| $ vertices to the graph  $ G' $ and we can use the algorithm to find an  $ \alpha $-approximating solution for  $ G' $ in  $ f(|V'|^2,\dps\frac{|E'|}{|V'|^2})=\mathrm poly(|V'|^2)=\mathrm poly(|V'|) $.
+  First, for any uniformly weighted graph  $ G=(V,E,\omega) $, one can add another  $ |V|^2 $  empty vertices such that the new graph is sparse. Apply algorithm  $ A $ to this new graph, we can obtain a cut with value  $ \alpha\OPT_G $ in  $ f(|V|^2,\frac{|E|}{|V|^2})\in\mathrm{poly}(|V|^2) $. Call this algorithm  $ A' $.
 
-  Rounding: Let  $ x_i\sim \mathrm{Uniform}\{x_{i,1},\cdots,x_{i,d_i}\} $. Then  $ \dps\Ebb[x_i]=\dps\frac{\sum_{t=1}^{d_i}x_i}{d_i} $.
+  Given input graph $G=(V,E,w)$ and $\epsilon > 0$,    set $\eta = \epsilon/\alpha$ and $w_0=\frac{\min_{e\in E}\omega(e)}{cn^2} $ small enough for constant $c > 8$.
+
+  For each  $ e\in E $, let  $ k_e=\lceil \frac{w_e}{w_0} \rceil $. 
+
+    Construct $H$ by sampling each edge of $G$ independently with probability $k_ep = k_e\min(1, \frac{c \log n}{\eta^2})$, and setting sampled edge weights to $w_0/p$.
+
+    Execute $A$ on $H$ to obtain cut $S \subseteq V$.
+
+\begin{lemma}
+For any cut $S \subseteq V$:
+\begin{align*}
+(1-\eta)\text{val}_{G}(S) &\leq \text{val}_H(S) \leq (1+\eta)\text{val}_{G}(S)
+\end{align*}
+with high probability $\geq 1-1/n$.
+\end{lemma}
+\newcommand{\val}{\mathrm{val}}
+\begin{proof}
+  Since 
+  \[\Ebb[\mathrm{val}_H(S)]=\sum_{e\in S}\omega_0/p\cdot k_e p \geq \mathrm{val}_G(S)\]
+  and  $ \chi_e \leq \frac{\omega_0}{p} $ 
+  By Chernoff bound, we have
+  \[\mathrm{Pr}[|\text{val}_H(S)-\mathrm{val}_G(S)| \geq \eta\mathrm{val}_G(S)] \leq 2e^{-\frac{\eta^2\cdot\val_G(S)p}{3\omega_0}}\]
+  Then 
+  \[\begin{aligned}
+    \mathrm{Pr}[\exists S\subset V,|\text{val}_H(S)-\mathrm{val}_G(S)| \geq \eta\mathrm{val}_G(S)] &\leq \sum_{S\subset V}2e^{-\frac{\eta^2\cdot\val_G(S)p}{3\omega_0}}\\
+    &  \leq \sum_{S\subset V}2e^{-\frac{\eta^2\cdot k_Sp}{3}}\text{ where  $ k_S $ is the number of edges cut by  $ S $}\\
+    &=2\sum_{t}|\{S\subset V:k_S=t\}|e^{-\frac{\eta^2 t p}{3}}\\
+    & \leq 2\sum_t\binom{|E|}{t}e^{-\frac{\eta^2 t p}{3}}\\
+    & \leq 2\sum_t\left(\frac{m}{t}\right)^te^{-\frac{\eta^2 t p}{3}}\\
+    & \leq 2\sum_t\left(\frac{n^2}{t}\right)^te^{-\frac{ct\log n}{3}}\\
+    &=2\sum_{t=1}^m\left(\frac{n^2}{t}\cdot n^{-\frac{c}{3}}\right)^t
+  \end{aligned}\]
+Since  $ t \leq n^2 $, take  $ \frac{c}{3}>4 $, we have the lemma holds with high probability $ 1-\frac{1}{n} $  when  $ c $ large enough.
+
+
+
+
+
+\end{proof}
+
+Apply algorithm  $ A' $ on  $ H $ we obtain  a cut with value  $ \val_H(S) \geq \alpha\OPT_H \geq \alpha(1-\eta)\OPT_G=(\alpha-\epsilon/2)\OPT_G $, with high probability $ 1-1/n $, whose runtime is  $ f(|V|,\frac{|E|}{|V|})=\mathrm{poly}(|V|) $
+
+Then  $ \val_G(S) \geq \val_H(S)-\omega_0\cdot n^2 \geq (\alpha-\epsilon)\OPT_G $.
+
+So we construct a  $ \alpha-\epsilon $-approximating randomized algorithm for max-cut in all graph. 
+  % For an arbitrary graph $ G=(V,E) $,  $ \epsilon>0 $, WLOG we assme  $ \dps\sum_{(i,j)\in E}\omega(i,j)=1 $.  Let  $\dps d_i=\max_{(i,j)\in E}\left\lceil \frac{\omega(v_i,v_j)}{\epsilon} \right\rceil  $. We can construct a graph  $ G'=(V',E') $ with  $ |V'| \leq \lceil\frac{1}{\epsilon}\rceil|V| $ by split each  $ v_i $ into  $ v_{i,1},v_{i,2},\cdots,v_{i,d_i} $ and if  $ (i,j)\in E $, connects  $ v_{i,t} $   and  $ v_{j,t} $ equipped with weight  $ \epsilon $.
+  
+  % Add another  $ |V'|^2-|V'| $ vertices to the graph  $ G' $ and we can use the algorithm to find an  $ \alpha $-approximating solution for  $ G' $ in  $ f(|V'|^2,\dps\frac{|E'|}{|V'|^2})=\mathrm poly(|V'|^2)=\mathrm poly(|V'|) $.
+
+  % Rounding: Let  $ x_i\sim \mathrm{Uniform}\{x_{i,1},\cdots,x_{i,d_i}\} $. Then  $ \dps\Ebb[x_i]=\dps\frac{\sum_{t=1}^{d_i}x_i}{d_i} $.
   
   
-  Therefore, 
-  \[\Ebb[\text{value}]=\sum_{(i,j)\in E}\omega(i,j)\frac{1-\frac{(\sum_{t=1}^{d_i}x_{i,t})(\sum_{t=1}^{d_j}x_{j,t})}{d_id_j}}{2} \geq \sum_{(i,j)\in E}\omega(i,j)\cdot\frac{\sum}{d_id_j}\]
+  % Therefore, 
+  % \[\Ebb[\text{value}]=\sum_{(i,j)\in E}\omega(i,j)\frac{1-\frac{(\sum_{t=1}^{d_i}x_{i,t})(\sum_{t=1}^{d_j}x_{j,t})}{d_id_j}}{2} \geq \sum_{(i,j)\in E}\omega(i,j)\cdot\frac{\sum}{d_id_j}\]
 
   % Use an algorithm to strengthen this solution:
 

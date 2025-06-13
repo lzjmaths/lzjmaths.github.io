@@ -1,0 +1,188 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{schneider1986rational}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SC}{%
+         family={Schneider},
+         familyi={S\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=WW}{%
+         family={Werner},
+         familyi={W\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SCWW1}
+    \strng{fullhash}{SCWW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{285\bibrangedash 299}
+    \field{title}{Some New Aspects of Rational Interpolation}
+    \field{volume}{47}
+    \field{journaltitle}{Mathematics of Computation}
+    \field{year}{1986}
+  \endentry
+
+  \entry{berrut1997matrices}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BJP}{%
+         family={Berrut},
+         familyi={B\bibinitperiod},
+         given={J.-P.},
+         giveni={J\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=MHD}{%
+         family={Mittelmann},
+         familyi={M\bibinitperiod},
+         given={H.\bibnamedelima D.},
+         giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJPMHD1}
+    \strng{fullhash}{BJPMHD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{355\bibrangedash 370}
+    \field{title}{Matrices for the Direct Determination of the Barycentric
+  Weights of Rational Interpolation}
+    \field{volume}{78}
+    \field{journaltitle}{Journal of Computational and Applied Mathematics}
+    \field{year}{1997}
+  \endentry
+
+  \entry{berrut2005barycentric}{incollection}{}
+    \name{author}{3}{}{%
+      {{hash=BJP}{%
+         family={Berrut},
+         familyi={B\bibinitperiod},
+         given={J.-P.},
+         giveni={J\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Baltensperger},
+         familyi={B\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MHD}{%
+         family={Mittelmann},
+         familyi={M\bibinitperiod},
+         given={H.\bibnamedelima D.},
+         giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=dBMG}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Bruin},
+         familyi={B\bibinitperiod},
+         given={M.\bibnamedelima G.},
+         giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=MDH}{%
+         family={Mache},
+         familyi={M\bibinitperiod},
+         given={D.\bibnamedelima H.},
+         giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Szabados},
+         familyi={S\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Birkhäuser}%
+    }
+    \strng{namehash}{BJPBRMHD1}
+    \strng{fullhash}{BJPBRMHD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Trends and Applications in Constructive Approximation}
+    \field{pages}{27\bibrangedash 51}
+    \field{title}{Recent Developments in Barycentric Rational Interpolation}
+    \list{location}{1}{%
+      {Basel}%
+    }
+    \field{year}{2005}
+  \endentry
+
+  \entry{AAAalg}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NY}{%
+         family={Nakatsukasa},
+         familyi={N\bibinitperiod},
+         given={Yuji},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SO}{%
+         family={S\`{e}te},
+         familyi={S\bibinitperiod},
+         given={Olivier},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=TLN}{%
+         family={Trefethen},
+         familyi={T\bibinitperiod},
+         given={Lloyd\bibnamedelima N.},
+         giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NYSOTLN1}
+    \strng{fullhash}{NYSOTLN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    We introduce a new algorithm for approximation by rational functions on a
+  real or complex set of points, implementable in 40 lines of MATLAB and
+  requiring no user input parameters. Even on a disk or interval the algorithm
+  may outperform existing methods, and on more complicated domains it is
+  especially competitive. The core ideas are (1) representation of the rational
+  approximant in barycentric form with interpolation at certain support points
+  and (2) greedy selection of the support points to avoid exponential
+  instabilities. The name AAA stands for “adaptive Antoulas--Anderson” in
+  honor of the authors who introduced a scheme based on (1). We present the
+  core algorithm with a MATLAB code and nine applications and describe variants
+  targeted at problems of different kinds. Comparisons are made with vector
+  fitting, RKFIT, and other existing methods for rational approximation.%
+    }
+    \verb{doi}
+    \verb 10.1137/16M1106122
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1137/16M1106122
+    \endverb
+    \field{number}{3}
+    \field{pages}{A1494\bibrangedash A1522}
+    \field{title}{The AAA Algorithm for Rational Approximation}
+    \verb{url}
+    \verb https://doi.org/10.1137/16M1106122
+    \endverb
+    \field{volume}{40}
+    \field{journaltitle}{SIAM Journal on Scientific Computing}
+    \field{year}{2018}
+  \endentry
+\enddatalist
+\endinput

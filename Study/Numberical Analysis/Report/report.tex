@@ -1,4 +1,410 @@
-\documentclass{article}
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{algorithm}
+\usepackage[utf8]{inputenc}
+\usepackage{algpseudocode}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
+
+\addbibresource{refs.bib}
+
+
+\usepackage{hyperref}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+
+\title{Developments in Barycentric Rational Interpolation}
+\author{Lin Zejin}
+\date{}
+
 \begin{document}
-  Hello world!
+
+\maketitle
+\section{Introduction: polynomial interpolation in barycentric form}
+
+Interpolation is one of the central tools of numerical analysis: analysis problems are being solved by first choosing from the infinite complexity of an arbitrary function a few of its  values and replacing it with an interpolant of these values. 
+
+This article reviews some of the recent advances in the practical use of interpolation in the form of the so-called \textit{barycentric formula}.
+
+In summary, Schneider and Werner \cite{schneider1986rational} have been the first to determine barycentric representations of rational
+interpolants. Berrut and his students and colleagues develop it in \cite{berrut1997matrices,berrut2005barycentric}. \cite{AAAalg} gives a more efficient and stable algorithm based on the barycentric form, which is called the \textit{AAA algorithm}.
+
+\section{Rational barycentric representations} 
+    The \textbf{barycentric formula} takes the form of a quotient of two partial fractions,
+    
+    
+    \begin{equation*}
+    r(z)=\frac{n(z)}{d(z)}=\sum_{j=1}^{m} \frac{w_{j} f_{j}}{z-z_{j}} / \sum_{j=1}^{m} \frac{w_{j}}{z-z_{j}} \tag{2.1}
+    \end{equation*}
+    
+    
+    where $m \geq 1$ is an integer, $z_{1}, \ldots, z_{m}$ are a set of real or complex distinct support points, $f_{1}, \ldots, f_{m}$ are a set of real or complex data values, and $w_{1}, \ldots, w_{m}$ are a set of real or complex weights. As indicated in the equation, we let $n(z)$ and $d(z)$ stand for the partial fractions in the numerator and the denominator. When we wish to be explicit about step numbers, we write $r_{m}(z)=n_{m}(z) / d_{m}(z)$.
+    
+    The node polynomial $\ell$ associated with the set $z_{1}, \ldots, z_{m}$ is the monic polynomial of degree $m$ with these numbers as roots,
+    
+    
+    \begin{equation*}
+    \ell(z)=\prod_{j=1}^{m}\left(z-z_{j}\right) \tag{2.2}
+    \end{equation*}
+    
+    
+    If we define
+    
+    
+    \begin{equation*}
+    p(z)=\ell(z) n(z), \quad q(z)=\ell(z) d(z) \tag{2.3}
+    \end{equation*}
+    
+    
+    then $p$ and $q$ are each polynomials of degree at most $m-1$. Thus, we have a simple link between the barycentric representation of $r$ and its more familiar representation as a quotient of polynomials,
+    
+    
+    \begin{equation*}
+    r(z)=\frac{p(z) / \ell(z)}{q(z) / \ell(z)}=\frac{p(z)}{q(z)} \tag{2.4}
+    \end{equation*}
+    
+    
+    This equation tells us that $r$ is a rational function of type ( $m-1, m-1$ ), where, following standard terminology, we say that a rational function is of type ( $\mu, \nu$ ) for integers $\mu, \nu \geq 0$ if it can be written as a quotient of a polynomial of degree at most $\mu$ and a polynomial of degree at most $\nu$, not necessarily in lowest terms. 
+    
+    A key aspect of (2.1) is its interpolatory property. At each point $z_{j}$ with $w_{j} \neq 0$, the formula is undefined, taking the form $\infty / \infty$ (assuming $f_{j} \neq 0$ ). However, this is a removable singularity, for $\lim _{z \rightarrow z_{j}} r(z)$ exists and is equal to $f_{j}$. Thus, if the weights $w_{j}$ are nonzero, (2.1) provides a type ( $m-1, m-1$ ) rational interpolant to the data $f_{1}, \ldots, f_{m}$ at $z_{1}, \ldots, z_{m}$. Note that such a function has $2 m-1$ degrees of freedom, so roughly half of these are fixed by the interpolation conditions and the other half are not.
+    
+    We summarize the properties of barycentric representations developed in the discussion above by the following theorem.
+    
+    \begin{theorem}[rational barycentric representations]
+        Let $z_{1}, \ldots, z_{m}$ be an arbitrary set of distinct complex numbers. As $f_{1}, \ldots, f_{m}$ range over all complex values and $w_{1}, \ldots, w_{m}$ range over all nonzero complex values, the functions
+    
+
+    \begin{equation*}
+    r(z)=\frac{n(z)}{d(z)}=\sum_{j=1}^{m} \frac{w_{j} f_{j}}{z-z_{j}} / \sum_{j=1}^{m} \frac{w_{j}}{z-z_{j}} \tag{2.5}
+    \end{equation*}
+    range over the set of all rational functions of type $(m-1, m-1)$  that have no poles at the points $z_{j}$. Moreover, $r\left(z_{j}\right)=f_{j}$ for each $j$.
+    \end{theorem}
+    
+
+
+    
+    \begin{proof}
+        By (2.4), any quotient $n / d$ as in (2.5) is a rational function $r$ of type $(m-1, m-1)$. Moreover, since $w_{j} \neq 0, d$ has a simple pole at $z_{j}$ and $n$ has either a simple pole there (if $f_{j} \neq 0$ ) or no pole. Therefore, $r$ has no pole at $z_{j}$.
+        
+        Conversely, suppose $r$ is a rational function of type $(m-1, m-1)$  with no poles at the points $z_{j}$, and write $r=p / q$, where $p$ and $q$ are polynomials of degree at most $m-1$ with no common zeros. Then $q / \ell$ is a rational function with a zero at $\infty$ and simple poles at the points $z_{j}$. Therefore, $q / \ell$ can be written in the partial fraction form of a denominator $d$ as in (2.5) with $w_{j} \neq 0$ for each $j$. Similarly, $p / \ell$ is a rational function with a zero at $\infty$ and simple poles at the points $z_{j}$ or a subset of them. Therefore, since $w_{j} \neq 0, p / \ell$ can be written in the partial fraction form of a numerator $n$ as in (2.5).
+    \end{proof}
+    
+
+\section{Classical rational interpolation}
+
+The problem here is to find $r \in \mathcal{R}_{m, n}$ that interpolates the $f_{j}$, i.e., $p \in \mathcal{P}_{m}$ and $q \in \mathcal{P}_{n}$ such that
+
+\begin{equation*}
+r\left(x_{j}\right)=\frac{p\left(x_{j}\right)}{q\left(x_{j}\right)}=f_{j}, \quad j=0(1) N . \tag{3.1}
+\end{equation*}
+
+
+In the canonical representation, $p$ and $q$ together have $m+n+2$ coefficients, of which one may be set to 1 by dividing both polynomials by it. The $N+1$ interpolation conditions (3.1) thus are equally numerous as the coefficients when
+
+\begin{equation*}
+N=m+n . \tag{3.2}
+\end{equation*}
+
+
+
+\subsection*{Classical rational interpolation in barycentric form}
+
+Schneider and Werner \cite{schneider1986rational} have been the first to determine barycentric representations of rational interpolants. Their method uses a classical way of determining the Newton form of the interpolant before applying an algorithm of Werner to pass from the Newton to the barycentric form. In \cite{berrut1997matrices}, the first and last authors have given a method for directly finding the corresponding weights $u_{j}$ when $n \leq m$.
+
+\begin{theorem}
+    If a solution $r$ of the classical rational interpolation problem  $ (3.1)(3.2)  $ with $n \leq m$ exists, then $\mathbf{u}=\left[u_{0}, u_{1}, \ldots, u_{N}\right]$ is a vector of weights in one of
+its barycentric representations  $ (2.1) $  iff $\mathbf{u}$ belongs to the kernel of the $N \times(N+1)$ matrix
+\[
+\mathbf{A}:=\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1  \tag{3.3}\\
+x_{0} & x_{1} & x_{2} & \cdots & x_{N} \\
+x_{0}^{2} & x_{1}^{2} & x_{2}^{2} & \cdots & x_{N}^{2} \\
+\vdots & \vdots & \vdots & & \vdots \\
+x_{0}^{m-1} & x_{1}^{m-1} & x_{2}^{m-1} & \cdots & x_{N}^{m-1} \\
+f_{0} & f_{1} & f_{2} & \cdots & f_{N} \\
+f_{0} x_{0} & f_{1} x_{1} & f_{2} x_{2} & \cdots & f_{N} x_{N} \\
+f_{0} x_{0}^{2} & f_{1} x_{1}^{2} & f_{2} x_{2}^{2} & \cdots & f_{N} x_{N}^{2} \\
+\vdots & \vdots & \vdots & & \vdots \\
+f_{0} x_{0}^{n-1} & f_{1} x_{1}^{n-1} & f_{2} x_{2}^{n-1} & \cdots & f_{N} x_{N}^{n-1}
+\end{array}\right] .
+\]
+\end{theorem}
+
+In order to save space, we introduce some notation: $\mathbf{V}_{P, Q}, P \leq Q$, will be the matrix made up of the first $P$ rows of the transposed Vandermonde matrix corresponding to the $Q+1$ values $x_{0}, \ldots, x_{Q}$, and $\mathbf{F}_{Q}=\operatorname{diag}\left(f_{0}, \ldots, f_{Q}\right) \in \mathbb{R}^{Q+1, Q+1}$ will be the diagonal matrix of values $f_{0}, \ldots, f_{Q}$. Then $\mathbf{A}$ in (3.3) may be written $\mathbf{A}=\left[\mathbf{V}_{m, N}^{T}, \mathbf{F}_{N}^{T} \mathbf{V}_{n, N}^{T}\right]^{T}$.
+
+The proof of Theorem 3.1 consists in showing that the first $m$ equations express that the degree of the denominator written in the form $\ell(x) \sum_{j=0}^{N} \frac{u_{j}}{x-x_{j}}$ in (2.1) is at most $n$, the last $n$ equations that the numerator degree is at most $m$. Lemma 2.1 a) implies that $r$ in (2.1) interpolates in $x_{j}$ if $u_{j} \neq 0$; the latter is not necessary, though.
+
+As a corollary, Theorem 3.1 delivers the kernel of the matrix $\mathbf{V}_{N-1, N}$ : it is just the space spanned by the vector of the polynomial barycentric weights $w_{j}$.
+
+
+The algorithm given in \cite{berrut1997matrices} for computing the kernel of $\mathbf{A}$ in (3.3) is much more efficient than computing the singular value decomposition of $\mathbf{A}$. It consists in triangulating (3.3) in two steps: one analytical, which leads to divided differences, the other numerical, through Gaussian elimination with column pivoting. Though, in contrast with $p$, $r$ is a good approximation even with equidistant interpolation points for $N$ large enough, Chebyshev nodes again lead to much better conditioned problems. Note, however, that these nodes must be reordered for a stable computation of the divided differences. The algorithm is then extremely stable, see the examples in \cite{berrut1997matrices}.
+
+As with the interpolating polynomial, the degrees of $p$ and $q$ may be smaller than $m$ and $n$. This manifests itself in the kernel of $\mathbf{A}$ having dimension larger.
+
+
+A way of coping with this, suggested in \cite{berrut1997matrices}, is to decrease $n$ by 1 , restart the computation, and repeat until a kernel of dimension 1 is obtained for some $n^{*}<n$. $\mathbf{u}$ then yields the barycentric representation (2.1) of a reduced $r$, i.e., one in which the linear factors corresponding to common zeros of $p$ and $q$ have been simplified. We will denote it by $r^{*}$. If $u_{k}=0$ for some $k$ and $r^{*}\left(x_{k}\right) \neq f_{k}$, then $x_{k}$ is an unattainable point and the problem does not have a solution. This is the first part of the following theorem, due to Schneider and Werner \cite{berrut1997matrices}, which allows an easy detection of two drawbacks of classical rational interpolation directly from the weights.
+
+\begin{theorem}
+    Let $u$ be barycentric weights of a reduced rational interpolant $r^{*}=$ $p^{*} / q^{*}$. Then
+    \begin{enumerate}
+        \item[a)] a point $x_{k}$ is unattainable iff $u_{k}=0$;
+        \item[b)] if $u_{k} \neq 0$ for all $k$, if the interpolation points have been ordered as $x_{0}<$ $x_{1}<\cdots<x_{N}$ and if $\operatorname{sign} u_{j}=\operatorname{sign} u_{j+1}$, then $r^{*}$ has an odd number of poles between $x_{j}$ and $x_{j+1}$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    a) follows from the above discussion and Theorem 2.1, b) from noticing that $q^{*}$ changes sign, thus has a zero, between $x_{j}$ and $x_{j+1}$, and $p^{*}$ does not, for otherwise $r^{*}$ would not be reduced.
+\end{proof}
+
+\subsection*{Stability and Conditioning}
+The barycentric representation  is generally more numerically stable than solving for polynomial coefficients.  Higham and others have proved that for polynomial interpolation the barycentric evaluation is backward stable \cite{berrut2005barycentric}.  For rational interpolation, similar arguments show that evaluation in barycentric form is stable when $x$ is not too close to the poles of $r$.
+
+The condition number of evaluating $r(x)$ depends on the distance to the nearest pole.  If $x$ is near a true pole of the function being approximated, rounding errors can be magnified.  Nevertheless, in many practical settings the barycentric approach exhibits good stability and accuracy.  In particular, because  never requires dividing by zero at the interpolation nodes, it avoids catastrophic cancellation in forming the interpolant itself.
+
+One must also consider spurious pole-zero cancellations.  In finite precision or noisy data, an interpolant may introduce small residue poles (Froissart doublets) that do not reflect true features of the underlying function.  Modern implementations include cleanup steps to detect and remove these doublets, ensuring that the final rational approximant is as simple as possible.
+
+
+\section{AAA Algorithm} 
+The Adaptive Antoulas–Anderson (AAA) algorithm is a recent method for rational approximation
+using the barycentric form \cite{AAAalg}. It is an iterative procedure that constructs a rational approximant to given
+data or a function on a discrete set.
+
+We begin with a finite sample set $Z \subseteq \mathbf{C}$ of $M \gg 1$ points. We assume a function $f(z)$ is given that is defined at least for all $z \in Z$. This function may have an analytic expression, or it may be just a set of data values.
+
+The AAA algorithm takes the form of an iteration for $m=1,2,3, \ldots$, with $r$ represented at each step in the barycentric form (2.5). At step $m$ we first pick the next support point $z_{m}$ by the greedy algorithm to be described below, and then we compute corresponding weights $w_{1}, \ldots, w_{m}$ by solving a linear least-squares problem over the subset of sample points that have not been selected as support points,
+
+
+\begin{equation*}
+Z^{(m)}=Z \backslash\left\{z_{1}, \ldots, z_{m}\right\} \tag{3.1}
+\end{equation*}
+
+
+Thus, at step $m$, we compute a rational function $r$ of type ( $m-1, m-1$ ), which generically will interpolate $f_{1}=f\left(z_{1}\right), \ldots, f_{m}=f\left(z_{m}\right)$ at $z_{1}, \ldots, z_{m}$ (although not always, since one or more weights may turn out to be zero).
+
+The least-squares aspect of the algorithm is as follows. Our aim is an approximation
+
+
+\begin{equation*}
+f(z) \approx \frac{n(z)}{d(z)}, \quad z \in Z \tag{3.2}
+\end{equation*}
+
+
+which in linearized form becomes
+
+
+\begin{equation*}
+f(z) d(z) \approx n(z), \quad z \in Z^{(m)} \tag{3.3}
+\end{equation*}
+
+
+Note that in going from (3.2) to (3.3) we have replaced $Z$ by $Z^{(m)}$, because $n(z)$ and $d(z)$ will generically have poles at $z_{1}, \ldots, z_{m}$, so (3.3) would not make sense over all $z \in Z$. The weights $w_{1}, \ldots, w_{m}$ are chosen to solve the least-squares problem
+
+
+\begin{equation*}
+\operatorname{minimize}\|f d-n\|_{Z^{(m)}}, \quad\|w\|_{m}=1 \tag{3.4}
+\end{equation*}
+
+
+where $\|\cdot\|_{Z^{(m)}}$ is the discrete 2-norm over $Z^{(m)}$ and $\|\cdot\|_{m}$ is the discrete 2-norm on $m$-vectors. To ensure that this problem makes sense, we assume that $Z^{(m)}$ has at least $m$ points, i.e., $m \leq M / 2$.
+
+The greedy aspect of the iteration is as follows. At step $m$, the next support point $z_{m}$ is chosen as a point $z \in Z^{(m-1)}$ where the nonlinear residual $f(z)-n(z) / d(z)$ at step $m-1$ takes its maximum absolute value.
+
+
+
+Assuming the iteration is successful, it terminates when the nonlinear residual is sufficiently small; we have found it effective to use a default tolerance of $10^{-13}$ relative to the maximum of $|f(Z)|$. The resulting approximation typically has few or no numerical Froissart doublets, and if there are any, they can usually be removed by one further least-squares step to be described in section 5. (If the convergence tolerance is too tight, the approximation will stagnate and many Froissart doublets will appear.) In the core AAA algorithm, it is an approximation of type ( $m-1, m-1$ ).
+
+It remains to spell out the linear algebra involved in (3.4). Let us regard $Z^{(m)}$ and $F^{(m)}=f\left(Z^{(m)}\right)$ as column vectors,
+
+$$
+Z^{(m)}=\left(Z_{1}^{(m)}, \ldots, Z_{M-m}^{(m)}\right)^{T}, \quad F^{(m)}=\left(F_{1}^{(m)}, \ldots, F_{M-m}^{(m)}\right)^{T}
+$$
+
+We seek a normalized column vector
+
+$$
+w=\left(w_{1}, \ldots, w_{m}\right)^{T}, \quad\|w\|_{m}=1
+$$
+
+that minimizes the 2 -norm of the $(M-m)$-vector
+
+$$
+\sum_{j=1}^{m} \frac{w_{j} F_{i}^{(m)}}{Z_{i}^{(m)}-z_{j}}-\sum_{j=1}^{m} \frac{w_{j} f_{j}}{Z_{i}^{(m)}-z_{j}}
+$$
+
+that is,
+
+$$
+\sum_{j=1}^{m} \frac{w_{j}\left(F_{i}^{(m)}-f_{j}\right)}{Z_{i}^{(m)}-z_{j}}
+$$
+
+This is a matrix problem of the form
+
+
+\begin{equation*}
+\operatorname{minimize}\left\|A^{(m)} w\right\|_{M-m}, \quad\|w\|_{m}=1 \tag{3.5}
+\end{equation*}
+
+
+where $A^{(m)}$ is the $(M-m) \times m$ Loewner matrix 
+
+\[
+A^{(m)}=\left(\begin{array}{ccc}
+\frac{F_{1}^{(m)}-f_{1}}{Z_{1}^{(m)}-z_{1}} & \cdots & \frac{F_{1}^{(m)}-f_{m}}{Z_{1}^{(m)}-z_{m}}  \tag{3.6}\\
+\vdots & \ddots & \vdots \\
+\frac{F_{M-m}^{(m)}-f_{1}}{Z_{M-m}^{(m)}-z_{1}} & \cdots & \frac{F_{M-m}^{(m)}-f_{m}}{Z_{M-m}^{(m)}-z_{m}}
+\end{array}\right)
+\]
+
+We will solve (3.5) using the singular value decomposition (SVD), taking $w$ as the final right singular vector in a reduced SVD $A^{(m)}=U \Sigma V^{*}$. (The minimal singular value of $A^{(m)}$ might be nonunique or nearly so, but our algorithm does not rely on its uniqueness.) Along the way it is convenient to make use of the ( $M-m$ ) $\times m$ Cauchy matrix
+
+\[
+C=\left(\begin{array}{ccc}
+\frac{1}{Z_{1}^{(m)}-z_{1}} & \cdots & \frac{1}{Z_{1}^{(m)}-z_{m}}  \tag{3.7}\\
+\vdots & \ddots & \vdots \\
+\frac{1}{Z_{M-m}^{(m)}-z_{1}} & \cdots & \frac{1}{Z_{M-m}^{(m)}-z_{m}}
+\end{array}\right)
+\]
+
+whose columns define the basis in which we approximate. If we define diagonal left and right scaling matrices by
+
+
+\begin{equation*}
+S_{F}=\operatorname{diag}\left(F_{1}^{(m)}, \ldots, F_{M-m}^{(m)}\right), \quad S_{f}=\operatorname{diag}\left(f_{1}, \ldots, f_{m}\right) \tag{3.8}
+\end{equation*}
+
+
+then we can construct $A^{(m)}$ from $C$ using the identity
+
+
+\begin{equation*}
+A^{(m)}=S_{F} C-C S_{f} \tag{3.9}
+\end{equation*}
+
+
+and once $w$ is found with the SVD, we can compute $(M-m)$-vectors $N$ and $D$ with
+
+
+\begin{equation*}
+N=C(w f), \quad D=C w \tag{3.10}
+\end{equation*}
+
+
+These correspond to the values of $n(z)$ and $d(z)$ at points $z \in Z^{(m)}$. (Since $M$ will generally be large, it is important that the sparsity of $S_{F}$ is exploited in the multiplication of (3.9).) Finally, to get an $M$-vector $R$ corresponding to $r(z)$ for all $z \in Z$, we set $R=f(Z)$ and then $R\left(Z^{(m)}\right)=N / D$.
+
+\begin{algorithm}[H]
+    \caption{AAA Algorithm }
+    \begin{algorithmic}[1]
+    \Require Function or data $F$, sample points $Z = \{z_1, \dots, z_M\}$, tolerance $\varepsilon$, maximum iterations $m_{\max}$
+    \Ensure Rational approximant $r(z)$ in barycentric form, poles, zeros, residues, support points
+    
+    \State Initialize:
+        \begin{itemize}
+            \item $R \gets$ mean of $F$ (initial approximation)
+            \item Empty support point list: $z \gets []$, $f \gets []$, $C \gets []$
+            \item Error vector: $\text{errvec} \gets []$
+        \end{itemize}
+    
+    \For{$m = 1$ to $m_{\max}$}
+        \State Select next support point $z_m$ where residual $|F - R|$ is largest
+        \State Append $z_m$ and $f_m = F(z_m)$ to support sets
+        \State Remove $z_m$ from candidate pool
+        \State Update Cauchy matrix: \\
+        \hskip1em $C \gets [C \ \ 1/(Z - z_m)]$
+        
+        \State Construct Loewner matrix: \\
+        \hskip1em $A = \text{diag}(F) \cdot C - C \cdot \text{diag}(f)$
+    
+        \State Compute SVD of $A$ and select right singular vector $w$ with smallest singular value
+    
+        \State Construct barycentric rational approximation: \\
+        \hskip1em Numerator $N = C \cdot (w \cdot f)$ \\
+        \hskip1em Denominator $D = C \cdot w$ \\
+        \hskip1em $R_j = N_j / D_j$ for all $j$ not in support points
+    
+        \State Compute max error: $\text{err} = \|F - R\|_\infty$
+        \State Append $\text{err}$ to $\text{errvec}$
+        \If{$\text{err} \leq \varepsilon \cdot \|F\|_\infty$}
+            \State \textbf{break}
+        \EndIf
+    \EndFor
+    
+    \State Define rational approximant $r(z)$ using barycentric formula:
+    \[
+    r(z) = \frac{\sum_{j} \frac{w_j f_j}{z - z_j}}{\sum_{j} \frac{w_j}{z - z_j}}
+    \]
+    
+    \State Compute poles, residues, and zeros via generalized eigenvalue problems
+    
+    \State Optionally: remove Froissart doublets (close pole-zero pairs)
+    
+\end{algorithmic}
+\end{algorithm}
+
+After the AAA algorithm terminates (assuming $w_{j} \neq 0$ for all $j$ ), one has a rational approximation $r(z)=n(z) / d(z)$ in barycentric form. The zeros of $d$, which are (generically) the poles of $r$, can be computed by solving an $(m+1) \times(m+1)$
+generalized eigenvalue problem in arrowhead form,
+
+\[
+\left(\begin{array}{ccccc}
+0 & w_{1} & w_{2} & \cdots & w_{m}  \tag{3.11}\\
+1 & z_{1} & & & \\
+1 & & z_{2} & & \\
+\vdots & & & \ddots & \\
+1 & & & & z_{m}
+\end{array}\right)=\lambda\left(\begin{array}{ccccc}
+0 & & & & \\
+& 1 & & & \\
+& & 1 & & \\
+& & & \ddots & \\
+& & & & 1
+\end{array}\right)
+\]
+
+At least two of the eigenvalues of this problem are infinite, and the remaining $m-1$ are the zeros of $d$. A similar computation with $w_{j}$ replaced by $w_{j} f_{j}$ gives the zeros of $n(z)$.
+
+The following proposition collects some elementary properties of the core AAA algorithm. We say "a" instead of "the" in view of the fact that in cases of ties in the greedy choice at each step, AAA approximants are not unique.
+
+\begin{proposition}
+    Let $r(z)$ be a AAA approximant at step $m$ of a function $f(z)$ on a set $Z$ (computed in exact arithmetic). The following statements refer to AAA approximants at step $m$, and $a$ and $b$ are complex constants.
+
+Affineness in $f$. For any $a \neq 0$ and $b, \operatorname{ar}(z)+b$ is an approximant of $a f(z)+b$ on $Z$.
+
+Affineness in $z$. For any $a \neq 0$ and $b, r(a z+b)$ is an approximant of $f(a z+b)$ on $(Z-b) / a$.
+
+Monotonicity. The linearized residual norm $\sigma_{\min }\left(A^{(m)}\right)=\|f d-n\|_{Z^{(m)}}$ is a nonincreasing function of $m$.
+\end{proposition}
+
+\begin{proof}
+    These properties are straightforward and we do not spell out the arguments except to note that the monotonicity property follows from the fact that $A^{(m)}$ is obtained from $A^{(m-1)}$ by deleting one row and appending one column. Since the minimum singular vector for $A^{(m-1)}$ (padded with one more zero) is also a candidate singular vector of $A^{(m)}$, we must have $\sigma_{\min }\left(A^{(m)}\right) \leq \sigma_{\min }\left(A^{(m-1)}\right)$.
+\end{proof}
+
+One might ask, must the monotonicity be strict, with $\sigma_{\min }\left(A^{(m)}\right)<\sigma_{\min }\left(A^{(m-1)}\right)$ if $\sigma_{\min }\left(A^{(m-1)}\right) \neq 0$ ? So far as we are aware, the answer is no. An equality $\sigma_{\min }\left(A^{(m)}\right)=\sigma_{\min }\left(A^{(m-1)}\right)$ implies $f\left(z_{m}\right) d_{m-1}\left(z_{m}\right)=n_{m-1}\left(z_{m}\right)$, where $z_{m}$ is the support point selected at step $m$. This in turn implies $d_{m-1}\left(z_{m}\right)=n_{m-1}\left(z_{m}\right)=0$, since otherwise we could divide by $d_{m-1}\left(z_{m}\right)$ to find $f\left(z_{m}\right)-n_{m-1}\left(z_{m}\right) / d_{m-1}\left(z_{m}\right)=0$, which would contradict the greedy choice of $z_{m}$. But so far as we know, the possibility $d_{m-1}\left(z_{m}\right)=n_{m-1}\left(z_{m}\right)=0$ is not excluded.
+
+Since the AAA algorithm involves SVDs of dimensions $(M-j) \times j$ with $j=$ $1,2, \ldots, m$, its complexity is $O\left(M m^{3}\right)$ flops. This is usually modest since in most applications $m$ is small.
+
+\subsection*{Advantages of the AAA algorithm}
+
+
+The AAA algorithm uses a barycentric representation that provides better numerical conditioning and flexibility. This allows AAA to handle complex domains, including disconnected or irregular regions, with ease. Additionally, the AAA algorithm's greedy approach to selecting support points minimizes the risk of Froissart doublets (spurious pole-zero pairs)
+Another one of its key strengths is its adaptive selection of support points, which avoids exponential instabilities and ensures robust convergence without requiring user-specified initial parameters like pole locations or numbers.  , a common issue in other methods.
+
+\section{Conclusion}
+
+
+The applications of the barycentric representation of rational interpolants brings interesting advances in infinitely smooth practical approximation. Its use in classical rational interpolation yields a very stable way of computing the interpolant and allows for a relatively simple detection of unattainable points and poles. The latter may also be easily monitored in the complex plane and their location optimized to yield new rational interpolants which approximate a given function with an error that diminishes with the number of the poles. AAA algorithm develops this idea further, allowing for a more stable way of computing rational approximants to a function defined on a support set, even not necessarily analytic. 
+
+
+
+
+
+\printbibliography
+
+
 \end{document}
