@@ -382,7 +382,13 @@
 
 
 \begin{problem}
+    (a) In a connected component with diameter less than  $ \frac{1}{10}d $, each pair of elements in the component should differ at most  $ \frac{1}{10}d $.
     
+    Then the total size of the component is less than 
+    \[2^\frac{d}{10}\cdot\binom{\frac{d}{10}}{d}\overset{Stirling}{<}2^{0.8d}\]
+    Therefore, by isoperimetric inequality, 
+    \[\text{the number of edges cut}=\frac{1}{2}\sum_{A:\text{connected component}}|\mathrm{edges}(A,\bar{A})| \geq\sum_A |A|(d-\log_2|A|) \geq \sum_A\frac{1}{10}d|A|=O(n\log n)\]
+
 \end{problem}
 \begin{problem}
     
@@ -435,7 +441,55 @@
     \[\frac{\binom{\frac{n-1}{2}}{n}}{2^n} \geq \sqrt{\frac{2}{\pi n}}\]
     So it is  $ (\sqrt{\frac{2}{\pi n}},\frac{1}{2}) $-quasirandom         
 \end{problem}
+\newcommand{\Inf}{\mathrm{Inf}}
 \begin{problem}
-    
+    (a) In the lecture we have proved that 
+    \[\Inf_i(f)=\sum_{S\ni i}\hat{f}(S)^2\]
+    Then 
+    \[\Inf(f)=\sum_{i=1}^n\sum,_{S\ni i}\hat{f}(S)^2=\sum_{S\subset [n]}|S|\hat{f}(S)^2\]
+
+
+    (b)  $ \Ebb_{\vec{x}}f(\vec{x})=\hat{f}(\emptyset) $. Therefore, 
+    \[\mathrm{Var}(f)=\Ebb_{\vec{x}}f(\vec{x})^2-\left(\Ebb_{\vec{x}}f(\vec{x})\right)^2=\sum_{S\subset [n]}\hat{f}(S)^2-\hat{f}(\emptyset)^2=\sum_{S\neq \emptyset}\hat{f}(S)^2\] 
+
+    (c) Define  $ f(x)=\begin{cases}
+        1&x\in A\\
+        -1&x\in \bar{A}
+    \end{cases} $. 
+
+    Then  \[\dps\mathrm{Var}(f)=\Ebb_{\vec{x}}f(\vec{x})^2-\left(\Ebb_{\vec{x}}f(\vec{x})\right)^2=1-\left(1-\frac{2|A|}{2^n}\right)^2=\frac{|A|}{2^{n-2}}-\frac{|A|^2}{2^{2n-2}}\]
+    \[|\mathrm{edges}(A,\bar{A})|=\sum_{i=1}^n 2^{n-1}\Inf_i(f)=2^{n-1}\Inf(f) \geq 2^{n-1}\mathrm{Var}(f)=2|A|(1-\frac{|A|}{2^{n}})\]
+\end{problem}
+
+\begin{problem}
+    Let
+\[
+S = \sum_{j=1}^n a_j x_j
+\]
+where $x_j$ are independent uniform random signs. Then
+\[
+\operatorname{Inf}_i(f) = \Pr\left[ f(x) \neq f(x^{\oplus i}) \right] = \Pr\left[ S \cdot (S - 2 a_i x_i ) < 0 \right].
+\]
+
+This event occurs if and only if $|S| \le 2 |a_i|$. Therefore,
+\[
+\operatorname{Inf}_i(f) = \Pr\left[ |S| \le 2 |a_i| \right].
+\]
+
+Since $\operatorname{Var}(S) = \sum_j a_j^2 = 1$, $S$ is a sum with variance $1$. By the Berry-Essen inequality,
+\[
+\Pr\left[ |S| \le t \right] \le O\left( t + \tau \right).
+\]
+
+Setting $t = 2 |a_i|$, we obtain
+\[
+\operatorname{Inf}_i(f) \le O\left( |a_i| + \tau \right).
+\]
+
+Since $|a_i| \le \tau$, this gives
+\[
+\operatorname{Inf}_i(f) \le O(\tau).
+\]
+\hfill $\Box$
 \end{problem}
 \end{document}
