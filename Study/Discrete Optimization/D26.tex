@@ -1,0 +1,82 @@
+\begin{theorem}\label{lemma of Cut test}
+    Let  $ \rho\in (-1,0) $,  $ \epsilon>0  $. There exists  $ \tau=\tau(\rho,\epsilon)>0,C=C(\rho,\epsilon)>0 $ such that   $ f:\{\pm 1\}^n\rightarrow[-1,1] $ with  $ \dps\max_i\{\mathrm{Inf}_i^{ \leq C} C(f)\} \leq \tau $, we have 
+    \[\Sbb_\rho(f) \geq 1-\frac{2\arccos\rho}{\pi}-\epsilon\]  
+\end{theorem}
+\begin{definition}
+    $ \mathrm{Inf}_i{ \leq C}(F)=\dps\sum_{S\ni i,|S| \leq C}\hat{f}(S)^2 $ 
+\end{definition}
+\newcommand{\Inf}{\mathrm{Inf}^{\leq C}_i}
+\begin{claim}
+    \[\dps\sum_{i\in [n]}\mathrm{Inf}_i^{ \leq C}f=\dps\sum_{S,|S| \leq C}\hat{f}(S)^2\cdot|S| \leq C\cdot\sum_S\hat{f}(S)^2 \leq C\]
+    Therefore,  $ \dps\left|\{i:\Inf(f)>\tau\}\right|<\frac{C}{\tau} $. 
+    
+    \ie If  $\dps \mathrm{Pr}[\text{f pass dict test}]>\frac{\arccos\rho}{\pi}+\frac{\epsilon}{2} $  then  $ \dps1 \leq |\{i:\Inf(f)>\tau\}|<\frac{C}{\tau} $.  
+
+\end{claim}
+\subsubsection{The Entire Proof}
+\underline{Unique Label Cover Game}: Constraint graph  $ G=(U,V,E) $ left-regular. Alpha bet  $ \Sigma=[K] $. Constraints  $ \forall e=(u,v)\in E,\pi_e:[K]\leftrightarrow [K] $. Prover: provide  $ \sigma:U\cup V\rightarrow [K] $. Verifier: Sample  $ (u,v)\sim E $, test  $ \pi_{uv}(\sigma(v))=\sigma(u) $.
+
+\underline{Unique Games Conjecture} states that  $ \forall \delta>0 $,  $ \exists K=K(\delta) $ \st  $ \mathrm{Gap-ULC}(K)_{1-\delta,\delta}\not\in P $.
+
+\underline{Reduction to MaxCut}: 
+
+\begin{enumerate}
+    \item Sample  $ u\sim U,v,w\sim N(u) $.
+    \item  Sample  $ \vec{x}\sim \{\pm 1\}^n $,  $ \vec{y}\sim_\rho\vec{x} $.
+    \item Test  $ f_v(x\circ\pi_{uv})\neq f_{w}(y\circ \pi_{uw}) $, here  $ f_v $ is the "long code" encoding.   
+\end{enumerate}
+
+\underline{Completeness}: If  $ \sigma:U\cup V\rightarrow[K] $ passes  $ \mathrm{ULC} $ test with probability  $ 1-\delta $.
+
+Let  $ f_v(\vec{x})=x_{\sigma(v)} $.
+\[\begin{aligned}
+    \mathrm{Pr}[\{f_v\}\text{ pass cut test}]&=\Ebb_{u,v,w}\mathop{Pr}_{\vec{x},\vec{y}}[f_v(x\circ\pi_{uv})\neq f_w(y\circ \pi_{uw})]\\
+    &=\Ebb_{u,v,w}\mathop{Pr}_{\vec{x},\vec{y}}\left[\vec{x}_{\pi_{uv}(\sigma(v))}\neq\vec{y}_{\pi_{uw}(\sigma(w))}\right]\\
+    & \geq \Ebb_{u,v,w}\mathop{Pr}_{\vec{x},\vec{y}}[\text{when  $ \sigma $ satisfies  $ \pi_{uv},\pi_{uw}$ }]\cdot \frac{1-\rho}{2}\\
+    & \geq (1-2\delta)\cdot\frac{1-\rho}{2}\\
+    & \geq \frac{1-\rho}{2}-\delta
+\end{aligned}\]
+
+\underline{Soundness}: Goal: If  $ (\ast)=\mathrm{Pr}[\{f_v\} \text{ pass cut test}]>\dps\frac{\arccos\rho}{\pi}+\epsilon $, then  $ \exists \sigma:U\cup V\rightarrow[K] $ satisfying  $ >\delta $ frac of ULC edges.
+\begin{align}
+    \mathrm{Pr}[\text{for  $ u $ passes}]&=\Ebb_{v,w\sim N(u)}\mathop{Pr}[\vec{x},\vec{y}\sim_\rho\vec{x}][f_v(\vec{x}\circ \pi_{uv})\neq f_w(\vec{y}\circ \pi_{uw})]\notag\\
+    &=\Ebb_{v,w}\left[\frac{1}{2}-\frac{1}{2}-\Ebb_{\vec{x},\vec{y}\sim_\rho\vec{x}}\left[f_V(\vec{x}\circ \pi_{uv})\cdot f_{w}(\vec{y}\circ \pi_{uw})\right]\right]\notag\\
+    &=\frac{1}{2}-\frac{1}{2}\Ebb_{\vec{x},\vec{y}\sim_\rho\vec{x}}\left(\Ebb_{v\sim N(u)}f_v(\vec{x}\circ \pi_{uv})\right)\left(\Ebb_{w\sim N(u)}f_w(\vec{y}\circ \pi_{uw})\right)\tag{$ \ast\ast $}
+\end{align}
+\begin{definition}
+    \[g_v(\vec{x})\triangleq \Ebb_{v\sim N(u)}[f_v(\vec{x}\circ \pi_{uv})]\in [-1,1]\]
+    Then 
+    \[(\ast\ast)=\frac{1}{2}-\frac{1}{2}\Ebb_{\vec{x},\vec{y}\sim _{\rho}\vec{x}}[g_u(\vec{x})g_u(\vec{y})]=\frac{1}2-\frac12\Sbb_\rho(g_u)\]
+    Therefore,
+    $(\ast)>\dps\frac{\arccos\rho}{\pi}+\epsilon  $ $ \Rightarrow  $  $ \exists \dps\frac{\epsilon}{2} $ fraction of  $ u $ such that  $ \mathrm{Pr}[u \text{pass}]>\frac{\arccos\rho}{\pi}+\frac{\epsilon}{2} $, for which we call "good".
+    
+    Then for "good  $ u $",  $ \Sbb_\rho(g_u)<1-\frac{2\arccos\rho}{\pi}-\epsilon\overset{\ref{lemma of Cut test}}{\Rightarrow}   \mathrm{Sugg}(u)=\{i:\mathrm{Inf}_{i}^{ \leq C}(g_u)>\tau\} $ with  $ 1 \leq |\mathrm{Sugg}(u)| \leq \frac{C}{\tau} $.   
+\end{definition}
+
+
+\[\begin{aligned}
+    g_u(\vec{x})&=\Ebb_{v\sim N(u)}\sum_{S\subset [n]}\hat{f}(S)\cdot \chi_S(\vec{x}\circ \pi_{uv})\\
+    &=\sum_{S\subset [n]}\hat{f}(S)\Ebb_{v\sim N(u)}\chi_{\pi_{uv}(S)}(\vec{x})\\
+    &=\sum_{S\subset [n]}\left(\Ebb_{v\sim N(u)}\hat{f}(\pi_{uv}^{-1}(S))\right)\chi_S(\vec{x})
+\end{aligned}\]
+Therefore,  $ \dps\hat{g}_u(S)=\Ebb_{v\sim N(u)}\hat{f}(\pi_{uv}^{-1}(S)) $. So 
+\[\begin{aligned}
+    \tau<\Inf(g_u)&=\sum_{S\ni i,|S| \leq C}\hat{g}_u(S)^2\\
+    &=\sum_{S\ni i,|S| \leq C}\left(\Ebb_{v\sim N(u)}\hat{f}_v(\pi_{uv}^{-1}(S))\right)^2\\
+    &=\sum_{S\ni i,|S| \leq C}\Ebb_{v\sim N(u)}\hat{f}_v(\pi_{uv}^{-1}(S))^2\\
+    &=\Ebb_{v\sim N(u)}\sum_{S\ni \pi_{uv}^{-1}(i),|S| \leq C}\hat{f}_v(S)^2\\
+    &=\Ebb_{v\sim N(u)}\mathrm{Inf}_{\pi_{uv}^{-1}(i)}^{ \leq C}(f_v)
+\end{aligned}\]
+So at least  $ \dps\frac{\tau}{2} $ frac of  $ v\in N(u) $ such that  $ \dps\mathrm{Inf}_{\pi_{uv}^{-1}(i)}^{ \leq C}(f_v) >\tau/2 $, which we call "good"
+
+Let  $ \mathrm{Sugg}(v)\triangleq \{i:\Inf(f_v)>\tau/2\} $. Then for those "good  $ v $"  $ |\mathrm{Sugg}(v)| \leq 2C/\tau $  
+
+\[\mathop{Pr}_{\sigma\sim \mathrm{Sugg}}\Ebb_{e\in E}[\sigma \text{ satisfies }\rho] \geq \frac{\epsilon}{2}\cdot \frac{\tau}{2}\cdot\frac{\tau}{2C}=\frac{\epsilon\tau^2}{8C}\triangleq \delta\]
+
+\subsection{Investigation on ULC}
+\begin{definition}[Constraint Satisfaction Problem(CSP)]
+    Alphabet:  $ [K] $, Arity: $ r $, Predicate:  $ \{P\subset [K]^r\} $.  
+\end{definition}
+Max-cut is the case of  $ K=2, r=2,P=\{(\alpha,\beta),\alpha\neq \beta\} $.
+
+Max-3LIn is the case of $ k=2 $,  $ r=3 $,  $ P $ can be $ \{(\alpha,\beta,\gamma):\alpha\oplus\beta\oplus \gamma =0,1\} $.

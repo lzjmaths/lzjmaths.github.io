@@ -1,97 +1,100 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Models of Computation: Turing Machines}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Models of Computation: word RAM}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Polynomial Running Time}{4}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Notation}{4}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Tentative Syllabus}{5}{subsection.1.5}%
-\contentsline {section}{\numberline {2}Greedy Algorithms}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Interval Scheduling}{5}{subsection.2.1}%
-\contentsline {paragraph}{Greedy Framework}{6}{section*.2}%
-\contentsline {subsection}{\numberline {2.2}Interval Partitioning}{6}{subsection.2.2}%
-\contentsline {paragraph}{Greedy Framework}{6}{section*.3}%
-\contentsline {subsection}{\numberline {2.3}Single-Source Shortest Path}{7}{subsection.2.3}%
-\contentsline {paragraph}{Dijkstra's Algorithm}{7}{section*.4}%
-\contentsline {subsection}{\numberline {2.4}Minimum Spanning Tree}{9}{subsection.2.4}%
-\contentsline {paragraph}{MST Algorithm}{9}{section*.5}%
-\contentsline {paragraph}{Invariant}{10}{section*.6}%
-\contentsline {paragraph}{Prim+Boruvka}{11}{section*.7}%
-\contentsline {subsection}{\numberline {2.5}Minimum Arborescence}{12}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Dynamic Programming}{14}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Weighted Interval Scheduling}{14}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Segmented Least Square}{15}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Knapsack Problem}{15}{subsection.3.3}%
-\contentsline {paragraph}{Fully Polynomial-Time Approximation Scheme(FPTAS)}{17}{section*.8}%
-\contentsline {paragraph}{PTAS}{17}{section*.9}%
-\contentsline {subsection}{\numberline {3.4}RNA Secondary Structure}{18}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Sequence Alignment(Edit Distance)}{18}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Matrix Multiplication}{20}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Flow Network}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Definition}{20}{subsection.4.1}%
-\contentsline {paragraph}{Residual Network}{21}{section*.10}%
-\contentsline {paragraph}{Observation}{25}{section*.11}%
-\contentsline {paragraph}{Recent work}{26}{section*.12}%
-\contentsline {subsection}{\numberline {4.2}Appllication}{26}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Bipartite Matching}{26}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Network Connectivity}{27}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Circulation}{27}{subsubsection.4.2.3}%
-\contentsline {paragraph}{Flow Lower Bounds}{28}{section*.13}%
-\contentsline {subsubsection}{\numberline {4.2.4}Survey Design}{28}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Airline Scheduling}{29}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Image Segmentation}{29}{subsubsection.4.2.6}%
-\contentsline {subsubsection}{\numberline {4.2.7}Project Selection}{30}{subsubsection.4.2.7}%
-\contentsline {subsubsection}{\numberline {4.2.8}Baseball Elimination}{31}{subsubsection.4.2.8}%
-\contentsline {paragraph}{Certificate of Elimination}{32}{section*.14}%
-\contentsline {section}{\numberline {5}Introduction to Approximation Algorithm}{33}{section.5}%
-\contentsline {paragraph}{Decision problems}{33}{section*.15}%
-\contentsline {paragraph}{}{33}{table.caption.17}%
-\contentsline {subsection}{\numberline {5.1}Set-Cover}{35}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Weighted Min Set-cover and Randomized Rounding}{37}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Randomized Rounding}{38}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Integrality Gap}{41}{subsubsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.3}Hardness of Approximation}{45}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1} P,NP classes}{45}{subsubsection.5.3.1}%
-\contentsline {paragraph}{Observation}{48}{section*.19}%
-\contentsline {subsection}{\numberline {5.4}Label-Cover Games}{51}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Paralled Repetition}{52}{subsubsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.5}Multicut}{57}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Multicut on Trees}{57}{subsubsection.5.5.1}%
-\contentsline {paragraph}{Rounding}{58}{section*.20}%
-\contentsline {subsubsection}{\numberline {5.5.2}Multicut on General Graphs}{58}{subsubsection.5.5.2}%
-\contentsline {paragraph}{Algorithm}{59}{section*.21}%
-\contentsline {subsubsection}{\numberline {5.5.3}Max-cut}{60}{subsubsection.5.5.3}%
-\contentsline {paragraph}{IP}{61}{section*.22}%
-\contentsline {paragraph}{Strengthened LP}{61}{section*.23}%
-\contentsline {paragraph}{Sherali-Adams}{61}{section*.24}%
-\contentsline {paragraph}{IP'}{62}{section*.25}%
-\contentsline {paragraph}{Relaxation}{62}{section*.26}%
-\contentsline {paragraph}{Semi-definite Programming relaxation}{62}{section*.27}%
-\contentsline {paragraph}{Max-Cut SDP in matrix form}{62}{section*.28}%
-\contentsline {paragraph}{Separation Oracle}{62}{section*.29}%
-\contentsline {paragraph}{Goemams-Williamson Rounding}{63}{section*.30}%
-\contentsline {paragraph}{Analysis}{63}{section*.31}%
-\contentsline {paragraph}{Integrality Gap}{63}{section*.32}%
-\contentsline {paragraph}{Embedded graph}{63}{section*.33}%
-\contentsline {paragraph}{Gap Instance}{64}{section*.34}%
-\contentsline {paragraph}{Algorithmic Gap}{64}{thmt@dummyctr.dummy.131}%
-\contentsline {paragraph}{Fourier Analysis of Boolean Function}{65}{section*.36}%
-\contentsline {paragraph}{Noise Stability}{66}{section*.37}%
-\contentsline {subsection}{\numberline {5.6}3-Coloring}{68}{subsection.5.6}%
-\contentsline {paragraph}{Widgerson's 3 vs. $ O(\sqrt {n}) $ coloring algorithm}{68}{section*.38}%
-\contentsline {paragraph}{Case 1}{68}{section*.39}%
-\contentsline {paragraph}{Case 2}{68}{section*.40}%
-\contentsline {paragraph}{3-coloring SDP}{68}{section*.41}%
-\contentsline {paragraph}{Extract a large independent set}{69}{section*.42}%
-\contentsline {subsection}{\numberline {5.7}Sparsest Cut}{70}{subsection.5.7}%
-\contentsline {paragraph}{Uniform Sparsest cut}{70}{section*.43}%
-\contentsline {paragraph}{Graphic expansion}{70}{section*.44}%
-\contentsline {subsubsection}{\numberline {5.7.1}$ O(\log n) $-approximation for sparsest cut}{70}{subsubsection.5.7.1}%
-\contentsline {paragraph}{cut metric}{70}{section*.45}%
-\contentsline {paragraph}{LP relaxation}{71}{section*.46}%
-\contentsline {paragraph}{Embed tree into $ l_1 $}{72}{section*.47}%
-\contentsline {paragraph}{Expansion}{75}{section*.48}%
-\contentsline {paragraph}{Cheager's Inequality}{75}{section*.49}%
-\contentsline {paragraph}{Spetral Graph}{75}{section*.50}%
-\contentsline {subsection}{\numberline {5.8}Hardness of Approximating MAXE3LIN}{78}{subsection.5.8}%
-\contentsline {section}{Index}{80}{section*.51}%
-\contentsline {section}{Important Theorems}{81}{section*.52}%
-\contentsline {section}{Important Examples}{82}{section*.53}%
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Models of Computation: Turing Machines}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Models of Computation: word RAM}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Polynomial Running Time}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Notation}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Tentative Syllabus}{6}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Greedy Algorithms}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Interval Scheduling}{6}{subsection.2.1}%
+\contentsline {paragraph}{Greedy Framework}{7}{section*.2}%
+\contentsline {subsection}{\numberline {2.2}Interval Partitioning}{7}{subsection.2.2}%
+\contentsline {paragraph}{Greedy Framework}{7}{section*.3}%
+\contentsline {subsection}{\numberline {2.3}Single-Source Shortest Path}{8}{subsection.2.3}%
+\contentsline {paragraph}{Dijkstra's Algorithm}{8}{section*.4}%
+\contentsline {subsection}{\numberline {2.4}Minimum Spanning Tree}{10}{subsection.2.4}%
+\contentsline {paragraph}{MST Algorithm}{10}{section*.5}%
+\contentsline {paragraph}{Invariant}{11}{section*.6}%
+\contentsline {paragraph}{Prim+Boruvka}{12}{section*.7}%
+\contentsline {subsection}{\numberline {2.5}Minimum Arborescence}{13}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Dynamic Programming}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Weighted Interval Scheduling}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Segmented Least Square}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Knapsack Problem}{16}{subsection.3.3}%
+\contentsline {paragraph}{Fully Polynomial-Time Approximation Scheme(FPTAS)}{18}{section*.8}%
+\contentsline {paragraph}{PTAS}{18}{section*.9}%
+\contentsline {subsection}{\numberline {3.4}RNA Secondary Structure}{19}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Sequence Alignment(Edit Distance)}{19}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Matrix Multiplication}{21}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Flow Network}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definition}{21}{subsection.4.1}%
+\contentsline {paragraph}{Residual Network}{22}{section*.10}%
+\contentsline {paragraph}{Observation}{26}{section*.11}%
+\contentsline {paragraph}{Recent work}{27}{section*.12}%
+\contentsline {subsection}{\numberline {4.2}Appllication}{27}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Bipartite Matching}{27}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Network Connectivity}{28}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Circulation}{28}{subsubsection.4.2.3}%
+\contentsline {paragraph}{Flow Lower Bounds}{29}{section*.13}%
+\contentsline {subsubsection}{\numberline {4.2.4}Survey Design}{29}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Airline Scheduling}{30}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Image Segmentation}{30}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Project Selection}{31}{subsubsection.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.8}Baseball Elimination}{32}{subsubsection.4.2.8}%
+\contentsline {paragraph}{Certificate of Elimination}{33}{section*.14}%
+\contentsline {section}{\numberline {5}Introduction to Approximation Algorithm}{34}{section.5}%
+\contentsline {paragraph}{Decision problems}{34}{section*.15}%
+\contentsline {paragraph}{}{34}{table.caption.17}%
+\contentsline {subsection}{\numberline {5.1}Set-Cover}{36}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Weighted Min Set-cover and Randomized Rounding}{38}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Randomized Rounding}{39}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Integrality Gap}{42}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Hardness of Approximation}{46}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1} P,NP classes}{46}{subsubsection.5.3.1}%
+\contentsline {paragraph}{Observation}{49}{section*.19}%
+\contentsline {subsection}{\numberline {5.4}Label-Cover Games}{52}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Paralled Repetition}{53}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}Multicut}{58}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Multicut on Trees}{58}{subsubsection.5.5.1}%
+\contentsline {paragraph}{Rounding}{59}{section*.20}%
+\contentsline {subsubsection}{\numberline {5.5.2}Multicut on General Graphs}{59}{subsubsection.5.5.2}%
+\contentsline {paragraph}{Algorithm}{60}{section*.21}%
+\contentsline {subsubsection}{\numberline {5.5.3}Max-cut}{61}{subsubsection.5.5.3}%
+\contentsline {paragraph}{IP}{62}{section*.22}%
+\contentsline {paragraph}{Strengthened LP}{62}{section*.23}%
+\contentsline {paragraph}{Sherali-Adams}{62}{section*.24}%
+\contentsline {paragraph}{IP'}{63}{section*.25}%
+\contentsline {paragraph}{Relaxation}{63}{section*.26}%
+\contentsline {paragraph}{Semi-definite Programming relaxation}{63}{section*.27}%
+\contentsline {paragraph}{Max-Cut SDP in matrix form}{63}{section*.28}%
+\contentsline {paragraph}{Separation Oracle}{63}{section*.29}%
+\contentsline {paragraph}{Goemams-Williamson Rounding}{64}{section*.30}%
+\contentsline {paragraph}{Analysis}{64}{section*.31}%
+\contentsline {paragraph}{Integrality Gap}{64}{section*.32}%
+\contentsline {paragraph}{Embedded graph}{64}{section*.33}%
+\contentsline {paragraph}{Gap Instance}{65}{section*.34}%
+\contentsline {paragraph}{Algorithmic Gap}{65}{thmt@dummyctr.dummy.131}%
+\contentsline {paragraph}{Fourier Analysis of Boolean Function}{66}{section*.36}%
+\contentsline {paragraph}{Noise Stability}{67}{section*.37}%
+\contentsline {subsection}{\numberline {5.6}3-Coloring}{69}{subsection.5.6}%
+\contentsline {paragraph}{Widgerson's 3 vs. $ O(\sqrt {n}) $ coloring algorithm}{69}{section*.38}%
+\contentsline {paragraph}{Case 1}{69}{section*.39}%
+\contentsline {paragraph}{Case 2}{69}{section*.40}%
+\contentsline {paragraph}{3-coloring SDP}{69}{section*.41}%
+\contentsline {paragraph}{Extract a large independent set}{70}{section*.42}%
+\contentsline {subsection}{\numberline {5.7}Sparsest Cut}{71}{subsection.5.7}%
+\contentsline {paragraph}{Uniform Sparsest cut}{71}{section*.43}%
+\contentsline {paragraph}{Graphic expansion}{71}{section*.44}%
+\contentsline {subsubsection}{\numberline {5.7.1}$ O(\log n) $-approximation for sparsest cut}{71}{subsubsection.5.7.1}%
+\contentsline {paragraph}{cut metric}{71}{section*.45}%
+\contentsline {paragraph}{LP relaxation}{72}{section*.46}%
+\contentsline {paragraph}{Embed tree into $ l_1 $}{73}{section*.47}%
+\contentsline {paragraph}{Expansion}{76}{section*.48}%
+\contentsline {paragraph}{Cheager's Inequality}{76}{section*.49}%
+\contentsline {paragraph}{Spetral Graph}{76}{section*.50}%
+\contentsline {subsection}{\numberline {5.8}Hardness of Approximating MAXE3LIN}{79}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Hardness of Max-Cut}{85}{subsection.5.9}%
+\contentsline {subsubsection}{\numberline {5.9.1}The Entire Proof}{89}{subsubsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.10}Investigation on ULC}{91}{subsection.5.10}%
+\contentsline {section}{Index}{92}{section*.53}%
+\contentsline {section}{Important Theorems}{93}{section*.54}%
+\contentsline {section}{Important Examples}{94}{section*.55}%

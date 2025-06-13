@@ -1,0 +1,113 @@
+\textbf{Dictatorship Test}
+Our dictator function is  $ \{f(\vec{x})=x_i\}_{i\in \{1,2,\cdots,n\}} $ 
+
+\begin{enumerate}
+    \item Choose  $ \vec{x},\vec{y}\sim \{\pm 1\}^m $
+    \item Choose  $ \vec{\mu}\in\{\pm 1\}^n,\mu_i=\begin{cases}
+        1 & \text{w.p. }1-\epsilon\\
+        -1 & \text{w.p. } \epsilon
+    \end{cases} $.
+    \item Accept if  $ f(\vec{x})f(\vec{y})f(\vec{x}\vec{y}\vec{\mu})=1 $.
+\end{enumerate}
+
+Completeness: If  $ f(\vec{x})=x_i $, then  $ \mathrm{Pr}[\text{pass}]=1-\epsilon $.
+
+Soundness:  \[\begin{aligned}
+    \dps\mathrm{Pr}[\text{pass}]&=\frac{1}{2}+\frac{1}{2}\Ebb_{\vec{x},\vec{y},\vec{\mu}}[f(\vec{x})f(\vec{y})f(\vec{x}\vec{y}\vec{\mu})]\\
+    &=\frac{1}{2}+\frac{1}{2}\Ebb_{\vec{x},\vec{y},\vec{\mu}}\left(\sum_S\hat{f}(S)\chi_S(\vec{x})\right)\left(\sum_T\hat{f}(T)\chi_T(\vec{y})\right)\left(\sum_U\hat{f}(U)\chi_U(\vec{x}\vec{y}\vec{\mu})\right)\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T,U}\hat{f}(S)\hat{f}(T)\hat{f}(U)\left(\Ebb_{\vec{x}}\chi_{S\Delta U}(\vec{x})\right)\left(\Ebb_{\vec{y}}\chi_{T\Delta U}(\vec{y})\right)\left(\Ebb_{\vec{\mu}}\chi_{U}(\vec{\mu})\right)\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S}\hat{f}(S)^3(1-2\epsilon)^{|S|}
+\end{aligned} \]
+If  $ \mathrm{Pr}[\text{pass}] \geq \frac{1}{2}+\delta $, then 
+\[2\delta \leq \sum_{S}\hat{f}(S)^3(1-2\epsilon)^{|S|} \leq \max_S\{\hat{f}(S)(1-2\epsilon)^{|S|}\}\sum_S\hat{f}(S)^2\]
+Therefore,  $ \exists S\subset [n] $ \st  $ \hat{f}(S)(1-2\epsilon)^{|S|} \geq 2\delta $. \ie  $ \begin{cases}
+    \hat{f}(S) \geq 2\delta
+\\
+|S| \leq \frac{\log 2\delta}{\log (1-\epsilon)}=O(\frac{1}{\epsilon}\log \frac{1}{\delta})
+\end{cases} $ 
+
+So we prove that if  $ \mathrm{Pr}[pass] \geq \frac{1}{2}+\delta $, then can "list decode"  $ f  $ into  $ O(\frac{1}{\epsilon\delta^2}\log\frac{1}{\delta}) $  
+
+
+Now back to the problem. For a label-cover game  $ (K,L) $, try to reduce to  $ \mathrm{MaxE3LIN} $  problem.
+
+Proof:  $ f_u:\{\pm 1\}^K\rightarrow \{\pm 1\} $,  $ f_v:\{\pm 1\}^L\rightarrow\{\pm 1\} $.
+
+Verifier:
+
+\begin{enumerate}
+    \item Randomly pick  $ e=(u,v)\in E $
+    \item Sample  $ \vec{x}\sim \{\pm 1\}^K,\vec{y}\sim \{\pm 1\}^L $, $ b\sim\{\pm 1\} $,   $ \vec{\mu}\sim \{\pm 1\}^L $,  $ \mu_i=\begin{cases}
+        1 & \text{w.p. }1-\epsilon\\
+        -1 & \text{w.p. } \epsilon
+    \end{cases} $  
+    \item Test  $ f_u(\vec{x})g_v(\vec{y})g_v((\vec{x}\circ \pi_e)\vec{y}\vec{\mu}\cdot b)=b $, where 
+    \[(\vec{x}\circ \pi_e)_i=x_{\pi_e(i)}\]
+\end{enumerate}
+
+Random bit $ b $ is for not to be hacked. 
+
+Completeness: If  $ \sigma $ satisfies all  $ LC $ constraints. Let  $ f_u(\vec{x})=x_{\sigma(u)} $,  $ g_v(\vec{y})=y_{\sigma(v)} $. Then \[ \begin{aligned}
+    f_u(\vec{x})g_v(\vec{y})g_v((\vec{x}\circ \pi_e)\vec{y}\vec{\mu}\cdot b)&=x_{\sigma(u)}y_{\sigma(v)}x_{\pi_e(\sigma(v))}y_{\sigma(v)}\mu_{\sigma(v)}\cdot b\\
+    &=\mu_{\sigma(v)}\cdot b
+\end{aligned} \]
+
+Therefore,  $ \mathrm{Pr}[accept]=1-\epsilon $.
+
+Soundness: If  $ \mathrm{Pr}[accept]>\frac{1}{2}+\delta $,  then  we prove that  $ \exists  $ LC solution value  $  \geq \eta $.
+
+Fix  $ e=(u,v)\in E $, 
+\[\begin{aligned}
+    &\quad\,\mathrm{Pr}[e\text{ passes test}]\\
+    &=\frac{1}{2}+\frac{1}{2}\Ebb_{\vec{x},\vec{y}\vec{\mu},b}bf_u(\vec{x}g_v(\vec{y})g_v((\vec{x}\circ \pi_e)\vec{y}\vec{\mu}\cdot b))\\
+    &=\frac12+\frac12\Ebb\left[\left(\sum_S\hat{f}_u(S)\chi_S(\vec{x})\right)\left(\sum_T\hat{g}_v\chi_T(\vec{y})\right)\left(\sum_U\hat{g}_v(U)\chi_U((\vec{x}\circ \pi_e)\cdot \vec{y}\cdot \vec\mu\cdot b)\right)\cdot b\right]\\
+    &=\frac{1}{2}+\frac12\sum_{S,T,U}\hat{f}_u(S)\hat{g}_v(T)\hat{g}_v(U)\Ebb\left(\chi_S(\vec{x})\chi_T(\vec{y})\chi_U((\vec{x}\circ \pi_e)\vec{y}\vec{\mu}b)\right)\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T,U}\hat{f}_u(S)\hat{g}_v(T)\hat{g}_v(U)\Ebb_{\vec{x},b}\left[\chi_S(\vec{x})\chi_U((\vec{x}\circ \pi_e)\cdot b)\cdot b\right]\\
+    &\Ebb_{\vec{y}}\left[\chi_T(\vec{y})\chi_U(\vec{y})\right]\Ebb_{\vec{\mu}}\left[\chi_{U}(\vec{\mu})\right]\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T}\hat{f}_u(S)\hat{g}_v(T)^2(1-2\epsilon)^{|T|}\Ebb_{\vec{x},b}\left[\chi_S(\vec{x})\chi_U((\vec{x}\circ \pi_e)\cdot b)\cdot b\right]\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T}\hat{f}_u(S)\hat{g}_v(T)^2(1-2\epsilon)^{|T|}\Ebb_{\vec{x},b}\left[\chi_S(\vec{x})\chi_T(\vec{x}\circ \pi_e)\cdot b^{|T|+1}\right]\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T}\hat{f}_u(S)\hat{g}_v(T)^2(1-2\epsilon)^{|T|}\mathbf1[|T|\text{ odd}]\cdot \Ebb_{\vec{x}}\left[\chi_S(\vec{x})\chi_T(\vec{x}\circ \pi_e)\right]\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T}\hat{f}_u(S)\hat{g}_v(T)^2(1-2\epsilon)^{|T|}\mathbf1[|T|\text{ odd}]\cdot \Ebb_{\vec{x}}\left[\prod_{i\in S}x_i\prod_{j\in T}x_{\pi_e(j)}\right]\\
+    &=\frac{1}{2}+\frac{1}{2}\sum_{S,T}\hat{f}_u(S)\hat{g}_v(T)^2(1-2\epsilon)^{|T|}\mathbf1[|T|\text{ odd}]\cdot \underbrace{\Ebb_{\vec{x}}\left[\prod_{i\in [K]}x_i^{\mathbf1[i\in S]+|\pi_e^{-1}(i)\cap T}|\right]}_{(\ast)}
+\end{aligned}\] 
+Let  $ \pi_e^{\mathrm{odd}}(T)=\{i\in [K]:|\pi_e^{-1}(i)\cap T|\text{ odd}\} $. Then 
+\[\begin{aligned}
+    (\ast)\neq 0&\Leftrightarrow \forall i\in [K],\mathbf[i\in S]+|\pi_e^{-1}(i)\cap T|\text{ even}\\
+    &\Leftrightarrow  \pi_e^{\text{odd}}(T)=S . 
+\end{aligned}\]
+Therefore,  
+\[\mathrm{Pr}[e\text{ pass}]=\frac{1}{2}+\frac{1}{2}\underbrace{\sum_{|T|:\text{odd}}\hat{f}_u(\pi_e^{\text{odd}}(T))\hat{g}_v(T)^2(1-2\epsilon)^{|T|}}_{(\ast\ast)}\] 
+
+If  $ \frac{1}{2}+\gamma \leq \mathrm{Pr}[\mathrm{pass}] $, then  $ (\ast\ast) \geq 2\gamma $.
+
+Since  $ \dps\sum_{T}\hat{g}_v(T)^2=1 $, 
+\[2\gamma \leq \Ebb_{T\sim \hat{g}_v^2}\left[\mathbf{1}[|T|\text{ odd}]\hat{f}_u(\pi_e^{\text{odd}})(1-2\epsilon)^{|T|}\right]\]
+\[\Rightarrow \mathrm{Pr}_{T\sim \hat{g}_v^2}\left[\mathbf{1}[|T|\text{ odd}]\hat{f}_u(\pi_e^{\text{odd}})(1-2\epsilon)^{|T|} \geq \gamma\right] \geq \gamma\] 
+
+Call  $ T $ good if  $ T $ satisfies the above condition.
+
+If  $ T $ is good, we have 
+\begin{enumerate}[label=\arabic*)]
+    \item  $ |T| $ odd, then  $ \pi^{\text{odd}}(T)\neq \emptyset $,  $ \forall \pi $.
+    \item  $ (1-2\epsilon)^{|T|} \geq \gamma $ $ \Rightarrow  $  $ |T| \leq O(\frac{1}{\epsilon}\log \frac{1}{\epsilon}) $, denote  $ B=O(\frac{1}{\epsilon}\log \frac{1}{\epsilon}) $ 
+    \item  $ \hat{f}_v(\pi_e^{\text{odd}}(|T|))^2 \geq \gamma^2 $      
+\end{enumerate} 
+\begin{definition}
+    $ \forall u\in U $,  $ \mathrm{Sugg}(u)=\{j\in T|\exists S:\hat{f}_u(S)^2 \geq \gamma^2,|U| \leq B\} $.  
+
+    Then  $ |Sugg(u)| \leq O(\frac{1}{r^2}\cdot\frac1\epsilon\cdot\log\frac1r) $. 
+
+    Sample  $ \mathrm{Sugg}(v)=T\sim \hat{g}_v^2 $. 
+\end{definition}
+
+Decoding  $ \sigma(u)\sim \mathrm{Unif}(\mathrm{Sugg}(u)),\sigma(v)\sim\mathrm{Unif}(\mathrm{Sugg}(v)) $.
+\[\begin{aligned}
+    \mathrm{Pr}[\sigma\text{ satisfies  $ e=(u,v) $}]&=\mathrm{Pr}[\sigma(u)=\pi_e(\sigma(v))]\\
+    &=\mathop{Pr}_{\substack{T\sim \hat{g}_v^2,\beta\sim T\\\alpha\sim \mathrm{Sugg}(u)}}[\alpha=\pi_e(\beta)]\\
+    &=\mathrm{Pr}[T\text{ good}]\cdot \mathop{Pr}_{\substack{\beta\sim T\\ \alpha\sim \mathrm{Sugg}(u)}}[\alpha=\pi_e(\beta),T\text{ good}]\\
+    & \geq \gamma\cdot\frac{1}{B}\cdot\frac{1}{|\mathrm{Sugg}(u)}\\
+    & \geq \Omega(\gamma^3\epsilon^2\log^{-2}\frac{1}{\gamma})
+\end{aligned}\] 
+\[\Ebb_e[\gamma(e)] \geq \delta\Rightarrow \mathop{Pr}_e(e\text{ satisfies }\pi_e) \geq \Omega(\delta^3\epsilon^2/\log^2\frac{1}{\delta})=\eta\]
+
+Here we finally prove that  $ \mathrm{E3LIN}_{1-\epsilon,1/2+\delta} $ is NP-Hard. 

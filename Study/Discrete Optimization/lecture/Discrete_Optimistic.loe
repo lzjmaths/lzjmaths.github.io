@@ -1,155 +1,172 @@
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}1.1\else \numberline {1.1}Example\fi \thmtformatoptarg {Task Assignment}}{3}{example.1.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.2\else \numberline {1.2}Definition\fi \thmtformatoptarg {A Deterministic Turing Machine(DTM)}}{3}{definition.1.2}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.3\else \numberline {1.3}Definition\fi \thmtformatoptarg {Complexity measure}}{3}{definition.1.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.4\else \numberline {1.4}Definition\fi \thmtformatoptarg {Caveat}}{3}{definition.1.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.5\else \numberline {1.5}Definition\fi }{4}{definition.1.5}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.6\else \numberline {1.6}Definition\fi }{4}{definition.1.6}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}1.7\else \numberline {1.7}Example\fi \thmtformatoptarg {Task machine}}{4}{example.1.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.8\else \numberline {1.8}Definition\fi }{4}{definition.1.8}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.1\else \numberline {2.1}Example\fi \thmtformatoptarg {Interval Scheduling}}{5}{example.2.1}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.2\else \numberline {2.2}Theorem\fi }{6}{theorem.2.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.3\else \numberline {2.3}Example\fi \thmtformatoptarg {Interval Partitioning}}{6}{example.2.3}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.2.1\else \numberline {2.2.1}Claim\fi }{6}{claim.2.2.1}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.4\else \numberline {2.4}Lemma\fi }{6}{lemma.2.4}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.5\else \numberline {2.5}Example\fi \thmtformatoptarg {Single-Source Shortest Path(SSSP)}}{7}{example.2.5}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.6\else \numberline {2.6}Theorem\fi \thmtformatoptarg {Invariant}}{7}{theorem.2.6}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.7\else \numberline {2.7}Remark\fi }{8}{remark.2.7}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.8\else \numberline {2.8}Example\fi \thmtformatoptarg {Minimum Spanning Tree (MST)}}{9}{example.2.8}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.9\else \numberline {2.9}Definition\fi \thmtformatoptarg {Spanning Tree}}{9}{definition.2.9}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.10\else \numberline {2.10}Theorem\fi \thmtformatoptarg {Cayley Theorem}}{9}{theorem.2.10}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.1\else \numberline {2.4.1}Claim\fi }{9}{claim.2.4.1}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.2\else \numberline {2.4.2}Claim\fi }{9}{claim.2.4.2}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.3\else \numberline {2.4.3}Claim\fi }{9}{claim.2.4.3}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.11\else \numberline {2.11}Theorem\fi }{10}{theorem.2.11}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.12\else \numberline {2.12}Remark\fi }{10}{remark.2.12}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.13\else \numberline {2.13}Remark\fi }{10}{remark.2.13}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.4\else \numberline {2.4.4}Claim\fi }{11}{claim.2.4.4}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.14\else \numberline {2.14}Remark\fi }{11}{remark.2.14}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.15\else \numberline {2.15}Remark\fi }{11}{remark.2.15}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.16\else \numberline {2.16}Example\fi \thmtformatoptarg {Minimum Arborescence}}{12}{example.2.16}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.17\else \numberline {2.17}Definition\fi }{12}{definition.2.17}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.5.1\else \numberline {2.5.1}Claim\fi }{12}{claim.2.5.1}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.18\else \numberline {2.18}Theorem\fi }{13}{theorem.2.18}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.19\else \numberline {2.19}Lemma\fi }{13}{lemma.2.19}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.1\else \numberline {3.1}Example\fi \thmtformatoptarg {Weighted Interval Scheduling}}{14}{example.3.1}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.2\else \numberline {3.2}Example\fi \thmtformatoptarg {Least Square}}{15}{example.3.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.3\else \numberline {3.3}Example\fi \thmtformatoptarg {Segmented Least Square}}{15}{example.3.3}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.4\else \numberline {3.4}Example\fi \thmtformatoptarg {Knapsack Problem}}{15}{example.3.4}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}3.5\else \numberline {3.5}Remark\fi }{17}{remark.3.5}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.6\else \numberline {3.6}Example\fi \thmtformatoptarg {RNA Secondary Structure}}{18}{example.3.6}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.7\else \numberline {3.7}Example\fi }{18}{example.3.7}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.8\else \numberline {3.8}Example\fi \thmtformatoptarg {Matrix Multiplication}}{20}{example.3.8}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.1\else \numberline {4.1}Example\fi }{20}{example.4.1}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.1\else \numberline {4.1.1}Claim\fi }{21}{claim.4.1.1}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.2\else \numberline {4.1.2}Claim\fi \thmtformatoptarg {Weak Duality}}{21}{claim.4.1.2}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.2\else \numberline {4.2}Theorem\fi }{21}{theorem.4.2}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.3\else \numberline {4.1.3}Claim\fi }{21}{claim.4.1.3}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.3\else \numberline {4.3}Lemma\fi }{23}{lemma.4.3}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.4\else \numberline {4.4}Theorem\fi }{23}{theorem.4.4}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.5\else \numberline {4.5}Lemma\fi }{23}{lemma.4.5}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}4.6\else \numberline {4.6}Corollary\fi }{23}{corollary.4.6}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.7\else \numberline {4.7}Lemma\fi }{24}{lemma.4.7}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.8\else \numberline {4.8}Lemma\fi }{24}{lemma.4.8}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.9\else \numberline {4.9}Lemma\fi }{25}{lemma.4.9}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.4\else \numberline {4.1.4}Claim\fi }{25}{claim.4.1.4}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.10\else \numberline {4.10}Example\fi \thmtformatoptarg {Bipartite Matching}}{26}{example.4.10}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.11\else \numberline {4.11}Theorem\fi \thmtformatoptarg {Hall's Theorem}}{26}{theorem.4.11}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.12\else \numberline {4.12}Remark\fi }{27}{remark.4.12}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.13\else \numberline {4.13}Example\fi \thmtformatoptarg {Network Connectivity}}{27}{example.4.13}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.14\else \numberline {4.14}Theorem\fi \thmtformatoptarg {Menger's Theorem}}{27}{theorem.4.14}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.15\else \numberline {4.15}Example\fi }{27}{example.4.15}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.16\else \numberline {4.16}Remark\fi }{28}{remark.4.16}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.17\else \numberline {4.17}Example\fi \thmtformatoptarg {Survey Design}}{28}{example.4.17}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.18\else \numberline {4.18}Example\fi \thmtformatoptarg {Airline Scheduling}}{29}{example.4.18}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.19\else \numberline {4.19}Remark\fi }{29}{remark.4.19}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.20\else \numberline {4.20}Example\fi \thmtformatoptarg {Image Segmentation}}{29}{example.4.20}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.21\else \numberline {4.21}Remark\fi }{30}{remark.4.21}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.22\else \numberline {4.22}Example\fi \thmtformatoptarg {Project Selection}}{30}{example.4.22}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.23\else \numberline {4.23}Remark\fi }{31}{remark.4.23}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.24\else \numberline {4.24}Example\fi }{31}{example.4.24}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.25\else \numberline {4.25}Theorem\fi }{32}{theorem.4.25}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.26\else \numberline {4.26}Remark\fi }{32}{remark.4.26}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.1\else \numberline {5.1}Example\fi \thmtformatoptarg {3-CNF}}{33}{example.5.1}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.2\else \numberline {5.2}Theorem\fi }{34}{theorem.5.2}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.3\else \numberline {5.3}Fact\fi }{35}{fact.5.3}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.4\else \numberline {5.4}Remark\fi }{35}{remark.5.4}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.5\else \numberline {5.5}Example\fi \thmtformatoptarg {Set-Cover}}{35}{example.5.5}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.6\else \numberline {5.6}Fact\fi }{36}{fact.5.6}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.7\else \numberline {5.7}Corollary\fi }{36}{corollary.5.7}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.8\else \numberline {5.8}Corollary\fi }{36}{corollary.5.8}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.9\else \numberline {5.9}Fact\fi }{37}{fact.5.9}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.10\else \numberline {5.10}Example\fi \thmtformatoptarg {Weighted Min Set-cover}}{37}{example.5.10}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.1\else \numberline {5.2.1}Claim\fi }{39}{claim.5.2.1}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.11\else \numberline {5.11}Theorem\fi \thmtformatoptarg {Markov Inequality}}{39}{theorem.5.11}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.12\else \numberline {5.12}Theorem\fi }{40}{theorem.5.12}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.2\else \numberline {5.2.2}Claim\fi }{42}{claim.5.2.2}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.3\else \numberline {5.2.3}Claim\fi }{42}{claim.5.2.3}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.4\else \numberline {5.2.4}Claim\fi }{43}{claim.5.2.4}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.13\else \numberline {5.13}Theorem\fi \thmtformatoptarg {Chernoff Bound}}{43}{theorem.5.13}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.5\else \numberline {5.2.5}Claim\fi }{44}{claim.5.2.5}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.14\else \numberline {5.14}Theorem\fi \thmtformatoptarg {Cock-Levin}}{46}{theorem.5.14}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.15\else \numberline {5.15}Theorem\fi \thmtformatoptarg {Max-Coverage}}{47}{theorem.5.15}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.16\else \numberline {5.16}Theorem\fi \thmtformatoptarg {PCP theorem}}{48}{theorem.5.16}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.17\else \numberline {5.17}Definition\fi \thmtformatoptarg {Probability Checkable Proofs}}{48}{definition.5.17}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.18\else \numberline {5.18}Theorem\fi \thmtformatoptarg {PCP theorem}}{48}{theorem.5.18}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.19\else \numberline {5.19}Definition\fi }{49}{definition.5.19}%
-\contentsline {observation}{\ifthmt@listswap Observation\nobreakspace {}5.20\else \numberline {5.20}Observation\fi }{49}{observation.5.20}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.21\else \numberline {5.21}Theorem\fi \thmtformatoptarg {PCP theorem}}{49}{theorem.5.21}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.22\else \numberline {5.22}Proposition\fi }{50}{proposition.5.22}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.23\else \numberline {5.23}Theorem\fi }{51}{theorem.5.23}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.24\else \numberline {5.24}Corollary\fi }{51}{corollary.5.24}%
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.25\else \numberline {5.25}Remark\fi }{51}{remark.5.25}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.4.1\else \numberline {5.4.1}Claim\fi }{51}{claim.5.4.1}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.26\else \numberline {5.26}Theorem\fi \thmtformatoptarg {not quite true}}{52}{theorem.5.26}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.27\else \numberline {5.27}Theorem\fi }{53}{theorem.5.27}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.28\else \numberline {5.28}Corollary\fi }{53}{corollary.5.28}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.29\else \numberline {5.29}Theorem\fi }{53}{theorem.5.29}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.4.2\else \numberline {5.4.2}Claim\fi }{54}{claim.5.4.2}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.30\else \numberline {5.30}Definition\fi }{54}{definition.5.30}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.31\else \numberline {5.31}Fact\fi }{54}{fact.5.31}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.32\else \numberline {5.32}Lemma\fi }{55}{lemma.5.32}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.33\else \numberline {5.33}Definition\fi }{55}{definition.5.33}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.4.3\else \numberline {5.4.3}Claim\fi }{56}{claim.5.4.3}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.34\else \numberline {5.34}Example\fi \thmtformatoptarg {Multicut}}{57}{example.5.34}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.35\else \numberline {5.35}Theorem\fi }{57}{theorem.5.35}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.36\else \numberline {5.36}Fact\fi }{57}{fact.5.36}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.37\else \numberline {5.37}Example\fi \thmtformatoptarg {Vertex Cover}}{57}{example.5.37}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.38\else \numberline {5.38}Theorem\fi }{57}{theorem.5.38}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.39\else \numberline {5.39}Theorem\fi }{59}{theorem.5.39}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.40\else \numberline {5.40}Definition\fi }{59}{definition.5.40}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.41\else \numberline {5.41}Theorem\fi \thmtformatoptarg {Low-Diameter Decomposition, LDD}}{59}{theorem.5.41}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.1\else \numberline {5.5.1}Claim\fi }{60}{claim.5.5.1}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.42\else \numberline {5.42}Example\fi \thmtformatoptarg {Max-cut}}{60}{example.5.42}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.43\else \numberline {5.43}Theorem\fi }{61}{theorem.5.43}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.44\else \numberline {5.44}Theorem\fi }{62}{theorem.5.44}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.45\else \numberline {5.45}Fact\fi }{62}{fact.5.45}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.46\else \numberline {5.46}Definition\fi \thmtformatoptarg {SDP Statndard Form}}{62}{definition.5.46}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.47\else \numberline {5.47}Fact\fi }{64}{fact.5.47}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.48\else \numberline {5.48}Theorem\fi }{64}{theorem.5.48}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.49\else \numberline {5.49}Corollary\fi }{64}{corollary.5.49}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.2\else \numberline {5.5.2}Claim\fi }{64}{claim.5.5.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.50\else \numberline {5.50}Example\fi \thmtformatoptarg {Instance}}{64}{example.5.50}%
-\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.51\else \numberline {5.51}Fact\fi }{65}{fact.5.51}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.3\else \numberline {5.5.3}Claim\fi }{65}{claim.5.5.3}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.52\else \numberline {5.52}Proposition\fi \thmtformatoptarg {Fourier expansion}}{66}{proposition.5.52}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.53\else \numberline {5.53}Theorem\fi \thmtformatoptarg {Parseval's}}{66}{theorem.5.53}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.4\else \numberline {5.5.4}Claim\fi }{67}{claim.5.5.4}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.54\else \numberline {5.54}Example\fi \thmtformatoptarg {3-Coloring}}{68}{example.5.54}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.55\else \numberline {5.55}Example\fi \thmtformatoptarg {Min-3-Coloring}}{68}{example.5.55}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.56\else \numberline {5.56}Lemma\fi }{68}{lemma.5.56}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.6.1\else \numberline {5.6.1}Claim\fi }{68}{claim.5.6.1}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.57\else \numberline {5.57}Lemma\fi }{68}{lemma.5.57}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.6.2\else \numberline {5.6.2}Claim\fi }{69}{claim.5.6.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.58\else \numberline {5.58}Example\fi \thmtformatoptarg {Sparsest Cut}}{70}{example.5.58}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.59\else \numberline {5.59}Definition\fi \thmtformatoptarg {Metric Embedding}}{71}{definition.5.59}%
-\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.60\else \numberline {5.60}Lemma\fi }{71}{lemma.5.60}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.61\else \numberline {5.61}Theorem\fi \thmtformatoptarg {Bourgain' 1985}}{72}{theorem.5.61}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.62\else \numberline {5.62}Theorem\fi \thmtformatoptarg {LLR 1995}}{72}{theorem.5.62}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.63\else \numberline {5.63}Theorem\fi }{73}{theorem.5.63}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.64\else \numberline {5.64}Theorem\fi \thmtformatoptarg {Low-Diameter Decomposition}}{73}{theorem.5.64}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.65\else \numberline {5.65}Definition\fi }{73}{definition.5.65}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.1\else \numberline {5.7.1}Claim\fi }{75}{claim.5.7.1}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.2\else \numberline {5.7.2}Claim\fi }{75}{claim.5.7.2}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.3\else \numberline {5.7.3}Claim\fi }{76}{claim.5.7.3}%
-\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.4\else \numberline {5.7.4}Claim\fi }{77}{claim.5.7.4}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.66\else \numberline {5.66}Theorem\fi }{78}{theorem.5.66}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}1.1\else \numberline {1.1}Example\fi \thmtformatoptarg {Task Assignment}}{4}{example.1.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.2\else \numberline {1.2}Definition\fi \thmtformatoptarg {A Deterministic Turing Machine(DTM)}}{4}{definition.1.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.3\else \numberline {1.3}Definition\fi \thmtformatoptarg {Complexity measure}}{4}{definition.1.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.4\else \numberline {1.4}Definition\fi \thmtformatoptarg {Caveat}}{4}{definition.1.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.5\else \numberline {1.5}Definition\fi }{5}{definition.1.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.6\else \numberline {1.6}Definition\fi }{5}{definition.1.6}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}1.7\else \numberline {1.7}Example\fi \thmtformatoptarg {Task machine}}{5}{example.1.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.8\else \numberline {1.8}Definition\fi }{5}{definition.1.8}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.1\else \numberline {2.1}Example\fi \thmtformatoptarg {Interval Scheduling}}{6}{example.2.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.2\else \numberline {2.2}Theorem\fi }{7}{theorem.2.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.3\else \numberline {2.3}Example\fi \thmtformatoptarg {Interval Partitioning}}{7}{example.2.3}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.2.1\else \numberline {2.2.1}Claim\fi }{7}{claim.2.2.1}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.4\else \numberline {2.4}Lemma\fi }{7}{lemma.2.4}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.5\else \numberline {2.5}Example\fi \thmtformatoptarg {Single-Source Shortest Path(SSSP)}}{8}{example.2.5}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.6\else \numberline {2.6}Theorem\fi \thmtformatoptarg {Invariant}}{8}{theorem.2.6}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.7\else \numberline {2.7}Remark\fi }{9}{remark.2.7}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.8\else \numberline {2.8}Example\fi \thmtformatoptarg {Minimum Spanning Tree (MST)}}{10}{example.2.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.9\else \numberline {2.9}Definition\fi \thmtformatoptarg {Spanning Tree}}{10}{definition.2.9}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.10\else \numberline {2.10}Theorem\fi \thmtformatoptarg {Cayley Theorem}}{10}{theorem.2.10}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.1\else \numberline {2.4.1}Claim\fi }{10}{claim.2.4.1}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.2\else \numberline {2.4.2}Claim\fi }{10}{claim.2.4.2}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.3\else \numberline {2.4.3}Claim\fi }{10}{claim.2.4.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.11\else \numberline {2.11}Theorem\fi }{11}{theorem.2.11}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.12\else \numberline {2.12}Remark\fi }{11}{remark.2.12}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.13\else \numberline {2.13}Remark\fi }{11}{remark.2.13}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.4.4\else \numberline {2.4.4}Claim\fi }{12}{claim.2.4.4}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.14\else \numberline {2.14}Remark\fi }{12}{remark.2.14}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}2.15\else \numberline {2.15}Remark\fi }{12}{remark.2.15}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.16\else \numberline {2.16}Example\fi \thmtformatoptarg {Minimum Arborescence}}{13}{example.2.16}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.17\else \numberline {2.17}Definition\fi }{13}{definition.2.17}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}2.5.1\else \numberline {2.5.1}Claim\fi }{13}{claim.2.5.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.18\else \numberline {2.18}Theorem\fi }{14}{theorem.2.18}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}2.19\else \numberline {2.19}Lemma\fi }{14}{lemma.2.19}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.1\else \numberline {3.1}Example\fi \thmtformatoptarg {Weighted Interval Scheduling}}{15}{example.3.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.2\else \numberline {3.2}Example\fi \thmtformatoptarg {Least Square}}{16}{example.3.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.3\else \numberline {3.3}Example\fi \thmtformatoptarg {Segmented Least Square}}{16}{example.3.3}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.4\else \numberline {3.4}Example\fi \thmtformatoptarg {Knapsack Problem}}{16}{example.3.4}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}3.5\else \numberline {3.5}Remark\fi }{18}{remark.3.5}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.6\else \numberline {3.6}Example\fi \thmtformatoptarg {RNA Secondary Structure}}{19}{example.3.6}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.7\else \numberline {3.7}Example\fi }{19}{example.3.7}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.8\else \numberline {3.8}Example\fi \thmtformatoptarg {Matrix Multiplication}}{21}{example.3.8}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.1\else \numberline {4.1}Example\fi }{21}{example.4.1}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.1\else \numberline {4.1.1}Claim\fi }{22}{claim.4.1.1}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.2\else \numberline {4.1.2}Claim\fi \thmtformatoptarg {Weak Duality}}{22}{claim.4.1.2}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.2\else \numberline {4.2}Theorem\fi }{22}{theorem.4.2}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.3\else \numberline {4.1.3}Claim\fi }{22}{claim.4.1.3}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.3\else \numberline {4.3}Lemma\fi }{24}{lemma.4.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.4\else \numberline {4.4}Theorem\fi }{24}{theorem.4.4}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.5\else \numberline {4.5}Lemma\fi }{24}{lemma.4.5}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}4.6\else \numberline {4.6}Corollary\fi }{24}{corollary.4.6}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.7\else \numberline {4.7}Lemma\fi }{25}{lemma.4.7}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.8\else \numberline {4.8}Lemma\fi }{25}{lemma.4.8}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.9\else \numberline {4.9}Lemma\fi }{26}{lemma.4.9}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}4.1.4\else \numberline {4.1.4}Claim\fi }{26}{claim.4.1.4}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.10\else \numberline {4.10}Example\fi \thmtformatoptarg {Bipartite Matching}}{27}{example.4.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.11\else \numberline {4.11}Theorem\fi \thmtformatoptarg {Hall's Theorem}}{27}{theorem.4.11}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.12\else \numberline {4.12}Remark\fi }{28}{remark.4.12}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.13\else \numberline {4.13}Example\fi \thmtformatoptarg {Network Connectivity}}{28}{example.4.13}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.14\else \numberline {4.14}Theorem\fi \thmtformatoptarg {Menger's Theorem}}{28}{theorem.4.14}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.15\else \numberline {4.15}Example\fi }{28}{example.4.15}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.16\else \numberline {4.16}Remark\fi }{29}{remark.4.16}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.17\else \numberline {4.17}Example\fi \thmtformatoptarg {Survey Design}}{29}{example.4.17}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.18\else \numberline {4.18}Example\fi \thmtformatoptarg {Airline Scheduling}}{30}{example.4.18}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.19\else \numberline {4.19}Remark\fi }{30}{remark.4.19}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.20\else \numberline {4.20}Example\fi \thmtformatoptarg {Image Segmentation}}{30}{example.4.20}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.21\else \numberline {4.21}Remark\fi }{31}{remark.4.21}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.22\else \numberline {4.22}Example\fi \thmtformatoptarg {Project Selection}}{31}{example.4.22}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.23\else \numberline {4.23}Remark\fi }{32}{remark.4.23}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.24\else \numberline {4.24}Example\fi }{32}{example.4.24}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.25\else \numberline {4.25}Theorem\fi }{33}{theorem.4.25}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}4.26\else \numberline {4.26}Remark\fi }{33}{remark.4.26}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.1\else \numberline {5.1}Example\fi \thmtformatoptarg {3-CNF}}{34}{example.5.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.2\else \numberline {5.2}Theorem\fi }{35}{theorem.5.2}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.3\else \numberline {5.3}Fact\fi }{36}{fact.5.3}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.4\else \numberline {5.4}Remark\fi }{36}{remark.5.4}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.5\else \numberline {5.5}Example\fi \thmtformatoptarg {Set-Cover}}{36}{example.5.5}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.6\else \numberline {5.6}Fact\fi }{37}{fact.5.6}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.7\else \numberline {5.7}Corollary\fi }{37}{corollary.5.7}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.8\else \numberline {5.8}Corollary\fi }{37}{corollary.5.8}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.9\else \numberline {5.9}Fact\fi }{38}{fact.5.9}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.10\else \numberline {5.10}Example\fi \thmtformatoptarg {Weighted Min Set-cover}}{38}{example.5.10}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.1\else \numberline {5.2.1}Claim\fi }{40}{claim.5.2.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.11\else \numberline {5.11}Theorem\fi \thmtformatoptarg {Markov Inequality}}{40}{theorem.5.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.12\else \numberline {5.12}Theorem\fi }{41}{theorem.5.12}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.2\else \numberline {5.2.2}Claim\fi }{43}{claim.5.2.2}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.3\else \numberline {5.2.3}Claim\fi }{43}{claim.5.2.3}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.4\else \numberline {5.2.4}Claim\fi }{44}{claim.5.2.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.13\else \numberline {5.13}Theorem\fi \thmtformatoptarg {Chernoff Bound}}{44}{theorem.5.13}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.2.5\else \numberline {5.2.5}Claim\fi }{45}{claim.5.2.5}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.14\else \numberline {5.14}Theorem\fi \thmtformatoptarg {Cock-Levin}}{47}{theorem.5.14}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.15\else \numberline {5.15}Theorem\fi \thmtformatoptarg {Max-Coverage}}{48}{theorem.5.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.16\else \numberline {5.16}Theorem\fi \thmtformatoptarg {PCP theorem}}{49}{theorem.5.16}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.17\else \numberline {5.17}Definition\fi \thmtformatoptarg {Probability Checkable Proofs}}{49}{definition.5.17}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.18\else \numberline {5.18}Theorem\fi \thmtformatoptarg {PCP theorem}}{49}{theorem.5.18}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.19\else \numberline {5.19}Definition\fi }{50}{definition.5.19}%
+\contentsline {observation}{\ifthmt@listswap Observation\nobreakspace {}5.20\else \numberline {5.20}Observation\fi }{50}{observation.5.20}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.21\else \numberline {5.21}Theorem\fi \thmtformatoptarg {PCP theorem}}{50}{theorem.5.21}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.22\else \numberline {5.22}Proposition\fi }{51}{proposition.5.22}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.23\else \numberline {5.23}Theorem\fi }{52}{theorem.5.23}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.24\else \numberline {5.24}Corollary\fi }{52}{corollary.5.24}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.25\else \numberline {5.25}Remark\fi }{52}{remark.5.25}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.4.1\else \numberline {5.4.1}Claim\fi }{52}{claim.5.4.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.26\else \numberline {5.26}Theorem\fi \thmtformatoptarg {not quite true}}{53}{theorem.5.26}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.27\else \numberline {5.27}Theorem\fi }{54}{theorem.5.27}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.28\else \numberline {5.28}Corollary\fi }{54}{corollary.5.28}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.29\else \numberline {5.29}Theorem\fi }{54}{theorem.5.29}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.4.2\else \numberline {5.4.2}Claim\fi }{55}{claim.5.4.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.30\else \numberline {5.30}Definition\fi }{55}{definition.5.30}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.31\else \numberline {5.31}Fact\fi }{55}{fact.5.31}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.32\else \numberline {5.32}Lemma\fi }{56}{lemma.5.32}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.33\else \numberline {5.33}Definition\fi }{56}{definition.5.33}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.4.3\else \numberline {5.4.3}Claim\fi }{57}{claim.5.4.3}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.34\else \numberline {5.34}Example\fi \thmtformatoptarg {Multicut}}{58}{example.5.34}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.35\else \numberline {5.35}Theorem\fi }{58}{theorem.5.35}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.36\else \numberline {5.36}Fact\fi }{58}{fact.5.36}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.37\else \numberline {5.37}Example\fi \thmtformatoptarg {Vertex Cover}}{58}{example.5.37}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.38\else \numberline {5.38}Theorem\fi }{58}{theorem.5.38}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.39\else \numberline {5.39}Theorem\fi }{60}{theorem.5.39}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.40\else \numberline {5.40}Definition\fi }{60}{definition.5.40}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.41\else \numberline {5.41}Theorem\fi \thmtformatoptarg {Low-Diameter Decomposition, LDD}}{60}{theorem.5.41}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.1\else \numberline {5.5.1}Claim\fi }{61}{claim.5.5.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.42\else \numberline {5.42}Example\fi \thmtformatoptarg {Max-cut}}{61}{example.5.42}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.43\else \numberline {5.43}Theorem\fi }{62}{theorem.5.43}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.44\else \numberline {5.44}Theorem\fi }{63}{theorem.5.44}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.45\else \numberline {5.45}Fact\fi }{63}{fact.5.45}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.46\else \numberline {5.46}Definition\fi \thmtformatoptarg {SDP Statndard Form}}{63}{definition.5.46}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.47\else \numberline {5.47}Fact\fi }{65}{fact.5.47}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.48\else \numberline {5.48}Theorem\fi }{65}{theorem.5.48}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.49\else \numberline {5.49}Corollary\fi }{65}{corollary.5.49}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.2\else \numberline {5.5.2}Claim\fi }{65}{claim.5.5.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.50\else \numberline {5.50}Example\fi \thmtformatoptarg {Instance}}{65}{example.5.50}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.51\else \numberline {5.51}Fact\fi }{66}{fact.5.51}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.3\else \numberline {5.5.3}Claim\fi }{66}{claim.5.5.3}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}5.52\else \numberline {5.52}Proposition\fi \thmtformatoptarg {Fourier expansion}}{67}{proposition.5.52}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.53\else \numberline {5.53}Theorem\fi \thmtformatoptarg {Parseval's}}{67}{theorem.5.53}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.5.4\else \numberline {5.5.4}Claim\fi }{68}{claim.5.5.4}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.54\else \numberline {5.54}Example\fi \thmtformatoptarg {3-Coloring}}{69}{example.5.54}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.55\else \numberline {5.55}Example\fi \thmtformatoptarg {Min-3-Coloring}}{69}{example.5.55}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.56\else \numberline {5.56}Lemma\fi }{69}{lemma.5.56}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.6.1\else \numberline {5.6.1}Claim\fi }{69}{claim.5.6.1}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.57\else \numberline {5.57}Lemma\fi }{69}{lemma.5.57}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.6.2\else \numberline {5.6.2}Claim\fi }{70}{claim.5.6.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.58\else \numberline {5.58}Example\fi \thmtformatoptarg {Sparsest Cut}}{71}{example.5.58}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.59\else \numberline {5.59}Definition\fi \thmtformatoptarg {Metric Embedding}}{72}{definition.5.59}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.60\else \numberline {5.60}Lemma\fi }{72}{lemma.5.60}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.61\else \numberline {5.61}Theorem\fi \thmtformatoptarg {Bourgain' 1985}}{73}{theorem.5.61}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.62\else \numberline {5.62}Theorem\fi \thmtformatoptarg {LLR 1995}}{73}{theorem.5.62}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.63\else \numberline {5.63}Theorem\fi }{74}{theorem.5.63}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.64\else \numberline {5.64}Theorem\fi \thmtformatoptarg {Low-Diameter Decomposition}}{74}{theorem.5.64}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.65\else \numberline {5.65}Definition\fi }{74}{definition.5.65}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.1\else \numberline {5.7.1}Claim\fi }{76}{claim.5.7.1}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.2\else \numberline {5.7.2}Claim\fi }{76}{claim.5.7.2}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.3\else \numberline {5.7.3}Claim\fi }{77}{claim.5.7.3}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.7.4\else \numberline {5.7.4}Claim\fi }{78}{claim.5.7.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.66\else \numberline {5.66}Theorem\fi }{79}{theorem.5.66}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.67\else \numberline {5.67}Definition\fi }{83}{definition.5.67}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.68\else \numberline {5.68}Corollary\fi }{84}{corollary.5.68}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}5.69\else \numberline {5.69}Corollary\fi }{85}{corollary.5.69}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace {}5.70\else \numberline {5.70}Remark\fi }{85}{remark.5.70}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.71\else \numberline {5.71}Definition\fi }{85}{definition.5.71}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace {}5.72\else \numberline {5.72}Fact\fi }{85}{fact.5.72}%
+\contentsline {conjecture}{\ifthmt@listswap Conjecture\nobreakspace {}5.73\else \numberline {5.73}Conjecture\fi }{85}{conjecture.5.73}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.74\else \numberline {5.74}Theorem\fi \thmtformatoptarg {High-Dim Berry Esseen}}{87}{theorem.5.74}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}5.75\else \numberline {5.75}Lemma\fi }{87}{lemma.5.75}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.76\else \numberline {5.76}Definition\fi \thmtformatoptarg {Influence}}{88}{definition.5.76}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.77\else \numberline {5.77}Example\fi }{88}{example.5.77}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.78\else \numberline {5.78}Theorem\fi \thmtformatoptarg {Majoiry is Stablest}}{88}{theorem.5.78}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.79\else \numberline {5.79}Theorem\fi }{88}{theorem.5.79}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.80\else \numberline {5.80}Definition\fi }{89}{definition.5.80}%
+\contentsline {claim}{\ifthmt@listswap Claim\nobreakspace {}5.9.1\else \numberline {5.9.1}Claim\fi }{89}{claim.5.9.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.81\else \numberline {5.81}Definition\fi }{90}{definition.5.81}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.82\else \numberline {5.82}Definition\fi \thmtformatoptarg {Constraint Satisfaction Problem(CSP)}}{91}{definition.5.82}%

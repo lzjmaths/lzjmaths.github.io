@@ -1,0 +1,139 @@
+\begin{corollary}
+    $ \forall \epsilon>0 $,  $ \mathrm{Max3SAT}_{1-\epsilon,\frac{7}{8}+\epsilon} $ is NP-Hard.  
+\end{corollary}
+\begin{proof}
+    Reduce the instance of  $ \mathrm{3LIN} $ to  $ \mathrm{3SAT} $ as follows:
+    
+    \begin{align*}
+        \mathrm{3LIN}(I)&\rightarrow \mathrm{3SAT}(J)\\
+        x_i+x_j+x_k\equiv0&\rightarrow \begin{cases}
+            \bar{x}_i\vee\bar{x}_j\vee \bar{x}_k\\
+            \bar{x}_i\vee x_j\vee x_k\\
+            x_i\vee\bar{x}_j\vee x_k\\
+            x_i\vee x_j\vee \bar{x}_k 
+        \end{cases}\\
+        x_i+x_j+x_k\equiv 1&\rightarrow \begin{cases}
+            x_i\vee x_j\vee x_k\\
+            x_i\vee \bar{x}_j\vee \bar{x}_k\\
+            \bar{x}_i\vee x_j\vee \bar{x}_k\\
+            \bar{x}_i\vee \bar{x}_j\vee x_k
+        \end{cases}
+    \end{align*}
+    Then  $ \OPT(I) \geq 1-\epsilon $  $ \Rightarrow  $  $ \OPT(J) \geq 1-\epsilon $.
+    
+    $ \OPT(I)<1/2+\epsilon $  $ \Rightarrow  $  $ \OPT(J)<7/8+\epsilon $ 
+\end{proof}
+
+\subsection{Hardness of Max-Cut}
+\begin{corollary}
+    $ \forall \epsilon>0 $,  $ \dps\left(\frac{16}{17}+\epsilon\right) $-approximation Max-Cut is NP-Hard.
+\end{corollary}
+\begin{remark}\label{16/17 Hardness of Max-Cut}
+    Assume \textbf{Unique Games Conjecture},  $ \alpha_{GW}+\epsilon $-approximation Max-Cut  $ \not\in \mathrm{P} $.  
+\end{remark}
+
+\begin{definition}
+    \name{Unique Label Cover Game} is the label cover game $ (K,K) $  that  $ \pi_{uv} $ is a permutation over  $ [K] $.
+\end{definition}
+\begin{fact}
+    $ \mathrm{ULC}\in \mathrm{P} $ 
+\end{fact}
+\begin{conjecture}
+    $ \forall \delta>0 $,  $ \exists K>0 $ such that  $ \mathrm{ULC}_{1-\delta,\delta}\not\in P $   
+\end{conjecture}
+
+\begin{proof}[Proof of Remark \ref{16/17 Hardness of Max-Cut}]
+    \,\\
+
+    \textbf{Cut Dictatorship Test}:  $ f:\{\pm 1\}^n\rightarrow\{\pm 1\} $.
+    
+    Cut test:  $ f(\vec{x})\neq f(\vec{y}) $.
+    
+    Parameter: $ \rho $.
+    \begin{enumerate}
+        \item Uniformly sample  $ \vec{x}\sim \{\pm 1\}^n $
+        \item Sample  $ \vec{\mu}\in \{\pm 1\}^n $
+        \[\mu_i=\begin{cases}
+            1 & \text{w.p. }\frac{1+\rho}{2}\\
+            -1 & \text{w.p. } \frac{1-\rho}{2}
+        \end{cases}\,(\Ebb\mu_i=\rho)\]
+        Test  $ f(\vec{x})\neq f(\vec{x}\vec{\mu}) $ 
+    \end{enumerate}  
+
+    \begin{align*}
+        \mathrm{Pr}[f\text{ pass}]&=\Ebb_{\vec{x},\vec{\mu}}\left[\frac{1-f(\vec{x})f(\vec{x}\vec{\mu})}{2}\right]\\
+        &=\frac{1}{2}-\frac{1}{2}\Ebb_{\vec{x},\vec{\mu}}\left(\sum_S\hat{f}(S)\chi_S(\vec{x})\right)\left(\sum_T\hat{f}(T)\chi_T(\vec{x}\vec{\mu})\right)\\
+        &=\frac{1}{2}-\frac{1}{2}\sum_{S,T}\hat{f}(S)\hat{f}(T)\left(\sum_{\vec{x}}\chi_S(\vec{x})\chi_T(\vec{x})\right)\left(\sum_{\vec{\mu}}\chi_T(\mu)\right)\\
+        &=\frac{1}{2}-\frac{1}{2}\sum_S\hat{f}(S)^2\rho^{|S|}\\
+        &=\frac{1}{2}-\frac{1}{2}\Sbb_\rho(f)
+    \end{align*}
+    
+    We investigate some major functions:
+    \begin{enumerate}
+        \item Dictators: $ f(\vec{x})=x_i $
+        \[\mathrm{Pr}[f\text{ pass}]=\frac{1}{2}-\frac{1}{2}\rho\]
+        \item Constant functions:  $ f\equiv 0,f\equiv 1 $.
+        \[ \mathrm{Pr}[f\text{ pass}]=0\]
+        \item Parity functions:  $ f=\chi_S(\vec{x}) $.
+        \[\mathrm{Pr}[f\text{ pass}]=\frac{1}{2}-\frac{1}{2}\rho^{|S|}\]
+        \item Majority function:  $\dps f(\vec{x})=\sgn\left(\frac{x_1+\cdots +x_n}{\sqrt{n}}\right) $ 
+        \[\begin{pmatrix}
+            \frac{x_1+\cdots +x_n}{\sqrt{n}}\\
+            \frac{\sum x_i\mu_i}{\sqrt{n}}
+        \end{pmatrix}\rightarrow \mathcal{N}(0,\begin{bmatrix}
+            1&\rho\\
+            \rho&1
+        \end{bmatrix})\]
+        \[\mathrm{Pr}[f\text{ passes}]\approx\mathop{Pr}_{\begin{pmatrix}
+        g_1\\
+        g_2
+    \end{pmatrix}\sim \mathcal{N}(0,\begin{bmatrix}
+         1&\rho\\
+        \rho&1
+    \end{bmatrix})}[\sgn(g_1)\neq \sgn(g_2)]=\frac{\arccos\rho}{\pi}\]
+
+    \item Linear Threshold function (LFT)
+    \[f(\vec{x})=\sgn(\vec{a}^T\vec{x}),\|\vec{a}\|_2=1\]
+    Then Majority function is a special case  $ \vec{a}=(1/\sqrt{n},\cdots,1/\sqrt{n}) $  of LFT.
+
+    Dictator function is also a special case  $ \vec{a}=(0,0,\cdots,0,1,0\cdots,0) $  of LFT.
+    \end{enumerate}
+    
+    \begin{theorem}[High-Dim Berry Esseen]
+        Let  $ \vec{Y}_1,\cdots,\vec{Y}_n $ be independent random variables in  $ \Rbb^d $, where  $ \Ebb Y_i=\vec{0}, \dps\sum_{i=1}^n\mathrm{Val}[Y_i]=I_d $  Let  $ \vec{Y}=\vec{Y}_1+\cdots+\vec{Y}_n $. For all measurable convex sets  $ A\subset \Rbb^d $, we have 
+        \[\left|\mathrm{Pr}[\vec{Y}\in A]-\mathop{Pr}_{\vec{g}\sim N(0,I_d)}[\vec{g}\in A]\right| \leq (42d^{1/4}+16)\sum_{i=1}^n\Ebb\|Y_i\|^3_2\]    
+    \end{theorem}
+
+    \begin{lemma}
+        If  $ f=\sgn(\vec{a}^T\vec{x}) $,  $ \|a\|_2=1 $. Then 
+        \[\mathrm{Pr}[f\text{ passes}]=\frac{\arccos\rho}{\pi}\pm \frac{O(1)}{\sqrt{(1-\rho^2)^3}}\max_i|a_i|\]  
+    \end{lemma}
+
+    Completeness: If  $ f $ is a dictator function, then  $ \mathrm{Pr}[\text{pass}]=\dps\frac{1-\rho}{2} $.
+    
+    Soundness:  $ f $ far from dictator, then $ \mathrm{Pr}[text{pass}]\sim \dps\frac{\arccos\rho}{\pi} $ $ \Leftrightarrow $ $ \mathrm{Pr}[\text{pass}]>\frac{\arccos\rho}{\pi}+\epsilon $, then  $ f $ has a few "influential dimensions" which can be decoded for  $ ULC $. 
+    
+    \begin{definition}[Influence]
+        Given  $ f:\{\pm 1\}^n\rightarrow\{\pm 1\} $. For any  $ i\in [n] $, define 
+        \[\begin{aligned}
+            \mathrm{Inf}_i(f)&=\mathop{Pr}_{\vec{x}\sim \{\pm 1\}^n}\left[f(\vec{x})\neq f(\vec{x}^{\otimes i})\right]\\
+            &=\Ebb_{\vec{x}\sim \{\pm 1\}^n}\left[\frac{1-f(\vec{x})f(\vec{x}^{\otimes i})}{2}\right]\\
+            &=\frac{1}{2}-\frac{1}{2}\Ebb_{\vec{x}}\left(\sum_S\hat{f}(S)\chi_S(\vec{x})\right)\left(\sum_T\hat{f}(T)\chi_T(\vec{x}^{\otimes i})\right)\\
+            &=\frac{1}{2}-\frac{1}{2}\sum_{S,T}\hat{f}(S)\hat{f}(T)\Ebb_{\vec{x}}\chi_S(\vec{x})\chi_T(\vec{x}^{\otimes i})\\
+            &=\frac{1}{2}-\frac{1}{2}\sum_{i\in S}\hat{f}(S)-\frac{1}{2}\sum_{i\not\in S}\hat{f}(S)^2\\
+            &=\sum_{i\in S}\hat{f}(S)^2
+        \end{aligned}\]  
+    \end{definition}
+    \begin{example}
+        Let  $ f $ be the majority function over  $ n=2k+1 $ variables. Then 
+        \[\mathrm{Inf}_i(f)=\mathop{Pr}_{\vec{x}\sim \{\pm1\}^n}[\mathrm{maj}(\vec{x})\neq \mathrm{maj}(\vec{x}^{\otimes i})]=\frac{\binom{2k}{k}}{2^{2k}}=\frac{(2k)!}{2^{2k}(k!)^2}\approx\frac{\sqrt{2\pi (2k)}\cdot\left(\frac{2k}{e}\right)^{2k}}{2^{2k}(2\pi k)\left(\frac{k}{e}\right)^{2k}}=\frac{\sqrt{4\pi k}}{2\pi k}=\Theta(\frac{1}{\sqrt{n}})\]  
+    \end{example}
+    \begin{theorem}[Majoiry is Stablest]
+        Let  $ \rho\in (-1,0) $,  $ \epsilon>0 $. Then  $ \exists \tau=\tau(\rho,\epsilon)>0 $ such that  $ \forall f:\{\pm 1\}\rightarrow\{\pm 1\} $, if  $ \mathrm{Inf}_i(f) \leq \tau $,  $ \forall i $, then 
+        \[\Sbb_{\rho}(f)>1-\frac{2\arccos\rho}{\pi}-\epsilon\]
+        Therefore,
+        \[\mathrm{Pr}[f(\vec{x})\neq f(\vec{x}\vec{\mu})]=\frac{1}2{}-\frac12\Sbb_{\rho}(f)<\frac{\arccos\rho}{\pi}+\frac{\epsilon}{2}\]      
+    \end{theorem}
+\end{proof}
+
+
